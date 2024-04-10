@@ -1,0 +1,122 @@
+{
+  "builder_name": "chia",
+  "citation": "@article{kury2020chia,\n  title        = {Chia, a large annotated corpus of clinical trial eligibility criteria},\n  author       = {\n    Kury, Fabr{'\\i}cio and Butler, Alex and Yuan, Chi and Fu, Li-heng and\n    Sun, Yingcheng and Liu, Hao and Sim, Ida and Carini, Simona and Weng,\n    Chunhua\n  },\n  year         = 2020,\n  journal      = {Scientific data},\n  publisher    = {Nature Publishing Group},\n  volume       = 7,\n  number       = 1,\n  pages        = {1--11}\n}\n",
+  "config_name": "chia_source",
+  "dataset_name": "chia",
+  "dataset_size": 6454043,
+  "description": "A large annotated corpus of patient eligibility criteria extracted from 1,000\ninterventional, Phase IV clinical trials registered in ClinicalTrials.gov. This\ndataset includes 12,409 annotated eligibility criteria, represented by 41,487\ndistinctive entities of 15 entity types and 25,017 relationships of 12\nrelationship types.\n",
+  "download_checksums": {
+    "data/chia_with_scope.zip": {
+      "num_bytes": 2512094,
+      "checksum": null
+    }
+  },
+  "download_size": 2512094,
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "document_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text_type": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "entities": [
+      {
+        "id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "text": {
+          "feature": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "_type": "Sequence"
+        },
+        "offsets": {
+          "feature": [
+            {
+              "dtype": "int32",
+              "_type": "Value"
+            }
+          ],
+          "_type": "Sequence"
+        },
+        "normalized": [
+          {
+            "db_name": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "db_id": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "arg1_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "arg2_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "normalized": [
+          {
+            "db_name": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "db_id": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "homepage": "https://github.com/WengLab-InformaticsResearch/CHIA",
+  "license": "Creative Commons Attribution 4.0 International",
+  "size_in_bytes": 8966137,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 6454043,
+      "num_examples": 2000,
+      "dataset_name": "chia"
+    }
+  },
+  "version": {
+    "version_str": "2.0.0",
+    "major": 2,
+    "minor": 0,
+    "patch": 0
+  }
+}
