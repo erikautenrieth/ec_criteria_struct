@@ -1,0 +1,140 @@
+{
+  "InclusionCriteria": {
+    "AND": [
+      {
+        "condition": "Histologically or cytologically confirmed adenocarcinoma of the prostate",
+        "tags": ["Prostate_Cancer", "Adenocarcinoma"],
+        "classification": "Histology"
+      },
+      {
+        "AND": [
+          {
+            "condition": "Metastatic bone disease",
+            "verificationMethod": ["CT", "MRI", "bone scan"],
+            "tags": ["Bone_Metastasis"],
+            "classification": "Disease_State"
+          },
+          {
+            "OR": [
+              {
+                "condition": "Plans to start androgen deprivation therapy within 30 days",
+                "tags": ["Androgen_Deprivation_Therapy", "Treatment_Plan"],
+                "classification": "Treatment"
+              },
+              {
+                "condition": "Already started androgen deprivation therapy",
+                "timeframe": "< 30 days",
+                "tags": ["Androgen_Deprivation_Therapy", "Ongoing_Treatment"],
+                "classification": "Treatment"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "OR": [
+          {
+            "condition": "Eligible for palliative radiation therapy",
+            "timeframe": "first 4 weeks of protocol therapy",
+            "discretion": "investigators",
+            "tags": ["Radiation_Therapy", "Palliative_Care"],
+            "classification": "Treatment_Option"
+          },
+          {
+            "NOT": {
+              "condition": "Lymph node or visceral metastases only",
+              "tags": ["Exclusion_Criterion"],
+              "classification": "Metastasis_Location"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ExclusionCriteria": {
+    "AND": [
+      {
+        "NOT": {
+          "condition": "Types of cancer",
+          "types": ["neuroendocrine", "small cell", "transitional cell"],
+          "tags": ["Cancer_Type_Exclusion"],
+          "classification": "Cancer_Type"
+        }
+      },
+      {
+        "NOT": {
+          "condition": "Abnormal bone metabolism conditions",
+          "types": ["Paget's disease", "untreated hyperthyroidism", "untreated hyperprolactinemia", "untreated Cushing's disease"],
+          "tags": ["Bone_Metabolism_Disorder"],
+          "classification": "Condition_Exclusion"
+        }
+      },
+      {
+        "NOT": {
+          "condition": "Recent use of calcitonin",
+          "timeframe": "< 14 days before registration",
+          "tags": ["Medication_Exclusion"],
+          "classification": "Medication_History"
+        }
+      },
+      {
+        "NOT": {
+          "condition": "Previous use of bisphosphonates",
+          "tags": ["Medication_Exclusion"],
+          "classification": "Medication_History"
+        }
+      },
+      {
+        "NOT": {
+          "condition": "Major surgery",
+          "timeframe": "< 4 weeks of registration",
+          "tags": ["Surgery_Exclusion"],
+          "classification": "Recent_Medical_History"
+        }
+      },
+      {
+        "NOT": {
+          "condition": "Adjuvant chemotherapy",
+          "timeframe": "< 6 months of registration",
+          "tags": ["Chemotherapy_Exclusion"],
+          "classification": "Treatment_History"
+        }
+      },
+      {
+        "NOT": {
+          "condition": "Previous chemotherapy for metastatic disease",
+          "tags": ["Chemotherapy_Exclusion"],
+          "classification": "Treatment_History"
+        }
+      },
+      {
+        "NOT": {
+          "condition": "Hormonal therapy in adjuvant setting",
+          "restrictions": {
+            "timeframe": "< 12 months of registration",
+            "duration": "not exceed 6 months"
+          },
+          "tags": ["Hormonal_Therapy_Exclusion"],
+          "classification": "Treatment_History"
+        }
+      },
+      {
+        "NOT": {
+          "condition": "Prior history of malignancy",
+          "timeframe": "< 5 years",
+          "exceptions": ["basal cell carcinoma of the skin", "squamous cell carcinoma of the skin"],
+          "tags": ["Malignancy_History_Exclusion"],
+          "classification": "Medical_History"
+        }
+      },
+      {
+        "NOT": {
+          "condition": "History of allergy or drug reactions",
+          "specifics": ["bisphosphonates"],
+          "tags": ["Allergy_Exclusion"],
+          "classification": "Medical_History"
+        }
+      }
+    ]
+  }
+}
