@@ -1,0 +1,130 @@
+{
+  "InclusionCriteria": {
+    "AND": [
+      {
+        "condition": "Histologically or cytologically confirmed adenocarcinoma of the prostate",
+        "tags": {
+          "SEMLOOK": ["CancerType"],
+          "NCIThesaurus": {
+            "Code": "C3995",
+            "Tag": "Prostate_Adenocarcinoma"
+          }
+        }
+      },
+      {
+        "condition": "Metastatic bone disease confirmed by CT, MRI, or bone scan",
+        "tags": {
+          "SEMLOOK": ["ConditionSite"],
+          "NCIThesaurus": {
+            "Code": "C3262",
+            "Tag": "Bone_Metastasis"
+          }
+        }
+      },
+      {
+        "condition": "Plans to start or be < 30 days from beginning androgen deprivation therapy",
+        "tags": {
+          "SEMLOOK": ["TreatmentPlan"],
+          "NCIThesaurus": {
+            "Code": "Unknown",
+            "Tag": "Androgen_Deprivation_Therapy"
+          }
+        }
+      }
+    ]
+  },
+  "ExclusionCriteria": {
+    "AND": [
+      {
+        "condition": "No neuroendocrine, small cell or transitional cell cancer of the prostate",
+        "tags": {
+          "SEMLOOK": ["CancerTypeExclusion"],
+          "NCIThesaurus": {
+            "Codes": ["C9183", "C39948", "C9051"],
+            "Tags": ["Neuroendocrine_Cancer", "Small_Cell_Carcinoma", "Transitional_Cell_Carcinoma"]
+          }
+        }
+      },
+      {
+        "condition": "No abnormal bone metabolism (i.e., Paget's disease, untreated hyperthyroidism, untreated hyperprolactinemia, untreated Cushing's disease)",
+        "tags": {
+          "SEMLOOK": ["MetabolicConditionExclusion"],
+          "NCIThesaurus": {
+            "Codes": ["C3241", "C4042", "C3550", "C3554"],
+            "Tags": ["Pagets_Disease", "Hyperthyroidism", "Hyperprolactinemia", "Cushings_Syndrome"]
+          }
+        }
+      },
+      {
+        "condition": "No use of calcitonin within 14 days before being registered for protocol therapy or any previous use of bisphosphonates",
+        "tags": {
+          "SEMLOOK": ["TreatmentExclusion"],
+          "NCIThesaurus": {
+            "Codes": ["Unknown", "Unknown"],
+            "Tags": ["Calcitonin_Treatment", "Bisphosphonates_Treatment"]
+          }
+        }
+      },
+      {
+        "condition": "No major surgery within 4 weeks of registration to protocol therapy",
+        "tags": {
+          "SEMLOOK": ["SurgeryExclusion"],
+          "NCIThesaurus": {
+            "Code": "Unknown",
+            "Tag": "Major_Surgery"
+          }
+        }
+      },
+      {
+        "condition": "No adjuvant chemotherapy within 6 months of registration to protocol therapy",
+        "tags": {
+          "SEMLOOK": ["ChemotherapyExclusion"],
+          "NCIThesaurus": {
+            "Code": "Unknown",
+            "Tag": "Adjuvant_Chemotherapy"
+          }
+        }
+      },
+      {
+        "condition": "No previous chemotherapy for metastatic disease",
+        "tags": {
+          "SEMLOOK": ["ChemotherapyExclusion"],
+          "NCIThesaurus": {
+            "Code": "Unknown",
+            "Tag": "Chemotherapy_For_Metastatic_Disease"
+          }
+        }
+      },
+      {
+        "condition": "No hormonal therapy in the adjuvant setting within 12 months of registration to protocol therapy; previous hormonal therapy must not have exceeded 6 months",
+        "tags": {
+          "SEMLOOK": ["HormonalTherapyExclusion"],
+          "NCIThesaurus": {
+            "Code": "Unknown",
+            "Tag": "Adjuvant_Hormonal_Therapy"
+          }
+        }
+      },
+      {
+        "condition": "No prior history of malignancy in the past 5 years with the exception of basal cell and squamous cell carcinoma of the skin",
+        "tags": {
+          "SEMLOOK": ["CancerHistoryExclusion"],
+          "NCIThesaurus": {
+            "Codes": ["C4332", "C4342"],
+            "Tags": ["Basal_Cell_Carcinoma", "Squamous_Cell_Carcinoma"]
+          }
+        }
+      },
+      {
+        "condition": "No history of allergy or drug reactions to bisphosphonates",
+        "tags": {
+          "SEMLOOK": ["DrugAllergyExclusion"],
+          "NCIThesaurus": {
+            "Code": "Unknown",
+            "Tag": "Bisphosphonates_Allergy"
+          }
+        }
+      }
+    ]
+  }
+}
