@@ -1,0 +1,56 @@
+T20_mml	Condition 557 584	decompensated liver disease
+T13_mml	Condition 595 609	encephalopathy
+R3	has_temporal Arg1:T25_mml Arg2:T3	
+R5	has_value Arg1:T2_mml Arg2:T16_mml	
+T7	Reference_point 250 259	screening
+T34_mml	Qualifier 612 618	Active
+T14	Temporal 309 324	within 72 hours
+R2	has_context Arg1:T25_mml Arg2:T18_mml	
+R18	has_temporal Arg1:T12_mml Arg2:T14	
+T13	Competing_trial 326 430	Prior or current treatment with other experimental or approved agents targeting SARS-CoV-2 or SARS-CoV-1
+R17	has_value Arg1:T29_mml Arg2:T12	
+T10	Negation 508 517	exception
+T9_mml	Visit 219 234	hospitalization
+T11	Qualifier 521 531	controlled
+T9	Condition 486 497	sarcoidosis
+R19	has_temporal Arg1:T31_mml Arg2:T14	
+R7	has_temporal Arg1:T9_mml Arg2:T6	
+R15	has_negation Arg1:T1_mml Arg2:T10	
+R14	AND Arg1:T9 Arg2:T1_mml	
+T18_mml	Observation 128 139	on room air
+R11	has_qualifier Arg1:T20_mml Arg2:T35_mml	
+T8_mml	Condition 619 643	congestive heart failure
+T11_mml	Visit 193 205	Hospitalized
+T6_mml	Condition 464 482	autoimmune disease
+R9	has_temporal Arg1:T11_mml Arg2:T6	
+T1_mml	Condition 532 547	thyroid disease
+R13	has_qualifier Arg1:T6_mml Arg2:T32_mml	
+R4	has_index Arg1:T3 Arg2:T4	
+*	OR T6_mml T9
+*	OR T8 T13_mml
+T25_mml	Measurement 77 122	Peripheral capillary oxygen saturation (SpO2)
+T32_mml	Qualifier 457 463	Active
+T12	Value 432 440	Positive
+T5	Mood 209 218	impending
+T14_mml	Condition 273 278	cough
+T6	Temporal 235 259	at the time of screening
+*	OR T11_mml T9_mml
+R8	has_index Arg1:T6 Arg2:T7	
+*	OR T14_mml T31_mml T12_mml
+R16	has_qualifier Arg1:T1_mml Arg2:T11	
+T3	Temporal 140 152	at screening
+T29_mml	Measurement 441 455	pregnancy test
+R10	has_qualifier Arg1:T8_mml Arg2:T34_mml	
+T8	Condition 586 593	ascites
+R1	has_value Arg1:T25_mml Arg2:T2	
+T4	Reference_point 143 152	screening
+R12	subsumes Arg1:T20_mml Arg2:T8	
+T2_mml	Person 154 157	Age
+T31_mml	Condition 280 285	fever
+R20	has_temporal Arg1:T14_mml Arg2:T14	
+T2	Value 124 127	95%
+T12_mml	Condition 289 308	shortness of breath
+R6	has_mood Arg1:T9_mml Arg2:T5	
+T16_mml	Value 158 166	18 years
+T1	Informed_consent 23 75	Willing and able to provide written informed consent
+T35_mml	Qualifier 550 556	Active

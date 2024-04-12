@@ -1,0 +1,46 @@
+T16	Temporal 704 736	prior to current hospitalization
+T19	Condition 774 783;809 818	bacterial infection
+T24	Measurement 947 971	oxygen saturation (SpO2)
+T6	Pregnancy_considerations 220 249	Are men or non-pregnant women
+R7	has_qualifier Arg1:T19 Arg2:T18	
+T2	Observation 43 87	in the process of being admitted to hospital
+T22	Negation 820 827	besides
+T25	Value 972 999	less than (<)88 percent (%)
+*	OR T1 T2
+T1	Visit 27 39	hospitalized
+T18	Qualifier 767 773	active
+*	OR T19 T20 T21
+T12	Procedure 540 562	mechanical ventilation
+T14	Observation 638 664	resident in a nursing home
+R9	has_negation Arg1:T23 Arg2:T22	
+T4	Temporal 163 218	less than or equal to ()72 hours prior to randomization
+T8	Non-query-able 384 448	Agree to the collection of nasopharyngeal swabs and venous blood
+T13	Procedure 573 611	convalescent COVID-19 plasma treatment
+R13	has_temporal Arg1:T13 Arg2:T28	
+R3	has_temporal Arg1:T3 Arg2:T4	
+T5	Reference_point 196 218	prior to randomization
+*	OR T17 T18
+R8	AND Arg1:T21 Arg2:T23	
+T3	Condition 144 162	COVID-19 infection
+*	OR T14 T15
+R4	AND Arg1:T2 Arg2:T3	
+T7	Pregnancy_considerations 251 382	Women of childbearing potential must agree to use at least one highly effective form of contraception for the entirety of the study
+R1	has_temporal Arg1:T15 Arg2:T16	
+T20	Condition 785 791;809 818	fungal infection
+R11	has_context Arg1:T24 Arg2:T26	
+T9	Procedure 483 505	mechanical ventilation
+R6	has_mood Arg1:T12 Arg2:T11	
+T21	Condition 793 798;809 818	viral infection
+T28	Temporal 612 631	prior to enrollment
+T26	Observation 1000 1032	while breathing room air at rest
+T27	Temporal 1033 1049	at randomization
+R10	has_value Arg1:T24 Arg2:T25	
+R5	has_mood Arg1:T9 Arg2:T10	
+T10	Mood 475 482	Require
+R2	has_index Arg1:T4 Arg2:T5	
+*	OR T9 T12
+T15	Observation 638 649;668 703	resident in long-term care facility immediately
+T23	Condition 828 836	COVID-19
+R12	has_temporal Arg1:T24 Arg2:T27	
+T11	Mood 509 539	anticipated impending need for
+T17	Qualifier 758 765	serious

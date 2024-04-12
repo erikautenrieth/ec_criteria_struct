@@ -1,0 +1,44 @@
+T1	Value 2742 2762	less than two months
+T2	Person 2766 2769	age
+R1	has_value Arg1:T2 Arg2:T1	
+T3	Negation 2788 2799	do not have
+T4	Condition 2800 2821	mitochondrial disease
+R2	has_negation Arg1:T4 Arg2:T3	
+T5	Non-query-able 2823 2915	Study team may decline to enroll a participant for other reasons based on clinical judgement
+T6	Value 162 172;180 188	two months or older
+T7	Person 176 179	age
+R3	has_value Arg1:T7 Arg2:T6	
+T8	Condition 228 249	mitochondrial disease
+T9	Observation 250 490	based on a determination by a physician with expertise in genetics and/or neurology. Supportive evidence may include genetic testing, muscle biopsy, biochemical testing, neuroimaging or enzyme analysis consistent with mitochondrial disease.
+R4	has_context Arg1:T8 Arg2:T9	
+T10	Temporal 492 517	At the time of enrollment
+T11	Condition 565 573	COVID-19
+T12	Qualifier 555 564	confirmed
+T13	Qualifier 542 551	suspected
+*	OR T12 T13
+R5	has_qualifier Arg1:T11 Arg2:T12	
+R6	has_temporal Arg1:T11 Arg2:T10	
+T14	Temporal 633 651	after January 2020
+T15	Observation 590 599;652 684	New onset without an alternative diagnosis
+T16	Condition 686 691	fever
+T17	Condition 693 698	cough
+T18	Condition 700 719	shortness of breath
+T19	Condition 721 728	fatigue
+T20	Condition 730 741	sore throat
+T21	Condition 743 753	rhinorrhea
+T22	Condition 755 775	musculoskeletal pain
+T23	Condition 777 785	vomiting
+T24	Condition 787 795	diarrhea
+T25	Condition 797 804	anosmia
+T26	Condition 806 824	neurologic decline
+T27	Observation 842 942	testing for COVID-19/SARS-COV-2 is clinically indicated based on evaluation by a healthcare provider
+T28	Observation 1020 1049;948 968	at a local healthcare setting Laboratory confirmed
+T29	Value 969 977	positive
+T30	Measurement 978 1009	testing for COVID-19/SARS-Cov-2
+R7	has_value Arg1:T30 Arg2:T29	
+R8	has_context Arg1:T30 Arg2:T28	
+*	OR T27 T30
+R9	AND Arg1:T26 Arg2:T27	
+R11	has_temporal Arg1:T16 Arg2:T14	
+*	OR T16 T17 T18 T19 T20 T21 T22 T23 T24 T25 T26
+R10	has_context Arg1:T14 Arg2:T15	

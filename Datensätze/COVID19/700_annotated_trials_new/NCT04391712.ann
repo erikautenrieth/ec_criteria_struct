@@ -1,0 +1,16 @@
+T8	Condition 236 256	autoimmune disorders
+*	OR T8 T9
+T9	Condition 260 283	inflammatory conditions
+R1	has_mood Arg1:T4 Arg2:T3	
+T11	Condition 309 317	Pregnant
+T2	Condition 42 62	Pulmonary compromise
+T5	Value 91 115	approximately 2-6 liters
+T10	Observation 284 307	not related to COVID-19
+R2	has_value Arg1:T4 Arg2:T5	
+T3	Mood 63 72	requiring
+R3	AND Arg1:T2 Arg2:T4	
+T4	Procedure 73 87	oxygen support
+R4	has_context Arg1:T9 Arg2:T10	
+T7	Procedure 199 220	Ventilator management
+T6	Non-query-able 117 172	Able to self prone, or support in self-sitting position
+T1	Condition 23 31	COVID-19

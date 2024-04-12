@@ -1,0 +1,35 @@
+T18	Condition 803 819	fungal infection
+R5	has_mood Arg1:T6 Arg2:T7	
+R3	has_context Arg1:T17 Arg2:T13	
+T3	Observation 96 107	symptomatic
+R9	subsumes Arg1:T20 Arg2:T21	
+T11	Observation 552 615	failed at least one FDA-approved treatment for COVID-19 disease
+T13	Observation 777 789	Uncontrolled
+T4	Condition 207 228	pulmonary infiltrates
+T10	Observation 445 545	Clinical status must allow tapering of steroids to < 0.5mg/kg prednisone or other steroid equivalent
+T15	Non-query-able 857 908	Unlikely to survive within 48 hours of VST infusion
+T17	Condition 790 799;810 819	bacterial infection
+R1	has_context Arg1:T2 Arg2:T3	
+T1	Condition 53 78	infection with SARS-CoV-2
+T7	Mood 265 280	Requirement for
+T16	Observation 834 855	relapse of malignancy
+*	OR T17 T18
+T19	Condition 245 263	COVID-19 infection
+T6	Procedure 281 305	supplemental oxygenation
+R8	has_context Arg1:T18 Arg2:T13	
+T24	Procedure 405 427	Mechanical ventilation
+T2	Condition 108 124	COVID-19 disease
+T20	Observation 307 346	Need for additional respiratory support
+R4	has_context Arg1:T16 Arg2:T14	
+T21	Procedure 378 390	High flow 02
+T8	Value 437 443	>1 day
+R2	has_value Arg1:T9 Arg2:T8	
+T22	Device 392 396	CPAP
+T9	Person 433 436	Age
+R7	AND Arg1:T4 Arg2:T19	
+*	OR T21 T22 T23 T24
+T12	Informed_consent 617 750	Must be able to receive VST infusion in Ohio (informed consent obtained by CCHMC PI or sub-investigator either in person or by phone)
+R6	has_context Arg1:T4 Arg2:T5	
+T5	Observation 173 201	Imaging (CXR, CT scan, etc.)
+T14	Observation 821 833	Uncontrolled
+T23	Device 398 403	BiPAP

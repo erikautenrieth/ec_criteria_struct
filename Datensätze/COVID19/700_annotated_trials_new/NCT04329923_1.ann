@@ -1,0 +1,178 @@
+T66_mml	Condition 3964 3979	unstable angina
+T69_mml	Condition 3498 3527	increased cardiovascular risk
+T68_mml	Condition 3821 3832	arrhythmias
+T198_mml	Observation 2550 2560	History of
+T197_mml	Condition 2598 2609	pneumonitis
+T81_mml	Condition 2243 2252	lactating
+T87_mml	Observation 2459 2469	history of
+T1_mml	Condition 3938 3959	myocardial infarction
+T2_mml	Condition 2231 2239	Pregnant
+T9_mml	Condition 2907 2914	illness
+T98_mml	Procedure 2936 2954	infusional therapy
+T209_mml	Qualifier 2886 2893	serious
+T202_mml	Value 2145 2154	<18 years
+T211_mml	Condition 2470 2485	retinal disease
+T201_mml	Person 2158 2161	age
+T226_mml	Measurement 2265 2279	pregnancy test
+T227_mml	Procedure 2956 2974	intense monitoring
+T223_mml	Reference_point 4041 4051	enrollment
+T128_mml	Condition 3077 3095	autoimmune disease
+T135_mml	Condition 3049 3067	infectious disease
+T114_mml	Qualifier 2590 2597	chronic
+T244_mml	Condition 3097 3119	cardiovascular disease
+T149_mml	Qualifier 3808 3820	uncontrolled
+T29_mml	Observation 3486 3497	evidence of
+T136_mml	Observation 3891 3901	History of
+T141_mml	Condition 2200 2229	Allergy to hydroxychloroquine
+T168_mml	Condition 4071 4095	congestive heart failure
+T161_mml	Mood 3223 3238	plan to undergo
+R1	has_value Arg1:T201_mml Arg2:T202_mml	
+T1	Observation 2163 2172	Prisoners
+T2	Observation 2176 2198	other detained persons
+*	OR T1 T2
+T3	Value 2256 2264	positive
+T4	Temporal 2280 2313	during pre-medication examination
+*	OR T2_mml T81_mml T226_mml
+R2	has_value Arg1:T226_mml Arg2:T3	
+R3	has_temporal Arg1:T226_mml Arg2:T4	
+T5	Drug 2325 2357	any treatment drug for 2019-ncov
+T6	Mood 2315 2324	Receiving
+T7	Temporal 2358 2402	within 14 days prior to screening evaluation
+T8	Reference_point 2382 2402	screening evaluation
+R4	has_mood Arg1:T5 Arg2:T6	
+R5	has_temporal Arg1:T5 Arg2:T7	
+R6	has_index Arg1:T7 Arg2:T8	
+T9	Qualifier 2453 2458	Known
+T10	Condition 2515 2547	age related macular degeneration
+R7	has_temporal Arg1:T211_mml Arg2:T87_mml	
+R8	has_qualifier Arg1:T211_mml Arg2:T9	
+R9	subsumes Arg1:T211_mml Arg2:T10	
+T11	Condition 2561 2586	interstitial lung disease
+T12	Negation 2610 2619	unrelated
+T13	Condition 2620 2628	COVID-19
+R10	has_temporal Arg1:T11 Arg2:T198_mml	
+*	OR T11 T197_mml
+R11	has_qualifier Arg1:T197_mml Arg2:T114_mml	
+R12	AND Arg1:T197_mml Arg2:T13	
+R13	has_negation Arg1:T13 Arg2:T12	
+T14	Condition 2681 2690	porphyria
+T15	Condition 2694 2703	psoriasis
+*	OR T14 T15
+T16	Non-query-able 2719 2869	unless the disease is well controlled and they are under the care of a specialist for the disorder who agrees to monitor the patient for exacerbations
+T17	Qualifier 2894 2906	intercurrent
+T18	Qualifier 2929 2935	active
+T19	Qualifier 2979 2987	frequent
+T20	Observation 2988 3019	dose adjustments for medication
+T21	Condition 3069 3075	cancer
+R14	has_qualifier Arg1:T9_mml Arg2:T209_mml	
+R15	AND Arg1:T209_mml Arg2:T17	
+R16	AND Arg1:T9_mml Arg2:T98_mml	
+R17	has_qualifier Arg1:T98_mml Arg2:T18	
+*	OR T98_mml T227_mml T20
+R18	has_qualifier Arg1:T20 Arg2:T19	
+T22	Mood 2920 2928	requires
+R19	has_mood Arg1:T98_mml Arg2:T22	
+R20	has_mood Arg1:T227_mml Arg2:T22	
+R21	has_mood Arg1:T20 Arg2:T22	
+R22	subsumes Arg1:T20 Arg2:T135_mml	
+*	OR T135_mml T21 T128_mml T244_mml
+T23	Qualifier 3150 3155	major
+T24	Procedure 3156 3165;3190 3197	abdominal surgery
+T25	Procedure 3167 3175;3190 3197	thoracic surgery
+T26	Procedure 3177 3182;3190 3197	spine surgery
+T27	Procedure 3186 3197	CNS surgery
+T28	Temporal 3198 3218	in the last 2 months
+T29	Procedure 3239 3246	surgery
+T30	Temporal 3247 3273	during study participation
+R23	has_mood Arg1:T29 Arg2:T161_mml	
+R24	has_temporal Arg1:T29 Arg2:T30	
+R25	has_qualifier Arg1:T24 Arg2:T23	
+*	OR T24 T25 T26 T27 T29
+R26	has_temporal Arg1:T27 Arg2:T28	
+R27	has_qualifier Arg1:T25 Arg2:T23	
+R28	has_qualifier Arg1:T26 Arg2:T23	
+R29	has_qualifier Arg1:T27 Arg2:T23	
+T31	Drug 3295 3347	cytochrome P450 enzyme-inducing anticonvulsant drugs
+T32	Drug 3354 3363	phenytoin
+T33	Drug 3365 3378	carbamazepine
+T34	Drug 3380 3393	Phenobarbital
+T35	Drug 3395 3404	primidone
+T36	Drug 3408 3421	oxcarbazepine
+T37	Temporal 3423 3473	within 4 weeks of the start of the study treatment
+T38	Reference_point 3445 3473	start of the study treatment
+R30	subsumes Arg1:T31 Arg2:T32	
+*	OR T32 T33 T34 T35 T36
+R31	has_temporal Arg1:T36 Arg2:T37	
+R32	has_index Arg1:T37 Arg2:T38	
+T39	Observation 3475 3482	History
+T40	Measurement 3561 3602	Left ventricular ejection fraction (LVEF)
+T41	Value 3603 3640	< institutional lower limit of normal
+T42	Qualifier 3785 3807	clinically significant
+T43	Negation 3834 3843	Exception
+T44	Qualifier 3859 3869	controlled
+T45	Condition 3870 3889	atrial fibrillation
+R33	has_temporal Arg1:T69_mml Arg2:T39	
+R34	has_context Arg1:T69_mml Arg2:T29_mml	
+R35	has_value Arg1:T40 Arg2:T41	
+R36	subsumes Arg1:T69_mml Arg2:T40	
+R37	has_qualifier Arg1:T68_mml Arg2:T42	
+R38	AND Arg1:T42 Arg2:T149_mml	
+R39	AND Arg1:T68_mml Arg2:T45	
+R40	has_negation Arg1:T45 Arg2:T43	
+R41	has_qualifier Arg1:T45 Arg2:T44	
+T46	Condition 3902 3926	acute coronary syndromes
+R42	has_temporal Arg1:T46 Arg2:T136_mml	
+T47	Procedure 3982 4002	coronary angioplasty
+T48	Procedure 4007 4015	stenting
+T49	Temporal 4016 4051	within 6 months prior to enrollment
+R43	subsumes Arg1:T46 Arg2:T1_mml	
+*	OR T1_mml T66_mml
+*	OR T46 T47 T48 T40 T68_mml T168_mml
+R44	has_temporal Arg1:T48 Arg2:T49	
+R45	has_index Arg1:T49 Arg2:T223_mml	
+T50	Temporal 4053 4062	Current  
+T51	Qualifier 4062 4070;4110 4136	Class II New York Heart Association
+R46	has_temporal Arg1:T168_mml Arg2:T50	
+R47	has_qualifier Arg1:T168_mml Arg2:T51	
+T52	Informed_consent 64 113	Competent and capable to provide informed consent
+T53	Observation 120 233	access to a smart device such as a cell phone, tablet, laptop computer with necessary data/internet accessibility
+T54	Person 304 307	Age
+T55	Value 308 316	40 years
+T56	Observation 323 414	the risk of prolonged disease that progresses to severe COVID-19 disease increases with age
+R48	has_value Arg1:T54 Arg2:T55	
+R49	AND Arg1:T54 Arg2:T56	
+T57	Value 421 429	positive
+T58	Measurement 417 420;430 453	PCR for the SARS-CoV2 virus
+R50	has_value Arg1:T58 Arg2:T57	
+T59	Condition 464 487	one symptom of COVID-19
+T60	Measurement 489 490	T
+T61	Value 490 499	> 100.5 F
+T62	Condition 501 506	cough
+T63	Condition 508 516	headache
+T64	Condition 518 525	fatigue
+T65	Condition 527 546	shortness of breath
+T66	Condition 548 556	diarrhea
+T67	Condition 558 575	smell disturbance
+R51	subsumes Arg1:T59 Arg2:T60	
+R52	has_value Arg1:T60 Arg2:T61	
+*	OR T60 T62 T63 T64 T65 T66 T67
+T68	Temporal 578 590	4 days since
+T69	Condition 595 621	first symptoms of COVID-19
+R53	has_temporal Arg1:T69 Arg2:T68	
+T70	Negation 643 646	Not
+T71	Mood 647 656	requiring
+T72	Visit 657 672	hospitalization
+T73	Observation 680 704	sent home for quarantine
+R54	has_negation Arg1:T72 Arg2:T70	
+R55	has_mood Arg1:T72 Arg2:T71	
+R56	AND Arg1:T72 Arg2:T73	
+T74	Visit 712 775	live within 30 miles of HUP or Penn Presbytarian Medical Center
+T75	Observation 779 812	facilitate drop-off of medication
+R57	AND Arg1:T74 Arg2:T75	
+T76	Observation 819 856	own a working computer, or smartphone
+T77	Observation 861 881	have internet access
+*	OR T76 T77
+T78	Post-eligibility 891 932	willing to fill out a daily symptom diary
+T79	Post-eligibility 942 974	available for a daily phone call
+T80	Post-eligibility 982 1020	take their own temperature twice a day
+T81	Post-eligibility 1030 1175	willing to report the observed symptoms and development of COVID-19 in the co-inhabitants of the residence at which the quarantine will be served

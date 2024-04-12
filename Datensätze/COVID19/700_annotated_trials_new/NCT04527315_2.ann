@@ -1,0 +1,23 @@
+T1	Condition 402 410	COVID-19
+T2	Negation 379 381	No
+R1	has_negation Arg1:T1 Arg2:T2	
+T3	Negation 413 415	No
+T4	Observation 416 472	active clinical symptoms indicative of possible COVID-19
+R2	has_negation Arg1:T4 Arg2:T3	
+T5	Person 475 479	Ages
+T6	Value 480 491	18 and over
+R3	has_value Arg1:T5 Arg2:T6	
+T7	Informed_consent 494 582	competent and willing to sign informed consent and comply to all aspects of the protocol
+T8	Device 1637 1647	Pace maker
+T9	Condition 1667 1675	diabetes
+T10	Condition 1695 1719	Restrictive lung disease
+T11	Qualifier 1649 1666	Poorly controlled
+T12	Qualifier 1677 1694	Poorly controlled
+R4	has_qualifier Arg1:T9 Arg2:T11	
+R5	has_qualifier Arg1:T10 Arg2:T12	
+T13	Condition 1721 1734	Heart failure
+T14	Condition 1736 1755	Parkinson's Disease
+T15	Condition 1757 1769	Hypertension
+T16	Condition 1799 1819	autonomic neuropathy
+T17	Observation 1788 1798	history of
+R6	has_temporal Arg1:T16 Arg2:T17	

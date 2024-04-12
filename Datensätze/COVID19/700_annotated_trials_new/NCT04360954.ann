@@ -1,0 +1,12 @@
+T6	Value 85 93	positive
+T1	Person 279 282	age
+*	OR T5 T4 T2 T3
+T3_DdMmlC2Q	Value 269 274;286 288	under 18
+T3	Condition 220 238	parasitic diseases
+R2	has_value Arg1:T0_DdMmlC2Q Arg2:T6	
+T4	Observation 142 165	recovered from COVID-19
+T5	Visit 61 73	hospitalized
+R1	has_value Arg1:T1 Arg2:T3_DdMmlC2Q	
+T0_DdMmlC2Q	Measurement 78 84;94 108	tested for SARS-CoV-2
+R3	AND Arg1:T5 Arg2:T0_DdMmlC2Q	
+T2	Condition 188 195	healthy

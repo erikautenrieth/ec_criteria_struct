@@ -1,0 +1,46 @@
+T9	Person 353 358	women
+T18	Condition 610 627	allergy to iodine
+T23	Observation 667 676	suspected
+T17	Observation 509 531	likely to be placed on
+T8	Observation 335 352	possible pregnant
+*	OR T20 T21
+R8	has_context Arg1:T14 Arg2:T17	
+R12	has_temporal Arg1:T20 Arg2:T24	
+R9	has_context Arg1:T21 Arg2:T22	
+R7	has_temporal Arg1:T14 Arg2:T15	
+R4	AND Arg1:T8 Arg2:T9	
+R3	AND Arg1:T7 Arg2:T9	
+R5	has_temporal Arg1:T10 Arg2:T11	
+T1	Condition 31 51	SARS-CoV-2 infection
+T26	Procedure 773 798	renal replacement therapy
+R6	subsumes Arg1:T12 Arg2:T13	
+T3	Visit 60 79	admitted to the ICU
+T4	Person 88 91	age
+*	OR T7 T8
+T13	Procedure 460 485	renal replacement therapy
+T24	Temporal 714 726	on admission
+T25	Condition 741 762	chronic renal failure
+R1	has_context Arg1:T1 Arg2:T2	
+R14	has_mood Arg1:T26 Arg2:T27	
+T7	Condition 323 331	Pregnant
+T14	Procedure 532 568	extra-corporeal membrane oxygenation
+T16	Observation 495 505	already on
+T15	Temporal 577 603	within 48h after admission
+T6	Informed_consent 270 322	Refused informed consent to participate in the study
+T27	Mood 763 772	requiring
+T21	Condition 677 686;704 713	bacterial infection
+T22	Observation 654 663	Confirmed
+R13	AND Arg1:T25 Arg2:T26	
+R10	has_context Arg1:T20 Arg2:T22	
+T12	Observation 414 451	life sustaining treatment limitations
+*	OR T17 T16
+T20	Condition 698 713	virus infection
+T5	Value 95 118	between 18 and 95 years
+T10	Observation 359 386	Patient unlikely to survive
+T19	Condition 610 617;631 653	allergy iodinated 131I albumin
+T2	Observation 21 30	Confirmed
+R2	has_value Arg1:T4 Arg2:T5	
+*	OR T22 T23
+T28	Non-query-able 119 247	Patent peripheral or central venous line from which blood draws can be made and through which the 131I bolus can be administered
+R11	has_temporal Arg1:T21 Arg2:T24	
+T11	Temporal 387 400	more than 72h

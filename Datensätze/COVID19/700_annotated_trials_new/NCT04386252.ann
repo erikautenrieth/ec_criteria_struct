@@ -1,0 +1,21 @@
+T19	Competing_trial 345 392	Participated in previous COVID-19 vaccine study
+T3	Value 45 51	0 or 1
+*	OR T5 T8
+T10	Condition 179 205	hypersensitivity to GM-CSF
+T1	Measurement 40 44	ECOG
+T8	Observation 116 161	Pre-existing IgG or IgM SARS-CoV-2 antibodies
+T9	Condition 163 171	Pregnant
+T13	Condition 256 259	HIV
+R1	has_value Arg1:T1 Arg2:T3	
+T16	Condition 266 269	HCV
+T5	Condition 81 89	COVID-19
+T11	Condition 220 245	immune deficiency disease
+T17	Drug 296 311	corticosteroids
+T7	Observation 100 114	by PCR testing
+*	OR T16 T15 T18 T17 T13 T11 T10 T9
+T15	Condition 261 264	HBV
+T18	Drug 321 343	immunosupressive agent
+R5	has_context Arg1:T5 Arg2:T7	
+T2	Value 21 38	18 years or older
+T4	Person 24 29	years
+R2	has_value Arg1:T4 Arg2:T2	

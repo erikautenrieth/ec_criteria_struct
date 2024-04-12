@@ -1,0 +1,18 @@
+T1	Value 1967 1977;1985 1993	two months or older
+T2	Person 1981 1984	age
+R1	has_value Arg1:T2 Arg2:T1	
+T3	Condition 2033 2054	mitochondrial disease
+T4	Observation 2020 2029;2055 2294	diagnosis based on a determination by a physician with expertise in genetics and/or neurology. Supportive evidence may include genetic testing, muscle biopsy, biochemical testing, neuroimaging or enzyme analysis consistent with mitochondrial disease
+R2	has_context Arg1:T3 Arg2:T4	
+T5	Negation 2340 2360	not have evidence of
+T6	Condition 2371 2380	infection
+T7	Qualifier 2365 2370	acute
+R3	has_qualifier Arg1:T6 Arg2:T7	
+R4	has_negation Arg1:T6 Arg2:T5	
+T8	Person 2766 2769	age
+T9	Value 2742 2762	less than two months
+R5	has_value Arg1:T8 Arg2:T9	
+T10	Negation 2788 2799	do not have
+T11	Condition 2800 2821	mitochondrial disease
+R6	has_negation Arg1:T11 Arg2:T10	
+T12	Non-query-able 2823 2915	Study team may decline to enroll a participant for other reasons based on clinical judgement

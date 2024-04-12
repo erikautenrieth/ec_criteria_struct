@@ -1,0 +1,43 @@
+R1	has_qualifier Arg1:T5 Arg2:T6	
+T22	Competing_trial 1491 1672	Patients enrolled in other interventional clinical trials. Patients enrolled in non-interventional studies or receiving non-FDA-approved drugs for compassionate use are not excluded
+T30	Measurement 200 243	testing for novel coronavirus SARS-CoV-2019
+R3	has_value Arg1:T3 Arg2:T2	
+R13	has_value Arg1:T30 Arg2:T29	
+T10	Procedure 1102 1124	mechanical ventilation
+T4	Non-query-able 402 900	elements of which include wheezing or inability to speak complete sentences without effort, respiratory rate 22, O2 saturation 90% on room air (or O2 saturation  94% on 2L supplemental oxygen; either is equal to one point on the score) all within a 24-hour period prior to enrollment, and/or any worsening of chest X-ray (CXR) findings after COVID-19 diagnosis i. Initial CXR at the time of COVID-diagnosis, or anytime thereafter. Change from baseline CXR prior to COVID-diagnosis would not qualify
+T1	Non-query-able 907 1035	he BCRSS risk calculation score is available at: https://www.mdcalc.com/brescia-covid-respiratory-severity-scale-bcrss-algorithm
+R11	has_mood Arg1:T10 Arg2:T9	
+T16	Non-query-able 1299 1350	Use of chronic inhaled steroids is NOT an exclusion
+T27	Observation 1880 1925	prevents compliance with typical medical care
+R2	subsumes Arg1:T5 Arg2:T3	
+R5	has_value Arg1:T13 Arg2:T14	
+T5	Condition 270 286	COVID-19 disease
+T25	Condition 1855 1874	psychiatric disease
+T8	Qualifier 1064 1072	Critical
+R9	has_qualifier Arg1:T25 Arg2:T26	
+T6	Qualifier 261 269	moderate
+T11	Visit 1132 1145	ICU admission
+T14	Value 1218 1229	> 10 mg/day
+T9	Mood 1093 1101	need for
+T28	Competing_trial 1928 1995	Participation in another interventional clinical trial for COVID-19
+R7	has_index Arg1:T19 Arg2:T20	
+T26	Qualifier 1848 1854	Severe
+R8	has_temporal Arg1:T18 Arg2:T19	
+T23	Non-query-able 1675 1727	Patients whose goal of care is comfort measures only
+R12	subsumes Arg1:T7 Arg2:T10	
+T13	Drug 1207 1217	prednisone
+T18	Drug 1369 1383	IL-6 inhibitor
+T15	Drug 1236 1294	treatment with biologics for chronic inflammatory diseases
+T2	Value 314 337	Score of 1-3 (out of 3)
+R10	has_context Arg1:T25 Arg2:T27	
+*	OR T10 T11
+T20	Reference_point 1400 1432	prior to enrollment in the trial
+*	OR T13 T15
+T21	Condition 1434 1443	Pregnancy
+T24	Informed_consent 1729 1845	Inability to provide informed consent, or absence of a legally authorized representative to provide informed consent
+T7	Condition 1073 1080	disease
+T12	Non-query-able 1147 1177	Expected death within 48 hours
+T3	Measurement 343 400	modified Brescia COVID respiratory severity score (BCRSS)
+T29	Value 191 199	Positive
+R4	has_qualifier Arg1:T7 Arg2:T8	
+T19	Temporal 1384 1432	within 3 months prior to enrollment in the trial

@@ -1,0 +1,42 @@
+R6	has_value Arg1:T11 Arg2:T10	
+T5	Procedure 126 140	oxygen therapy
+T24	Condition 732 740	Pregnant
+T17	Condition 483 502	Acute kidney injury
+T11	Person 290 294	aged
+*	OR T20 T21
+R9	has_temporal Arg1:T17 Arg2:T18	
+T25	Observation 745 764	breastfeeding women
+T6	Observation 153 195	to maintain oxygen saturation (SaO2) > 90%
+R8	has_temporal Arg1:T14 Arg2:T16	
+T8	Measurement 196 201;211 245	COVID by polymerase chain reaction (PCR)
+T3	Visit 268 280	Hospitalized
+R1	has_qualifier Arg1:T1 Arg2:T2	
+T19	Measurement 559 575	serum creatinine
+R10	AND Arg1:T3 Arg2:T11	
+R2	AND Arg1:T9 Arg2:T5	
+*	OR T24 T25
+T12	Condition 350 372	chronic kidney disease
+R12	has_value Arg1:T19 Arg2:T20	
+R4	has_context Arg1:T5 Arg2:T6	
+T1	Condition 28 36	COVID-19
+T23	Value 668 687	less than 60 ml/min
+T2	Qualifier 21 27	Severe
+T10	Value 295 314	18 years or greater
+T4	Mood 116 125	requiring
+T16	Temporal 458 482	within the last 6 months
+T20	Value 547 555;576 592	increase by more than 50%
+T22	Measurement 624 664	estimated creatinine clearance (by MDRD)
+T7	Value 202 210	positive
+T21	Value 596 620	0.3 mg/dL above baseline
+R7	has_context Arg1:T12 Arg2:T13	
+*	OR T15 T14
+T13	Observation 337 349	Pre-existing
+R5	has_value Arg1:T8 Arg2:T7	
+T18	Temporal 503 528	at the time of enrollment
+R3	has_mood Arg1:T5 Arg2:T4	
+T14	Drug 423 457	angiotensin receptor blocker (ARB)
+*	OR T19 T22
+R11	subsumes Arg1:T17 Arg2:T19	
+R13	has_value Arg1:T22 Arg2:T23	
+T15	Drug 405 419	ACE-inhibitors
+T9	Observation 53 115	admitted to the hospital through the Emergency Department (ED)

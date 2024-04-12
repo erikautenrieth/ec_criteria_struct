@@ -1,0 +1,64 @@
+T24	Drug 631 642	clofarabine
+T12	Qualifier 282 294	Uncontrolled
+T11	Condition 295 303	diabetes
+T37	Non-query-able 939 1111	Any patient that in the opinion of the investigator is not medically stable to undergo the leukapheresis procedure or will not comply with the visit schedules or procedures
+*	OR T25 T24 T21 T27
+R2	AND Arg1:T2 Arg2:T3	
+T13	Qualifier 304 316	Uncontrolled
+T17	Condition 342 350	bleeding
+T20	Non-query-able 419 565	Symptomatic, uncontrolled or severe intercurrent illness that would compromise the ability to tolerate blood collection or leukapheresis procedure
+R20	has_index Arg1:T35 Arg2:T36	
+*	OR T1 T2
+T1	Person 21 25	Male
+R17	has_index Arg1:T28 Arg2:T29	
+T28	Temporal 681 733	less than or equal to 3 weeks prior to leukapheresis
+T19	Observation 367 418	which cannot be corrected with minimal intervention
+R6	has_qualifier Arg1:T14 Arg2:T13	
+T9	Measurement 247 275	Oxygen saturation (Pulse Ox)
+T15	Condition 337 340	DIC
+R16	has_temporal Arg1:T25 Arg2:T26	
+R23	subsumes Arg1:T30 Arg2:T33	
+R19	AND Arg1:T32 Arg2:T30	
+T22	Observation 566 574	Systemic
+T36	Reference_point 929 938	screening
+T16	Qualifier 330 336	Active
+T14	Condition 317 329	hypertension
+R11	has_context Arg1:T17 Arg2:T19	
+R14	has_temporal Arg1:T21 Arg2:T23	
+*	OR T15 T17 T18
+R1	has_value Arg1:T3 Arg2:T4	
+R4	has_value Arg1:T9 Arg2:T10	
+T18	Condition 354 366	coagulopathy
+R21	has_value Arg1:T33 Arg2:T34	
+R8	has_qualifier Arg1:T17 Arg2:T16	
+T10	Value 276 281	< 90%
+R3	has_context Arg1:T5 Arg2:T6	
+T29	Reference_point 720 733	leukapheresis
+T32	Person 766 771	women
+R18	has_temporal Arg1:T27 Arg2:T28	
+T27	Procedure 663 680	radiation therapy
+T30	Condition 734 742	Pregnant
+T23	Temporal 588 617	less than or equal to 2 weeks
+T2	Person 29 35	female
+T26	Temporal 588 609;619 626	less than or equal to 6 weeks
+R13	has_context Arg1:T21 Arg2:T22	
+R12	has_context Arg1:T15 Arg2:T19	
+T7	Competing_trial 116 197	Participants who has not participated in a cell or gene therapy trial for COVID19
+T25	Drug 646 658	nitrosoureas
+R7	has_qualifier Arg1:T15 Arg2:T16	
+R22	has_temporal Arg1:T33 Arg2:T35	
+*	OR T31 T30
+T4	Value 41 46	18-60
+T35	Temporal 926 938	at screening
+T34	Value 897 905	positive
+R9	has_qualifier Arg1:T18 Arg2:T16	
+R10	has_context Arg1:T18 Arg2:T19	
+T8	Observation 220 246	Uncontrolled SARS symptoms
+T5	Condition 108 115	COVID19
+R5	has_qualifier Arg1:T11 Arg2:T12	
+T21	Procedure 575 587	chemotherapy
+R15	has_temporal Arg1:T24 Arg2:T26	
+T33	Measurement 906 925	hCG laboratory test
+T31	Observation 746 765	nursing (lactating)
+T6	Observation 47 104	Documented current or past (max 3 months prior) diagnosis
+T3	Person 36 40	aged

@@ -1,0 +1,35 @@
+T8	Temporal 356 390	Up to 48 hours after ICU admission
+T12	Drug 521 530	inotropes
+R10	has_temporal Arg1:T18 Arg2:T19	
+R5	has_context Arg1:T11 Arg2:T13	
+T3	Reference_point 108 126	hospital admission
+R8	AND Arg1:T6 Arg2:T7	
+T16	Observation 716 742	Resident of a nursing home
+T6	Observation 134 218	symptoms or signs or both that are consistent with lower respiratory tract infection
+R9	has_temporal Arg1:T18 Arg2:T20	
+R3	AND Arg1:T1 Arg2:T4	
+T4	Condition 85 88	CAP
+T14	Non-query-able 772 966	Death is deemed to be imminent and inevitable during the next 24 hours AND one or more of the patient, substitute decision maker or attending physician are not committed to full active treatment
+T1	Visit 55 73	admitted to an ICU
+R7	has_temporal Arg1:T10 Arg2:T8	
+T19	Temporal 692 715	within the last 30 days
+R11	has_index Arg1:T8 Arg2:T21	
+*	OR T11 T12
+*	OR T9 T10
+T10	Procedure 454 482	Invasive ventilatory support
+T13	Observation 494 505	infusion of
+T2	Temporal 89 126	within 48 hours of hospital admission
+R2	has_qualifier Arg1:T4 Arg2:T5	
+R1	has_index Arg1:T2 Arg2:T3	
+T20	Temporal 607 628	Prior to this illness
+T17	Observation 716 729;746 769	Resident of a long term care facility
+R6	has_context Arg1:T12 Arg2:T13	
+T15	Post-eligibility 967 1027	Previous participation in this REMAP within the last 90 days
+*	OR T16 T17
+T5	Qualifier 78 84	severe
+R4	has_temporal Arg1:T4 Arg2:T2	
+T9	Procedure 438 450;463 482	Non-invasive ventilatory support
+T7	Condition 223 271	Radiological evidence of new onset consolidation
+T18	Visit 655 691	inpatient in any healthcare facility
+T21	Reference_point 377 390	ICU admission
+T11	Drug 506 517	vasopressor

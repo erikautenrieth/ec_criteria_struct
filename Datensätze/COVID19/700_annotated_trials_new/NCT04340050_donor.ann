@@ -1,0 +1,35 @@
+T1	Person 29 32	Age
+T2	Value 33 55	greater or equal to 18
+T3	Mood 57 64	Able to
+T4	Procedure 65 77	donate blood
+T5	Observation 78 112	per blood bank standard guidelines
+R1	has_value Arg1:T1 Arg2:T2	
+R2	has_mood Arg1:T4 Arg2:T3	
+R3	has_context Arg1:T4 Arg2:T5	
+T6	Temporal 114 119	Prior
+T7	Condition 133 141	COVID-19
+T8	Observation 120 129;142 185	diagnosis documented by a laboratory test (confirmed)
+R4	has_context Arg1:T7 Arg2:T8	
+R5	has_temporal Arg1:T7 Arg2:T6	
+T9	Observation 187 218	Complete resolution of symptoms
+T10	Temporal 219 253	at least 28 days prior to donation
+T11	Reference_point 245 253	donation
+R6	has_temporal Arg1:T9 Arg2:T10	
+R7	has_index Arg1:T10 Arg2:T11	
+T12	Negation 278 288	never been
+T13	Condition 289 297	pregnant
+T14	Temporal 299 309	previously
+T15	Condition 310 318	pregnant
+T16	Observation 333 376	negative for HLA antibodies (HLA screening)
+T17	Person 381 385	male
+T18	Person 319 325	female
+T19	Person 255 261	Female
+R8	AND Arg1:T19 Arg2:T13	
+R9	has_negation Arg1:T13 Arg2:T12	
+R10	AND Arg1:T18 Arg2:T15	
+R11	has_temporal Arg1:T15 Arg2:T14	
+R12	has_context Arg1:T18 Arg2:T16	
+T20	Informed_consent 425 449	Does not provide consent
+T21	Non-query-able 451 504	Does not meet standard blood bank donation guidelines
+T22	Observation 506 533	Unsuccessful blood donation
+*	OR T19 T18 T17

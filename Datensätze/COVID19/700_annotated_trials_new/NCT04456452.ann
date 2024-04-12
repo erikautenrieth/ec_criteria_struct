@@ -1,0 +1,59 @@
+T17	Condition 612 656	chronic obstructive pulmonary disease (COPD)
+T38	Observation 1240 1248	Baseline
+T19	Condition 696 713	liver abnormality
+T7	Observation 117 179	as evaluated by PCR test confirming infection with SARS-COV-2.
+R4	AND Arg1:T5 Arg2:T6	
+T4	Value 37 57;62 73	18 years to 89 years (inclusive)
+R14	has_temporal Arg1:T33 Arg2:T34	
+T14	Value 252 256	<88%
+R2	AND Arg1:T2 Arg2:T3	
+R12	has_temporal Arg1:T28 Arg2:T31	
+*	OR T32 T33
+T26	Non-query-able 802 934	As a result of the medical review and screening investigation, the Principal Investigator considers the patient unfit for the study.
+*	OR T1 T2
+T1	Person 21 25	Male
+R7	has_qualifier Arg1:T19 Arg2:T20	
+T20	Qualifier 684 695	significant
+T33	Condition 1184 1197	breastfeeding
+R6	subsumes Arg1:T8 Arg2:T9	
+T23	Qualifier 605 611	severe
+T11	Observation 277 303	increased respiratory rate
+T12	Condition 305 320	dyspnea on rest
+R11	subsumes Arg1:T28 Arg2:T29	
+T15	Informed_consent 335 439	A signed informed consent form from the patient or the patient's legal representative must be available.
+T37	Condition 1249 1264	QT prolongation
+*	OR T21 T22
+T30	Drug 1121 1137	sodium caprylate
+T31	Observation 935 947	A history of
+*	OR T29 T30
+R1	has_value Arg1:T3 Arg2:T4	
+T28	Condition 1069 1099;948 969	excipients in 5% human albumin allergic reactions to
+R15	has_context Arg1:T37 Arg2:T38	
+T16	Non-query-able 462 592	In the opinion of the clinical team, progression to death is imminent and inevitable, irrespective of the provision of treatments.
+T3	Person 52 61	years old
+T29	Drug 1101 1119	N-acetyltryptophan
+T18	Condition 658 679	chronic renal failure
+T21	Condition 720 729	cirrhosis
+R3	has_context Arg1:T6 Arg2:T7	
+T10	Condition 258 275	labored breathing
+T6	Condition 107 115	COVID-19
+R9	has_qualifier Arg1:T17 Arg2:T23	
+T24	Drug 772 800	immunosuppressive medication
+T2	Person 29 35	female
+*	OR T12 T13 T11 T10 T9
+T25	Qualifier 764 771	chronic
+T35	Competing_trial 1199 1238	Participation in another clinical trial
+T32	Condition 1158 1167	pregnancy
+T5	Visit 75 87	Hospitalized
+R8	subsumes Arg1:T19 Arg2:T21	
+T27	Condition 948 983	allergic reactions to human albumin
+T8	Device 201 220	supplemental oxygen
+T9	Measurement 227 251	oxygen saturation (SpO2)
+T22	Procedure 696 701;731 741	liver transplant
+T13	Condition 305 315;324 332	dyspnea on exertion
+R5	has_value Arg1:T9 Arg2:T14	
+R13	has_temporal Arg1:T27 Arg2:T31	
+T34	Temporal 1174 1183	currently
+R10	has_qualifier Arg1:T24 Arg2:T25	
+*	OR T27 T28
+*	OR T19 T18 T17

@@ -1,0 +1,18 @@
+T5	Mood 95 104	requiring
+T3	Informed_consent 47 79	Able to provide informed consent
+T11	Condition 222 242	cognitive impairment
+T12	Non-query-able 244 323	Rapidly decompensating status requiring urgent or emergent higher level of care
+T8	Mood 117 126	Receiving
+*	OR T10 T11
+T6	Procedure 105 115	intubation
+R4	has_mood Arg1:T9 Arg2:T8	
+R3	has_mood Arg1:T6 Arg2:T5	
+T7	Temporal 85 94	currently
+T10	Informed_consent 173 220	Unable or unwilling to provide informed consent
+R5	has_value Arg1:T1 Arg2:T2	
+R1	has_negation Arg1:T6 Arg2:T4	
+T1	Measurement 23 40	Oxygen saturation
+T4	Negation 81 84	Not
+T9	Procedure 127 146	oxygen by face mask
+R2	has_temporal Arg1:T6 Arg2:T7	
+T2	Value 41 45	<93%

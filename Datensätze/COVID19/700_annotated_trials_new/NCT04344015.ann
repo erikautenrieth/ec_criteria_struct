@@ -1,0 +1,46 @@
+T18	Observation 777 816	Inadequate venous access for phlebotomy
+T8	Observation 272 321	Complete resolution of all COVID-related symptoms
+T20_mml	Value 235 243	negative
+R8	has_qualifier Arg1:T22_mml Arg2:T7	
+R7	has_value Arg1:T22_mml Arg2:T20_mml	
+R2	has_temporal Arg1:T2 Arg2:T1	
+R10	AND Arg1:T11 Arg2:T47_mml	
+T19_mml	Person 337 341	Male
+T20	Condition 828 836	pregnant
+T6	Reference_point 216 230	blood donation
+R6	AND Arg1:T4 Arg2:T22_mml	
+R1	has_value Arg1:T26_mml Arg2:T8_mml	
+T5	Temporal 186 230	for 14-28 days at the time of blood donation
+T47_mml	Condition 356 364	pregnant
+R11	has_negation Arg1:T47_mml Arg2:T10	
+*	OR T22_mml T8
+T28_mml	Person 688 694	Female
+T13	Person 403 409	female
+T26_mml	Person 23 26	Age
+T15	Non-query-able 446 537	Meet all criteria for volunteer blood donation per Jefferson Blood Donor Center and the FDA
+T3	Observation 75 126	documented by a laboratory test approved by the FDA
+R4	has_index Arg1:T5 Arg2:T6	
+T4	Observation 136 185	Complete resolution of all COVID-related symptoms
+T19	Temporal 818 827	Currently
+T22_mml	Measurement 253 268	SARS-CoV-2 test
+T14	Observation 417 444	negative for HLA antibodies
+T12	Qualifier 383 393	previously
+T2	Condition 53 74	diagnosis of COVID-19
+*	OR T19_mml T11 T13
+T1	Temporal 47 52	Prior
+R3	has_context Arg1:T2 Arg2:T3	
+R12	AND Arg1:T13 Arg2:T41_mml	
+T41_mml	Condition 394 402	pregnant
+T8_mml	Value 27 45	18 years and older
+T16	Non-query-able 564 686	Failure to pass standard volunteer blood donor screening criteria required by the Jefferson Blood Donor Center and the FDA
+R13	has_qualifier Arg1:T41_mml Arg2:T12	
+R14	AND Arg1:T13 Arg2:T14	
+T7	Qualifier 244 252	repeated
+R15	AND Arg1:T28_mml Arg2:T17	
+R16	has_temporal Arg1:T20 Arg2:T19	
+R5	has_temporal Arg1:T4 Arg2:T5	
+T11	Person 365 371	female
+T17	Observation 707 775	HLA antibodies (per FDA requirements for convalescent plasma donors)
+R9	has_temporal Arg1:T8 Arg2:T9	
+T10	Negation 350 355	never
+T9	Temporal 322 335	for > 28 days

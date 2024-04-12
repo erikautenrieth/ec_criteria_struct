@@ -1,0 +1,27 @@
+T16	Observation 469 501	contraindication to core warming
+T9	Condition 564 572	pregnant
+T15	Qualifier 649 654	acute
+T14	Observation 663 667	post
+R4	has_context Arg1:T12 Arg2:T14	
+R5	has_qualifier Arg1:T11 Arg2:T15	
+T1	Person 40 43	age
+R3	has_value Arg1:T6 Arg2:T7	
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Condition 90 98	COVID-19
+T8	Non-query-able 609 633	Patients with DNR status
+T2	Value 30 35;47 59	above 18 years old
+T10	Non-query-able 357 453	Patients without surrogate or legally authorized representative able to provide informed consent
+R2	AND Arg1:T3 Arg2:T4	
+T12	Condition 668 682	cardiac arrest
+T6	Measurement 598 607	body mass
+T5	Informed_consent 199 333	Patients must have a surrogate or legally authorized representative able to understand and critically review the informed consent form
+T4	Procedure 102 124	mechanical ventilation
+T7	Value 588 594	<40 kg
+T13	Condition 687 705	multiple sclerosis
+T11	Condition 655 661	stroke
+T17	Measurement 134 162	maximum baseline temperature
+T18	Value 190 197	< 38.3C
+R6	has_value Arg1:T17 Arg2:T18	
+T19	Temporal 164 188	within previous 12 hours
+R7	has_temporal Arg1:T17 Arg2:T19	
+*	OR T11 T12 T13

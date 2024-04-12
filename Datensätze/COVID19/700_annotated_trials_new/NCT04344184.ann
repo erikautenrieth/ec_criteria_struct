@@ -1,0 +1,39 @@
+T1	Observation 603 615	Incarcerated
+T14	Condition 163 186	decrease in oxygenation
+*	OR T9 T19_mml
+R3	has_qualifier Arg1:T3 Arg2:T4	
+T25_mml	Observation 534 545	Presence of
+R8	has_qualifier Arg1:T9 Arg2:T8	
+T23_mml	Condition 576 588	kidney stone
+T11	Condition 52 73	diagnosis of COVID-19
+T4	Qualifier 449 454	Known
+T10	Value 238 243	< 93%
+T19_mml	Procedure 283 302	supplemental oxygen
+T6	Observation 371 401	increase in the requirement of
+R2	has_context Arg1:T1_mml Arg2:T25_mml	
+T15_mml	Qualifier 569 575	Active
+R7	has_context Arg1:T19_mml Arg2:T7	
+T10_mml	Procedure 402 421	supplemental oxygen
+T12_mml	Procedure 338 357	supplemental oxygen
+T13	Visit 32 44	hospitalized
+R1	has_qualifier Arg1:T23_mml Arg2:T15_mml	
+T7	Observation 264 282	new requirement of
+R14	subsumes Arg1:T33_mml Arg2:T14	
+T1_mml	Condition 546 567	diabetic ketoacidosis
+T12	Observation 74 139	based on positive RT-PCR of nasal, oropharyngeal, or BAL specimen
+R4	has_context Arg1:T12_mml Arg2:T5	
+R12	has_context Arg1:T11 Arg2:T12	
+T33_mml	Condition 145 154	hypoxemia
+R6	has_context Arg1:T10_mml Arg2:T6	
+T34_mml	Observation 244 255	on room air
+R10	has_context Arg1:T9 Arg2:T34_mml	
+T5	Observation 358 365	at home
+T3	Condition 455 475	allergy to Vitamin C
+T8	Qualifier 208 211	New
+T35_mml	Condition 593 601	Pregnant
+T9	Measurement 212 237	pulse oximetry saturation
+R11	AND Arg1:T13 Arg2:T11	
+R5	AND Arg1:T12_mml Arg2:T10_mml	
+R13	AND Arg1:T11 Arg2:T33_mml	
+R9	has_value Arg1:T9 Arg2:T10	
+T2	Informed_consent 477 532	Inability to obtain consent from patient or next of kin

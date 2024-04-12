@@ -1,0 +1,27 @@
+R7	AND Arg1:T7 Arg2:T9	
+T12	Observation 391 415	Do Not Resuscitate (DNR)
+T6	Condition 230 258	traumatic brain injury (TBI)
+T18	Qualifier 187 192	acute
+R2	has_mood Arg1:T9 Arg2:T8	
+T1	Value 30 57	greater than or equal to 18
+T8	Mood 293 302	requiring
+T10	Value 348 353;365 377	under 18 years old
+T11	Person 358 361	age
+T15	Temporal 478 508	prior to acute hospitalization
+T4	Condition 149 185	acute intracerebral hemorrhage (ICH)
+T14	Observation 443 470	Comfort Measures Only (CMO)
+*	OR T3 T4 T5 T6 T7
+R6	has_qualifier Arg1:T6 Arg2:T17	
+T2	Person 21 29	Patients
+T5	Condition 193 222	subarachnoid hemorrhage (SAH)
+T17	Qualifier 224 229	acute
+T9	Observation 303 316	critical care
+T16	Observation 509 663	Neurologically morbid-bound on hospital arrival (bilateral fix/dilated pupils, catastrophic bleed/TBI) and likely to progress to brain death within 48 hrs
+T7	Condition 260 283	status epilepticus (SE)
+T3	Condition 120 147	Acute ischemic stroke (AIS)
+R5	has_qualifier Arg1:T5 Arg2:T18	
+*	OR T12 T13 T14
+R4	has_temporal Arg1:T14 Arg2:T15	
+R3	has_value Arg1:T11 Arg2:T10	
+T13	Observation 417 438	Do Not Intubate (DNI)
+R1	has_value Arg1:T2 Arg2:T1	

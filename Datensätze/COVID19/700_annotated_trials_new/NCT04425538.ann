@@ -1,0 +1,115 @@
+T21	Temporal 1542 1559	within last month
+R4	has_value Arg1:T10 Arg2:T11	
+T18	Drug 756 769	TNF inhibitor
+T36	Value 1813 1834	< 30 ml /min/1.73 m^2
+T8	Observation 155 184	Laboratory (RT-PCR) confirmed
+T5	Condition 109 118	pneumonia
+T20	Condition 1519 1540	Myocardial infarction
+T30	Condition 1718 1740	chronic kidney disease
+T22	Condition 1580 1593	heart failure
+T49	Condition 796 815;835 850	hypersensitivity to murine proteins
+*	OR T24 T23
+T13	Value 386 389	93%
+R3	has_context Arg1:T7 Arg2:T9	
+T23	Qualifier 1573 1579	severe
+T24	Qualifier 1561 1569	Moderate
+T32	Qualifier 1711 1717	severe
+T14	Observation 390 395	on RA
+T3	Informed_consent 43 75	Able to provide informed consent
+R9	has_temporal Arg1:T20 Arg2:T21	
+T28	Condition 1692 1702	malignancy
+T48	Condition 796 815;816 833	hypersensitivity to any TNF inhibitor
+*	OR T50 T51 T52
+*	OR T30 T33
+R21	has_context Arg1:T44 Arg2:T45	
+T2	Value 25 42	18 years or older
+T15	Measurement 396 480	Partial pressure of arterial oxygen to fraction of inspired oxygen ratio (PaO2/FiO2)
+T38	Temporal 1250 1258	>48hours
+R1	has_value Arg1:T1 Arg2:T2	
+T7	Condition 252 261	SARS-COV2
+T9	Observation 213 231	strongly suspected
+*	OR T8 T9
+R10	has_qualifier Arg1:T22 Arg2:T23	
+T1	Person 21 24	Age
+T10	Measurement 333 354	Respiratory frequency
+T42	Condition 1215 1224	latent TB
+T37	Procedure 1236 1245	Intubated
+R19	has_temporal Arg1:T37 Arg2:T38	
+T16	Value 481 485	<300
+R14	has_qualifier Arg1:T30 Arg2:T32	
+T17	Observation 486 515	Worsening of lung involvement
+R16	has_mood Arg1:T33 Arg2:T34	
+T51	Observation 604 660	need for increased FiO2 to maintain stable O2 saturation
+R6	has_context Arg1:T12 Arg2:T14	
+T25	Condition 1652 1658	stroke
+T43	Condition 1295 1304;1315 1325	bacterial infections
+R2	has_context Arg1:T5 Arg2:T6	
+T11	Value 355 361	30/min
+R20	has_context Arg1:T43 Arg2:T45	
+T27	Temporal 1660 1677	within last month
+R17	has_value Arg1:T35 Arg2:T36	
+R5	has_value Arg1:T12 Arg2:T13	
+T34	Mood 1744 1753	requiring
+R24	subsumes Arg1:T17 Arg2:T50	
+T52	Observation 665 712	worsening O2 saturation of >3% with stable FiO2
+T26	Qualifier 1646 1651	Acute
+T29	Observation 1679 1691	Uncontrolled
+R11	has_qualifier Arg1:T25 Arg2:T26	
+T39	Condition 1119 1130	Hepatitis B
+R15	has_value Arg1:T30 Arg2:T31	
+T50	Observation 531 603	increase in number and/or extension of pulmonary areas of consolidation,
+T12	Measurement 368 385	oxygen saturation
+R13	has_context Arg1:T28 Arg2:T29	
+T6	Observation 119 154	evidenced by chest X-ray or CT scan
+R7	has_value Arg1:T15 Arg2:T16	
+T31	Value 1703 1710	Stage 4
+T4	Visit 76 88	Hospitalized
+R25	AND Arg1:T4 Arg2:T5	
+T47	Observation 1327 1482	Patients with a history of positive bacterial or fungal cultures but on enrollment are on appropriate therapy with negative repeat cultures may be enrolled
+T19	Temporal 770 789	in the past 30 days
+R8	has_temporal Arg1:T18 Arg2:T19	
+T35	Measurement 1769 1805	estimated glomerular filtration rate
+R18	subsumes Arg1:T30 Arg2:T35	
+*	OR T43 T44
+R12	has_temporal Arg1:T25 Arg2:T27	
+T44	Condition 1308 1325	fungal infections
+T33	Procedure 1754 1762	dialysis
+T45	Observation 1273 1294	uncontrolled systemic
+*	OR T10 T12 T15
+T53	Condition 1226 1235	Pregnancy
+T54	Measurement 962 993	absolute neutrophil count (ANC)
+T55	Measurement 1014 1024	hemoglobin
+T56	Measurement 1034 1043	platelets
+T57	Measurement 1071 1074	ALT
+T58	Measurement 1064 1067	AST
+*	OR T48 T49
+T59	Value 994 1012	less than 1000 mm3
+T60	Value 1025 1032	<8.0g/L
+T61	Value 1044 1059	<50,000 per mm3
+T62	Value 1075 1095	greater than 5 x ULN
+R26	has_value Arg1:T54 Arg2:T59	
+R27	has_value Arg1:T55 Arg2:T60	
+R28	has_value Arg1:T56 Arg2:T61	
+R29	has_value Arg1:T57 Arg2:T62	
+R30	has_value Arg1:T58 Arg2:T62	
+*	OR T58 T57 T56 T55 T54
+T63	Qualifier 1102 1108	active
+R31	has_qualifier Arg1:T39 Arg2:T63	
+T40	Condition 1112 1130	latent Hepatitis B
+*	OR T39 T40
+T41	Condition 1157 1174	tuberculosis (TB)
+T64	Qualifier 1150 1156	active
+R32	has_qualifier Arg1:T41 Arg2:T64	
+T65	Condition 1222 1225	TB.
+T66	Observation 1191 1211	incompletely treated
+T67	Observation 1180 1190	history of
+R33	has_temporal Arg1:T42 Arg2:T67	
+R34	has_context Arg1:T65 Arg2:T66	
+R35	has_temporal Arg1:T65 Arg2:T67	
+*	OR T41 T65 T42
+T46	Measurement 1595 1634	New York Heart Association (NYHA) class
+T68	Value 1635 1638	III
+T69	Value 1642 1644	IV
+*	OR T68 T69
+R22	has_value Arg1:T46 Arg2:T68	
+R23	subsumes Arg1:T22 Arg2:T46	

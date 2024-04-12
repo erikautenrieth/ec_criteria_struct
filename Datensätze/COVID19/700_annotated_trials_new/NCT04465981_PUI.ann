@@ -1,0 +1,9 @@
+T1	Informed_consent 112 258	Subject or legal representative understands the nature of the procedure and has signed the Subject Informed Consent Form prior to study procedures
+T2	Observation 378 487	suspected COVID-19 according to medical evaluation, but does not yet have lab-confirmed diagnosis of COVID-19
+T3	Informed_consent 568 622	Subject or legal representative not willing to consent
+T4	Value 524 532	negative
+T5	Measurement 536 542	RT-PCR
+R1	has_value Arg1:T5 Arg2:T4	
+T6	Observation 489 508	results outstanding
+R2	subsumes Arg1:T2 Arg2:T6	
+*	OR T6 T5

@@ -1,0 +1,113 @@
+T39	Non-query-able 739 892	In the opinion of the investigator, progression to death is imminent and inevitable within the next 24 hours, irrespective of the provision of treatments
+T4	Condition 118 135	hyperinflammation
+T31	Condition 616 638	tuberculosis infection
+T53	Measurement 1458 1489	Absolute neutrophil count (ANC)
+T56	Measurement 1513 1527	Platelet count
+T5	Measurement 137 141	IL-6
+T11	Mood 262 271	requiring
+R4	subsumes Arg1:T4 Arg2:T5	
+T12	Procedure 284 319	non-invasive mechanical ventilation
+T48	Measurement 1318 1348	Alanine aminotransferase (ALT)
+T57	Value 1528 1539	< 50,000/mL
+T34	Condition 728 736	COVID-19
+R5	has_value Arg1:T7 Arg2:T8	
+T33	Negation 720 727	besides
+T47	Non-query-able 1131 1316	Any serious medical condition or abnormality of clinical laboratory tests that, in the investigator's judgment, precludes the patient's safe participation in and completion of the study
+T41	Drug 965 976	tocilizumab
+R29	has_context Arg1:T40 Arg2:T61	
+*	OR T5 T7 T9
+T54	Value 1490 1499	< 1000/mL
+R10	AND Arg1:T14 Arg2:T16	
+T14	Condition 323 328	shock
+T63	Observation 232 241	following
+R36	has_value Arg1:T53 Arg2:T54	
+R28	has_context Arg1:T43 Arg2:T61	
+R2	has_context Arg1:T2 Arg2:T3	
+R20	AND Arg1:T30 Arg2:T29	
+R16	AND Arg1:T23 Arg2:T22	
+T8	Value 172 180	>2 mg/dL
+R31	has_temporal Arg1:T40 Arg2:T42	
+R37	has_temporal Arg1:T53 Arg2:T55	
+T24	Condition 478 482	ARDS
+R12	has_negation Arg1:T18 Arg2:T17	
+T15	Mood 329 338	requiring
+T50	Value 1385 1419	> 10 x upper limit of normal (ULN)
+R9	has_mood Arg1:T16 Arg2:T15	
+T29	Observation 528 533	Known
+T60	Observation 609 615	Active
+R13	has_negation Arg1:T19 Arg2:T17	
+T55	Temporal 1500 1511	at baseline
+T18	Condition 372 381;391 400	bacterial infection
+T22	Observation 460 466	severe
+T43	Drug 913 927;948 953	anti-rejection drugs
+*	OR T35 T36 T37
+T26	Value 493 502	<200 mmHg
+R18	subsumes Arg1:T24 Arg2:T25	
+R21	has_context Arg1:T31 Arg2:T32	
+R35	has_index Arg1:T51 Arg2:T52	
+R15	has_context Arg1:T24 Arg2:T23	
+T36	Condition 685 691;709 718	fungal infection
+T1	Visit 27 39	Hospitalized
+R14	has_context Arg1:T21 Arg2:T20	
+T21	Procedure 414 456	extracorporeal membrane oxygenation (ECMO)
+T13	Procedure 272 280;297 319	invasive mechanical ventilation
+R17	has_value Arg1:T25 Arg2:T26	
+R33	has_value Arg1:T48 Arg2:T50	
+T37	Condition 693 698;709 718	viral infection
+T45	Condition 1104 1112	pregnant
+R41	has_multiplier Arg1:T63 Arg2:T62	
+R38	has_value Arg1:T56 Arg2:T57	
+T51	Temporal 1429 1456	within 24 hours at baseline
+T52	Reference_point 1448 1456	baseline
+T3	Observation 65 96	based on chest X-ray or CT scan
+R25	has_qualifier Arg1:T35 Arg2:T38	
+T7	Measurement 168 171	CRP
+T35	Condition 674 683;709 718	bacterial infection
+T25	Measurement 484 493	PaO2/FiO2
+T6	Value 141 149	>40pg/mL
+R3	has_value Arg1:T5 Arg2:T6	
+R42	subsumes Arg1:T63 Arg2:T13	
+T2	Condition 45 63	COVID-19 pneumonia
+R24	has_negation Arg1:T34 Arg2:T33	
+R32	has_value Arg1:T49 Arg2:T50	
+T62	Multiplier 213 224	One or more
+R22	has_context Arg1:T31 Arg2:T60	
+R30	subsumes Arg1:T40 Arg2:T41	
+T44	Competing_trial 1002 1088	Participating in other drug clinical trials (participation in COVID-19 trials allowed)
+R7	has_context Arg1:T11 Arg2:T59	
+*	OR T27 T28
+T49	Measurement 1352 1384	aspartate aminotransferase (AST)
+R8	has_mood Arg1:T13 Arg2:T11	
+T32	Observation 639 655	based on history
+R26	has_qualifier Arg1:T36 Arg2:T38	
+T10	Value 193 204	>2000 ng/mL
+T28	Condition 541 562;578 605	allergic reactions to other monoclonal antibodies
+T58	Temporal 1540 1551	at baseline
+T27	Condition 541 574	allergic reactions to tocilizumab
+T42	Temporal 978 1000	with the past 6 months
+T19	Condition 384 400	fungal infection
+T9	Measurement 184 192	ferritin
+*	OR T13 T12 T14
+R34	has_temporal Arg1:T49 Arg2:T51	
+T30	Observation 534 540	severe
+R23	AND Arg1:T37 Arg2:T34	
+T46	Observation 1116 1129	breastfeeding
+R40	has_mood Arg1:T12 Arg2:T11	
+T38	Qualifier 667 673	active
+T40	Drug 931 953	immunomodulatory drugs
+*	OR T48 T49
+R39	has_temporal Arg1:T56 Arg2:T58	
+T20	Observation 405 413	need for
+R6	has_value Arg1:T9 Arg2:T10	
+R11	AND Arg1:T16 Arg2:T18	
+R19	has_context Arg1:T27 Arg2:T30	
+*	OR T43 T40
+T17	Negation 352 359	without
+*	OR T45 T46
+R1	AND Arg1:T1 Arg2:T2	
+T23	Observation 468 477	refractor
+R27	has_qualifier Arg1:T37 Arg2:T38	
+T61	Observation 908 912	oral
+*	OR T16 T21 T24
+T16	Drug 339 350	vasopressor
+T59	Observation 243 261	impending need for

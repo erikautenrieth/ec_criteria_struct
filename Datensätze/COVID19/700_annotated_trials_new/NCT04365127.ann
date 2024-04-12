@@ -1,0 +1,54 @@
+T15	Non-query-able 260 322	Understands and agrees to comply with planned study procedures
+T17	Non-query-able 379 508	Must agree to be placed on prophylactic dose of anticoagulation for prevention of deep venous thrombosis (DVT) while hospitalized
+T3	Temporal 53 92	with in 72 hours prior to randomization
+T30	Condition 632 655	Allergy to progesterone
+*	OR T9 T13
+T34	Mood 733 742	Requiring
+T12	Mood 205 214	requiring
+T9	Measurement 167 184	oxygen saturation
+T35	Value 743 758	higher than 50%
+R16	has_temporal Arg1:T27 Arg2:T29	
+*	OR T5 T7 T8
+R7	AND Arg1:T8 Arg2:T9	
+T20	Value 546 580	>5 times the upper limit of normal
+T16	Non-query-able 324 377	Agrees to the collection of venous blood per protocol
+T13	Procedure 215 234	supplemental oxygen
+T32	Procedure 684 703	supplemental oxygen
+T7	Observation 127 136	lung exam
+R15	has_temporal Arg1:T26 Arg2:T28	
+T6	Qualifier 118 126	abnormal
+R5	has_context Arg1:T9 Arg2:T11	
+T27	Condition 617 630	breast cancer
+R11	has_value Arg1:T18 Arg2:T20	
+T18	Measurement 535 538	ALT
+T1	Condition 44 52	COVID-19
+T10	Value 185 188	94%
+R20	has_mood Arg1:T37 Arg2:T34	
+R6	has_qualifier Arg1:T7 Arg2:T6	
+T4	Reference_point 79 92	randomization
+T8	Observation 140 162	abnormal chest imaging
+T29	Observation 606 616	History of
+T5	Observation 94 114	Respiratory symptoms
+T14	Observation 235 258	less than 50% high flow
+R1	has_index Arg1:T3 Arg2:T4	
+R4	has_value Arg1:T9 Arg2:T10	
+R18	has_mood Arg1:T36 Arg2:T34	
+T2	Observation 23 43	Laboratory-confirmed
+*	OR T18 T19
+T31	Condition 632 642;659 675	Allergy to betacyclodextrin
+T33	Observation 704 731	prior to hospital admission
+R9	has_context Arg1:T13 Arg2:T14	
+R19	has_value Arg1:T36 Arg2:T35	
+*	OR T30 T31
+T36	Procedure 759 805	supplemental oxygen by high flow nasal cannula
+*	OR T36 T37
+T28	Observation 582 592	History of
+T19	Measurement 542 545	AST
+T37	Procedure 809 831	mechanical ventilation
+R3	has_temporal Arg1:T1 Arg2:T3	
+R17	has_context Arg1:T32 Arg2:T33	
+T26	Condition 593 604	blood clots
+R10	has_value Arg1:T19 Arg2:T20	
+R2	has_context Arg1:T1 Arg2:T2	
+R8	has_mood Arg1:T13 Arg2:T12	
+T11	Observation 189 200	on room air

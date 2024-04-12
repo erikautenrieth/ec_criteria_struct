@@ -1,0 +1,37 @@
+T8	Observation 734 806	subset of the participants who test positive and negative for SARS-CoV-2
+T7	Observation 711 728	Household members
+T3	Observation 89 564	regular direct patient contact (3 patients/shift) in emergency rooms or inpatient settings that is expected to continue regularly over the next 3 months and who work 20 hours in the hospital weekly (residents, clinical fellows, attending physicians, nurse practitioners, physician assistants, registered nurses, license practice nurses, medical technicians, respiratory therapists, physical therapists, clinical pharmacists, dentists, dental hygienists, or dental assistants)
+T4	Observation 566 582	Hospital workers
+R9	has_temporal Arg1:T17 Arg2:T18	
+R7	has_temporal Arg1:T12 Arg2:T15	
+T10	Temporal 833 841	Previous
+T19	Visit 1081 1095	emergency room
+T24	Reference_point 1188 1217	first visit to the study site
+T17	Visit 1032 1044	hospitalized
+R4	AND Arg1:T7 Arg2:T8	
+T12	Condition 910 927	medical condition
+*	OR T11 T12 T13
+T23	Temporal 1168 1217	on the day of their first visit to the study site
+T2	Observation 43 79	Hospital and RBHS healthcare workers
+T5	Negation 590 593	not
+T13	Observation 962 983	change in medications
+T9	Condition 857 865	COVID-19
+R11	has_temporal Arg1:T22 Arg2:T23	
+T15	Temporal 928 947	in the past 30 days
+R8	has_qualifier Arg1:T12 Arg2:T16	
+R10	has_index Arg1:T23 Arg2:T24	
+T20	Visit 1097 1114	urgent care visit
+R6	has_temporal Arg1:T13 Arg2:T14	
+T22	Condition 1162 1167	fever
+T6	Observation 599 708	patient contact and non-healthcare from the Rutgers faculty, postdoctoral students, administrators, and staff
+T18	Temporal 1045 1064	in the past 30 days
+R5	has_temporal Arg1:T9 Arg2:T10	
+R2	has_negation Arg1:T6 Arg2:T5	
+T21	Procedure 1128 1135	surgery
+T14	Temporal 984 1003	in the past 30 days
+*	OR T17 T19 T20 T21
+R3	AND Arg1:T4 Arg2:T6	
+T11	Condition 867 875	Pregnant
+T16	Qualifier 906 909	new
+R1	AND Arg1:T2 Arg2:T3	
+T1	Value 23 41	20 years and older

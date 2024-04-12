@@ -1,0 +1,113 @@
+T1	Observation 45 73	symptoms of COVID-19 disease
+T2	Temporal 74 86	at screening
+R1	has_temporal Arg1:T1 Arg2:T2	
+T3	Value 106 124	45 years and older
+T4	Person 89 97	Subjects
+R2	has_value Arg1:T4 Arg2:T3	
+T5	Qualifier 223 233	Controlled
+T6	Qualifier 237 249	uncontrolled
+T7	Condition 250 258	diabetes
+R3	has_qualifier Arg1:T7 Arg2:T6	
+*	OR T6 T5
+T8	Condition 274 296	cardiovascular disease
+T9	Condition 308 320	hypertension
+*	OR T8 T9 T7 T12 T17 T19 T23 T27
+T10	Qualifier 261 273	Pre-existing
+R4	has_qualifier Arg1:T8 Arg2:T10	
+T11	Qualifier 323 335	Pre-existing
+T12	Condition 336 355	respiratory disease
+T13	Condition 364 368	COPD
+T14	Condition 370 376	asthma
+T15	Condition 378 387	emphysema
+R5	subsumes Arg1:T12 Arg2:T13	
+*	OR T13 T14 T15
+R6	has_qualifier Arg1:T12 Arg2:T11	
+T16	Qualifier 390 396	Active
+T17	Observation 397 403	smoker
+R7	has_qualifier Arg1:T17 Arg2:T16	
+T18	Value 411 435	20 pack-years of smoking
+R8	has_value Arg1:T17 Arg2:T18	
+T19	Condition 438 445	Obesity
+T20	Measurement 461 476	body mass index
+T21	Value 478 480	30
+R9	has_value Arg1:T20 Arg2:T21	
+R10	subsumes Arg1:T19 Arg2:T20	
+T22	Measurement 571 579	troponin
+T23	Observation 483 561	Laboratory tests indicative of a higher risk of COVID-19-related complications
+T24	Value 580 606	>1.5 upper limit of normal
+T25	Value 618 644	>1.5 upper limit of normal
+T26	Measurement 614 617	CRP
+*	OR T22 T26
+R11	has_value Arg1:T22 Arg2:T24	
+R12	has_value Arg1:T26 Arg2:T25	
+R13	subsumes Arg1:T23 Arg2:T22	
+T27	Person 654 658	aged
+T28	Value 659 677	70 years and older
+R14	has_value Arg1:T27 Arg2:T28	
+T29	Observation 683 773	based on the judgment of the Investigator, is at a higher risk of developing complications
+R15	AND Arg1:T27 Arg2:T29	
+T30	Observation 196 218	factors/co-morbidities
+R16	subsumes Arg1:T30 Arg2:T7	
+T31	Condition 834 844	SARS-CoV-2
+T32	Observation 801 825	documented positive test
+T33	Observation 857 881	suspected to be positive
+R17	has_context Arg1:T31 Arg2:T32	
+*	OR T32 T33
+T34	Visit 957 965	admitted
+T35	Measurement 1064 1077	health status
+T36	Value 1086 1113	3 or 4 on the ordinal scale
+R18	has_value Arg1:T35 Arg2:T36	
+T37	Pregnancy_considerations 1116 1737	If female, must be either post-menopausal (one year or greater without menses), surgically sterile, or, for female subjects of child-bearing potential who are capable of conception, must be: practicing a highly effective method of birth control (acceptable methods include intrauterine device, complete abstinence, spermicide + barrier, male partner surgical sterilization, or hormonal contraception) during the study and through 30 days after the last dose of the study medication. Periodical abstinence is not classified as an effective method of birth control. A pregnancy test must be negative at the Screening Visit;
+T38	Informed_consent 1739 1879	Subjects must have the ability to understand and give informed consent, which can be verbal with a witness, according to local requirements;
+T39	Observation 1997 2053	Subjects must be able to swallow the study drug capsules
+T40	Post-eligibility 1881 1995	Subjects deemed capable of adequate compliance including attending scheduled visits for the duration of the study;
+T41	Condition 2081 2090	Pregnancy
+T42	Observation 2094 2107	breastfeeding
+*	OR T41 T42
+T43	Condition 2469 2499	inherited retinitis pigmentosa
+T44	Condition 2525 2538	liver failure
+T45	Observation 2514 2524	history of
+R19	has_temporal Arg1:T44 Arg2:T45	
+T46	Observation 2553 2563	history of
+T47	Condition 2564 2601	stage 4 severe chronic kidney disease
+T48	Procedure 2605 2613	dialysis
+R20	has_temporal Arg1:T47 Arg2:T46	
+*	OR T47 T48
+T49	Condition 2628 2647	Febrile neutropenia
+T50	Qualifier 2662 2668	active
+T51	Condition 2669 2675	cancer
+R21	has_qualifier Arg1:T51 Arg2:T50	
+T52	Procedure 2689 2710	systemic chemotherapy
+T53	Procedure 2714 2726	radiotherapy
+*	OR T52 T53
+R22	AND Arg1:T51 Arg2:T52	
+T54	Qualifier 2733 2738	Known
+T55	Observation 2739 2749	history of
+T56	Observation 2759 2794	allergy or sensitivity to retinoids
+R23	has_temporal Arg1:T56 Arg2:T55	
+R24	has_qualifier Arg1:T56 Arg2:T54	
+T57	Observation 2804 2898	known allergies to excipients in the oral capsule formulation proposed to be used in the study
+*	OR T56 T57
+T58	Competing_trial 2901 3082	Participation in another drug clinical trial within 30 days (or a minimum of 5 elimination half-lives) prior to screening, except ongoing participation in non-interventional studies
+T59	Non-query-able 2112 2216	Health condition deemed to possibly interfere with the study endpoints and/or the safety of the patients
+T60	Qualifier 3098 3103	known
+T61	Condition 3104 3109;3121 3131	renal impairment
+T62	Condition 3113 3131	hepatic impairment
+*	OR T62 T61 T66 T68
+R25	has_qualifier Arg1:T61 Arg2:T60	
+T63	Measurement 3148 3164	serum creatinine
+T64	Value 3171 3213	1.5 x upper limit of normal for each gende
+R26	has_value Arg1:T63 Arg2:T64	
+T65	Qualifier 3231 3242	significant
+T66	Condition 3243 3259	renal impairment
+R27	has_qualifier Arg1:T66 Arg2:T65	
+R28	subsumes Arg1:T66 Arg2:T63	
+T67	Qualifier 3334 3345	significant
+T68	Condition 3346 3364	hepatic impairment
+R29	has_qualifier Arg1:T68 Arg2:T67	
+T69	Measurement 3267 3270	ALT
+T70	Measurement 3278 3281	AST
+T71	Value 3282 3317	above 5 x the upper limit of normal
+*	OR T70 T69
+R30	has_value Arg1:T69 Arg2:T71	
+R31	subsumes Arg1:T68 Arg2:T69	

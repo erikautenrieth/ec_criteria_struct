@@ -1,0 +1,79 @@
+T43	Drug 788 813	immunosuppressive therapy
+T14	Condition 233 252	shortness of breath
+R14	has_temporal Arg1:T36 Arg2:T38	
+T27	Condition 557 566;577 586	Bacterial infection
+T35	Value 642 649	>2x ULN
+T2	Condition 56 82	SARS-CoV-2 viral infection
+R16	has_qualifier Arg1:T18 Arg2:T52	
+T37	Value 655 679	outside of normal limits
+T20	Reference_point 355 379	first dose of study drug
+*	OR T49 T50
+T3	Condition 93 101	COVID-19
+R1	has_value Arg1:T7 Arg2:T5	
+T4	Observation 84 92	Advanced
+R2	has_context Arg1:T3 Arg2:T4	
+T7	Measurement 126 137	NIAID scale
+T23	Condition 507 511	ARDS
+R9	has_qualifier Arg1:T39 Arg2:T40	
+T32	Measurement 619 622	ALT
+T41	Qualifier 731 738	serious
+T12	Condition 210 218	headache
+*	OR T47 T48
+T45	Reference_point 838 847	screening
+*	OR T32 T34 T36
+T51	Qualifier 46 55	Confirmed
+T17	Qualifier 267 273	severe
+T1	Value 32 44	18 years old
+T16	Condition 274 291	lower respiratory
+T8	Condition 174 179	fever
+T15	Condition 254 263	confusion
+*	OR T42 T41 T40
+T36	Measurement 651 654	INR
+T48	Drug 998 1008	remdesivir
+T21	Informed_consent 381 404	Able to provide consent
+T44	Temporal 814 847	within 30 days prior to screening
+R8	has_temporal Arg1:T43 Arg2:T44	
+T40	Qualifier 739 748	co-morbid
+T42	Qualifier 711 730	Clinically relevant
+T13	Condition 220 231	muscle pain
+T28	Condition 588 596	Pregnant
+T18	Drug 306 327	antiviral medications
+T47	Drug 958 994	treatment with the study drug (MMPD)
+R13	has_value Arg1:T36 Arg2:T37	
+T38	Temporal 680 692	at screening
+T25	Procedure 551 555	ECMO
+T5	Value 107 117	score of 3
+T34	Measurement 632 641	bilirubin
+R10	has_value Arg1:T31 Arg2:T30	
+T19	Temporal 328 379	at least 24 hours prior to first dose of study drug
+T22	Pregnancy_considerations 406 451	Agree to appropriate methods of contraception
+R15	has_qualifier Arg1:T2 Arg2:T51	
+*	OR T24 T25
+T6	Value 107 115;121 122	score of 4
+T9	Condition 181 186	cough
+R12	has_value Arg1:T34 Arg2:T35	
+T24	Procedure 516 547	invasive mechanical ventilation
+T29	Observation 600 609	lactating
+R7	has_index Arg1:T44 Arg2:T45	
+T52	Qualifier 302 305	Off
+*	OR T5 T6
+*	OR T8 T9 T10 T11 T12 T13 T14 T15 T16
+R6	has_temporal Arg1:T18 Arg2:T19	
+R4	has_qualifier Arg1:T16 Arg2:T17	
+T49	Condition 1016 1096	hypersensitivity to the inactive ingredients in the study drug (MMPD or placebo)
+T33	Value 623 630	>5x ULN
+T11	Condition 201 208	malaise
+T31	Measurement 694 698	eGFR
+R5	has_index Arg1:T19 Arg2:T20	
+T39	Condition 749 767	medical conditions
+*	OR T26 T27
+*	OR T28 T29
+T30	Value 699 709	<30 mL/min
+R11	has_value Arg1:T32 Arg2:T33	
+T26	Condition 570 586	fungal infection
+T10	Condition 188 199	sore throat
+R3	AND Arg1:T3 Arg2:T7	
+T53	Observation 478 499	In critical condition
+T50	Condition 1016 1035;1100 1128	hypersensitivity to any ingredient of remdesivir
+T46	Competing_trial 849 950	Treatment with another investigational drug within 30 days or 5 half-lives of drug prior to screening
+*	OR T53 T23

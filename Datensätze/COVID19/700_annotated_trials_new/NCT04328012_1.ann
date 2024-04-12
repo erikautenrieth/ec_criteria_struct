@@ -1,0 +1,70 @@
+T1	Visit 22 34	Hospitalized
+T2	Condition 71 91	SARS-CoV-2 infection
+T3	Observation 44 67	Laboratory confirmation
+T4	Temporal 92 124	</= 72 hr prior to randomization
+T5	Reference_point 111 124	randomization
+R1	has_context Arg1:T2 Arg2:T3	
+R2	has_temporal Arg1:T2 Arg2:T4	
+R3	has_index Arg1:T4 Arg2:T5	
+T6	Post-eligibility 126 174	Randomization within 72 hr of hospital admission
+T7	Value 176 184	Negative
+T8	Measurement 185 199	pregnancy test
+T9	Observation 204 220	reproductive age
+T10	Person 221 226	women
+R4	has_value Arg1:T8 Arg2:T7	
+R5	AND Arg1:T8 Arg2:T10	
+R6	has_context Arg1:T10 Arg2:T9	
+T11	Informed_consent 228 275	Patient or LAR able to provide informed consent
+T12	Condition 323 353	End stage renal disease (ESRD)
+T13	Negation 354 357	NOT
+T14	Mood 358 368	undergoing
+T15	Procedure 369 394	renal replacement therapy
+R7	AND Arg1:T12 Arg2:T15	
+R8	has_mood Arg1:T15 Arg2:T14	
+R9	has_negation Arg1:T15 Arg2:T13	
+T16	Qualifier 396 402	Severe
+T17	Condition 403 424	hepatic insufficiency
+T18	Measurement 426 430	LFTs
+T19	Value 431 466	> 5 times the upper limit of normal
+T20	Condition 476 480	ESLD
+T21	Condition 484 493	cirrhosis
+R10	has_qualifier Arg1:T17 Arg2:T16	
+R11	subsumes Arg1:T17 Arg2:T18	
+R12	has_value Arg1:T18 Arg2:T19	
+*	OR T18 T20 T21
+T22	Condition 496 502	Nausea
+T23	Condition 503 511	vomiting
+T24	Condition 515 530	aspiration risk
+T25	Observation 531 594	precluding oral medications unless can be given by gastric tube
+*	OR T22 T23 T24
+R13	has_context Arg1:T24 Arg2:T25	
+T26	Competing_trial 596 686	Use of another SARS-CoV-2 directed medication empirically or within another clinical trial
+T27	Temporal 687 708	within the prior week
+R14	has_temporal Arg1:T26 Arg2:T27	
+T28	Condition 710 719	Pregnancy
+T29	Observation 723 737	breast feeding
+*	OR T28 T29
+T30	Negation 739 746	Absence
+T31	Drug 750 774	dependable contraception
+R15	has_negation Arg1:T31 Arg2:T30	
+T32	Informed_consent 802 850	Inability to obtain or declined informed consent
+T33	Observation 778 794	reproductive age
+T34	Person 795 800	women
+R16	AND Arg1:T31 Arg2:T34	
+R17	has_context Arg1:T34 Arg2:T33	
+T35	Condition 922 967	Allergy or intolerance to lopinavir/ritonavir
+T36	Observation 969 983	Already taking
+T37	Drug 984 1003	lopinavir/ritonavir
+T38	Temporal 1005 1019	within 1 month
+R18	has_context Arg1:T37 Arg2:T36	
+R19	has_temporal Arg1:T37 Arg2:T38	
+T39	Qualifier 1022 1027	Known
+T40	Condition 1028 1041	HIV infection
+T41	Mood 1049 1055	taking
+T42	Drug 1056 1078	antiretroviral therapy
+T43	Observation 1079 1101	for another indication
+R20	has_qualifier Arg1:T40 Arg2:T39	
+*	OR T40 T42
+R21	has_mood Arg1:T42 Arg2:T41	
+R22	has_context Arg1:T42 Arg2:T43	
+T44	Drug 1134 1165	drugs due to CYP3A interactions

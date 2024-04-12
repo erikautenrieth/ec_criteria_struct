@@ -1,0 +1,45 @@
+T21	Procedure 631 635	ECMO
+T13	Observation 385 396	on room air
+R3	has_temporal Arg1:T4 Arg2:T5	
+T27	Condition 727 736	Pregnancy
+T6	Reference_point 236 249	randomization
+R8	has_temporal Arg1:T11 Arg2:T14	
+R6	has_value Arg1:T11 Arg2:T12	
+T16	Procedure 519 559	Treatment with an antibody immunotherapy
+R12	has_temporal Arg1:T21 Arg2:T22	
+T17	Temporal 560 587	within 4 weeks of Screening
+T24	Temporal 662 674	at Screening
+T22	Temporal 636 648	at Screening
+T28	Observation 740 753	breastfeeding
+T8	Visit 277 303	in an emergency department
+T15	Competing_trial 436 517	Simultaneous participation in any other clinical study incompatible with this one
+R1	has_context Arg1:T2 Arg2:T3	
+*	OR T19 T21
+T29	Observation 755 804	> 120 hours between admission and signing consent
+T25	Condition 676 699	Abnormal liver function
+R11	has_mood Arg1:T19 Arg2:T20	
+*	OR T27 T28
+T7	Visit 261 273	hospitalized
+*	OR T7 T8
+T19	Procedure 605 627	mechanical ventilation
+T23	Condition 650 661	Hypotension
+R5	has_mood Arg1:T10 Arg2:T9	
+T18	Reference_point 578 587	Screening
+R7	has_context Arg1:T11 Arg2:T13	
+T5	Temporal 222 249	7 days before randomization
+R13	has_temporal Arg1:T23 Arg2:T24	
+T14	Temporal 397 409	at Screening
+T2	Condition 110 128	COVID-19 infection
+T11	Measurement 334 379	Peripheral capillary oxygen saturation (SpO2)
+T20	Mood 589 604	Requirement for
+R2	has_index Arg1:T5 Arg2:T6	
+T12	Value 380 384	<93%
+T3	Observation 77 109	Signs and symptoms suggestive of
+T26	Condition 701 725	Abnormal kidney function
+R9	has_index Arg1:T17 Arg2:T18	
+T4	Condition 130 221	Laboratory-confirmed severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection
+T1	Informed_consent 23 75	Willing and able to provide written informed consent
+R4	AND Arg1:T8 Arg2:T10	
+T10	Visit 317 332	hospitalization
+T9	Mood 309 316	planned
+R10	has_temporal Arg1:T16 Arg2:T17	

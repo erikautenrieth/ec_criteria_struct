@@ -1,0 +1,68 @@
+T1	Person 62 65	age
+T2	Value 50 58;66 74	18 years or older
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Qualifier 86 106	laboratory-confirmed
+T4	Condition 107 115	COVID-19
+T5	Qualifier 129 135	severe
+T6	Condition 168 176	COVID-19
+T7	Qualifier 139 167	immediately life-threatening
+T8	Condition 168 176	COVID-19
+R2	has_qualifier Arg1:T8 Arg2:T5	
+R3	has_qualifier Arg1:T6 Arg2:T7	
+T9	Condition 198 205	dyspnea
+T10	Measurement 207 228	respiratory frequency
+T11	Value 230 236	30/min
+T12	Measurement 238 261	blood oxygen saturation
+T13	Value 263 266	93%
+T14	Measurement 268 340	partial pressure of arterial oxygen to fraction of inspired oxygen ratio
+T15	Value 341 346	< 300
+T16	Condition 355 371	lung infiltrates
+T17	Value 372 377	> 50%
+T18	Temporal 378 399	within 24 to 48 hours
+R4	has_qualifier Arg1:T4 Arg2:T3	
+R5	subsumes Arg1:T8 Arg2:T9	
+*	OR T9 T10 T12 T14 T16
+R6	has_value Arg1:T10 Arg2:T11	
+R7	has_value Arg1:T12 Arg2:T13	
+R8	has_value Arg1:T14 Arg2:T15	
+R9	has_value Arg1:T16 Arg2:T17	
+R10	has_temporal Arg1:T16 Arg2:T18	
+T19	Condition 429 448	respiratory failure
+T20	Condition 450 462	septic shock
+T21	Condition 471 497	multiple organ dysfunction
+T22	Condition 471 485;501 508	multiple organ failure
+T23	Non-query-able 510 730	Lower priority should be given to patients with septic shock or multiple organ dysfunction or failure since their disease may have progressed to a point where they are not able to benefit from convalescent plasma therapy
+R11	subsumes Arg1:T6 Arg2:T19	
+*	OR T19 T20 T21 T22
+T24	Temporal 745 762	less than 21 days
+T25	Observation 772 788	start of illness
+R12	has_temporal Arg1:T25 Arg2:T24	
+T26	Informed_consent 790 1079	Patient is willing and able to provide written informed consent and comply with all protocol requirements. If the patient is not able to consent, we will obtain consent from the power of attorney or a health care proxy for the patient as determined by the Illinois Healthcare Surrogate Act
+T27	Post-eligibility 1081 1178	Patient, power of attorney or health care proxy agrees to storage of specimens for future testing
+T28	Non-query-able 1181 1303	Of note, eIND application for each recipient subject will need to be approved before administration of convalescent plasma
+T29	Person 1340 1346	Female
+T30	Value 1361 1369	positive
+T31	Measurement 1370 1384	pregnancy test
+T32	Observation 1386 1399	breastfeeding
+T33	Mood 1404 1422	planning to become
+T34	Condition 1423 1431	pregnant
+T35	Observation 1432 1442	breastfeed
+T36	Temporal 1443 1466	during the study period
+R13	AND Arg1:T29 Arg2:T31	
+R14	has_value Arg1:T31 Arg2:T30	
+*	OR T31 T32 T34 T35
+R15	has_mood Arg1:T34 Arg2:T33	
+R16	has_mood Arg1:T35 Arg2:T33	
+R17	has_temporal Arg1:T35 Arg2:T36	
+R18	has_temporal Arg1:T34 Arg2:T36	
+T37	Drug 1479 1500	pooled immunoglobulin
+T38	Temporal 1501 1516	in past 30 days
+R19	has_temporal Arg1:T37 Arg2:T38	
+T39	Mood 1468 1478	Receipt of
+R20	has_mood Arg1:T37 Arg2:T39	
+T40	Condition 1518 1549	Contraindication to transfusion
+T41	Observation 1553 1563	history of
+T42	Condition 1564 1609	prior reactions to transfusion blood products
+*	OR T40 T42
+R21	has_temporal Arg1:T42 Arg2:T41	
+T43	Competing_trial 1611 1740	Patients currently enrolled in other drug trials that preclude investigational treatment with anti-SARS-CoV-2 convalescent plasma

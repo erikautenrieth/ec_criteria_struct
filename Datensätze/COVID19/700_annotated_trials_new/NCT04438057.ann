@@ -1,0 +1,70 @@
+T2	Condition 70 80	SARS-CoV-2
+R8	subsumes Arg1:T23 Arg2:T24	
+T50	Visit 1447 1455	Admitted
+R5	has_value Arg1:T14 Arg2:T15	
+*	OR T4 T5 T6 T7 T8 T9 T10
+T7	Condition 132 135	SOB
+R4	has_negation Arg1:T13 Arg2:T12	
+T3	Observation 81 102	Symptoms of COVID -19
+T37	Measurement 770 790	Creatinine clearance
+T38	Value 791 795	< 30
+T21	Person 468 471	Age
+T15	Value 282 286	>93%
+T18	Person 348 351	Age
+T23	Condition 537 558	Hypercoagulable state
+T20	Value 472 480	< 18 y/o
+T41	Drug 865 883	hydroxychloroquine
+T9	Condition 146 154	diarrhea
+T22	Drug 510 536	intravenous immunoglobulin
+T26	Condition 599 623	Myelodysplastic syndrome
+T12	Negation 235 248	does not need
+T27	Procedure 633 648	anticoagulation
+R11	has_value Arg1:T32 Arg2:T33	
+R12	has_qualifier Arg1:T34 Arg2:T35	
+R15	has_temporal Arg1:T44 Arg2:T42	
+*	OR T40 T39
+R1	has_context Arg1:T2 Arg2:T1	
+T1	Observation 21 54	Laboratory confirmed diagnosis of
+T40	Visit 796 810;830 838	Long term care facility
+R6	has_value Arg1:T18 Arg2:T17	
+T42	Observation 903 913	History of
+T47	Condition 1193 1201	Pregnant
+T11	Temporal 173 190	less than 14 days
+R3	has_temporal Arg1:T3 Arg2:T11	
+R13	has_value Arg1:T37 Arg2:T38	
+T25	Condition 572 597	Collagen vascular disease
+T30	Measurement 689 695	O2 sat
+T33	Value 710 721	> 2x normal
+T36	Condition 745 764	Renal insufficiency
+T6	Condition 119 130	sore throat
+R14	AND Arg1:T36 Arg2:T37	
+T43	Procedure 923 941	plasma transfusion
+T32	Measurement 702 709	D-Dimer
+*	OR T24 T25 T26 T27
+T17	Value 353 361	18 years
+R10	has_value Arg1:T30 Arg2:T31	
+T19	Visit 362 383	Ambulatory Outpatient
+T34	Procedure 730 744	oxygen therapy
+T5	Condition 112 117	fever
+T49	Observation 1220 1446	Any acute or chronic medical comorbidity, psychiatric, social or other circumstance that, in the opinion of the investigator, may interfere with study compliance, completion, or accurate assessment of the study outcomes/safety
+T13	Visit 249 264	hospitalization
+T8	Condition 137 144	anosmia
+T10	Condition 156 163	myalgia
+T44	Procedure 914 919;930 941	blood transfusion
+T24	Condition 561 570	neoplasia
+T28	Qualifier 625 632	chronic
+T14	Measurement 265 278	O2 saturation
+T39	Visit 814 838	assisted living facility
+T48	Observation 1205 1219	breast feeding
+T29	Visit 676 688	hospitalized
+T31	Value 696 701	< 93%
+T4	Condition 105 110	cough
+R9	has_qualifier Arg1:T27 Arg2:T28	
+T45	Competing_trial 964 1054	Enrollment into any other investigational drug or device study within the previous 30 days
+T35	Qualifier 722 729	Chronic
+T46	Non-query-able 1055 1192	Any drug, chemical or alcohol dependency as determined by the investigator through history that may affect study procedures and follow up
+*	OR T47 T48
+T16	Informed_consent 287 347	Informed consent provided by the patient or healthcare proxy
+R7	has_value Arg1:T21 Arg2:T20	
+R2	subsumes Arg1:T3 Arg2:T4	
+*	OR T44 T43

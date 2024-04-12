@@ -1,0 +1,48 @@
+T18	Condition 628 645	immunocompromised
+R8	AND Arg1:T18 Arg2:T20	
+T29	Observation 897 907	history of
+R11	has_qualifier Arg1:T27 Arg2:T30	
+R10	AND Arg1:T20 Arg2:T22	
+T12	Qualifier 403 409	severe
+T3	Condition 47 67	SARS-CoV-2 infection
+T4	Observation 68 102	documented by RNA RT-PCR detection
+R9	has_mood Arg1:T22 Arg2:T21	
+T9	Non-query-able 309 369	Medical condition that increases the risk of plasma infusion
+R12	has_temporal Arg1:T28 Arg2:T29	
+T11	Condition 410 425	volume overload
+R13	subsumes Arg1:T26 Arg2:T27	
+T27	Condition 880 895	volume overload
+R5	subsumes Arg1:T10 Arg2:T11	
+R6	has_qualifier Arg1:T15 Arg2:T16	
+T8	Observation 294 308	breast feeding
+R1	has_value Arg1:T1 Arg2:T2	
+T21	Mood 702 711	requiring
+T19	Qualifier 619 627	Severely
+T17	Observation 533 614	Moderate disease with a risk of progression to severe or life threatening disease
+R3	has_temporal Arg1:T13 Arg2:T14	
+*	OR T15 T17 T18
+*	OR T7 T8
+T26	Condition 840 871	Contraindication to transfusion
+*	OR T23 T24
+T24	Observation 764 778	breast feeding
+T5	Visit 103 137	Admitted to an acute care facility
+T22	Visit 712 726	inpatient care
+T20	Observation 659 701	any illness attributed to COVID-19 disease
+T15	Condition 512 528	COVID-19 disease
+R4	has_qualifier Arg1:T11 Arg2:T12	
+T16	Qualifier 505 511	Severe
+T28	Condition 908 937	anaphylaxis to blood products
+T25	Non-query-able 779 839	Medical condition that increases the risk of plasma infusion
+T7	Condition 283 292	Pregnancy
+R2	has_context Arg1:T3 Arg2:T4	
+T14	Observation 427 437	history of
+T23	Condition 753 762	Pregnancy
+*	OR T13 T11
+T6	Informed_consent 138 260	Ability of patient or guardian to provide consent and assent (if applicable); if patient is intubated assent may be waived
+T1	Person 21 25	Aged
+T13	Condition 438 467	anaphylaxis to blood products
+T10	Condition 370 401	Contraindication to transfusion
+*	OR T27 T28
+T30	Qualifier 873 879	severe
+R7	has_qualifier Arg1:T18 Arg2:T19	
+T2	Value 26 39	0 to 22 years

@@ -1,0 +1,39 @@
+T1	Qualifier 23 32	Confirmed
+T2	Condition 33 41	COVID-19
+R1	has_qualifier Arg1:T2 Arg2:T1	
+T3	Qualifier 53 62	Confirmed
+T4	Qualifier 66 74	imminent
+T5	Condition 75 94	respiratory failure
+*	OR T4 T3
+R2	has_qualifier Arg1:T5 Arg2:T4	
+T6	Observation 227 241	Severe disease
+T7	Condition 258 265	dyspnea
+T8	Measurement 268 289	respiratory frequency
+T9	Value 291 297	30 bpm
+R3	has_value Arg1:T8 Arg2:T9	
+T10	Measurement 300 323	blood oxygen saturation
+T11	Value 325 328	93%
+R4	has_value Arg1:T10 Arg2:T11	
+T12	Measurement 331 403	partial pressure of arterial oxygen to fraction of inspired oxygen ratio
+T13	Value 404 409	< 300
+T14	Observation 419 435	lung infiltrates
+T15	Value 436 441	> 50%
+T16	Temporal 442 463	within 24 to 48 hours
+R5	has_value Arg1:T14 Arg2:T15	
+R6	has_temporal Arg1:T14 Arg2:T16	
+*	OR T7 T8 T10 T12 T14
+R7	subsumes Arg1:T6 Arg2:T7	
+T17	Condition 148 171	acute lung injury (ALI)
+T18	Condition 181 223	acute respiratory distress syndrome (ARDS)
+T19	Qualifier 175 180	early
+T20	Qualifier 142 147	Early
+R8	has_qualifier Arg1:T17 Arg2:T20	
+R9	has_qualifier Arg1:T18 Arg2:T19	
+*	OR T17 T18 T6 T21
+T21	Observation 471 495	Life-threatening disease
+T22	Condition 512 531	respiratory failure
+T23	Condition 534 546	septic shock
+T24	Condition 556 582	multiple organ dysfunction
+T25	Condition 556 570;586 593	multiple organ failure
+*	OR T22 T23 T25 T24
+R10	subsumes Arg1:T21 Arg2:T22	

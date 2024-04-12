@@ -1,0 +1,15 @@
+T6	Non-query-able 152 288	Access to a phone in the hospital room or an electronic device that is capable of receiving phone calls and/or video calls and/or e-mail
+T9	Visit 529 541	Hospitalized
+T12	Condition 664 672;686 710	Impaired decision-making capacity
+*	OR T2 T3
+T1	Measurement 42 50;72 76	COVID-19 test
+R1	has_value Arg1:T1 Arg2:T2	
+T7	Observation 291 343	Able to read/write/speak English or Spanish fluently
+T8	Informed_consent 346 526	Subjects must have the ability to understand the requirements of the study, provide informed consent, and provide authorization of use and disclosure of personal health information
+T4	Value 134 145	>/=18 years
+T2	Value 51 59	positive
+T5	Person 130 133	Age
+R2	has_value Arg1:T5 Arg2:T4	
+T3	Value 63 71	negative
+*	OR T11 T12
+T11	Condition 664 682;702 710	Impaired cognitive capacity

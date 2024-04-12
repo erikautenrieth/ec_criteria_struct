@@ -1,0 +1,48 @@
+T9_DdMmlC2Q	Measurement 488 496;506 510	COVID-19 test
+T11	Condition 1001 1043	reactions to transfusion of blood products
+T10	Condition 883 897;913 920	multiple organ failure
+T4	Qualifier 521 527	severe
+T20_DdMmlC2Q	Condition 560 568	COVID-19
+T6_DdMmlC2Q	Observation 984 994	history of
+T5	Observation 531 559	immediately life-threatening
+T5_DdMmlC2Q	Value 741 746	< 300
+R12	has_temporal Arg1:T11 Arg2:T6_DdMmlC2Q	
+T13_DdMmlC2Q	Observation 467 487	laboratory confirmed
+T2	Value 26 34	6 and up
+R2	has_context Arg1:T9_DdMmlC2Q Arg2:T13_DdMmlC2Q	
+T6	Condition 560 568	COVID-19
+T15_DdMmlC2Q	Condition 862 874	septic shock
+T8	Value 664 667	93%
+T10_DdMmlC2Q	Value 773 778	> 50%
+T7	Value 632 638	30/min
+T9	Temporal 779 800	within 24 to 48 hours
+T1	Informed_consent 35 455	Willing and able to provide written informed consent, or with a legal representative who can provide informed consent, or enrolled under International Conference on Harmonization (ICH) E6(R2) 4.8.15 emergency use provisions as deemed necessary by the investigator (participants  18 years of age); or willing and able to provide assent as required per Institutional Review Board (IRB) prior to performing study procedures
+T3	Person 21 25	Ages
+R1	has_value Arg1:T3 Arg2:T2	
+T12	Value 497 505	positive
+R5	has_value Arg1:T9_DdMmlC2Q Arg2:T12	
+R3	has_qualifier Arg1:T6 Arg2:T4	
+R4	has_context Arg1:T20_DdMmlC2Q Arg2:T5	
+*	OR T6 T20_DdMmlC2Q
+T13	Condition 577 584	disease
+T14	Qualifier 570 576	Severe
+R6	has_qualifier Arg1:T13 Arg2:T14	
+T15	Condition 601 608	dyspnea
+T16	Measurement 609 630	respiratory frequency
+T17	Measurement 639 662	blood oxygen saturation
+T18	Measurement 668 740	partial pressure of arterial oxygen to fraction of inspired oxygen ratio
+T19	Condition 756 772	lung infiltrates
+R7	has_value Arg1:T19 Arg2:T10_DdMmlC2Q	
+R8	has_temporal Arg1:T19 Arg2:T9	
+R9	has_value Arg1:T18 Arg2:T5_DdMmlC2Q	
+R10	has_value Arg1:T17 Arg2:T8	
+R11	has_value Arg1:T16 Arg2:T7	
+R13	subsumes Arg1:T13 Arg2:T15	
+*	OR T15 T16 T17 T18 T19
+T20	Observation 801 817	Life-threatening
+T21	Condition 818 825	disease
+R14	has_context Arg1:T21 Arg2:T20	
+T22	Condition 842 861	respiratory failure
+R15	subsumes Arg1:T21 Arg2:T22	
+*	OR T22 T15_DdMmlC2Q T10 T23
+T23	Condition 883 897;898 909	multiple organ dysfunction

@@ -1,0 +1,18 @@
+T3_DdMmlC2Q	Condition 305 313	COVID-19
+T6_DdMmlC2Q	Procedure 338 360	mechanical ventilation
+T7_DdMmlC2Q	Condition 597 605	COVID-19
+T9_DdMmlC2Q	Condition 560 585	Co-infection with disease
+T4	Informed_consent 270 290	Able to give consent
+T5	Mood 318 337	will likely require
+R3	AND Arg1:T3_DdMmlC2Q Arg2:T6_DdMmlC2Q	
+R4	has_mood Arg1:T6_DdMmlC2Q Arg2:T5	
+T12	Negation 586 596	aside from
+R9	AND Arg1:T9_DdMmlC2Q Arg2:T7_DdMmlC2Q	
+R10	has_negation Arg1:T7_DdMmlC2Q Arg2:T12	
+T13	Condition 615 618	ill
+T14	Qualifier 606 614	Severely
+R11	has_qualifier Arg1:T13 Arg2:T14	
+T15	Mood 619 628	requiring
+T16	Observation 629 697	high ventilator requirements and not stable for ventilator splitting
+R12	has_context Arg1:T13 Arg2:T16	
+R13	has_mood Arg1:T16 Arg2:T15	

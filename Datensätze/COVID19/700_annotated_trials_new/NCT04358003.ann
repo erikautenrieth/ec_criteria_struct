@@ -1,0 +1,51 @@
+T12_DdMmlC2Q	Value 26 38	18 years old
+R4	has_qualifier Arg1:T10_DdMmlC2Q Arg2:T5_DdMmlC2Q	
+T19_DdMmlC2Q	Value 377 382	< 300
+T25_DdMmlC2Q	Condition 892 901	Pregnancy
+T10_DdMmlC2Q	Condition 159 201	acute respiratory distress syndrome (ARDS)
+T5_DdMmlC2Q	Qualifier 153 158	early
+T4	Value 268 274	30/min
+T5	Value 300 303	93%
+T20_DdMmlC2Q	Condition 503 515	septic shock
+T10	Qualifier 902 913	Significant
+T3_DdMmlC2Q	Value 408 413	> 50%
+T6	Temporal 414 435	within 24 to 48 hours
+T26_DdMmlC2Q	Condition 236 243	dyspnea
+T1	Person 39 54	Admitted to ICU
+T2	Person 21 24	Age
+R1	has_value Arg1:T2 Arg2:T12_DdMmlC2Q	
+T3	Condition 69 79	SARS-CoV-2
+T7	Qualifier 123 128	Early
+T8	Condition 129 152	acute lung injury (ALI)
+R2	has_qualifier Arg1:T8 Arg2:T7	
+*	OR T8 T10_DdMmlC2Q
+T9	Condition 214 221	disease
+T11	Qualifier 207 213	Severe
+R3	has_qualifier Arg1:T9 Arg2:T11	
+R5	subsumes Arg1:T9 Arg2:T26_DdMmlC2Q	
+T12	Measurement 245 266	respiratory frequency
+*	OR T26_DdMmlC2Q T12 T13 T14 T15
+R6	has_value Arg1:T12 Arg2:T4	
+T13	Measurement 275 298	blood oxygen saturation
+R7	has_value Arg1:T13 Arg2:T5	
+T14	Measurement 304 376	partial pressure of arterial oxygen to fraction of inspired oxygen ratio
+R8	has_value Arg1:T14 Arg2:T19_DdMmlC2Q	
+T15	Condition 391 407	lung infiltrates
+R9	has_value Arg1:T15 Arg2:T3_DdMmlC2Q	
+R10	has_temporal Arg1:T15 Arg2:T6	
+T16	Condition 460 467	disease
+T17	Observation 443 459	Life-threatening
+R11	has_context Arg1:T16 Arg2:T17	
+T18	Condition 482 501	respiratory failure
+R12	subsumes Arg1:T16 Arg2:T18	
+T19	Condition 524 550	multiple organ dysfunction
+T20	Condition 524 538;554 561	multiple organ failure
+*	OR T19 T20 T18 T20_DdMmlC2Q
+T21	Non-query-able 567 612	Patient fact sheet is provided to the subject
+T22	Informed_consent 614 803	Subject or legal representative is able and willing to give informed consent. If authorized by the IRB, emergent plasma adsorption with the D2000 cartridge may be initiated prior to consent
+T23	Non-query-able 827 891	Treatment limitation or a do not attempt to resuscitate in place
+T24	Non-query-able 939 1042	In the opinion of the investigator, any other condition that precludes plasma adsorption with the D2000
+T25	Qualifier 917 929	uncontrolled
+T26	Condition 930 938	bleeding
+R13	has_qualifier Arg1:T26 Arg2:T25	
+*	OR T25 T10

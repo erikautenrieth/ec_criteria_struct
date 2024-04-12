@@ -1,0 +1,20 @@
+T8	Non-query-able 419 481	Understands and agrees to comply with planned study procedures
+T13	Non-query-able 676 786	Inability to obtain sequential blood samples due to patient's characteristics (i.e. difficult vascular access)
+T4	Observation 118 209;82 101	as determined by polymerase chain reaction (PCR) or other commercial or public health assay Confirmed infection
+T12	Temporal 659 674	within 48 hours
+T15	Observation 808 817	Prisoners
+T3	Condition 107 117	SARS-CoV-2
+T5	Temporal 210 291	in the 72 hours prior to hospital admission or any time during hospital admission
+R5	has_temporal Arg1:T11 Arg2:T12	
+T6	Reference_point 226 253	prior to hospital admission
+R3	has_index Arg1:T5 Arg2:T6	
+T2	Observation 44 80	with symptoms suggestive of COVID-19
+T14	Person 788 806	Obstetric patients
+T1	Visit 21 43	Admitted to a hospital
+T11	Observation 592 658	Anticipated transfer to another hospital which is not a study site
+R2	has_context Arg1:T3 Arg2:T4	
+R1	AND Arg1:T1 Arg2:T2	
+T10	Informed_consent 554 590	Inability to obtain informed consent
+T9	Non-query-able 483 530	Agrees to the collection of whole blood samples
+T7	Informed_consent 293 417	Subject (or legally authorized representative) provides written informed consent prior to initiation of any study procedures
+R4	has_temporal Arg1:T3 Arg2:T5	

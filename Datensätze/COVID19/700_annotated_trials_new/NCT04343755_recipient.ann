@@ -1,0 +1,44 @@
+T1	Person 747 750	age
+T2	Value 751 764	>18 years old
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Visit 873 885	Hospitalized
+T4	Qualifier 887 895	moderate
+T5	Condition 896 950	symptoms requiring medical care for COVID-19 infection
+R2	has_qualifier Arg1:T5 Arg2:T4	
+R3	AND Arg1:T3 Arg2:T5	
+T6	Condition 973 978	fever
+T7	Condition 980 987	dyspnea
+T8	Condition 989 1000	dehydration
+R4	subsumes Arg1:T5 Arg2:T6	
+*	OR T6 T7 T8 T9
+T9	Condition 1015 1024	Hypoxemia
+T10	Mood 1079 1088	Requiring
+T11	Procedure 1089 1111	mechanical ventilation
+T12	Observation 1112 1146	for the care of COVID-19 infection
+R5	has_mood Arg1:T11 Arg2:T10	
+R6	has_context Arg1:T11 Arg2:T12	
+*	OR T5 T11
+T13	Qualifier 1192 1198	severe
+T14	Condition 1199 1238	transfusion reaction to plasma products
+R7	has_qualifier Arg1:T14 Arg2:T13	
+T15	Observation 1181 1191	History of
+R8	has_temporal Arg1:T14 Arg2:T15	
+T16	Drug 1240 1267	Infusion of immune globulin
+T17	Temporal 1268 1295	within the previous 30 days
+R9	has_temporal Arg1:T16 Arg2:T17	
+T18	Measurement 1297 1300	AST
+T19	Measurement 1304 1307	ALT
+T20	Value 1308 1336	> 10 x upper limit of normal
+*	OR T18 T19
+R10	has_value Arg1:T19 Arg2:T20	
+R11	has_value Arg1:T18 Arg2:T20	
+T21	Mood 1338 1353	Requirement for
+T22	Drug 1354 1366	vasopressors
+R12	has_mood Arg1:T22 Arg2:T21	
+T23	Qualifier 1368 1387	COVID-19-associated
+T24	Condition 1388 1407	acute kidney injury
+T25	Mood 1408 1417	requiring
+T26	Procedure 1418 1426	dialysis
+R13	has_mood Arg1:T26 Arg2:T25	
+R14	has_qualifier Arg1:T24 Arg2:T23	
+R15	AND Arg1:T24 Arg2:T26	

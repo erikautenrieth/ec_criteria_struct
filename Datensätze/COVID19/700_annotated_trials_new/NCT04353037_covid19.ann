@@ -1,0 +1,152 @@
+T1	Informed_consent 22 51	Able to give informed consent
+T2	Condition 1810 1839	Allergy to hydroxychloroquine
+T3	Condition 1841 1849	Pregnant
+T4	Condition 1853 1862	lactating
+T5	Value 1866 1874	positive
+T6	Measurement 1875 1889	pregnancy test
+T7	Temporal 1890 1923	during pre-medication examination
+*	OR T3 T4 T6
+R1	has_value Arg1:T6 Arg2:T5	
+R2	has_temporal Arg1:T6 Arg2:T7	
+T8	Post-eligibility 1240 1349	Willing to report compliance with HCQ in the form of a diary and participate in other forms of self-reporting
+T9	Non-query-able 1395 1485	Subjects are willing and able to go to designated areas for testing of COVID-19/SARS-CoV-2
+T10	Observation 1508 1550	able to swallow and retain oral medication
+T11	Negation 1560 1563	not
+T12	Qualifier 1573 1595	clinically significant
+T13	Condition 1596 1652	gastrointestinal abnormalities that may alter absorption
+T14	Condition 1661 1683	malabsorption syndrome
+T15	Procedure 1687 1727	major resection of the stomach or bowels
+R3	AND Arg1:T10 Arg2:T13	
+R4	has_qualifier Arg1:T13 Arg2:T12	
+R5	has_negation Arg1:T13 Arg2:T11	
+R6	subsumes Arg1:T13 Arg2:T14	
+*	OR T14 T15
+R7	has_negation Arg1:T14 Arg2:T11	
+R8	has_negation Arg1:T15 Arg2:T11	
+T16	Competing_trial 1925 1973	Receiving any trial treatment drug for 2019-ncov
+T17	Temporal 1974 2018	within 14 days prior to screening evaluation
+T18	Reference_point 1998 2018	screening evaluation
+R9	has_index Arg1:T17 Arg2:T18	
+R10	has_temporal Arg1:T16 Arg2:T17	
+T19	Qualifier 2069 2074	Known
+T20	Condition 2075 2090	retinal disease
+T21	Condition 2120 2140	macular degeneration
+T22	Condition 2142 2164	retinal vein occlusion
+T23	Condition 2166 2185	visual field defect
+T24	Condition 2187 2207	diabetic retinopathy
+R11	has_qualifier Arg1:T20 Arg2:T19	
+R12	subsumes Arg1:T20 Arg2:T21	
+*	OR T21 T22 T23 T24
+T25	Observation 1752 1784	adequate baseline organ function
+T26	Condition 2220 2245	interstitial lung disease
+T27	Qualifier 2249 2256	chronic
+T28	Observation 2209 2219	History of
+R13	has_temporal Arg1:T26 Arg2:T28	
+T29	Condition 2257 2268	pneumonitis
+T30	Observation 2269 2287	unrelated COVID-19
+R14	has_qualifier Arg1:T29 Arg2:T27	
+R15	has_temporal Arg1:T29 Arg2:T28	
+*	OR T26 T29
+R16	has_context Arg1:T29 Arg2:T30	
+T31	Condition 2345 2354	porphyria
+T32	Condition 2358 2367	psoriasis
+*	OR T31 T32
+T33	Condition 2723 2741	infectious disease
+T34	Condition 2743 2749	cancer
+T35	Condition 2751 2769	autoimmune disease
+T36	Condition 2771 2793	cardiovascular disease
+*	OR T33 T34 T35 T36
+T37	Observation 2559 2693	serious intercurrent illness that requires active intravenous therapy, intense monitoring, or frequent dose adjustments for medication
+R17	subsumes Arg1:T37 Arg2:T33	
+T38	Qualifier 2828 2833	major
+T39	Procedure 2834 2843;2893 2900	abdominal surgery
+T40	Procedure 2845 2853;2893 2900	thoracic surgery
+T41	Procedure 2855 2860;2893 2900	spine surgery
+T42	Procedure 2864 2900	central nervous system (CNS) surgery
+T43	Temporal 2901 2921	in the last 2 months
+T44	Mood 2926 2941	plan to undergo
+T45	Procedure 2942 2949	surgery
+T46	Temporal 2950 2976	during study participation
+R18	has_qualifier Arg1:T39 Arg2:T38	
+R19	has_qualifier Arg1:T40 Arg2:T38	
+R20	has_qualifier Arg1:T41 Arg2:T38	
+R21	has_qualifier Arg1:T42 Arg2:T38	
+*	OR T39 T40 T41 T42 T45
+R22	has_temporal Arg1:T42 Arg2:T43	
+R23	has_temporal Arg1:T41 Arg2:T43	
+R24	has_temporal Arg1:T39 Arg2:T43	
+R25	has_temporal Arg1:T40 Arg2:T43	
+R26	has_mood Arg1:T45 Arg2:T44	
+R27	has_temporal Arg1:T45 Arg2:T46	
+T47	Reference_point 2957 2976	study participation
+R28	has_index Arg1:T46 Arg2:T47	
+T48	Drug 3002 3054	cytochrome P450 enzyme-inducing anticonvulsant drugs
+T49	Drug 3061 3070	phenytoin
+T50	Drug 3072 3085	carbamazepine
+T51	Drug 3087 3100	Phenobarbital
+T52	Drug 3102 3111	primidone
+T53	Drug 3115 3128	oxcarbazepine
+T54	Temporal 3130 3180	within 4 weeks of the start of the study treatment
+T55	Reference_point 3152 3180	start of the study treatment
+R29	has_index Arg1:T54 Arg2:T55	
+R30	subsumes Arg1:T48 Arg2:T49	
+*	OR T49 T50 T51 T52 T53
+R31	has_temporal Arg1:T48 Arg2:T54	
+T56	Drug 3212 3219	digoxin
+T57	Temporal 3195 3204	currently
+R32	has_temporal Arg1:T56 Arg2:T57	
+T58	Observation 3232 3273	evidence of increased cardiovascular risk
+T59	Measurement 3307 3348	Left ventricular ejection fraction (LVEF)
+T60	Value 3349 3386	< institutional lower limit of normal
+R33	has_value Arg1:T59 Arg2:T60	
+T61	Qualifier 3438 3460	clinically significant
+T62	Qualifier 3461 3473	uncontrolled
+T63	Temporal 3430 3437	Current
+T64	Condition 3474 3485	arrhythmias
+T65	Negation 3487 3496	Exception
+T66	Condition 3523 3542	atrial fibrillation
+T67	Qualifier 3512 3522	controlled
+R34	has_temporal Arg1:T64 Arg2:T63	
+R35	has_qualifier Arg1:T64 Arg2:T61	
+R36	AND Arg1:T61 Arg2:T62	
+R37	AND Arg1:T64 Arg2:T66	
+R38	has_qualifier Arg1:T66 Arg2:T67	
+R39	has_negation Arg1:T66 Arg2:T65	
+T68	Condition 3555 3579	acute coronary syndromes
+T69	Observation 3544 3554	History of
+T70	Condition 3591 3612	myocardial infarction
+T71	Condition 3617 3632	unstable angina
+T72	Procedure 3635 3655	coronary angioplasty
+T73	Procedure 3660 3668	stenting
+T74	Temporal 3669 3704	within 6 months prior to enrollment
+T75	Reference_point 3694 3704	enrollment
+R40	has_temporal Arg1:T68 Arg2:T69	
+R41	subsumes Arg1:T68 Arg2:T70	
+*	OR T70 T71
+R42	has_temporal Arg1:T73 Arg2:T74	
+R43	has_index Arg1:T74 Arg2:T75	
+T76	Qualifier 3715 3723	Class II
+T77	Temporal 3706 3715	Current  
+T78	Condition 3724 3748	congestive heart failure
+T79	Observation 3749 3789	as defined by New York Heart Association
+R44	has_temporal Arg1:T78 Arg2:T77	
+R45	has_qualifier Arg1:T78 Arg2:T76	
+R46	has_context Arg1:T78 Arg2:T79	
+T80	Non-query-able 3792 3876	Deemed unable to participate for medical reasons identified by Co-PI and study staff
+T81	Person 142 145	age
+T82	Value 127 138	50-75 years
+R47	has_value Arg1:T81 Arg2:T82	
+T83	Condition 174 179	fever
+T84	Temporal 180 224	within four days prior to time of enrollment
+T85	Reference_point 214 224	enrollment
+R48	has_temporal Arg1:T83 Arg2:T84	
+R49	has_index Arg1:T84 Arg2:T85	
+T86	Negation 230 233	not
+T87	Mood 234 243	requiring
+T88	Visit 244 259	hospitalization
+R50	has_mood Arg1:T88 Arg2:T87	
+R51	has_negation Arg1:T88 Arg2:T86	
+T89	Informed_consent 351 415	Participant must be willing and able to provide informed consent
+T90	Post-eligibility 417 527	agree to testing for COVID-19 at time of enrollment to confirm diagnosis and two weeks at the end of treatment
+R52	subsumes Arg1:T58 Arg2:T59	
+*	OR T59 T64 T68 T72 T73 T78

@@ -1,0 +1,40 @@
+T23	Procedure 724 746	mechanical ventilation
+T16	Temporal 608 629	within 24 to 48 hours
+R6	subsumes Arg1:T7 Arg2:T10	
+T13	Measurement 447 468	respiratory frequency
+T11	Informed_consent 316 376	Informed consent provided by the patient or healthcare proxy
+R12	has_temporal Arg1:T17 Arg2:T16	
+T12	Condition 199 207	COVID-19
+T15	Measurement 506 578	partial pressure of arterial oxygen to fraction of inspired oxygen ratio
+T21	Value 579 584	< 300
+*	OR T10 T13 T14 T15 T17
+T24	Condition 747 759	septic shock
+T22	Condition 704 723	respiratory failure
+T5	Visit 103 127	Admitted to the hospital
+T26	Condition 760 774;790 797	multiple organ failure
+T17	Measurement 585 601	lung infiltrates
+T25	Condition 760 786	multiple organ dysfunction
+R9	subsumes Arg1:T12 Arg2:T22	
+T3	Condition 77 102	infection with SARS-CoV-2
+R1	has_value Arg1:T1 Arg2:T2	
+R10	has_value Arg1:T15 Arg2:T21	
+T8	Qualifier 182 198	life threatening
+R11	has_value Arg1:T17 Arg2:T18	
+T1	Person 21 24	Age
+T7	Condition 199 207	COVID-19
+R3	has_context Arg1:T5 Arg2:T6	
+T10	Condition 439 446	dyspnea
+T20	Value 502 505	93%
+R4	has_qualifier Arg1:T12 Arg2:T8	
+*	OR T25 T26 T22 T23 T24
+T9	Qualifier 172 178	Severe
+T14	Measurement 477 500	blood oxygen saturation
+T18	Value 602 607	> 50%
+R2	has_context Arg1:T3 Arg2:T4	
+T4	Observation 43 73	Laboratory confirmed diagnosis
+R7	has_value Arg1:T13 Arg2:T19	
+R8	has_value Arg1:T14 Arg2:T20	
+T2	Value 25 42	at least 18 years
+T6	Observation 128 171	for the treatment of COVID-19 complications
+R5	has_qualifier Arg1:T7 Arg2:T9	
+T19	Value 470 476	30/min

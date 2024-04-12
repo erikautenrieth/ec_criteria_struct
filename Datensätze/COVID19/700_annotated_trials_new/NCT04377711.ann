@@ -1,0 +1,57 @@
+T34	Temporal 1436 1445	Currently
+T1	Value 144 152;160 169	12 years and above
+T26	Reference_point 1151 1192	screening/ enrollment/randomization visit
+T14	Value 494 510	greater than 93%
+R14	has_index Arg1:T29 Arg2:T30	
+T7	Temporal 224 259	within 72 hours prior to enrollment
+R7	has_temporal Arg1:T9 Arg2:T11	
+R11	has_index Arg1:T25 Arg2:T26	
+T30	Reference_point 1252 1292	screening/enrollment/randomization visit
+R10	has_temporal Arg1:T20 Arg2:T23	
+R12	has_temporal Arg1:T24 Arg2:T25	
+*	OR T32 T33
+R15	has_temporal Arg1:T28 Arg2:T29	
+R9	has_temporal Arg1:T18 Arg2:T19	
+*	OR T24 T27
+T2	Person 156 159	age
+T24	Drug 1091 1098;1113 1128	inhaled corticosteroids
+R2	AND Arg1:T4 Arg2:T2	
+T20	Condition 425 430	fever
+T21	Condition 432 437	cough
+*	OR T20 T21 T22
+T10	Negation 272 275	not
+T11	Temporal 276 285	currently
+T15	Non-query-able 512 579	Ability to show adequate use of MDI, including inhalation technique
+T29	Temporal 1230 1292	within 90 days of the screening/enrollment/randomization visit
+T36	Condition 1548 1577	idiopathic pulmonary fibrosis
+T31	Competing_trial 1294 1435	Participation in any other clinical trial or use of any investigational agent within 30 days of the screening/enrollment/randomization visit.
+T13	Measurement 470 493	oxygen saturation level
+T4	Person 113 119	female
+R8	has_value Arg1:T13 Arg2:T14	
+T12	Non-query-able 302 377	under immediate consideration for hospitalization at the time of enrollment
+T27	Drug 1102 1128	intranasal corticosteroids
+R17	has_temporal Arg1:T33 Arg2:T34	
+T9	Visit 286 298	hospitalized
+R13	has_temporal Arg1:T27 Arg2:T25	
+T5	Measurement 181 223	SARS-CoV-2 rapid molecular diagnostic test
+T19	Observation 1032 1042	History of
+T8	Reference_point 249 259	enrollment
+R6	has_negation Arg1:T9 Arg2:T10	
+R5	has_value Arg1:T5 Arg2:T6	
+T25	Temporal 1129 1192	within 14 days of the screening/ enrollment/randomization visit
+T22	Condition 446 453	dyspnea
+T16	Informed_consent 581 748	Patient, parent/legal guardian, or legally-authorized representative must have signed a written informed consent before administration of any study-specific procedures
+T17	Non-query-able 867 1030	Existence of any life-threatening co-morbidity or any other medical condition which, in the opinion of the investigator, makes the patient unsuitable for inclusion
+T33	Drug 1490 1501	chloroquine
+T3	Person 104 108	Male
+T35	Condition 1517 1532	cystic fibrosis
+T28	Drug 1209 1229	oral corticosteroids
+*	OR T3 T4
+R4	has_temporal Arg1:T5 Arg2:T7	
+T23	Temporal 390 399	currently
+R3	has_index Arg1:T7 Arg2:T8	
+T6	Value 172 180	Positive
+R16	has_temporal Arg1:T32 Arg2:T34	
+T32	Drug 1471 1489	hydroxychloroquine
+T18	Condition 1043 1074	hypersensitivity to ciclesonide
+R1	has_value Arg1:T2 Arg2:T1	
