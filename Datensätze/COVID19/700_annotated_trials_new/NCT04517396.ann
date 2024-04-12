@@ -1,0 +1,90 @@
+T4	Observation 62 94	compatible clinical presentation
+T33	Drug 914 926	cyclosporine
+T41	Drug 980 992	atorvastatin
+T42	Value 1042 1050	>40 mg/d
+T17	Measurement 625 635	CKD stages
+R27	has_context Arg1:T34 Arg2:T35	
+T14	Measurement 539 582	Estimated glomerular filtration rate (eGFR)
+R2	subsumes Arg1:T1 Arg2:T4	
+T36	Drug 946 953	statins
+T2	Measurement 111 141	laboratory test for SARS-CoV-2
+T31	Drug 876 899	coumarin anticoagulants
+T32	Drug 901 912	glimepiride
+T16	Procedure 615 623	dialysis
+R4	subsumes Arg1:T1 Arg2:T5	
+*	OR T45 T46 T47
+T6	Procedure 227 247	testing for COVID-19
+R11	has_value Arg1:T14 Arg2:T15	
+R17	has_temporal Arg1:T19 Arg2:T25	
+T7	Observation 255 280	high clinical probability
+T11	Temporal 444 468	Fewer than 14 days since
+R9	has_value Arg1:T17 Arg2:T18	
+R24	has_context Arg1:T31 Arg2:T35	
+T22	Condition 691 705	hypothyroidism
+R16	has_context Arg1:T19 Arg2:T24	
+T24	Observation 726 748	suspected or confirmed
+T38	Drug 965 976	simvastatin
+T28	Drug 832 843	fenofibrate
+R28	has_negation Arg1:T38 Arg2:T37	
+R23	has_context Arg1:T30 Arg2:T35	
+*	OR T14 T16
+T8	Observation 297 408	compatible pulmonary infiltrates on chest x-ray (bilateral, intersticial or ground glass opacities) or chest CT
+R13	has_context Arg1:T23 Arg2:T24	
+*	OR T19 T21 T22 T23
+T9	Informed_consent 410 442	Able to provide informed consent
+R19	has_temporal Arg1:T22 Arg2:T25	
+T23	Condition 710 724	rhabdomyolysis
+R29	has_negation Arg1:T39 Arg2:T37	
+T44	Observation 1078 1102	incarcerated individuals
+R12	has_qualifier Arg1:T19 Arg2:T20	
+R7	AND Arg1:T7 Arg2:T8	
+T30	Drug 857 865	warfarin
+R33	has_value Arg1:T41 Arg2:T42	
+T10	Observation 469 482	symptom onset
+R34	has_negation Arg1:T47 Arg2:T48	
+R22	has_context Arg1:T29 Arg2:T35	
+T35	Observation 809 826	Ongoing treatment
+T48	Negation 1131 1133	no
+R18	has_temporal Arg1:T21 Arg2:T25	
+R14	has_context Arg1:T22 Arg2:T24	
+T13	Observation 525 538	breastfeeding
+R20	has_temporal Arg1:T23 Arg2:T25	
+T1	Condition 36 44	COVID-19
+R30	AND Arg1:T36 Arg2:T38	
+R1	has_value Arg1:T2 Arg2:T3	
+T34	Drug 928 938	tacrolimus
+R31	AND Arg1:T36 Arg2:T39	
+T12	Condition 512 521	pregnancy
+T39	Drug 980 992	atorvastatin
+T21	Condition 675 689	cholelithiasis
+T18	Value 636 639	4-5
+T25	Observation 642 652	History of
+T27	Condition 757 776;792 807	hypersensitivity to fenofibric acid
+T45	Observation 1103 1120	Inability to read
+R6	AND Arg1:T6 Arg2:T7	
+T46	Observation 1103 1115;1122 1127	Inability to write
+T37	Negation 954 964	other than
+R25	has_context Arg1:T32 Arg2:T35	
+T3	Value 102 110	positive
+R8	has_temporal Arg1:T10 Arg2:T11	
+*	OR T26 T27
+R5	AND Arg1:T5 Arg2:T6	
+R15	has_context Arg1:T21 Arg2:T24	
+T29	Drug 845 855	clofibrate
+T47	Observation 1134 1184	access to a smart phone, computer or tablet device
+T19	Condition 660 673	liver disease
+R3	AND Arg1:T4 Arg2:T2	
+R26	has_context Arg1:T33 Arg2:T35	
+*	OR T40 T41 T36
+*	OR T28 T29 T30 T31 T32 T33 T34
+T26	Condition 757 788	hypersensitivity to fenofibrate
+T5	Visit 189 215	Person Under Investigation
+R10	subsumes Arg1:T16 Arg2:T17	
+T20	Qualifier 653 659	active
+T15	Value 583 600	<30 mL/min/1.73m2
+R21	has_context Arg1:T28 Arg2:T35	
+R32	has_value Arg1:T40 Arg2:T42	
+*	OR T43 T44
+T40	Drug 965 976	simvastatin
+T43	Observation 1068 1077	Prisoners
+*	OR T12 T13

@@ -1,0 +1,34 @@
+T18	Condition 785 794	pregnancy
+T14	Condition 581 626	allergic to research drugs or drug excipients
+T4	Observation 133 142;163 169	Confirmed by PCR
+T10	Post-eligibility 316 353	Must be able to take heart rate daily
+T1	Value 23 33	> 18 years
+R4	has_value Arg1:T22 Arg2:T23	
+T15	Informed_consent 628 667	Incapable of providing informed consent
+T7	Condition 181 202	symptoms of Sars-CoV2
+T21	Condition 814 835	Prolonged QT interval
+T19	Qualifier 776 784	possible
+R3	has_qualifier Arg1:T18 Arg2:T19	
+*	OR T21 T22
+T11	Post-eligibility 355 389	Must agree to Skype/Facetime daily
+T23	Value 837 841	>450
+*	OR T20 T18 T17
+T27	Drug 918 927	NSAID use
+T17	Condition 765 774	Pregnancy
+T22	Measurement 824 835	QT interval
+T8	Non-query-able 204 259	Must show documentation of Sars-CoV2 to screening visit
+T3	Informed_consent 42 131	Willing and able to provide written informed consent prior to performing study procedures
+T9	Non-query-able 261 314	Must have had recent hematology and chemistry results
+T13	Competing_trial 429 541	Must agree not to enroll in another study of an investigational agent prior to completion of Day 14 of treatment
+T20	Observation 798 812	breast feeding
+T6	Qualifier 176 180	mild
+T5	Condition 143 162	Sars-CoV2 infection
+T25	Condition 886 899	Renal failure
+T26	Condition 901 916	Hepatic failure
+R2	has_qualifier Arg1:T7 Arg2:T6	
+R5	has_context Arg1:T5 Arg2:T4	
+T24	Observation 844 884	Moderate to severe symptoms of Sars-CoV2
+R1	has_value Arg1:T2 Arg2:T1	
+T16	Competing_trial 669 763	Participation in any other clinical trial of an experimental treatment for Sars-CoV2 infection
+T12	Post-eligibility 391 427	Must agree to take temperature daily
+T2	Person 37 40	age

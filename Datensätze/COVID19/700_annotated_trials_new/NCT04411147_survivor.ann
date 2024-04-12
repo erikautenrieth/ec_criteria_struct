@@ -1,0 +1,61 @@
+T1	Non-query-able 139 240	Stated willingness to comply with all study procedures and availability for the duration of the study
+T2	Person 242 245	Age
+T3	Value 246 263	18 years or older
+R1	has_value Arg1:T2 Arg2:T3	
+T4	Informed_consent 266 366	Ability of participant to understand and the willingness to sign a written informed consent document
+T5	Measurement 369 379	Hemoglobin
+T6	Value 383 402	9.0 gm/dl or higher
+R2	has_value Arg1:T5 Arg2:T6	
+T7	Non-query-able 404 477	Willingness to give consent for the storage of blood samples for research
+T8	Non-query-able 480 731	Have a physician or clinic outside NIH to manage underlying medical conditions or agreeing to establish care with an outside physician or clinic for any medical conditions requiring treatment that may be diagnosed as a result of protocol participation
+T9	Observation 1410 1488	Living in the same household as a COVID-19 survivor during the time of illness
+T10	Observation 1493 1683	being within approximately 6 feet (2 meters) of a COVID-19 case for a prolonged period of time or having direct contact with infectious secretions of a COVID-19 case (e.g., being coughed on)
+*	OR T9 T10
+T11	Negation 1686 1688	No
+T12	Condition 1702 1710	COVID-19
+T13	Temporal 1714 1721	current
+T14	Observation 1722 1753	symptoms suggestive of COVID-19
+R3	has_negation Arg1:T12 Arg2:T11	
+R4	has_negation Arg1:T14 Arg2:T11	
+*	OR T12 T14
+R5	has_temporal Arg1:T14 Arg2:T13	
+T15	Temporal 1886 1893	Current
+T16	Condition 1894 1910	abuse of alcohol
+T17	Condition 1894 1902;1914 1925	abuse of other drugs
+R6	has_temporal Arg1:T16 Arg2:T15	
+*	OR T16 T17
+R7	has_temporal Arg1:T17 Arg2:T15	
+T18	Non-query-able 1932 2023	in the judgement of the Principal Investigator (PI) could interfere with patient compliance
+T19	Non-query-able 2026 2089	Inability to travel to the NIH Clinical Center for study visits
+T20	Non-query-able 2091 2223	Any medical or mental health condition that, in the judgement of the PI, would make the volunteer unable to participate in the study
+T21	Value 2226 2234	Positive
+T22	Measurement 2235 2249	SARS-CoV-2 PCR
+T23	Temporal 2250 2268	at screening visit
+R8	has_value Arg1:T22 Arg2:T21	
+R9	has_temporal Arg1:T22 Arg2:T23	
+T24	Multiplier 2282 2285	any
+T25	Observation 2293 2302	following
+T26	Temporal 2303 2322	in the past 14 days
+T27	Condition 2324 2329	fever
+T28	Value 2330 2352	> 38.2 degrees Celsius
+T29	Qualifier 2354 2357	new
+T30	Qualifier 2361 2370	worsening
+T31	Observation 2371 2391	respiratory symptoms
+T32	Condition 2398 2403	cough
+T33	Condition 2405 2412	dyspnea
+R10	has_multiplier Arg1:T25 Arg2:T24	
+R11	has_temporal Arg1:T25 Arg2:T26	
+R12	subsumes Arg1:T25 Arg2:T27	
+R13	has_value Arg1:T27 Arg2:T28	
+*	OR T27 T31
+R14	has_qualifier Arg1:T31 Arg2:T29	
+*	OR T29 T30
+R15	subsumes Arg1:T31 Arg2:T32	
+*	OR T32 T33
+T34	Condition 2416 2425	Pregnancy
+T35	Condition 2468 2476	Pregnant
+T36	Non-query-able 2521 2770	If a woman is pregnant at the time of screening she will not be enrolled until the end of her pregnancy because important baseline research assessments (e.g. leukapheresis, chest x-ray, pulmonary function testing) should not be done during pregnancy
+T37	Non-query-able 2773 3277	Children will not be included in this study. Due to the rarity of COVID-19 in children (as of 4/11/2020 in Maryland, <2% of cases occurred in children), it would not be possible to recruit enough children to address the protocol research objectives. In addition, pediatric restrictions for the volume of blood permitted to be drawn for research purposes and the more than minimal risk of apheresis in children would severely limit the ability to conduct the immunologic studies described in this protocol
+T38	Observation 3297 3306	Employees
+T39	Non-query-able 3308 3401	NIH employees may be enrolled in this study as this population meets the study entry criteria
+T40	Non-query-able 3404 3587	Neither participation nor refusal to participate as a participant in the research will have an effect, either beneficial or adverse, on the participant s employment or position at NIH

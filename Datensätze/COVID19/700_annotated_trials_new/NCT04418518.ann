@@ -1,0 +1,28 @@
+T12	Procedure 269 278	Intubated
+T16	Condition 355 383	anaphylaxis from transfusion
+R9	subsumes Arg1:T15 Arg2:T16	
+R4	has_mood Arg1:T7 Arg2:T6	
+R3	AND Arg1:T3 Arg2:T5	
+R1	has_value Arg1:T1 Arg2:T2	
+T14	Procedure 291 301	intubation
+*	OR T12 T14
+T7	Procedure 113 132	supplemental oxygen
+R7	has_mood Arg1:T14 Arg2:T13	
+T4	Qualifier 63 72	confirmed
+T5	Condition 73 101	COVID-19 respiratory illness
+R2	has_qualifier Arg1:T5 Arg2:T4	
+T11	Reference_point 245 267	prior to randomization
+T3	Visit 37 57	Admitted to hospital
+T1	Person 32 35	old
+R6	has_temporal Arg1:T9 Arg2:T10	
+T2	Value 23 31	18 years
+T15	Observation 312 337	Plasma is contraindicated
+R8	has_temporal Arg1:T16 Arg2:T17	
+T10	Temporal 236 267	>12 days prior to randomization
+T17	Observation 344 354	history of
+T6	Mood 103 112	Receiving
+T13	Mood 282 290	plan for
+T18	Non-query-able 386 427	Decision in place for no active treatment
+R5	has_index Arg1:T10 Arg2:T11	
+T9	Observation 218 235	Onset of symptoms
+T8	Non-query-able 134 191	500 mL of ABO compatible convalescent plasma is available

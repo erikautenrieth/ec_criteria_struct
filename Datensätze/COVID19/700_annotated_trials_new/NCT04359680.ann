@@ -1,0 +1,62 @@
+T11	Informed_consent 1471 1615	Willing and able to provide written informed consent and comply with the requirements of the protocol, including completion of the subject diary
+T24	Drug 2147 2164	antiviral therapy
+T23	Observation 2123 2143	for these conditions
+T39	Drug 3865 3917	medications considered to be major CYP2C8 substrates
+T25	Observation 2165 2178	for influenza
+T7	Non-query-able 1211 1323	Must have a smartphone, tablet, computer, or other qualifying internet- enabled device and daily internet access
+T31	Reference_point 2380 2398	prior to screening
+R10	has_temporal Arg1:T29 Arg2:T30	
+T14	Non-query-able 1740 1883	Subjects with known severe heart, lung, neurological or other systemic disease that the Investigator believes could preclude safe participation
+R8	has_temporal Arg1:T24 Arg2:T26	
+R11	has_index Arg1:T30 Arg2:T31	
+T22	Drug 2111 2122	antibiotics
+T16	Condition 1939 1976	developed anti- SARS-CoV-2 antibodies
+T26	Temporal 2179 2230	within two weeks prior to and including study day 1
+R6	has_context Arg1:T22 Arg2:T23	
+T30	Temporal 2366 2398	within 7 days prior to screening
+R5	has_temporal Arg1:T15 Arg2:T17	
+R7	has_context Arg1:T24 Arg2:T25	
+T20	Condition 2075 2085	bronchitis
+T21	Condition 2089 2098	sinusitis
+*	OR T18 T19 T20 T21 T22 T24
+R9	has_index Arg1:T26 Arg2:T27	
+T36	Observation 3681 3694	breastfeeding
+*	OR T15 T16
+T27	Reference_point 2196 2230	prior to and including study day 1
+T34	Condition 2646 2688	unable to swallow oral tablets or capsules
+T17	Observation 1902 1912	history of
+T19	Condition 2067 2073	otitis
+T29	Drug 2362 2365	NTZ
+T33	Condition 2559 2577	sensitivity to NTZ
+T18	Condition 2026 2065	acute upper respiratory tract infection
+T15	Condition 1913 1921	COVID-19
+T40	Non-query-able 3920 4078	Subjects who, in the judgment of the Investigator, will be unlikely to comply with the requirements of this protocol including completion of the subject diary
+T32	Competing_trial 2401 2550	Treatment with any investigational drug or vaccine therapy within 30 days prior to screening and willing to avoid them during the course of the study
+T1	Person 23 28	Males
+T2	Person 33 40	females
+*	OR T1 T2
+T3	Person 62 65	age
+R1	AND Arg1:T2 Arg2:T3	
+T4	Value 41 58	at least 18 years
+R2	has_value Arg1:T3 Arg2:T4	
+T5	Person 89 92	age
+*	OR T3 T5
+T6	Observation 72 88	legal consenting
+R3	has_context Arg1:T5 Arg2:T6	
+T8	Reference_point 1398 1417	prior to enrollment
+T9	Temporal 1384 1417	within 7 days prior to enrollment
+R4	has_index Arg1:T9 Arg2:T8	
+T10	Observation 1326 1383	Occupational exposure to a person infected with SAR-CoV-2
+R12	has_temporal Arg1:T10 Arg2:T9	
+T12	Observation 190 260	Healthcare workers with known direct occupational exposure to COVID-19
+T13	Reference_point 275 294	prior to enrollment
+T28	Temporal 261 295	within 7 days prior to enrollment.
+R13	has_index Arg1:T28 Arg2:T13	
+T35	Non-query-able 296 638	A qualifying person (i) provides healthcare to patients and/or (ii) typically positions themselves within 6 feet of patients ("close contact") and (iii) is a full- time employee (average of  24 hours/week) in a high contact area (Emergency Department, Intensive Care Unit, COVID-specific Care Unit, Walk-in Clinic, Paramedic/First Responder).
+T37	Non-query-able 640 1204	Persons participating in social activities without the practice of generally accepted social distancing practices at least three times per week. Qualifying activities include the presence of at least 10 people in close (<6 feet) proximity to each other without masks or other personal protective equipment (e.g., socializing at bars or community/social centers, in-home social gatherings, classes or trainings, etc.). These subjects must have engaged in such activities at least three times in the past 7 days and plan to continue these activities during the study
+T38	Observation 1652 1737	not at increased risk of contracting SARS-CoV-2 from occupational or social behaviors
+T41	Observation 2242 2336	residing in the same household with another family member currently participating in the study
+T42	Pregnancy_considerations 2691 3663	Females of childbearing potential who are either pregnant or sexually active without the use of birth control. Female subjects of child-bearing potential that are sexually active must have a negative baseline pregnancy test and must agree to continue an acceptable method of birth control for the duration of the study and for 1 month post-treatment. A double barrier method, oral birth control pills administered for at least 2 monthly cycle prior to study drug administration, an (intrauterine device) IUD, or medroxyprogesterone acetate administered intramuscularly for a minimum of one month prior to study drug administration are acceptable methods of birth control for inclusion into the study. Female subjects are considered of childbearing potential unless they are postmenopausal (absence of menstrual bleeding for 1 year or 6 months if laboratory confirmation of hormonal status), or have had a hysterectomy, bilateral tubular ligation or bilateral oophorectomy.
+T43	Condition 3711 3739	active respiratory allergies
+T44	Observation 3752 3846	expected to require anti-allergy medications during the study period for respiratory allergies
+*	OR T44 T43

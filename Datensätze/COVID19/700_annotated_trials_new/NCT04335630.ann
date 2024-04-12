@@ -1,0 +1,26 @@
+T3	Observation 218 241	high clinical suspicion
+R5	has_context Arg1:T4 Arg2:T3	
+R6	AND Arg1:T4 Arg2:T11_mml	
+T21_mml	Condition 94 99	cough
+T25_mml	Condition 125 132	dyspnea
+R9	AND Arg1:T5 Arg2:T5_mml	
+T11_mml	Measurement 278 301	PRC test for SARS-CoV-2
+T7	Mood 337 344	require
+R8	has_negation Arg1:T5_mml Arg2:T6	
+T5_mml	Visit 345 360	hospitalization
+T2	Condition 101 117	nasal congestion
+T4	Condition 246 254	COVID-19
+T20_mml	Value 149 157	positive
+T1	Condition 81 92	sore throat
+R1	has_context Arg1:T10_mml Arg2:T23_mml	
+R7	has_mood Arg1:T5_mml Arg2:T7	
+T19_mml	Value 269 277	negative
+T5	Condition 317 325	COVID-19
+T23_mml	Observation 62 73	symptoms of
+*	OR T10_mml T1 T21_mml T2 T25_mml
+R2	AND Arg1:T10_mml Arg2:T8_mml	
+R4	has_value Arg1:T11_mml Arg2:T19_mml	
+T6	Negation 333 336	not
+T8_mml	Measurement 162 179	SARS-CoV-2 by PCR
+R3	has_value Arg1:T8_mml Arg2:T20_mml	
+T10_mml	Condition 74 79	fever

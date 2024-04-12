@@ -1,0 +1,36 @@
+*	OR T26 T25
+T9	Condition 79 89	SARS-CoV-2
+T21	Observation 1327 1855	Onset of mild symptoms consistent with COVID-19 within 6 days prior to enrollment (target time) up to 14 days prior to enrollment (upper allowable window). Symptoms of COVID-19 to be determined by the clinical judgement of the investigating clinician including-- but not limited to-- fever, headache, sore throat, cough, dyspnea, rhinorrhea, diarrhea myalgias, chills, and anosmia. Please refer to https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html for the current list of symptoms consistent with COVID-19
+T18	Reference_point 1232 1251	prior to enrollment
+R1	has_value Arg1:T8 Arg2:T7	
+T2	Informed_consent 318 369	Ability and willingness to provide informed consent
+T27	Temporal 745 782	within 2 weeks prior to positive test
+T14	Observation 1999 2038	Symptomatic (hospitalized) participants
+T6	Non-query-able 612 656	Agreement to allow access to medical records
+T3	Non-query-able 371 463	Willingness to have clinical research staff come to place of residence or hospital if needed
+T10	Temporal 2078 2111	within 3 days prior to enrollment
+T11	Visit 2052 2064	hospitalized
+T25	Observation 708 744	No symptoms consistent with COVID-19
+R12	subsumes Arg1:T15 Arg2:T26	
+T4	Non-query-able 465 530	Willingness to be followed for the planned duration of the study.
+R6	has_index Arg1:T17 Arg2:T18	
+T7	Value 25 42	18 years or older
+T12	Condition 2069 2077	COVID-19
+R2	AND Arg1:T11 Arg2:T12	
+T28	Reference_point 760 782	prior to positive test
+T15	Observation 659 684	Asymptomatic participants
+R3	has_temporal Arg1:T12 Arg2:T10	
+T1	Non-query-able 2256 2484	Any medical, psychiatric, occupational, or other condition that, in the judgment of the investigator, would interfere with, or serve as a contraindication to, protocol adherence or a volunteer's ability to give informed consent.
+T19	Reference_point 1184 1216	prior to enrollment (target time
+T20	Observation 1281 1324	Symptomatic (non-hospitalized) participants
+R14	has_temporal Arg1:T25 Arg2:T27	
+T26	Observation 687 706	No current symptoms
+T8	Person 21 24	Age
+T5	Non-query-able 531 610	Assessment of understanding: volunteer demonstrates understanding of this study
+T17	Temporal 1168 1276	within six days prior to enrollment (target time) up to 10 days prior to enrollment (upper allowable window)
+T16	Measurement 1148 1167	SARS-CoV-2 RNA test
+T13	Reference_point 2092 2111	prior to enrollment
+R7	has_temporal Arg1:T16 Arg2:T17	
+R4	has_index Arg1:T10 Arg2:T13	
+R5	has_index Arg1:T17 Arg2:T19	
+R13	has_index Arg1:T27 Arg2:T28	

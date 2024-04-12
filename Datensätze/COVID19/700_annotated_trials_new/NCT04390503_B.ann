@@ -1,0 +1,127 @@
+T1	Person 133 136	age
+T2	Value 121 129;137 145	18 years or older
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Observation 147 187	Close contact* of a person with COVID-19
+T4	Temporal 188 210	within the last 7 days
+T5	Observation 308 353	must meet the CDC criteria for close contacts
+R2	has_temporal Arg1:T3 Arg2:T4	
+R3	has_context Arg1:T3 Arg2:T5	
+T6	Measurement 356 404;422 436	Evidence of infection by nasopharyngeal swab PCR for SARS-CoV-2
+T7	Value 413 421	positive
+R4	has_value Arg1:T6 Arg2:T7	
+T8	Negation 440 442	No
+T9	Observation 443 451	symptoms
+T10	Negation 455 457	no
+T11	Temporal 458 474	more than 5 days
+T12	Observation 478 491	mild symptoms
+R5	has_negation Arg1:T9 Arg2:T8	
+*	OR T9 T12
+R6	has_negation Arg1:T12 Arg2:T10	
+R7	has_temporal Arg1:T12 Arg2:T11	
+T13	Qualifier 549 553	Mild
+T14	Condition 554 564	rhinorrhea
+T15	Qualifier 566 570	Mild
+T16	Condition 571 582	sore throat
+T17	Condition 586 603	throat irritation
+T18	Condition 610 629	nonproductive cough
+T19	Qualifier 605 609	Mild
+T20	Qualifier 631 635	Mild
+T21	Condition 636 643	fatigue
+T22	Observation 645 694	able to perform Activities of Daily Living (ADLs)
+R8	has_qualifier Arg1:T14 Arg2:T13	
+R9	has_qualifier Arg1:T16 Arg2:T15	
+R10	has_qualifier Arg1:T17 Arg2:T15	
+R11	has_qualifier Arg1:T18 Arg2:T19	
+R12	has_qualifier Arg1:T21 Arg2:T20	
+R13	has_context Arg1:T21 Arg2:T22	
+R14	subsumes Arg1:T12 Arg2:T14	
+*	OR T14 T16 T17 T18 T21
+R15	has_negation Arg1:T14 Arg2:T10	
+R16	has_negation Arg1:T16 Arg2:T10	
+R17	has_negation Arg1:T17 Arg2:T10	
+R18	has_negation Arg1:T18 Arg2:T10	
+R19	has_negation Arg1:T21 Arg2:T10	
+T23	Observation 703 732	High risk for severe COVID-19
+T24	Observation 733 795	based on a risk score of  2 Calculated Risk Score of  2 points
+R20	has_context Arg1:T23 Arg2:T24	
+T25	Person 887 890	Age
+T26	Value 891 896	65-74
+R21	has_value Arg1:T25 Arg2:T26	
+T27	Person 907 912	Age  
+T28	Value 912 914	75
+R22	has_value Arg1:T27 Arg2:T28	
+T29	Condition 932 954	cardiovascular disease
+T30	Condition 966 978	hypertension
+R23	subsumes Arg1:T29 Arg2:T30	
+T31	Condition 990 1007	Diabetes mellitus
+T32	Condition 1018 1035	Pulmonary disease
+T33	Condition 1037 1041	COPD
+T34	Qualifier 1043 1061	moderate to severe
+T35	Condition 1062 1068	asthma
+T36	Observation 1078 1085	smoking
+T37	Temporal 1070 1077	current
+T38	Condition 1106 1120	Morbid obesity
+R24	subsumes Arg1:T32 Arg2:T33	
+*	OR T33 T35 T36
+R25	has_qualifier Arg1:T35 Arg2:T34	
+R26	has_temporal Arg1:T36 Arg2:T37	
+R27	subsumes Arg1:T23 Arg2:T25	
+*	OR T25 T27 T29 T31 T32 T38 T39
+T39	Condition 1133 1156	Immunocompromised state
+T40	Procedure 1177 1188;1204 1214	bone marrow transplant
+T41	Procedure 1192 1214	solid organ transplant
+T42	Procedure 1237 1249	chemotherapy
+T43	Observation 1250 1266	for a malignancy
+T44	Temporal 1267 1291	within the past 6 months
+R28	has_context Arg1:T42 Arg2:T43	
+R29	has_temporal Arg1:T42 Arg2:T44	
+T45	Condition 1300 1308;1323 1339	acquired immunodeficiency
+T46	Condition 1312 1339	congenital immunodeficiency
+T47	Drug 1361 1378;1400 1411	immunosuppressive medications
+T48	Drug 1382 1411	immune modulating medications
+T49	Condition 1413 1416	HIV
+T50	Observation 1422 1447	non-suppressed viral load
+T51	Measurement 1455 1503	cluster of differentiation 4 (CD4+) T cell count
+T52	Value 1504 1517	<200 cells/mL
+R30	subsumes Arg1:T39 Arg2:T40	
+*	OR T40 T41 T42 T45 T46 T47 T48 T49 T51
+R31	AND Arg1:T49 Arg2:T50	
+R32	has_value Arg1:T51 Arg2:T52	
+T53	Non-query-able 1523 1618	Mild symptoms are rated by participant as mild and not interfering with normal daily activities
+T54	Drug 2875 2892	any blood product
+T55	Temporal 2893 2909	in past 120 days
+R33	has_temporal Arg1:T54 Arg2:T55	
+T56	Non-query-able 2912 3074	Psychiatric or cognitive illness or recreational drug/alcohol use that in the opinion of the principal investigator, would affect subject safety and/or compliance
+T57	Observation 3104 3121	presumed COVID-19
+T58	Temporal 3122 3188	at least one week before index case first became ill with COVID-19
+T59	Reference_point 3147 3188	index case first became ill with COVID-19
+R34	has_index Arg1:T58 Arg2:T59	
+R35	has_temporal Arg1:T57 Arg2:T58	
+T60	Observation 3191 3259	Symptoms consistent with COVID--19 infection that are more than mild
+T61	Temporal 3279 3299	at time of screening
+R36	has_temporal Arg1:T60 Arg2:T61	
+T62	Condition 3321 3326	fever
+T63	Measurement 3328 3332	Tmax
+T64	Value 3333 3342	> 100.4 F
+R37	subsumes Arg1:T60 Arg2:T62	
+R38	subsumes Arg1:T62 Arg2:T63	
+R39	has_value Arg1:T63 Arg2:T64	
+T65	Non-query-able 3378 3540	Symptoms that have worsened in the period between screening and enrollment such that the subject is deemed to be medical unstable on the day of planned enrollment
+T66	Condition 3554 3601	allergic reaction to transfusion blood products
+T67	Non-query-able 3603 3684	Inability to complete infusion of the product within 48 hours after randomization
+T68	Condition 3687 3696	Pregnancy
+T69	Observation 3749 3762	breastfeeding
+T70	Mood 3701 3713	planning for
+T71	Condition 3714 3723	pregnancy
+T72	Temporal 3724 3744	in next three months
+R40	has_mood Arg1:T71 Arg2:T70	
+R41	has_temporal Arg1:T71 Arg2:T72	
+*	OR T68 T71 T69
+T73	Visit 3765 3816	Resident of a long term or skilled nursing facility
+T74	Condition 3843 3876	immunoglobulin A (IgA) deficiency
+T75	Measurement 3878 3895	Oxygen saturation
+T76	Value 3904 3909	< 95%
+T77	Temporal 3910 3932	at the screening visit
+R42	has_value Arg1:T75 Arg2:T76	
+R43	has_temporal Arg1:T75 Arg2:T77	
+T78	Competing_trial 3934 4009	Participation in another clinical trial of anti-viral agent(s) for COVID-19

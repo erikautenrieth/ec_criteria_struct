@@ -1,0 +1,25 @@
+T2	Person 64 67	old
+T4	Condition 105 122	COVID19 infection
+R4	has_value Arg1:T8 Arg2:T7	
+T14	Qualifier 326 334	baseline
+T3	Visit 68 76	Admitted
+R5	has_qualifier Arg1:T10 Arg2:T9	
+T7	Value 201 206;218 230	under 18 years old
+T9	Qualifier 254 260	severe
+T5	Observation 82 104	suspected or confirmed
+T12	Condition 303 307	coma
+T11	Qualifier 294 302	baseline
+R3	has_context Arg1:T4 Arg2:T5	
+R2	AND Arg1:T3 Arg2:T4	
+R8	subsumes Arg1:T10 Arg2:T12	
+T10	Condition 261 283	neurologic dysfunction
+T15	Condition 335 348	quadriparesis
+R7	has_qualifier Arg1:T12 Arg2:T11	
+T17	Observation 350 449	baseline refractory seizure disorder with frequent breakthrough seizures despite anticonvulsant use
+*	OR T12 T13 T15 T17
+T13	Condition 308 324	vegetative state
+T8	Person 211 214	age
+T6	Observation 131 169	exhibiting acute neurological symptoms
+R6	has_qualifier Arg1:T15 Arg2:T14	
+T1	Value 30 63	greater than or equal to 18 years
+R1	has_value Arg1:T2 Arg2:T1	

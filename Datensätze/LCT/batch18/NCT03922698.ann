@@ -1,0 +1,91 @@
+E1	Condition:T1 Name:T2 Severity:T24 Numeric-Filter:E9
+E4	Condition:T4 Name:T5 Numeric-Filter:E8
+E5	Age:T12 Numeric-Filter:E6 Numeric-Filter:E7
+E6	Eq-Comparison:T18 Operator:T7 Value:T14
+E7	Eq-Comparison:T19 Operator:T8 Temporal-Unit:T11 Value:T15
+E8	Eq-Comparison:T20 Operator:T9 Value:T17 Unit:T33
+E9	Eq-Comparison:T21 Operator:T13 Value:T16 Unit:T23
+E3	Procedure:T25 Name:T26
+E10	Procedure:T3 Name:T27
+E11	Modifier:T28 Modifies:T27
+E12	Procedure:T29 Name:T30
+E15	Modifier:T34 Modifies:T5
+E16	Procedure:T35 Name:T36
+E17	Modifier:T6 Modifies:T38
+E18	Procedure:T37 Name:T38
+E19	Procedure:T39 Name:T40
+E23	Condition:T44 Name:T45 Severity:T46
+E24	Study:T47 Temporality:E28
+E25	Other:T48 Is-Other:E24
+E26	Study:T10 
+E27	Eq-Comparison:T49 Operator:T50 Temporal-Unit:T52 Value:T51
+E28	Eq-Comparison:T53 Temporal-Period:T54
+T1	Condition 85 101	carotid stenosis
+T2	Condition-Name 85 101	carotid stenosis
+T4	Condition 228 244	carotid stenosis
+T5	Condition-Name 228 244	carotid stenosis
+T7	Eq-Operator 29 30	≥
+T8	Eq-Operator 38 39	≤
+T9	Eq-Operator 245 246	<
+T11	Eq-Temporal-Unit 43 48	years
+T12	Age 25 28	age
+T13	Eq-Operator 79 80	-
+T14	Eq-Value 31 33	45
+T15	Eq-Value 40 42	90
+T16	Eq-Value 80 82	99
+T17	Eq-Value 246 248	70
+T18	Eq-Comparison 29 33	≥ 45
+T19	Eq-Comparison 38 48	≤ 90 years
+T20	Eq-Comparison 245 249	<70%
+T21	Eq-Comparison 77 83	70-99%
+T23	Eq-Unit 82 83	%
+T24	Severity 69 75	severe
+T25	Procedure 118 142	color doppler echography
+T26	Procedure-Name 118 142	color doppler echography
+T3	Procedure 152 155	MRI
+T27	Procedure-Name 152 155	MRI
+T28	Modifier 146 151	angio
+T29	Procedure 159 170	angiography
+T30	Procedure-Name 159 170	angiography
+T33	Eq-Unit 248 249	%
+T34	Modifier 253 272	carotid bifurcation
+T35	Procedure 291 315	color doppler echography
+T36	Procedure-Name 291 315	color doppler echography
+T6	Modifier 319 324	angio
+T37	Procedure 325 328	MRI
+T38	Procedure-Name 325 328	MRI
+T39	Procedure 332 343	angiography
+T40	Procedure-Name 332 343	angiography
+T44	Condition 357 366	neoplasia
+T45	Condition-Name 357 366	neoplasia
+T46	Severity 350 356	severe
+T47	Study 396 410	clinical trial
+T48	Other 390 395	other
+T10	Study 479 484	study
+T49	Eq-Comparison 434 453	less than one month
+T50	Eq-Operator 434 443	less than
+T51	Eq-Value 444 447	one
+T52	Eq-Temporal-Unit 448 453	month
+T53	Eq-Comparison 412 419	ongoing
+T54	Eq-Temporal-Period 412 419	ongoing
+A1	Eq-Operator-Value T7 GTEQ
+A2	Eq-Operator-Value T8 LTEQ
+A3	Eq-Operator-Value T9 LT
+A5	Eq-Temporal-Unit-Value T11 year
+A6	Eq-Operator-Value T13 BETWEEN
+A7	Severity-Value T24 severe
+A10	Severity-Value T46 severe
+A4	Eq-Operator-Value T50 LT
+A11	Eq-Temporal-Unit-Value T52 month
+A12	Eq-Temporal-Period-Value T54 present
+R1	Found-By Arg1:E1 Arg2:E3
+R2	Found-By Arg1:E1 Arg2:E10
+R3	Found-By Arg1:E1 Arg2:E12
+R4	And Arg1:E6 Arg2:E7
+R5	Or Arg1:E10 Arg2:E12
+R6	Or Arg1:E3 Arg2:E10
+R7	Or Arg1:E18 Arg2:E19
+R8	Or Arg1:E16 Arg2:E18
+R9	Or Arg1:E4 Arg2:E16
+R10	Or Arg1:E28 Arg2:E27
+R11	Before Arg1:E27 Arg2:E26

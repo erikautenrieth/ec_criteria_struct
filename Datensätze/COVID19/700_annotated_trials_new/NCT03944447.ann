@@ -1,0 +1,15 @@
+T3	Non-query-able 213 306	Must be willing to complete online surveys at baseline and the follow up points in this study
+T2	Informed_consent 114 212	unless they have consent from their parent or legal guardian as defined under state law parameters
+T5	Person 93 95	be
+T4	Observation 21 87	Clinical diagnosis of a Qualifying Condition for Medical Marijuana
+T1	Value 96 113	18 years or older
+R1	has_value Arg1:T5 Arg2:T1	
+T6	Informed_consent 353 390	Inability to provide informed consent
+T7	Condition 329 338	Pregnancy
+T8	Observation 339 352	Breastfeeding
+T9	Non-query-able 391 443	Inability to complete study visits or questionnaires
+T10	Condition 466 475	psychosis
+T11	Condition 451 462	suicidality
+*	OR T11 T10
+T12	Qualifier 491 536	exacerbated by the administration of cannabis
+R2	has_qualifier Arg1:T10 Arg2:T12	

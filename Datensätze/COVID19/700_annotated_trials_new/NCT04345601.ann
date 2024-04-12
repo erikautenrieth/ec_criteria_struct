@@ -1,0 +1,69 @@
+*	OR T31_DdMmlC2Q T43_DdMmlC2Q
+T24	Informed_consent 1329 1409	Inability to obtain informed consent (from patient or legally appropriate proxy)
+T52_DdMmlC2Q	Value 515 523	5 cm H2O
+R4	has_context Arg1:T5 Arg2:T7	
+R17	has_value Arg1:T13 Arg2:T52_DdMmlC2Q	
+R22	AND Arg1:T34_DdMmlC2Q Arg2:T29_DdMmlC2Q	
+*	OR T21 T44_DdMmlC2Q
+T8_DdMmlC2Q	Condition 778 797	Respiratory failure
+T20	Condition 1079 1100	Unstable hemodynamics
+R31	subsumes Arg1:T20 Arg2:T31_DdMmlC2Q	
+T0_DdMmlC2Q	Condition 1193 1216	end-stage organ disease
+R29	has_temporal Arg1:T3_DdMmlC2Q Arg2:T10_DdMmlC2Q	
+T56_DdMmlC2Q	Value 597 605	5 cm H2O
+T44_DdMmlC2Q	Condition 1169 1188	fungal co-infection
+R19	has_value Arg1:T34_DdMmlC2Q Arg2:T22_DdMmlC2Q	
+*	OR T0_DdMmlC2Q T23
+T7	Observation 213 355	based on the degree of impairment of oxygenation as defined by the ratio of arterial oxygen tension to fraction of inspired oxygen (PaO2/FiO2)
+T21	Condition 1156 1165;1176 1188	bacterial co-infection
+T11	Measurement 415 424	PaO2/FiO2
+T5	Condition 169 211	acute respiratory distress syndrome (ARDS)
+T1	Value 23 40	18 years or older
+T19	Mood 976 992	requiring use of
+*	OR T55_DdMmlC2Q T63_DdMmlC2Q
+T60_DdMmlC2Q	Value 425 437	100-200 mmHg
+T3	Condition 44 73	Confirmed SARS-CoV2 infection
+R24	has_context Arg1:T8_DdMmlC2Q Arg2:T15	
+T11_DdMmlC2Q	Condition 1033 1078	hypersensitivity to dimethyl sulfoxide (DMSO)
+*	OR T12 T28_DdMmlC2Q
+T37_DdMmlC2Q	Procedure 993 1004	home oxygen
+T12	Procedure 442 450;466 488	invasive mechanical ventilation
+R32	has_qualifier Arg1:T21 Arg2:T22	
+R23	has_context Arg1:T18_DdMmlC2Q Arg2:T14	
+R30	has_mood Arg1:T3_DdMmlC2Q Arg2:T16	
+T29_DdMmlC2Q	Measurement 592 596	PEEP
+T31_DdMmlC2Q	Condition 1102 1125	ventricular tachycardia
+T5_DdMmlC2Q	Condition 1426 1524	contraindication to receiving prophylactic low dose unfractionated or low molecular weight heparin
+R28	has_mood Arg1:T37_DdMmlC2Q Arg2:T19	
+R18	has_value Arg1:T29_DdMmlC2Q Arg2:T56_DdMmlC2Q	
+T13	Measurement 511 514	EEP
+T43_DdMmlC2Q	Condition 1102 1113;1129 1141	ventricular fibrillation
+T4	Observation 74 146	real-time reverse transcription polymerase chain reaction (RT-PCR) assay
+R14	has_value Arg1:T11 Arg2:T60_DdMmlC2Q	
+R25	has_qualifier Arg1:T41_DdMmlC2Q Arg2:T17	
+T22	Qualifier 1143 1155	Uncontrolled
+T23	Non-query-able 1220 1328	condition, which in the opinion of the Investigator, makes the patient an unsuitable candidate for treatment
+T16	Mood 888 897	receiving
+T3_DdMmlC2Q	Procedure 898 940	extracorporeal membrane oxygenation (ECMO)
+R2	has_context Arg1:T3 Arg2:T4	
+T18_DdMmlC2Q	Condition 612 693	Bilateral opacities present on chest radiograph or computed tomographic (CT) scan
+R16	AND Arg1:T12 Arg2:T13	
+T63_DdMmlC2Q	Observation 1017 1026	lactating
+T18	Qualifier 948 955	chronic
+R33	has_qualifier Arg1:T44_DdMmlC2Q Arg2:T22	
+R15	AND Arg1:T11 Arg2:T12	
+T22_DdMmlC2Q	Value 547 555	100 mmHg
+R3	has_qualifier Arg1:T5 Arg2:T6	
+T17	Qualifier 941 947	Severe
+R26	AND Arg1:T17 Arg2:T18	
+T34_DdMmlC2Q	Measurement 537 546	PaO2/FiO2
+T14	Observation 695 776	that are not fully explained by pleural effusions, lung collapse, or lung nodules
+T6	Qualifier 150 168	Moderate to severe
+T15	Observation 798 854	not fully explained by cardiac failure or fluid overload
+T10_DdMmlC2Q	Temporal 878 887	Currently
+T2	Person 20 22	1)
+T41_DdMmlC2Q	Condition 956 975	respiratory disease
+T55_DdMmlC2Q	Condition 1005 1013	Pregnant
+R27	AND Arg1:T41_DdMmlC2Q Arg2:T37_DdMmlC2Q	
+T28_DdMmlC2Q	Procedure 454 488	noninvasive mechanical ventilation
+R1	has_value Arg1:T2 Arg2:T1	

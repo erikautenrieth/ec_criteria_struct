@@ -1,0 +1,52 @@
+T19	Value 474 487	>/= 80 pcg/ml
+*	OR T25 T24
+*	OR T14 T17
+T13	Non-query-able 679 765	Patients will be allowed to receive concurrent or sequential treatment with remdesivir
+R6	has_context Arg1:T17 Arg2:T18	
+T24	Condition 819 827;839 859	systemic bacterial infections
+R5	has_value Arg1:T14 Arg2:T15	
+T26	Condition 875 894	latent tuberculosis
+R3	subsumes Arg1:T5 Arg2:T7	
+T30	Observation 985 1009	Concurrent initiation of
+T7	Measurement 285 301	respiratory rate
+R9	has_qualifier Arg1:T25 Arg2:T23	
+T1	Informed_consent 23 128	Patient or designated proxy willing and able to provide informed consent prior to enrollment in the study
+T4	Person 177 181	Aged
+T33	Negation 501 504	non
+R1	has_value Arg1:T4 Arg2:T3	
+T10	Value 370 375	< 93%
+*	OR T34 T35
+T2	Condition 131 139	COVID-19
+T9	Measurement 324 369	peripheral capillary oxygen saturation (SpO2)
+T12	Non-query-able 622 677	Patients receiving ongoing steroid therapy are eligible
+R8	has_qualifier Arg1:T31 Arg2:T22	
+T29	Procedure 1010 1025	steroid therapy
+T17	Condition 440 461	respiratory infection
+R12	has_value Arg1:T9 Arg2:T10	
+T11	Observation 376 407	on room air for nonintubated pt
+T3	Value 182 198	>/= 18 years old
+T35	Procedure 527 536	intubated
+T25	Condition 819 834;849 859	systemic fungal infections
+T22	Qualifier 1056 1068	uncrontroled
+R17	has_negation Arg1:T34 Arg2:T33	
+T5	Condition 232 278	diagnosed documented severe COVID-19 infection
+R7	has_value Arg1:T16 Arg2:T19	
+T23	Qualifier 806 818	uncontrolled
+R11	has_context Arg1:T29 Arg2:T30	
+T14	Condition 411 416	Fever
+T16	Measurement 463 473	IL-6 level
+T8	Value 302 320	>/= 30 breaths/min
+T18	Observation 430 439	suspected
+T27	Condition 916 947	hypersensitivity to tocilizumab
+R13	has_context Arg1:T9 Arg2:T11	
+T15	Value 420 426	38.5 C
+*	OR T7 T9
+T6	Visit 208 220	hospitalized
+R2	AND Arg1:T6 Arg2:T5	
+R10	has_qualifier Arg1:T24 Arg2:T23	
+T31	Condition 1069 1086	malignant disease
+R4	has_value Arg1:T7 Arg2:T8	
+T20	Pregnancy_considerations 538 620	Women of childbearing potential must have a negative serum or urine pregnancy test
+T32	Observation 140 175	PCR positive on nasopharyngeal swab
+R16	has_context Arg1:T2 Arg2:T32	
+T34	Procedure 505 514	intubated

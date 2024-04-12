@@ -1,0 +1,30 @@
+T1	Condition 57 65	COVID-19
+T3	Person 214 217	Age
+R2	has_value Arg1:T3 Arg2:T4	
+T13	Non-query-able 450 546	Ability to undergo blood draw for 4 tubes of blood containing approximately 7.5 mL of blood each
+R5	has_negation Arg1:T9 Arg2:T8	
+T5	Temporal 229 261	at time of diagnosis of COVID-19
+T10	Temporal 435 448	for =>17 days
+T9	Drug 418 430	anti-pyretic
+T20	Condition 945 959	blood disorder
+T21	Observation 960 1038	that would increase the risk of infection or bleeding from a simple phlebotomy
+T14	Non-query-able 548 599	Ability to travel to an assigned lab for blood draw
+T17	Condition 805 813	Dementia
+*	OR T17 T18
+T19	Non-query-able 841 937	any psychiatric condition that would prohibit the understanding or rendering of informed consent
+T6	Reference_point 240 261	diagnosis of COVID-19
+T18	Condition 815 836	altered mental status
+R8	has_context Arg1:T20 Arg2:T21	
+T16	Non-query-able 713 803	Any serious medical or psychiatric disorder that would interfere with the subject's safety
+T8	Negation 415 417	No
+R1	has_context Arg1:T1 Arg2:T2	
+T4	Value 218 228	=>18 years
+R6	has_temporal Arg1:T9 Arg2:T10	
+R3	has_index Arg1:T5 Arg2:T6	
+T2	Observation 23 53;66 212	Laboratory-confirmed diagnosis performed by The Centers for Disease Control and Prevention (CDC) at a hospital using an FDA Emergency Use Authorized molecular assay for COVID-19
+T15	Non-query-able 601 686	Ability to waive any claim to blood samples or data obtained for this study's purpose
+R7	has_temporal Arg1:T11 Arg2:T12	
+T12	Temporal 306 314	=>14 day
+T11	Observation 263 302	Time since discontinuation of isolation
+T7	Informed_consent 339 413	Ability to understand and willingness to sign an informed consent document
+R4	has_temporal Arg1:T3 Arg2:T5	

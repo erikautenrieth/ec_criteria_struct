@@ -1,0 +1,9 @@
+T2	Negation 163 166	Non
+T1	Observation 38 91	fellow physicians at Banner University Medical Center
+T3	Observation 180 233	fellow physicians at Banner University Medical Center
+R1	has_negation Arg1:T3 Arg2:T2	
+T4	Observation 25 33;56 91	resident at Banner University Medical Center
+*	OR T4 T1
+T5	Observation 167 175;198 233	resident at Banner University Medical Center
+*	OR T3 T5
+R2	has_negation Arg1:T5 Arg2:T2	

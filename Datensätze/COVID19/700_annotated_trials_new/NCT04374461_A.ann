@@ -1,0 +1,17 @@
+T5_DdMmlC2Q	Condition 32 50	COVID-19 infection
+T6_DdMmlC2Q	Procedure 200 222	mechanical ventilation
+T12_DdMmlC2Q	Measurement 223 248	Absolute lymphocyte count
+T13_DdMmlC2Q	Observation 169 181	M-11 or M-18
+T1	Qualifier 21 31	Documented
+R1	has_qualifier Arg1:T5_DdMmlC2Q Arg2:T1	
+T2	Person 108 113	Age  
+T3	Value 113 115	18
+R2	has_value Arg1:T2 Arg2:T3	
+T4	Visit 125 167	Admission to an intensive care unit at MSK
+T5	Mood 190 199	receiving
+R3	has_context Arg1:T4 Arg2:T13_DdMmlC2Q	
+*	OR T4 T6_DdMmlC2Q
+R4	has_mood Arg1:T6_DdMmlC2Q Arg2:T5	
+T6	Value 250 257	1.0/mm3
+R5	has_value Arg1:T12_DdMmlC2Q Arg2:T6	
+T7	Non-query-able 258 420	As the ALC of patients with lymphoid malignancies is unreliable, they may be enrolled at the discretion of the treating physician after review of their blood work

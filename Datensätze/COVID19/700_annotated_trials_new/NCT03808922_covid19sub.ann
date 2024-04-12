@@ -1,0 +1,203 @@
+T63_mml	Person 1826 1829	age
+T199_mml	Drug 4295 4306	interleukin
+T194_mml	Condition 4144 4156	HIV-positive
+T188_mml	Measurement 2598 2628	Alanine Aminotransferase (ALT)
+T82_mml	Condition 2991 3000	infection
+T86_mml	Device 310 316	Bi-PAP
+T88_mml	Condition 2275 2285	SARS CoV 2
+T5_mml	Condition 4325 4338	severe sepsis
+T94_mml	Pregnancy_considerations 1334 1366	Not be of childbearing potential
+T99_mml	Device 3851 3857;3866 3877	Bi-PAP ventilation
+T207_mml	Condition 3967 3977	SARS-2-CoV
+T204_mml	Observation 2018 2087	ability to carry out self-care activities of daily living (basic ADL)
+T212_mml	Condition 228 247	Respiratory failure
+T200_mml	Person 3023 3029	Female
+T112_mml	Condition 3410 3465	hypersensitivity to DAS181 and/or any of its components
+T111_mml	Observation 4553 4558	liver
+T216_mml	Drug 4282 4293	interferons
+T247_mml	Device 302 306	CPAP
+T254_mml	Procedure 2963 2978	transplantation
+T252_mml	Condition 2094 2134	lower respiratory tract infection (LRTI)
+T119_mml	Pregnancy_considerations 1377 1507	childbearing potential and have a negative urine/serum pregnancy test and agrees to practice an acceptable method of contraception
+T114_mml	Value 1814 1822	18 years
+T13_mml	Procedure 64 83	supplemental oxygen
+T16_mml	Qualifier 2942 2949	chronic
+T123_mml	Observation 3279 3290	alcohol use
+T17_mml	Measurement 4194 4212	HIV RNA assessment
+T243_mml	Procedure 276 300	non-invasive ventilation
+T240_mml	Observation 1979 2008	Prior to SARS CoV 2 infection
+T23_mml	Observation 3261 3278;3287 3290	recreational drug use
+T25_mml	Person 1272 1278	female
+T157_mml	Measurement 2667 2693	Alkaline Phosphatase (ALP)
+T138_mml	Condition 2906 2916;2918 2925	malignancy primary
+T139_mml	Observation 2817 2823	stable
+T33_mml	Condition 4359 4379	SARS-CoV-2 infection
+T267_mml	Condition 3240 3257	cognitive illness
+T264_mml	Condition 108 117	Hypoxemia
+T265_mml	Observation 2286 2310	in the respiratory tract
+T141_mml	Condition 4506 4525	vital organ failure
+T262_mml	Measurement 2705 2728	Total Bilirubin (TBILI)
+T171_mml	Device 3861 3877	CPAP ventilation
+T44_mml	Measurement 2630 2662	Aspartate Aminotransferase (AST)
+T48_mml	Drug 2950 2961	medications
+T177_mml	Observation 4560 4566	kidney
+T174_mml	Drug 3945 3962	empiric treatment
+T54_mml	Condition 4417 4433	fungal infection
+T57_mml	Drug 4249 4275	immunomodulating biologics
+T1	Temporal 25 53	At the time of randomization
+T2	Mood 55 63	requires
+T3	Value 84 89	2 LPM
+T4	Observation 90 106	due to hypoxemia
+R1	has_temporal Arg1:T13_mml Arg2:T1	
+R2	has_mood Arg1:T13_mml Arg2:T2	
+R3	has_value Arg1:T13_mml Arg2:T3	
+R4	has_context Arg1:T13_mml Arg2:T4	
+T5	Measurement 187 191	SpO2
+T6	Value 192 196	<92%
+T7	Observation 197 226	on or off supplemental oxygen
+R5	has_value Arg1:T5 Arg2:T6	
+R6	has_context Arg1:T5 Arg2:T7	
+R7	subsumes Arg1:T264_mml Arg2:T5	
+T8	Mood 248 261	necessitating
+T9	Procedure 262 272;289 300	mechanical ventilation
+R8	subsumes Arg1:T243_mml Arg2:T247_mml	
+*	OR T247_mml T86_mml
+R9	AND Arg1:T212_mml Arg2:T9	
+R10	has_mood Arg1:T9 Arg2:T8	
+*	OR T9 T243_mml
+T10	Non-query-able 319 530	Written declaration from Investigator that subject is clinically hypoxemic and removal of oxygen supplementation would not be considered clinically appropriate for the purpose of measuring SpO2 while on room air
+*	OR T5 T212_mml
+R28	AND Arg1:T25_mml Arg2:T94_mml	
+*	OR T94_mml T119_mml T11
+T25	Non-query-able 1594 1676	Capable of understanding and complying with procedures as outlined in the protocol
+T26	Informed_consent 1678 1780	Provides signed informed consent prior to the initiation of any screening or study-specific procedures
+R37	has_value Arg1:T63_mml Arg2:T114_mml	
+T27	Non-query-able 1831 1977	Provide adequate medical history to permit accurate stratification (but health status may be healthy, high-risk conditions, or immunocompromised).
+R38	has_context Arg1:T204_mml Arg2:T240_mml	
+T28	Procedure 2148 2184	CT imaging, with or without contrast
+T29	Observation 2208 2225	lobes of the lung
+T30	Value 2197 2207	at least 2
+R39	AND Arg1:T252_mml Arg2:T28	
+R40	AND Arg1:T28 Arg2:T29	
+R41	has_value Arg1:T29 Arg2:T30	
+T31	Observation 2232 2271	laboratory-confirmation of the presence
+R42	has_context Arg1:T88_mml Arg2:T31	
+R43	AND Arg1:T31 Arg2:T265_mml	
+T32	Non-query-able 2353 2412	Satisfy inclusion criteria #1, 4, 5, 6, 7 of the main study
+T35	Value 2694 2700	3x ULN
+T36	Value 2729 2735	2x ULN
+R46	has_value Arg1:T157_mml Arg2:T35	
+R47	has_value Arg1:T44_mml Arg2:T35	
+R48	has_value Arg1:T188_mml Arg2:T35	
+*	OR T188_mml T44_mml T157_mml T262_mml
+T37	Measurement 2756 2759	ALT
+T38	Measurement 2760 2763	AST
+T39	Measurement 2764 2769	ALP  
+T40	Value 2769 2775	3x ULN
+T41	Measurement 2780 2782	TB
+T42	Value 2783 2789	2x ULN
+T43	Qualifier 2805 2816	chronically
+T44	Temporal 2825 2836	for >1 year
+T45	Observation 2837 2865	on more than one assessments
+T46	Observation 2867 2895	due to known liver pathology
+T47	Condition 2906 2916;2929 2939	malignancy metastasis
+T48	Qualifier 2983 2990	chronic
+T49	Negation 3006 3021	not be excluded
+R49	has_qualifier Arg1:T82_mml Arg2:T48	
+R50	has_negation Arg1:T82_mml Arg2:T49	
+R51	has_qualifier Arg1:T48_mml Arg2:T16_mml	
+*	OR T47 T254_mml T82_mml T48_mml T138_mml
+R52	has_value Arg1:T262_mml Arg2:T36	
+R53	has_value Arg1:T37 Arg2:T40	
+R54	has_value Arg1:T38 Arg2:T40	
+R55	has_value Arg1:T39 Arg2:T40	
+*	OR T37 T38 T39 T41
+R56	has_value Arg1:T41 Arg2:T42	
+R57	AND Arg1:T41 Arg2:T139_mml	
+R58	has_qualifier Arg1:T139_mml Arg2:T43	
+R59	has_temporal Arg1:T139_mml Arg2:T44	
+R60	AND Arg1:T44 Arg2:T45	
+R61	has_context Arg1:T139_mml Arg2:T46	
+R62	AND Arg1:T139_mml Arg2:T138_mml	
+T50	Observation 3039 3052	breastfeeding
+T51	Observation 3068 3078	breastfeed
+T52	Mood 3056 3067	planning to
+T53	Temporal 3079 3140	at any time through 30 days after the last dose of study drug
+R63	AND Arg1:T200_mml Arg2:T50	
+*	OR T50 T51
+R64	has_mood Arg1:T51 Arg2:T52	
+R65	has_temporal Arg1:T51 Arg2:T53	
+T54	Reference_point 3117 3140	last dose of study drug
+R66	has_index Arg1:T53 Arg2:T54	
+T56	Condition 3225 3236;3250 3257	Psychiatric illness
+*	OR T56 T267_mml T23_mml T123_mml
+T57	Observation 3297 3388	in the opinion of the principal investigator, would affect subject safety and/or compliance
+R69	has_context Arg1:T123_mml Arg2:T57	
+R70	has_context Arg1:T23_mml Arg2:T57	
+T67	Temporal 3878 3894	at randomization
+T68	Procedure 3830 3849;3866 3877	invasive mechanical ventilation
+*	OR T68 T99_mml T171_mml
+R82	has_temporal Arg1:T171_mml Arg2:T67	
+T69	Qualifier 3920 3925	other
+T70	Drug 3926 3941;3953 3962	investigational treatment
+T71	Observation 3979 4117	either as part of a clinical trial or under emergency approval (approved agents for the management of symptoms, e.g., fever, are permitted
+R83	has_qualifier Arg1:T70 Arg2:T69	
+R84	has_qualifier Arg1:T174_mml Arg2:T69	
+*	OR T70 T174_mml
+R85	AND Arg1:T70 Arg2:T207_mml	
+R86	has_context Arg1:T207_mml Arg2:T71	
+T72	Negation 4162 4165	not
+T73	Value 4166 4178	undetectable
+T74	Temporal 4182 4193	most recent
+R87	AND Arg1:T194_mml Arg2:T17_mml	
+R88	has_negation Arg1:T73 Arg2:T72	
+R89	has_value Arg1:T17_mml Arg2:T73	
+R90	has_temporal Arg1:T17_mml Arg2:T74	
+T75	Temporal 4232 4241	currently
+R91	has_temporal Arg1:T57_mml Arg2:T75	
+R92	subsumes Arg1:T57_mml Arg2:T216_mml	
+*	OR T216_mml T199_mml
+T77	Temporal 4385 4395	concurrent
+T78	Condition 4396 4401;4424 4433	viral infection
+T79	Condition 4403 4412;4424 4433	bacterial infection
+R94	AND Arg1:T5_mml Arg2:T33_mml	
+T80	Observation 4438 4484	meeting at least one of the following criteria
+R95	has_temporal Arg1:T78 Arg2:T77	
+R96	has_temporal Arg1:T79 Arg2:T77	
+R97	has_temporal Arg1:T54_mml Arg2:T77	
+*	OR T33_mml T78 T79 T54_mml
+R98	AND Arg1:T33_mml Arg2:T80	
+T81	Observation 4526 4545	outside of the lung
+R99	has_context Arg1:T141_mml Arg2:T81	
+R100	subsumes Arg1:T81 Arg2:T111_mml	
+*	OR T111_mml T177_mml
+R101	subsumes Arg1:T80 Arg2:T141_mml	
+T82	Observation 4569 4616	Require vasopressors to maintain blood pressure
+*	OR T141_mml T82
+T83	Non-query-able 4622 4690	Subjects meeting exclusion criteria #2, 3, 5 and 6 of the main study
+T84	Mood 3820 3829	requiring
+R103	has_mood Arg1:T68 Arg2:T84	
+R104	has_mood Arg1:T99_mml Arg2:T84	
+R105	has_mood Arg1:T171_mml Arg2:T84	
+T11	Pregnancy_considerations 1513 1592	Non-vasectomized males are required to practice effective birth control methods
+T12	Qualifier 3483 3489	severe
+T13	Condition 3490 3496	sepsis
+T14	Observation 3497 3542	due to either their baseline SAD-RV infection
+T15	Qualifier 3548 3558	concurrent
+T16	Condition 3559 3564;3587 3596	viral infection
+T17	Condition 3566 3575;3587 3596	bacterial infection
+T18	Condition 3580 3596	fungal infection
+R11	has_qualifier Arg1:T13 Arg2:T12	
+R12	has_context Arg1:T13 Arg2:T14	
+*	OR T13 T16 T17 T18
+R13	has_qualifier Arg1:T16 Arg2:T15	
+R14	has_qualifier Arg1:T17 Arg2:T15	
+R15	has_qualifier Arg1:T18 Arg2:T15	
+T19	Observation 3665 3704	vital organ failure outside of the lung
+T20	Mood 3728 3736	Requires
+T21	Drug 3737 3749	vasopressors
+T22	Observation 3750 3776	to maintain blood pressure
+R16	subsumes Arg1:T18 Arg2:T19	
+R17	has_mood Arg1:T21 Arg2:T20	
+R18	has_context Arg1:T21 Arg2:T22	
+*	OR T19 T21

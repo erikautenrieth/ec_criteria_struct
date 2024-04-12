@@ -1,0 +1,14 @@
+T6	Condition 91 99	COVID-19
+T4	Person 63 66	age
+R1	AND Arg1:T2 Arg2:T4	
+T5	Observation 68 90	Confirmed positive for
+T8	Visit 176 191	admitted to ICU
+T9	Observation 192 235	for diagnosis that is not COVID-19 positive
+R2	has_value Arg1:T4 Arg2:T3	
+T3	Value 38 59	greater than 18 years
+T7	Visit 109 140	admitted to Intensive Care Unit
+T2	Person 31 37	female
+R4	has_context Arg1:T8 Arg2:T9	
+T1	Person 23 27	Male
+R3	has_context Arg1:T6 Arg2:T5	
+*	OR T1 T2

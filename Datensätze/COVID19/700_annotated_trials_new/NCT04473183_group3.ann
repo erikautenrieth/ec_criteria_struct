@@ -1,0 +1,11 @@
+T1	Non-query-able 381 661	Presence of a condition or abnormality that in the opinion of the Investigator would compromise the safety of the participant or the quality of the data (e.g., someone not able to answer the questionnaire because of a psychological condition or an anxiety disorder that is severe)
+T3	Condition 345 358	HIV infection
+T4	Value 332 340	positive
+R1	has_value Arg1:T3 Arg2:T4	
+T2	Observation 663 703	Contraindication for routine blood draws
+T5	Qualifier 711 717	severe
+T6	Condition 718 724	anemia
+R2	has_qualifier Arg1:T6 Arg2:T5	
+T7	Condition 726 736	hemophilia
+*	OR T6 T7
+R3	subsumes Arg1:T2 Arg2:T6	

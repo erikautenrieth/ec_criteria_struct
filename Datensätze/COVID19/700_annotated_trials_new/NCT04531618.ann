@@ -1,0 +1,29 @@
+T1	Informed_consent 23 114	Mother agrees to participate in a linked study involving additional surveys and assessments
+T2	Observation 187 209	Newborn is a singleton
+T3	Person 116 123	Newborn
+T4	Value 129 185	between 37 weeks and 40 weeks and 6 days gestational age
+R1	has_value Arg1:T3 Arg2:T4	
+T5	Non-query-able 211 246	Mother can speak English or Spanish
+T6	Person 273 280	Newborn
+T7	Value 289 334	less than 37 weeks and 0 days gestational age
+T8	Value 352 397	more than 40 weeks and 6 days gestational age
+T9	Person 336 343	Newborn
+R2	has_value Arg1:T6 Arg2:T7	
+R3	has_value Arg1:T9 Arg2:T8	
+T10	Condition 568 592	maternal substance abuse
+T11	Condition 601 620	psychiatric illness
+T12	Condition 624 633	psychosis
+T13	Qualifier 594 600	severe
+R4	has_qualifier Arg1:T11 Arg2:T13	
+T14	Observation 1003 1047	Newborn is a twin or other multiple at birth
+T15	Post-eligibility 1049 1151	Mother is unwilling to place wearable electrophysiological recording devices on herself or her newborn
+T16	Post-eligibility 1153 1373	Mother is unwilling to be video recorded or to give consent for videos/photographs (video stills)/audio (from the videos) to be used in educational materials, scientific publications or professional meeting presentations
+T17	Non-query-able 918 1001	Mother and/or infant has a medical condition that precludes intervention components
+T18	Condition 659 680	chromosomal anomalies
+T19	Condition 647 654;671 680	cardiac anomalies
+T20	Condition 635 645;671 680	Congenital anomalies
+*	OR T20 T19 T18
+T21	Observation 691 733	special infant care beyond routine testing
+T22	Mood 681 690	requiring
+R5	has_mood Arg1:T21 Arg2:T22	
+R6	has_context Arg1:T19 Arg2:T21	

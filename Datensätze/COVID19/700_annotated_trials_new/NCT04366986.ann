@@ -1,0 +1,20 @@
+R3	has_temporal Arg1:T4 Arg2:T5	
+T12	Observation 190 210;225 254	clinically diagnosed by a health care professional
+R4	has_value Arg1:T8 Arg2:T7	
+T1	Condition 23 31	Pregnant
+T8	Person 294 297	age
+R6	has_context Arg1:T11 Arg2:T12	
+T2	Person 32 37	women
+T7	Value 281 290	<18 years
+*	OR T9 T11
+T3	Person 41 46	women
+*	OR T2 T3
+R2	AND Arg1:T3 Arg2:T4	
+T11	Condition 216 224	COVID-19
+R1	AND Arg1:T2 Arg2:T1	
+T5	Temporal 70 94	within the last 6 months
+R5	has_context Arg1:T9 Arg2:T10	
+T10	Observation 161 185	regardless of the result
+T4	Condition 61 69	pregnant
+T6	Informed_consent 96 136	Able to give electronic informed consent
+T9	Measurement 138 159	Tested for SARS-CoV-2

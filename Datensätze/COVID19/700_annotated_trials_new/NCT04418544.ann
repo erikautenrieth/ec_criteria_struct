@@ -1,0 +1,39 @@
+R9	has_context Arg1:T23 Arg2:T24	
+T4	Value 44 54	> 18 years
+T15	Procedure 551 560;585 592	laryngeal surgery
+R2	has_value Arg1:T3 Arg2:T4	
+T1	Person 23 27	Male
+T9	Procedure 375 387	tracheostomy
+*	OR T1 T2
+R5	has_temporal Arg1:T13 Arg2:T14	
+*	OR T15 T16 T17
+T23	Procedure 672 689	radiation therapy
+T10	Temporal 391 395	past
+*	OR T19 T20 T21
+T20	Condition 606 610;621 627	neck cancer
+R7	has_temporal Arg1:T19 Arg2:T18	
+T12	Observation 414 491	permanent change to the voice due complications that involved the vocal cords
+T5	Informed_consent 56 104	Provide a valid electronic informed consent form
+T25	Competing_trial 726 824	Treatment with another investigational drug or device within 30 days prior to signing Consent Form
+R3	has_temporal Arg1:T11 Arg2:T10	
+T3	Person 39 43	aged
+T13	Observation 500 543	surgery which may influence the vocal cords
+*	OR T9 T11
+T6	Non-query-able 106 224	Eligible patients are those meeting SOC guidelines for swab tests for COVID-19 and those providing an evaluable sample
+T17	Procedure 574 592	esophageal surgery
+T22	Procedure 641 664	radical neck dissection
+T2	Person 31 37	female
+T21	Condition 614 627	throat cancer
+R8	AND Arg1:T21 Arg2:T22	
+T8	Non-query-able 293 336	Pregnant or lactating women may participate
+T14	Temporal 494 499	Prior
+T16	Procedure 562 570;585 592	tracheal surgery
+T19	Condition 600 604;621 627	head cancer
+R4	AND Arg1:T11 Arg2:T12	
+T18	Temporal 594 599	Prior
+T11	Procedure 396 408	tracheostomy
+T7	Non-query-able 227 291	Stated willingness to provide evidence of their lab test results
+*	OR T22 T23
+R6	subsumes Arg1:T13 Arg2:T15	
+R1	AND Arg1:T2 Arg2:T3	
+T24	Observation 690 724	that may influence the vocal cords

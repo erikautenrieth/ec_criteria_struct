@@ -1,0 +1,127 @@
+T3_DdMmlC2Q	Measurement 458 481	Systolic blood pressure
+T5_DdMmlC2Q	Procedure 2855 2869	Blood donation
+T6_DdMmlC2Q	Measurement 3460 3486	Total plasma protein level
+T7_DdMmlC2Q	Drug 2099 2118	parenteral steroids
+T9_DdMmlC2Q	Drug 2222 2239;2253 2258	immunosuppressive drugs
+T15_DdMmlC2Q	Condition 2485 2491	cancer
+T18_DdMmlC2Q	Value 1941 1958	>37.5 (Infinite)C
+T20_DdMmlC2Q	Value 140 150	>=18 years
+T23_DdMmlC2Q	Measurement 290 296	Weight
+T32_DdMmlC2Q	Measurement 544 554	Heart rate
+T33_DdMmlC2Q	Observation 2474 2484	History of
+T35_DdMmlC2Q	Condition 2416 2420;2430 2437	lung disease
+T39_DdMmlC2Q	Value 297 309	>=110 pounds
+T43_DdMmlC2Q	Measurement 501 525	Diastolic blood pressure
+T45_DdMmlC2Q	Drug 1997 2008	Antibiotics
+T46_DdMmlC2Q	Condition 2786 2815	Intravenous drug abuse (IVDA)
+T47_DdMmlC2Q	Procedure 2995 3012	blood transfusion
+T54_DdMmlC2Q	Procedure 3016 3031	transplantation
+T55_DdMmlC2Q	Measurement 3498 3535	Insufficient anti-SARS-CoV-2 antibody
+T56_DdMmlC2Q	Drug 2129 2145	inhaled steroids
+T60_DdMmlC2Q	Value 3536 3540	< 64
+T61_DdMmlC2Q	Value 482 500	>100 and <180 mmHg
+T73_DdMmlC2Q	Temporal 2009 2034	within the prior 48 hours
+T76_DdMmlC2Q	Value 3487 3497	< 6.0 g/dL
+T77_DdMmlC2Q	Condition 2748 2780	Creutzfeldt-Jakob disease (vCJD)
+T78_DdMmlC2Q	Condition 1867 1876	infection
+T80_DdMmlC2Q	Condition 2670 2713	Transfusion Transmissible Infections (rTTI)
+T81_DdMmlC2Q	Temporal 2910 2917	8 weeks
+T82_DdMmlC2Q	Observation 401 412	Vital signs
+T84_DdMmlC2Q	Value 555 582	between 50-100 beats/minute
+T85_DdMmlC2Q	Condition 1934 1939	fever
+T86_DdMmlC2Q	Value 526 543	>50 and <100 mmHg
+T87_DdMmlC2Q	Value 1832 1846	under 18 years
+T89_DdMmlC2Q	Condition 1960 1965	Cough
+T90_DdMmlC2Q	Condition 2424 2437	blood disease
+T92_DdMmlC2Q	Measurement 583 613	Anti-SARS-CoV-2 antibody titer
+T94_DdMmlC2Q	Drug 2091 2095;2110 2118	oral steroids
+T1	Informed_consent 21 135	Ability of subject to understand, ask questions, and the willingness to sign the written informed consent document
+T2	Person 136 139	Age
+R1	has_value Arg1:T2 Arg2:T20_DdMmlC2Q	
+T3	Observation 152 276	Ability to meet blood donor eligibility criteria as defined in the Code of Federal Regulations 21 CFR 630 and AABB Standards
+R2	has_value Arg1:T23_DdMmlC2Q Arg2:T39_DdMmlC2Q	
+T4	Non-query-able 318 399	Adequate peripheral venous access for plasma donation (as judged by the examiner)
+T5	Value 311 316	50 kg
+*	OR T39_DdMmlC2Q T5
+R3	subsumes Arg1:T3 Arg2:T23_DdMmlC2Q	
+*	OR T23_DdMmlC2Q T4
+R4	has_value Arg1:T3_DdMmlC2Q Arg2:T61_DdMmlC2Q	
+R5	has_value Arg1:T43_DdMmlC2Q Arg2:T86_DdMmlC2Q	
+R6	has_value Arg1:T32_DdMmlC2Q Arg2:T84_DdMmlC2Q	
+T6	Value 614 619	>= 64
+R7	has_value Arg1:T92_DdMmlC2Q Arg2:T6	
+T13	Informed_consent 1694 1827	Patients who cannot give proper informed consent due to inability to understand the nature of the proposed therapy and attendant risk
+T14	Person 1828 1831	Age
+R13	has_value Arg1:T14 Arg2:T87_DdMmlC2Q	
+T15	Qualifier 1860 1866	active
+R14	has_qualifier Arg1:T78_DdMmlC2Q Arg2:T15	
+T16	Observation 1852 1859	sign of
+R15	has_context Arg1:T78_DdMmlC2Q Arg2:T16	
+R16	has_value Arg1:T85_DdMmlC2Q Arg2:T18_DdMmlC2Q	
+T17	Qualifier 1909 1919	Subjective
+T18	Qualifier 1923 1933	documented
+R17	has_qualifier Arg1:T85_DdMmlC2Q Arg2:T17	
+R18	AND Arg1:T17 Arg2:T18	
+T19	Condition 1966 1985	Shortness of breath
+T20	Condition 1986 1994	Diarrhea
+R19	subsumes Arg1:T78_DdMmlC2Q Arg2:T85_DdMmlC2Q	
+*	OR T85_DdMmlC2Q T89_DdMmlC2Q T19 T20
+R20	has_temporal Arg1:T45_DdMmlC2Q Arg2:T73_DdMmlC2Q	
+T21	Observation 2035 2063	Considered immune suppressed
+T22	Qualifier 2120 2128	highdose
+T23	Observation 2147 2211	>800 micrograms/day of beclomethasone dipropionate or equivalent
+T24	Qualifier 2216 2221	other
+T25	Procedure 2243 2258	cytotoxic drugs
+R21	subsumes Arg1:T21 Arg2:T94_DdMmlC2Q	
+*	OR T94_DdMmlC2Q T7_DdMmlC2Q T56_DdMmlC2Q T9_DdMmlC2Q T25
+R22	has_qualifier Arg1:T56_DdMmlC2Q Arg2:T22	
+R23	has_context Arg1:T56_DdMmlC2Q Arg2:T23	
+R24	has_qualifier Arg1:T9_DdMmlC2Q Arg2:T24	
+T26	Observation 2260 2354;2356 2385	Failure to meet blood donor eligibility criteria as defined in the Code of Federal Regulations 21 CFR 630 and AABB Standards
+T27	Condition 2409 2414;2430 2437	heart disease
+T28	Observation 2438 2473	that compromises blood donor safety
+R25	has_context Arg1:T90_DdMmlC2Q Arg2:T28	
+R26	has_context Arg1:T35_DdMmlC2Q Arg2:T28	
+R27	has_context Arg1:T27 Arg2:T28	
+T29	Observation 2398 2408	History of
+R28	has_temporal Arg1:T27 Arg2:T29	
+R29	has_temporal Arg1:T35_DdMmlC2Q Arg2:T29	
+R30	has_temporal Arg1:T90_DdMmlC2Q Arg2:T29	
+*	OR T27 T35_DdMmlC2Q T90_DdMmlC2Q
+T30	Observation 2492 2528	that meets DTM criteria for deferral
+R31	has_temporal Arg1:T15_DdMmlC2Q Arg2:T33_DdMmlC2Q	
+R32	has_context Arg1:T15_DdMmlC2Q Arg2:T30	
+T31	Non-query-able 2529 2584	Medication deferrals per AABB donor education materials
+T32	Non-query-able 2585 2639	Vaccinations as per FDA regulations and AABB standards
+T33	Observation 2715 2739	High-risk sexual history
+T34	Observation 2740 2747;2781 2785	Variant risk
+R33	has_context Arg1:T77_DdMmlC2Q Arg2:T34	
+T35	Qualifier 2661 2669	Relevant
+R34	has_qualifier Arg1:T80_DdMmlC2Q Arg2:T35	
+T36	Observation 2816 2823	Tattoos
+T37	Observation 2825 2851	from unlicensed facilities
+R35	has_context Arg1:T36 Arg2:T37	
+T38	Temporal 2945 2953	16 weeks
+T39	Observation 2954 2984	post-double red cell apheresis
+T40	Observation 2918 2943	post-whole blood donation
+R36	has_temporal Arg1:T5_DdMmlC2Q Arg2:T81_DdMmlC2Q	
+R37	has_context Arg1:T81_DdMmlC2Q Arg2:T40	
+*	OR T81_DdMmlC2Q T38
+R38	has_context Arg1:T38 Arg2:T39	
+*	OR T47_DdMmlC2Q T54_DdMmlC2Q
+R39	has_temporal Arg1:T47_DdMmlC2Q Arg2:T81_DdMmlC2Q	
+R40	has_temporal Arg1:T54_DdMmlC2Q Arg2:T81_DdMmlC2Q	
+T41	Observation 3095 3154	Participation in medical research outside DTM that includes
+T42	Competing_trial 3158 3322	Protocols that are currently ongoing or will start during the duration of this study that require more than 500 mL of blood to be given in any 8-week period of time
+T43	Competing_trial 3324 3459	Receipt of any investigational (not FDA-approved) vaccine for SARS-CoV-2 within the last 12 months or during the duration of this study
+R41	has_value Arg1:T6_DdMmlC2Q Arg2:T76_DdMmlC2Q	
+R42	has_value Arg1:T55_DdMmlC2Q Arg2:T60_DdMmlC2Q	
+T44	Non-query-able 3541 3714	Unwillingness to engage in repeat plasma collections for a 120-day period with possible extension to 240 days, provided neutralizing antibody titers remain sufficiently high
+T45	Non-query-able 3715 3800	Unwillingness to have samples stored for clinical and/or non-genetic research testing
+T7	Procedure 1374 1385	vaccination
+T8	Temporal 1352 1373	at least 14 days post
+R8	has_temporal Arg1:T7 Arg2:T8	
+T9	Observation 1386 1414	with an FDA-approved vaccine
+R9	has_context Arg1:T7 Arg2:T9	
+T10	Non-query-able 1588 1671	Willingness to have samples stored for clinical and/or non-genetic research testing
+T11	Non-query-able 1416 1587	Willingness to engage in repeat plasma collections for a 120-day period with possible extension to 240 days, provided neutralizing antibody titers remain sufficiently high

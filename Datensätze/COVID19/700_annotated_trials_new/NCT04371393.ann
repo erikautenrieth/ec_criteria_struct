@@ -1,0 +1,108 @@
+T11_DdMmlC2Q	Condition 50 78	coronavirus disease COVID-19
+R3	AND Arg1:T3 Arg2:T17_DdMmlC2Q	
+T8	Qualifier 956 962	Severe
+T45_DdMmlC2Q	Measurement 1725 1729	AST)
+*	OR T48_DdMmlC2Q T45_DdMmlC2Q
+R18	has_value Arg1:T65_DdMmlC2Q Arg2:T29_DdMmlC2Q	
+T4	Qualifier 245 263	moderate to severe
+T44_DdMmlC2Q	Condition 1598 1611	HIV infection
+T71_DdMmlC2Q	Measurement 969 978	PaO2/FiO2
+T29_DdMmlC2Q	Value 1029 1037	5 cm H2O
+T63_DdMmlC2Q	Measurement 869 878	PaO2/FiO2
+T6	Observation 573 629	not fully explained by cardiac failure or fluid overload
+R12	AND Arg1:T63_DdMmlC2Q Arg2:T30_DdMmlC2Q	
+T17_DdMmlC2Q	Condition 264 268	ARDS
+T31_DdMmlC2Q	Value 979 987	100 mmHg
+R4	has_qualifier Arg1:T17_DdMmlC2Q Arg2:T4	
+T15_DdMmlC2Q	Observation 650 786	impairment of oxygenation must be present, as defined by the ratio of arterial oxygen tension to fraction of inspired oxygen (PaO2/FiO2)
+T30_DdMmlC2Q	Measurement 939 943	PEEP
+R17	AND Arg1:T71_DdMmlC2Q Arg2:T65_DdMmlC2Q	
+R1	has_context Arg1:T11_DdMmlC2Q Arg2:T1	
+T40_DdMmlC2Q	Procedure 1315 1357	extracorporeal membrane oxygenation (ECMO)
+T50_DdMmlC2Q	Procedure 1361 1406	high frequency oscillatory ventilation (HFOV)
+T16_DdMmlC2Q	Value 944 952	5 cm H2O
+R16	has_value Arg1:T71_DdMmlC2Q Arg2:T31_DdMmlC2Q	
+T74_DdMmlC2Q	Temporal 1645 1667	for more than 72 hours
+R13	has_value Arg1:T30_DdMmlC2Q Arg2:T16_DdMmlC2Q	
+R22	has_temporal Arg1:T40_DdMmlC2Q Arg2:T10	
+T23_DdMmlC2Q	Value 1172 1174	>5
+T48_DdMmlC2Q	Measurement 1718 1721	ALT
+T77_DdMmlC2Q	Procedure 1864 1883	supplemental oxygen
+R15	subsumes Arg1:T61_DdMmlC2Q Arg2:T71_DdMmlC2Q	
+T10	Temporal 1295 1304	Currently
+T61_DdMmlC2Q	Condition 963 967	ARDS
+T13	Measurement 1668 1688	Creatinine clearance
+T65_DdMmlC2Q	Measurement 1024 1028	PEEP
+R31	has_mood Arg1:T77_DdMmlC2Q Arg2:T18	
+T9_DdMmlC2Q	Value 1095 1105	>4.0 mg/dL
+T2	Mood 199 208	requiring
+R14	has_qualifier Arg1:T61_DdMmlC2Q Arg2:T8	
+T1	Observation 80 189	onfirmed by real-time reverse transcription polymerase chain reaction (RT-PCR) assay or other diagnostic test
+T62_DdMmlC2Q	Observation 1435 1444	lactating
+T18	Mood 1848 1863	requirement for
+T17	Temporal 1817 1822	prior
+R2	has_mood Arg1:T3 Arg2:T2	
+T56_DdMmlC2Q	Value 879 901	>100 mmHg and 200 mmHg
+*	OR T40_DdMmlC2Q T50_DdMmlC2Q
+R11	has_value Arg1:T63_DdMmlC2Q Arg2:T56_DdMmlC2Q	
+T3	Procedure 209 239	mechanical ventilatory support
+T9	Value 20 37	18 years or older
+T7	Person 29 31	or
+R5	has_value Arg1:T7 Arg2:T9	
+T11	Condition 345 364	Bilateral opacities
+T5	Observation 373 436	present on a chest radiograph or computed tomographic (CT) scan
+R6	has_context Arg1:T11 Arg2:T5	
+T12	Condition 481 498	pleural effusions
+T14	Condition 500 514	lobar collapse
+T19	Condition 516 529	lung collapse
+T20	Condition 534 551	pulmonary nodules
+T21	Negation 458 480	not fully explained by
+*	OR T12 T14 T19 T20
+R7	has_negation Arg1:T12 Arg2:T21	
+R9	has_negation Arg1:T14 Arg2:T21	
+R10	has_negation Arg1:T19 Arg2:T21	
+R19	has_negation Arg1:T20 Arg2:T21	
+R20	AND Arg1:T11 Arg2:T12	
+T22	Condition 553 572	Respiratory failure
+R21	has_context Arg1:T22 Arg2:T6	
+T23	Qualifier 631 649	Moderate to severe
+R23	has_qualifier Arg1:T15_DdMmlC2Q Arg2:T23	
+T24	Condition 863 867	ARDS
+T25	Qualifier 854 862	Moderate
+R8	has_qualifier Arg1:T24 Arg2:T25	
+R24	subsumes Arg1:T24 Arg2:T63_DdMmlC2Q	
+T26	Measurement 1038 1094	High sensitivity C-Reactive Protein (hs-CRP) serum level
+R25	has_value Arg1:T26 Arg2:T9_DdMmlC2Q	
+T27	Measurement 1106 1171	Acute Physiologic and Chronic Health Evaluation (APACHE IV) score
+R26	has_value Arg1:T27 Arg2:T23_DdMmlC2Q	
+T28	Informed_consent 1175 1273	The patient or his/her legally authorized representative (LAR) is able to provide informed consent
+T29	Condition 1423 1431	pregnant
+*	OR T29 T62_DdMmlC2Q
+T30	Qualifier 1588 1597	untreated
+R27	has_qualifier Arg1:T44_DdMmlC2Q Arg2:T30	
+T31	Procedure 1635 1644	intubated
+R28	has_temporal Arg1:T31 Arg2:T74_DdMmlC2Q	
+T32	Value 1689 1711	less than 30 mL/minute
+R29	has_value Arg1:T13 Arg2:T32	
+T33	Value 1730 1741	> 5x normal
+R30	has_value Arg1:T45_DdMmlC2Q Arg2:T33	
+R32	has_value Arg1:T48_DdMmlC2Q Arg2:T33	
+T15	Condition 1748 1772	hypersensitivity to DMSO
+T16	Condition 1748 1764;1776 1805	hypersensitivity to porcine or bovine proteins
+*	OR T15 T16
+T34	Condition 1823 1842	respiratory disease
+T35	Observation 1806 1816	History of
+R33	has_temporal Arg1:T34 Arg2:T35	
+R34	has_temporal Arg1:T34 Arg2:T17	
+R35	AND Arg1:T34 Arg2:T77_DdMmlC2Q	
+T36	Competing_trial 2011 2062	Receiving an investigational cellular therapy agent
+T38	Non-query-able 1884 2010	Any end-stage organ disease which in the opinion of the investigator may possibly affect the safety of remestemcel-L treatment
+T37	Value 1471 1479	positive
+T39	Measurement 1480 1504	bacterial blood cultures
+R36	has_value Arg1:T39 Arg2:T37	
+T40	Temporal 1505 1524	prior to enrollment
+R37	has_temporal Arg1:T39 Arg2:T40	
+T41	Observation 1528 1553	suspicion of superimposed
+T42	Condition 1554 1573	bacterial pneumonia
+R38	has_context Arg1:T42 Arg2:T41	
+*	OR T39 T42

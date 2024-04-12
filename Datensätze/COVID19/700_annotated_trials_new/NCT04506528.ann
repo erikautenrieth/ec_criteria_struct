@@ -1,0 +1,9 @@
+T3	Observation 50 83	COVID-19 ICD-10-CM diagnosis code
+*	OR T3 T5
+T5	Measurement 116 124;134 147	COVID-19 antibody test
+T1	Value 30 38	positive
+T4	Value 125 133	positive
+T2	Measurement 21 29;39 47	COVID-19 PCR test
+R2	has_value Arg1:T5 Arg2:T4	
+R1	has_value Arg1:T2 Arg2:T1	
+T6	Observation 148 215	Must be a patient in one of the 21 participating healthcare systems

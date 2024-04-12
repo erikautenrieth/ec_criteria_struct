@@ -1,0 +1,25 @@
+T9	Negation 285 288	not
+R2	has_context Arg1:T2 Arg2:T3	
+T2	Person 52 55	age
+R5	has_qualifier Arg1:T8 Arg2:T6	
+R8	has_temporal Arg1:T10 Arg2:T11	
+T11	Temporal 300 324	prior to hospitalization
+T15	Reference_point 309 324	hospitalization
+*	OR T8 T7
+T1	Value 39 48	>18 years
+T4	Observation 89 109	laboratory confirmed
+R6	has_qualifier Arg1:T7 Arg2:T6	
+R7	has_negation Arg1:T10 Arg2:T9	
+T13	Observation 400 408	prisoner
+T10	Observation 289 299	ambulatory
+T3	Observation 57 83	surviving an ICU admission
+R3	AND Arg1:T2 Arg2:T5	
+T6	Qualifier 146 158	pre-existing
+R9	has_index Arg1:T11 Arg2:T15	
+T8	Condition 159 171;186 192	neurological injury
+T14	Condition 390 398	pregnant
+T12	Non-query-able 326 388	patient not expected to survivor 90 days after hospitalization
+T7	Condition 175 192	orthopedic injury
+R1	has_value Arg1:T2 Arg2:T1	
+R4	has_context Arg1:T5 Arg2:T4	
+T5	Condition 110 118	Covid-19

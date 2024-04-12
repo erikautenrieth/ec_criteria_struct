@@ -1,0 +1,25 @@
+T1	Person 36 39	age
+T2	Value 24 32	18 years
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Condition 58 66	COVID-19
+T4	Visit 41 53	Hospitalized
+R2	AND Arg1:T3 Arg2:T4	
+T5	Temporal 77 92	within 72 hours
+T6	Visit 96 115	hospital admittance
+R3	has_temporal Arg1:T6 Arg2:T5	
+T7	Measurement 140 150	COVID test
+T8	Value 131 139	positive
+R4	has_value Arg1:T7 Arg2:T8	
+R5	has_temporal Arg1:T7 Arg2:T5	
+T9	Non-query-able 152 202	Expected to require hospitalization for > 72 hours
+T10	Non-query-able 229 243	Imminent death
+T11	Condition 335 344	Pregnancy
+T12	Procedure 269 291	mechanical ventilation
+T13	Procedure 296 308	tracheostomy
+R6	AND Arg1:T12 Arg2:T13	
+T14	Temporal 309 333	prior to hospitalization
+R7	has_temporal Arg1:T12 Arg2:T14	
+T15	Qualifier 261 268	chronic
+T16	Mood 245 256	Requirement
+R8	has_mood Arg1:T12 Arg2:T16	
+R9	has_qualifier Arg1:T12 Arg2:T15	

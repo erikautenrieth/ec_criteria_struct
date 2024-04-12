@@ -1,0 +1,102 @@
+T1	Person 69 75	Adults
+T2	Value 81 98	30 years or older
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Competing_trial 1582 1620	Participation in other COVID-19 trials
+T4	Condition 897 906	pregnancy
+T5	Temporal 889 896	current
+R2	has_temporal Arg1:T4 Arg2:T5	
+T6	Condition 1277 1290	hypercalcemia
+T7	Condition 1322 1348	vitamin D hypersensitivity
+*	OR T6 T7
+T8	Qualifier 1258 1263	Known
+R3	has_qualifier Arg1:T6 Arg2:T8	
+T9	Condition 1370 1376	cancer
+T10	Procedure 1404 1413	radiation
+T11	Procedure 1415 1427	chemotherapy
+T12	Procedure 1432 1445	immunotherapy
+*	OR T10 T11 T12
+T13	Temporal 1383 1392	currently
+R4	has_temporal Arg1:T10 Arg2:T13	
+R5	AND Arg1:T9 Arg2:T10	
+T14	Condition 1448 1462	Kidney failure
+T15	Procedure 1466 1474	dialysis
+*	OR T14 T15 T16 T17
+T16	Condition 1483 1496	liver disease
+T17	Condition 1500 1509	cirrhosis
+T18	Qualifier 1476 1482	severe
+R6	has_qualifier Arg1:T16 Arg2:T18	
+T19	Non-query-able 1512 1579	Unstable, transient, or group (6 or more adults) living arrangement
+T20	Visit 917 932	hospitalization
+T21	Temporal 909 916	Current
+R7	has_temporal Arg1:T20 Arg2:T21	
+T22	Post-eligibility 935 1007	Unable to complete online questionnaires or adhere to study requirements
+T23	Drug 1046 1055	vitamin D
+T24	Value 1028 1042	400 IU per day
+T25	Drug 1096 1128	individual vitamin D supplements
+T26	Drug 1130 1164	calcium plus vitamin D supplements
+T27	Drug 1200 1214	Fosamax Plus D
+T28	Drug 1221 1234	multivitamins
+T29	Temporal 1236 1255	in the past 4 weeks
+R8	has_value Arg1:T23 Arg2:T24	
+R9	subsumes Arg1:T23 Arg2:T25	
+*	OR T25 T26 T30 T28
+T30	Drug 1166 1192	medications with vitamin D
+R10	subsumes Arg1:T30 Arg2:T27	
+T31	Temporal 147 173	within 72 hours of testing
+T32	Reference_point 166 173	testing
+R12	has_index Arg1:T31 Arg2:T32	
+T33	Condition 128 146	COVID-19 infection
+T34	Qualifier 107 122	newly diagnosed
+R13	has_qualifier Arg1:T33 Arg2:T34	
+R14	has_temporal Arg1:T33 Arg2:T31	
+T35	Condition 218 243	COVID-19-related symptoms
+T36	Temporal 180 214	no more than 5 days from the onset
+T37	Reference_point 205 214	the onset
+R15	has_index Arg1:T36 Arg2:T37	
+R16	has_temporal Arg1:T35 Arg2:T36	
+R17	AND Arg1:T33 Arg2:T35	
+R18	AND Arg1:T33 Arg2:T1	
+T38	Informed_consent 790 856	Ability and willingness to understand and provide informed consent
+T39	Person 269 272	Age
+T40	Value 273 287	30 to 49 years
+T41	Person 655 658	Age
+T42	Person 724 727	Age
+T43	Value 728 739	60 or older
+T44	Value 659 673	50 to 59 years
+R19	has_value Arg1:T39 Arg2:T40	
+R20	has_value Arg1:T41 Arg2:T44	
+R21	has_value Arg1:T42 Arg2:T43	
+*	OR T39 T41 T42
+T45	Condition 303 316	comorbidities
+T46	Multiplier 293 302	2 or more
+R22	has_multiplier Arg1:T45 Arg2:T46	
+T47	Condition 318 326	diabetes
+T48	Condition 328 340	hypertension
+T49	Measurement 342 357	body mass index
+T50	Value 361 374	30 or greater
+T51	Condition 376 413	chronic obstructive pulmonary disease
+T52	Condition 417 426	emphysema
+T53	Condition 439 451	heart attack
+T54	Condition 453 459	stroke
+T55	Procedure 461 484	coronary bypass surgery
+T56	Procedure 486 515	coronary angioplasty or stent
+T57	Condition 537 550	heart failure
+T58	Condition 562 573	sleep apnea
+T59	Observation 596 603	smoking
+T60	Person 605 621	African American
+T61	Person 623 631	Hispanic
+T62	Person 633 648	Native American
+*	OR T47 T48 T49 T51 T52 T53 T54 T55 T56 T57 T58 T59 T60 T61 T62
+R23	has_value Arg1:T49 Arg2:T50	
+T63	Observation 428 438	history of
+R24	has_temporal Arg1:T53 Arg2:T63	
+T64	Visit 517 532	hospitalization
+R25	AND Arg1:T57 Arg2:T64	
+R26	subsumes Arg1:T45 Arg2:T47	
+T65	Condition 689 702	comorbidities
+T66	Multiplier 679 688	1 or more
+R27	has_multiplier Arg1:T65 Arg2:T66	
+R28	AND Arg1:T39 Arg2:T45	
+R29	AND Arg1:T41 Arg2:T65	
+R30	subsumes Arg1:T65 Arg2:T47	
+R11	has_temporal Arg1:T23 Arg2:T29	

@@ -1,0 +1,10 @@
+'INC'
+
+'-  Greater than or equal to 65 years of age'
+
+'-  eq(op(GTEQ), val("65"), temporal_unit(YEAR)) of age()'
+
+age()
+    .num_filter(
+        eq(op(GTEQ), val("65"), temporal_unit(YEAR))
+    )

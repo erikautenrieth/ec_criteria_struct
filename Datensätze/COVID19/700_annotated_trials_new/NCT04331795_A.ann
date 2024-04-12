@@ -1,0 +1,224 @@
+T1	Person 23 31	Adults  
+T2	Person 43 46	age
+T3	Value 31 39	18 years
+R1	subsumes Arg1:T1 Arg2:T2	
+R2	has_value Arg1:T2 Arg2:T3	
+T4	Non-query-able 48 91	Approval from the patient's primary service
+T5	Visit 93 117	Admitted as an inpatient
+T6	Observation 121 151	University of Chicago Medicine
+R3	has_context Arg1:T5 Arg2:T6	
+T7	Condition 153 158	Fever
+T8	Measurement 216 219	T  
+T9	Value 219 223	38*C
+T10	Observation 261 269	forehead
+T11	Observation 271 279	tympanic
+T12	Observation 281 285	oral
+T13	Observation 287 295	axillary
+T14	Observation 297 303	rectal
+R4	subsumes Arg1:T7 Arg2:T8	
+R5	has_value Arg1:T8 Arg2:T9	
+*	OR T10 T11 T12 T13 T14
+T15	Value 306 314	Positive
+T16	Measurement 315 351	test for active SARS-CoV-2 infection
+R7	has_value Arg1:T16 Arg2:T15	
+T17	Observation 1400 1410	Concurrent
+T18	Observation 1542 1552	Concurrent
+T19	Procedure 1418 1449	invasive mechanical ventilation
+T20	Observation 353 377	Radiographic evidence of
+T21	Condition 378 389	infiltrates
+R8	has_context Arg1:T21 Arg2:T20	
+T22	Measurement 490 514	C-reactive protein (CRP)
+T23	Value 516 524	75 ug/mL
+T24	Observation 535 564	one of the following criteria
+R9	has_value Arg1:T22 Arg2:T23	
+R10	AND Arg1:T22 Arg2:T24	
+T25	Temporal 577 585	Previous
+T26	Visit 586 599	ICU admission
+T27	Temporal 601 609	Previous
+T28	Qualifier 610 622	non-elective
+R11	has_temporal Arg1:T26 Arg2:T25	
+T29	Procedure 623 633	intubation
+R12	has_qualifier Arg1:T29 Arg2:T28	
+R13	has_temporal Arg1:T29 Arg2:T27	
+T30	Visit 635 644	Admission
+T31	Condition 649 675	heart failure exacerbation
+T32	Temporal 676 701	within the past 12 months
+R14	AND Arg1:T30 Arg2:T31	
+R15	has_temporal Arg1:T31 Arg2:T32	
+T33	Observation 703 713	History of
+T34	Procedure 714 754	percutaneous coronary intervention (PCI)
+T35	Observation 756 766	History of
+T36	Procedure 767 810	coronary artery bypass graft (CABG) surgery
+T37	Condition 825 847	pulmonary hypertension
+T38	Mood 849 873	Baseline requirement for
+T39	Procedure 874 889	supplemental O2
+T40	Condition 904 935	interstitial lung disease (ILD)
+T41	Condition 951 1008	chronic obstructive pulmonary disease (COPD) exacerbation
+T42	Temporal 1009 1034	within the past 12 months
+T43	Visit 937 946	Admission
+R16	AND Arg1:T43 Arg2:T41	
+R17	has_temporal Arg1:T41 Arg2:T42	
+T44	Condition 1036 1042	Asthma
+T45	Qualifier 1055 1060	daily
+T46	Drug 1061 1083	inhaled corticosteroid
+R18	AND Arg1:T44 Arg2:T46	
+R19	has_qualifier Arg1:T46 Arg2:T45	
+T47	Procedure 1096 1109	pneumonectomy
+T48	Procedure 1113 1122	lobectomy
+T49	Procedure 1135 1164	radiation therapy to the lung
+T50	Observation 1085 1095	History of
+T51	Observation 1124 1134	History of
+R20	has_temporal Arg1:T47 Arg2:T50	
+R21	has_temporal Arg1:T49 Arg2:T51	
+T52	Condition 1177 1180	HIV
+T53	Observation 1166 1176	History of
+R22	has_temporal Arg1:T52 Arg2:T53	
+R23	has_mood Arg1:T39 Arg2:T38	
+R24	has_temporal Arg1:T36 Arg2:T35	
+R25	has_temporal Arg1:T34 Arg2:T33	
+T54	Condition 1182 1188	Cancer
+T55	Qualifier 1192 1201	any stage
+T56	Observation 1206 1261	receiving active treatment (excluding hormonal therapy)
+R26	has_qualifier Arg1:T54 Arg2:T55	
+R27	has_context Arg1:T54 Arg2:T56	
+T57	Observation 1267 1277	history of
+T58	Qualifier 1278 1287	diagnosed
+T59	Condition 1288 1304	immunodeficiency
+R28	has_temporal Arg1:T59 Arg2:T57	
+R29	has_qualifier Arg1:T59 Arg2:T58	
+T60	Condition 1306 1336	End-stage renal disease (ESRD)
+T61	Procedure 1347 1357;1365 1373	peritoneal dialysis
+T62	Mood 1337 1346	requiring
+T63	Procedure 1361 1373	hemodialysis
+R30	has_mood Arg1:T61 Arg2:T62	
+R31	has_mood Arg1:T63 Arg2:T62	
+*	OR T61 T63
+R32	AND Arg1:T60 Arg2:T61	
+R33	subsumes Arg1:T24 Arg2:T26	
+*	OR T26 T29 T30 T34 T36 T37 T39 T40 T41 T44 T47 T48 T49 T52 T54 T59 T60
+T64	Drug 1560 1571;1585 1596	vasopressor medications
+T65	Drug 1575 1596	inotropic medications
+T66	Procedure 1470 1505	non-invasive mechanical ventilation
+T67	Device 1507 1511	CPAP
+T68	Device 1513 1518	BiPap
+T69	Device 1520 1525	HHFNC
+T70	Negation 1531 1539	eligible
+R34	has_negation Arg1:T69 Arg2:T70	
+R35	has_negation Arg1:T68 Arg2:T70	
+R36	has_negation Arg1:T67 Arg2:T70	
+R37	subsumes Arg1:T66 Arg2:T67	
+R38	has_negation Arg1:T66 Arg2:T70	
+R39	has_temporal Arg1:T19 Arg2:T17	
+R40	AND Arg1:T19 Arg2:T66	
+R41	has_temporal Arg1:T64 Arg2:T18	
+R42	has_temporal Arg1:T65 Arg2:T18	
+*	OR T64 T65
+T71	Temporal 1598 1606	Previous
+T72	Drug 1618 1629	tocilizumab
+T73	Qualifier 1633 1640	another
+T74	Drug 1641 1650	anti-IL6R
+T75	Drug 1654 1668	IL-6 inhibitor
+R43	has_qualifier Arg1:T74 Arg2:T73	
+R44	has_qualifier Arg1:T75 Arg2:T73	
+*	OR T72 T74 T75
+R45	has_temporal Arg1:T72 Arg2:T71	
+T76	Observation 1677 1687	history of
+T77	Condition 1688 1719	hypersensitivity to tocilizumab
+R46	has_temporal Arg1:T77 Arg2:T76	
+T78	Qualifier 1671 1676	Known
+R47	has_qualifier Arg1:T77 Arg2:T78	
+T79	Competing_trial 1722 1865	Patients who are actively being considered for a study of an antiviral agent that would potentially exclude concurrent enrollment on this study
+T80	Competing_trial 1868 1974	Patients actively receiving an investigational antiviral agent in the context of a clinical research study
+T81	Condition 1990 2013	end-stage liver disease
+T82	Mood 2017 2027	listed for
+T83	Procedure 2028 2044	liver transplant
+R48	has_mood Arg1:T83 Arg2:T82	
+*	OR T81 T83
+T84	Measurement 2060 2063	AST
+T85	Measurement 2067 2070	ALT
+T86	Value 2071 2117	in excess of 5 times the upper limit of normal
+*	OR T84 T85
+R49	has_value Arg1:T85 Arg2:T86	
+R50	has_value Arg1:T84 Arg2:T86	
+T87	Condition 2120 2131	Neutropenia
+T88	Measurement 2133 2158	Absolute neutrophil count
+T89	Value 2159 2167	< 500/uL
+R51	subsumes Arg1:T87 Arg2:T88	
+R52	has_value Arg1:T88 Arg2:T89	
+T90	Condition 2171 2187	Thrombocytopenia
+T91	Measurement 2189 2198	Platelets
+T92	Value 2199 2210	< 50,000/uL
+R53	has_value Arg1:T91 Arg2:T92	
+R54	subsumes Arg1:T90 Arg2:T91	
+T93	Drug 2239 2271	biologic immunosuppressive agent
+T94	Observation 2274 2284	History of
+T95	Procedure 2285 2312	bone marrow transplantation
+T96	Procedure 2316 2338	solid organ transplant
+R55	has_temporal Arg1:T95 Arg2:T94	
+*	OR T95 T96
+R56	has_temporal Arg1:T96 Arg2:T94	
+T97	Observation 2347 2357	history of
+T98	Condition 2358 2369	Hepatitis B
+T99	Condition 2373 2384	Hepatitis C
+R57	has_temporal Arg1:T98 Arg2:T97	
+R58	has_temporal Arg1:T99 Arg2:T97	
+*	OR T98 T99
+T100	Condition 2404 2440	mycobacterium tuberculosis infection
+T101	Observation 2393 2403	history of
+R59	has_temporal Arg1:T100 Arg2:T101	
+T102	Observation 2441 2465	at risk for reactivation
+R60	has_context Arg1:T100 Arg2:T102	
+T103	Condition 2485 2513	gastrointestinal perforation
+T104	Qualifier 2517 2523	active
+T105	Condition 2524 2538	diverticulitis
+T106	Observation 2474 2484	history of
+R61	has_temporal Arg1:T103 Arg2:T106	
+R62	has_qualifier Arg1:T105 Arg2:T104	
+*	OR T103 T105
+R63	has_temporal Arg1:T105 Arg2:T106	
+T107	Measurement 2953 2956	CRP
+T108	Value 2957 2977	< 40 mg/L (or ug/mL)
+R64	has_value Arg1:T107 Arg2:T108	
+T109	Condition 2541 2560	Multi-organ failure
+T110	Observation 2564 2599	determined by primary treating team
+R65	has_context Arg1:T109 Arg2:T110	
+T111	Qualifier 2622 2629	serious
+T112	Qualifier 2605 2610	other
+T113	Qualifier 2631 2637	active
+T114	Condition 2638 2647	infection
+T115	Condition 2656 2664	COVID-19
+T116	Negation 2648 2655	besides
+R66	has_qualifier Arg1:T114 Arg2:T112	
+R67	AND Arg1:T112 Arg2:T111	
+R68	AND Arg1:T111 Arg2:T113	
+R69	AND Arg1:T114 Arg2:T115	
+R70	has_negation Arg1:T115 Arg2:T116	
+T117	Condition 2667 2675	Pregnant
+T118	Drug 2735 2758	antipyretic medications
+T119	Observation 2703 2724	unable to discontinue
+R71	has_context Arg1:T118 Arg2:T119	
+T120	Drug 2789 2802	acetaminophen
+T121	Drug 2806 2815	ibuprofen
+T122	Drug 2817 2824	aspirin
+T123	Negation 2828 2838	acceptable
+T124	Observation 2770 2781	monotherapy
+T125	Observation 2855 2874	combination therapy
+T126	Drug 2882 2907	hydrocodone/acetaminophen
+T127	Drug 2909 2950	aspirin/acetaminophen/caffeine [Excedrin]
+R72	subsumes Arg1:T118 Arg2:T124	
+R73	subsumes Arg1:T124 Arg2:T120	
+*	OR T120 T121
+R74	AND Arg1:T121 Arg2:T122	
+R75	has_negation Arg1:T122 Arg2:T123	
+*	OR T124 T125
+R76	subsumes Arg1:T125 Arg2:T126	
+*	OR T126 T127
+T128	Observation 227 259	any conventional clinical method
+R6	has_context Arg1:T8 Arg2:T128	
+R77	subsumes Arg1:T128 Arg2:T10	
+T129	Observation 160 199	documented in electronic medical record
+R78	has_context Arg1:T7 Arg2:T129	
+T130	Procedure 393 415	chest radiograph (CXR)
+T131	Procedure 419 443	computed tomography (CT)
+R79	AND Arg1:T21 Arg2:T130	
+*	OR T130 T131

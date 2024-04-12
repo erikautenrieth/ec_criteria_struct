@@ -1,0 +1,116 @@
+T1	Visit 22 34	Hospitalized
+T2	Condition 71 91	SARS-CoV-2 infection
+T3	Observation 44 67	Laboratory confirmation
+T4	Temporal 92 124	</= 72 hr prior to randomization
+T5	Reference_point 111 124	randomization
+R1	has_context Arg1:T2 Arg2:T3	
+R2	has_temporal Arg1:T2 Arg2:T4	
+R3	has_index Arg1:T4 Arg2:T5	
+T6	Post-eligibility 126 174	Randomization within 72 hr of hospital admission
+T7	Value 176 184	Negative
+T8	Measurement 185 199	pregnancy test
+T9	Observation 204 220	reproductive age
+T10	Person 221 226	women
+R4	has_value Arg1:T8 Arg2:T7	
+R5	AND Arg1:T8 Arg2:T10	
+R6	has_context Arg1:T10 Arg2:T9	
+T11	Informed_consent 228 275	Patient or LAR able to provide informed consent
+T12	Condition 323 353	End stage renal disease (ESRD)
+T13	Negation 354 357	NOT
+T14	Mood 358 368	undergoing
+T15	Procedure 369 394	renal replacement therapy
+R7	AND Arg1:T12 Arg2:T15	
+R8	has_mood Arg1:T15 Arg2:T14	
+R9	has_negation Arg1:T15 Arg2:T13	
+T16	Qualifier 396 402	Severe
+T17	Condition 403 424	hepatic insufficiency
+T18	Measurement 426 430	LFTs
+T19	Value 431 466	> 5 times the upper limit of normal
+T20	Condition 476 480	ESLD
+T21	Condition 484 493	cirrhosis
+R10	has_qualifier Arg1:T17 Arg2:T16	
+R11	subsumes Arg1:T17 Arg2:T18	
+R12	has_value Arg1:T18 Arg2:T19	
+*	OR T18 T20 T21
+T22	Condition 496 502	Nausea
+T23	Condition 503 511	vomiting
+T24	Condition 515 530	aspiration risk
+T25	Observation 531 594	precluding oral medications unless can be given by gastric tube
+*	OR T22 T23 T24
+R13	has_context Arg1:T24 Arg2:T25	
+T26	Competing_trial 596 686	Use of another SARS-CoV-2 directed medication empirically or within another clinical trial
+T27	Temporal 687 708	within the prior week
+R14	has_temporal Arg1:T26 Arg2:T27	
+T28	Condition 710 719	Pregnancy
+T29	Observation 723 737	breast feeding
+*	OR T28 T29
+T30	Negation 739 746	Absence
+T31	Drug 750 774	dependable contraception
+R15	has_negation Arg1:T31 Arg2:T30	
+T32	Informed_consent 802 850	Inability to obtain or declined informed consent
+T33	Observation 778 794	reproductive age
+T34	Person 795 800	women
+R16	AND Arg1:T31 Arg2:T34	
+R17	has_context Arg1:T34 Arg2:T33	
+T35	Condition 1221 1265	Allergy or intolerance to hydroxychloroquine
+T36	Condition 1221 1246;1270 1281	Allergy or intolerance to chloroquine
+*	OR T35 T36
+T37	Observation 1284 1298	Already taking
+T38	Drug 1299 1317	hydroxychloroquine
+T39	Drug 1321 1332	chloroquine
+T40	Temporal 1334 1348	within 1 month
+R18	has_context Arg1:T38 Arg2:T37	
+R19	has_context Arg1:T39 Arg2:T37	
+R20	has_temporal Arg1:T39 Arg2:T40	
+R21	has_temporal Arg1:T38 Arg2:T40	
+*	OR T38 T39
+T41	Qualifier 1351 1357	Recent
+T42	Condition 1358 1374	malaria exposure
+T43	Temporal 1376 1390	within 1 month
+R22	has_qualifier Arg1:T42 Arg2:T41	
+R23	has_temporal Arg1:T42 Arg2:T43	
+T44	Observation 1393 1403	History or
+T45	Qualifier 1404 1411	current
+T46	Condition 1412 1428	cardiac diseases
+T47	Condition 1430 1443	heart failure
+T48	Condition 1445 1468	ventricular arrhythmias
+T49	Condition 1470 1474	LBBB
+T50	Condition 1478 1482	RBBB
+T51	Condition 1484 1500	QTc prolongation
+R24	has_temporal Arg1:T46 Arg2:T44	
+R25	has_qualifier Arg1:T46 Arg2:T45	
+R26	subsumes Arg1:T46 Arg2:T47	
+*	OR T47 T48 T49 T50 T51
+T52	Observation 1503 1513	History of
+T53	Condition 1514 1525	retinopathy
+R27	has_temporal Arg1:T53 Arg2:T52	
+T54	Qualifier 1527 1533	Severe
+T55	Condition 1534 1546	hypoglycemia
+R28	has_qualifier Arg1:T55 Arg2:T54	
+T56	Condition 1548 1566	Auditory disorders
+T57	Qualifier 1568 1573	Known
+T58	Condition 1574 1589	G6PD deficiency
+R29	has_qualifier Arg1:T58 Arg2:T57	
+T59	Condition 1591 1600	Porphyria
+T60	Condition 1604 1613	psoriasis
+*	OR T59 T60
+T61	Qualifier 1615 1621	Severe
+T62	Qualifier 1622 1628	active
+T63	Condition 1629 1649	alcohol use disorder
+T64	Negation 1651 1654	not
+T65	Observation 1655 1667	in remission
+R30	has_qualifier Arg1:T63 Arg2:T61	
+R31	AND Arg1:T61 Arg2:T62	
+R32	has_context Arg1:T63 Arg2:T65	
+R33	has_negation Arg1:T65 Arg2:T64	
+T66	Condition 1670 1686	Seizure disorder
+T67	Observation 1688 1705	Co-administration
+T68	Qualifier 1709 1720	significant
+T69	Drug 1721 1739	hepatotoxic agents
+T70	Drug 1741 1754	acetaminophen
+T71	Negation 1780 1783	not
+R34	has_context Arg1:T69 Arg2:T67	
+R35	has_qualifier Arg1:T69 Arg2:T68	
+R36	AND Arg1:T69 Arg2:T70	
+R37	has_negation Arg1:T70 Arg2:T71	
+T72	Drug 1829 1860	drugs due to CYP3A interactions

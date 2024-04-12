@@ -1,0 +1,22 @@
+T5	Condition 241 243	TB
+T3_DdMmlC2Q	Value 41 54	18 - 45 years
+T0_DdMmlC2Q	Condition 228 231	HIV
+T2_DdMmlC2Q	Condition 233 236	HBV
+T4	Observation 62 87	and their newborn infants
+R1	has_value Arg1:T1 Arg2:T3_DdMmlC2Q	
+T1	Person 36 40	ages
+*	OR T0_DdMmlC2Q T2_DdMmlC2Q T5
+T2	Mood 141 152	Planning to
+T3	Observation 153 160	deliver
+T6	Visit 161 192	at Mayo Clinic in Rochester, MN
+R2	has_mood Arg1:T3 Arg2:T2	
+T7	Negation 253 267	does not occur
+T8	Observation 244 252	Delivery
+R3	has_negation Arg1:T8 Arg2:T7	
+T9	Visit 268 282	at Mayo Clinic
+R4	AND Arg1:T8 Arg2:T9	
+T10	Condition 21 29	Pregnant
+R5	AND Arg1:T10 Arg2:T1	
+R6	AND Arg1:T10 Arg2:T4	
+T11	Informed_consent 88 140	Willing and able to provide written informed consent
+R7	AND Arg1:T3 Arg2:T6	

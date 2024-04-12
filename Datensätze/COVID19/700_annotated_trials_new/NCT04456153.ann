@@ -1,0 +1,43 @@
+T26	Value 657 665	72 hours
+R9	has_mood Arg1:T20 Arg2:T19	
+T15	Condition 451 470;485 506	hypersensitivity to formulation excipient
+R7	AND Arg1:T12 Arg2:T13	
+R4	has_mood Arg1:T2 Arg2:T3	
+T17	Observation 507 523	Active treatment
+*	OR T20 T21
+R5	has_temporal Arg1:T2 Arg2:T4	
+T11	Competing_trial 342 424	Participation in any other clinical trial with antiviral activity against COVID-19
+R2	AND Arg1:T1 Arg2:T6	
+R1	has_value Arg1:T6 Arg2:T5	
+R14	has_negation Arg1:T24 Arg2:T25	
+T25	Negation 629 632	Not
+T23	Reference_point 684 697	symptom onset
+R10	has_mood Arg1:T21 Arg2:T19	
+T1	Condition 34 42	COVID-19
+T9	Informed_consent 121 277	Able to provide informed consent, or (as allowed by IRB), immediate availability of designated legally authorized representative to provide consent by proxy
+T22	Temporal 670 697	>14 days from symptom onset
+T4	Temporal 88 103	within 72 hours
+T21	Observation 571 584;611 628	treatment for Toxoplasma gondii
+T19	Mood 561 570	requiring
+R3	AND Arg1:T6 Arg2:T2	
+T2	Visit 72 87	hospitalization
+T10	Non-query-able 278 319	Anticipated hospitalization for >48 hours
+*	OR T14 T15
+T16	Drug 529 537	rifampin
+T20	Procedure 571 607	treatment for Pneumocystis jirovecii
+R11	AND Arg1:T18 Arg2:T20	
+R13	has_value Arg1:T24 Arg2:T26	
+R12	has_index Arg1:T22 Arg2:T23	
+T24	Measurement 633 652	expected to survive
+*	OR T24 T22
+T18	Condition 556 560	AIDS
+R8	has_temporal Arg1:T16 Arg2:T17	
+R6	has_value Arg1:T7 Arg2:T8	
+T5	Value 46 54	positive
+T3	Mood 62 71	requiring
+T14	Condition 451 481	hypersensitivity to atovaquone
+T8	Value 108 120	18 years old
+T12	Person 439 444	women
+T13	Observation 425 438	Breastfeeding
+T7	Person 104 107	Age
+T6	Measurement 34 42;55 61	COVID-19 RT-PCR

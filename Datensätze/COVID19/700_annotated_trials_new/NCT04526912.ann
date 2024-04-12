@@ -1,0 +1,111 @@
+T1	Visit 27 39	Hospitalized
+T2	Condition 71 79	COVID-19
+T3	Observation 91 138	confirmed by World Health Organization criteria
+R1	has_context Arg1:T2 Arg2:T3	
+R2	AND Arg1:T1 Arg2:T2	
+T4	Measurement 282 296	influenza test
+T5	Value 273 281	Negative
+R3	has_value Arg1:T4 Arg2:T5	
+T6	Measurement 141 158	Oxygen saturation
+T7	Value 160 163	94%
+T8	Observation 164 175	at room air
+T9	Measurement 179 242	arterial partial pressure of oxygen/fraction of inspired oxygen
+T10	Value 243 270	< 300 mm Hg and > 200 mm Hg
+R4	has_value Arg1:T9 Arg2:T10	
+R5	has_value Arg1:T6 Arg2:T7	
+R6	has_context Arg1:T6 Arg2:T8	
+*	OR T6 T9
+T11	Measurement 465 508	high sensitivity C-reactive protein (hsCRP)
+T12	Value 509 518	> 50 mg/L
+R7	has_value Arg1:T11 Arg2:T12	
+T13	Measurement 520 528	Ferritin
+T14	Value 529 540	> 500 ng/mL
+T15	Value 570 579	> 300 U/L
+T16	Measurement 543 569	actate dehydrogenase (LDH)
+T17	Measurement 581 588	D-dimer
+T18	Value 590 601	> 500 ng/mL
+R8	has_value Arg1:T13 Arg2:T14	
+R9	has_value Arg1:T16 Arg2:T15	
+R10	has_value Arg1:T17 Arg2:T18	
+T19	Measurement 301 318	Lymphocyte counts
+T20	Value 319 327	< 10^3/L
+R11	has_value Arg1:T19 Arg2:T20	
+T21	Condition 389 406	hyperinflammation
+T22	Temporal 407 451	within 1 day prior to VIB7734 administration
+T23	Reference_point 420 451	prior to VIB7734 administration
+R12	has_index Arg1:T22 Arg2:T23	
+R13	has_temporal Arg1:T21 Arg2:T22	
+R14	subsumes Arg1:T21 Arg2:T11	
+*	OR T11 T13 T16 T17
+T24	Condition 691 710	Respiratory failure
+T25	Procedure 721 743	mechanical ventilation
+T26	Mood 711 720	requiring
+R15	has_mood Arg1:T25 Arg2:T26	
+R16	AND Arg1:T24 Arg2:T25	
+T27	Observation 889 910	Do Not Intubate (DNI)
+T28	Observation 914 945	Do Not Resuscitate (DNR) order.
+*	OR T28 T27
+T29	Observation 1009 1072	allergy or hypersensitivity reaction to any component of the IP
+T30	Condition 1352 1365	liver failure
+T31	Condition 1333 1348	Liver cirrhosis
+*	OR T31 T30
+T32	Condition 1374 1413	human immunodeficiency virus infection.
+T33	Condition 1421 1432	hepatitis B
+T34	Condition 1442 1463	hepatitis C infection
+T35	Condition 1548 1570	tuberculosis infection
+T36	Qualifier 1541 1547	latent
+T37	Qualifier 1523 1537	suspect active
+T38	Qualifier 1514 1519	Known
+R17	has_qualifier Arg1:T35 Arg2:T36	
+*	OR T36 T37 T38
+T39	Qualifier 1415 1420	Known
+R18	has_qualifier Arg1:T33 Arg2:T39	
+T40	Qualifier 1436 1441	known
+R19	has_qualifier Arg1:T34 Arg2:T40	
+*	OR T34 T33
+T41	Qualifier 1368 1373	Known
+R20	has_qualifier Arg1:T32 Arg2:T41	
+T42	Condition 1580 1589;1615 1624	bacterial infection
+T43	Condition 1591 1597;1615 1624	fungal infection
+T44	Condition 1599 1604;1615 1624	viral infection
+*	OR T42 T43 T44
+T45	Qualifier 1573 1579	Active
+R21	has_qualifier Arg1:T42 Arg2:T45	
+T46	Condition 1669 1684	cardiac disease
+T47	Qualifier 1646 1668	Clinically significant
+R22	has_qualifier Arg1:T46 Arg2:T47	
+T48	Temporal 1685 1701	within 6 months.
+R23	has_temporal Arg1:T46 Arg2:T48	
+T49	Condition 1914 1920	cancer
+T50	Observation 1903 1913	History of
+R24	has_temporal Arg1:T49 Arg2:T50	
+T51	Temporal 1921 1951	within 12 months of enrollment
+T52	Reference_point 1941 1951	enrollment
+R25	has_index Arg1:T51 Arg2:T52	
+R26	has_temporal Arg1:T49 Arg2:T51	
+T53	Condition 1714 1752	severely impaired respiratory function
+T54	Measurement 1816 1827	home oxygen
+T55	Value 1831 1840	> 4 L/min
+R27	has_value Arg1:T54 Arg2:T55	
+T56	Temporal 1753 1764	at baseline
+R28	has_temporal Arg1:T53 Arg2:T56	
+R29	subsumes Arg1:T53 Arg2:T54	
+T57	Observation 1703 1713	History of
+R30	has_temporal Arg1:T53 Arg2:T57	
+T58	Procedure 1965 1977	chemotherapy
+T59	Drug 1979 2004	biologic immunomodulators
+T60	Drug 2016 2030	JAK inhibitors
+T61	Drug 2036 2063	immunosuppressive therapies
+T62	Temporal 2065 2092	ithin 8 weeks of enrollment
+T63	Reference_point 2082 2092	enrollment
+T64	Drug 2108 2117	rituximab
+T65	Drug 2127 2155	B cell-depleting mAb therapy
+T66	Temporal 2156 2171	within 6 months
+*	OR T58 T59 T61 T64 T65
+R31	subsumes Arg1:T59 Arg2:T60	
+R32	has_temporal Arg1:T65 Arg2:T66	
+R33	has_temporal Arg1:T61 Arg2:T62	
+R34	has_index Arg1:T62 Arg2:T63	
+T67	Competing_trial 1075 1330	Participation in another clinical study with an IP within 4 weeks prior to Day 1 or within 5 half-lives of the IP, whichever is longer. (Participation in COVID-19 antiviral or antimalarial trials may be permitted after discussion with the Medical Monitor)
+T68	Non-query-able 746 880	In the opinion of the Investigator, progression to mechanical ventilation or death is imminent and inevitable within the next 24 hours
+T69	Non-query-able 947 996	Anticipated duration of hospital stay < 72 hours.

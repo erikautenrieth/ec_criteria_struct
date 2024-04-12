@@ -1,0 +1,90 @@
+*	OR T48 T53
+T17	Observation 560 571	on room air
+T50	Drug 1525 1533	apixaban
+T13	Procedure 514 536	mechanical ventilation
+T21	Observation 624 636	intermittent
+T11	Non-query-able 399 488	Any co-morbidity that may add risk to the treatment in the judgement of the investigator.
+T47	Observation 1305 1408	medications that are sensitive CYP3A4, CYP2C9 or CYP2C19 substrates and have a narrow therapeutic index
+T40	Value 1097 1106	>1.5x ULN
+*	OR T37 T38
+R2	has_context Arg1:T3 Arg2:T4	
+T28	Non-query-able 803 882	Unwillingness or inability to comply with procedures required in this protocol.
+*	OR T49 T50 T51 T52
+R4	subsumes Arg1:T5 Arg2:T6	
+R7	has_mood Arg1:T12 Arg2:T14	
+T19	Mood 615 623	requires
+R8	AND Arg1:T18 Arg2:T20	
+T49	Drug 1515 1523	warfarin
+T5	Condition 168 177	pneumonia
+R20	has_value Arg1:T36 Arg2:T40	
+T14	Mood 489 498	Requiring
+R3	AND Arg1:T3 Arg2:T5	
+T12	Procedure 499 509	intubation
+T30	Observation 911 937	on electrocardiogram (ECG)
+T35	Measurement 1170 1186	Serum creatinine
+T8	Mood 239 247	requires
+T20	Procedure 651 668	ambulatory oxygen
+T10	Informed_consent 280 376	The patient, guardian or legal representative has signed a written IRB-approved informed consent
+T31	Value 938 945	>470 ms
+R10	has_value Arg1:T15 Arg2:T16	
+R23	has_value Arg1:T33 Arg2:T44	
+R12	has_context Arg1:T20 Arg2:T22	
+T23	Temporal 669 693	prior to hospitalization
+*	OR T22 T21
+T45	Value 1278 1287	<8.0 g/dL
+R21	has_value Arg1:T35 Arg2:T41	
+R6	has_temporal Arg1:T7 Arg2:T9	
+T42	Value 1224 1239	<1000 cells/mm3
+T22	Observation 640 650	continuous
+T43	Observation 1107 1169	(except where bilirubin increase is due to Gilbert's Syndrome)
+T55	Competing_trial 1591 1701	Currently participating in a clinical study assessing pharmacological treatments, including anti-viral studies
+T7	Procedure 248 267	supplemental oxygen
+T24	Non-query-able 694 776	Patient is, in the investigator's clinical judgment, unlikely to survive >72 hours
+T3	Condition 71 89	COVID-19 infection
+T48	Drug 1454 1462;1480 1497	inducers CYP2D6 and CYP3A4
+T2	Value 42 56	18 to 80 years
+T34	Measurement 1198 1223	Absolute neutrophil count
+R9	AND Arg1:T12 Arg2:T13	
+R18	has_value Arg1:T29 Arg2:T31	
+T52	Drug 1549 1560	rivaroxaban
+R13	has_mood Arg1:T20 Arg2:T19	
+R5	has_mood Arg1:T7 Arg2:T8	
+T32	Measurement 1267 1277	Hemoglobin
+R11	has_context Arg1:T15 Arg2:T17	
+T39	Value 1051 1086	> 2.5 x upper limit of normal (ULN)
+T29	Measurement 893 895;902 910	QT interval
+T51	Drug 1535 1545	argatroban
+T36	Measurement 1087 1096	Bilirubin
+R17	has_context Arg1:T29 Arg2:T30	
+T18	Condition 588 609	respiratory condition
+T53	Drug 1466 1476;1480 1497	inhibitors CYP2D6 and CYP3A4
+T6	Condition 189 226	radiographic opacities on chest X-ray
+T16	Value 555 559	>95%
+T41	Value 1187 1197	>2.0 X ULN
+T4	Observation 90 129	per RT-PCR assay of a pharyngeal sample
+T15	Measurement 537 554	Oxygen saturation
+T33	Measurement 1240 1254	Platelet count
+T44	Value 1255 1266	<75,000/mm3
+T38	Measurement 1040 1050	ALT (SGPT)
+T9	Observation 268 279	at baseline
+T25	Condition 777 785	Pregnant
+R14	has_temporal Arg1:T20 Arg2:T23	
+T37	Measurement 1026 1036	AST (SGOT)
+R22	has_value Arg1:T34 Arg2:T42	
+T26	Observation 789 796	nursing
+T1	Person 60 63	age
+R1	has_value Arg1:T1 Arg2:T2	
+*	OR T25 T26
+T27	Person 950 957	females
+R15	AND Arg1:T31 Arg2:T27	
+T56	Value 961 968	>450 ms
+T57	Person 973 978	males
+R16	AND Arg1:T56 Arg2:T57	
+R25	has_value Arg1:T29 Arg2:T56	
+R19	has_value Arg1:T38 Arg2:T39	
+R26	has_value Arg1:T37 Arg2:T39	
+R27	has_context Arg1:T36 Arg2:T43	
+R28	has_value Arg1:T32 Arg2:T45	
+T46	Condition 1577 1590	alcohol abuse
+T54	Condition 1569 1573;1585 1590	drug abuse
+*	OR T54 T46

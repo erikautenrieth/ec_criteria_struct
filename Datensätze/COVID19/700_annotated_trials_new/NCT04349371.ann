@@ -1,0 +1,37 @@
+*	OR T9 T10 T11 T12 T13 T14
+T12	Drug 430 453	anti-cytokine therapies
+T15	Observation 321 353	High risk background medications
+T5	Drug 276 278	CQ
+T20	Qualifier 585 590	Known
+R4	subsumes Arg1:T15 Arg2:T9	
+R2	has_context Arg1:T5 Arg2:T6	
+R7	has_qualifier Arg1:T19 Arg2:T20	
+T22	Condition 647 664	torsades de point
+R1	has_value Arg1:T1 Arg2:T2	
+T25	Observation 698 705	nursing
+T2	Value 27 35	18 years
+*	OR T24 T25
+T9	Drug 369 395	immunosuppressive regimens
+T16	Condition 532 543	retinopathy
+T8	Qualifier 302 305	New
+*	OR T21 T22
+T6	Observation 279 300	for other indications
+R3	has_qualifier Arg1:T7 Arg2:T8	
+T1	Person 23 26	Age
+T24	Condition 686 694	pregnant
+T19	Condition 591 619	allergy to CQ or chloroquine
+T3	Observation 38 82	Employment by New York Presbyterian Hospital
+T13	Procedure 455 469	chemotherapies
+T11	Drug 407 428	anti-B cell therapies
+T17	Observation 521 531	history of
+T14	Drug 471 500	Janus Kinase (JAK)-inhibitors
+T10	Drug 397 405	steroids
+T23	Qualifier 621 626	Known
+T7	Drug 313 319	NSAIDs
+T21	Condition 627 642	QT prolongation
+R5	has_temporal Arg1:T16 Arg2:T17	
+R6	has_context Arg1:T16 Arg2:T18	
+R9	has_qualifier Arg1:T22 Arg2:T23	
+T4	Observation 90 222	assignment to areas of the hospital that involve patient contact and possible exposures for at least 2 days a week >/= 8 hours a day
+T18	Observation 555 583	contraindicate the use of CQ
+R8	has_qualifier Arg1:T21 Arg2:T23	
