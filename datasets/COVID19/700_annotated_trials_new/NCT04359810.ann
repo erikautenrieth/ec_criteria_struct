@@ -1,0 +1,53 @@
+T19	Observation 956 966	History of
+T1_DdMmlC2Q	Temporal 263 293	within 7 days of randomization
+T5	Value 341 344	94%
+T6	Mood 360 369	requiring
+T14_DdMmlC2Q	Drug 756 817	anti-viral agent(s) with possible activity against SARS-CoV-2
+T17	Observation 1013 1225	meeting definitive case definition criteria, at least severe severity, and probable or definite imputability per National Healthcare Safety Network (NHSN)/Centers for Disease Control and Prevention (CDC) criteria
+T11	Reference_point 837 862	study drug administration
+T30_DdMmlC2Q	Observation 345 356	on room air
+R16	has_index Arg1:T8_DdMmlC2Q Arg2:T11	
+R4	has_index Arg1:T1_DdMmlC2Q Arg2:T4	
+R8	has_mood Arg1:T13_DdMmlC2Q Arg2:T6	
+T25_DdMmlC2Q	Condition 200 220	SARS-CoV-2 infection
+R15	has_temporal Arg1:T14_DdMmlC2Q Arg2:T8_DdMmlC2Q	
+T8_DdMmlC2Q	Temporal 818 862	<24 hours prior to study drug administration
+T14	Qualifier 929 935	Severe
+R7	has_mood Arg1:T16_DdMmlC2Q Arg2:T6	
+T16_DdMmlC2Q	Procedure 370 389	supplemental oxygen
+T26_DdMmlC2Q	Condition 464 496	infiltrates on chest radiography
+T18	Observation 1226 1231	Known
+R3	has_temporal Arg1:T25_DdMmlC2Q Arg2:T1_DdMmlC2Q	
+T15_DdMmlC2Q	Procedure 407 438	invasive mechanical ventilation
+T4	Reference_point 280 293	randomization
+R9	has_mood Arg1:T15_DdMmlC2Q Arg2:T6	
+T6_DdMmlC2Q	Procedure 898 919	veno-venous (VV)-ECMO
+R10	has_temporal Arg1:T15_DdMmlC2Q Arg2:T7	
+T13	Temporal 922 928	5 days
+T13_DdMmlC2Q	Procedure 391 403;416 438	non-invasive mechanical ventilation
+T7	Temporal 439 451	at screening
+T1	Informed_consent 21 173	Willing and able to provide written informed consent prior to performing study procedures or have a legally authorized representative available to do so
+T2	Value 179 187	18 years
+T3	Person 175 178	Age
+R1	has_value Arg1:T3 Arg2:T2	
+T8	Observation 188 196;221 262	Evidence by PCR test of nasopharyngeal swab sample
+R2	has_context Arg1:T25_DdMmlC2Q Arg2:T8	
+T9	Measurement 294 339	Peripheral capillary oxygen saturation (SpO2)
+R5	has_value Arg1:T9 Arg2:T5	
+R6	has_context Arg1:T9 Arg2:T30_DdMmlC2Q	
+*	OR T9 T16_DdMmlC2Q T13_DdMmlC2Q T15_DdMmlC2Q
+T10	Pregnancy_considerations 497 641	Females of childbearing age and males, must be willing to practice an effective contraceptive method or remain abstinent during the study period
+T12	Competing_trial 665 740	Participation in another clinical trial of anti-viral agent(s) for COVID-19
+T15	Procedure 863 886	Mechanically ventilated
+R11	subsumes Arg1:T15 Arg2:T6_DdMmlC2Q	
+R12	has_temporal Arg1:T15 Arg2:T13	
+T16	Condition 936 955	multi-organ failure
+R13	has_qualifier Arg1:T16 Arg2:T14	
+T20	Temporal 967 972	prior
+T21	Condition 973 1012	reactions to transfusion blood products
+R14	has_temporal Arg1:T21 Arg2:T19	
+R17	has_temporal Arg1:T21 Arg2:T20	
+R18	has_context Arg1:T21 Arg2:T17	
+T22	Condition 1232 1265	Immunoglobulin A (IgA) deficiency
+R19	has_context Arg1:T22 Arg2:T18	
+T23	Condition 1282 1290	pregnant

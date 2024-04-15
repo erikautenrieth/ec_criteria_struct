@@ -1,0 +1,110 @@
+*	OR T22 T24 T27
+T13	Condition 497 502	fever
+T66	Measurement 1573 1605	Aspartate Aminotransferase (AST)
+*	OR T42 T43 T44 T45
+T45	Drug 1250 1279	Janus kinase (JAK) inhibitors
+R8	has_value Arg1:T24 Arg2:T25	
+T35	Negation 902 910	negative
+T32	Measurement 863 877	pro-calcitonin
+T29	Condition 842 857	allergy to RAPA
+R22	has_temporal Arg1:T48 Arg2:T50	
+T37	Drug 1014 1032	immunosuppressants
+T19	Observation 556 581	gastrointestinal symptoms
+T17	Condition 533 541	headache
+T62	Condition 1520 1527;1667 1676	hepatic disorders
+T28	Value 778 797	90 beats per minute
+T49	Drug 1407 1415	steroids
+T50	Temporal 1417 1436	prior to enrollment
+T11	Measurement 395 409	pro-calcitonin
+T3	Mood 63 70	require
+T54	Observation 1773 1782	confirmed
+T39	Temporal 1054 1073	prior to enrollment
+T12	Value 391 394	Low
+R11	has_context Arg1:T29 Arg2:T30	
+*	OR T30 T31
+T31	Observation 823 828	Known
+T65	Value 1539 1569	>1.5x Upper normal limit (ULN)
+T4	Visit 71 86	hospitalization
+R21	subsumes Arg1:T48 Arg2:T49	
+R28	subsumes Arg1:T62 Arg2:T64	
+T7	Measurement 335 343	ferritin
+R14	has_context Arg1:T34 Arg2:T36	
+R12	has_value Arg1:T32 Arg2:T33	
+*	OR T13 T14 T15 T16 T17 T18 T19 T20
+T26	Observation 740 764	on room air at sea level
+R13	has_negation Arg1:T34 Arg2:T35	
+T34	Condition 878 887	SARS-CoV2
+R17	has_index Arg1:T46 Arg2:T47	
+T5	Condition 87 106	SARS-CoV2 infection
+R27	has_value Arg1:T66 Arg2:T67	
+T68	Condition 1642 1650	diabetes
+R2	has_mood Arg1:T4 Arg2:T3	
+T64	Measurement 1529 1538	bilirubin
+R1	has_value Arg1:T1 Arg2:T2	
+R4	has_context Arg1:T5 Arg2:T6	
+T16	Condition 524 531	malaise
+*	OR T64 T66 T68
+T40	Drug 1083 1099;1121 1126	immunomodulators drugs
+T27	Measurement 766 776	heart rate
+T48	Drug 1377 1395	immunosuppressants
+R10	has_value Arg1:T27 Arg2:T28	
+T14	Condition 504 509	cough
+T56	Non-query-able 1889 1945	Deemed otherwise unsuitable for the study by researchers
+T63	Condition 1655 1676	psychiatric disorders
+*	OR T59 T60 T61 T62 T63
+R26	has_value Arg1:T64 Arg2:T65	
+R9	has_value Arg1:T22 Arg2:T23	
+T43	Drug 1189 1227	Tumor necrosis factor (TNF) inhibitors
+T8	Value 326 334	Elevated
+*	OR T53 T54
+T41	Drug 1103 1126	immunosuppressant drugs
+*	OR T52 T51
+T15	Condition 511 522	sore throat
+T18	Condition 543 554	muscle pain
+T51	Condition 1805 1829	substance abuse disorder
+R5	has_value Arg1:T7 Arg2:T8	
+T10	Condition 356 390	Bilateral opacities on chest x-ray
+T30	Observation 832 841	suspected
+T21	Negation 583 590	without
+T22	Measurement 665 681	respiratory rate
+R20	has_temporal Arg1:T41 Arg2:T46	
+T52	Condition 1794 1801;1815 1829	alcohol abuse disorder
+T2	Value 21 34	Over 60 years
+T58	Observation 1437 1462	Serious underlying diseas
+R18	subsumes Arg1:T41 Arg2:T42	
+T24	Measurement 728 732	SpO2
+T42	Drug 1157 1187	Inter leukin (IL)-6 inhibitors
+R16	has_temporal Arg1:T37 Arg2:T39	
+R15	subsumes Arg1:T37 Arg2:T38	
+T55	Competing_trial 1830 1888	Having participated in other drug trials in the past month
+T47	Reference_point 1342 1355	randomization
+R7	has_negation Arg1:T20 Arg2:T21	
+T9	Condition 344 355	Lymphopenia
+R25	subsumes Arg1:T58 Arg2:T59	
+T6	Observation 107 156	documented by positive RT-PCR nasopharyngeal swab
+T60	Condition 1502 1511;1667 1676	pulmonary disorders
+T46	Temporal 1280 1355	within 5 half-lives or 30 days (whichever is longer) prior to randomization
+T23	Value 683 704	20 breaths per minute
+R3	AND Arg1:T1 Arg2:T4	
+T53	Observation 1760 1769	Suspected
+T1	Person 38 41	age
+R19	has_temporal Arg1:T40 Arg2:T46	
+T61	Condition 1513 1518;1667 1676	renal disorders
+T57	Observation 1946 1997	Clinically judged to not require hospital admission
+T25	Value 734 739	> 93%
+T59	Condition 1493 1500;1667 1676	cardiac disorders
+T38	Drug 1044 1052	steroids
+T36	Observation 888 901;911 937	documented by RT-PCR nasopharyngeal swab
+T67	Value 1605 1609	>ULN
+T33	Value 858 862	High
+T44	Drug 1229 1245	anti-IL-1 agents
+T20	Condition 591 610	shortness of breath
+R6	has_value Arg1:T11 Arg2:T12	
+T69	Observation 410 477	Clinical signs suggestive of symptoms of mild illness with COVID-19
+R29	subsumes Arg1:T69 Arg2:T13	
+T70	Observation 410 438;625 655	Clinical signs suggestive of moderate illness with CoVID-19
+R30	subsumes Arg1:T70 Arg2:T22	
+R31	has_context Arg1:T24 Arg2:T26	
+*	OR T69 T70
+R23	has_context Arg1:T51 Arg2:T54	
+R24	has_context Arg1:T52 Arg2:T54	

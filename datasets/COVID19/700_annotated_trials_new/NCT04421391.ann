@@ -1,0 +1,52 @@
+T9	Condition 897 905	COVID-19
+T29	Measurement 1290 1293	ALT
+R8	subsumes Arg1:T18 Arg2:T19	
+T27	Condition 1242 1269	Changes in the visual field
+R13	has_value Arg1:T32 Arg2:T33	
+T30	Measurement 1294 1297	AST
+*	OR T15 T17 T16
+T17	Condition 982 986;992 994;995 1003	Type II diabetes
+T32	Measurement 1327 1342	total bilirubin
+T7	Observation 343 409	in hospitals, clinics, and emergency rooms, and medical facilities
+T14	Temporal 950 981	prior to the start of treatment
+R4	has_context Arg1:T6 Arg2:T7	
+T8	Pregnancy_considerations 412 803	Subjects must agree to practice at least two highly effective methods of birth control for the duration of the study This includes condoms with spermicide, oral birth control pills, contraceptive implants, intra-uterine devices, or diaphragms. At least one of these must be a barrier method. Subjects not of reproductive potential will be exempt (e.g. post-menopausal, surgically sterilized)
+T28	Condition 1270 1283	Liver disease
+T23	Condition 1176 1186	Alcoholism
+T18	Observation 1051 1105	contraindication for treatment with hydroxychloroquine
+T33	Value 1343 1366	>2.5 upper limit normal
+*	OR T19 T20 T21 T22 T23 T24 T25 T26 T27 T28 T34
+T21	Condition 1157 1163	Anemia
+T31	Value 1298 1322	> 2.5 upper limit normal
+T5	Observation 282 303	High-risk individuals
+R5	has_value Arg1:T9 Arg2:T11	
+R3	subsumes Arg1:T5 Arg2:T6	
+T26	Condition 1230 1241	Maculopathy
+R9	subsumes Arg1:T28 Arg2:T29	
+T3	Value 207 215;223 231	18 years or older
+T16	Condition 1004 1043	Atherosclerotic Coronary Artery Disease
+T34	Condition 1367 1376	Psoriasis
+T13	Condition 941 949	Diarrhea
+*	OR T29 T30
+T4	Observation 241 279	considered to be high-risk individuals
+T25	Condition 1205 1229	Skeletal muscle disorder
+R1	has_value Arg1:T2 Arg2:T3	
+T15	Condition 982 988;995 1003	Type I diabetes
+T24	Condition 1187 1204	Myasthenia Gravis
+R12	AND Arg1:T30 Arg2:T32	
+R10	has_value Arg1:T29 Arg2:T31	
+T35	Non-query-able 1377 1476	Any comorbidities which, in the opinion of the investigator, constitute health risk for the subject
+T2	Person 219 222	age
+T36	Observation 916 940	Symptomatic for COVID-19
+T22	Condition 1164 1175	Neutropenia
+T1	Informed_consent 23 182	Informed consent, provided electronically via the EDC, demonstrating the subject understands the procedures required for the study and the purpose of the study
+R2	AND Arg1:T2 Arg2:T4	
+R7	has_temporal Arg1:T13 Arg2:T14	
+T6	Person 323 342	health care workers
+T19	Condition 1118 1146	Hypoglycemia G6PD deficiency
+T20	Condition 1147 1156	Porphyria
+R6	has_context Arg1:T9 Arg2:T10	
+R11	has_value Arg1:T30 Arg2:T31	
+T11	Value 879 887	positive
+T12	Informed_consent 830 865	Refusal to provide informed consent
+T10	Observation 906 915	by RT-PCR

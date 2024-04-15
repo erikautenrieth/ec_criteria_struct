@@ -1,0 +1,13 @@
+T21_mml	Person 46 51	males
+T2_mml	Person 34 41	Females
+T19_mml	Value 52 69	over 18 years old
+*	OR T2_mml T21_mml
+R1	has_value Arg1:T21_mml Arg2:T19_mml	
+R2	has_value Arg1:T2_mml Arg2:T19_mml	
+T1	Non-query-able 71 134	Willing to share demographic data with the sponsor of the study
+T2	Non-query-able 136 205	Willing to follow app use instructions during the course of the study
+T3	Non-query-able 207 278	Willing to complete survey instruments as described in study procedures
+T4	Informed_consent 280 326	Willing to provide electronic informed consent
+T5	Observation 328 376	Able to read and understand the English language
+T6	Observation 377 428	well enough to complete electronic informed consent
+R3	has_context Arg1:T5 Arg2:T6	

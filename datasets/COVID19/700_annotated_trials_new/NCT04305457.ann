@@ -1,0 +1,66 @@
+T1	Condition 44 61	COVID19 infection
+R2	AND Arg1:T3 Arg2:T5	
+T36	Observation 942 967	committed to full support
+T33	Observation 974 977	DNI
+T41	Visit 1061 1075	hopitalization
+T8	Value 230 236	36.6 C
+T23	Non-query-able 702 770	Any clinical contraindications, as judged by the attending physician
+R7	has_value Arg1:T13 Arg2:T11	
+T32	Observation 969 972	DNR
+R3	has_multiplier Arg1:T5 Arg2:T4	
+T16	Condition 350 355	cough
+T39	Observation 1020 1042	for lung comorbidities
+T24	Competing_trial 772 821	Patients enrolled in another interventional study
+R14	has_temporal Arg1:T27 Arg2:T28	
+R9	subsumes Arg1:T5 Arg2:T6	
+R16	has_qualifier Arg1:T30 Arg2:T29	
+T19	Qualifier 407 420	of any degree
+T25	Visit 823 835	Hospitalized
+T2	Observation 23 43;62 160	Laboratory confirmed defined with a positive RT-PCR from any specimen and/or detection of SARS-CoV-2 IgM/IgG antibodies
+T17	Condition 361 382	Spontaneous breathing
+T31	Observation 916 928	for COVID-19
+R18	has_negation Arg1:T36 Arg2:T35	
+T13	Measurement 310 321	rectal site
+*	OR T7 T10 T12 T13
+T18	Condition 399 406	hypoxia
+R6	has_value Arg1:T12 Arg2:T11	
+T9	Value 261 266	37.2C
+T6	Condition 223 230	fever  
+R15	AND Arg1:T25 Arg2:T27	
+T30	Procedure 905 915	intubation
+T37	Mood 995 1004	requiring
+T12	Measurement 298 306;317 321	tympanic site
+T26	Qualifier 840 849	confirmed
+T38	Procedure 1005 1019	oxygen at home
+T40	Observation 1044 1057;1076 1095	Primary cause not due to COVID-19
+*	OR T32 T33 T34
+T28	Temporal 872 894	for more than 72 hours
+T7	Measurement 242 255	axillary site
+T15	Value 342 348	24 bpm
+*	OR T6 T14 T16
+R1	has_context Arg1:T1 Arg2:T2	
+R12	has_qualifier Arg1:T18 Arg2:T19	
+R5	has_value Arg1:T10 Arg2:T9	
+T14	Measurement 324 340	Respiratory rate
+T27	Condition 850 871	diagnosis of COVID-19
+T20	Non-query-able 422 622	Gas exchange and ventilation maybe assisted by any continuous continuous airway pressure (CPAP), or any system of Non Invasive Ventilation (NIV), with Positive End-Expiratory Pressure (PEEP)  10 cmH2O
+R20	has_mood Arg1:T38 Arg2:T37	
+T22	Device 677 700	high flow nasal cannula
+T5	Observation 209 218	following
+T11	Value 287 292	37.6C
+T29	Qualifier 896 904	Previous
+R10	has_value Arg1:T14 Arg2:T15	
+T35	Negation 938 941	not
+R22	has_context Arg1:T41 Arg2:T40	
+R8	subsumes Arg1:T6 Arg2:T7	
+T4	Multiplier 189 201	at least one
+R11	AND Arg1:T17 Arg2:T18	
+R19	subsumes Arg1:T36 Arg2:T32	
+T3	Visit 165 183	Hospital admission
+R21	has_context Arg1:T38 Arg2:T39	
+T21	Procedure 650 662	Tracheostomy
+R17	has_context Arg1:T30 Arg2:T31	
+R4	has_value Arg1:T7 Arg2:T8	
+T34	Observation 981 984	CMO
+R13	has_qualifier Arg1:T27 Arg2:T26	
+T10	Measurement 272 281	oral site

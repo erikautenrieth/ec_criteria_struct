@@ -1,0 +1,197 @@
+I am an intelligent and thorough agent designed to transform a given clinical trial eligibility criteria input into a valid logical form output, similar to pseudo-code. My response should be a logical form and accurately reflect the meaning of the input. My outputs should ignore hypothetical events, consent status, patient screening periods, and other criteria unlikely to be collected in a clinical database or unknowable. For example, an input like "- Consent to study, female, and diagnosed with diabetes" should ignore the "Consent" criterion, and output only "intersect(female(), cond("diabetes"))". My response should be flexible enough to allow for various relevant and creative solutions. I should also focus on providing an accurate and well-structured solution that can be easily understood by others. I must also ensure that the number of left parentheses '(' and right parentheses ')' in my output are exactly equal.
+
+The types of valid logical forms are:
+allergy(), clin_score(), code(), cond(), drug(), enc(), lab(), measurement(), org(), proc(), obs(), social_habit(), spec(), survey_or_questionnaire(), vital(), and(), if_then(), neg(), or(), adult(), age(), child(), ethnic(), family_member(), female(), lang(), male(), mother(), indication(), contraindication(), after(), before(), during(), seq(), criteria(), intersect(), union(), eq(), clin(), hosp(), res(), unit(), risk()
+
+The types of methods which logical forms can call are:
+.acute(), .caused_by(), .change(), .chronic(), .duration(), .equiv(), .except(), .for(), .found_by(), .loc(), .min_count(), .mod(), .num_filter(), .pol(), .possible(), .prov(), .temporality(), .type(), .severity(), .stable()
+
+Here are some examples:
+input: EXC -  Subjects with eq(temporal_per(PAST)) of cond() which contraindication() proc("cryosurgery") such as; cond("cold intolerance") , cond("cold urticaria") , cond("Raynaud`s disease") and eq(temporal_per(PAST)) of allergy() reactions to proc("cryosurgery") .
+output: contraindication(proc("cryosurgery")).caused_by(cond().temporality(eq(temporal_per(PAST))).equiv(cond("cold intolerance"), cond("cold urticaria"), cond("Raynaud`s disease"), allergy(proc("cryosurgery")).temporality(eq(temporal_per(PAST)))))
+
+input: EXC -  cond("Inadequate bowel preparation") { clin_score("Boston Bowel Prep Scale") , total score eq(op(LTEQ), val("2")) }
+output: cond("Inadequate bowel preparation").equiv(clin_score("Boston Bowel Prep Scale").num_filter(eq(op(LTEQ), val("2"))))
+
+input: INC -  .severity(MILD) to .severity(MODERATE) cond("cognitive impairment") { obs("BIMS") eq(op(EQ), val("8"), op(BETWEEN), val("15")) , { code("MDS C 0500") } { .loc(res("nursing home")) residents only }
+output: cond("cognitive impairment").severity(MILD).severity(MODERATE).equiv(obs("BIMS").num_filter(eq(op(EQ), val("8"), op(BETWEEN), val("15"))).equiv(code("MDS C 0500")).loc(res("nursing home")))
+
+input: INC -  .pol(NORMAL) .mod("female") cond("karyotype")
+output: cond("karyotype").pol(NORMAL).mod("female")
+
+input: EXC -  female() with cond("intolerance") , allergy() or cond("hypersensitivity") to the components of the drug("probiotic")
+output: intersect(female(), union(cond("intolerance"), allergy(), cond("hypersensitivity")).caused_by(drug("probiotic")))
+
+input: EXC -  enc(INPATIENT) with an cond("intracerebral hemorrhage")
+output: seq(enc(INPATIENT), during(cond("intracerebral hemorrhage")))
+
+input: EXC -  Known eq(temporal_per(PAST)) of the following .mod("pulmonary") cond("comorbidities") : .severity(SEVERE) .chronic() cond("obstructive pulmonary disease") { cond() } defined as lab("FEV 1") eq(op(LTEQ), val("50"), unit("%")) , cond("emphysema") , cond("interstitial lung disease") , and / or use of proc("supplemental oxygen") .
+output: cond("comorbidities").temporality(eq(temporal_per(PAST))).mod("pulmonary").equiv(intersect(cond("obstructive pulmonary disease").severity(SEVERE).chronic().equiv(cond()), lab("FEV 1").num_filter(eq(op(LTEQ), val("50"), unit("%"))), cond("emphysema"), cond("interstitial lung disease"), proc("supplemental oxygen")))
+
+input: INC -  measurement("Glenohumeral passive range of motion") .pol(LOW) as the .mod("humerus") is obs("abducted") from eq(val("45"), unit("degrees"), op(BETWEEN), val("90"), unit("degrees"))
+output: intersect(measurement("Glenohumeral passive range of motion").pol(LOW), obs("abducted").mod("humerus").num_filter(eq(val("45"), unit("degrees"), op(BETWEEN), val("90"), unit("degrees"))))
+
+input: INC -  CDC - defined org("CRE isolated") during enc(INPATIENT) or enc(OUTPATIENT)
+output: seq(org("CRE isolated"), during(union(enc(INPATIENT), enc(OUTPATIENT))))
+
+input: EXC -  Patients who diagnosed with cond("glomerulonephritis") through proc("kidney biopsy")
+output: cond("glomerulonephritis").found_by(proc("kidney biopsy"))
+
+input: EXC 3.  any contraindication() to obs("exercise") based on the American College of Sports Medicine guidelines;
+output: contraindication(obs("exercise"))
+
+input: INC -  eq(temporal_per(PRESENT)) obs("pain") { eq(op(GT), val("3"), temporal_unit(DAY), per(WEEK)) } episode lasting eq(op(GTEQ), val("3"), temporal_unit(MONTH)) , sufficient to .change() eq(per(DAY)) social_habit("activities")
+output: social_habit("activities").change().num_filter(eq(per(DAY))).caused_by(obs("pain").temporality(eq(temporal_per(PRESENT))).num_filter(eq(op(GT), val("3"), temporal_unit(DAY), per(WEEK))).duration(eq(op(GTEQ), val("3"), temporal_unit(MONTH))))
+
+input: INC -  .mod("Nasopharyngeal") or .mod("saliva") .spec() of patients in .loc(hosp("Queen Mary Hospital of Hong Kong"))
+output: spec().mod("Nasopharyngeal").mod("saliva").loc(hosp("Queen Mary Hospital of Hong Kong"))
+
+input: EXC -  survey_or_questionnaire("GAD - 73 Questionnaire") for anxiety score eq(op(GTEQ), val("10"))
+output: survey_or_questionnaire("GAD - 73 Questionnaire").num_filter(eq(op(GTEQ), val("10")))
+
+input: EXC -  vital("Body Mass Index") eq(op(GT), val("39"))
+output: vital("Body Mass Index").num_filter(eq(op(GT), val("39")))
+
+input: EXC -  eq(temporal_per(PAST)) proc("spinal manipulation") eq(op(LTEQ), temporal_per(PAST), temporal_unit(MONTH))
+output: proc("spinal manipulation").temporality(and(eq(temporal_per(PAST)), eq(op(LTEQ), temporal_per(PAST), temporal_unit(MONTH))))
+
+input: INC -  eq(per(DAY)) social_habit("alcohol intake") eq(op(GT), val("20"), unit("g")) and eq(val("30"), unit("g")) for female() and male() respectively OR
+output: union(if_then(female(), social_habit("alcohol intake").temporality(eq(per(DAY))).num_filter(eq(op(GT), val("20"), unit("g"))), if_then(male(), social_habit("alcohol intake").temporality(eq(per(DAY))).num_filter(eq(val("30"), unit("g"))))))
+
+input: INC -  neg() eq(temporal_per(PAST)) of proc("periodontal surgery") .
+output: neg(proc("periodontal surgery").temporality(eq(temporal_per(PAST))))
+
+input: INC -  eq(temporal_per(PRESENT)) have .mod("unilateral") or .mod("bilateral") proc("ventilation tube") { s } { proc("VTs") } .mod("inserted") for cond("otitis media with effusion") { cond("OME") } or cond("tympanic membrane retraction") / cond("retraction pocket") { cond("TM - R / RP") } or a cond("TM perforation") after proc("extrusion of a VT")
+output: proc("ventilation tube").temporality(eq(temporal_per(PRESENT))).mod("unilateral").mod("bilateral").equiv(proc("VTs")).mod("inserted").for(cond("otitis media with effusion").equiv(cond("OME")), union(cond("tympanic membrane retraction"), cond("retraction pocket")).equiv(cond("TM - R / RP")), seq(cond("TM perforation"), after(proc("extrusion of a VT"))))
+
+input: INC -  All adult() eq(temporal_per(PRESENT)) proc("cardiac surgery") with proc("CPB") will be considered for enrollment .
+output: intersect(adult(), seq(proc("cardiac surgery").temporality(eq(temporal_per(PRESENT))), proc("CPB")))
+
+input: INC -  eq(val("18"), temporal_unit(YEAR), op(GTEQ))
+output: age().num_filter(eq(val("18"), temporal_unit(YEAR), op(GTEQ)))
+
+input: EXC -  child()
+output: child()
+
+input: INC -  1.  ethnic ethnic("Chinese") ;
+output: ethnic("Chinese")
+
+input: INC 2.  family_member() able to understand lang("English") .
+output: family_member(lang("English"))
+
+input: INC -  Participants will be male() and female() subjects who eq(temporal_per(PAST)) .mod("total") .acute() cond("Achilles tendon rupture") , and which eq(temporal_per(PAST)) proc("surgical repair") .  In addition , to participate in this study all volunteers will need to present medical and / or physiotherapeutic release for physical / sports activities practice .
+output: intersect(union(male(), female()), proc("surgical repair").temporality(eq(temporal_per(PAST))).for(cond("Achilles tendon rupture").temporality(eq(temporal_per(PAST))).mod("total").acute()))
+
+input: INC -  lang("English") Speaking
+output: lang("English")
+
+input: INC - female() and male() { female() cond("premenopausal") }
+output: intersect(union(female(), male()), if_then(female(), cond("premenopausal")))
+
+input: INC -  mother() eq(op(GTEQ), val("15"), temporal_unit(YEAR)) of age()
+output: intersect(mother(), age().num_filter(eq(op(GTEQ), val("15"), temporal_unit(YEAR))))
+
+input: INC -  Patients indication() for proc("invasive endovenous procedures")
+output: indication(proc("invasive endovenous procedures"))
+
+input: EXC -  Any contraindication() to the placement of proc("thoracic paravertebral catheters")
+output: contraindication(proc("thoracic paravertebral catheters"))
+
+input: INC -  Available and documented lab("haemoglobin A 1c") { lab("HbA 1c") } value eq(op(LTEQ), val("12"), temporal_unit(WEEK)) prior to eq(temporal_rec(FIRST_TIME)) of drug("semaglutide") proc()
+output: seq(proc(), before(lab("haemoglobin A 1c").equiv(lab("HbA 1c")).num_filter(eq(op(LTEQ), val("12"), temporal_unit(WEEK))), after(intersect(proc(), drug("semaglutide")).temporality(eq(temporal_rec(FIRST_TIME))))))
+
+input: EXC -  The use of drug("analgesics") in the eq(temporal_per(PAST), val("12"), temporal_unit(HOUR)) before the enc(OUTPATIENT) .
+output: seq(drug("analgesics").temporality(eq(temporal_per(PAST), val("12"), temporal_unit(HOUR))), before(enc(OUTPATIENT)))
+
+input: INC -  eq(temporal_per(PRESENT)) a drug("long acting inhaler") or prescribed a drug("long acting inhaler") during enc(INPATIENT) .
+output: seq(union(drug("long acting inhaler").temporality(eq(temporal_per(PRESENT))), drug("long acting inhaler")), during(enc(INPATIENT)))
+
+input: INC -  .mod("Elective") proc("surgery") at pre proc("operative") enc(OUTPATIENT)
+output: seq(proc("surgery").mod("Elective"), during(proc("operative")), during(enc(OUTPATIENT)))
+
+input: INC B .  proc("Histologically") confirmed cond("breast cancer") patients , fulfilling any of criteria() : 1 . eq(op(GT)) obs("bone metastases") indicated by proc("bone scan") , 2 . proc("Bone scan") .pol(POSITIVE) , and proven by other proc("imaging examinations") , including proc("computed tomography") { proc("CT") } , proc("magnetic resonance imaging") { proc("MRI") } and proc("X - ray") , 3 . proc("Bone scan") .pol(POSITIVE) , with clinical cond("symptoms") , including obs("bone pain") , cond("pathologic fracture") , cond("spinal cord compression") and so on , 4 . obs("Bone metastases") indicated by proc("PET - CT") , 5 . proc("Histologically") proven obs("bone metastases")
+output: intersect(cond("breast cancer").found_by(proc("Histologically")), criteria(obs("bone metastases").min_count(eq(op(GT))).found_by(proc("bone scan")), proc("Bone scan").pol(POSITIVE).found_by(proc("imaging examinations").equiv(proc("computed tomography").equiv(proc("CT")), proc("magnetic resonance imaging").equiv(proc("MRI")), proc("X - ray")), intersect(proc("Bone scan").pol(POSITIVE), cond("symptoms").equiv(obs("bone pain"), cond("pathologic fracture"), cond("spinal cord compression")), obs("Bone metastases").found_by(proc("PET - CT")), obs("bone metastases").found_by(proc("Histologically"))))))
+
+input: INC 3.  proc("Bone scan") .pol(POSITIVE) , with clinical cond("symptoms") , including .mod("bone") obs("pain") , cond("pathologic fracture") , cond("spinal cord compression") and so on .
+output: intersect(proc("Bone scan").pol(POSITIVE), cond("symptoms").equiv(obs("pain"), cond("pathologic fracture"), cond("spinal cord compression")))
+
+input: INC -  neg() eq(temporal_per(PAST)) of intake of drug("antibiotics") or other drug() .change() the obs("periodontium") in the eq(op(LTEQ), val("6"), temporal_unit(MONTH)) .
+output: neg(union(drug("antibiotics"), obs("periodontium").caused_by(drug()).change().temporality(and(eq(temporal_per(PAST)), eq(op(LTEQ), val("6"), temporal_unit(MONTH))))))
+
+input: EXC -  Patient who has eq(temporal_per(PAST)) drug("analgesics") { with the .except() of drug("paracetamol") }
+output: drug("analgesics").temporality(eq(temporal_per(PAST))).except(drug("paracetamol"))
+
+input: INC -  who were enc(REFERRAL) to the .loc(clin("physiotherapy service")) by a .prov("physician") .
+output: enc(REFERRAL).loc(clin("physiotherapy service")).prov("physician")
+
+input: INC -  Diagnosed with cond("cutaneous invasive melanoma") within .loc(hosp("HealthPartners")) system eq(op(GTEQ), val("2010"))
+output: cond("cutaneous invasive melanoma").loc(hosp("HealthPartners")).temporality(eq(op(GTEQ), val("2010")))
+
+input: EXC -  .loc(res("nursing home")) as primary residence before or after enc(DISCHARGE)
+output: enc(DISCHARGE).loc(res("nursing home"))
+
+input: EXC -  Enrollment in a structured proc("weight - loss program") eq(temporal_per(PRESENT)) or eq(op(LTEQ), val("1"), temporal_unit(MONTH)) preceding study enrollment
+output: proc("weight - loss program").temporality(or(eq(temporal_per(PRESENT)), eq(op(LTEQ), val("1"), temporal_unit(MONTH))))
+
+input: EXC 5.  cond("suicide") risk() ; cond("bipolar disorder") or cond("schizophrenia") or another eq(temporal_per(PRESENT)) eq(unit("Axis"), val("I")) cond("disorder") if there is a .severity(SEVERE) risk() of obs("harm") and / or cond("decompensation") if proc() of that cond() is .change() as a function of participating in any stage of this study ;
+output: union(risk(cond("suicide")), cond("bipolar disorder"), cond("schizophrenia"), cond("disorder").temporality(eq(temporal_per(PRESENT))).num_filter(eq(unit("Axis"), val("I"))), union(risk(obs("harm")).severity(SEVERE), cond("decompensation")), proc().for(cond()).change())
+
+input: INC 1.  All the cases with the primary diagnosis of .acute() or .chronic() cond("synthetic cannabinoids toxicity") will be included in the study .
+output: cond("synthetic cannabinoids toxicity").acute().chronic()
+
+input: EXC -  cond() that would place him / her at .pol(HIGH) health risk() or preclude the individual\\s full compliance with or completion of the study .
+output: risk().pol(HIGH).caused_by(cond())
+
+input: EXC -  Presence of cond("depressive") .possible() that could .change() cond("cognitive function")
+output: cond("cognitive function").change().caused_by(cond("depressive").possible())
+
+input: EXC -  1. age() eq(op(GTEQ), val("80"), temporal_unit(YEAR)) 2. .mod("Brain") cond("metastasis") 3. With other cond("malignancies") 4. .chronic() cond("diarrhea") , cond("cardiac disease") , cond("pregnancy") or cond("breast feeding")
+output: intersect(age().num_filter(eq(op(GTEQ), val("80"), temporal_unit(YEAR))), cond("metastasis").mod("Brain"), cond("malignancies"), union(cond("diarrhea").chronic(), cond("cardiac disease"), cond("pregnancy"), cond("breast feeding")))
+
+input: INC -  .mod("Type 2") cond("diabetes mellitus") on drug("metformin") proc("therapy") for eq(op(GTEQ), val("3"), temporal_unit(MONTH))
+output: intersect(cond("diabetes mellitus").mod("Type 2"), intersect(drug("metformin"), proc("therapy"))).duration(eq(op(GTEQ), val("3"), temporal_unit(MONTH)))
+
+input: EXC -  Regular consumer of drug("soft drug") { drug("cannabis") } or drug("hard drug") { drug("opioid") } ,
+output: union(drug("soft drug").equiv(drug("cannabis")), drug("hard drug").equiv(drug("opioid")))
+
+input: EXC -  the person with cond("YOD") the carer is caring for has a different cond("dementia") cond() .except() cond("FTD") or cond("AD") or the diagnosis is eq(op(GT), val("12"), temporal_unit(MONTH)) ;
+output: intersect(cond("YOD"), cond("dementia")).caused_by(cond().except(cond("FTD"), cond("AD")).duration(eq(op(GT), val("12"), temporal_unit(MONTH))))
+
+input: EXC -  eq(temporal_rec(FIRST_TIME)) of a proc() acting on cond("spasticity") or cond("fatigue") eq(op(LTEQ), val("30"), temporal_unit(DAY)) before enrollment
+output: proc().for(cond("spasticity"), cond("fatigue")).temporality(eq(temporal_rec(FIRST_TIME))).temporality(eq(op(LTEQ), val("30"), temporal_unit(DAY)))
+
+input: EXC -  .change() cond() as indicated by history , proc("physical exam") , and / or lab("laboratory findings")
+output: cond().change().found_by(proc("physical exam"), lab("laboratory findings"))
+
+input: INC -  enc() to .loc(hosp("Stanford Emergency Department")) as a obs("trauma") with a .mod("major operative lower extremity") obs("injury")
+output: seq(enc().loc(hosp("Stanford Emergency Department")), during(obs("trauma")), during(obs("injury").mod("major operative lower extremity")))
+
+input: EXC 1.  Patient eq(temporal_per(PAST)) proc() with only eq(val("one")) drug("cytokine") { drug("Interferon 2 a") , .pol(HIGH) - dose drug("interleukin - 2") }
+output: intersect(proc().temporality(eq(temporal_per(PAST))), drug("cytokine").min_count(eq(val("one"))).equiv(drug("Interferon 2 a"), drug("interleukin - 2").pol(HIGH)))
+
+input: EXC -  cond("Infection") of the .mod("skin at the site of the needle puncture")
+output: cond("Infection").mod("skin at the site of the needle puncture")
+
+input: INC -  clin_score("ASA") eq(val("I"), op(BETWEEN), val("II"))
+output: clin_score("ASA").num_filter(eq(val("I"), op(BETWEEN), val("II")))
+
+input: INC -  .pol(NORMAL) cond("uterus") and cond("ovaries") at proc("transvaginal ultrasound")
+output: intersect(cond("uterus").pol(NORMAL), intersect(cond("ovaries"), proc("transvaginal ultrasound")))
+
+input: INC -  Individuals who have undergone .mod("clinical") and / or .mod("research") proc("genetic evaluation") , found to have or not have a cond("germline genetic variant") { .mod("pathogenic") , .possible() .mod("pathogenic") , variant of uncertain / unknown significance , .possible() .mod("benign") } .
+output: union(cond("germline genetic variant").mod("pathogenic"), cond("germline genetic variant").possible().mod("pathogenic"), cond("germline genetic variant").possible().mod("benign").found_by(proc("genetic evaluation").mod("clinical").mod("research")))
+
+input: EXC -  Presence of cond("psychiatric diseases") { episode or any form of cond("psychosis") , diagnosed by a .prov("psychiatrist") in the eq(temporal_per(PAST), temporal_unit(YEAR)) } .
+output: cond("psychiatric diseases").equiv(cond("psychosis")).prov("psychiatrist").temporality(eq(temporal_per(PAST), temporal_unit(YEAR)))
+
+input: EXC -  eq(temporal_per(PRESENT)) or eq(temporal_per(PAST)) of clinically .severity(SEVERE) cond()
+output: cond().temporality(or(eq(temporal_per(PRESENT)), eq(temporal_per(PAST)))).severity(SEVERE)
+
+input: EXC -  Admitting diagnosis of any of criteria() : - cond("Cardiopulmonary arrest") ; - cond("Raised intracrania pressure") ; - .acute() cond("neurological") .type(ADMISSION) diagnosis ; - cond("Subarachnoid hemorrhage") ; - cond("Ischemic stroke")
+output: criteria(cond("Cardiopulmonary arrest"), cond("Raised intracrania pressure"), cond("neurological").acute().type(ADMISSION), cond("Subarachnoid hemorrhage"), cond("Ischemic stroke"))
+
+input: EXC -  obs("Exercise") .severity(SEVERE) { eq(op(GTEQ), val("10"), temporal_unit(HOUR), per(WEEK)) }
+output: obs("Exercise").severity(SEVERE).num_filter(eq(op(GTEQ), val("10"), temporal_unit(HOUR), per(WEEK)))
+
+input: EXC 6.  .stable() and .change() cond("hypertension") { vital("BP") .stable() eq(op(GT), val("160"), val("100"), unit("mmHg")) }
+output: cond("hypertension").stable().change().equiv(vital("BP").stable().num_filter(eq(op(GT), val("160"), val("100"), unit("mmHg"))))

@@ -1,0 +1,27 @@
+T3	Observation 196 219	PCR test for SARS-CoV-2
+T18	Condition 594 608	rhinosinusitis
+*	OR T15 T16 T17
+T5	Person 320 327	infants
+T16	Condition 524 543	Alzheimer's disease
+T15	Condition 514 522	dementia
+T14	Condition 488 512	neurocognitive disorders
+R4	has_qualifier Arg1:T18 Arg2:T19	
+*	OR T5 T6 T7
+T7	Person 339 348	teenagers
+T17	Condition 545 564	Parkinson's disease
+T6	Person 329 337	children
+T10	Condition 382 404	allergic to fragrances
+T1	Informed_consent 21 72	Provision of signed and dated informed consent form
+T19	Qualifier 586 593	Chronic
+T20	Qualifier 577 582	Acute
+T11	Procedure 416 456	surgery on the nose or paranasal sinuses
+T4	Informed_consent 259 283	Adults unable to consent
+T2	Non-query-able 73 174	Stated willingness to comply with all study procedures and availability for the duration of the study
+*	OR T19 T20
+T8	Observation 284 318	Individuals who are not yet adults
+R2	has_temporal Arg1:T11 Arg2:T12	
+R3	subsumes Arg1:T14 Arg2:T15	
+T9	Condition 350 358	Pregnant
+T12	Observation 405 415	History of
+T13	Observation 457 467	Asthmatics
+R1	subsumes Arg1:T8 Arg2:T5	

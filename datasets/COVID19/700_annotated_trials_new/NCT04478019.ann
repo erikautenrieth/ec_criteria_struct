@@ -1,0 +1,18 @@
+*	OR T9 T10
+T4	Condition 301 309	COVID-19
+T12	Pregnancy_considerations 621 714	Participant is female who is pregnant, or believes she may be pregnant, at time of enrollment
+T10	Observation 414 441;469 494	medical contraindication to povidone-iodine treatment
+T2	Non-query-able 109 195	Participant is willing and able to perform intervention and data collection procedures
+T8	Temporal 386 407	at time of enrollment
+T6	Reference_point 335 345	enrollment
+T5	Temporal 310 345	within 2 months prior to enrollment
+T3	Informed_consent 197 264	Participant is able to provide informed consent in English language
+T7	Observation 350 385	active respiratory illness symptoms
+R2	has_temporal Arg1:T4 Arg2:T5	
+T1	Observation 21 107	Participant is a frontline healthcare worker involved in the care of COVID-19 patients
+*	OR T4 T7
+R3	has_temporal Arg1:T7 Arg2:T8	
+T9	Observation 414 465	medical contraindication to chlorhexidine gluconate
+R1	has_index Arg1:T5 Arg2:T6	
+T13	Competing_trial 716 845	Participant is actively taking/using any treatments or interventions as part of any other COVID-19 related investigational trials
+T11	Non-query-able 533 619	Participant has a known medical and/or surgical reason prohibiting nasal swab sampling

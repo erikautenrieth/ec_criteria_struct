@@ -1,0 +1,49 @@
+E2	Drug:T2 
+E4	Drug:T4 Name:T22
+E6	Negation:T6 Negates:E7 Negates2:E9
+E7	Condition:T7 Name:T23
+E9	Condition:T9 Name:T24
+E10	Condition:T10 Name:T25
+E11	Condition:T11 Name:T26
+E13	Eq-Comparison:T13 Temporal-Period:T27
+E14	Drug:T14 Temporality:E13
+E15	Drug:T15 Name:T28
+E17	Other:T17 Is-Other:E18
+E18	Drug:T18 Name:T29
+E20	Study:T20 
+E21	Negation:T21 Negates:E20
+E22	Negation:T30 Negates:E2
+E1	Negation:T1 Negates:E4
+T2	Drug 114 124	medication
+T4	Drug 143 162	dietary supplements
+T6	Negation 191 193	no
+T7	Condition 194 218	blood clotting disorders
+T9	Condition 222 235	dyslipidaemia
+T10	Condition 274 292	clotting disorders
+T11	Condition 294 306	dyslipidemia
+T13	Eq-Comparison 316 318	on
+T14	Drug 319 329	medication
+T15	Drug 336 343	statins
+T17	Other 348 353	other
+T18	Drug 354 365	supplements
+T20	Study 377 382	study
+T21	Negation 391 399	excluded
+T22	Drug-Name 143 162	dietary supplements
+T23	Condition-Name 194 218	blood clotting disorders
+T24	Condition-Name 222 235	dyslipidaemia
+T25	Condition-Name 274 292	clotting disorders
+T26	Condition-Name 294 306	dyslipidemia
+T27	Eq-Temporal-Period 316 318	on
+T28	Drug-Name 336 343	statins
+T29	Drug-Name 354 365	supplements
+T30	Negation 110 113	off
+T1	Negation 129 132	off
+A4	Eq-Temporal-Period-Value T27 present
+R1	Example-Of Arg1:E15 Arg2:E14
+R2	And Arg1:E22 Arg2:E1
+R3	Or Arg1:E7 Arg2:E9
+R4	Or Arg1:E11 Arg2:E14
+R5	Or Arg1:E15 Arg2:E18
+R6	During Arg1:E18 Arg2:E20
+R7	And Arg1:E9 Arg2:E10
+R8	Or Arg1:E10 Arg2:E11

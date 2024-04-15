@@ -1,0 +1,14 @@
+T6	Visit 224 248	admitted to covered ward
+*	OR T6 T7
+T4	Non-query-able 90 185	Patient had COViage applied to electronic health record data within four hours of COVID-19 test
+T2	Measurement 60 64;76 88	test for COVID-19
+T1	Visit 31 55	admitted to covered ward
+R2	has_value Arg1:T8 Arg2:T7	
+T7	Value 259 267	negative
+R3	has_negation Arg1:T6 Arg2:T5	
+*	OR T1 T2
+T8	Measurement 252 258;268 280	tested for COVID-19
+T5	Negation 220 223	not
+T9	Non-query-able 282 386	Patient had COViage applied to electronic health record data greater than four hours after COVID-19 test
+T3	Value 67 75	positive
+R1	has_value Arg1:T2 Arg2:T3	

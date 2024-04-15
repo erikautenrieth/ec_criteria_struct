@@ -1,0 +1,37 @@
+*	OR T25 T13 T14 T15
+T4	Measurement 170 184	blood pressure
+T25	Visit 514 565	ED respiratory or pulmonary pod or similar location
+T7	Measurement 208 224	respiratory rate
+*	OR T4 T5 T6 T7
+T14	Measurement 644 659	SARS-CoV-2 test
+R9	has_context Arg1:T15 Arg2:T20	
+T13	Measurement 593 616	respiratory viral panel
+R6	has_value Arg1:T21 Arg2:T22	
+R1	has_value Arg1:T3 Arg2:T2	
+T16	Value 706 714	positive
+R5	has_value Arg1:T15 Arg2:T16	
+R7	has_context Arg1:T21 Arg2:T23	
+T10	Reference_point 368 407	since the first vital sign was recorded
+T8	Qualifier 158 161	any
+T3	Person 21 29	Subjects
+T15	Measurement 723 738	SARS-CoV-2 test
+R2	has_qualifier Arg1:T4 Arg2:T8	
+T11	Measurement 269 289	complete blood count
+T23	Observation 962 1005	insufficient quantity for SeptiScan testing
+T20	Observation 675 688	self-reported
+T26	Observation 481 506	designated for evaluation
+T9	Temporal 351 407	within 4.5 hours since the first vital sign was recorded
+T2	Value 113 134	18 years old or older
+T12	Condition 435 456	respiratory infection
+T17	Temporal 739 765	within the previous 7 days
+T22	Value 952 960	< 300 ul
+R4	has_temporal Arg1:T11 Arg2:T9	
+T18	Observation 770 804	returning with a related complaint
+R11	AND Arg1:T17 Arg2:T18	
+R8	subsumes Arg1:T12 Arg2:T25	
+T21	Measurement 929 948	Blood sample volume
+T6	Measurement 199 204	pulse
+R10	has_temporal Arg1:T15 Arg2:T17	
+R12	has_context Arg1:T25 Arg2:T26	
+T5	Measurement 186 197	temperature
+R3	has_index Arg1:T9 Arg2:T10	

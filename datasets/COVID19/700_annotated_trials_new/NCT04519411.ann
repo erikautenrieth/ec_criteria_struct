@@ -1,0 +1,46 @@
+T21	Condition 452 485	esophageal anatomic abnormalities
+T4	Person 21 29	Patients
+T2	Value 30 40	0-17 years
+T26	Observation 651 731	as determined by standard pregnancy testing criteria for Pediatric ICU admission
+R16	has_qualifier Arg1:T22 Arg2:T23	
+R2	has_value Arg1:T4 Arg2:T3	
+T13	Person 290 298	Patients
+T23	Qualifier 501 507	severe
+*	OR T20 T21
+R14	subsumes Arg1:T15 Arg2:T16	
+T6	Procedure 134 157	endotracheal intubation
+R7	AND Arg1:T6 Arg2:T7	
+T25	Condition 641 649	pregnant
+R5	AND Arg1:T1 Arg2:T5	
+T16	Condition 365 392	chronic respiratory failure
+*	OR T12 T11
+R17	has_context Arg1:T22 Arg2:T24	
+R1	has_value Arg1:T1 Arg2:T2	
+R13	has_qualifier Arg1:T15 Arg2:T17	
+T7	Procedure 162 184	mechanical ventilation
+R4	has_context Arg1:T8 Arg2:T9	
+R10	has_context Arg1:T5 Arg2:T12	
+R11	has_value Arg1:T13 Arg2:T14	
+T22	Condition 508 520	coagulopathy
+T19	Condition 414 432	esophageal disease
+T1	Person 44 47	age
+T15	Procedure 341 363	mechanical ventilation
+T8	Visit 185 193	admitted
+R12	has_context Arg1:T15 Arg2:T18	
+R9	has_mood Arg1:T6 Arg2:T10	
+R6	AND Arg1:T5 Arg2:T6	
+T18	Observation 320 332	pre-existing
+R15	subsumes Arg1:T19 Arg2:T20	
+T3	Value 49 65	10 kg or greater
+T14	Value 299 305	<10 kg
+T17	Qualifier 333 340	chronic
+R3	AND Arg1:T4 Arg2:T1	
+T24	Observation 522 622	for which placement of esophageal balloon or other gastric tube via nose or mouth is contraindicated
+T10	Mood 124 133	requiring
+T5	Condition 95 123	Covid-19 respiratory failure
+T9	Observation 194 266	to Mayo Clinic Hospital, St. Mary's Campus Pediatric Intensive Care Unit
+R8	AND Arg1:T7 Arg2:T8	
+T12	Observation 72 81	suspected
+T20	Condition 434 444	strictures
+T11	Observation 85 94	confirmed
+R18	has_context Arg1:T25 Arg2:T26	

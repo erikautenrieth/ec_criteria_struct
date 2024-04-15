@@ -1,0 +1,60 @@
+T13	Measurement 600 603	QTc
+R13	has_value Arg1:T13 Arg2:T14	
+R10	has_value Arg1:T9 Arg2:T10	
+R18	has_temporal Arg1:T9_mml Arg2:T22	
+T1_mml	Value 27 48	greater than 18 years
+T61_mml	Condition 652 660	Pregnant
+T3	Qualifier 142 156	characteristic
+T33_mml	Reference_point 317 335	date of enrollment
+T65_mml	Observation 474 485	on room air
+T22	Temporal 1134 1167	within 30 days prior to admission
+R12	AND Arg1:T9 Arg2:T11	
+T4_mml	Observation 285 302	Onset of symptoms
+*	OR T9_mml T20_mml
+R6	has_temporal Arg1:T4_mml Arg2:T5	
+R15	AND Arg1:T31_mml Arg2:T61_mml	
+T34_mml	Person 23 26	Age
+R7	has_value Arg1:T6 Arg2:T7	
+T9_mml	Drug 1099 1111	azithromycin
+*	OR T6 T9
+R1	has_value Arg1:T34_mml Arg2:T1_mml	
+*	OR T61_mml T16
+*	OR T17 T18
+T20	Mood 1066 1075	requiring
+T1	Observation 82 136	onsistent clinical syndrome (based on clinical picture
+T20_mml	Drug 1115 1133	hydroxychloroquine
+T12	Post-eligibility 518 573	Ability and willingness to comply with study procedures
+T21	Visit 1076 1090	ICU level care
+R4	has_qualifier Arg1:T2 Arg2:T3	
+T11	Observation 486 516	consistent with severe disease
+T2	Condition 157 183	infiltrates on chest x-ray
+R5	has_index Arg1:T5 Arg2:T33_mml	
+*	OR T26_mml T1
+R2	has_value Arg1:T26_mml Arg2:T37_mml	
+T4	Observation 185 204	laboratory findings
+T8	Observation 375 443	with defined risk factors (Table 1) consistent with moderate disease
+T9	Measurement 447 464	oxygen saturation
+R19	has_index Arg1:T22 Arg2:T58_mml	
+R11	has_context Arg1:T9 Arg2:T65_mml	
+T37_mml	Value 50 58	Positive
+T6	Measurement 337 354	Oxygen saturation
+T5_mml	Observation 363 374	on room air
+R8	has_context Arg1:T6 Arg2:T5_mml	
+T58_mml	Reference_point 1158 1167	admission
+T16	Condition 664 673	lactating
+T14	Value 604 633	greater than 450 milliseconds
+T17	Condition 681 709	Inability to take oral pills
+T26_mml	Measurement 59 77	SARS-CoV-2 testing
+R16	has_mood Arg1:T21 Arg2:T20	
+T31_mml	Person 674 679	women
+T19	Informed_consent 746 1054	Inability to obtain informed consent either from the patient or from the next of kin if patient is incapacitated. For the purpose of this study obtaining a verbal consent from a family member on the phone with a witness will be considered acceptable since there is a 'no visitor' policy in force at hospitals
+T15	Observation 634 650	on screening EKG
+T5	Temporal 303 335	< 7 days from date of enrollment
+T7	Value 358 362	>94%
+R17	has_temporal Arg1:T20_mml Arg2:T22	
+T18	Observation 713 744	inability to use a feeding tube
+R14	has_context Arg1:T13 Arg2:T15	
+*	OR T2 T4
+R3	subsumes Arg1:T1 Arg2:T2	
+T10	Value 468 473	< 94%
+R9	AND Arg1:T6 Arg2:T8	

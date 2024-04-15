@@ -1,0 +1,92 @@
+T69_DdMmlC2Q	Procedure 629 648	supplemental oxygen
+T9_DdMmlC2Q	Value 600 604	<94%
+T18	Observation 408 502	confirmed per World Health Organization criteria (including positive RT-PCR nucleic acid test)
+T21	Observation 1482 1491	untreated
+T31	Temporal 1422 1449	during the screening period
+T21_DdMmlC2Q	Observation 605 616	on room air
+T16	Qualifier 1178 1184	active
+R34	has_value Arg1:T4_DdMmlC2Q Arg2:T9_DdMmlC2Q	
+R36	has_mood Arg1:T69_DdMmlC2Q Arg2:T3	
+R3	has_context Arg1:T9 Arg2:T34	
+T23	Condition 1567 1591;1593 1603;1609 1610	congestive heart failure NYHA Grade 4
+T6	Temporal 756 776	at time of screening
+R21	has_temporal Arg1:T37_DdMmlC2Q Arg2:T14_DdMmlC2Q	
+T34	Observation 523 550	documented radiographically
+T30	Condition 1394 1412	hepatic impairment
+T19	Person 293 296	Men
+T12	Condition 1196 1202;1220 1229	fungal infection
+T25	Measurement 1266 1296	Alanine aminotransferase (ALT)
+*	OR T24_DdMmlC2Q T37_DdMmlC2Q T16_DdMmlC2Q T23
+T11	Condition 1185 1194;1220 1229	bacterial infection
+R23	has_qualifier Arg1:T35 Arg2:T36	
+R9	has_temporal Arg1:T15 Arg2:T6	
+T9	Condition 503 521	COVID-19 pneumonia
+R17	has_value Arg1:T26 Arg2:T28	
+T40	Temporal 1840 1886	within 14 days before first dose of study drug
+T28	Value 1349 1379	3x upper limit of normal (ULN)
+R12	AND Arg1:T19 Arg2:T47_DdMmlC2Q	
+T38	Observation 1140 1154	breast feeding
+R1	has_context Arg1:T2 Arg2:T18	
+T15	Condition 736 755	Respiratory failure
+R11	has_temporal Arg1:T17 Arg2:T35_DdMmlC2Q	
+R26	has_temporal Arg1:T39 Arg2:T40	
+R30	has_mood Arg1:T33 Arg2:T32	
+T1	Temporal 323 371	at the time of signing the informed consent form
+T14	Condition 1214 1229	other infection
+T37_DdMmlC2Q	Condition 1517 1538	myocardial infarction
+*	OR T22 T21
+T72_DdMmlC2Q	Condition 1239 1264	infection with SARS-CoV-2
+T4	Informed_consent 21 292	Ability to understand the purpose and risks of the study and provide signed and dated informed consent or have a legal representative provide consent and authorization to use protected health information (in accordance with national and local patient privacy regulations)
+R4	has_temporal Arg1:T47_DdMmlC2Q Arg2:T1	
+R33	AND Arg1:T33 Arg2:T4_DdMmlC2Q	
+T3	Mood 620 628	requires
+R22	has_context Arg1:T24_DdMmlC2Q Arg2:T24	
+T33	Visit 562 577	hospitalization
+T44_DdMmlC2Q	Condition 784 792	COVID-19
+T5	Non-query-able 649 670	Able to swallow pills
+T20	Observation 1492 1503	symptomatic
+R24	has_qualifier Arg1:T39 Arg2:T36	
+R19	AND Arg1:T21 Arg2:T20	
+R18	has_value Arg1:T25 Arg2:T28	
+T4_DdMmlC2Q	Measurement 582 599	oxygen saturation
+R10	AND Arg1:T15 Arg2:T44_DdMmlC2Q	
+T29	Qualifier 1387 1393	severe
+T17	Procedure 1074 1095	medical resuscitation
+R15	has_qualifier Arg1:T30 Arg2:T29	
+T32	Mood 552 561	requiring
+T39	Drug 1746 1769;1831 1838	cytochrome P450 (CYP)3A inducer
+T37	Temporal 1781 1826	within 7 days before first dose of study drug
+T24	Observation 1613 1721	Exception: Subjects with controlled, asymptomatic atrial fibrillation during screening are allowed to enroll
+R25	has_temporal Arg1:T35 Arg2:T37	
+T27	Measurement 1338 1347	bilirubin
+T10	Negation 1231 1238	besides
+T22	Observation 1466 1478	Uncontrolled
+*	OR T4_DdMmlC2Q T69_DdMmlC2Q
+*	OR T25 T26 T27 T30
+R7	has_qualifier Arg1:T11 Arg2:T16	
+R5	subsumes Arg1:T14 Arg2:T72_DdMmlC2Q	
+R16	has_value Arg1:T27 Arg2:T28	
+T16_DdMmlC2Q	Condition 1567 1591;1593 1605	congestive heart failure NYHA Grade 3
+T35_DdMmlC2Q	Temporal 1096 1127	within 14 days of randomization
+R8	AND Arg1:T9 Arg2:T33	
+T45_DdMmlC2Q	Condition 1128 1136	Pregnant
+T26	Measurement 1298 1330	aspartate aminotransferase (AST)
+T13	Condition 1204 1209;1220 1229	viral infection
+T24_DdMmlC2Q	Condition 1504 1515	arrhythmias
+T7	Observation 804 1067	Subjects are eligible if utilizing oxygen delivered by high-flow nasal cannula at flow rates <30 L/min and fraction of delivered oxygen <0.6, and in the opinion of the treating physician are unlikely to require mechanical ventilation within the immediate 24 hours
+T36	Qualifier 1739 1745	strong
+R2	has_value Arg1:T47_DdMmlC2Q Arg2:T50_DdMmlC2Q	
+*	OR T45_DdMmlC2Q T38
+T50_DdMmlC2Q	Value 307 315	18 years
+R13	has_value Arg1:T19 Arg2:T50_DdMmlC2Q	
+*	OR T35 T39
+T14_DdMmlC2Q	Temporal 1539 1562	within the last 6 weeks
+R35	has_context Arg1:T4_DdMmlC2Q Arg2:T21_DdMmlC2Q	
+T35	Drug 1746 1779	cytochrome P450 (CYP)3A inhibitor
+R20	has_context Arg1:T24_DdMmlC2Q Arg2:T20	
+T8	Pregnancy_considerations 671 713	Willing to follow contraception guidelines
+R14	has_temporal Arg1:T30 Arg2:T31	
+T2	Condition 372 407	Confirmed infection with SARS-CoV-2
+*	OR T11 T12 T13 T14
+R6	has_negation Arg1:T72_DdMmlC2Q Arg2:T10	
+T47_DdMmlC2Q	Person 301 306	women

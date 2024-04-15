@@ -1,0 +1,235 @@
+T1	Person 23 27	Male
+T2	Person 32 38	female
+T3	Person 61 64	age
+T4	Value 49 57	18 years
+*	OR T1 T2
+R1	AND Arg1:T3 Arg2:T2	
+R2	has_value Arg1:T3 Arg2:T4	
+T5	Condition 67 77	SARS-CoV-2
+T6	Observation 88 161	confirmed by Food and Drug Administration (FDA)- authorized COVID-19 test
+T7	Temporal 163 192	5 days prior to randomization
+T8	Reference_point 170 192	prior to randomization
+R3	has_index Arg1:T7 Arg2:T8	
+R4	has_context Arg1:T5 Arg2:T6	
+R5	has_temporal Arg1:T5 Arg2:T7	
+T9	Observation 238 251	symptom onset
+T10	Temporal 195 226	Less than or equal to 120 hours
+T11	Reference_point 255 268	randomization
+R6	has_index Arg1:T10 Arg2:T11	
+R7	has_temporal Arg1:T9 Arg2:T10	
+T12	Observation 870 908	increased level of cytokine production
+T13	Measurement 733 743	Heart rate
+T14	Value 746 761	90 beats/minute
+T15	Measurement 690 694	SpO2
+T16	Value 696 701	> 93%
+T17	Observation 702 726	on room air at sea level
+R8	has_value Arg1:T15 Arg2:T16	
+R9	has_context Arg1:T15 Arg2:T17	
+R10	has_value Arg1:T13 Arg2:T14	
+T18	Measurement 651 667	Respiratory rate
+T19	Value 670 687	20 breaths/minute
+R11	has_value Arg1:T18 Arg2:T19	
+T20	Qualifier 287 295	moderate
+T21	Condition 296 304	COVID-19
+R12	has_qualifier Arg1:T21 Arg2:T20	
+T22	Condition 314 319	fever
+T23	Measurement 321 334	temperature  
+T24	Value 334 338	38 C
+T25	Value 341 348	100.4 F
+R13	has_value Arg1:T23 Arg2:T24	
+R14	has_value Arg1:T23 Arg2:T25	
+R15	subsumes Arg1:T22 Arg2:T23	
+T26	Condition 354 373;375 388	shortness of breath with exertion
+T27	Procedure 405 411	oxygen
+T28	Negation 391 394	not
+T29	Mood 395 404	requiring
+R16	has_mood Arg1:T27 Arg2:T29	
+R17	has_negation Arg1:T27 Arg2:T28	
+R18	subsumes Arg1:T21 Arg2:T22	
+R19	AND Arg1:T22 Arg2:T26	
+R20	AND Arg1:T26 Arg2:T27	
+T30	Observation 417 518	meeting the definition of "moderate" as set forth by the May 2020 FDA Guidance for Industry: COVID-19
+R21	AND Arg1:T27 Arg2:T30	
+T31	Multiplier 617 620	all
+R22	has_multiplier Arg1:T30 Arg2:T31	
+R23	subsumes Arg1:T30 Arg2:T18	
+R24	AND Arg1:T18 Arg2:T15	
+R25	AND Arg1:T15 Arg2:T13	
+T32	Person 933 936	age
+T33	Value 913 929	70 years or more
+R26	has_value Arg1:T32 Arg2:T33	
+T34	Condition 939 946	Obesity
+T35	Measurement 948 953	BMI  
+T36	Value 953 961	30 kg/m2
+T37	Condition 965 973;975 981	Diabetes type 1
+T38	Condition 1003 1015	hypertension
+T39	Condition 965 973;975 979;985 986	Diabetes type 2
+R27	subsumes Arg1:T34 Arg2:T35	
+R28	has_value Arg1:T35 Arg2:T36	
+T40	Qualifier 990 1002	Uncontrolled
+R29	has_qualifier Arg1:T38 Arg2:T40	
+T41	Condition 1024 1043	respiratory disease
+T42	Condition 1055 1061	asthma
+T43	Condition 1065 1109	chronic obstructive pulmonary disease [COPD]
+T44	Condition 1119 1132	heart failure
+T45	Qualifier 1018 1023	Known
+T46	Qualifier 1113 1118	Known
+R30	has_qualifier Arg1:T41 Arg2:T45	
+R31	has_qualifier Arg1:T44 Arg2:T46	
+R32	subsumes Arg1:T41 Arg2:T42	
+*	OR T42 T43
+T47	Condition 1272 1288	coronary disease
+T48	Qualifier 1266 1271	Known
+R33	has_qualifier Arg1:T47 Arg2:T48	
+R34	subsumes Arg1:T12 Arg2:T32	
+*	OR T32 T34 T39 T37 T38 T41 T44 T47
+T49	Measurement 1295 1311	Plasma CRP level
+T50	Value 1313 1320	20 mg/L
+T51	Temporal 1321 1354	at Screening/Baseline/Day 1 Visit
+R35	has_value Arg1:T49 Arg2:T50	
+R36	has_temporal Arg1:T49 Arg2:T51	
+T52	Non-query-able 1357 1549	Acceptable overall medical condition to be safely enrolled in and complete the study (with specific regard to cardiovascular, renal, and hepatic conditions) in the opinion of the Investigator;
+T53	Informed_consent 1551 1829	Ability to provide written, informed consent prior to initiation of any study- related procedures, and ability (in the opinion of the Investigator) to understand and comply with all the requirements of the study, which includes abstaining from the use of prohibited medications.
+T54	Observation 2059 2066	nursing
+T55	Pregnancy_considerations 2092 2206	Are not using an acceptable, highly effective method of contraception until all follow-up procedures are complete.
+T56	Condition 1992 2000	pregnant
+T57	Person 2068 2074	female
+R37	AND Arg1:T57 Arg2:T54	
+T58	Condition 2250 2263	organ failure
+T59	Qualifier 2240 2249	new-onset
+T60	Qualifier 2224 2236	pre-existing
+R38	has_qualifier Arg1:T58 Arg2:T59	
+*	OR T60 T59
+T61	Condition 2335 2359	gastrointestinal disease
+T62	Condition 2321 2330;2352 2359	endocrine disease
+T63	Condition 2314 2319;2352 2359	renal disease
+T64	Condition 2298 2312;2352 2359	nervous system disease
+*	OR T64 T63 T62 T61
+T65	Qualifier 2287 2297	concurrent
+T66	Qualifier 2278 2286	moderate
+*	OR T65 T66
+R39	has_qualifier Arg1:T64 Arg2:T65	
+T67	Drug 4116 4125	ibuprofen
+T68	Drug 4129 4139	diclofenac
+T69	Drug 4148 4158	colchicine
+T70	Drug 4167 4184	systemic steroids
+T71	Temporal 4185 4216	within 30 days of randomization
+T72	Drug 4225 4254	janus kinase (JAK) inhibitors
+T73	Reference_point 4203 4216	randomization
+*	OR T67 T68
+R40	has_temporal Arg1:T70 Arg2:T71	
+R41	has_index Arg1:T71 Arg2:T73	
+T74	Condition 5140 5156	renal impairment
+T75	Observation 5129 5139	history of
+T76	Measurement 5164 5207	calculated glomerular filtration rate [GFR]
+T77	Value 5208 5219	< 45 mL/min
+R42	has_value Arg1:T76 Arg2:T77	
+R43	subsumes Arg1:T74 Arg2:T76	
+R44	has_temporal Arg1:T74 Arg2:T75	
+T78	Non-query-able 5898 5931	Individuals who are incarcerated;
+T79	Competing_trial 5933 6090	Participation in any clinical trial and/or use of any investigational product within the immediate 30-day period prior to the Screening/Baseline//Day 1 Visit
+T80	Condition 5458 5467	infection
+T81	Observation 5447 5457	History of
+R45	has_temporal Arg1:T80 Arg2:T81	
+T82	Qualifier 5477 5483	active
+T83	Qualifier 5471 5476	known
+T84	Condition 5484 5493	infection
+*	OR T83 T82
+R46	has_qualifier Arg1:T84 Arg2:T82	
+T85	Condition 5499 5533	human immunodeficiency virus (HIV)
+T86	Condition 5535 5558	hepatitis B virus (HBV)
+T87	Condition 5563 5586	hepatitis C virus (HCV)
+*	OR T85 T86 T87
+R47	subsumes Arg1:T84 Arg2:T85	
+T88	Visit 5854 5875	chronic care facility
+T89	Temporal 5876 5895	in the past 30 days
+R48	has_temporal Arg1:T88 Arg2:T89	
+T90	Non-query-able 5589 5820	Any other concomitant medical or psychiatric conditions, diseases, or prior surgeries that, in the opinion of the Investigator, would impair the subject from safely participating in the trial and/or completing protocol requirements
+T91	Condition 5257 5269	malignancies
+T92	Temporal 5280 5307	within the previous 5 years
+R49	has_temporal Arg1:T91 Arg2:T92	
+T93	Negation 5309 5315	except
+T94	Condition 5335 5370	squamous cell carcinoma of the skin
+T95	Condition 5320 5331;5344 5370	local basal cell carcinoma of the skin
+T96	Condition 5374 5411	carcinoma in situ of the cervix uteri
+*	OR T95 T94 T96
+R50	has_negation Arg1:T94 Arg2:T93	
+T97	Qualifier 5426 5443	excised and cured
+R51	has_qualifier Arg1:T96 Arg2:T97	
+R52	AND Arg1:T91 Arg2:T95	
+T98	Drug 4287 4305	hydroxychloroquine
+T99	Drug 4307 4317	remdesivir
+T100	Drug 4319 4332	dexamethasone
+T101	Drug 4407 4417	adalimumab
+T102	Drug 4419 4429	infliximab
+T103	Drug 4431 4441	etanercept
+T104	Drug 4443 4452	golimumab
+T105	Drug 4454 4472	certolizumab pegol
+T106	Drug 4474 4485	tocilizumab
+T107	Drug 4487 4496	sarilumab
+T108	Drug 4498 4506	anakinra
+T109	Drug 4508 4519	canakinumab
+T110	Drug 4521 4531	rilonacept
+T111	Drug 4533 4544	baricitinib
+T112	Drug 4546 4557	tofacitinib
+T113	Drug 4562 4574	upadacitinib
+*	OR T98 T99 T100
+*	OR T101 T102 T103 T104 T105 T106 T107 T108 T109 T110 T111 T112 T113
+T114	Drug 4338 4376	biologic and oral anti-cytokine agents
+R53	subsumes Arg1:T114 Arg2:T101	
+T115	Non-query-able 4580 5118	Note: During the treatment period a patient may meet the criteria for a treatment approved by the FDA specifically for COVID-19 (e.g. remdesivir). In this situation the investigator and medical monitor should confer and take the most appropriate decision for the patient. If possible, the preference would be for the patient to complete the 14 days of dosing before adding on the 2nd treatment. If that is not possible the preference would be for the patient to continue their 14 days on dapansutrile and complete all study related visits
+T116	Procedure 3830 3836	oxygen
+T117	Procedure 3844 3857	nasal cannula
+T118	Procedure 3859 3866	proning
+T119	Procedure 3868 3890	mechanical ventilation
+T120	Procedure 3898 3917	supplemental oxygen
+T121	Temporal 3798 3802	Past
+T122	Temporal 3806 3813	present
+*	OR T121 T122
+R54	has_temporal Arg1:T116 Arg2:T122	
+R55	subsumes Arg1:T116 Arg2:T117	
+*	OR T117 T118 T119 T120
+T123	Mood 3814 3825	requirement
+R56	has_mood Arg1:T116 Arg2:T123	
+T124	Condition 3769 3795	secondary immunodeficiency
+T125	Condition 3758 3765;3779 3795	primary immunodeficiency
+*	OR T125 T124
+T126	Qualifier 3751 3757	active
+T127	Observation 3727 3737	History of
+R57	has_context Arg1:T125 Arg2:T127	
+R58	has_qualifier Arg1:T125 Arg2:T126	
+*	OR T127 T126
+T128	Non-query-able 3495 3721	Close contact (i.e., share the same air space in a household or other enclosed environment for a prolonged period (days or weeks, not minutes or hours)) with a person with active pulmonary TB disease within the last 12 months.
+T129	Condition 2960 2984	active tuberculosis (TB)
+T130	Temporal 2995 3028	at Screening/Baseline/Day 1 Visit
+R59	has_temporal Arg1:T129 Arg2:T130	
+T131	Condition 2860 2874	liver disease,
+T132	Temporal 2852 2859	current
+R60	has_temporal Arg1:T131 Arg2:T132	
+T133	Condition 3252 3267	substance abuse
+T134	Visit 3228 3249	chronic care facility
+T135	Non-query-able 3304 3490	health-care workers with unprotected exposure to subjects who are at high risk of TB or subjects with TB disease before the identification and correct airborne precautions of the subject
+*	OR T134 T133
+T136	Condition 2756 2777	myocardial infarction
+T137	Temporal 2778 2837	in the 6 months prior to the Screening/Baseline/Day 1 Visit
+T138	Reference_point 2794 2837	prior to the Screening/Baseline/Day 1 Visit
+R61	has_index Arg1:T137 Arg2:T138	
+R62	has_temporal Arg1:T136 Arg2:T137	
+T139	Observation 2745 2755	History of
+R63	has_temporal Arg1:T136 Arg2:T139	
+T140	Drug 2719 2734	vasoactive drug
+T141	Mood 2703 2711	Required
+R64	has_mood Arg1:T140 Arg2:T141	
+T142	Condition 2471 2481	arrhythmia
+T143	Condition 2483 2507;2509 2544	congestive heart failure New York Heart Association Class IV
+T144	Condition 2547 2562	unstable angina
+T145	Condition 2577 2589	hypertension
+T146	Qualifier 2564 2576	uncontrolled
+R65	has_qualifier Arg1:T145 Arg2:T146	
+T147	Condition 2591 2604	cor pulmonale
+T148	Condition 2621 2641	pericardial effusion
+T149	Qualifier 2609 2620	symptomatic
+R66	has_qualifier Arg1:T148 Arg2:T149	
+*	OR T142 T143 T144 T145 T147 T148
+T150	Qualifier 2459 2470	significant
+R67	has_qualifier Arg1:T142 Arg2:T150	

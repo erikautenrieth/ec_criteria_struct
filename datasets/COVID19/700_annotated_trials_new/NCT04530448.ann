@@ -1,0 +1,25 @@
+T1	Condition 33 41	COVID-19
+T2	Visit 52 68	Admission to ICU
+T3	Person 88 93	Age  
+T4	Value 93 105	18 years old
+R1	has_value Arg1:T3 Arg2:T4	
+T5	Visit 52 64;72 86	Admission to step-down unit
+*	OR T2 T5
+T6	Condition 132 143	Stage 3 AKI
+T7	Observation 144 161	by KDIGO criteria
+R2	has_context Arg1:T6 Arg2:T7	
+T8	Condition 163 174	CKD stage 4
+T9	Condition 163 172;175 176	CKD stage 5
+*	OR T8 T9
+T10	Observation 178 221	Contraindications to Na bicarbonate therapy
+T11	Condition 228 242	met. alkalosis
+T12	Condition 251 264	heart failure
+T13	Qualifier 244 250	severe
+R3	has_qualifier Arg1:T12 Arg2:T13	
+*	OR T11 T12
+R4	subsumes Arg1:T10 Arg2:T11	
+T14	Measurement 267 275	Urine pH
+T15	Value 276 281	> 7.0
+R5	has_value Arg1:T14 Arg2:T15	
+T16	Observation 23 32;42 50	Confirmed positive
+R6	has_context Arg1:T1 Arg2:T16	

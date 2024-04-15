@@ -1,0 +1,38 @@
+R6	has_value Arg1:T12 Arg2:T10_DdMmlC2Q	
+R1	has_value Arg1:T1 Arg2:T8_DdMmlC2Q	
+T16_DdMmlC2Q	Condition 62 71	SARS CoV2
+R2	has_temporal Arg1:T0_DdMmlC2Q Arg2:T5	
+*	OR T2_DdMmlC2Q T11
+R7	has_context Arg1:T14 Arg2:T15	
+T16	Condition 638 668	infectious respiratory illness
+T4	Negation 145 147	no
+T14	Condition 593 602	SARS CoV2
+T11	Observation 435 449	breast-feeding
+T0_DdMmlC2Q	Condition 157 169	lung disease
+R4	has_negation Arg1:T0_DdMmlC2Q Arg2:T4	
+R9	has_qualifier Arg1:T16 Arg2:T18	
+T12	Measurement 505 511	weight
+T10_DdMmlC2Q	Value 519 526	>350lbs
+T15	Observation 575 587;603 624	Re-infection between scan sessions
+T7	Temporal 229 264	during infectious/ diagnosis period
+R3	has_temporal Arg1:T0_DdMmlC2Q Arg2:T3	
+T5	Temporal 170 198	prior to SARS CoV2 infection
+T3	Temporal 148 156	previous
+T18	Qualifier 631 637	active
+T2_DdMmlC2Q	Condition 423 431	pregnant
+T1	Person 35 38	age
+T8_DdMmlC2Q	Value 40 46	18 yrs
+T2	Multiplier 82 94	2 sequential
+T6	Measurement 110 115;95 100	tests COVID
+T8	Value 101 109	negative
+R5	has_value Arg1:T6 Arg2:T8	
+T9	Temporal 116 134	prior to each scan
+R10	has_temporal Arg1:T6 Arg2:T9	
+T10	Observation 199 222	Lung image (Xray or CT)
+R11	has_temporal Arg1:T10 Arg2:T7	
+T13	Informed_consent 265 304	Will sign the IRB-approved consent form
+T17	Non-query-able 305 363	Able to remain motionless for up to 30-60 minutes per scan
+T19	Non-query-able 387 408	Life expectancy <3 mo
+T20	Observation 463 493	cannot undergo PET/CT scanning
+R12	subsumes Arg1:T20 Arg2:T12	
+R8	has_multiplier Arg1:T6 Arg2:T2	

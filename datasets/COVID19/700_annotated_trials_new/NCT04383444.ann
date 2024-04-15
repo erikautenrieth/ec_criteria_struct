@@ -1,0 +1,28 @@
+T2	Observation 160 207	able to come to the NIH campus for study visits
+R3	subsumes Arg1:T6 Arg2:T8	
+T15	Condition 1072 1077	Fever
+T14	Temporal 1039 1067	within the previous 48 hours
+T3	Person 210 213	Age
+*	OR T15 T16 T17 T18 T19 T20 T21
+T17	Condition 1106 1117	Sore throat
+R2	has_value Arg1:T3 Arg2:T4	
+T21	Condition 1163 1176	Loss of smell
+T6	Observation 399 409;410 434	History of SARS-CoV-2 risk exposure
+T20	Condition 1148 1161	Loss of taste
+T19	Condition 1126 1146	Difficulty breathing
+T9	Non-query-able 886 932	Inability or unwillingness to have NP sampling
+T16	Condition 1081 1087	chills
+T7	Informed_consent 661 693	Able to provide informed consent
+T12	Non-query-able 696 751	Willing to allow storage of samples for future research
+T1	Observation 128 152	Works at an NIH facility
+*	OR T8 T11
+T10	Non-query-able 935 984	Inability or unwillingness to have blood sampling
+T13	Observation 1021 1038	COVID-19 symptoms
+T8	Observation 490 547	on the NIH OMS-qualified SARS-CoV-2/COVID-19 contact list
+T4	Value 214 247	greater than or equal to 18 years
+T5	Condition 311 331	SARS-CoV-2 infection
+R1	AND Arg1:T1 Arg2:T2	
+T11	Observation 554 656	Has had contact at home or in the workplace with a person with known or suspected SARS-CoV-2 infection
+R5	subsumes Arg1:T13 Arg2:T15	
+T18	Condition 1119 1124	Cough
+R4	has_temporal Arg1:T13 Arg2:T14	

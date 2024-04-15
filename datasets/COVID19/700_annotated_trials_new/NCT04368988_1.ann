@@ -1,0 +1,167 @@
+T1	Person 46 51	males
+T2	Person 55 62	females
+*	OR T1 T2
+T3	Person 90 93	age
+T4	Value 63 86	between 18 and 59 years
+R1	has_value Arg1:T3 Arg2:T4	
+T5	Temporal 106 118	at screening
+R2	has_temporal Arg1:T3 Arg2:T5	
+R3	AND Arg1:T2 Arg2:T3	
+T6	Observation 32 39	Healthy
+R4	AND Arg1:T1 Arg2:T6	
+T7	Measurement 316 331	body mass index
+T8	Value 332 346	17 to 35 kg/m2
+R5	has_value Arg1:T7 Arg2:T8	
+T9	Temporal 359 371	at screening
+R6	has_temporal Arg1:T7 Arg2:T9	
+T10	Informed_consent 374 475	Willing and able to give informed consent prior to study enrollment and comply with study procedures.
+T11	Pregnancy_considerations 477 1123	Female participants of childbearing potential (defined as any female who has experienced menarche and who is NOT surgically sterile [ie, hysterectomy, bilateral tubal ligation, or bilateral oophorectomy] or postmenopausal [defined as amenorrhea at least 12 consecutive months or documented plasma follicle-stimulating hormone (FSH) level 40 mIU/mL]) must agree to be heterosexually inactive from at least 21 days prior to enrollment and through 6 months after the last vaccination OR agree to consistently use any of the described methods of contraception from at least 21 days prior to enrollment and through 6 months after the last vaccination.
+T12	Condition 5277 5285	pregnant
+T13	Observation 5287 5300	breastfeeding
+*	OR T12 T13 T15
+T14	Mood 5308 5322	plan to become
+T15	Condition 5323 5331	pregnant
+R7	has_mood Arg1:T15 Arg2:T14	
+T16	Condition 5362 5375	alcohol abuse
+T17	Condition 5379 5393	drug addiction
+T18	Temporal 5394 5444	within 1 year prior to the first study vaccination
+T19	Reference_point 5408 5444	prior to the first study vaccination
+R8	has_index Arg1:T18 Arg2:T19	
+*	OR T17 T16
+R9	has_temporal Arg1:T17 Arg2:T18	
+T20	Observation 5181 5260	allergies to products contained in the investigational product or latex allergy
+T21	Condition 5069 5093	laboratory abnormalities
+T22	Measurement 5097 5111	toxicity grade
+T23	Value 5112 5114	>1
+R10	subsumes Arg1:T21 Arg2:T22	
+R11	has_value Arg1:T22 Arg2:T23	
+T24	Measurement 4987 5001	blood pressure
+T25	Measurement 5003 5008	pulse
+T26	Measurement 5010 5021	temperature
+T27	Measurement 5040 5054	toxicity grade
+T28	Value 5055 5057	>1
+R12	has_value Arg1:T27 Arg2:T28	
+T29	Measurement 4975 4985;5023 5036	Vital sign abnormalities
+*	OR T24 T25 T26
+R13	subsumes Arg1:T29 Arg2:T26	
+R14	subsumes Arg1:T29 Arg2:T27	
+T30	Non-query-able 5447 5755	Any condition that, in the opinion of the investigator, would pose a health risk to the participant if enrolled or could interfere with evaluation of the study vaccine or interpretation of study results (including neurologic or psychiatric conditions deemed likely to impair the quality of safety reporting).
+T31	Non-query-able 5757 5894	Study team member or first-degree relative of any study team member (inclusive of sponsor, PPD, and site personnel involved in the study)
+T32	Condition 4271 4297;4299 4309	disturbance of coagulation iatrogenic
+T33	Condition 4271 4297;4313 4323	disturbance of coagulation congenital
+*	OR T32 T33
+T34	Condition 4339 4350	Hepatitis B
+T35	Condition 4359 4362	HIV
+T36	Condition 4339 4348;4354 4355	Hepatitis C
+*	OR T34 T36 T35
+T37	Condition 4792 4798	cancer
+T38	Qualifier 4785 4791	Active
+R15	has_qualifier Arg1:T37 Arg2:T38	
+T39	Condition 4800 4810	malignancy
+*	OR T37 T39
+T40	Temporal 4812 4859	within 5 years prior to first study vaccination
+T41	Reference_point 4827 4859	prior to first study vaccination
+R16	has_index Arg1:T40 Arg2:T41	
+R17	has_temporal Arg1:T39 Arg2:T40	
+T42	Condition 4902 4933	non-melanomatous skin carcinoma
+T43	Negation 4870 4879	exception
+T44	Qualifier 4883 4901	adequately treated
+R18	has_qualifier Arg1:T42 Arg2:T44	
+R19	has_negation Arg1:T42 Arg2:T43	
+R20	AND Arg1:T39 Arg2:T42	
+T45	Condition 4587 4607	neurological disease
+T46	Condition 4634 4655	neurological disorder
+T47	Qualifier 4622 4633	significant
+T48	Observation 4611 4621	history of
+R21	has_qualifier Arg1:T46 Arg2:T47	
+R22	has_context Arg1:T46 Arg2:T48	
+T49	Condition 4661 4671	meningitis
+T50	Condition 4673 4681	seizures
+T51	Condition 4683 4701	multiple sclerosis
+T52	Condition 4703 4713	vasculitis
+T53	Condition 4715 4724	migraines
+T54	Condition 4726 4748;4750 4768	Guillain-Barr syndrome genetic/congenital
+T55	Condition 4726 4748;4772 4780	Guillain-Barr syndrome acquired
+*	OR T49 T50 T51 T52 T53 T54 T55
+R23	subsumes Arg1:T46 Arg2:T49	
+*	OR T45 T46
+T56	Condition 4414 4428	drugs of abuse
+T57	Condition 4423 4428;4560 4567	abuse alcohol
+*	OR T56 T57
+T58	Temporal 4568 4580	at screening
+R24	has_temporal Arg1:T57 Arg2:T58	
+T59	Non-query-able 1159 1487	Any ongoing, symptomatic acute or chronic illness requiring medical or surgical care, inclusive of changes in medication in the past 2 months indicating that chronic illness/disease is not stable (at the discretion of the investigator). This includes any current workup of undiagnosed illness that could lead to a new condition.
+T60	Competing_trial 2373 2506	Participation in research involving an investigational product (drug/biologic/device) within 45 days prior to first study vaccination
+T61	Non-query-able 2937 3031	Currently taking any product (investigational or off-label) for prevention of COVID-19 disease
+T62	Observation 2803 2935	Currently working in an occupation with a high risk of exposure to SARS-CoV-2 (eg, healthcare worker, emergency response personnel).
+T63	Condition 2545 2549	SARS
+T64	Condition 2553 2561	COVID-19
+T65	Observation 2571 2616	confirmed by a specific test for each disease
+*	OR T64 T63 T66
+R25	has_context Arg1:T64 Arg2:T65	
+T66	Observation 2622 2684	nown exposure to a SARS-CoV-2 positive confirmed close contact
+T67	Measurement 3043 3068	rapid test for SARS-CoV-2
+T68	Value 3034 3042	Positive
+R26	has_value Arg1:T67 Arg2:T68	
+T69	Temporal 3095 3137	at screening or prior to first vaccination
+T70	Reference_point 3111 3137	prior to first vaccination
+R27	has_index Arg1:T69 Arg2:T70	
+R28	has_temporal Arg1:T67 Arg2:T69	
+T71	Drug 3280 3301	influenza vaccination
+T72	Temporal 3302 3349	within 14 days prior to first study vaccination
+T73	Reference_point 3317 3349	prior to first study vaccination
+R29	has_index Arg1:T72 Arg2:T73	
+R30	has_temporal Arg1:T71 Arg2:T72	
+T74	Drug 3364 3371	vaccine
+T75	Temporal 3372 3419	within 4 weeks prior to first study vaccination
+T76	Reference_point 3387 3419	prior to first study vaccination
+R31	has_temporal Arg1:T74 Arg2:T75	
+R32	has_index Arg1:T75 Arg2:T76	
+T77	Condition 3426 3436;3457 3464	autoimmune disease
+T78	Condition 3440 3464;3490 3500	immunodeficiency disease congenital
+*	OR T77 T78 T79
+T79	Condition 3440 3464;3476 3486	immunodeficiency disease iatrogenic
+T80	Drug 3813 3827	immunoglobulin
+T81	Procedure 3829 3851	blood-derived products
+T82	Drug 3862 3885	immunosuppressant drugs
+*	OR T80 T81 T82
+T83	Temporal 3886 3933	within 90 days prior to first study vaccination
+T84	Reference_point 3910 3933	first study vaccination
+R33	has_index Arg1:T83 Arg2:T84	
+R34	has_temporal Arg1:T82 Arg2:T83	
+T85	Condition 3940 3953	acute illness
+T86	Temporal 3968 4015	within 14 days prior to first study vaccination
+T87	Reference_point 3983 4015	prior to first study vaccination
+R35	has_index Arg1:T86 Arg2:T87	
+T88	Temporal 3954 3964	concurrent
+R36	has_temporal Arg1:T85 Arg2:T88	
+*	OR T88 T86
+T89	Measurement 4076 4087	temperature
+T90	Value 4091 4095	>38C
+R37	has_value Arg1:T89 Arg2:T90	
+*	OR T85 T89 T91
+T91	Observation 4160 4215	symptoms consistent with SARS-CoV-2 (COVID-19) exposure
+T92	Condition 4221 4226	cough
+T93	Condition 4228 4239	sore throat
+T94	Condition 4241 4262	difficulty breathing)
+*	OR T92 T93 T94
+R38	subsumes Arg1:T91 Arg2:T92	
+T95	Drug 3572 3589	immunosuppressant
+T96	Qualifier 3504 3526	Chronic administration
+T98	Value 3539 3567	more than 14 continuous days
+R39	has_value Arg1:T96 Arg2:T98	
+T97	Drug 3591 3620	systemic glucocorticosteroids
+T99	Drug 3631 3653	immune-modifying drugs
+*	OR T95 T97 T99 T102
+R40	has_qualifier Arg1:T95 Arg2:T96	
+T100	Temporal 3654 3701	within 90 days prior to first study vaccination
+T101	Reference_point 3669 3701	prior to first study vaccination
+R41	has_index Arg1:T100 Arg2:T101	
+R42	has_temporal Arg1:T99 Arg2:T100	
+T102	Drug 3735 3762	immunosuppressive treatment
+T103	Temporal 3763 3801	within 6 months after last vaccination
+T104	Reference_point 3779 3801	after last vaccination
+R43	has_index Arg1:T103 Arg2:T104	
+T105	Mood 3706 3730	anticipation of the need
+R44	has_temporal Arg1:T102 Arg2:T103	
+R45	has_mood Arg1:T102 Arg2:T105	

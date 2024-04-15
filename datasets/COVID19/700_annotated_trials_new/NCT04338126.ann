@@ -1,0 +1,44 @@
+T27	Condition 501 514	renal disease
+R8	has_qualifier Arg1:T20 Arg2:T19	
+T20	Drug 387 402	anticoagulation
+T25	Device 466 481	vascular stents
+R2	AND Arg1:T3 Arg2:T5	
+T23	Device 449 456;475 481	Cardiac stents
+T13	Observation 516 526	History of
+T21	Condition 415 426	GI bleeding
+T3	Visit 46 67	Admission to hospital
+*	OR T16 T17 T18
+R10	has_temporal Arg1:T22 Arg2:T11	
+T28	Condition 527 550	intracranial hemorrhage
+T11	Observation 428 438	History of
+R12	has_qualifier Arg1:T27 Arg2:T26	
+T16	Condition 292 312	deep vein thrombosis
+R14	has_temporal Arg1:T28 Arg2:T13	
+T8	Condition 168 204	Allergic reaction to tranexamic acid
+T2	Measurement 32 44	COVID19 test
+R4	has_value Arg1:T6 Arg2:T7	
+R7	subsumes Arg1:T15 Arg2:T16	
+T26	Qualifier 494 500	severe
+T18	Condition 338 372	diffuse intravascular coagulopathy
+R9	has_temporal Arg1:T21 Arg2:T10	
+T17	Condition 314 336	pulmonary hypertension
+R3	has_negation Arg1:T5 Arg2:T4	
+T10	Observation 404 414	History of
+T15	Condition 236 262	hypercoagulation disorders
+T14	Observation 217 235	active evidence of
+T4	Negation 68 75	without
+T6	Person 126 129	Age
+R5	has_temporal Arg1:T15 Arg2:T9	
+R11	has_qualifier Arg1:T25 Arg2:T24	
+T22	Condition 439 447	seizures
+T24	Qualifier 460 465	other
+*	OR T23 T25
+T5	Observation 76 124	immediate plans for Intensive Care Unit transfer
+R6	has_context Arg1:T15 Arg2:T14	
+T9	Observation 206 216	History or
+T12	Observation 483 493	History of
+T19	Qualifier 374 386	Preadmission
+R13	has_temporal Arg1:T27 Arg2:T12	
+T1	Value 23 31	Positive
+R1	has_value Arg1:T2 Arg2:T1	
+T7	Value 130 141	>/= 19 y.o.

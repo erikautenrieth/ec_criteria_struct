@@ -1,0 +1,85 @@
+T1	Visit 23 34	Outpatients
+T2	Condition 72 82	SARS-CoV-2
+T3	Person 85 88	Age
+T4	Value 89 97	45 years
+R1	has_value Arg1:T3 Arg2:T4	
+T5	Observation 39 52	test positive
+R2	has_context Arg1:T2 Arg2:T5	
+R3	AND Arg1:T2 Arg2:T1	
+T6	Qualifier 99 103	Mild
+T7	Condition 104 112	COVID-19
+R4	has_qualifier Arg1:T7 Arg2:T6	
+T8	Observation 122 158	WHO Baseline Severity Categorization
+R5	has_context Arg1:T6 Arg2:T8	
+T9	Observation 160 167	Symptom
+T10	Temporal 168 185	duration  10 days
+R6	has_temporal Arg1:T9 Arg2:T10	
+T11	Temporal 190 199	<72 hours
+T12	Condition 207 227	respiratory symptoms
+T13	Qualifier 203 206	new
+R7	has_qualifier Arg1:T12 Arg2:T13	
+R8	has_temporal Arg1:T12 Arg2:T11	
+*	OR T9 T12
+T14	Non-query-able 230 306	Patient must have access to the internet or a smartphone to complete surveys
+T15	Non-query-able 309 334	English-speaking patients
+T16	Visit 1057 1072	Hospitalization
+T17	Condition 1047 1055	pregnant
+T18	Temporal 1037 1046	Currently
+R9	has_temporal Arg1:T17 Arg2:T18	
+T19	Condition 883 908	Allergy to grapes or rice
+T20	Condition 663 677	kidney disease
+T21	Measurement 683 687	eGFR
+T22	Value 688 691	<60
+R10	has_value Arg1:T21 Arg2:T22	
+R11	subsumes Arg1:T20 Arg2:T21	
+T23	Qualifier 657 662	Known
+R12	has_qualifier Arg1:T20 Arg2:T23	
+T24	Qualifier 608 613	Known
+T25	Qualifier 617 626	suspected
+T26	Condition 627 640	liver disease
+T27	Condition 644 655	Hepatitis C
+*	OR T26 T27
+*	OR T24 T25
+R13	has_qualifier Arg1:T26 Arg2:T25	
+R14	has_qualifier Arg1:T27 Arg2:T25	
+T28	Observation 514 535	Asymptomatic patients
+T29	Negation 569 576	without
+T30	Observation 577 585	symptoms
+R15	has_negation Arg1:T30 Arg2:T29	
+T31	Observation 590 605	tested positive
+R16	AND Arg1:T30 Arg2:T31	
+R17	subsumes Arg1:T28 Arg2:T30	
+T32	Qualifier 361 370	Diagnosed
+T33	Qualifier 374 383	suspected
+T34	Condition 384 404	cognitive impairment
+R18	has_qualifier Arg1:T34 Arg2:T33	
+*	OR T32 T33
+T35	Non-query-able 416 512	prevent the patient from cooperating with study procedures, as judged by the screening clinician
+T36	Drug 705 713	warfarin
+T37	Drug 715 748	Novel Oral Anticoagulants (NOACs)
+T38	Drug 750 773	HIV Protease Inhibitors
+T39	Drug 775 793	immunosuppressants
+T40	Drug 795 825	hydroxychloroquine/chloroquine
+T41	Drug 831 847	other medication
+T42	Qualifier 855 880	narrow therapeutic window
+R19	has_qualifier Arg1:T41 Arg2:T42	
+*	OR T36 T37 T38 T39 T40 T41
+T43	Temporal 702 704	on
+R20	has_temporal Arg1:T36 Arg2:T43	
+T44	Temporal 990 997	current
+T45	Procedure 998 1014	cancer treatment
+R21	has_temporal Arg1:T45 Arg2:T44	
+T46	Qualifier 1016 1022	severe
+T47	Condition 1023 1027	COPD
+T48	Condition 1031 1034	CHF
+*	OR T48 T47 T45
+R22	has_qualifier Arg1:T47 Arg2:T46	
+R23	has_qualifier Arg1:T48 Arg2:T46	
+T49	Visit 952 967	hospitalization
+T50	Mood 933 951	high likelihood of
+R24	has_mood Arg1:T49 Arg2:T50	
+T51	Temporal 968 982	within 30 days
+R25	has_temporal Arg1:T49 Arg2:T51	
+T52	Observation 911 925	Co-morbidities
+*	OR T52 T49
+R26	subsumes Arg1:T52 Arg2:T45	

@@ -1,0 +1,28 @@
+T1	Condition 383 400	Dissociative PTSD
+T2	Condition 402 420	Delayed-onset PTSD
+T3	Condition 422 434	Suicide risk
+T4	Condition 436 445	Psychosis
+T5	Condition 463 476	schizophrenia
+T6	Condition 494 510	bipolar disorder
+T7	Condition 520 540	substance dependence
+T8	Temporal 512 519	Current
+T9	Observation 483 493	history of
+T10	Observation 452 462	history of
+R1	has_temporal Arg1:T5 Arg2:T10	
+R2	has_temporal Arg1:T6 Arg2:T9	
+R3	has_temporal Arg1:T7 Arg2:T8	
+T11	Non-query-able 542 656	Other factors that preclude safe and meaningful participation in the study, at discretion of the PI and study team
+T12	Measurement 237 261	COVID stress scale score
+T13	Value 262 266	> 15
+T14	Measurement 306 349	Penn State Worry Questionnaire (PSWQ) score
+T15	Value 350 353	>35
+R4	has_value Arg1:T12 Arg2:T13	
+R5	has_value Arg1:T14 Arg2:T15	
+*	OR T12 T14
+T16	Observation 134 197	current elevated levels of COVID related stress and/or distress
+R6	subsumes Arg1:T16 Arg2:T12	
+T17	Condition 122 128	trauma
+T18	Observation 111 121	history of
+R7	has_temporal Arg1:T17 Arg2:T18	
+T19	Observation 46 103	resides in geographical area heavily impacted by COVID-19
+R8	AND Arg1:T19 Arg2:T17	

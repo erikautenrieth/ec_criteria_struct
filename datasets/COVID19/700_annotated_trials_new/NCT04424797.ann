@@ -1,0 +1,62 @@
+T24	Observation 622 627;638 644	Chest trauma
+R14	has_value Arg1:T35 Arg2:T36	
+T44	Non-query-able 966 1039	Refusal or inability to tolerate initial prone positioning due to comfort
+*	OR T15 T17 T18 T19 T20
+T5	Mood 140 149	requiring
+T7	Non-query-able 227 275	Ability to independently change positions in bed
+R2	AND Arg1:T2 Arg2:T3	
+R11	has_context Arg1:T29 Arg2:T30	
+*	OR T28 T29 T31
+T41	Condition 936 942	Nausea
+T28	Condition 713 731	spinal instability
+T9	Person 311 314	Age
+R3	has_value Arg1:T9 Arg2:T10	
+T30	Observation 733 739	recent
+T32	Condition 776 800	Hemodynamically unstable
+T33	Measurement 802 817	Heart Rate (HR)
+T8	Non-query-able 276 310	Able to tolerate prone positioning
+T19	Condition 566 588	altered mental status,
+T34	Value 817 825	>120 bpm
+R16	has_mood Arg1:T39 Arg2:T40	
+T38	Value 894 902	<65 mmHg
+T40	Mood 906 921	requirement for
+T14	Procedure 420 430	intubation
+T1	Visit 30 60	admitted to the hospital floor
+T12	Condition 379 399	Respiratory distress
+T39	Drug 922 933	vasopressor
+T2	Condition 97 115	COVID-19 pneumonia
+T26	Condition 646 658	pneumothorax
+T20	Observation 592 619	inability to protect airway
+T29	Procedure 740 757	abdominal surgery
+R5	AND Arg1:T12 Arg2:T14	
+R15	has_value Arg1:T37 Arg2:T38	
+T3	Condition 120 139	respiratory failure
+R13	has_value Arg1:T33 Arg2:T34	
+T13	Mood 400 409	requiring
+R17	AND Arg1:T41 Arg2:T42	
+T35	Measurement 827 856	Systolic Blood Pressure (SBP)
+T43	Condition 956 965	Pregnancy
+*	OR T24 T25 T26 T27
+T10	Value 315 330	greater than 18
+T16	Value 452 459	>35/min
+T11	Visit 353 366	ICU admission
+*	OR T33 T35 T37 T39
+R4	has_mood Arg1:T14 Arg2:T13	
+R6	has_value Arg1:T15 Arg2:T16	
+T37	Measurement 866 894	Mean Arterial Pressure (MAP)
+T42	Condition 947 955	vomiting
+T15	Measurement 432 452	Respiratory Rate(RR)
+R1	has_context Arg1:T2 Arg2:T4	
+T27	Observation 668 705	contraindication to prone positioning
+T18	Condition 538 564	respiratory muscle fatigue
+T25	Observation 631 644	facial trauma
+T17	Condition 461 493	accessory respiratory muscle use
+R12	subsumes Arg1:T27 Arg2:T28	
+T31	Condition 759 768	pregnancy
+T4	Observation 87 96	confirmed
+T36	Value 856 864	<90 mmHg
+T45	Observation 410 419	immediate
+R18	has_context Arg1:T14 Arg2:T45	
+T6	Observation 150 226	greater than or equal to 2 Liters(L) Nasal Cannula (NC) to maintain SpO2>90%
+R7	AND Arg1:T3 Arg2:T6	
+R8	has_mood Arg1:T6 Arg2:T5	

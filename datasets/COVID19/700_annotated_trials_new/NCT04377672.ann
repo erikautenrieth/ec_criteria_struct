@@ -1,0 +1,43 @@
+T23	Informed_consent 1322 1492	Subjects or their legal representatives must have the ability to read, understand, and provide written informed consent for the initiation of any study related procedures
+T17	Temporal 626 671	no more than 96 hours after onset of symptoms
+T13	Condition 501 521	SARS-CoV-2 infection
+T21	Non-query-able 750 1209	Susceptible child who was not previously infected or otherwise immune to SARS-CoV-2 and exposed within 96 hours prior to enrollment (and within 120 hours at the time of receipt of plasma). Both criteria below should be met: A household member or daycare center (same room) exposure to a person with [confirmed SARS-CoV-2 OR with clinically compatible disease in regions with widespread ongoing transmission] and a negative for SARS-CoV-2 (nasopharyngeal swab)
+T12	Qualifier 491 500	Confirmed
+R2	has_temporal Arg1:T2 Arg2:T3	
+T10	Condition 428 455	chronic respiratory failure
+T7	Condition 361 376	cardiac disease
+T4	Observation 104 276	high-risk for severe SARS-CoV-2 disease based on the American Academy of Pediatrics definition of immunocompromised children and reported high-risk Pediatric subpopulations
+R9	has_temporal Arg1:T16 Arg2:T17	
+T2	Person 55 58	age
+R3	subsumes Arg1:T4 Arg2:T5	
+T18	Reference_point 648 671	after onset of symptoms
+*	OR T5 T7 T9 T11
+T25	Non-query-able 1601 1808	Subjects with minor reactions such as fever, itching, chills, etc. that resolve spontaneously or respond to pre-medications, and that do not represent more significant allergic reactions will not be excluded
+T19	Temporal 677 726	within 120 hours at the time of receipt of plasma
+T3	Temporal 59 81	at the time of consent
+T15	Value 597 605	positive
+*	OR T13 T14
+*	OR T17 T19
+T8	Condition 383 407	congenital heart disease
+R5	subsumes Arg1:T7 Arg2:T8	
+R12	subsumes Arg1:T13 Arg2:T16	
+T14	Observation 525 543	high-risk exposure
+T28	Non-query-able 2065 2153	Subject / caregiver deemed by the study team to be non-compliant with the study protocol
+R11	has_index Arg1:T19 Arg2:T20	
+T22	Non-query-able 1215 1319	Subject is judged by the investigator to have the initiative and means to be compliant with the protocol
+T9	Condition 410 422	Lung disease
+R4	has_qualifier Arg1:T7 Arg2:T6	
+T26	Non-query-able 1811 1911	Inability to complete therapy with the study product within the stipulated time frame outlined above
+T1	Value 23 51	Between 1 month and 18 years
+R6	AND Arg1:T9 Arg2:T10	
+T16	Measurement 590 596;606 618	tested for COVID-19
+T11	Person 457 463	Infant
+T24	Condition 1531 1599	severe reactions (e.g. anaphylaxis) to transfusion of blood products
+T27	Pregnancy_considerations 1913 2062	Female subjects in child-bearing age with a positive pregnancy test, breastfeeding, or planning to become pregnant/breastfeed during the study period
+R8	has_value Arg1:T16 Arg2:T15	
+R7	has_qualifier Arg1:T13 Arg2:T12	
+T5	Condition 314 331	Immunocompromised
+T6	Qualifier 333 360	Hemodynamically significant
+T20	Reference_point 694 726	at the time of receipt of plasma
+R1	has_value Arg1:T2 Arg2:T1	
+R10	has_index Arg1:T17 Arg2:T18	

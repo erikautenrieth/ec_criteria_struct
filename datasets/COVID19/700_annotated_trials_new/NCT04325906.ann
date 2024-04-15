@@ -1,0 +1,72 @@
+*	OR T9 T11 T13 T16
+T25_mml	Condition 40 50	adult ARDS
+R15	subsumes Arg1:T27_mml Arg2:T9	
+R24	subsumes Arg1:T22 Arg2:T45_mml	
+T2	Measurement 89 98	PaO2/FiO2
+R13	has_value Arg1:T13 Arg2:T14	
+R3	has_value Arg1:T2 Arg2:T3	
+*	OR T21_mml T19 T3_mml T21
+T24	Value 567 574	<90mmHg
+T1_mml	Procedure 436 446	intubation
+T26_mml	Drug 613 624	vasopressor
+T30	Condition 698 710	chest trauma
+R26	has_qualifier Arg1:T31 Arg2:T32	
+R17	has_value Arg1:T21_mml Arg2:T18	
+R25	has_value Arg1:T16_mml Arg2:T15_mml	
+T5	Value 129 132	0.4
+R22	has_value Arg1:T25 Arg2:T26	
+T45_mml	Measurement 564 567	SBP
+R1	AND Arg1:T1 Arg2:T25_mml	
+T28	Non-query-able 628 695	unable to collaborate with HFNC/PP with agitation or refuse HFNC/PP
+T10	Value 334 342	> 40/min
+T4	Measurement 123 127	FIO2
+T8	Value 254 258	<80%
+T19	Measurement 469 478	SpO2/FiO2
+T7	Measurement 250 254	SpO2
+T20	Value 479 482	<90
+T6	Observation 145 171	to maintain SpO2 at 88-93%
+T18	Value 457 465	< 50mmHg
+T1	Condition 23 31	COVID-19
+T11	Measurement 344 349	PaCO2
+T16_mml	Person 757 760	age
+R19	subsumes Arg1:T1_mml Arg2:T21_mml	
+R10	has_context Arg1:T7 Arg2:T40_mml	
+*	OR T7 T27_mml
+R4	has_value Arg1:T4 Arg2:T5	
+R6	AND Arg1:T2 Arg2:T23	
+R23	has_mood Arg1:T26_mml Arg2:T27	
+*	OR T30 T31
+T3	Value 102 119	less than 200mmHg
+T27_mml	Condition 301 329	signs of respiratory fatigue
+R12	has_value Arg1:T11 Arg2:T12	
+T15	Qualifier 373 380	obvious
+T40_mml	Observation 264 296	on evaluation with a FiO2 of 0.6
+T25	Measurement 576 579	MBP
+R9	has_value Arg1:T7 Arg2:T8	
+T23	Device 175 179	HFNC
+T21_mml	Measurement 448 457	PaO2/FiO2
+T14	Value 362 367	<7.30
+T12	Value 349 357	> 50mmHg
+*	OR T45_mml T25 T26_mml
+R18	has_value Arg1:T19 Arg2:T20	
+R14	has_qualifier Arg1:T16 Arg2:T15	
+R21	has_value Arg1:T45_mml Arg2:T24	
+T31	Condition 718 741	contraindication for PP
+T29	Condition 743 755	pneumothorax
+T21	Condition 512 532	mental status change
+T22	Condition 536 563	unstable hemodynamic status
+T17	Mood 417 435	Immediate need for
+T27	Mood 597 612	requirement for
+R16	has_mood Arg1:T1_mml Arg2:T17	
+T26	Value 580 593	below 65 mmHg
+T32	Qualifier 714 717	any
+T13_mml	Visit 60 87	admitted to the medical ICU
+R5	has_context Arg1:T4 Arg2:T6	
+R11	has_value Arg1:T9 Arg2:T10	
+*	OR T2 T4
+T13	Measurement 360 362	pH
+T16	Condition 381 413	accessory respiratory muscle use
+T15_mml	Value 761 771	< 18 years
+T3_mml	Condition 484 508	unable to protect airway
+T9	Measurement 331 333	RR
+R2	AND Arg1:T25_mml Arg2:T13_mml	

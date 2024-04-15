@@ -1,0 +1,86 @@
+T28	Qualifier 729 736	serious
+T48	Condition 1391 1401;1451 1461	allergy to macrolides
+T42	Condition 1391 1412	allergy to artesunate
+T21_DdMmlC2Q	Observation 341 386	high-risk features for clinical deterioration
+T34	Measurement 1078 1140;1160 1175	DMID Toxicity Scale for Determining Severity of Adverse Events hepatic failure
+T4	Observation 105 202	presence of symptoms or physical examination signs providing high probability of COVID-19 disease
+T37	Condition 1266 1282	Seizure disorder
+T20	Temporal 578 607	within a year from enrollment
+T27	Condition 737 752	heart condition
+T6	Observation 222 230;241 256	adequate marrow function
+T23	Condition 631 642	thalessemia
+T41	Value 1348 1361	480 for women
+T25_DdMmlC2Q	Procedure 1019 1027	dialysis
+T26	Observation 671 717	Living in a nursing home or long-term facility
+R3	has_temporal Arg1:T28_DdMmlC2Q Arg2:T23_DdMmlC2Q	
+T9	Condition 478 487	Emphysema
+R17	has_qualifier Arg1:T33_DdMmlC2Q Arg2:T35	
+*	OR T31 T30
+T45	Non-query-able 1542 1605	Currently receiving any study medications for other indications
+T29	Condition 793 810	Immunocompromised
+T12	Qualifier 420 438	Moderate to severe
+T18	Drug 554 577	immunosuppressive drugs
+T33_DdMmlC2Q	Condition 1217 1228	retinopathy
+*	OR T28_DdMmlC2Q T4
+R1	has_value Arg1:T7 Arg2:T2	
+T2	Value 24 32	18 years
+T35	Qualifier 1210 1216	severe
+T38	Condition 1283 1295	Prolonged QT
+R7	has_temporal Arg1:T18 Arg2:T20	
+T5	Observation 222 236;248 256	adequate organ function
+T21	Qualifier 1253 1265	Uncontrolled
+T18_DdMmlC2Q	Condition 972 980	Pregnant
+T10	Condition 489 504	Cystic Fibrosis
+T7	Person 20 23	Age
+R16	has_value Arg1:T17 Arg2:T32	
+R18	has_qualifier Arg1:T37 Arg2:T21	
+T40	Value 1312 1336	470 milliseconds for men
+*	OR T25_DdMmlC2Q T15_DdMmlC2Q
+*	OR T35 T36
+T14	Value 647 656	> or = 50
+T33	Observation 984 998	breast-feeding
+T15	Condition 516 522	Cancer
+T36_DdMmlC2Q	Temporal 266 290	within the last 6 months
+T20_DdMmlC2Q	Condition 1232 1252	macular degeneration
+T28_DdMmlC2Q	Condition 54 74	SARS-CoV-2 infection
+T15_DdMmlC2Q	Measurement 1036 1056	creatinine clearance
+T43	Non-query-able 1675 1754	Patients with psychiatric illness/social situations that would limit compliance
+T5_DdMmlC2Q	Value 1057 1068	< 45 ml/min
+T13	Person 643 646	Age
+T44	Non-query-able 1606 1674	Concurrent use of medication that would cause drug-drug interactions
+R5	subsumes Arg1:T21_DdMmlC2Q Arg2:T1	
+T49	Condition 1391 1401;1463 1480	allergy to 4-aminoquinolines
+T11	Condition 509 515	Asthma
+T24	Measurement 657 660	BMI
+T31	Qualifier 917 923	Severe
+R19	has_value Arg1:T39 Arg2:T40	
+T19	Value 1141 1159	grade 3 or greater
+R11	has_qualifier Arg1:T27 Arg2:T28	
+R4	has_temporal Arg1:T6 Arg2:T36_DdMmlC2Q	
+*	OR T5 T6
+T8	Condition 439 476	Chronic Obstructive Pulmonary Disease
+R8	AND Arg1:T15 Arg2:T18	
+T22	Condition 608 627	Sickle Cell disease
+T46	Condition 1391 1401;1414 1429	allergy to artemisia annua
+T23_DdMmlC2Q	Temporal 75 97	within the past 7 days
+T39	Measurement 1308 1311	QTc
+T1	Condition 389 401	Hypertension
+T36	Qualifier 1198 1206	moderate
+T3	Condition 402 419	Diabetes Mellitus
+R9	has_value Arg1:T13 Arg2:T14	
+*	OR T33_DdMmlC2Q T20_DdMmlC2Q
+R2	has_qualifier Arg1:T8 Arg2:T12	
+T32	Value 955 970	less than 45 kg
+R12	has_qualifier Arg1:T16 Arg2:T30	
+R15	has_value Arg1:T15_DdMmlC2Q Arg2:T5_DdMmlC2Q	
+T47	Condition 1391 1401;1431 1449	allergy to hydroxychloroquine
+T25	Value 661 670	> or = 30
+T30	Qualifier 927 941	life threating
+T17	Measurement 948 954	Weight
+*	OR T42 T46 T47 T48 T49 T50
+*	OR T40 T41
+T50	Condition 1391 1401;1482 1499	allergy to camostat mesilate
+R14	has_value Arg1:T34 Arg2:T19	
+R10	has_value Arg1:T24 Arg2:T25	
+T16	Condition 942 947	COVID
+*	OR T1 T3 T8 T9 T10 T11 T15 T22 T23

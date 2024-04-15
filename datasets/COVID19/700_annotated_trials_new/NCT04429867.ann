@@ -1,0 +1,90 @@
+T18	Condition 326 346	Chronic lung disease
+T32	Visit 623 640	intermediate care
+T6	Mood 145 154	Requiring
+T42	Measurement 999 1002	QTc
+R4	has_mood Arg1:T7 Arg2:T6	
+T33	Mood 641 649	required
+T2	Person 62 65	Age
+*	OR T8 T10
+R3	has_value Arg1:T13 Arg2:T12	
+T50	Qualifier 1150 1161	significant
+T44	Temporal 1038 1079	prior to initiation of hydroxychloroquine
+T54	Condition 1219 1232	liver disease
+R11	has_temporal Arg1:T32 Arg2:T30	
+R5	has_value Arg1:T7 Arg2:T8	
+T9	Device 191 208	via nasal cannula
+T38	Device 754 773	non-rebreather mask
+T14	Condition 295 303	Diabetes
+R13	has_mood Arg1:T31 Arg2:T33	
+T25	Informed_consent 488 522	Unable to provide informed consent
+T39	Temporal 774 805	at admission or within 48 hours
+T17	Value 321 325	> 35
+R16	has_temporal Arg1:T35 Arg2:T39	
+T47	Condition 1113 1128	G6PD deficiency
+T55	Qualifier 1212 1218	Severe
+R17	has_qualifier Arg1:T49 Arg2:T50	
+R7	has_value Arg1:T16 Arg2:T17	
+T4	Condition 105 113	COVID-19
+R21	has_qualifier Arg1:T54 Arg2:T55	
+T24	Condition 444 462	metastatic disease
+T11	Condition 235 256	Bilateral infiltrates
+T12	Value 283 294	65 or older
+T41	Condition 946 997	Inability to take hydroxychloroquine due to allergy
+T36	Device 719 742	high flow nasal cannula
+T48	Condition 1136 1145	porphyria
+T46	Condition 1094 1105	retinopathy
+T8	Value 178 190	at  4 liters
+T16	Measurement 317 320	BMI
+T7	Procedure 155 177	oxygen supplementation
+R9	has_qualifier Arg1:T27 Arg2:T28	
+T43	Value 1003 1018	> 500 ms (male)
+R6	AND Arg1:T7 Arg2:T9	
+R8	subsumes Arg1:T21 Arg2:T22	
+T31	Visit 605 619	Intensive care
+R15	AND Arg1:T35 Arg2:T36	
+T1	Visit 21 29	Admitted
+T19	Condition 347 369	Cardiovascular disease
+T15	Condition 304 316	Hypertension
+T40	Non-query-able 808 945	Likelihood of survival <48 hours in the opinion of the primary physician or transitioned to comfort measures within 48 hours of admission
+*	OR T52 T51
+R12	has_mood Arg1:T32 Arg2:T33	
+T5	Observation 84 104	Laboratory-confirmed
+R10	has_temporal Arg1:T27 Arg2:T29	
+R1	has_value Arg1:T2 Arg2:T3	
+*	OR T41 T42 T46 T47 T48 T49
+T28	Qualifier 555 570	Severe/critical
+T26	Non-query-able 523 553	Unable to take oral medication
+T27	Condition 571 587	COVID-19 disease
+R14	has_mood Arg1:T35 Arg2:T34	
+R18	has_value Arg1:T42 Arg2:T43	
+*	OR T31 T32
+T22	Condition 401 425	hematologic malignancies
+T52	Condition 1186 1194	Pregnant
+T35	Procedure 692 714	oxygen supplementation
+*	OR T36 T37 T38
+T49	Condition 1162 1185	drug- drug interactions
+T51	Observation 1198 1211	breastfeeding
+R20	has_context Arg1:T46 Arg2:T45	
+T21	Condition 393 399	Cancer
+R19	has_temporal Arg1:T42 Arg2:T44	
+T20	Condition 370 392	Chronic kidney disease
+T13	Person 279 282	Age
+T23	Condition 427 438	lung cancer
+T37	Device 744 749	bipap
+T3	Value 66 83	18 years or older
+T29	Temporal 588 603	at presentation
+R2	has_context Arg1:T4 Arg2:T5	
+*	OR T22 T23 T24
+*	OR T7 T11 T13 T14 T15 T16 T18 T19 T20 T21
+T45	Observation 1081 1093	pre-existing
+T10	Observation 209 234	or increase from baseline
+T30	Temporal 650 681	at admission or within 48 hours
+T34	Mood 682 691	Requiring
+T56	Observation 257 278	on CXR or CT of chest
+R23	has_context Arg1:T11 Arg2:T56	
+T57	Value 1022 1037	520 ms (female)
+*	OR T43 T57
+T53	Value 1251 1252	C
+T58	Measurement 1234 1250	Child-Pugh Class
+R22	has_value Arg1:T58 Arg2:T53	
+R24	subsumes Arg1:T54 Arg2:T58	

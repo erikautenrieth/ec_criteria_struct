@@ -1,0 +1,16 @@
+T10	Drug 427 438	chloroquine
+T4	Mood 154 163	requiring
+T3	Condition 252 260	COVID-19
+R3	has_value Arg1:T7 Arg2:T6	
+T2	Value 239 247	positive
+T7	Person 271 274	age
+T11	Drug 442 459	immune modulators
+T9	Drug 415 425	antivirals
+*	OR T9 T10 T11
+T1	Observation 20 85	Participants can be patients or staff members at the testing site
+R1	has_value Arg1:T3 Arg2:T2	
+T6	Value 276 288	18 years old
+*	OR T5 T3
+T8	Informed_consent 290 350	They are willing and able to provide verbal informed consent
+T5	Procedure 166 203	standard diagnostic test for COVID-19
+R2	has_mood Arg1:T5 Arg2:T4	

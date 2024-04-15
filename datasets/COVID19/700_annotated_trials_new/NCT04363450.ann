@@ -1,0 +1,43 @@
+T12	Drug 281 289;302 318	Class IA anti-arrhythmics
+T13	Condition 326 348	prolonged QTc interval
+T21	Measurement 435 451	Child-Pugh class
+T1	Person 23 28	Age  
+T3	Observation 38 98	Healthcare or Hospital Worker who has direct patient contact
+R11	has_temporal Arg1:T26 Arg2:T27	
+T17	Condition 378 392	Kidney failure
+T9	Observation 237 247	History of
+T28	Non-query-able 567 591	Unwilling to participate
+R8	has_value Arg1:T21 Arg2:T22	
+T19	Value 402 406	<10%
+T14	Qualifier 320 325	Known
+T11	Drug 281 286;291 293;302 318	Class IC anti-arrhythmics
+T8	Condition 248 270	ventricular arrhythmia
+T24	Condition 460 479;495 513	Hypersensitivity to hydroxychloroquine
+T2	Value 28 36	18 years
+T23	Condition 460 491	Hypersensitivity to chloroquine
+R1	has_value Arg1:T1 Arg2:T2	
+R2	has_value Arg1:T6 Arg2:T7	
+R9	AND Arg1:T20 Arg2:T21	
+R10	has_temporal Arg1:T25 Arg2:T27	
+T29	Informed_consent 593 651	Unable to understand and/or sign the informed consent form
+T26	Drug 547 565	hydroxychloroquine
+*	OR T23 T24
+T20	Condition 408 431	Chronic hepatic disease
+*	OR T8 T12 T11 T10
+T6	Person 221 224	Age
+T7	Value 225 235	< 18 years
+R7	AND Arg1:T17 Arg2:T18	
+T22	Value 452 458	B or C
+*	OR T25 T26
+T5	Informed_consent 141 194	Able to understand and sign the informed consent form
+R5	has_temporal Arg1:T16 Arg2:T15	
+R4	has_qualifier Arg1:T13 Arg2:T14	
+T25	Drug 532 543	chloroquine
+T15	Observation 350 360	History of
+T18	Measurement 398 401	GFR
+T27	Temporal 515 524	Currently
+T16	Condition 361 376	retinal disease
+T4	Non-query-able 100 138	Willing to participate in the research
+T10	Drug 281 286;298 318	Class III anti-arrhythmics
+R3	has_temporal Arg1:T8 Arg2:T9	
+R6	has_value Arg1:T18 Arg2:T19	

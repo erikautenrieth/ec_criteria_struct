@@ -1,0 +1,22 @@
+T1	Value 30 38	18 years
+T2	Person 42 45	age
+R1	has_value Arg1:T2 Arg2:T1	
+T3	Visit 46 58	Hospitalized
+T4	Condition 64 107	COVID-19-related acute respiratory symptoms
+R2	AND Arg1:T3 Arg2:T4	
+T5	Observation 108 286	Initial COVID-19 severity status on the WHO Ordinal Scale for Clinical Improvement = 3 ("Hospitalized, no oxygen therapy) or 4 ("Hospitalized, on oxygen by mask or nasal prongs")
+T6	Condition 287 316	Laboratory-confirmed COVID-19
+T7	Observation 323 341	signs of infection
+T8	Temporal 352 392	no more than 14 days prior to enrollment
+R3	has_temporal Arg1:T7 Arg2:T8	
+T9	Reference_point 373 392	prior to enrollment
+R4	has_index Arg1:T8 Arg2:T9	
+T10	Drug 426 447	pooled immunoglobulin
+T11	Temporal 448 467	in the past 30 days
+R5	has_temporal Arg1:T10 Arg2:T11	
+T12	Observation 503 513	history of
+T13	Condition 514 559	prior reactions to transfusion blood products
+R6	has_temporal Arg1:T13 Arg2:T12	
+T14	Visit 560 592	Admission to intensive care unit
+T15	Temporal 593 648	at any point during hospital course prior to enrollment
+R7	has_temporal Arg1:T14 Arg2:T15	

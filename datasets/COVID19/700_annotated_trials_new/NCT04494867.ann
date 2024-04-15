@@ -1,0 +1,23 @@
+T16	Condition 663 682	post-cardiac arrest
+T1	Person 40 43	age
+*	OR T15 T16 T17
+T5	Measurement 134 162	maximum baseline temperature
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Condition 90 98	COVID-19
+T7	Temporal 164 188	within previous 12 hours
+R5	has_value Arg1:T12 Arg2:T13	
+T10	Condition 469 541	contraindication to core warming using an esophageal core warming device
+T2	Value 30 35;47 59	above 18 years old
+R3	has_value Arg1:T5 Arg2:T6	
+R2	AND Arg1:T3 Arg2:T4	
+T9	Informed_consent 357 454	Patients without surrogate or legally authorized representative able to provide informed consent.
+T14	Observation 623 633	DNR status
+T8	Informed_consent 199 334	Patients must have a surrogate or legally authorized representative able to understand and critically review the informed consent form.
+T17	Condition 687 705	multiple sclerosis
+T12	Measurement 598 607	body mass
+T4	Procedure 102 124	mechanical ventilation
+T6	Value 190 197	< 38.3C
+T15	Condition 649 661	acute stroke
+T11	Condition 564 572	pregnant
+R4	has_temporal Arg1:T5 Arg2:T7	
+T13	Value 588 594	<40 kg

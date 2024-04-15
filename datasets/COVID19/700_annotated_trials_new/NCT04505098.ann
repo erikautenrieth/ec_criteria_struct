@@ -1,0 +1,58 @@
+T26	Value 1219 1226	Stage D
+T12	Observation 595 735	A registered e-mail address with the health care delivery system in order to facilitate obtaining electronic consent for study participation
+T34	Value 1353 1371	<15 mL/min/1.73 m2
+*	OR T30 T33
+T37	Condition 1372 1389	Metastatic cancer
+T39	Observation 489 594	At least 12 months of continuous health plan membership and prescription drug benefit prior to enrollment
+*	OR T35 T36
+T2	Condition 106 124	confirmed COVID-19
+T25	Observation 1188 1218	triple anti-thrombotic therapy
+T3	Negation 86 105	No prior history of
+T32	Procedure 1296 1312	chronic dialysis
+T15	Condition 831 850;856 860	hypersensitivity to fish
+T36	Observation 1461 1486	receiving palliative care
+T14	Condition 831 854	hypersensitivity to IPE
+R3	has_temporal Arg1:T7 Arg2:T6	
+T17	Observation 901 931	omega-3 fatty acid medications
+T13	Competing_trial 758 824	Receipt of IPE on or within 12 months before the day of enrollment
+R7	has_value Arg1:T27 Arg2:T26	
+T10	Condition 438 453	ischemic stroke
+R9	has_value Arg1:T33 Arg2:T34	
+T11	Condition 462 487	peripheral artery disease
+T24	Visit 1051 1066	Hospitalization
+*	OR T21 T22
+R8	has_qualifier Arg1:T28 Arg2:T29	
+*	OR T17 T18
+T20	Observation 1023 1050	planning to become pregnant
+T33	Measurement 1316 1352	estimated glomerular filtration rate
+T38	Procedure 1414 1435	systemic chemotherapy
+*	OR T7 T8 T9 T10 T11
+R4	subsumes Arg1:T4 Arg2:T7	
+T4	Observation 305 322	Established ASCVD
+T30	Condition 1262 1285	End-stage renal disease
+R1	has_negation Arg1:T2 Arg2:T3	
+T7	Condition 347 368	myocardial infarction
+T18	Observation 935 985	dietary supplements containing omega-3 fatty acids
+T16	Condition 831 849;869 878	hypersensitivity t shellfish
+T27	Condition 1227 1240	heart failure
+R2	has_context Arg1:T2 Arg2:T5	
+T28	Condition 1248 1261	liver disease
+*	OR T37 T38
+T31	Mood 1286 1295	requiring
+*	OR T19 T20
+R10	has_mood Arg1:T32 Arg2:T31	
+T22	Condition 1109 1143	percutaneous coronary intervention
+T9	Procedure 406 436	coronary artery bypass surgery
+R6	has_temporal Arg1:T22 Arg2:T23	
+T19	Condition 1011 1019	pregnant
+T23	Temporal 1144 1167	within the past 1 month
+T6	Temporal 341 346	prior
+R11	AND Arg1:T30 Arg2:T32	
+T21	Condition 1071 1092	myocardial infarction
+*	OR T14 T15 T16
+R5	AND Arg1:T24 Arg2:T21	
+T5	Observation 132 303	based on a positive FDA-approved assay for SARS-CoV-2 and no documented FDA-approved serological test results for antibodies to SARS-CoV-2 found in health system databases
+T29	Qualifier 1241 1247	Severe
+T35	Condition 1436 1453	Institutionalized
+T8	Procedure 370 404	percutaneous coronary intervention
+T1	Informed_consent 21 85	Able to provide informed consent (for the intervention arm only)

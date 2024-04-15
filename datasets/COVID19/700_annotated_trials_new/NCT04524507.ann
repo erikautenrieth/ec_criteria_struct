@@ -1,0 +1,49 @@
+T1	Person 23 26	Age
+T2	Value 27 44	at least 18 years
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Informed_consent 46 161	Ability and willingness of participant or Legally Authorized Representative (LAR) to give written informed consent.
+T4	Condition 212 222	SARS-CoV-2
+T5	Observation 163 193	Laboratory confirmed diagnosis
+R2	has_context Arg1:T4 Arg2:T5	
+T6	Visit 226 238	Hospitalized
+T7	Observation 269 314	respiratory or gastrointestinal (GI) symptoms
+T8	Multiplier 257 268	one or more
+R3	has_multiplier Arg1:T7 Arg2:T8	
+T9	Condition 392 397	cough
+T10	Condition 399 418	shortness of breath
+T11	Condition 420 440	difficulty breathing
+T12	Condition 445 456	sore throat
+T13	Condition 522 535	loss of taste
+T14	Condition 537 559	loss of sense of smell
+T15	Condition 561 569	diarrhea
+T16	Condition 571 577	nausea
+T17	Condition 582 590	vomiting
+*	OR T9 T10 T11 T12 T13 T14 T15 T16 T17
+R4	subsumes Arg1:T7 Arg2:T9	
+T18	Observation 733 753	Symptoms of COVID-19
+T19	Temporal 754 807	less than or equal to 8 days prior to hospitalization
+T20	Reference_point 783 807	prior to hospitalization
+R5	has_index Arg1:T19 Arg2:T20	
+R6	has_temporal Arg1:T18 Arg2:T19	
+T21	Measurement 872 877	fever
+T22	Value 878 894	> 38.0C (100.4F)
+R7	has_value Arg1:T21 Arg2:T22	
+T23	Condition 979 984	cough
+T24	Observation 986 1012	upper respiratory symptoms
+T25	Observation 1021 1046	gastrointestinal symptoms
+T26	Qualifier 958 978	persistent worsening
+T27	Qualifier 950 953	new
+R8	has_qualifier Arg1:T23 Arg2:T26	
+R9	has_qualifier Arg1:T23 Arg2:T27	
+*	OR T23 T24 T25 T21
+R10	subsumes Arg1:T18 Arg2:T21	
+T28	Drug 1361 1382	pooled immunoglobulin
+T29	Temporal 1383 1398	in past 30 days
+R11	has_temporal Arg1:T28 Arg2:T29	
+T30	Non-query-able 1754 1792	ABO-compatible plasma is not available
+T31	Observation 1807 1827	symptoms of COVID-19
+T32	Temporal 1794 1803	> 10 days
+R12	has_temporal Arg1:T31 Arg2:T32	
+T33	Reference_point 1828 1844	at randomization
+R13	has_index Arg1:T32 Arg2:T33	
+T34	Observation 1400 1492	Contraindication to transfusion or history of prior reactions to transfusion blood products.

@@ -1,0 +1,162 @@
+T67_mml	Qualifier 1692 1699	serious
+T68_mml	Procedure 393 415	chest radiograph (CXR)
+T72_mml	Measurement 1130 1133	AST
+T74_mml	Observation 1544 1554	history of
+T181_mml	Condition 1708 1717	infection
+T129_mml	Device 577 581	CPAP
+T125_mml	Procedure 1294 1301	therapy
+T86_mml	Drug 1805 1828	antipyretic medications
+T89_mml	Qualifier 1287 1293	active
+T135_mml	Procedure 488 519	invasive mechanical ventilation
+T130_mml	Procedure 1386 1408	solid organ transplant
+T2_mml	Person 43 46	age
+T18_mml	Qualifier 1587 1593	active
+T17_mml	Value 31 39	18 years
+T147_mml	Condition 1611 1630	Multi-organ failure
+T20_mml	Drug 1309 1341	biologic immunosuppressive agent
+T22_mml	Observation 1344 1354	History of
+T24_mml	Measurement 1137 1140	ALT
+T29_mml	Procedure 419 443	computed tomography (CT)
+T150_mml	Drug 724 738	IL-6 inhibitor
+T138_mml	Value 306 314	Positive
+T30_mml	Drug 688 699	tocilizumab
+T34_mml	Condition 1474 1510	mycobacterium tuberculosis infection
+T33_mml	Drug 1887 1894	aspirin
+T145_mml	Drug 630 641	vasopressor
+T37_mml	Condition 758 789	hypersensitivity to tocilizumab
+T143_mml	Observation 1463 1473	history of
+T144_mml	Measurement 2023 2026	CRP
+T169_mml	Condition 1737 1745	Pregnant
+T40_mml	Procedure 540 575	non-invasive mechanical ventilation
+T45_mml	Qualifier 1701 1707	active
+T49_mml	Observation 747 757	history of
+T158_mml	Condition 153 158	Fever
+T51_mml	Drug 645 666	inotropic medications
+T53_mml	Condition 1594 1608	diverticulitis
+T58_mml	Measurement 315 351	test for active SARS-CoV-2 infection
+T59_mml	Condition 1555 1583	gastrointestinal perforation
+T165_mml	Measurement 1259 1268	Platelets
+T166_mml	Measurement 1203 1228	Absolute neutrophil count
+T164_mml	Visit 93 117	Admitted as an inpatient
+T1	Person 23 31	Adults  
+R1	subsumes Arg1:T1 Arg2:T2_mml	
+R2	has_value Arg1:T2_mml Arg2:T17_mml	
+T2	Non-query-able 48 91	Approval from the patient's primary service
+T3	Observation 121 151	University of Chicago Medicine
+R3	has_context Arg1:T164_mml Arg2:T3	
+T4	Observation 160 199	documented in electronic medical record
+R4	has_context Arg1:T158_mml Arg2:T4	
+T5	Measurement 216 217	T
+T6	Value 219 223	38*C
+T7	Observation 224 259	by any conventional clinical method
+R5	subsumes Arg1:T158_mml Arg2:T5	
+R6	has_value Arg1:T5 Arg2:T6	
+R7	has_context Arg1:T5 Arg2:T7	
+T8	Observation 261 269	forehead
+T9	Observation 271 279	tympanic
+T10	Observation 281 285	oral
+T11	Observation 287 295	axillary
+T12	Observation 297 303	rectal
+R8	subsumes Arg1:T7 Arg2:T8	
+*	OR T8 T9 T10 T11 T12
+R9	has_value Arg1:T58_mml Arg2:T138_mml	
+T13	Observation 353 377	Radiographic evidence of
+T14	Condition 378 389	infiltrates
+R10	has_context Arg1:T14 Arg2:T13	
+R11	AND Arg1:T14 Arg2:T68_mml	
+*	OR T68_mml T29_mml
+T15	Observation 470 480	Concurrent
+R12	has_temporal Arg1:T135_mml Arg2:T15	
+T16	Device 583 588	BiPap
+T17	Device 590 595	HHFNC
+T18	Negation 601 609	eligible
+R13	AND Arg1:T135_mml Arg2:T40_mml	
+R14	has_negation Arg1:T40_mml Arg2:T18	
+R15	subsumes Arg1:T40_mml Arg2:T129_mml	
+*	OR T129_mml T16 T17
+R16	has_negation Arg1:T17 Arg2:T18	
+R17	has_negation Arg1:T16 Arg2:T18	
+R18	has_negation Arg1:T129_mml Arg2:T18	
+T19	Observation 612 622	Concurrent
+R19	has_temporal Arg1:T145_mml Arg2:T19	
+*	OR T145_mml T51_mml
+T20	Temporal 668 676	Previous
+T21	Qualifier 703 710	another
+T22	Drug 711 720;729 738	anti-IL6R inhibitor
+R20	has_temporal Arg1:T30_mml Arg2:T20	
+*	OR T30_mml T22 T150_mml
+R21	has_qualifier Arg1:T22 Arg2:T21	
+R22	has_qualifier Arg1:T150_mml Arg2:T21	
+R24	has_temporal Arg1:T37_mml Arg2:T49_mml	
+T24	Qualifier 741 746	Known
+R25	has_qualifier Arg1:T37_mml Arg2:T24	
+T25	Competing_trial 792 935	Patients who are actively being considered for a study of an antiviral agent that would potentially exclude concurrent enrollment on this study
+T26	Competing_trial 938 1044	Patients actively receiving an investigational antiviral agent in the context of a clinical research study
+T27	Condition 1060 1083	end-stage liver disease
+T28	Procedure 1098 1114	liver transplant
+T29	Mood 1087 1097	listed for
+R26	has_mood Arg1:T28 Arg2:T29	
+*	OR T27 T28
+T30	Value 1141 1187	in excess of 5 times the upper limit of normal
+R27	has_value Arg1:T24_mml Arg2:T30	
+R28	has_value Arg1:T72_mml Arg2:T30	
+*	OR T72_mml T24_mml
+T31	Condition 1190 1201	Neutropenia
+T32	Value 1229 1237	< 500/uL
+R29	has_value Arg1:T166_mml Arg2:T32	
+R30	subsumes Arg1:T31 Arg2:T166_mml	
+T33	Condition 1241 1257	Thrombocytopenia
+T34	Value 1269 1280	< 50,000/uL
+R31	has_value Arg1:T165_mml Arg2:T34	
+R32	subsumes Arg1:T33 Arg2:T165_mml	
+R33	has_qualifier Arg1:T125_mml Arg2:T89_mml	
+R34	AND Arg1:T125_mml Arg2:T20_mml	
+T35	Procedure 1355 1382	bone marrow transplantation
+R35	has_temporal Arg1:T35 Arg2:T22_mml	
+*	OR T35 T130_mml
+T36	Qualifier 1411 1416	Known
+T37	Observation 1417 1427	history of
+T38	Condition 1428 1439	Hepatitis B
+T39	Condition 1443 1454	Hepatitis C
+R36	has_qualifier Arg1:T38 Arg2:T36	
+R37	has_temporal Arg1:T38 Arg2:T37	
+*	OR T38 T39
+T40	Qualifier 1457 1462	Known
+R38	has_qualifier Arg1:T39 Arg2:T36	
+R39	has_temporal Arg1:T39 Arg2:T37	
+T41	Observation 1511 1535	at risk for reactivation
+R40	has_temporal Arg1:T34_mml Arg2:T143_mml	
+R41	has_qualifier Arg1:T34_mml Arg2:T40	
+R42	has_context Arg1:T34_mml Arg2:T41	
+T42	Qualifier 1538 1543	Known
+R43	has_qualifier Arg1:T53_mml Arg2:T18_mml	
+R44	has_temporal Arg1:T59_mml Arg2:T74_mml	
+R45	has_qualifier Arg1:T59_mml Arg2:T42	
+*	OR T59_mml T53_mml
+T43	Observation 1631 1669	as determined by primary treating team
+R46	has_context Arg1:T147_mml Arg2:T43	
+T44	Observation 1718 1734	besides COVID-19
+T45	Qualifier 1675 1680	other
+R47	has_qualifier Arg1:T181_mml Arg2:T45	
+R48	AND Arg1:T45 Arg2:T67_mml	
+R49	AND Arg1:T67_mml Arg2:T45_mml	
+R50	has_context Arg1:T181_mml Arg2:T44	
+T46	Observation 1773 1804	unable to discontinue scheduled
+R51	has_context Arg1:T86_mml Arg2:T46	
+T47	Drug 1859 1872	acetaminophen
+T48	Drug 1876 1885	ibuprofen
+T49	Negation 1898 1908	acceptable
+T50	Drug 1952 1977	hydrocodone/acetaminophen
+T51	Drug 1979 2020	aspirin/acetaminophen/caffeine [Excedrin]
+T52	Observation 1840 1851	monotherapy
+T53	Observation 1917 1944	part of combination therapy
+R52	AND Arg1:T86_mml Arg2:T52	
+*	OR T52 T53
+R53	subsumes Arg1:T52 Arg2:T47	
+*	OR T47 T48
+R54	AND Arg1:T48 Arg2:T33_mml	
+R55	has_negation Arg1:T33_mml Arg2:T49	
+R56	subsumes Arg1:T53 Arg2:T50	
+*	OR T50 T51
+T54	Value 2027 2047	< 40 mg/L (or ug/mL)
+R57	has_value Arg1:T144_mml Arg2:T54	

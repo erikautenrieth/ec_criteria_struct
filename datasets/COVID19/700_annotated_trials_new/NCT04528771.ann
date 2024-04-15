@@ -1,0 +1,68 @@
+T1	Visit 23 35	Hospitalized
+T2	Condition 1357 1366	Pregnancy
+T3	Procedure 1380 1422	extracorporeal membrane oxygenation (ECMO)
+T4	Temporal 1377 1379	on
+R1	has_temporal Arg1:T3 Arg2:T4	
+T5	Condition 1468 1481	methemoglobin
+T6	Condition 1489 1518	congenital variants of Met-Hb
+R2	subsumes Arg1:T5 Arg2:T6	
+T7	Observation 1445 1467	increased risk to form
+R3	has_context Arg1:T5 Arg2:T7	
+T8	Condition 1535 1541	anemia
+T9	Measurement 1556 1566	hemoglobin
+T10	Value 1570 1579	< 9 mg/dL
+R4	has_value Arg1:T9 Arg2:T10	
+R5	subsumes Arg1:T8 Arg2:T9	
+T11	Condition 1305 1319	cardiac arrest
+T12	Procedure 1325 1328	CPR
+T13	Observation 1333 1355	longer than 30 minutes
+R6	has_context Arg1:T12 Arg2:T13	
+R7	AND Arg1:T11 Arg2:T12	
+T14	Observation 1293 1304	experienced
+R8	has_temporal Arg1:T11 Arg2:T14	
+T15	Observation 1179 1189	history of
+T16	Condition 1190 1200	malignancy
+T17	Observation 1204 1272	other irreversible disease/conditions with a 6-month mortality > 50%
+*	OR T16 T17
+R9	has_context Arg1:T16 Arg2:T15	
+T18	Condition 1106 1121	lung malignancy
+T19	Procedure 1125 1138	pneumonectomy
+T20	Procedure 1142 1157	lung transplant
+*	OR T19 T20 T18
+T21	Observation 1095 1105	history of
+R10	has_context Arg1:T18 Arg2:T21	
+T22	Non-query-able 907 1066	Physician of record opposed to enrolling the patient due to perceived safety concerns; or any condition that does not allow the protocol to be followed safely.
+T23	Procedure 609 618	Intubated
+T24	Condition 619 627	Covid-19
+T25	Measurement 656 660	FiO2
+T26	Value 664 670	> 0.90
+R11	has_value Arg1:T25 Arg2:T26	
+R12	AND Arg1:T23 Arg2:T24	
+R13	AND Arg1:T24 Arg2:T25	
+T27	Condition 519 527	Covid-19
+T28	Qualifier 542 546	mild
+T29	Condition 553 573	respiratory distress
+T30	Negation 550 552	no
+T31	Measurement 586 595	P/F ratio
+T32	Value 596 606	> 200 mmHg
+R14	has_value Arg1:T31 Arg2:T32	
+R15	has_negation Arg1:T29 Arg2:T30	
+R16	subsumes Arg1:T29 Arg2:T31	
+R17	has_qualifier Arg1:T27 Arg2:T28	
+R18	AND Arg1:T27 Arg2:T29	
+T33	Person 235 238	age
+T34	Value 220 231	18-89 years
+R19	has_value Arg1:T33 Arg2:T34	
+T35	Condition 161 181	respiratory distress
+T36	Measurement 194 203	P/F ratio
+T37	Value 207 217	< 200 mmHg
+R20	has_value Arg1:T36 Arg2:T37	
+R21	subsumes Arg1:T35 Arg2:T36	
+T38	Procedure 259 268	intubated
+T39	Procedure 273 296	mechanically ventilated
+*	OR T38 T39
+T40	Non-query-able 403 491	Patients to be enrolled and to be able to start treatment within 36 h of being intubated
+T41	Condition 51 70	SARS-CoV2 infection
+T42	Observation 71 155	by polymerase chain reaction (PCR) or other validated tests as they become available
+R22	has_context Arg1:T41 Arg2:T42	
+R23	AND Arg1:T1 Arg2:T41	

@@ -1,0 +1,62 @@
+T5	Condition 260 277	reduced olfaction
+T9	Value 383 395;396 403	score of <35 (women)
+T31	Condition 1028 1060	Tuberculosis (TB) lung infection
+T40	Condition 1261 1284	frontotemporal dementia
+T6	Temporal 306 336	greater than 3 months duration
+R2	has_temporal Arg1:T5 Arg2:T6	
+R14	has_index Arg1:T29 Arg2:T30	
+T18	Qualifier 662 671	prolonged
+T26	Condition 875 883	Pregnant
+T35	Condition 1166 1191	neurodegenerative disease
+*	OR T20 T21
+R12	has_temporal Arg1:T24 Arg2:T25	
+T25	Observation 815 825	History of
+*	OR T26 T27
+*	OR T1 T2
+T19	Drug 672 694	corticosteroid therapy
+T38	Condition 1220 1239	Parkinson's disease
+R10	AND Arg1:T19 Arg2:T20	
+T20	Condition 728 734	asthma
+T30	Reference_point 942 961	course of the trial
+T1	Person 21 32	Adult women
+T28	Pregnancy_considerations 905 930	intend to become pregnant
+R1	has_context Arg1:T5 Arg2:T7	
+T24	Drug 826 873	allergy to budesonide or other topical steroids
+T37	Condition 1198 1218	Alzheimer's dementia
+T15	Observation 557 567	History of
+R11	has_temporal Arg1:T22 Arg2:T23	
+T32	Condition 1065 1092	Herpes infection of the eye
+T36	Observation 1155 1165	History of
+T8	Measurement 424 485	University of Pennsylvania Smell Identification Test (UPSIT )
+T14	Reference_point 596 614	COVID-19 infection
+R17	subsumes Arg1:T35 Arg2:T37	
+T16	Observation 616 626	History of
+T10	Value 383 391;407 410;411 416	score of <34 (men)
+T2	Person 21 26;37 40	Adult men
+R9	has_qualifier Arg1:T19 Arg2:T18	
+T22	Condition 789 813	cerebrospinal fluid leak
+R6	has_temporal Arg1:T12 Arg2:T15	
+T23	Observation 778 788	History of
+T12	Condition 568 586	olfaction disorder
+T13	Temporal 587 614	prior to COVID-19 infection
+*	OR T37 T38 T39 T40
+R8	has_index Arg1:T13 Arg2:T14	
+T34	Value 1115 1125	5 or below
+T3	Condition 42 84	Positive laboratory finding for SARS-CoV-2
+T17	Condition 627 646	nasal cavity polyps
+R15	has_value Arg1:T33 Arg2:T34	
+T27	Observation 887 901	breast feeding
+T21	Condition 739 776	chronic obstructive pulmonary disease
+T39	Condition 1241 1259	Lewy body dementia
+*	OR T31 T32
+T4	Observation 189 233	In convalescence from their COVID-19 illness
+R5	has_temporal Arg1:T17 Arg2:T16	
+T11	Observation 487 533	Ability to read, write, and understand English
+R13	has_temporal Arg1:T27 Arg2:T29	
+T33	Measurement 1103 1114	UPSIT score
+R7	has_temporal Arg1:T12 Arg2:T13	
+R16	has_temporal Arg1:T35 Arg2:T36	
+R3	has_value Arg1:T8 Arg2:T9	
+T29	Temporal 931 961	during the course of the trial
+R4	has_value Arg1:T8 Arg2:T10	
+T7	Observation 278 302	after COVID-19 infection

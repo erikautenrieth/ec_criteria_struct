@@ -1,0 +1,24 @@
+T15	Condition 501 518	acute onset cough
+T12	Non-query-able 278 446	Medical, psychiatric,cognitive illness or recreational drug/alcohol use that in the opinion of the principal investigator, would affect subject safety and/or compliance
+T17	Temporal 541 561	at time of screening
+T1	Value 37 45;53 61	18 years or older
+T11	Temporal 260 276	in past 120 days
+T19	Temporal 605 625	at time of screening
+T5	Non-query-able 754 842	Inability to complete therapy with the study product within 24 hours after randomization
+R4	has_temporal Arg1:T10 Arg2:T11	
+T21	Condition 713 752	reactions to transfusion blood products
+R6	has_temporal Arg1:T13 Arg2:T17	
+T16	Condition 520 539	shortness of breath
+T18	Condition 563 604	Laboratory evidence of COVID-19 infection
+T14	Condition 493 499	fevers
+T4	Temporal 140 209	within 96 hours of randomization (and 120 hours of receipt of plasma)
+R5	subsumes Arg1:T13 Arg2:T14	
+R2	has_temporal Arg1:T3 Arg2:T4	
+T3	Observation 62 139	Close contact exposure (as defined by CDC guidelines) to person with COVID-19
+R7	has_temporal Arg1:T18 Arg2:T19	
+T10	Procedure 231 259	Receipt of any blood product
+T20	Observation 644 694	laboratory evidence of previous COVID-19 infection
+T13	Observation 448 491	Symptoms consistent with COVID-19 infection
+*	OR T14 T15 T16
+T2	Person 49 52	age
+R1	has_value Arg1:T2 Arg2:T1	

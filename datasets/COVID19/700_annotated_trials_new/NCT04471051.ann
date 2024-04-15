@@ -1,0 +1,18 @@
+R1	has_value Arg1:T1 Arg2:T2	
+T5	Condition 95 146	confirmation via COVID-19 SARS-CoV-2 RT-PCR testing
+T4	Visit 43 55	Hospitalized
+T7	Procedure 169 196	COVID19 convalescent plasma
+*	OR T13 T11
+T12	Observation 408 418	history of
+R6	has_temporal Arg1:T11 Arg2:T12	
+T13	Condition 373 404	Contraindication to transfusion
+T3	Observation 61 90	COVID-19 respiratory symptoms
+T10	Temporal 357 372	in past 30 days
+R5	has_temporal Arg1:T9 Arg2:T10	
+T8	Informed_consent 198 301	Patient or surrogate designated decision maker is willing and able to provide written informed consent.
+T2	Value 25 42	18 years or older
+T9	Procedure 324 356	Receipt of pooled immunoglobulin
+T1	Person 21 24	Age
+R3	AND Arg1:T3 Arg2:T5	
+T11	Condition 419 464	prior reactions to transfusion blood products
+R4	AND Arg1:T4 Arg2:T3	

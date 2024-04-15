@@ -1,0 +1,139 @@
+T1	Qualifier 40 48	advanced
+T2	Condition 49 57	COVID-19
+R1	has_qualifier Arg1:T2 Arg2:T1	
+T3	Value 100 108	positive
+T4	Measurement 109 132	test for SARS-CoV-2 RNA
+T5	Observation 133 369	detected by RT-PCR collected from the upper respiratory tract (nasopharyngeal and oropharyngeal swab) and, if possible, the lower respiratory tract (sputum, tracheal aspirate, or bronchoalveolar lavage), analyzed by a CLIA certified lab
+R2	has_value Arg1:T4 Arg2:T3	
+R3	has_context Arg1:T4 Arg2:T5	
+R4	subsumes Arg1:T2 Arg2:T4	
+T6	Observation 373 389	Critical disease
+T7	Observation 429 469	Chest imaging with  50% lung involvement
+T8	Condition 471 490	Respiratory failure
+T9	Mood 491 500	requiring
+T10	Procedure 501 532	invasive mechanical ventilation
+T11	Procedure 536 556	supplementary oxygen
+T12	Observation 557 571	with FiO2  50%
+R5	AND Arg1:T8 Arg2:T10	
+R6	has_mood Arg1:T10 Arg2:T9	
+*	OR T10 T11
+R7	has_mood Arg1:T11 Arg2:T9	
+R8	has_context Arg1:T11 Arg2:T12	
+T13	Condition 573 578	Shock
+T14	Measurement 591 613	mean arterial pressure
+T15	Value 615 622	65 mmHg
+T16	Observation 623 687	unresponsive to 25ml/kg isotonic intravenous fluid resuscitation
+T17	Mood 695 704	requiring
+T18	Drug 705 716	vasopressor
+R9	subsumes Arg1:T13 Arg2:T14	
+R10	has_value Arg1:T14 Arg2:T15	
+R11	has_context Arg1:T14 Arg2:T16	
+*	OR T14 T18
+R12	has_mood Arg1:T18 Arg2:T17	
+R13	subsumes Arg1:T6 Arg2:T7	
+*	OR T7 T8 T13
+T19	Condition 728 747	Cardiac dysfunction
+T20	Measurement 800 817	ejection fraction
+T21	Qualifier 763 766	New
+T22	Condition 774 794	systolic dysfunction
+T23	Value 819 822	40%
+R14	has_qualifier Arg1:T22 Arg2:T21	
+R16	has_value Arg1:T20 Arg2:T23	
+R15	subsumes Arg1:T19 Arg2:T22	
+T24	Condition 824 848	Takotsubo cardiomyopathy
+T25	Qualifier 850 859	New onset
+T26	Condition 860 876;892 903	supraventricular arrhythmias
+T27	Condition 880 903	ventricular arrhythmias
+R17	has_qualifier Arg1:T27 Arg2:T25	
+R18	has_qualifier Arg1:T26 Arg2:T25	
+*	OR T26 T27 T22 T20 T24 T28
+T28	Measurement 905 922	Plasma troponin I
+T29	Value 924 934	0.10 ng/mL
+T30	Observation 935 1012	in someone without previously documented troponin elevation beyond that level
+R19	has_value Arg1:T28 Arg2:T29	
+R20	has_context Arg1:T28 Arg2:T30	
+T31	Measurement 1025 1041	plasma NT-proBNP
+T32	Value 1016 1024	Elevated
+T33	Observation 1042 1087	in someone without documented prior elevation
+R21	has_value Arg1:T31 Arg2:T32	
+R22	has_context Arg1:T31 Arg2:T33	
+T34	Person 1094 1097	Age
+T35	Person 1130 1133	Age
+T36	Person 1167 1172	Age  
+T37	Value 1098 1102	< 50
+T38	Value 1134 1139	50-74
+T39	Value 1172 1174	74
+T40	Measurement 1104 1113	NT-proBNP
+T41	Measurement 1141 1150	NT-proBNP
+T42	Measurement 1176 1185	NT-proBNP
+T43	Value 1114 1125	> 450 pg/ml
+T44	Value 1151 1162	> 900 pg/ml
+T45	Value 1186 1198	> 1800 pg/ml
+R23	has_value Arg1:T34 Arg2:T37	
+R24	has_value Arg1:T35 Arg2:T38	
+R25	has_value Arg1:T36 Arg2:T39	
+R26	AND Arg1:T34 Arg2:T40	
+R27	has_value Arg1:T40 Arg2:T43	
+R28	AND Arg1:T35 Arg2:T41	
+R29	has_value Arg1:T41 Arg2:T44	
+R30	AND Arg1:T36 Arg2:T42	
+R31	has_value Arg1:T42 Arg2:T45	
+*	OR T34 T35 T36
+T46	Non-query-able 1216 1310	Receipt of prior investigational or off-label agents for COVID-19 does not exclude eligibility
+T47	Temporal 1313 1330	At least 18 years
+T48	Person 1334 1337	age
+R32	has_temporal Arg1:T48 Arg2:T47	
+T49	Observation 1375 1404	Adequate hematologic function
+T50	Measurement 1420 1445	absolute neutrophil count
+T51	Value 1447 1455	1000/mm3
+T52	Measurement 1457 1471	platelet count
+T53	Value 1473 1483	50,000/mm3
+T54	Observation 1484 1528	without growth factor or transfusion support
+T55	Temporal 1533 1558	7 days prior to screening
+T56	Reference_point 1549 1558	screening
+R33	has_value Arg1:T50 Arg2:T51	
+R34	has_value Arg1:T52 Arg2:T53	
+R35	has_context Arg1:T52 Arg2:T54	
+R36	has_temporal Arg1:T52 Arg2:T55	
+R37	has_index Arg1:T55 Arg2:T56	
+R38	subsumes Arg1:T49 Arg2:T50	
+*	OR T50 T52
+T57	Measurement 1564 1584	Creatinine clearance
+T58	Value 1586 1598	15 mL/minute
+T59	Mood 1602 1611	receiving
+T60	Procedure 1612 1637	renal replacement therapy
+R39	has_value Arg1:T57 Arg2:T58	
+*	OR T57 T60
+R40	has_mood Arg1:T60 Arg2:T59	
+T61	Non-query-able 1639 2047	Women of childbearing potential (defined as women with regular menses, women with amenorrhea, women with irregular cycles, women using a contraceptive method that precludes withdrawal bleeding, or women who have had a tubal ligation) are required to have a negative pregnancy test and use two forms of acceptable contraception, including one barrier method, during participation in the study treatment period
+T62	Non-query-able 2050 2296	Male patients (if engaging in reproductive sex with a women of childbearing potential) are required to use two forms of acceptable contraception, including one barrier method, during participation in the study and throughout the evaluation period
+T63	Informed_consent 2299 2449	Able to understand and willing to sign an IRB approved written informed consent document (or that of legally authorized representative, if applicable)
+T64	Condition 2482 2519	allergy or intolerance to ruxolitinib
+T65	Condition 2482 2507;2523 2544	allergy or intolerance to another JAK inhibitor
+T66	Qualifier 2476 2481	Known
+R41	has_qualifier Arg1:T64 Arg2:T66	
+R42	has_qualifier Arg1:T65 Arg2:T66	
+*	OR T65 T64
+T67	Qualifier 2547 2565	Known or suspected
+T68	Qualifier 2566 2572	active
+T69	Condition 2756 2764	Pregnant
+T70	Condition 2772 2785	breastfeeding
+*	OR T69 T70
+T71	Non-query-able 2788 2947	Any uncontrolled intercurrent illness that would put the patient at greater risk or limit compliance with study requirements in the opinion of the investigator
+T72	Condition 2573 2578;2662 2671	viral infection
+T73	Condition 2626 2635;2662 2671	bacterial infection
+T74	Condition 2637 2650;2662 2671	mycobacterial infection
+T75	Condition 2655 2671	fungal infection
+T76	Observation 2672 2691	other than COVID-19
+T77	Condition 2590 2593	HIV
+T78	Condition 2595 2606	hepatitis B
+T79	Condition 2612 2623	hepatitis C
+R43	has_qualifier Arg1:T72 Arg2:T67	
+R44	AND Arg1:T67 Arg2:T68	
+R45	subsumes Arg1:T72 Arg2:T77	
+*	OR T77 T78 T79
+*	OR T72 T73 T74 T75
+R46	has_context Arg1:T72 Arg2:T76	
+R47	has_qualifier Arg1:T73 Arg2:T67	
+R48	has_qualifier Arg1:T74 Arg2:T67	
+R49	has_qualifier Arg1:T75 Arg2:T67	

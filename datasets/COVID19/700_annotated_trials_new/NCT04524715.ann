@@ -1,0 +1,19 @@
+T1	Condition 53 61	COVID-19
+T2	Person 97 100	age
+T3	Value 101 110;85 93	or older. 18 years
+R1	has_value Arg1:T2 Arg2:T3	
+T4	Condition 131 169	moderate-to-acute respiratory distress
+T5	Condition 197 221	Photosensitive condition
+T6	Drug 197 211;225 235	Photosensitive medication
+*	OR T5 T6
+T7	Procedure 245 257	chemotherapy
+T8	Qualifier 238 244	Active
+R2	has_qualifier Arg1:T7 Arg2:T8	
+T9	Condition 296 315	Autoimmune Disorder
+T10	Condition 318 326	Pregnant
+T11	Pregnancy_considerations 328 407	possibly pregnant or planning pregnancy prior to the end of study participation
+T12	Condition 410 434	Developmental disability
+T13	Condition 438 458	cognitive impairment
+*	OR T12 T13
+T14	Observation 465 625	in the opinion of the investigator, would preclude adequate comprehension of the informed consent form and/or ability to record the necessary study measurements
+R3	has_context Arg1:T13 Arg2:T14	

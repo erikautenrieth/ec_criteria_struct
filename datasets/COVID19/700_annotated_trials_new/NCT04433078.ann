@@ -1,0 +1,65 @@
+T7	Value 204 212	18 years
+*	OR T31 T32 T33 T34
+T4	Negation 170 173	not
+R3	has_negation Arg1:T6 Arg2:T4	
+*	OR T23 T22
+T27	Condition 898 929	Clostridium Difficile infection
+R12	has_temporal Arg1:T27 Arg2:T28	
+T19	Person 637 640	Age
+T18	Value 641 655	<18 years' old
+R1	has_qualifier Arg1:T1 Arg2:T2	
+T12	Visit 498 513	hospitalization
+T36	Observation 986 1034	medications which could lower doxycycline levels
+T6	Visit 184 199	hospitalization
+T10	Non-query-able 255 316	Willing to take study drug or placebo as directed for 21 days
+T5	Mood 174 183	requiring
+T31	Drug 1046 1058	barbiturates
+R2	has_mood Arg1:T6 Arg2:T5	
+T24	Drug 803 814	doxycycline
+T23	Condition 736 758;774 787	sensitivity/allergy to tetracyclines
+T3	Qualifier 21 30	Confirmed
+R14	subsumes Arg1:T36 Arg2:T31	
+T33	Drug 1071 1084	carbamazepine
+T14	Temporal 612 636	within the prior 4 weeks
+T11	Mood 488 497	requiring
+T21	Informed_consent 693 729	Inability to provide written consent
+T28	Temporal 930 951	within past 12 months
+T35	Drug 1113 1125	isotretinoin
+R4	AND Arg1:T1 Arg2:T6	
+T8	Person 200 203	Age
+T2	Qualifier 51 62	early stage
+T30	Condition 952 967	Sun sensitivity
+T1	Condition 63 132	severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), disease
+R6	has_mood Arg1:T12 Arg2:T11	
+T34	Drug 1086 1094	warfarin
+T25	Condition 838 847	Pregnancy
+T32	Drug 1060 1069	phenytoin
+R11	has_value Arg1:T19 Arg2:T18	
+T20	Non-query-able 656 692	Inability to take medications orally
+R5	has_value Arg1:T8 Arg2:T7	
+R7	has_temporal Arg1:T13 Arg2:T14	
+T9	Informed_consent 213 254	Willing to sign the informed consent form
+R13	has_temporal Arg1:T27 Arg2:T29	
+T29	Observation 887 897	History of
+T26	Condition 869 886	myasthenia gravis
+T13	Condition 550 610	severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+T22	Condition 736 770	sensitivity/allergy to doxycycline
+T15	Observation 133 168	with clinical suspicion score >6/20
+R8	has_context Arg1:T1 Arg2:T15	
+T16	Condition 381 441	severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)
+R9	AND Arg1:T16 Arg2:T12	
+T17	Observation 443 486	disease with clinical suspicion score >6/20
+R10	has_context Arg1:T16 Arg2:T17	
+T37	Qualifier 369 380	early stage
+T38	Qualifier 339 348	Confirmed
+T39	Qualifier 352 368	highly suspected
+R15	has_qualifier Arg1:T16 Arg2:T37	
+*	OR T37 T39 T38
+T40	Qualifier 34 50	highly suspected
+*	OR T2 T40 T3
+T41	Observation 537 549	convalescent
+T42	Qualifier 527 536	confirmed
+T43	Qualifier 514 523	Suspected
+*	OR T43 T42
+R16	has_qualifier Arg1:T13 Arg2:T42	
+R17	has_context Arg1:T13 Arg2:T41	

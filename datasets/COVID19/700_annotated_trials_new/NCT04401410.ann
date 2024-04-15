@@ -1,0 +1,143 @@
+R39	has_negation Arg1:T63 Arg2:T61	
+T12	Value 395 398	92%
+T75	Observation 2158 2179	relapse of malignancy
+T64	Non-query-able 2300 2359	Is not suitable at the discretion of the treating physician
+R48	has_context Arg1:T80 Arg2:T81	
+R27	has_temporal Arg1:T49 Arg2:T51	
+R37	AND Arg1:T60 Arg2:T63	
+T15	Value 417 426	7.0 gm/dl
+T78	Multiplier 821 833	at least two
+T37	Condition 1078 1084	cancer
+R36	has_temporal Arg1:T60 Arg2:T68	
+T38	Qualifier 1098 1105	ongoing
+T65	Value 2373 2381;2393 2406	0.5mg/kg or equivalent
+T11	Measurement 358 393	Peripheral oxygen saturation (SpO2)
+T76	Qualifier 2145 2157	Uncontrolled
+T79	Observation 841 850	following
+R35	has_temporal Arg1:T59 Arg2:T69	
+R38	has_temporal Arg1:T63 Arg2:T62	
+T13	Observation 399 410	on room air
+T50	Mood 1843 1852	Requiring
+T69	Observation 2217 2222	prior
+T60	Condition 2255 2273	autoimmune disease
+T61	Negation 2274 2280	except
+T80	Procedure 1141 1154	radio-therapy
+T42	Procedure 1201 1228	solid organ transplantation
+T18	Value 428 436	Negative
+T14	Measurement 412 415	Hgb
+R11	has_value Arg1:T17 Arg2:T18	
+T27	Person 855 858	Age
+*	OR T37 T40 T80
+T49	Procedure 1853 1875	mechanical ventilation
+T26	Value 860 868	65 years
+T58	Drug 2191 2203	vasopressors
+R46	has_qualifier Arg1:T80 Arg2:T38	
+T41	Procedure 1174 1197;1213 1228	hematopoeitic stem cell transplantation
+T59	Condition 2223 2236	HIV infection
+T17	Measurement 437 451	pregnancy test
+R44	has_multiplier Arg1:T79 Arg2:T78	
+R9	has_context Arg1:T11 Arg2:T13	
+T24	Mood 761 783	High risk of requiring
+T51	Temporal 1876 1902	at time of T cell infusion
+R40	has_value Arg1:T66 Arg2:T65	
+*	OR T41 T42
+R32	has_qualifier Arg1:T75 Arg2:T76	
+T40	Procedure 1124 1139	cytotoxic chemo
+R21	has_context Arg1:T37 Arg2:T74	
+T68	Observation 2244 2254	history of
+R8	has_value Arg1:T11 Arg2:T12	
+R14	has_mood Arg1:T25 Arg2:T24	
+R23	has_temporal Arg1:T40 Arg2:T39	
+T62	Observation 2281 2286	prior
+T66	Drug 2382 2392	prednisone
+R49	has_context Arg1:T40 Arg2:T81	
+R47	has_temporal Arg1:T80 Arg2:T39	
+R22	has_qualifier Arg1:T40 Arg2:T38	
+R10	has_value Arg1:T14 Arg2:T15	
+R15	has_value Arg1:T27 Arg2:T26	
+T57	Mood 2181 2190	Requiring
+R34	has_mood Arg1:T58 Arg2:T57	
+R26	has_mood Arg1:T49 Arg2:T50	
+T81	Observation 1155 1167	for a cancer
+T74	Observation 1071 1077;1085 1094	Active diagnosis
+T63	Condition 2287 2298	thyroiditis
+T33	Condition 1021 1038	Diabetes Mellitus
+T39	Temporal 1107 1122	within 3 months
+R43	subsumes Arg1:T25 Arg2:T79	
+T25	Procedure 784 806	mechanical ventilation
+T1	Visit 276 288	hospitalized
+T2	Person 289 294	adult
+T3	Person 317 320	age
+R1	subsumes Arg1:T2 Arg2:T3	
+T4	Value 305 313	18 years
+R2	has_value Arg1:T3 Arg2:T4	
+T5	Observation 332 356	medical care for COVID19
+T6	Mood 322 331	requiring
+R3	has_mood Arg1:T5 Arg2:T6	
+R4	AND Arg1:T2 Arg2:T5	
+T7	Condition 22 42	SARS-CoV-2 infection
+T8	Observation 44 153	onfirmed by polymerase chain reaction assay (PCR) from a nasopharyngeal swab or other accepted specimen type.
+R5	has_context Arg1:T7 Arg2:T8	
+T9	Temporal 181 205	5 days before enrollment
+T10	Reference_point 195 205	enrollment
+R6	has_index Arg1:T9 Arg2:T10	
+R7	has_temporal Arg1:T7 Arg2:T9	
+T16	Informed_consent 469 566	Patient or parent/guardian capable of providing informed consent (may be obtained electronically)
+T19	Observation 568 619	Evidence of pulmonary infiltrates on chest imaging.
+T20	Condition 705 727	ground glass opacities
+T21	Condition 729 751	multifocal infiltrates
+*	OR T21 T20
+R12	subsumes Arg1:T19 Arg2:T20	
+T22	Condition 877 889	Hypertension
+R13	subsumes Arg1:T79 Arg2:T27	
+*	OR T27 T22 T23 T33 T34
+T23	Condition 897 927	Chronic cardiovascular disease
+T28	Condition 939 942	HTN
+R16	AND Arg1:T23 Arg2:T28	
+T29	Negation 928 938	other than
+R17	has_negation Arg1:T28 Arg2:T29	
+T30	Condition 948 971	Coronary artery disease
+T31	Condition 973 997	congestive heart failure
+T32	Condition 1001 1017	cardiomyopathies
+*	OR T30 T31 T32
+R18	subsumes Arg1:T23 Arg2:T30	
+T34	Condition 1040 1047	Obesity
+T35	Measurement 1049 1052	BMI
+T36	Value 1053 1068	greater than 35
+R19	has_value Arg1:T35 Arg2:T36	
+R20	subsumes Arg1:T34 Arg2:T35	
+T43	Condition 1237 1260	Immunodeficiency states
+T44	Drug 1375 1400	immunosuppressive therapy
+R24	subsumes Arg1:T43 Arg2:T44	
+T45	Drug 1406 1415	rituximab
+T46	Condition 1419 1456	congenital immunodeficiency syndromes
+R25	subsumes Arg1:T44 Arg2:T45	
+*	OR T44 T46 T47
+T47	Procedure 1479 1491	chemotherapy
+T48	Temporal 1492 1517	greater than 3 months ago
+R28	has_temporal Arg1:T47 Arg2:T48	
+T52	Non-query-able 1518 1659	but per investigators discretion could have lingering effects on the immune system, eg: chemotherapy regimens for lymphomas, ALL or AML etc.)
+T53	Drug 1698 1727	Anti-thymocyte globulin (ATG)
+T54	Drug 1729 1736	Campath
+T55	Drug 1746 1792	T cell immunosuppressive monoclonal antibodies
+T56	Temporal 1793 1841	in the 28 days prior to screening for enrollment
+T67	Reference_point 1808 1840	prior to screening for enrollmen
+R29	has_index Arg1:T56 Arg2:T67	
+R30	has_temporal Arg1:T55 Arg2:T56	
+*	OR T53 T54 T55
+T70	Measurement 1904 1928	Alanine aminotransferase
+T71	Measurement 1932 1958	aspartate aminotransferase
+*	OR T70 T71 T72
+T72	Value 1959 1997	greater than 5 x upper limit of normal
+R31	has_value Arg1:T71 Arg2:T72	
+T73	Condition 2026 2071	allogeneic hematopoietic stem cell transplant
+T77	Qualifier 2093 2099	active
+T82	Condition 2100 2110	acute GVHD
+R33	has_qualifier Arg1:T82 Arg2:T77	
+T83	Value 2111 2143	greater than or equal to grade 2
+R41	has_value Arg1:T82 Arg2:T83	
+R42	AND Arg1:T73 Arg2:T82	
+T84	Measurement 2429 2511	CRS per American Society for Transplantation and Cellular Therapy (ASTCT) criteria
+T85	Value 2408 2428	Greater than grade 1
+R45	has_value Arg1:T84 Arg2:T85	
+T86	Competing_trial 2513 2776	Patients should not be enrolled on any other interventional clinical trials for COVID19. Patients may receive routine care for COVID19 per institutional standards (including antivirals such as remdesivir or other FDA-EUA approved products and thromboprophylaxis).

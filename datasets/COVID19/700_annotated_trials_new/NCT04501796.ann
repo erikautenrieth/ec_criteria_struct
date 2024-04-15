@@ -1,0 +1,98 @@
+*	OR T4 T7 T10
+*	OR T42 T43
+T48	Condition 1818 1836	Autoimmune disease
+*	OR T51 T52
+R24	has_negation Arg1:T51 Arg2:T50	
+*	OR T37 T36 T38
+T22	Procedure 1102 1129	supplemental oxygen at rest
+*	OR T46 T47
+R20	has_value Arg1:T38 Arg2:T39	
+T5	Value 479 484	> 93%
+T18	Pregnancy_considerations 733 930	Avoid becoming pregnant or impregnate a partner through 90 days after study agent administration. Females must agree to 2 methods of contraception, and males to at least one method of contraception
+*	OR T31 T34
+T32	Value 1289 1307	< 40 mL/min/1.73m2
+R3	has_value Arg1:T4 Arg2:T5	
+T43	Drug 1489 1503	immunomodulant
+T29	Measurement 1224 1231	D-dimer
+T24	Procedure 1155 1159	ECMO
+T3	Reference_point 282 300	prior to screening
+T20	Condition 1064 1091	hypoxic respiratory failure
+T39	Value 1371 1386	> 1.5 times ULN
+R1	has_index Arg1:T2 Arg2:T3	
+T11	Measurement 585 601	respiration rate
+R5	has_value Arg1:T7 Arg2:T8	
+T15	Person 661 665	Aged
+T16	Measurement 685 710	Absolute Lymphocyte Count
+T28	Value 1212 1220	>15 mg/L
+T41	Observation 1439 1452	breastfeeding
+R2	has_temporal Arg1:T1 Arg2:T2	
+T55	Condition 1947 1962	adrenal disease
+R12	has_mood Arg1:T22 Arg2:T21	
+T44	Temporal 1504 1537	within 4 weeks prior to screening
+T57	Observation 2010 2029	requiring treatment
+T49	Observation 1837 1865	requiring systemic treatment
+T38	Measurement 1355 1370	total bilirubin
+T30	Value 1232 1243	> 0.75 g/mL
+T56	Condition 1999 2009	Malignancy
+T31	Measurement 1245 1288	Estimated glomerular filtration rate (eGFR)
+T12	Value 602 625	< 20 breaths per minute
+T34	Procedure 1322 1330	dialysis
+T50	Negation 1866 1876	EXCEPT for
+R21	has_index Arg1:T44 Arg2:T45	
+T19	Competing_trial 932 1021	Not participate in any other clinical trial for an investigational therapy through day 30
+T10	Observation 544 579	no evidence of respiratory distress
+T52	Condition 1889 1906	endocrine disease
+T42	Drug 1461 1485	systemic corticosteroids
+R22	has_temporal Arg1:T43 Arg2:T44	
+R14	has_value Arg1:T29 Arg2:T30	
+R26	AND Arg1:T48 Arg2:T51	
+*	OR T22 T23 T24 T25
+T13	Informed_consent 627 659	Able to provide informed consent
+R13	AND Arg1:T20 Arg2:T22	
+R19	has_value Arg1:T37 Arg2:T35	
+R9	has_value Arg1:T15 Arg2:T14	
+T6	Observation 485 496	at room air
+R18	has_value Arg1:T36 Arg2:T35	
+*	OR T27 T29
+R6	has_context Arg1:T7 Arg2:T9	
+T25	Procedure 1174 1206	noninvasive ventilation modality
+T23	Procedure 1131 1153	mechanical ventilation
+T17	Value 711 731	<1,500 lymphocytes/L
+T33	Mood 1312 1321	requiring
+T27	Measurement 1208 1211	CRP
+T45	Reference_point 1519 1537	prior to screening
+T26	Qualifier 1045 1063	Moderate to severe
+R25	has_negation Arg1:T52 Arg2:T50	
+R29	has_context Arg1:T56 Arg2:T57	
+T59	Competing_trial 1539 1652	Receipt of an investigational agent or investigational use of a licensed agent within 16 weeks prior to screening
+T8	Value 510 530	100 beats per minute
+R16	has_mood Arg1:T34 Arg2:T33	
+*	OR T53 T54 T55
+T14	Value 667 683	18 and  75 years
+T54	Condition 1926 1941	thyroid disease
+T21	Mood 1092 1101	requiring
+T1	Condition 102 143	Laboratory-confirmed SARS-CoV-2 infection
+T40	Condition 1426 1435	Pregnancy
+T37	Measurement 1332 1335	AST
+T35	Value 1340 1353	> 3-times ULN
+R10	has_value Arg1:T16 Arg2:T17	
+R23	has_context Arg1:T48 Arg2:T49	
+T36	Measurement 1336 1339	ALT
+R27	subsumes Arg1:T52 Arg2:T53	
+T46	Condition 1654 1667	HIV infection
+T51	Condition 1877 1885	vitiligo
+R4	has_context Arg1:T4 Arg2:T6	
+R8	has_value Arg1:T11 Arg2:T12	
+R15	has_value Arg1:T27 Arg2:T28	
+R7	AND Arg1:T10 Arg2:T11	
+R17	has_value Arg1:T31 Arg2:T32	
+*	OR T40 T41
+R28	has_temporal Arg1:T56 Arg2:T58	
+T4	Measurement 461 478	oxygen saturation
+T7	Measurement 498 508	heart rate
+T2	Temporal 273 300	< 5 days prior to screening
+T53	Condition 1916 1924	diabetes
+R11	has_qualifier Arg1:T20 Arg2:T26	
+T47	Observation 1730 1816	immunodeficiency associated with lymphopenia and/or recurrent opportunistic infections
+T9	Observation 531 538	at rest
+T58	Temporal 2030 2055	1 year prior to screening

@@ -1,0 +1,63 @@
+T15	Condition 583 598	lung malignancy
+T36	Non-query-able 1270 1340	Subjects not fully committed to full support at the time of enrollment
+T25	Procedure 870 873	CPR
+T35	Observation 1192 1263	or other irreversible disease/conditions with a 6-month mortality > 50%
+T18	Measurement 661 673	tidal volume
+T28	Qualifier 931 937	severe
+T24	Condition 850 864	cardiac arrest
+R1	has_value Arg1:T3 Arg2:T2	
+T2	Value 40 51	>/= 18 year
+T23	Observation 763 813	involving more than 40% of Total Body Surface Area
+R11	has_context Arg1:T21 Arg2:T23	
+T37	Drug 1365 1389	inhaled nitric oxide gas
+T10	Temporal 252 311	for more than 72 hours from initiation of the treatment gas
+T9	Procedure 242 251	intubated
+T17	Procedure 619 634	lung transplant
+R9	has_temporal Arg1:T18 Arg2:T20	
+T31	Temporal 1042 1067	at the time of enrollment
+T39	Visit 1426 1444	hospital admission
+T22	Qualifier 750 756	severe
+T19	Value 674 704	< 3 cc/kg of ideal body weight
+T21	Condition 757 762	burns
+T6	Procedure 126 149	mechanically ventilated
+R15	AND Arg1:T27 Arg2:T29	
+T12	Competing_trial 317 375	Subjects enrolled in another interventional research study
+T38	Temporal 1390 1409	prior to enrollment
+T16	Procedure 602 615	pneumonectomy
+R10	has_qualifier Arg1:T21 Arg2:T22	
+T14	Observation 564 582	medical history of
+R3	AND Arg1:T5 Arg2:T6	
+T3	Person 52 55	old
+T5	Procedure 112 121	intubated
+T13	Non-query-able 381 539	Physician of record opposed to enrolling the patient due to perceived safety concerns; or any condition that does not allow the protocol to be followed safely
+T4	Visit 70 89	admitted to the ICU
+*	OR T16 T17 T15
+R7	has_temporal Arg1:T15 Arg2:T14	
+T8	Observation 155 164;188 206	Confirmed by positive rt-PCR
+T33	Observation 1170 1180	history of
+R13	has_temporal Arg1:T25 Arg2:T26	
+R18	has_context Arg1:T34 Arg2:T35	
+R5	has_temporal Arg1:T9 Arg2:T10	
+T30	Procedure 1016 1041	renal replacement therapy
+T41	Condition 1458 1466	COVID-19
+R16	has_temporal Arg1:T30 Arg2:T31	
+R20	AND Arg1:T39 Arg2:T41	
+T34	Condition 1181 1191	malignancy
+T1	Person 24 29	Adult
+T27	Condition 938 966	deficit in cerebral function
+R6	has_index Arg1:T10 Arg2:T11	
+T40	Negation 1445 1457	unrelated to
+R21	has_negation Arg1:T41 Arg2:T40	
+T7	Condition 178 187	SARS-CoV2
+T11	Reference_point 280 311	initiation of the treatment gas
+R12	AND Arg1:T24 Arg2:T25	
+R17	has_temporal Arg1:T34 Arg2:T33	
+T32	Condition 1095 1143	impaired ability to ventilate without assistance
+R2	subsumes Arg1:T1 Arg2:T3	
+T20	Temporal 705 730	at the time of enrollment
+T29	Condition 972 991	fixed dilated pupil
+R4	has_context Arg1:T7 Arg2:T8	
+R8	has_value Arg1:T18 Arg2:T19	
+R14	has_qualifier Arg1:T27 Arg2:T28	
+T26	Temporal 874 900	for longer than 30 minutes
+R19	has_temporal Arg1:T37 Arg2:T38	

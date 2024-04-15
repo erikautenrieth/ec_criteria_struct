@@ -1,0 +1,130 @@
+T1	Visit 22 34	Hospitalized
+T2	Condition 71 91	SARS-CoV-2 infection
+T3	Observation 44 67	Laboratory confirmation
+T4	Temporal 92 124	</= 72 hr prior to randomization
+T5	Reference_point 111 124	randomization
+R1	has_context Arg1:T2 Arg2:T3	
+R2	has_temporal Arg1:T2 Arg2:T4	
+R3	has_index Arg1:T4 Arg2:T5	
+T6	Post-eligibility 126 174	Randomization within 72 hr of hospital admission
+T7	Value 176 184	Negative
+T8	Measurement 185 199	pregnancy test
+T9	Observation 204 220	reproductive age
+T10	Person 221 226	women
+R4	has_value Arg1:T8 Arg2:T7	
+R5	AND Arg1:T8 Arg2:T10	
+R6	has_context Arg1:T10 Arg2:T9	
+T11	Informed_consent 228 275	Patient or LAR able to provide informed consent
+T12	Condition 323 353	End stage renal disease (ESRD)
+T13	Negation 354 357	NOT
+T14	Mood 358 368	undergoing
+T15	Procedure 369 394	renal replacement therapy
+R7	AND Arg1:T12 Arg2:T15	
+R8	has_mood Arg1:T15 Arg2:T14	
+R9	has_negation Arg1:T15 Arg2:T13	
+T16	Qualifier 396 402	Severe
+T17	Condition 403 424	hepatic insufficiency
+T18	Measurement 426 430	LFTs
+T19	Value 431 466	> 5 times the upper limit of normal
+T20	Condition 476 480	ESLD
+T21	Condition 484 493	cirrhosis
+R10	has_qualifier Arg1:T17 Arg2:T16	
+R11	subsumes Arg1:T17 Arg2:T18	
+R12	has_value Arg1:T18 Arg2:T19	
+*	OR T18 T20 T21
+T22	Condition 496 502	Nausea
+T23	Condition 503 511	vomiting
+T24	Condition 515 530	aspiration risk
+T25	Observation 531 594	precluding oral medications unless can be given by gastric tube
+*	OR T22 T23 T24
+R13	has_context Arg1:T24 Arg2:T25	
+T26	Competing_trial 596 686	Use of another SARS-CoV-2 directed medication empirically or within another clinical trial
+T27	Temporal 687 708	within the prior week
+R14	has_temporal Arg1:T26 Arg2:T27	
+T28	Condition 710 719	Pregnancy
+T29	Observation 723 737	breast feeding
+*	OR T28 T29
+T30	Negation 739 746	Absence
+T31	Drug 750 774	dependable contraception
+R15	has_negation Arg1:T31 Arg2:T30	
+T32	Informed_consent 802 850	Inability to obtain or declined informed consent
+T33	Observation 778 794	reproductive age
+T34	Person 795 800	women
+R16	AND Arg1:T31 Arg2:T34	
+R17	has_context Arg1:T34 Arg2:T33	
+T35	Condition 1906 1940	Allergy or intolerance to losartan
+T36	Condition 1906 1931;1945 1959	Allergy or intolerance to ACE inhibitors
+T37	Condition 1906 1931;1963 1973	Allergy or intolerance to other ARBs
+*	OR T35 T36 T37
+T38	Observation 1976 1990	Already taking
+T39	Drug 1991 1994	ACE
+T40	Drug 1998 2001	ARB
+T41	Temporal 2003 2017	within 1 month
+R18	has_context Arg1:T39 Arg2:T38	
+R19	has_context Arg1:T40 Arg2:T38	
+R20	has_temporal Arg1:T40 Arg2:T41	
+R21	has_temporal Arg1:T39 Arg2:T41	
+*	OR T39 T40
+T42	Condition 2020 2031	Hypotension
+T43	Condition 2033 2045	Hyperkalemia
+T44	Measurement 2047 2048	K
+T45	Value 2049 2056	>/= 5.0
+T46	Temporal 2057 2077	at time of screening
+T47	Observation 2081 2091	history of
+T48	Condition 2092 2104	hyperkalemia
+R22	subsumes Arg1:T43 Arg2:T44	
+R23	has_value Arg1:T44 Arg2:T45	
+R24	has_temporal Arg1:T44 Arg2:T46	
+R25	has_temporal Arg1:T48 Arg2:T47	
+*	OR T44 T48
+T49	Measurement 2107 2121	Blood pressure
+T50	Value 2122 2136	< 110/70 mm Hg
+T51	Observation 2140 2150	history of
+T52	Condition 2151 2162	hypotension
+T53	Qualifier 2166 2172	recent
+T54	Temporal 2174 2188	within 1 month
+T55	Qualifier 2193 2202	recurrent
+T56	Condition 2203 2210	syncope
+R26	has_value Arg1:T49 Arg2:T50	
+R27	has_temporal Arg1:T52 Arg2:T51	
+*	OR T49 T52 T56
+R28	has_qualifier Arg1:T56 Arg2:T53	
+*	OR T53 T55
+R29	has_temporal Arg1:T56 Arg2:T54	
+T57	Qualifier 2212 2218	Severe
+T58	Condition 2219 2236	renal dysfunction
+T59	Measurement 2238 2251	estimated GFR
+T60	Value 2252 2263	< 30 ml/min
+T61	Temporal 2264 2284	at time of screening
+T62	Observation 2288 2295	history
+T63	Qualifier 2296 2304	advanced
+T64	Condition 2305 2318	renal disease
+R30	has_qualifier Arg1:T58 Arg2:T57	
+R31	has_value Arg1:T59 Arg2:T60	
+R32	has_temporal Arg1:T59 Arg2:T61	
+R33	has_temporal Arg1:T64 Arg2:T62	
+R34	has_qualifier Arg1:T64 Arg2:T63	
+*	OR T59 T64
+R35	subsumes Arg1:T58 Arg2:T59	
+T65	Qualifier 2321 2327	Severe
+T66	Condition 2328 2344	volume depletion
+T67	Condition 2348 2373	acute kidney injury (AKI)
+R36	has_qualifier Arg1:T66 Arg2:T65	
+*	OR T66 T67
+T68	Qualifier 2375 2380	Known
+T69	Condition 2381 2398	cirrhotic ascites
+R37	has_qualifier Arg1:T69 Arg2:T68	
+T70	Qualifier 2400 2405	Known
+T71	Qualifier 2406 2412	severe
+T72	Condition 2423 2444	mitral valve stenosis
+T73	Condition 2413 2419;2430 2444	aortic valve stenosis
+R38	has_qualifier Arg1:T73 Arg2:T70	
+R39	AND Arg1:T70 Arg2:T71	
+*	OR T73 T72
+R40	has_qualifier Arg1:T72 Arg2:T70	
+T74	Qualifier 2446 2451	Known
+T75	Qualifier 2452 2461	unstented
+T76	Condition 2462 2483	renal artery stenosis
+R41	has_qualifier Arg1:T76 Arg2:T74	
+R42	AND Arg1:T74 Arg2:T75	
+T77	Drug 2516 2547	drugs due to CYP3A interactions
