@@ -1,0 +1,116 @@
+T47	Non-query-able 1310 1381	Do Not Intubate order but does not include a "Do Not Resuscitate" order
+*	OR T32 T33
+T41	Non-query-able 835 972	This does not include those patients receiving High flow nasal cannula (HFNC) oxygen or Noninvasive ventilation (NIV) prior to enrollment
+R19	AND Arg1:T31 Arg2:T32	
+R17	has_value Arg1:T28 Arg2:T29	
+T44	Drug 1049 1073	systemic steroid therapy
+R24	has_value Arg1:T44 Arg2:T45	
+T12	Value 274 280	> 38oC
+T48	Qualifier 1382 1389	Chronic
+T55	Observation 1486 1551	obstructive sleep apnea (OSA) or obesity hypoventilation syndrome
+T29	Value 586 591	< 90%
+T32	Observation 610 628	on  2 L/min oxygen
+R5	has_value Arg1:T10 Arg2:T11	
+*	OR T28 T34
+T26	Mood 540 555	requirement for
+R12	AND Arg1:T19 Arg2:T21	
+R30	has_negation Arg1:T55 Arg2:T54	
+*	OR T42 T44
+T58	Condition 1647 1683;1711 1724	Contraindication or known allergy to beta-agonists
+R23	has_qualifier Arg1:T44 Arg2:T43	
+R8	AND Arg1:T3 Arg2:T8	
+R13	AND Arg1:T21 Arg2:T23	
+T42	Observation 976 1036	condition requiring inhaled corticosteroids or beta-agonists
+T11	Value 264 270	< 35oC
+T34	Procedure 645 648	NIV
+T16	Measurement 310 323	procalcitonin
+T56	Non-query-able 1552 1646	Not anticipated to survive > 48 hours or not expected to require > 48 hours of hospitalization
+T46	Non-query-able 1114 1308	this does not include patients receiving inhaled beta-agonists in the Emergency Department without an established indication if treating clinician is willing to discontinue subsequent treatments
+T49	Condition 1398 1419	neuromuscular disease
+T21	Condition 418 423	cough
+T33	Observation 633 641	> 6L/min
+T9	Observation 217 250	evidence of systemic inflammation
+T30	Observation 592 603	on room air
+*	OR T29 T31
+T17	Value 324 335	> 0.5 mcg/L
+R6	has_value Arg1:T13 Arg2:T14	
+*	OR T14 T15
+T65	Value 1935 1940	< 3.0
+R32	has_temporal Arg1:T62 Arg2:T63	
+R2	subsumes Arg1:T2 Arg2:T3	
+T22	Condition 427 446	shortness of breath
+T37	Procedure 777 787	Intubation
+T7	Condition 134 141	dyspnea
+*	OR T50 T49
+R18	AND Arg1:T29 Arg2:T30	
+R1	has_qualifier Arg1:T2 Arg2:T1	
+T69	Informed_consent 2093 2141	Patient/surrogate refusal of consent to protocol
+T23	Observation 452 484	absence of alternative diagnosis
+T62	Condition 1792 1820	supraventricular tachycardia
+T15	Value 298 306	> 11,000
+R20	has_temporal Arg1:T34 Arg2:T35	
+T52	Procedure 1430 1444	daytime oxygen
+R31	has_value Arg1:T59 Arg2:T60	
+R11	has_value Arg1:T19 Arg2:T20	
+T31	Value 586 587;606 609	< 96%
+R29	has_context Arg1:T53 Arg2:T55	
+T61	Condition 1761 1784	ventricular tachycardia
+T25	Condition 515 524	Hypoxemia
+T64	Measurement 1932 1934	K+
+T36	Informed_consent 707 775	Inability to obtain consent within 12 hours of meeting entry criteri
+R26	has_qualifier Arg1:T49 Arg2:T48	
+T66	Condition 2018 2027	Pregnancy
+T19	Condition 392 397	fever
+T53	Procedure 1448 1470	mechanical ventilation
+*	OR T52 T53
+T50	Condition 1390 1394;1412 1419	lung disease
+T27	Procedure 556 575	supplemental oxygen
+T67	Observation 2028 2040	Incarcerated
+T43	Qualifier 1041 1048	chronic
+*	OR T21 T22
+T13	Measurement 284 287	WBC
+T39	Procedure 802 812	intubation
+R25	has_qualifier Arg1:T50 Arg2:T48	
+R22	has_temporal Arg1:T39 Arg2:T40	
+R21	has_mood Arg1:T39 Arg2:T38	
+T20	Value 398 405	> 100.4
+T18	Observation 343 379;486 508	Confirmed or high-clinical suspicion for COVID-19 infection
+T6	Condition 112 129	sputum production
+*	OR T57 T58
+R33	has_value Arg1:T64 Arg2:T65	
+T45	Value 1074 1112	equivalent to a dose >10 mg prednisone
+T60	Value 1750 1759	> 130 bpm
+T8	Condition 147 212	radiographic evidence of pneumonia by chest radiograph or CT scan
+*	OR T37 T39
+T38	Mood 792 801	impending
+T51	Mood 1420 1429	requiring
+R14	has_mood Arg1:T27 Arg2:T26	
+T4	Observation 65 103	for acute (< 7 days) onset of symptoms
+R28	AND Arg1:T49 Arg2:T52	
+T28	Measurement 581 585	SpO2
+*	OR T13 T16 T10
+*	OR T5 T6 T7
+T54	Negation 1471 1481	other than
+R15	subsumes Arg1:T25 Arg2:T27	
+R7	has_value Arg1:T16 Arg2:T17	
+T2	Condition 28 37	Pneumonia
+T1	Qualifier 21 27	Severe
+R16	AND Arg1:T27 Arg2:T28	
+R34	subsumes Arg1:T9 Arg2:T10	
+T40	Temporal 814 833	prior to enrollment
+T5	Condition 105 110	cough
+R9	AND Arg1:T8 Arg2:T9	
+T14	Value 288 294	< 4000
+R4	subsumes Arg1:T4 Arg2:T5	
+T59	Measurement 1739 1749	heart rate
+T63	Temporal 1821 1840	within last 4 hours
+T57	Condition 1647 1707	Contraindication or known allergy to inhaled corticosteroids
+T10	Measurement 252 263	temperature
+T68	Informed_consent 2052 2092	Physician refusal of consent to protocol
+T3	Visit 49 64	hospitalization
+R3	has_context Arg1:T3 Arg2:T4	
+R27	has_mood Arg1:T52 Arg2:T51	
+T35	Temporal 670 683	at enrollment
+*	OR T59 T61 T62
+*	OR T11 T12
+R10	subsumes Arg1:T18 Arg2:T19	

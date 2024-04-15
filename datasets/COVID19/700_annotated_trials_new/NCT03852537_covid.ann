@@ -1,0 +1,55 @@
+T1	Visit 695 715	admitted to hospital
+T2	Condition 721 739	COVID-19 pneumonia
+T3	Observation 741 781	confirmed by positive SARS CoV-2 testing
+R1	has_context Arg1:T2 Arg2:T3	
+R2	AND Arg1:T1 Arg2:T2	
+T4	Condition 784 809	Acute respiratory failure
+T5	Measurement 811 820	SaO2/FiO2
+T6	Value 821 826	< 315
+T7	Measurement 830 839	PaO2/FiO2
+T8	Value 840 845	< 300
+R3	has_value Arg1:T7 Arg2:T8	
+R4	has_value Arg1:T5 Arg2:T6	
+*	OR T5 T7
+R5	subsumes Arg1:T4 Arg2:T5	
+T9	Observation 871 884	Pre-admission
+T10	Qualifier 885 896	chronic use
+T11	Drug 900 908	steroids
+T12	Qualifier 912 917	other
+T13	Drug 918 947	immunosuppressive medications
+R6	has_qualifier Arg1:T13 Arg2:T12	
+R7	has_qualifier Arg1:T11 Arg2:T10	
+R8	has_context Arg1:T11 Arg2:T9	
+*	OR T11 T13
+T14	Condition 948 969	Adrenal insufficiency
+T15	Condition 970 982	Comfort care
+T16	Condition 983 993	Leukopenia
+T17	Value 994 1002	<1000/mm
+T18	Condition 1006 1017	neutropenia
+T19	Value 1018 1025	<500/mm
+T20	Observation 1027 1062	except if attributable to pneumonia
+T21	Condition 1068 1080	HIV positive
+T22	Measurement 1088 1097	CD4 count
+T23	Value 1098 1102	<100
+R9	has_value Arg1:T16 Arg2:T17	
+R10	has_value Arg1:T18 Arg2:T19	
+*	OR T16 T18 T21
+R11	has_context Arg1:T18 Arg2:T20	
+R12	AND Arg1:T21 Arg2:T22	
+R13	has_value Arg1:T22 Arg2:T23	
+T24	Observation 1103 1109;1118 1128	Recent history of
+T25	Observation 1113 1128	past history of
+T26	Procedure 1129 1140;1156 1171	bone marrow transplantation
+T27	Procedure 1144 1171	solid organ transplantation
+*	OR T24 T25
+*	OR T26 T27
+R14	has_temporal Arg1:T26 Arg2:T24	
+R15	has_temporal Arg1:T27 Arg2:T24	
+T28	Visit 1172 1190	Hospital admission
+T29	Temporal 1191 1214	in the previous 90 days
+R16	has_temporal Arg1:T28 Arg2:T29	
+T30	Observation 1215 1233	Suspected flare of
+T31	Condition 1234 1259	Interstitial lung disease
+T32	Observation 1261 1290	infectious and non-infectious
+R17	AND Arg1:T31 Arg2:T32	
+R18	has_context Arg1:T31 Arg2:T30	

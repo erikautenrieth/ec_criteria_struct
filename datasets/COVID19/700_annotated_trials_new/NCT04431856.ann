@@ -1,0 +1,27 @@
+T15	Visit 417 432	hospitalization
+*	OR T9 T10 T11 T12 T13 T14
+T5	Value 174 196	between 6 and 13 years
+T6	Observation 197 235	speak/read English or Spanish fluently
+T2	Measurement 95 160	screening measures of anxiety, depression and/or traumatic stress
+T7	Condition 274 288	mental illness
+R5	AND Arg1:T15 Arg2:T16	
+T19	Non-query-able 636 775	may be excluded if the severity of current mental illness is such that outpatient, weekly group treatment would be considered inappropriate
+T17	Observation 463 478	suicide attempt
+T16	Condition 437 459	mental health concerns
+T3	Value 66 91	mild or greater elevation
+R3	has_qualifier Arg1:T7 Arg2:T8	
+T8	Qualifier 267 273	severe
+*	OR T7 T15
+T4	Person 168 173	child
+R4	subsumes Arg1:T7 Arg2:T9	
+R1	has_value Arg1:T2 Arg2:T3	
+T14	Condition 390 412	substance use disorder
+T13	Condition 368 388	alcohol use disorder
+T1	Informed_consent 21 54	consent to participate via RedCap
+T9	Condition 296 312	bipolar disorder
+T12	Condition 357 366	psychosis
+T10	Condition 314 327	schizophrenia
+*	OR T16 T17
+T11	Condition 332 355	intellectual disability
+T18	Non-query-able 480 635	reported prior arrest for child endangerment, child abuse or child neglect, or prior investigation by the Florida Department of Children and Families (DCF)
+R2	has_value Arg1:T4 Arg2:T5	

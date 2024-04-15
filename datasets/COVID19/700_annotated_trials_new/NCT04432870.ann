@@ -1,0 +1,29 @@
+T17	Observation 191 224	for low to moderate risk patients
+T11	Observation 478 523	Unable to read or write in English or Spanish
+T2	Person 29 32	age
+R7	has_context Arg1:T15 Arg2:T17	
+*	OR T14 T16 T15
+T18	Observation 112 117	first
+R5	has_context Arg1:T12 Arg2:T13	
+T3	Procedure 69 80	colonoscopy
+R8	has_context Arg1:T14 Arg2:T18	
+T1	Value 33 38	45-75
+T14	Procedure 118 139	screening colonoscopy
+R4	has_temporal Arg1:T9 Arg2:T8	
+*	OR T9 T10
+T16	Observation 145 161;179 190	routine screenin colonoscopy
+T5	Observation 56 68	surveillance
+T12	Condition 346 377	High risk for colorectal cancer
+T13	Observation 378 419	as indicated by 1 year follow up schedule
+T8	Observation 426 436	history of
+T10	Condition 453 477	irritable bowel syndrome
+T15	Observation 166 190	surveillance colonoscopy
+T6	Observation 43 52	screening
+R2	has_context Arg1:T3 Arg2:T4	
+R6	has_temporal Arg1:T10 Arg2:T8	
+*	OR T5 T6
+T7	Procedure 323 345	Diagnostic colonoscopy
+T9	Condition 437 449	colon cancer
+R3	has_context Arg1:T3 Arg2:T5	
+T4	Observation 81 104	delayed due to COVID-19
+R1	has_value Arg1:T2 Arg2:T1	

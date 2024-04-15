@@ -1,0 +1,51 @@
+T8	Temporal 1383 1395	at Screening
+T10	Value 1218 1237	< 30 mL/min/1.73m^2
+T5	Competing_trial 927 1072	Concurrent treatment with other agents with actual or possible direct antiviral activity against SARS-CoV-2 < 24 hours prior to study drug dosing
+T2	Value 31 41	< 18 years
+R6	has_value Arg1:T14 Arg2:T15	
+R5	has_context Arg1:T9 Arg2:T11	
+R1	has_value Arg1:T1 Arg2:T2	
+R2	has_value Arg1:T7 Arg2:T6	
+T13	Measurement 1073 1103	Alanine Aminotransferase (ALT)
+*	OR T13 T14
+T9	Measurement 1174 1217	Estimated glomerular filtration rate (eGFR)
+T3	Condition 707 775	Severe acute respiratory syndrome coronavirus (SARS-CoV-2) infection
+T11	Observation 1238 1260	using Schwartz formula
+T6	Value 1359 1367	Positive
+R4	has_value Arg1:T9 Arg2:T10	
+T15	Value 1140 1173	> 5 X upper limit of normal (ULN)
+T4	Visit 821 833	Hospitalized
+T1	Person 26 30	Aged
+T7	Measurement 1368 1382	pregnancy test
+R3	has_temporal Arg1:T7 Arg2:T8	
+T14	Measurement 1107 1139	aspartate aminotransferase (AST)
+R7	has_value Arg1:T13 Arg2:T15	
+T16	Value 623 642	0 days to < 56 days
+T17	Person 646 649	age
+R8	has_value Arg1:T17 Arg2:T16	
+T18	Measurement 651 666	gestational age
+T19	Value 668 676	37 weeks
+T20	Measurement 681 693	birth weight
+T21	Value 698 704	1.5 kg
+R9	has_value Arg1:T20 Arg2:T21	
+R10	has_value Arg1:T18 Arg2:T19	
+R11	AND Arg1:T17 Arg2:T18	
+R12	AND Arg1:T18 Arg2:T20	
+T22	Observation 776 820	confirmed by polymerase chain reaction (PCR)
+R13	has_context Arg1:T3 Arg2:T22	
+T23	Observation 848 900	medical care for coronavirus disease 2019 (COVID-19)
+T24	Mood 838 847	requiring
+R14	has_mood Arg1:T23 Arg2:T24	
+R15	AND Arg1:T4 Arg2:T23	
+T25	Value 1278 1284	1 year
+T26	Person 1288 1291	age
+R16	has_value Arg1:T26 Arg2:T25	
+R17	AND Arg1:T9 Arg2:T26	
+T12	Value 1343 1351	< 1 year
+T27	Person 1355 1358	age
+R18	has_value Arg1:T27 Arg2:T12	
+T28	Measurement 1292 1302	Creatinine
+T29	Value 1303 1338	above protocol specified thresholds
+R19	has_value Arg1:T28 Arg2:T29	
+R20	AND Arg1:T28 Arg2:T27	
+T30	Pregnancy_considerations 1396 1636	only for female of child bearing potential. Note: If female participants who become pregnant during the study or are discovered to be pregnant after receiving at least one dose may continue study drug, after discussion with the investigator

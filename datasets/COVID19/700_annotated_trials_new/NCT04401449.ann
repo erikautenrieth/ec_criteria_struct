@@ -1,0 +1,49 @@
+T15	Value 1328 1342	18 to 80 years
+T25	Condition 1779 1793	claustrophobia
+T5	Person 334 338	aged
+T23	Condition 1530 1543	schizophrenia
+T7	Person 318 322	Male
+T17	Person 1307 1311	Male
+T11	Value 890 898	positive
+*	OR T7 T6
+T32	Person 1323 1327	aged
+T4	Non-query-able 213 314	Stated willingness to comply with all study procedures and availability for the duration of the study
+T6	Person 326 332	female
+R9	has_qualifier Arg1:T21 Arg2:T22	
+T26	Qualifier 1772 1778	Severe
+T8	Non-query-able 357 757	Only a minority of children and adolescents have been described as developing serious illness with COVID-19 infection. As such, this is not an age group at significant risk from complications due to this infection. Adults older than 80 years of age represent a group with the greatest risk of mortality from COVID-19 infection. The presence of significant co-morbidities requiring care that cannot be
+T1	Condition 175 193	COVID-19 infection
+R8	AND Arg1:T16 Arg2:T32	
+R10	subsumes Arg1:T21 Arg2:T23	
+T28	Mood 1884 1893	requiring
+T31	Value 339 353	18 to 80 years
+T10	Measurement 899 914	SARSCoV-19 test
+T2	Temporal 144 160	within 1-28 days
+R4	has_temporal Arg1:T1 Arg2:T2	
+*	OR T23 T24
+R13	has_context Arg1:T27 Arg2:T29	
+R7	has_value Arg1:T32 Arg2:T15	
+T9	Non-query-able 765 868	provided at the CC would present a disadvantage to them to have their acute care provided for in the CC
+T3	Observation 164 174	documented
+T27	Procedure 1894 1916	mechanical ventilation
+T24	Condition 1545 1561	manic depression
+R1	has_value Arg1:T5 Arg2:T31	
+T30	Non-query-able 1655 1767	The conduct of the study requires participation in studies that may be unduly stressful (e.g. MRI, bronchoscopy)
+T18	Observation 1089 1199	recovery phase of the acute illness (day 28 and beyond) if care has been received at a facility outside of NIH
+T16	Person 1315 1321	female
+*	OR T19 T20
+T13	Informed_consent 972 1068	Ability of subject to understand and the willingness to sign a written informed consent document
+R6	has_context Arg1:T10 Arg2:T12	
+R5	has_value Arg1:T10 Arg2:T11	
+T29	Observation 1917 1957	at an outside hospital prior to transfer
+*	OR T17 T16
+R11	has_qualifier Arg1:T25 Arg2:T26	
+T20	Observation 1488 1497	lactation
+T19	Condition 1475 1484	Pregnancy
+T22	Qualifier 1501 1508	Serious
+T14	Non-query-able 1204 1305	Stated willingness to comply with all study procedures and availability for the duration of the study
+R2	AND Arg1:T6 Arg2:T5	
+R3	has_context Arg1:T1 Arg2:T3	
+T12	Observation 915 940	by nucleic acid detection
+R12	has_mood Arg1:T27 Arg2:T28	
+T21	Condition 1509 1523	mental illness

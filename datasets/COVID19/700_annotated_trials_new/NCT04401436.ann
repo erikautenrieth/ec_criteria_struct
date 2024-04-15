@@ -1,0 +1,59 @@
+T7	Observation 428 435	Group C
+T22	Device 265 283	nasal cannula (NC)
+*	OR T5 T6 T7 T8
+R5	has_temporal Arg1:T11 Arg2:T14	
+R15	subsumes Arg1:T7 Arg2:T17	
+T34	Observation 556 602	any other modality of non-invasive ventilation
+T8	Observation 632 639	Group D
+R7	subsumes Arg1:T15 Arg2:T19	
+T29	Procedure 467 491	non-invasive ventilation
+T23	Measurement 327 346	oxygen requirements
+T9	Informed_consent 1271 1303	Able to provide informed consent
+*	OR T24 T26
+R21	AND Arg1:T18 Arg2:T35	
+T6	Observation 286 293	Group B
+T4	Observation 67 129	via molecular assay or other commercial or public health assay
+*	OR T32 T34 T33
+T18	Observation 641 650	recovered
+T13	Non-query-able 1508 1607	Any condition that, in the opinion of the investigator, contraindicates participation in this study
+T3	Condition 58 66	COVID-19
+R10	subsumes Arg1:T6 Arg2:T16	
+T31	Value 517 526	>50% FiO2
+T10	Observation 1440 1450	history of
+R16	subsumes Arg1:T17 Arg2:T29	
+T35	Observation 1132 1189	at least 7 days have passed since symptoms first appeared
+R3	has_temporal Arg1:T11 Arg2:T10	
+T15	Observation 196 222	mild clinical presentation
+R12	has_value Arg1:T23 Arg2:T24	
+T20	Measurement 240 259	oxygen requirements
+R6	subsumes Arg1:T5 Arg2:T15	
+R13	AND Arg1:T23 Arg2:T25	
+T32	Device 530 554	high-flow oxygen devices
+T12	Value 1490 1496	<7g/dL
+T19	Observation 224 236	asymptomatic
+T14	Temporal 1462 1489	from most recent blood draw
+T16	Observation 295 325	moderate clinical presentation
+R20	subsumes Arg1:T8 Arg2:T18	
+T21	Value 260 264	<-4L
+R11	subsumes Arg1:T16 Arg2:T23	
+R19	AND Arg1:T30 Arg2:T32	
+R9	AND Arg1:T20 Arg2:T22	
+T26	Value 357 397	<=50% fraction of inspired oxygen (FiO2)
+R17	AND Arg1:T29 Arg2:T30	
+*	OR T19 T20
+T5	Observation 187 194	Group A
+R2	has_context Arg1:T3 Arg2:T4	
+T28	Device 401 425	high-flow oxygen devices
+T2	Person 27 31	Aged
+R4	has_value Arg1:T11 Arg2:T12	
+T30	Measurement 497 516	oxygen requirements
+R14	AND Arg1:T26 Arg2:T28	
+R18	has_value Arg1:T30 Arg2:T31	
+R8	has_value Arg1:T20 Arg2:T21	
+T33	Procedure 607 629	mechanical ventilation
+T25	Device 351 353	NC
+T17	Observation 437 465	severe clinical presentation
+T24	Value 347 350	>4L
+T11	Measurement 1451 1461	hemoglobin
+T1	Value 32 42	>=18 years
+R1	has_value Arg1:T2 Arg2:T1	

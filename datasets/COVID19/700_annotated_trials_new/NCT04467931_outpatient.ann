@@ -1,0 +1,33 @@
+T1	Value 21 29	Positive
+T2	Measurement 30 45	SARS-CoV-2 test
+R1	has_value Arg1:T2 Arg2:T1	
+T3	Visit 53 63	outpatient
+T4	Non-query-able 277 309	Do not have data inconsistencies
+T5	Condition 413 425	hypertension
+T6	Reference_point 439 462	prior to the index date
+T7	Temporal 426 462	at any point prior to the index date
+R2	has_temporal Arg1:T5 Arg2:T7	
+R3	has_index Arg1:T7 Arg2:T6	
+T8	Observation 467 537	at least one prescription dispensed for an antihypertensive medication
+T9	Temporal 538 576	in the 90 days prior to the index date
+T10	Reference_point 553 576	prior to the index date
+R4	has_index Arg1:T9 Arg2:T10	
+R5	has_temporal Arg1:T8 Arg2:T9	
+R6	AND Arg1:T2 Arg2:T3	
+T11	Observation 672 706	compelling indication for ACEI/ARB
+T12	Temporal 707 743	at any point prior to the index date
+T13	Reference_point 720 743	prior to the index date
+R7	has_index Arg1:T12 Arg2:T13	
+R8	has_temporal Arg1:T11 Arg2:T12	
+T14	Condition 751 759	diabetes
+T15	Condition 761 767	stroke
+T16	Condition 769 791	chronic kidney disease
+T17	Condition 793 837	heart failure with reduced ejection fraction
+T18	Condition 842 864	coronary heart disease
+*	OR T14 T15 T16 T17 T18
+R9	subsumes Arg1:T11 Arg2:T14	
+T19	Observation 908 954	prescription fills for both an ACEI and an ARB
+T20	Temporal 955 993	in the 90 days prior to the index date
+T21	Reference_point 970 993	prior to the index date
+R10	has_index Arg1:T20 Arg2:T21	
+R11	has_temporal Arg1:T19 Arg2:T20	

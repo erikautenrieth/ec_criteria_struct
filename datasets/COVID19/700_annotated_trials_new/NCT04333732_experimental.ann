@@ -1,0 +1,85 @@
+R7	has_qualifier Arg1:T16 Arg2:T15	
+T4	Person 81 85	aged
+R2	has_value Arg1:T4 Arg2:T3	
+T3	Value 86 104	18 years and older
+*	OR T16 T14
+T7	Non-query-able 299 379	Must have a mobile phone and access to the Internet for data collection purposes
+T15	Qualifier 693 701	previous
+T11	Condition 1102 1169	allergies to any of the IMPs and excipients of the IMPs and placebo
+T16	Condition 702 720	COVID-19 diagnosis
+R6	has_qualifier Arg1:T14 Arg2:T13	
+T12	Non-query-able 1172 1248	Self-reported presence or history of the conditions listed in the appendices
+T13	Qualifier 656 663	current
+R3	AND Arg1:T1 Arg2:T4	
+T17	Qualifier 737 744	current
+T8	Informed_consent 382 481	Participants who are willing and able to provide informed consent via an electronic consent process
+T1	Condition 62 80	COVID-19 infection
+T10	Competing_trial 775 1079	Concurrent and/or recent involvement in other research or use of the investigational product, a product considered to be equivalent to the investigational product, or any other product that is likely to interfere with the investigational products in this trial used within three months of study enrolment
+T2	Negation 33 40	without
+T20	Non-query-able 1364 1429	Inability or unwillingness to be followed up for the trial period
+T5	Observation 107 296	Healthcare workers based in a primary, secondary or tertiary healthcare setting with a high risk of developing COVID-19 due to their potential exposure to patients with SARS-CoV-2 infection
+R8	has_qualifier Arg1:T18 Arg2:T17	
+R1	has_negation Arg1:T1 Arg2:T2	
+T18	Condition 745 772	acute respiratory infection
+T19	Non-query-able 1251 1361	Self-reported current use of medication known to interact with any of the medications listed in the appendices
+T9	Competing_trial 508 626	Prior enrollment into other COVID-19 interventional prevention or treatment trials (observational trials not excluded)
+T14	Condition 664 689	infection with SARS-CoV-2
+T6	Condition 1450 1458	Pregnant
+T21	Procedure 1611 1623	radiotherapy
+T22	Condition 1630 1647	malignant disease
+T23	Qualifier 1655 1664	untreated
+R4	has_qualifier Arg1:T22 Arg2:T23	
+T24	Procedure 1689 1696	therapy
+T25	Condition 1888 1929	Idiopathic thrombocytopenic purpura (ITP)
+T26	Condition 1941 1953	tuberculosis
+T27	Observation 1931 1940	Untreated
+R5	has_context Arg1:T26 Arg2:T27	
+T28	Competing_trial 1955 2040	Prior receipt of any vaccines (licensed or investigational) 30 days before enrollment
+T29	Procedure 2065 2072	vaccine
+T30	Mood 2042 2060	Planned receipt of
+R9	has_mood Arg1:T29 Arg2:T30	
+T31	Observation 2073 2106	other than the study intervention
+R10	has_context Arg1:T29 Arg2:T31	
+T32	Temporal 2107 2160	within 30 days before and after the study vaccination
+R11	has_temporal Arg1:T29 Arg2:T32	
+T33	Reference_point 2122 2160	before and after the study vaccination
+R12	has_index Arg1:T32 Arg2:T33	
+T34	Competing_trial 2162 2332	Prior receipt of an investigational or licensed vaccine likely to impact on interpretation of the trial data (e.g. Adenovirus vectored vaccines, any coronavirus vaccines)
+T35	Condition 2468 2476	Asplenia
+T36	Measurement 2447 2457	CD4T count
+T37	Value 2458 2466	<200 /mL
+R13	has_value Arg1:T36 Arg2:T37	
+T38	Condition 2426 2439	HIV infection
+T39	Observation 2416 2425	untreated
+R14	has_context Arg1:T38 Arg2:T39	
+R15	subsumes Arg1:T38 Arg2:T36	
+T40	Condition 2362 2379;2399 2404	immunosuppressive state
+T41	Condition 2383 2404	immunodeficient state
+*	OR T40 T41
+R16	subsumes Arg1:T40 Arg2:T38	
+T42	Qualifier 2352 2361	suspected
+T43	Qualifier 2339 2348	confirmed
+*	OR T43 T42
+R17	has_qualifier Arg1:T40 Arg2:T42	
+R18	has_qualifier Arg1:T41 Arg2:T42	
+T44	Drug 1499 1514	corticosteroids
+T45	Drug 1548 1565	alkylating agents
+T46	Drug 1569 1585	anti-metabolites
+T47	Qualifier 1489 1498	high dose
+R19	has_qualifier Arg1:T44 Arg2:T47	
+T48	Drug 1522 1546	immuno-suppressive drugs
+*	OR T44 T48 T45 T46
+T49	Condition 1630 1647	malignant disease
+*	OR T22 T49
+R20	AND Arg1:T49 Arg2:T24	
+T50	Procedure 1710 1741	administration of gammaglobulin
+T51	Procedure 1745 1763	blood transfusions
+T52	Temporal 1764 1792	within the previous 3 months
+R21	has_temporal Arg1:T51 Arg2:T52	
+T53	Observation 1699 1709	History of
+R22	has_temporal Arg1:T50 Arg2:T53	
+*	OR T50 T51
+R23	has_temporal Arg1:T51 Arg2:T53	
+T54	Condition 1816 1865	allergy to the MR (MMR) vaccine or its components
+T55	Condition 1816 1826;1877 1885	allergy to neomycin
+*	OR T54 T55

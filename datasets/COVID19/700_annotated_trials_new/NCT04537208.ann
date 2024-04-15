@@ -1,0 +1,71 @@
+T1	Person 23 27	Aged
+T2	Value 28 52	18 years of age or older
+T3	Temporal 53 76	on the day of inclusion
+R1	has_value Arg1:T1 Arg2:T2	
+R2	has_temporal Arg1:T1 Arg2:T3	
+T4	Informed_consent 78 125	Informed consent form has been signed and dated
+T5	Post-eligibility 127 202	Able to attend all scheduled visits and to comply with all study procedures
+T6	Pregnancy_considerations 229 589	Participant is pregnant, or lactating, or of childbearing potential and not using an effective method of contraception or abstinence from at least 4 weeks prior to the first vaccination until at least 12 weeks after the last vaccination. To be considered of non-childbearing potential, a female must be post-menopausal for at least 1 year or surgically sterile
+T7	Condition 244 252	pregnant
+T8	Observation 257 266	lactating
+*	OR T7 T8
+T10	Temporal 880 885	Prior
+T9	Drug 918 925;927 987	vaccine severe acute respiratory syndrome coronavirus 2 [SARS-CoV-2]
+T11	Drug 918 925;999 1031	vaccine Middle East Respiratory Syndrome
+T12	Drug 918 925;989 997	vaccine SARS-CoV
+*	OR T9 T12 T11
+R3	has_temporal Arg1:T12 Arg2:T10	
+T13	Condition 1053 1063;1076 1092	congenital immunodeficiency
+T14	Condition 1067 1092	acquired immunodeficiency
+*	OR T13 T14
+T15	Qualifier 1043 1052	suspected
+T16	Qualifier 1034 1039	Known
+*	OR T15 T16
+R4	has_qualifier Arg1:T13 Arg2:T15	
+T17	Procedure 1108 1133	immunosuppressive therapy
+T18	Procedure 1143 1167	anti-cancer chemotherapy
+T19	Procedure 1171 1180	radiation
+R5	subsumes Arg1:T17 Arg2:T18	
+*	OR T18 T19
+T20	Temporal 1190 1218	within the preceding 6 month
+R6	has_temporal Arg1:T17 Arg2:T20	
+T21	Drug 1234 1257	systemic corticosteroid
+T22	Qualifier 1224 1233	long-term
+R7	has_qualifier Arg1:T21 Arg2:T22	
+T23	Drug 1267 1277	prednisone
+T24	Temporal 1296 1350	more than 2 consecutive weeks within the past 3 months
+R8	has_temporal Arg1:T23 Arg2:T24	
+R9	subsumes Arg1:T21 Arg2:T23	
+T25	Condition 1364 1384	SARS-CoV-2 infection
+T26	Observation 1353 1363	History of
+R10	has_temporal Arg1:T25 Arg2:T26	
+T27	Observation 1386 1450	confirmed either clinically, serologically, or microbiologically
+R11	has_context Arg1:T25 Arg2:T27	
+T28	Temporal 1752 1797	within 72 hours prior to the first blood draw
+T29	Reference_point 1777 1797	the first blood draw
+R12	has_index Arg1:T28 Arg2:T29	
+T30	Observation 1683 1751	therapy known to have in-vitro antiviral activity against SARS-CoV-2
+R13	has_temporal Arg1:T30 Arg2:T28	
+T31	Non-query-able 1799 1870	Health care workers providing direct patient care for COVID-19 patients
+T32	Non-query-able 1452 1666	Chronic illness or condition considered to potentially increase the risk for severe COVID illness or that, in the opinion of the Investigator, is at a stage where it might interfere with study conduct or completion
+T33	Drug 606 613	vaccine
+T34	Drug 764 785	influenza vaccination
+T35	Negation 753 759	except
+T36	Temporal 793 878	may be received at least 2 weeks before and a minimum of 2 weeks after study vaccines
+T37	Reference_point 864 878	study vaccines
+R14	has_index Arg1:T36 Arg2:T37	
+R15	has_negation Arg1:T34 Arg2:T35	
+R16	has_temporal Arg1:T34 Arg2:T36	
+T38	Temporal 617 666	the 30 days preceding the first study vaccination
+T39	Reference_point 639 665	the first study vaccinatio
+R17	has_index Arg1:T38 Arg2:T39	
+R18	has_temporal Arg1:T33 Arg2:T38	
+T40	Drug 693 700	vaccine
+T41	Mood 670 685	planned receipt
+R19	has_mood Arg1:T40 Arg2:T41	
+T42	Temporal 704 752	the 30 days following the last study vaccination
+T43	Reference_point 726 752	the last study vaccination
+R20	has_index Arg1:T42 Arg2:T43	
+R21	has_temporal Arg1:T40 Arg2:T42	
+*	OR T33 T40
+R22	AND Arg1:T40 Arg2:T34	

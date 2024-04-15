@@ -1,0 +1,40 @@
+R2	has_mood Arg1:T6 Arg2:T7	
+T20	Measurement 719 729	Fibrinogen
+T11	Condition 511 534	intracranial hemorrhage
+T17	Value 673 680	<70,000
+T21	Value 730 740	<200 mg/dL
+T6	Observation 250 298	(therapeutic) anticoagulation for any indication
+T26	Condition 829 844	Ischemic stroke
+T1	Value 25 33	18 years
+T15	Condition 597 611	major bleeding
+R7	has_value Arg1:T22 Arg2:T23	
+T24	Observation 785 795	History of
+T22	Measurement 741 777	International normalized ratio (INR)
+T19	Condition 690 718	functional platelet disorder
+T4	Visit 142 182	admitted to an intensive care unit (ICU)
+T16	Temporal 612 635	within the past 30 days
+T18	Measurement 658 672	Platelet count
+T23	Value 778 782	>1.9
+T8	Procedure 333 358	dual antiplatelet therapy
+*	OR T9 T10
+T5	Temporal 217 228	(>48 hours)
+*	OR T18 T19
+R10	has_temporal Arg1:T15 Arg2:T16	
+T9	Observation 360 402	Contraindication to antithrombotic therapy
+*	OR T11 T13 T14
+R6	has_temporal Arg1:T25 Arg2:T24	
+T3	Condition 51 131	Acute infection with severe acute respiratory syndrome coronavirus 2 (SARS-CoV2)
+T14	Condition 555 579	CNS vascular abnormality
+R5	has_temporal Arg1:T26 Arg2:T27	
+T2	Person 21 24	Age
+T27	Temporal 845 868	within the past 2 weeks
+T7	Mood 232 239	planned
+T10	Observation 406 445	high risk of bleeding due to conditions
+T13	Condition 542 551	CNS tumor
+R4	has_temporal Arg1:T11 Arg2:T12	
+T12	Observation 500 510	History of
+R8	has_value Arg1:T20 Arg2:T21	
+R3	has_temporal Arg1:T6 Arg2:T5	
+R9	has_value Arg1:T18 Arg2:T17	
+T25	Condition 796 828	heparin-induced thrombocytopenia
+R1	has_value Arg1:T2 Arg2:T1	

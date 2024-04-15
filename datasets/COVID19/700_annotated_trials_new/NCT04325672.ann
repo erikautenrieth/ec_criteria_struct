@@ -1,0 +1,38 @@
+T20_mml	Measurement 394 408	pregnancy test
+T23_mml	Condition 84 113	COVID-19 respiratory symptoms
+T2_mml	Value 40 48;56 64	18 years or older
+T4_mml	Person 364 370	Female
+T6_mml	Visit 66 78	Hospitalized
+T30_mml	Measurement 135 169	COVID-19 SARS-CoV-2 RT-PCR testing
+T10_mml	Drug 503 524	pooled immunoglobulin
+T31_mml	Observation 456 466	breastfeed
+T33_mml	Observation 410 423	breastfeeding
+T16_mml	Condition 447 455	pregnant
+T19_mml	Person 52 55	age
+R1	has_value Arg1:T19_mml Arg2:T2_mml	
+T1	Observation 118 134	confirmation via
+R3	AND Arg1:T6_mml Arg2:T23_mml	
+R4	AND Arg1:T23_mml Arg2:T30_mml	
+T2	Informed_consent 171 276	Patient is willing and able to provide written informed consent and comply with all protocol requirements
+T3	Post-eligibility 279 336	Patient agrees to storage of specimens for future testing
+T4	Value 385 393	positive
+T5	Mood 428 446	planning to become
+T6	Temporal 467 490	during the study period
+R5	has_value Arg1:T20_mml Arg2:T4	
+R6	has_mood Arg1:T16_mml Arg2:T5	
+R7	has_mood Arg1:T31_mml Arg2:T5	
+R8	AND Arg1:T4_mml Arg2:T20_mml	
+*	OR T20_mml T33_mml T16_mml T31_mml
+R9	has_temporal Arg1:T31_mml Arg2:T6	
+T7	Observation 492 502	Receipt of
+T8	Temporal 525 540	in past 30 days
+R10	has_context Arg1:T10_mml Arg2:T7	
+R11	has_temporal Arg1:T10_mml Arg2:T8	
+T9	Condition 542 573	Contraindication to transfusion
+T10	Condition 594 633	reactions to transfusion blood products
+T11	Observation 577 587	history of
+T12	Qualifier 588 593	prior
+*	OR T9 T10
+R12	has_temporal Arg1:T10 Arg2:T11	
+R13	has_qualifier Arg1:T10 Arg2:T12	
+R2	has_context Arg1:T30_mml Arg2:T1	

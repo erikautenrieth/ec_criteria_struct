@@ -1,0 +1,17 @@
+T4	Condition 79 99	respiratory distress
+T2	Measurement 23 27;37 49	test for COVID-19
+R4	subsumes Arg1:T4 Arg2:T5	
+T9	Value 270 282	less than 18
+T11	Competing_trial 284 335	Currently actively in an investigational drug trial
+T1	Value 28 36	positive
+T3	Visit 54 63	inpatient
+T7	Measurement 156 175	respiratory rate RR
+R3	has_value Arg1:T7 Arg2:T8	
+R2	has_value Arg1:T5 Arg2:T6	
+T5	Measurement 116 120	SpO2
+R5	has_value Arg1:T10 Arg2:T9	
+T6	Value 124 141	less 95% or lower
+T8	Value 176 209	>20 (21 or more) recorded and <60
+T10	Person 266 269	Age
+R1	has_value Arg1:T2 Arg2:T1	
+*	OR T5 T7

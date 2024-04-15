@@ -1,0 +1,23 @@
+T6	Value 160 169	>18 years
+T7	Informed_consent 171 206	Ability to provide informed consent
+T4	Procedure 136 154	ventilator support
+T16	Person 405 410	women
+T5	Person 156 159	Age
+T9	Observation 262 299	that would be compromised by the vest
+T10	Qualifier 313 319	active
+T13	Temporal 341 363	within the last 5 days
+T14	Non-query-able 365 394	Family refusal to participate
+T1	Condition 41 83	Acute respiratory distress syndrome (ARDS)
+R5	has_context Arg1:T8 Arg2:T9	
+R4	has_value Arg1:T5 Arg2:T6	
+R8	AND Arg1:T16 Arg2:T15	
+R1	AND Arg1:T1 Arg2:T2	
+T11	Condition 320 325	burns
+T12	Procedure 327 340	Chest surgery
+T15	Condition 396 404	Pregnant
+T2	Condition 99 107	COVID-19
+*	OR T3 T4
+R7	has_temporal Arg1:T12 Arg2:T13	
+T8	Observation 245 261	cutaneous wounds
+R6	has_qualifier Arg1:T11 Arg2:T10	
+T3	Procedure 119 128	intubated

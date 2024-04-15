@@ -1,0 +1,18 @@
+T1	Condition 23 40	COVID-19 positive
+T2	Condition 42 51	Pneumonia
+T9	Value 181 188	2 L/min
+T5	Condition 119 124	cough
+T10	Procedure 189 195	oxygen
+R1	subsumes Arg1:T2 Arg2:T3	
+T12	Observation 234 257	Inability to lie supine
+*	OR T5 T6 T7
+T7	Condition 148 155	dyspnea
+T4	Observation 79 117	for acute (< 7 days) onset of symptoms
+R3	subsumes Arg1:T4 Arg2:T5	
+R5	has_value Arg1:T10 Arg2:T9	
+R4	subsumes Arg1:T8 Arg2:T10	
+T8	Condition 159 168	Hypoxemia
+T3	Visit 63 78	hospitalization
+T11	Procedure 222 232	Intubation
+T6	Condition 126 143	sputum production
+R2	has_context Arg1:T3 Arg2:T4	

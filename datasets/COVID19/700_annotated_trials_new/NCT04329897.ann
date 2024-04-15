@@ -1,0 +1,15 @@
+T1	Procedure 62 87	primary joint replacement
+T5	Mood 229 239	undergoing
+T6	Negation 284 287	not
+T2	Mood 48 61	indicated for
+R2	AND Arg1:T1 Arg2:T3	
+T4	Procedure 240 266	revision joint replacement
+R3	has_mood Arg1:T4 Arg2:T5	
+*	OR T7 T9
+R4	has_negation Arg1:T7 Arg2:T6	
+R1	has_mood Arg1:T1 Arg2:T2	
+T8	Negation 313 316	not
+T9	Observation 317 366	utilize text messaging as a form of communication
+T7	Observation 288 306	own a mobile phone
+T3	Observation 92 192	subsequently experienced a delay or cancellation in their surgical date due to the COVID-19 pandemic
+R5	has_negation Arg1:T9 Arg2:T8	

@@ -1,0 +1,12 @@
+R1	has_temporal Arg1:T1 Arg2:T2	
+T4	Condition 142 151	Pregnancy
+T7	Temporal 222 247	before or after pregnancy
+T5	Observation 152 176	documented by ultrasound
+R2	has_context Arg1:T4 Arg2:T5	
+T3	Observation 75 140	presumed case by symptoms and direct contact with a positive case
+T8	Non-query-able 249 318	Person under investigation, but not a presumed or known positive case
+T6	Condition 203 221	COVID-19 infection
+T1	Condition 23 41	COVID-19 infection
+R3	has_temporal Arg1:T6 Arg2:T7	
+*	OR T1 T3
+T2	Temporal 42 70	at any time of the pregnancy

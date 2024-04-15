@@ -1,0 +1,39 @@
+T1	Informed_consent 137 196	Willing and able to sign and date the informed consent form
+T2	Post-eligibility 246 282	available for study visits and calls
+T3	Person 284 288	Male
+T4	Person 292 298	female
+T5	Person 300 304	aged
+T6	Value 305 323	>= 18 years of age
+R2	has_value Arg1:T5 Arg2:T6	
+T7	Condition 345 362	COVID-19 positive
+T8	Observation 325 337	NIH employee
+T9	Observation 446 458	asymptomatic
+T10	Observation 462 480	have mild symptoms
+T11	Condition 488 493	fever
+T12	Qualifier 495 499	mild
+T13	Condition 500 507	malaise
+T14	Condition 509 520	sore throat
+T15	Condition 524 532	sneezing
+R3	AND Arg1:T8 Arg2:T7	
+R4	AND Arg1:T7 Arg2:T9	
+*	OR T9 T10
+R5	subsumes Arg1:T10 Arg2:T11	
+*	OR T11 T13 T14 T15
+R6	has_qualifier Arg1:T13 Arg2:T12	
+T21	Condition 1070 1075	cough
+T22	Condition 1079 1098	shortness of breath
+T23	Observation 1110 1136	lower respiratory symptoms
+T24	Observation 1100 1105;1116 1136	upper respiratory symptoms
+T25	Mood 1141 1150	requiring
+T26	Visit 1151 1166	hospitalization
+R12	has_mood Arg1:T26 Arg2:T25	
+T16	Non-query-able 198 241	Willing to comply with all study procedures
+T17	Observation 364 440	verbal confirmation followed by documented test results, sent electronically
+R7	has_context Arg1:T7 Arg2:T17	
+T18	Condition 1007 1024	COVID-19 positive
+T19	Observation 1034 1066	with moderate or severe symptoms
+R8	AND Arg1:T18 Arg2:T19	
+R9	subsumes Arg1:T19 Arg2:T21	
+*	OR T3 T4
+R1	AND Arg1:T3 Arg2:T5	
+*	OR T21 T22 T24 T23 T26

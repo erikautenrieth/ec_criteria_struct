@@ -1,0 +1,25 @@
+T1	Person 48 51	age
+T2	Value 52 62	18 or olde
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Measurement 82 86;94 106	test for COVID 19
+T4	Value 73 81	positive
+T5	Temporal 64 72	Previous
+R2	has_temporal Arg1:T3 Arg2:T5	
+R3	has_value Arg1:T3 Arg2:T4	
+T6	Observation 107 145	Able to communicate clearly in English
+T7	Non-query-able 252 275	Participation in Part 1
+T8	Value 292 306	below 30 ng/ml
+T9	Measurement 276 291	Vitamin D level
+R4	has_value Arg1:T9 Arg2:T8	
+T10	Non-query-able 307 467	No abnormalities on the comprehensive metabolic panel that are clinically significant to increasing the risk of an adverse reaction to vitamin D supplementation
+T11	Condition 529 545	Liver impairment
+T12	Non-query-able 546 648	Clinical opinion of study physician that vitamin D supplementation could be harmful to the participant
+T13	Condition 650 659	Pregnancy
+T14	Temporal 672 712	for 2 weeks after positive COVID 19 test
+T15	Reference_point 684 712	after positive COVID 19 test
+R5	has_index Arg1:T14 Arg2:T15	
+T16	Observation 663 671	symptoms
+T17	Negation 660 662	No
+R6	has_negation Arg1:T16 Arg2:T17	
+R7	has_temporal Arg1:T16 Arg2:T14	
+T18	Observation 713 736	Recovered from symptoms

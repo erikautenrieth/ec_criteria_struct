@@ -1,0 +1,123 @@
+T18	Condition 2309 2338	allergy to hydroxychloroquine
+T19	Condition 2309 2319;2342 2349	allergy to quinine
+*	OR T18 T19
+T20	Observation 2357 2367	history of
+T21	Condition 2368 2384	long QT syndrome
+R12	has_temporal Arg1:T21 Arg2:T20	
+T22	Observation 2392 2402	history of
+T23	Condition 2403 2413	arrhythmia
+T24	Condition 2417 2428	dysrhythmia
+R13	has_temporal Arg1:T23 Arg2:T22	
+R14	has_temporal Arg1:T24 Arg2:T22	
+*	OR T23 T24
+T25	Measurement 2444 2447	QTc
+T26	Value 2448 2455	>500 ms
+R15	has_value Arg1:T25 Arg2:T26	
+T27	Qualifier 2436 2443	current
+R16	has_qualifier Arg1:T25 Arg2:T27	
+T28	Condition 2463 2478	G6PD deficiency
+T29	Observation 2486 2496	history of
+T30	Condition 2497 2509	hypoglycemia
+R17	has_temporal Arg1:T30 Arg2:T29	
+T31	Condition 2511 2519	Pregnant
+T32	Observation 2523 2530	Nursing
+T33	Observation 2531 2549	by patient history
+*	OR T31 T32
+R18	has_context Arg1:T32 Arg2:T33	
+T34	Non-query-able 2551 2648	Use of any of the following concomitant medications: See Appendix D for Exclusion medication list
+T35	Condition 2674 2684	dermatitis
+T36	Condition 2686 2695	porphyria
+T37	Condition 2700 2709	psoriasis
+*	OR T35 T36 T37
+T38	Condition 2730 2743	liver disease
+T39	Condition 2755 2764	cirrhosis
+T40	Condition 2785 2794	hepatitis
+T41	Qualifier 2796 2806	infectious
+T42	Qualifier 2808 2818	idiopathic
+T43	Qualifier 2823 2829	immune
+R19	has_qualifier Arg1:T40 Arg2:T41	
+*	OR T41 T42 T43
+R20	subsumes Arg1:T38 Arg2:T39	
+*	OR T39 T40
+T44	Condition 2843 2865	chronic kidney disease
+T45	Qualifier 2722 2729	chronic
+R21	has_qualifier Arg1:T38 Arg2:T45	
+T46	Qualifier 2867 2879	Pre-existing
+T47	Condition 2880 2891	retinopathy
+R22	has_qualifier Arg1:T47 Arg2:T46	
+T48	Drug 2908 2926	hydroxychloroquine
+T49	Non-query-able 2928 3040	Any condition or medication in the opinion of the investigator that would prohibit the use of hydroxychloroquine
+T50	Competing_trial 3042 3108	Enrollment in another clinical with investigational drug or device
+T51	Condition 3110 3136	Inability to swallow pills
+T52	Informed_consent 3138 3179	Adults unable to provide informed consent
+T1	Person 836 839	old
+T2	Value 827 835	18 years
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Observation 841 1099	High-risk person who had close contact (i.e. within 6 feet for at least 15 minutes) with a COVID-19 positive person within the last 5 days and is a South Dakota resident or high-risk person with close household contact of a COVID-19 positive Sanford employee
+T4	Person 1131 1134	Age
+T5	Value 1135 1140	18-44
+T6	Multiplier 1146 1155	2 or more
+T7	Observation 1156 1169	comorbidities
+R2	has_value Arg1:T4 Arg2:T5	
+R3	AND Arg1:T4 Arg2:T7	
+R4	has_multiplier Arg1:T7 Arg2:T6	
+R5	subsumes Arg1:T3 Arg2:T4	
+T8	Person 1184 1187	Age
+T9	Value 1188 1193	45-79
+T10	Multiplier 1199 1202	any
+T11	Observation 1203 1221	comorbid condition
+R6	has_value Arg1:T8 Arg2:T9	
+R7	AND Arg1:T8 Arg2:T11	
+R8	has_multiplier Arg1:T11 Arg2:T10	
+*	OR T4 T8
+T12	Person 1236 1239	Age
+T13	Value 1240 1252	80 and above
+R9	has_value Arg1:T12 Arg2:T13	
+T14	Condition 1310 1340	Congestive Heart Failure (CHF)
+T15	Qualifier 1342 1349	Chronic
+T16	Condition 1350 1362	lung disease
+T17	Condition 1395 1401	asthma
+T53	Condition 1403 1440	chronic obstructive pulmonary disease
+T54	Condition 1442 1451	emphysema
+R10	has_qualifier Arg1:T16 Arg2:T15	
+R11	subsumes Arg1:T16 Arg2:T17	
+*	OR T17 T53 T54
+T55	Procedure 1454 1476	Solid organ transplant
+T56	Drug 1480 1497	immunosuppression
+T57	Value 1540 1562;1577 1590	greater than 10 mg/day or equivalent
+T58	Drug 1566 1576	prednisone
+T59	Procedure 1599 1611	chemotherapy
+T60	Drug 1623 1647	immunosuppressive agents
+T61	Procedure 1652 1674	solid organ transplant
+T62	Condition 1685 1703	autoimmune disease
+R23	subsumes Arg1:T56 Arg2:T58	
+R24	has_value Arg1:T58 Arg2:T57	
+*	OR T58 T59 T60 T62
+R25	AND Arg1:T60 Arg2:T61	
+T63	Condition 1707 1729	Chronic Kidney Disease
+T64	Condition 1733 1756	End Stage Renal Disease
+T65	Condition 1758 1775	Diabetes mellitus
+T66	Condition 1777 1799	Cardiovascular disease
+T67	Condition 1800 1812	Hypertension
+T68	Observation 1814 1821	Smoking
+T69	Observation 1822 1828	Vaping
+T70	Temporal 1866 1884	in the past 1 year
+R26	has_temporal Arg1:T69 Arg2:T70	
+R27	has_temporal Arg1:T68 Arg2:T70	
+T71	Condition 1887 1894	Obesity
+T72	Condition 1953 1967	Hyperlipidemia
+R28	subsumes Arg1:T7 Arg2:T14	
+R29	subsumes Arg1:T11 Arg2:T14	
+*	OR T14 T16 T55 T56 T63 T64 T65 T66 T67 T68 T69 T71 T72
+T73	Negation 1973 1975	No
+T74	Temporal 1976 1983	current
+T75	Observation 1984 2017	symptoms attributable to COVID-19
+R30	has_temporal Arg1:T75 Arg2:T74	
+R31	has_negation Arg1:T75 Arg2:T73	
+T76	Negation 2019 2021	No
+T77	Qualifier 2022 2027	prior
+T78	Condition 2028 2055	COVID-19 positive diagnosis
+R32	has_qualifier Arg1:T78 Arg2:T77	
+R33	has_negation Arg1:T78 Arg2:T76	
+T79	Informed_consent 2144 2179	Ability to provide informed consent
+T80	Non-query-able 2181 2263	Confirmed review of concomitant medications (with emphasis on cardiac medications)

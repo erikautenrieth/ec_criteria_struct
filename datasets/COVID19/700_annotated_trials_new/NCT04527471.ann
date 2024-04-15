@@ -1,0 +1,98 @@
+T1	Informed_consent 23 251	Capable of giving informed consent indicating that they understand the purpose of the study and study procedures and agree to comply with the requirements and restrictions listed in the informed consent form and in this protocol
+T2	Post-eligibility 1468 1575	Capable of complying with all study restrictions and procedures including ability to use the pMDI correctly
+T3	Measurement 1989 2009	Creatinine clearance
+T4	Value 2010 2021	< 30 mL/min
+T5	Temporal 2022 2034	at screening
+T6	Temporal 2060 2072	at screening
+T7	Condition 2037 2046	Pregnancy
+T8	Observation 2050 2059	lactation
+T9	Observation 2075 2131	Allergy or other contraindication or one of ensifentrine
+T10	Drug 2322 2334	theophylline
+T11	Drug 2336 2351	PDE4 inhibitors
+T12	Drug 2358 2369	roflumilast
+T13	Drug 2371 2381	apremilast
+T14	Drug 2383 2394	crisaborole
+T15	Temporal 2396 2440	within 48 hours of screening or during study
+T16	Non-query-able 2443 2535	Any other reason that the Investigator considers makes the patient unsuitable to participate
+T17	Non-query-able 2134 2289	In the opinion of the clinical team, progression to death is imminent and inevitable within the next 24 hours, irrespective of the provision of treatments.
+T18	Measurement 1873 1902	Alanine Aminotransferase (ALT
+T19	Measurement 1907 1939	aspartate aminotransferase (AST)
+T20	Value 1940 1973	> 5 X upper limit of normal (ULN)
+T21	Temporal 1974 1986	at screening
+T22	Procedure 1835 1857	mechanical ventilation
+T23	Mood 1825 1834	Requiring
+T24	Temporal 1858 1870	at screening
+T25	Condition 1804 1822	multiorgan failure
+T26	Competing_trial 1603 1789	Participation in any other clinical trial of an experimental treatment for COVID-19, unless related to an expanded access program as part of Standard of Care at screening or during study
+T27	Observation 799 861	Clinical status consistent with 3, 4 or 5 on the Ordinal scale
+T28	Visit 863 875	Hospitalized
+T29	Procedure 891 910	supplemental oxygen
+T30	Mood 881 890	requiring
+T31	Negation 877 880	not
+R1	has_mood Arg1:T29 Arg2:T30	
+R2	has_negation Arg1:T29 Arg2:T31	
+R3	AND Arg1:T28 Arg2:T29	
+T32	Visit 912 924	Hospitalized
+T33	Procedure 936 959	any supplemental oxygen
+T34	Mood 926 935	requiring
+R4	has_mood Arg1:T33 Arg2:T34	
+R5	AND Arg1:T32 Arg2:T33	
+T35	Visit 961 973	Hospitalized
+R6	subsumes Arg1:T27 Arg2:T28	
+T36	Mood 975 984	requiring
+T37	Procedure 985 1009	non-invasive ventilation
+T38	Procedure 1020 1045	high flow oxygen devices.
+R7	has_mood Arg1:T37 Arg2:T36	
+*	OR T37 T38
+R8	AND Arg1:T35 Arg2:T37	
+*	OR T28 T32 T35
+T39	Pregnancy_considerations 371 797	Males are eligible to participate or females of non-childbearing potential or WOCBP who have a negative pregnancy test at screening are eligible to participate. WOCBP and female partners of male participants agree to either abstinence or use at least one primary form of highly effective contraception not including hormonal contraception from the time of screening through Day 60 following the first dose of study medication.
+T40	Visit 1047 1068	Admission to hospital
+T41	Person 291 294	age
+T42	Value 270 287	at least 18 years
+T43	Value 299 329	less than or equal to 80 years
+R9	AND Arg1:T43 Arg2:T42	
+R10	has_value Arg1:T41 Arg2:T43	
+T44	Temporal 337 368	at the time of informed consent
+R11	has_temporal Arg1:T41 Arg2:T44	
+T45	Condition 1103 1161	severe acute respiratory syndrome coronavirus (SARS-COV-2)
+T46	Observation 1172 1221	confirmed by polymerase chain reaction (PCR) test
+R12	has_context Arg1:T45 Arg2:T46	
+R13	AND Arg1:T40 Arg2:T45	
+T47	Measurement 1266 1282	Respiratory rate
+T48	Condition 1332 1342	chest pain
+T49	Qualifier 1319 1322	new
+T50	Qualifier 1323 1331	atypical
+T51	Condition 1312 1317	cough
+T52	Qualifier 1308 1311	new
+T53	Qualifier 1344 1347	new
+T54	Condition 1348 1355	dyspnea
+T55	Measurement 1357 1374	oxygen saturation
+T56	Value 1375 1380	< 97%
+T57	Observation 1381 1388	at rest
+T58	Observation 1407 1465	new changes consistent with COVID-related airspace disease
+T59	Procedure 1390 1401	chest x-ray
+R14	AND Arg1:T46 Arg2:T47	
+T60	Value 1283 1306	> 24 breaths per minute
+R15	has_value Arg1:T47 Arg2:T60	
+R16	has_qualifier Arg1:T51 Arg2:T52	
+R17	has_qualifier Arg1:T48 Arg2:T50	
+R18	has_qualifier Arg1:T54 Arg2:T53	
+R19	AND Arg1:T50 Arg2:T49	
+R20	has_value Arg1:T55 Arg2:T56	
+R21	has_context Arg1:T55 Arg2:T57	
+R22	has_context Arg1:T59 Arg2:T58	
+*	OR T47 T51 T48 T54 T55 T59
+R23	has_mood Arg1:T22 Arg2:T23	
+R24	has_temporal Arg1:T22 Arg2:T24	
+*	OR T18 T19
+R25	has_value Arg1:T19 Arg2:T20	
+R26	has_temporal Arg1:T19 Arg2:T21	
+R27	has_value Arg1:T3 Arg2:T4	
+R28	has_temporal Arg1:T3 Arg2:T5	
+*	OR T7 T8
+R29	has_temporal Arg1:T8 Arg2:T6	
+*	OR T10 T11
+R30	subsumes Arg1:T11 Arg2:T12	
+*	OR T12 T13 T14
+R31	has_temporal Arg1:T11 Arg2:T15	

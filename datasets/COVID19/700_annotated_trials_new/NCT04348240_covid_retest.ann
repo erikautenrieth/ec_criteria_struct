@@ -1,0 +1,29 @@
+T1	Observation 527 574	individuals who have re-tested and are negative
+T2	Informed_consent 132 191	Willing and able to sign and date the informed consent form
+T3	Non-query-able 192 235	Willing to comply with all study procedures
+T4	Post-eligibility 240 276	available for study visits and calls
+T5	Person 277 281	Male
+T6	Person 285 291	female
+*	OR T5 T6
+T7	Person 293 297	aged
+T8	Value 298 316	>= 18 years of age
+R2	has_value Arg1:T7 Arg2:T8	
+T9	Condition 1216 1233	COVID-19 positive
+T10	Observation 1243 1282	with active moderate or severe symptoms
+T11	Condition 1286 1291	cough
+T12	Condition 1295 1314	shortness of breath
+T13	Observation 1326 1352	lower respiratory symptoms
+T14	Observation 1316 1321;1332 1352	upper respiratory symptoms
+*	OR T14 T13 T12 T11 T16
+R3	AND Arg1:T9 Arg2:T10	
+R4	subsumes Arg1:T10 Arg2:T11	
+T15	Mood 1367 1376	requiring
+T16	Visit 1377 1392	hospitalization
+T17	Negation 1407 1417	other than
+T18	Visit 1418 1437	NIH Clinical Center
+R5	has_mood Arg1:T16 Arg2:T15	
+R6	AND Arg1:T16 Arg2:T18	
+R7	has_negation Arg1:T18 Arg2:T17	
+T19	Temporal 1357 1366	currently
+R8	has_temporal Arg1:T16 Arg2:T19	
+R9	AND Arg1:T5 Arg2:T7	

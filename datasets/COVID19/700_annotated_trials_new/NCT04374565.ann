@@ -1,0 +1,44 @@
+T1	Person 50 53	age
+T19_DdMmlC2Q	Drug 959 970	tocilizumab
+R3	has_temporal Arg1:T26_DdMmlC2Q Arg2:T38_DdMmlC2Q	
+R6	has_value Arg1:T15_DdMmlC2Q Arg2:T18_DdMmlC2Q	
+*	OR T1_DdMmlC2Q T12_DdMmlC2Q T35_DdMmlC2Q
+R10	has_context Arg1:T35_DdMmlC2Q Arg2:T21_DdMmlC2Q	
+T1_DdMmlC2Q	Condition 1269 1285	cryoglobulinemia
+T35_DdMmlC2Q	Condition 1353 1374	monoclonal gammopathy
+T12	Qualifier 1287 1293	severe
+T32_DdMmlC2Q	Drug 993 1003	Siltuximab
+T27_DdMmlC2Q	Condition 1581 1619	decompensated congestive heart failure
+T3	Observation 183 225	confirmation via SARS-CoV-2 RT-PCR testing
+T38_DdMmlC2Q	Temporal 120 178	within 72 hours of admission to a"floor" bed (non-ICU bed)
+R9	AND Arg1:T12 Arg2:T13	
+T2	Visit 72 84	hospitalized
+T21_DdMmlC2Q	Observation 1330 1352	clinically significant
+T7_DdMmlC2Q	Drug 1017 1027	Remdesivir
+R1	has_value Arg1:T1 Arg2:T31_DdMmlC2Q	
+T31_DdMmlC2Q	Value 38 46;54 62	18 years or older
+T33_DdMmlC2Q	Condition 1423 1468	prior reactions to transfusion blood products
+T37_DdMmlC2Q	Procedure 833 855	mechanical ventilation
+T18_DdMmlC2Q	Value 859 879	>6 liters per minute
+R11	has_temporal Arg1:T33_DdMmlC2Q Arg2:T41_DdMmlC2Q	
+R4	has_context Arg1:T26_DdMmlC2Q Arg2:T3	
+T26_DdMmlC2Q	Condition 90 119	COVID-19 respiratory symptoms
+T15_DdMmlC2Q	Procedure 880 900	nasal cannula oxygen
+T41_DdMmlC2Q	Observation 1412 1422	history of
+R2	AND Arg1:T2 Arg2:T26_DdMmlC2Q	
+T13	Qualifier 1294 1304	refractory
+*	OR T19_DdMmlC2Q T32_DdMmlC2Q T7_DdMmlC2Q
+R8	has_qualifier Arg1:T12_DdMmlC2Q Arg2:T12	
+T12_DdMmlC2Q	Condition 1305 1325	hypertriglyceridemia
+T4	Informed_consent 227 349	Patient and/or surrogate is willing and able to provide written informed consent and comply with all protocol requirements
+T7	Non-query-able 683 790	Prior use of IVIG is allowed but the investigator should consider the potential for a hypercoagulable state
+*	OR T37_DdMmlC2Q T15_DdMmlC2Q
+T8	Competing_trial 1029 1092;901 939	or other pharmacological trials that may be initiated hereafter Patients on other anti-COVID-19 trials
+T9	Non-query-able 1094 1261	A pre-existing condition or use of a medication that, in the opinion of the site investigator, may place the individual at a substantially increased risk of thrombosis
+T10	Observation 1377 1408	Contraindication to transfusion
+*	OR T10 T33_DdMmlC2Q
+T11	Non-query-able 1470 1573	Medical conditions for which receipt of 500-600 mL of intravenous fluid may be dangerous to the subject
+T5	Observation 351 418	Patients with hematologic malignancies or solid tumors are eligible
+T6	Observation 420 467	Patients with autoimmune disorders are eligible
+T14	Observation 469 557	Patients with immunodeficiency and organ or stem cell transplant recipients are eligible
+T15	Observation 559 682	Patients who have received or are receiving hydroxychloroquine or chloroquine are eligible (but will be taken off the drug)

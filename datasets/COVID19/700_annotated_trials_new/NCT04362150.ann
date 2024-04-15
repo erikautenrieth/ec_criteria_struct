@@ -1,0 +1,40 @@
+T1	Informed_consent 23 75	Willing and able to provide written informed consent
+T2	Value 86 98	>/= 18 years
+T3	Person 82 85	Age
+R1	has_value Arg1:T3 Arg2:T2	
+T4	Condition 120 140	SARS-CoV-2 infection
+T5	Observation 109 119	history of
+R2	has_temporal Arg1:T4 Arg2:T5	
+T6	Measurement 200 214;226 262	SARS-CoV-2 RNA on a nucleic acid amplification test
+T7	Value 215 225	positivity
+T8	Measurement 200 214;269 286	SARS-CoV-2 RNA serologic testing
+T9	Observation 172 196	laboratory documentation
+R3	has_value Arg1:T8 Arg2:T7	
+R4	has_value Arg1:T6 Arg2:T7	
+R5	has_context Arg1:T8 Arg2:T9	
+*	OR T8 T6 T22
+R6	has_context Arg1:T6 Arg2:T9	
+T10	Measurement 762 772	hemoglobin
+T11	Value 773 781	< 9 g/dL
+R7	has_value Arg1:T10 Arg2:T11	
+T12	Condition 750 756	anemia
+T13	Qualifier 742 749	chronic
+R8	has_qualifier Arg1:T12 Arg2:T13	
+R9	AND Arg1:T12 Arg2:T10	
+T14	Condition 869 888	psychiatric illness
+T15	Condition 858 865;881 888	medical illness
+T16	Qualifier 850 857	Serious
+R10	has_qualifier Arg1:T15 Arg2:T16	
+R11	has_qualifier Arg1:T14 Arg2:T16	
+T17	Condition 1046 1057	alcohol use
+T18	Condition 1046 1053;1061 1071	alcohol dependence
+T19	Condition 1038 1042	drug
+T20	Condition 1054 1057	use
+T21	Qualifier 1031 1037	Active
+R12	has_qualifier Arg1:T19 Arg2:T21	
+R13	has_qualifier Arg1:T17 Arg2:T21	
+*	OR T17 T18 T19
+T22	Observation 320 538	Reference by the participant to a laboratory test performed on respiratory tract secretions or blood, fingerstick, or saliva test that was reported to the participant to be positive for SARS-CoV-2 or COVID-19 infection
+T23	Temporal 549 594	a period of 21 days or more has elapsed since
+T24	Observation 599 686	first positive test or symptoms preceding the first positive test, whichever is earlier
+R14	has_temporal Arg1:T24 Arg2:T23	

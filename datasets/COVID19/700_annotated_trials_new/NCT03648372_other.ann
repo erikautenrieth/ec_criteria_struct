@@ -1,0 +1,213 @@
+T1	Person 23 28	Adult
+T2	Person 29 33	male
+T3	Person 37 43	female
+T4	Value 57 67	>=18 years
+T5	Person 68 71	old
+R1	has_value Arg1:T5 Arg2:T4	
+R2	subsumes Arg1:T1 Arg2:T5	
+*	OR T2 T3
+R3	AND Arg1:T1 Arg2:T2	
+T6	Measurement 74 134	Eastern Cooperative Oncology Group (ECOG) performance status
+T7	Value 138 144	0 to 1
+R4	has_value Arg1:T6 Arg2:T7	
+T8	Qualifier 2157 2165	Adequate
+T9	Observation 2166 2185	bone marrow reserve
+R5	has_qualifier Arg1:T9 Arg2:T8	
+T10	Condition 2157 2165;2200 2216	Adequate hepatic function
+T11	Condition 2157 2165;2190 2195;2208 2216	Adequate renal function
+*	OR T9 T11 T10
+T12	Non-query-able 2219 2423	Recovered to Grade 1, baseline or established as sequela, from all toxic effects of previous therapy (except alopecia, neuropathy, or autoimmune endocrinopathies with stable endocrine replacement therapy)
+T13	Non-query-able 2426 3296	Screening and post-dose tumor biopsies are required from all participants in the expansion cohorts and are optional during dose escalation, however once a DLx is identified at which there is clear evidence of TAK-981 biological effect (that is, observation of peripheral lymphopenia, induction of cytokines/chemokines, type 1 interferon (IFN) signature in blood, drug-related toxicity or antitumor effect), subsequent participants must agree in providing a fresh tumor biopsy during the screening period and a second tumor biopsy as requested in the schedule of events (SOE). The lesion accessible for biopsy may not be the only target lesion and should not be located in a previously irradiated field (unless this index lesion has progressive disease >=20% post radiation). Ideally, the same lesion should be biopsied before treatment and on treatment whenever possible
+T14	Informed_consent 3299 3369	Consented to undergo serial skin punch biopsies (dose escalation only)
+T15	Observation 3372 3479	Suitable venous access for safe drug administration and the study-required PK and pharmacodynamics sampling
+T16	Non-query-able 3484 3840	Women of child-bearing potential participating in this study should avoid becoming pregnant, and male participants should avoid impregnating a female partner. Nonsterilized female participants of reproductive age and male participants should use effective methods of contraception through defined periods during and after study treatment as specified below
+T17	Person 3842 3848	Female
+T18	Condition 3895 3909	Postmenopausal
+T19	Temporal 3910 3956	for at least 1 year before the screening visit
+T20	Reference_point 3941 3956	screening visit
+R6	has_index Arg1:T19 Arg2:T20	
+R7	has_temporal Arg1:T18 Arg2:T19	
+T21	Condition 3962 3980	Surgically sterile
+T57	Pregnancy_considerations 4285 4646	Agree to practice true abstinence, when this is in line with the preferred and usual lifestyle of the participant. (Periodic abstinence [example, calendar, ovulation, symptothermal, postovulation methods], withdrawal, spermicides only, and lactational amenorrhea are not acceptable methods of contraception. Female and male condoms should not be used together.)
+R33	AND Arg1:T17 Arg2:T18	
+T58	Person 4654 4658	Male
+T63	Pregnancy_considerations 4923 5284	Agree to practice true abstinence, when this is in line with the preferred and usual lifestyle of the participant. (Periodic abstinence [example, calendar, ovulation, symptothermal, postovulation methods], withdrawal, spermicides only, and lactational amenorrhea are not acceptable methods of contraception. Female and male condoms should not be used together.)
+T78	Temporal 6674 6702	<=6 months before first dose
+T79	Reference_point 6692 6702	first dose
+R50	has_index Arg1:T78 Arg2:T79	
+T80	Condition 6704 6728	congestive heart failure
+T81	Qualifier 6729 6771	New York Heart Association Grade III or IV
+T82	Condition 6773 6788	unstable angina
+T83	Condition 6790 6811	myocardial infarction
+T84	Qualifier 6813 6821	unstable
+T85	Qualifier 6822 6833	symptomatic
+T86	Condition 6834 6856	ischemic heart disease
+T87	Qualifier 6858 6870	uncontrolled
+T88	Condition 6871 6883	hypertension
+T89	Observation 6884 6919	despite appropriate medical therapy
+T90	Qualifier 6921 6928	ongoing
+T91	Qualifier 6929 6940	symptomatic
+T92	Condition 6941 6960	cardiac arrhythmias
+T93	Qualifier 6964 6972	>Grade 2
+T94	Condition 6974 6992	pulmonary embolism
+T95	Qualifier 6997 7008	symptomatic
+T96	Condition 7009 7031	cerebrovascular events
+T97	Qualifier 7046 7053	serious
+T98	Condition 7054 7071	cardiac condition
+T99	Condition 7082 7102	pericardial effusion
+T100	Condition 7106 7132	restrictive cardiomyopathy
+T101	Qualifier 7135 7142	Chronic
+T102	Condition 7143 7162	atrial fibrillation
+T103	Observation 7163 7186	on stable anticoagulant
+T104	Negation 7198 7205	allowed
+R51	has_temporal Arg1:T80 Arg2:T78	
+R52	has_qualifier Arg1:T80 Arg2:T81	
+*	OR T80 T82 T83 T86 T88 T92 T94 T96 T98
+R53	has_qualifier Arg1:T86 Arg2:T84	
+R54	AND Arg1:T84 Arg2:T85	
+R55	has_qualifier Arg1:T88 Arg2:T87	
+R56	has_context Arg1:T88 Arg2:T89	
+R57	has_qualifier Arg1:T92 Arg2:T90	
+R58	AND Arg1:T90 Arg2:T91	
+R59	AND Arg1:T91 Arg2:T93	
+R60	has_qualifier Arg1:T96 Arg2:T95	
+R61	has_qualifier Arg1:T98 Arg2:T97	
+R62	subsumes Arg1:T98 Arg2:T99	
+*	OR T99 T100
+R63	AND Arg1:T98 Arg2:T102	
+R64	has_context Arg1:T102 Arg2:T103	
+R65	has_qualifier Arg1:T102 Arg2:T101	
+R66	has_negation Arg1:T102 Arg2:T104	
+T105	Condition 7217 7249	prolongation of the QTc interval
+T106	Condition 7334 7361	congenital long QT syndrome
+T107	Condition 7366 7385	torsades de pointes
+T108	Observation 7323 7333	history of
+T109	Observation 7260 7321	repeated demonstration of QTc interval >480 milliseconds (ms)
+T110	Qualifier 7208 7216	Baseline
+R67	has_qualifier Arg1:T105 Arg2:T110	
+R68	subsumes Arg1:T105 Arg2:T109	
+*	OR T109 T106 T107
+R69	has_temporal Arg1:T106 Arg2:T108	
+T111	Non-query-able 7389 7604	Psychiatric illness/social circumstances that would limit compliance with study requirements and substantially increase the risk of adverse events (AEs) or has compromised ability to provide written informed consent
+T112	Condition 7632 7648	illicit drug use
+T113	Condition 7650 7660	drug abuse
+T114	Condition 7665 7678	alcohol abuse
+*	OR T112 T113 T114
+T115	Condition 7692 7710	autoimmune disease
+T116	Mood 7711 7720	requiring
+T117	Qualifier 7721 7729	systemic
+T118	Drug 7730 7755	immunosuppressive therapy
+T119	Observation 7681 7691	History of
+R70	has_temporal Arg1:T115 Arg2:T119	
+R71	AND Arg1:T115 Arg2:T118	
+*	OR T118 T116
+R72	has_qualifier Arg1:T118 Arg2:T117	
+T120	Qualifier 7758 7764	Active
+T121	Condition 7765 7774	infection
+T122	Condition 7801 7821	SARS-CoV-2 infection
+T123	Negation 7776 7782	except
+R73	has_qualifier Arg1:T121 Arg2:T120	
+R74	AND Arg1:T121 Arg2:T122	
+R75	has_negation Arg1:T122 Arg2:T123	
+T124	Condition 7867 7905	human immunodeficiency virus infection
+T125	Non-query-able 7909 7967	any other relevant congenital or acquired immunodeficiency
+T126	Observation 7856 7866	history of
+R76	has_temporal Arg1:T124 Arg2:T126	
+*	OR T124 T125
+T127	Measurement 7976 8015	hepatitis B virus (HBV) surface antigen
+T128	Value 8016 8028	seropositive
+T129	Value 8032 8042	detectable
+T130	Measurement 8043 8075	hepatitis C infection viral load
+T131	Non-query-able 8083 8248	Participants who have positive hepatitis B core antibody or hepatitis B surface antigen antibody can be enrolled but must have an undetectable hepatitis B viral load
+R77	has_value Arg1:T127 Arg2:T128	
+R78	has_value Arg1:T130 Arg2:T129	
+*	OR T127 T130
+T132	Condition 8583 8592	Lymphomas
+T133	Observation 8598 8617	leukemic expression
+R79	AND Arg1:T132 Arg2:T133	
+T134	Mood 8251 8294	Receiving or requiring the continued use of
+T135	Drug 8295 8382	medications that are known to be strong or moderate inhibitors and inducers of CYP3A4/5
+T136	Drug 8295 8327;8387 8437	medications that are known to be strong permeability glycoprotein (P-gp) inhibitors
+R80	has_mood Arg1:T135 Arg2:T134	
+R81	has_mood Arg1:T136 Arg2:T134	
+*	OR T135 T136
+T137	Non-query-able 8439 8580	To participate in this study, such participants should discontinue use of such agents for at least 2 weeks before receiving a dose of TAK-981
+T138	Condition 8648 8657	lactating
+T139	Observation 8662 8675	breastfeeding
+T140	Person 8620 8626	Female
+T141	Value 8686 8694	positive
+T142	Measurement 8695 8715	serum pregnancy test
+T143	Temporal 8716 8743	during the screening period
+T144	Value 8749 8757	positive
+T145	Measurement 8758 8778	urine pregnancy test
+T146	Temporal 8779 8819	on Day 1 before first dose of study drug
+T147	Reference_point 8795 8819	first dose of study drug
+R82	has_index Arg1:T146 Arg2:T147	
+R83	AND Arg1:T140 Arg2:T138	
+*	OR T138 T139 T142 T145
+R84	has_value Arg1:T142 Arg2:T141	
+R85	has_temporal Arg1:T142 Arg2:T143	
+R86	has_value Arg1:T145 Arg2:T144	
+R87	has_temporal Arg1:T145 Arg2:T146	
+T23	Qualifier 282 290	advanced
+T24	Observation 292 351	local regionally recurrent not amenable to curative therapy
+T25	Qualifier 356 366	metastatic
+T26	Condition 367 379	solid tumors
+R11	has_qualifier Arg1:T26 Arg2:T23	
+*	OR T23 T25
+R12	subsumes Arg1:T23 Arg2:T24	
+T27	Observation 380 488	that have no standard therapeutic option with a proven clinical benefit, are intolerant or have refused them
+R13	has_context Arg1:T26 Arg2:T27	
+T28	Qualifier 498 506	relapsed
+T29	Qualifier 507 517	refractory
+T30	Condition 518 526	lymphoma
+T31	Observation 527 622	not amenable to therapies with proven clinical benefit or who are intolerant or who refuse them
+R14	has_qualifier Arg1:T30 Arg2:T28	
+*	OR T28 T29
+R15	has_context Arg1:T30 Arg2:T31	
+T32	Condition 642 661	low grade lymphomas
+T33	Condition 670 689	follicular lymphoma
+T34	Condition 691 717	small lymphocytic lymphoma
+T35	Condition 719 746	lymphoplasmacytoid lymphoma
+T36	Condition 752 775	marginal zone lymphomas
+*	OR T30 T32
+R16	subsumes Arg1:T32 Arg2:T33	
+*	OR T33 T34 T35 T36
+T37	Observation 1167 1208	measurable disease per RECIST version 1.1
+T38	Observation 1209 1243	for participants with solid tumors
+T39	Observation 1247 1300	Response Evaluation Criteria in Lymphoma (RECIL) 2017
+T40	Observation 1301 1331	for participants with lymphoma
+R17	has_context Arg1:T37 Arg2:T38	
+R18	has_context Arg1:T39 Arg2:T40	
+*	OR T37 T39
+T41	Qualifier 5397 5405	systemic
+T42	Drug 5406 5427	anticancer treatments
+T43	Drug 5431 5455	investigational products
+T44	Temporal 5456 5506	within 14 days before the first dose of study drug
+T45	Temporal 5510 5522	5 half-lives
+T46	Non-query-able 5546 5734	Participants should have recovered from previous treatment toxicity to Grade 1, baseline (except alopecia and peripheral neuropathy), or the toxicity is considered established as a sequela
+R19	has_qualifier Arg1:T42 Arg2:T41	
+*	OR T42 T43
+R20	has_temporal Arg1:T43 Arg2:T44	
+*	OR T44 T45
+R21	has_temporal Arg1:T42 Arg2:T44	
+T47	Procedure 5750 5777	extended field radiotherapy
+T48	Temporal 5778 5817	<=4 weeks before the start of treatment
+T49	Reference_point 5799 5817	start of treatment
+R22	has_index Arg1:T48 Arg2:T49	
+T64	Reference_point 5482 5506	first dose of study drug
+R23	has_index Arg1:T44 Arg2:T64	
+R24	has_temporal Arg1:T47 Arg2:T48	
+T65	Temporal 5819 5828	<=2 weeks
+T66	Observation 5829 5871	for limited field radiation for palliation
+R25	has_context Arg1:T65 Arg2:T66	
+*	OR T48 T65
+T67	Non-query-able 5874 5984	and who has not recovered to grade 1 or better from related side effects of such therapy (except for alopecia)
+T68	Drug 6006 6056	drugs known to prolong corrected QT (QTc) interval
+T69	Mood 5987 6005	Require the use of
+R26	has_mood Arg1:T68 Arg2:T69	
+*	OR T18 T21 T22 T57
+T22	Pregnancy_considerations 3986 4279	If they are of childbearing potential, agree to practice 1 highly effective method and 1 additional effective (barrier) method of contraception at the same time, from the time of signing of the informed consent form (ICF) through 90 days after the last dose of study drug (whichever is longer)
+T50	Pregnancy_considerations 4772 4917	Agree to practice effective barrier contraception during the entire study treatment period and through 120 days after the last dose of study drug
+R8	AND Arg1:T58 Arg2:T50	
+*	OR T50 T63

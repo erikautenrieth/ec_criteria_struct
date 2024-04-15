@@ -1,0 +1,84 @@
+T3	Person 110 115	Age  
+T8	Condition 144 152	COVID-19
+T26	Measurement 499 503	SpO2
+R20	has_value Arg1:T39 Arg2:T40	
+R13	has_context Arg1:T23 Arg2:T25	
+R2	has_value Arg1:T3 Arg2:T4	
+T7	Qualifier 139 143	Mild
+T6	Condition 129 137	COVID-19
+R3	has_qualifier Arg1:T6 Arg2:T5	
+T18	Condition 278 286	COVID-19
+T11	Condition 202 207	cough
+T15	Condition 241 257	nasal congestion
+*	OR T22 T23 T24 T26
+T25	Observation 379 436	adiographic imaging (chest x-ray or lung ultrasound) with
+T38	Condition 763 782	Acute Renal Failure
+T40	Value 832 851	< 30 ml/min/1.73 m2
+R5	subsumes Arg1:T8 Arg2:T9	
+T14	Condition 232 239	myalgia
+T13	Condition 219 230	sore throat
+R19	has_temporal Arg1:T36 Arg2:T35	
+R14	has_value Arg1:T26 Arg2:T27	
+R11	subsumes Arg1:T22 Arg2:T9	
+T33	Observation 681 691	History of
+R6	has_qualifier Arg1:T18 Arg2:T17	
+T5	Qualifier 119 128	Confirmed
+T17	Qualifier 269 277	Moderate
+T19	Negation 325 328	non
+T37	Condition 752 759;769 782	Chronic Renal Failure
+T32	Observation 541 588	additional signs or symptoms of severe COVID-19
+T22	Observation 353 376	symptom of mild disease
+T1	Condition 23 54	Type 2 Diabetes Mellitus (T2DM)
+T12	Condition 209 217	headache
+T36	Condition 732 750	acute pancreatitis
+T29	Negation 538 540	No
+*	OR T9 T10 T11 T12 T13 T14 T15 T16
+R8	has_negation Arg1:T20 Arg2:T19	
+R1	has_context Arg1:T1 Arg2:T2	
+T4	Value 115 117	18
+T16	Condition 259 267	diarrhea
+T35	Observation 721 731	History of
+R7	AND Arg1:T18 Arg2:T20	
+T27	Value 504 508	<90%
+T2	Observation 55 108	as per American Diabetes Association (ADA) guidelines
+T20	Procedure 329 338	intubated
+T10	Condition 193 200	malaise
+T9	Condition 186 191	fever
+T30	Condition 616 656	Type 1 Diabetes Mellitus (T1DM) diabetes
+T34	Condition 692 719	Diabetic Ketoacidosis (DKA)
+T23	Condition 437 469	bilateral ground glass opacities
+R18	has_temporal Arg1:T34 Arg2:T33	
+T31	Observation 658 679	as per ADA guidelines
+R17	has_context Arg1:T30 Arg2:T31	
+R4	has_qualifier Arg1:T8 Arg2:T7	
+R12	has_context Arg1:T24 Arg2:T25	
+T24	Condition 473 497	bilateral consolidations
+R16	has_negation Arg1:T32 Arg2:T29	
+T39	Measurement 788 831	Estimated Glomerular Filtration Rate (eGFR)
+*	OR T8 T18
+*	OR T37 T38
+R21	AND Arg1:T37 Arg2:T39	
+R22	AND Arg1:T38 Arg2:T39	
+T21	Multiplier 301 321	> 2 of the following
+R9	has_multiplier Arg1:T22 Arg2:T21	
+T28	Device 518 536	Nasal Cannula (NC)
+T41	Value 509 517	up to 5L
+R10	has_value Arg1:T28 Arg2:T41	
+R15	AND Arg1:T26 Arg2:T28	
+T42	Condition 876 889	T1DM diabetes
+T43	Observation 891 912	as per ADA guidelines
+R23	has_context Arg1:T42 Arg2:T43	
+T44	Observation 914 924	History of
+T45	Condition 925 928	DKA
+R24	has_temporal Arg1:T45 Arg2:T44	
+T46	Observation 930 940	History of
+T47	Condition 941 959	acute pancreatitis
+R25	has_temporal Arg1:T47 Arg2:T46	
+T48	Value 1002 1021	< 30 ml/min/1.73 m2
+T49	Measurement 997 1001	eGFR
+R26	has_value Arg1:T49 Arg2:T48	
+T50	Condition 972 991	Acute Renal Failure
+T51	Condition 961 968;978 991	Chronic Renal Failure
+*	OR T51 T50 T42 T45 T47
+R27	AND Arg1:T50 Arg2:T49	
+R28	AND Arg1:T51 Arg2:T49	

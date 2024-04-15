@@ -1,0 +1,28 @@
+T12	Condition 1116 1131;1146 1156	systemic fungal infections
+T13	Condition 1136 1156	bacterial infections
+T14	Qualifier 1103 1115	uncontrolled
+R6	has_qualifier Arg1:T12 Arg2:T14	
+*	OR T12 T13
+T15	Observation 1172 1177	known
+T16	Condition 1476 1484	pregnant
+T17	Observation 1488 1501	breastfeeding
+*	OR T16 T17
+T18	Pregnancy_considerations 1224 1460	Women of childbearing potential must have a negative serum or urine pregnancy test (women who have undergone surgical sterilization or who have been postmenopausal for at least 2 years are not considered to be of childbearing potential)
+T1	Person 59 62	age
+T2	Value 63 69	>/= 18
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Qualifier 91 99	relapsed
+T4	Condition 100 116	CD19+ B-cell ALL
+T5	Condition 100 112;120 123	CD19+ B-cell NHL
+*	OR T4 T5
+R2	has_qualifier Arg1:T4 Arg2:T3	
+T6	Procedure 156 181	CD19-specific CAR T cells
+T7	Drug 188 204	tisagenleuleucel
+T8	Drug 209 221	axicabtagene
+R3	subsumes Arg1:T6 Arg2:T7	
+*	OR T7 T8
+R4	AND Arg1:T5 Arg2:T6	
+R5	has_qualifier Arg1:T5 Arg2:T3	
+R7	has_qualifier Arg1:T13 Arg2:T14	
+T9	Condition 1178 1222	hypersensitivity to E. coli-derived proteins
+R8	has_context Arg1:T9 Arg2:T15	

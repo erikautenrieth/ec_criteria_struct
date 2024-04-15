@@ -1,0 +1,23 @@
+T1	Person 364 367	age
+T2	Value 352 360;368 376	18 years or older
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Visit 378 390	Hospitalized
+T4	Qualifier 396 400	PCR+
+T5	Condition 401 419	COVID-19 infection
+R2	has_qualifier Arg1:T5 Arg2:T4	
+R3	AND Arg1:T3 Arg2:T5	
+T6	Person 424 430	female
+T7	Negation 436 439	not
+T8	Condition 443 451	pregnant
+T9	Condition 459 472	breastfeeding
+R4	has_negation Arg1:T8 Arg2:T7	
+R5	has_negation Arg1:T9 Arg2:T7	
+R6	AND Arg1:T6 Arg2:T8	
+R7	AND Arg1:T8 Arg2:T9	
+T10	Non-query-able 522 663	Unable to randomize patient within 14 days of admission to Stony Brook Hospital (or any other hospital if a transfer to Stony Brook Hospital)
+T11	Non-query-able 666 851	In the treating physician's opinion, the patient cannot tolerate a 450-550 mL infusion of plasma over up to 8 hours (4 hours max per unit), even if prophylaxed with intravenous diuretic
+T12	Condition 853 884	Contraindication to transfusion
+T13	Observation 888 898	history of
+T14	Condition 899 936	prior reactions to blood transfusions
+R8	has_temporal Arg1:T14 Arg2:T13	
+*	OR T12 T14

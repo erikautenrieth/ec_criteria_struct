@@ -1,0 +1,114 @@
+E1	Eq-Comparison:T1 Temporal-Period:T30
+E2	Modifier:T2 Modifies:T31
+E3	Procedure:T3 Name:T31 Temporality:E1
+E4	Assertion:T4 Asserted:E5
+E6	Observation:T6 Name:T33
+E8	Eq-Comparison:T8 Temporal-Period:T34
+E9	Modifier:T9 Modifies:T35
+E10	Procedure:T10 Name:T35 Temporality:E8
+E11	Condition:T11 Name:T36
+E12	Negation:T12 Negates:E13
+E13	Observation:T13 Name:T38
+E14	Modifier:T14 Modifies:T56
+E16	Modifier:T16 Modifies:T56
+E17	Condition:T17 Name:T56
+E18	Modifier:T18 Modifies:T40
+E19	Condition:T19 Name:T40
+E20	Negation:T20 Negates:E21
+E21	Drug:T21 Name:T41
+E22	Drug:T22 Name:T42
+E23	Drug:T23 Name:T43
+E24	Eq-Comparison:T24 Temporal-Period:T44
+E25	Drug:T25 Name:T45 Temporality:E24 Temporality2:E29
+E26	Observation:T26 Name:T58
+E28	Procedure:T28 Name:T46
+E29	Eq-Comparison:T29 Operator:T47 Value:T48 Temporal-Unit:T49
+E5	Drug:T5 
+E30	Observation:T32 Name:T50
+E31	Modifier:T51 Modifies:E5
+E32	Observation:T53 Name:T54 Location:T52
+E33	Negation:T55 Negates:E9
+E34	Assertion:T37 Asserted:E12
+E35	Assertion:T39 Asserted:E20
+E37	Modifier:T59 Modifies:T58
+T1	Eq-Comparison 25 35	Undergoing
+T2	Modifier 39 47	elective
+T3	Procedure 48 66	surgical procedure
+T4	Assertion 83 96	expected they
+T6	Observation 157 161	pain
+T8	Eq-Comparison 212 222	Undergoing
+T9	Modifier 227 235	elective
+T10	Procedure 236 245	procedure
+T11	Condition 251 271	Cognitive impairment
+T12	Negation 272 282	precluding
+T13	Observation 301 305	pain
+T14	Modifier 311 322	Hematologic
+T16	Modifier 323 332	oncologic
+T17	Condition 333 342	condition
+T18	Modifier 348 353	Liver
+T19	Condition 364 374	conditions
+T20	Negation 375 385	precluding
+T21	Drug 392 414	analgesic prescription
+T22	Drug 424 430	opioid
+T23	Drug 442 448	opioid
+T24	Eq-Comparison 455 458	Use
+T25	Drug 462 469	opioids
+T26	Observation 484 488	pain
+T28	Procedure 493 504	operatively
+T29	Eq-Comparison 506 514	<2 weeks
+T30	Eq-Temporal-Period 25 35	Undergoing
+T31	Procedure-Name 48 66	surgical procedure
+T33	Observation-Name 157 161	pain
+T34	Eq-Temporal-Period 212 222	Undergoing
+T35	Procedure-Name 236 245	procedure
+T36	Condition-Name 251 271	Cognitive impairment
+T38	Observation-Name 301 305	pain
+T40	Condition-Name 364 374	conditions
+T41	Drug-Name 392 414	analgesic prescription
+T42	Drug-Name 424 430	opioid
+T43	Drug-Name 442 448	opioid
+T44	Eq-Temporal-Period 455 458	Use
+T45	Drug-Name 462 469	opioids
+T47	Eq-Operator 506 507	<
+T48	Eq-Value 507 508	2
+T49	Eq-Temporal-Unit 509 514	weeks
+T5	Drug 130 138	medicine
+T32	Observation 125 129	pain
+T50	Observation-Name 125 129	pain
+T51	Modifier 112 124	prescription
+T52	Location 181 185	home
+T53	Observation 169 177	recovery
+T54	Observation-Name 169 177	recovery
+T55	Negation 223 226	non
+T37	Assertion 272 282	precluding
+T56	Condition-Name 333 342	condition
+T39	Assertion 375 385	precluding
+T46	Procedure-Name 493 504	operatively
+T58	Observation-Name 484 488	pain
+T59	Modifier 474 483	prolonged
+A1	Assertion-Type-Value E4 hypothetical
+A4	Eq-Temporal-Period-Value T30 present
+A5	Eq-Temporal-Period-Value T34 present
+A7	Eq-Temporal-Period-Value T44 present
+A8	Eq-Operator-Value T47 LT
+A9	Eq-Temporal-Unit-Value T49 week
+A10	Location-Value T52 residence
+A6	Assertion-Type-Value E34 hypothetical
+A11	Assertion-Type-Value E35 hypothetical
+R1	Treatment-For Arg1:E5 Arg2:E30
+R2	Using Arg1:E3 Arg2:E5
+R3	Treatment-For Arg1:E5 Arg2:E6
+R4	Caused-By Arg1:E12 Arg2:E11
+R5	Caused-By Arg1:E20 Arg2:E19
+R6	Equivalent-To Arg1:E22 Arg2:E21
+R7	Equivalent-To Arg1:E23 Arg2:E21
+R8	Treatment-For Arg1:E25 Arg2:E26
+R9	During Arg1:E5 Arg2:E32
+R10	Or Arg1:E14 Arg2:E16
+R11	Before Arg1:E25 Arg2:E28
+R12	And Arg1:E22 Arg2:E15
+T7	Modifier 357 363	kidney
+E7	Modifier:T7 Modifies:T40
+R13	Or Arg1:E18 Arg2:E7	
+T15	Negation 438 441	non
+E15	Negation:T15 Negates:E23

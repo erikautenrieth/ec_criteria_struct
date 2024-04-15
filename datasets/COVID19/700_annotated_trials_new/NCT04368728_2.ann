@@ -1,0 +1,63 @@
+T2_DdMmlC2Q	Procedure 2304 2344	vaccination with any coronavirus vaccine
+T3_DdMmlC2Q	Drug 1165 1205	medications intended to prevent COVID 19
+T7_DdMmlC2Q	Drug 2561 2582	blood/plasma products
+T9_DdMmlC2Q	Condition 1094 1105	anaphylaxis
+T10_DdMmlC2Q	Condition 1064 1088;1107 1149	severe allergic reaction to any component of the study intervention
+T13_DdMmlC2Q	Drug 2385 2410	immunosuppressive therapy
+T16_DdMmlC2Q	Observation 2280 2293	breastfeeding
+T19_DdMmlC2Q	Person 29 35	female
+T20_DdMmlC2Q	Condition 943 965	hepatitis C virus (HCV
+T25_DdMmlC2Q	Person 2254 2259	Women
+T30_DdMmlC2Q	Condition 2044 2062	autoimmune disease
+T42_DdMmlC2Q	Drug 2586 2600	immunoglobulin
+T43_DdMmlC2Q	Condition 2012 2030	autoimmune disease
+T45_DdMmlC2Q	Condition 2268 2276	pregnant
+T49_DdMmlC2Q	Condition 2099 2117	Bleeding diathesis
+T54_DdMmlC2Q	Person 21 25	Male
+T55_DdMmlC2Q	Qualifier 1880 1885	known
+T58_DdMmlC2Q	Condition 1899 1915	immunodeficiency
+T60_DdMmlC2Q	Observation 2063 2097	requiring therapeutic intervention
+T64_DdMmlC2Q	Procedure 2422 2438	cytotoxic agents
+T66_DdMmlC2Q	Condition 368 375	Healthy
+T69_DdMmlC2Q	Condition 971 994	hepatitis B virus (HBV)
+T70_DdMmlC2Q	Drug 2442 2466	systemic corticosteroids
+T72_DdMmlC2Q	Value 49 56;69 154	between 18 and 55 years, inclusive, 65 and 85 years, inclusive, or 18 and 85 years, inclusive
+T85_DdMmlC2Q	Condition 1014 1056	adverse reaction associated with a vaccine
+T91_DdMmlC2Q	Observation 2001 2011	history of
+T93_DdMmlC2Q	Condition 892 941	infection with human immunodeficiency virus (HIV)
+*	OR T54_DdMmlC2Q T19_DdMmlC2Q
+T1	Person 61 65	ages
+R1	has_value Arg1:T1 Arg2:T72_DdMmlC2Q	
+R2	AND Arg1:T54_DdMmlC2Q Arg2:T1	
+T2	Non-query-able 203 366	Participants who are willing and able to comply with all scheduled visits, vaccination plan, laboratory tests, lifestyle considerations, and other study procedures
+T3	Non-query-able 397 533	determined by medical history, physical examination, and clinical judgment of the investigator to be eligible for inclusion in the study
+T4	Informed_consent 535 585	Capable of giving personal signed informed consent
+T5	Non-query-able 608 884	Other medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or, in the investigator's judgment, make the participant inappropriate for the study
+*	OR T93_DdMmlC2Q T20_DdMmlC2Q T69_DdMmlC2Q
+*	OR T85_DdMmlC2Q T10_DdMmlC2Q
+R3	subsumes Arg1:T10_DdMmlC2Q Arg2:T9_DdMmlC2Q	
+T13	Condition 1845 1862	Immunocompromised
+T14	Qualifier 1889 1898	suspected
+T15	Non-query-able 1917 1980	as determined by history and/or laboratory/physical examination
+R14	has_qualifier Arg1:T58_DdMmlC2Q Arg2:T55_DdMmlC2Q	
+*	OR T55_DdMmlC2Q T14
+R15	AND Arg1:T13 Arg2:T58_DdMmlC2Q	
+R16	has_temporal Arg1:T43_DdMmlC2Q Arg2:T91_DdMmlC2Q	
+T16	Qualifier 2037 2043	active
+*	OR T43_DdMmlC2Q T30_DdMmlC2Q
+R17	has_qualifier Arg1:T30_DdMmlC2Q Arg2:T16	
+R18	has_context Arg1:T30_DdMmlC2Q Arg2:T60_DdMmlC2Q	
+T17	Non-query-able 2121 2252	condition associated with prolonged bleeding that would, in the opinion of the investigator, contraindicate intramuscular injection
+R19	AND Arg1:T25_DdMmlC2Q Arg2:T45_DdMmlC2Q	
+*	OR T45_DdMmlC2Q T16_DdMmlC2Q
+T18	Observation 2472 2507	for cancer or an autoimmune disease
+R20	subsumes Arg1:T13_DdMmlC2Q Arg2:T64_DdMmlC2Q	
+*	OR T64_DdMmlC2Q T70_DdMmlC2Q
+R21	has_context Arg1:T13_DdMmlC2Q Arg2:T18	
+T19	Temporal 2602 2695	from 60 days before study intervention administration or planned receipt throughout the study
+*	OR T7_DdMmlC2Q T42_DdMmlC2Q
+R22	has_temporal Arg1:T42_DdMmlC2Q Arg2:T19	
+T20	Competing_trial 2697 2826	Participation in other studies involving study intervention within 28 days prior to study entry and/or during study participation
+T21	Competing_trial 2828 2927	Previous participation in other studies involving study intervention containing lipid nanoparticles
+T28	Non-query-able 3549 3728	Investigator site staff or Pfizer employees directly involved in the conduct of the study, site staff otherwise supervised by the investigator, and their respective family members
+T6	Observation 1228 1286	Previous clinical or microbiological diagnosis of COVID 19

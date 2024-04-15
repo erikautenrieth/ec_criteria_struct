@@ -1,0 +1,22 @@
+T16_mml	Condition 359 376	COVID19 infection
+T6	Temporal 390 397	Current
+T3	Non-query-able 165 221	Willing to have blood samples stored for future research
+R2	has_temporal Arg1:T16_mml Arg2:T39_mml	
+R6	has_temporal Arg1:T17_mml Arg2:T6	
+T2	Non-query-able 106 162	Willing to undergo one blood draw or home blood sampling
+R1	has_value Arg1:T1_mml Arg2:T5_mml	
+R5	has_qualifier Arg1:T5 Arg2:T4	
+T1	Informed_consent 48 103	Willing and able to complete a verbal telephone consent
+T5	Observation 359 366;380 388	COVID19 exposure
+T39_mml	Observation 348 358	history of
+T4	Qualifier 338 347	Confirmed
+T1_mml	Person 42 45	age
+*	OR T16_mml T5
+R3	has_qualifier Arg1:T16_mml Arg2:T4	
+T5_mml	Value 27 38	>= 18 years
+T8	Non-query-able 792 852	Not willing to have blood samples stored for future research
+R4	has_temporal Arg1:T5 Arg2:T39_mml	
+T17_mml	Observation 398 440	symptoms consistent with COVID19 infection
+T7	Non-query-able 224 307	Have previously participated in Phase 1 of this study (inclusion for Phase II only)
+T9	Non-query-able 442 611	Any condition or event that, in the PI s opinion, may substantially increase the risk associated with study participation or compromise the study's scientific objectives
+T10	Condition 716 739	blood clotting disorder

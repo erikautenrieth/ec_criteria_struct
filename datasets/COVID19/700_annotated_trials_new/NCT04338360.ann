@@ -1,0 +1,48 @@
+T13	Condition 403 411	COVID-19
+R7	has_value Arg1:T17 Arg2:T18	
+T2	Value 27 44	at least 18 years
+T19	Measurement 529 601	partial pressure of arterial oxygen to fraction of inspired oxygen ratio
+R9	has_value Arg1:T21 Arg2:T22	
+R2	has_value Arg1:T1 Arg2:T2	
+R12	has_qualifier Arg1:T25 Arg2:T24	
+R1	has_context Arg1:T3 Arg2:T4	
+T7	Qualifier 187 193	Severe
+T9	Condition 214 222	COVID-19
+T15	Measurement 468 489	respiratory frequency
+T16	Value 491 497	30/min
+*	OR T14 T15 T17 T19 T21
+R13	subsumes Arg1:T25 Arg2:T26	
+T24	Qualifier 657 673	Life-threatening
+R14	subsumes Arg1:T9 Arg2:T13	
+R4	has_qualifier Arg1:T9 Arg2:T7	
+T26	Condition 730 749	respiratory failure
+T4	Observation 46 76	Laboratory confirmed diagnosis
+R10	has_temporal Arg1:T21 Arg2:T23	
+R8	has_value Arg1:T19 Arg2:T20	
+T25	Condition 674 682	COVID-19
+R5	has_qualifier Arg1:T13 Arg2:T12	
+*	OR T7 T8
+T21	Condition 609 625	lung infiltrates
+T22	Value 626 631	> 50%
+T1	Person 23 26	Age
+*	OR T9 T10
+R11	subsumes Arg1:T13 Arg2:T14	
+R3	has_context Arg1:T5 Arg2:T6	
+T3	Condition 80 105	infection with SARS-CoV-2
+T6	Observation 142 185	for the treatment of COVID-19 complications
+T11	Informed_consent 332 392	Informed consent provided by the patient or healthcare proxy
+*	OR T13 T25
+T23	Temporal 632 653	within 24 to 48 hours
+T27	Condition 751 763	septic shock
+T28	Condition 765 791	multiple organ dysfunction
+T14	Condition 459 466	dyspnea
+T20	Value 602 607	< 300
+T8	Qualifier 197 213	life threatening
+T12	Qualifier 396 402	Severe
+*	OR T26 T27 T28 T29
+R6	has_value Arg1:T15 Arg2:T16	
+T5	Visit 107 141	Admitted to an acute care facility
+T10	Observation 227 330	judged by the treating provider to be at high risk of progression to severe or life-threatening disease
+T18	Value 524 527	93%
+T17	Measurement 499 522	blood oxygen saturation
+T29	Condition 765 779;795 802	multiple organ failure

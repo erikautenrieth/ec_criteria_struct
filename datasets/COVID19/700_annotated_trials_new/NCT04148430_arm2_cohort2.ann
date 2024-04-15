@@ -1,0 +1,54 @@
+T1	Person 295 300	Age  
+T2	Value 300 312	18 years old
+T3	Condition 330 341	solid tumor
+T4	Condition 345 369	hematologic malignancies
+*	OR T3 T4
+T6	Observation 407 423	in any specimen,
+T7	Observation 427 479	recent exposure to a known COVID-19 positive contact
+T8	Observation 484 571	belonging to a high risk demographic group (living and/or working in high-risk setting)
+T9	Procedure 978 1000	mechanical ventilation
+T10	Temporal 1001 1044	within 48 hours of starting study treatment
+T11	Reference_point 1020 1044	starting study treatment
+R4	has_index Arg1:T10 Arg2:T11	
+R5	has_temporal Arg1:T9 Arg2:T10	
+T12	Condition 1116 1131;1146 1156	systemic fungal infections
+T13	Condition 1136 1156	bacterial infections
+T14	Qualifier 1103 1115	uncontrolled
+R6	has_qualifier Arg1:T12 Arg2:T14	
+*	OR T12 T13
+T16	Condition 1476 1484	pregnant
+T17	Observation 1488 1501	breastfeeding
+*	OR T16 T17
+T18	Pregnancy_considerations 1224 1460	Women of childbearing potential must have a negative serum or urine pregnancy test (women who have undergone surgical sterilization or who have been postmenopausal for at least 2 years are not considered to be of childbearing potential)
+T19	Drug 1548 1562	JAK inhibitors
+T20	Drug 1570 1585	IL-6 inhibitors
+T21	Drug 1587 1598	tocilizumab
+T22	Drug 1600 1610	siltuximab
+R7	subsumes Arg1:T20 Arg2:T21	
+*	OR T21 T22
+*	OR T19 T20
+T23	Temporal 1537 1547	Concurrent
+R8	has_temporal Arg1:T19 Arg2:T23	
+T24	Observation 1618 1653	for treatment of COVID-19 pneumonia
+R9	has_context Arg1:T19 Arg2:T24	
+T25	Measurement 2232 2236	CrCl
+T26	Value 2237 2250	<30 mL/minute
+R10	has_value Arg1:T25 Arg2:T26	
+T27	Procedure 2117 2146	Myelosuppressive chemotherapy
+T31	Procedure 1928 1940	chemotherapy
+T32	Qualifier 1921 1927	active
+R14	has_qualifier Arg1:T31 Arg2:T32	
+T33	Non-query-able 1944 2115	patients whose life expectancy is estimated to be <3 months in the opinion of investigators, strictly due to their cancer diagnosis (i.e. not due to COVID-19) are excluded
+T34	Competing_trial 2252 2411	Treatment with any investigational agent is prohibited, except for investigational SAR-Co-V2 anti-viral agents, through 28 days after the last dose of anakinra
+T5	Measurement 382 406	test for SARS-CoV2 virus
+T35	Value 373 381	positive
+R3	has_value Arg1:T5 Arg2:T35	
+R15	has_context Arg1:T5 Arg2:T6	
+*	OR T5 T7 T8
+R11	has_context Arg1:T20 Arg2:T24	
+T15	Condition 1178 1222	hypersensitivity to E. coli-derived proteins
+R1	has_value Arg1:T1 Arg2:T2	
+R2	AND Arg1:T1 Arg2:T3	
+R12	has_qualifier Arg1:T13 Arg2:T14	
+T28	Observation 1172 1177	known
+R13	has_context Arg1:T15 Arg2:T28	

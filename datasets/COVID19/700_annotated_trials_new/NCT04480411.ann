@@ -1,0 +1,17 @@
+T1	Visit 21 33	Hospitalized
+R1	AND Arg1:T1 Arg2:T2	
+T8	Non-query-able 376 514	For the pulse oximetry study-Patient is stable for discharge from the hospital. For outpatients, patient does not require hospitalization.
+T10	Value 546 551;563 565	under 18
+T3	Observation 112 120;70 93	COVID 19 under investigation for
+T7	Non-query-able 267 375	For the telemedicine kits-patient has a device that is compatible with the use of the Doctorgram application
+T5	Non-query-able 121 204	Patient has the ability to be trained in utilization of remote monitoring equipment
+T4	Condition 112 120	COVID 19
+T9	Person 556 559	age
+T2	Condition 47 55	COVID 19
+R2	has_value Arg1:T9 Arg2:T10	
+T11	Condition 566 575	Pregnancy
+T6	Non-query-able 205 266	Patient agrees for outpatient follow up with the Crown Clinic
+T12	Visit 59 69	outpatient
+*	OR T1 T12
+R3	AND Arg1:T12 Arg2:T3	
+*	OR T3 T4

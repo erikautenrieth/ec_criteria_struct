@@ -1,0 +1,27 @@
+T0_DdMmlC2Q	Procedure 380 402	ileorectal anastomosis
+T14_DdMmlC2Q	Condition 212 230	COVID-19 infection
+R4	has_temporal Arg1:T14_DdMmlC2Q Arg2:T2_DdMmlC2Q	
+T4	Reference_point 259 268	Screening
+T3	Observation 199 208;231 241	Diagnosis by RT- PCR
+T9_DdMmlC2Q	Procedure 340 357	bariatric surgery
+*	OR T4_DdMmlC2Q T7_DdMmlC2Q T6
+R3	has_context Arg1:T14_DdMmlC2Q Arg2:T3	
+T1_DdMmlC2Q	Procedure 359 374	total colectomy
+T15_DdMmlC2Q	Person 156 160	Male
+T2	Person 186 189	age
+T5	Informed_consent 291 328	Refusal to sign informed consent form
+T5_DdMmlC2Q	Value 174 182;190 198	18 years or older
+T4_DdMmlC2Q	Condition 423 442	Postoperative stoma
+T7_DdMmlC2Q	Device 444 450	ostomy
+T2_DdMmlC2Q	Temporal 242 268	within 1 week of Screening
+*	OR T15_DdMmlC2Q T6_DdMmlC2Q
+T12_DdMmlC2Q	Procedure 406 421	proctocolectomy
+T1	Informed_consent 21 155	Signed informed consent, demonstrating that the patient understands the procedures required for the study and the purpose of the study
+R6	AND Arg1:T1_DdMmlC2Q Arg2:T0_DdMmlC2Q	
+*	OR T9_DdMmlC2Q T1_DdMmlC2Q T12_DdMmlC2Q
+T6	Device 455 469	ileoanal pouch
+R1	AND Arg1:T15_DdMmlC2Q Arg2:T2	
+R5	has_index Arg1:T2_DdMmlC2Q Arg2:T4	
+T10_DdMmlC2Q	Drug 485 511	total parenteral nutrition
+T6_DdMmlC2Q	Person 164 170	female
+R2	has_value Arg1:T2 Arg2:T5_DdMmlC2Q	

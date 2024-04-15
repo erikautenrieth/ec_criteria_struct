@@ -1,0 +1,32 @@
+T1	Value 77 94	18 years or older
+T2	Person 89 94	older
+R1	has_value Arg1:T2 Arg2:T1	
+T3	Visit 123 133;96 108	in the ICU Hospitalized
+T4	Procedure 113 122	intubated
+T5	Condition 139 168	COVID-19 respiratory symptoms
+T6	Observation 173 224	confirmation via COVID-19 SARS-CoV-2 RT-PCR testing
+T7	Informed_consent 226 497	Patient or proxy is willing and able to provide written informed consent and comply with all protocol requirements, or requirement for informed consent is WAIVED due to the inability to communicate with the patient and unable to identify legally authorized representative
+R2	AND Arg1:T3 Arg2:T4	
+R3	AND Arg1:T4 Arg2:T5	
+R4	AND Arg1:T5 Arg2:T6	
+T8	Non-query-able 499 569	Consents to storage of specimens for future testing, or consent waived
+T9	Informed_consent 571 658	The requirements to waive a consent are delineated in 21 CFR 50.23 and will be followed
+T10	Non-query-able 660 728	Pregnant and breastfeeding women will not be excluded from the study
+T11	Condition 1158 1189	Contraindication to transfusion
+T12	Qualifier 1191 1197	severe
+T13	Condition 1198 1213	volume overload
+T14	Observation 1215 1225	history of
+T15	Condition 1226 1255	anaphylaxis to blood products
+R5	has_qualifier Arg1:T13 Arg2:T12	
+R6	has_temporal Arg1:T15 Arg2:T14	
+*	OR T13 T15
+R7	subsumes Arg1:T11 Arg2:T13	
+T16	Qualifier 1258 1264	Severe
+T17	Condition 1265 1284	multi-organ failure
+T18	Measurement 1290 1314	expected life expectancy
+T19	Value 1315 1320	< 24h
+T20	Observation 1321 1360	as determined by the treating physician
+R8	has_qualifier Arg1:T17 Arg2:T16	
+R9	AND Arg1:T17 Arg2:T18	
+R10	has_value Arg1:T18 Arg2:T19	
+R11	has_context Arg1:T18 Arg2:T20	

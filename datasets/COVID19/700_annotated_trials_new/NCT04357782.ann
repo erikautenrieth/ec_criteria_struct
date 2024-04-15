@@ -1,0 +1,48 @@
+*	OR T3 T7_DdMmlC2Q
+T12_DdMmlC2Q	Drug 777 793	insulin infusion
+T10	Condition 682 704	Chronic kidney disease
+T27_DdMmlC2Q	Condition 747 768	diabetic ketoacidosis
+R19	has_mood Arg1:T18_DdMmlC2Q Arg2:T15	
+R18	has_value Arg1:T25_DdMmlC2Q Arg2:T29_DdMmlC2Q	
+T19	Pregnancy_considerations 339 576	Non-childbearing potential or childbearing potential with a negative pregnancy test at screening, and using a reliable method of contraception (i.e., abstinence, hormonal contraception, intrauterine device (IUD), or vasectomized partner)
+T20	Visit 21 33	Hospitalized
+T17	Temporal 1008 1029	within past 12 months
+T18_DdMmlC2Q	Procedure 816 848	point-of-care glucose monitoring
+T8	Temporal 326 338	on admission
+T11	Condition 922 973	glucose-6-phosphate dehydrogenase (G6PD) deficiency
+T2	Condition 605 625	allergy to Vitamin C
+R12	AND Arg1:T20 Arg2:T10_DdMmlC2Q	
+R4	subsumes Arg1:T3 Arg2:T4	
+R5	has_value Arg1:T4 Arg2:T5	
+T28_DdMmlC2Q	Condition 1030 1039	Pregnancy
+T4	Measurement 236 245	S/F ratio
+R2	has_value Arg1:T10 Arg2:T14	
+R21	has_context Arg1:T18_DdMmlC2Q Arg2:T16	
+R7	has_value Arg1:T7_DdMmlC2Q Arg2:T23_DdMmlC2Q	
+T9	Informed_consent 626 681	Inability to obtain consent from patient or next of kin
+R9	has_temporal Arg1:T7_DdMmlC2Q Arg2:T8	
+T7_DdMmlC2Q	Measurement 294 298	SpO2
+T6	Temporal 277 289	on admission
+T18	Competing_trial 1040 1127	Enrolled in another COVID-19 clinical trial that does not allow concomitant study drugs
+T23_DdMmlC2Q	Value 299 303	<95%
+R20	has_value Arg1:T18_DdMmlC2Q Arg2:T5_DdMmlC2Q	
+T1	Observation 39 48;61 205	diagnosis based on positive reverse transcriptase polymerase chain reaction (RT-PCR) SARS-CoV-2 of nasal, oropharyngeal, or bronchoalveolar (BAL) specimen
+R3	subsumes Arg1:T10 Arg2:T25_DdMmlC2Q	
+R6	has_temporal Arg1:T4 Arg2:T6	
+T15	Mood 798 815	frequent need for
+T29_DdMmlC2Q	Value 730 733	<30
+T14	Value 706 723	stage IV or above
+*	OR T27_DdMmlC2Q T12_DdMmlC2Q T18_DdMmlC2Q
+R10	has_temporal Arg1:T11 Arg2:T12	
+T13	Condition 995 1007	kidney stone
+T5	Value 246 276	decreased by 25% from baseline
+R1	has_context Arg1:T10_DdMmlC2Q Arg2:T1	
+T25_DdMmlC2Q	Measurement 725 729	eGFR
+R11	has_temporal Arg1:T13 Arg2:T17	
+T10_DdMmlC2Q	Condition 52 60	COVID-19
+T5_DdMmlC2Q	Value 850 873	>6 times/24 hour period
+T7	Observation 304 325	breathing ambient air
+T12	Observation 911 921	History of
+R8	has_context Arg1:T7_DdMmlC2Q Arg2:T7	
+T3	Condition 211 224	deoxygenation
+T16	Observation 875 910	as determined by treating physician

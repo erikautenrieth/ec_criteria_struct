@@ -1,0 +1,95 @@
+T4	Mood 127 134	require
+T28	Condition 839 851	thrombolysis
+T11	Mood 318 327	Receiving
+T19	Condition 558 598	intracerebral arteriovenous malformation
+T59	Non-query-able 1526 1631	Patients in whom imminent demise is anticipated and there is no commitment to active ongoing intervention
+T20	Condition 601 618	cerebral aneurysm
+*	OR T51 T52
+T2	Person 45 48	age
+R12	subsumes Arg1:T24 Arg2:T25	
+T10	Procedure 328 359	invasive mechanical ventilation
+T39	Measurement 997 1000	dBP
+T32	Qualifier 931 936	major
+T44	Measurement 1109 1112	INR
+T60	Condition 1633 1642	Pregnancy
+T47	Value 1136 1139	>50
+R3	has_mood Arg1:T5 Arg2:T4	
+T26	Condition 787 812	gastrointestinal bleeding
+T23	Condition 703 724	intracranial bleeding
+R24	has_qualifier Arg1:T46 Arg2:T48	
+T5	Visit 135 150	hospitalization
+R4	has_temporal Arg1:T5 Arg2:T6	
+T48	Qualifier 1122 1130	baseline
+T41	Observation 1019 1075	physician-perceived contraindications to anticoagulation
+T21	Condition 622 664	mass lesions of the central nervous system
+T61	Non-query-able 1644 1725	Anticipated transfer to another hospital that is not a study site within 72 hours
+T37	Measurement 982 985	sBP
+*	OR T42 T44 T46
+R27	has_qualifier Arg1:T53 Arg2:T51	
+T45	Value 1113 1117	>2.0
+T3	Informed_consent 49 122	providing (possibly through a substitute decision maker) informed consent
+R2	AND Arg1:T2 Arg2:T5	
+T7	Qualifier 186 213	microbiologically-confirmed
+T9	Temporal 233 243	< 72 hours
+T8	Condition 214 222	COVID-19
+T42	Measurement 1081 1095	Platelet count
+T13	Qualifier 438 444	Active
+T50	Value 1152 1159	<80 g/L
+T17	Condition 522 528	stroke
+R26	has_value Arg1:T49 Arg2:T50	
+R20	has_value Arg1:T39 Arg2:T40	
+T56	Drug 1426 1451	dual antiplatelet therapy
+T51	Qualifier 1266 1271	Acute
+T15	Observation 457 482	Risk factors for bleeding
+T16	Procedure 498 518	intracranial surgery
+T18	Temporal 529 544	within 3 months
+T58	Non-query-able 1453 1524	Patients with an independent indication for therapeutic anticoagulation
+T6	Temporal 151 179	anticipated to last 72 hours
+R11	has_temporal Arg1:T16 Arg2:T18	
+R19	has_value Arg1:T37 Arg2:T38	
+R25	subsumes Arg1:T15 Arg2:T16	
+T34	Value 945 953	<14 days
+R21	has_value Arg1:T42 Arg2:T43	
+R13	has_temporal Arg1:T26 Arg2:T27	
+T52	Qualifier 1275 1283	subacute
+T57	Temporal 1411 1418	Current
+R6	has_qualifier Arg1:T8 Arg2:T7	
+T22	Condition 667 690	intracranial malignancy
+R5	AND Arg1:T5 Arg2:T8	
+T1	Value 33 41	18 years
+*	OR T54 T55
+R14	has_temporal Arg1:T28 Arg2:T29	
+T62	Competing_trial 1727 1804	Enrollment in other trials related to anticoagulation or antiplatelet therapy
+T36	Condition 968 980	hypertension
+R23	has_value Arg1:T46 Arg2:T47	
+T14	Condition 445 453	bleeding
+T33	Procedure 937 944	surgery
+T40	Value 1001 1010	>120 mmHg
+R16	has_value Arg1:T33 Arg2:T34	
+R10	has_temporal Arg1:T17 Arg2:T18	
+T54	Condition 1319 1357	heparin induced thrombocytopenia (HIT)
+T31	Device 907 922	spinal catheter
+R7	has_temporal Arg1:T8 Arg2:T9	
+T35	Qualifier 955 967	uncontrolled
+R18	subsumes Arg1:T36 Arg2:T37	
+T29	Temporal 852 878	within the previous 7 days
+*	OR T37 T39
+T27	Temporal 813 837	within previous 3 months
+R9	has_qualifier Arg1:T14 Arg2:T13	
+T46	Measurement 1131 1135	aPTT
+R22	has_value Arg1:T44 Arg2:T45	
+T25	Condition 763 773	hemophilia
+T30	Device 895 903;914 922	epidural catheter
+*	OR T30 T31 T20 T21 T16 T17 T19 T22 T23 T24 T26 T28 T33 T36 T41
+R28	has_temporal Arg1:T56 Arg2:T57	
+T38	Value 986 995	>200 mmHg
+T24	Condition 737 755	bleeding diatheses
+R15	has_qualifier Arg1:T33 Arg2:T32	
+R17	has_qualifier Arg1:T36 Arg2:T35	
+T12	Non-query-able 383 436	intent is to not use pharmacologic thromboprophylaxis
+T55	Condition 1367 1409	heparin allergy including hypersensitivity
+T53	Condition 1284 1306	bacterial endocarditis
+R8	has_mood Arg1:T10 Arg2:T11	
+T43	Value 1096 1107	<50 x10^9/L
+R1	has_value Arg1:T2 Arg2:T1	
+T49	Measurement 1141 1151	Hemoglobin

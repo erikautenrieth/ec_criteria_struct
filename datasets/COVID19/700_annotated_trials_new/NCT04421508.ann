@@ -1,0 +1,93 @@
+T19	Condition 864 883	multi organ failure
+R3	has_context Arg1:T6 Arg2:T8	
+T32	Temporal 1193 1205	at screening
+T16	Value 612 620	negative
+T23	Condition 941 950	Pregnancy
+R6	subsumes Arg1:T14 Arg2:T25	
+T1	Informed_consent 23 46	Signed informed consent
+R16	has_value Arg1:T24 Arg2:T34	
+R5	subsumes Arg1:T12 Arg2:T13	
+T35	Condition 1263 1291	left ventricular dysfunction
+T11	Mood 185 194	requiring
+T20	Qualifier 857 863	severe
+T14	Observation 1074 1111	drugs known to increase methemoglobin
+T36	Measurement 1293 1297	LVEF
+T43	Qualifier 513 522	suspected
+T44	Observation 526 532	proven
+T9	Visit 90 102	hospitalized
+T5	Value 839 843	> 3%
+T37	Value 1298 1302	<40%
+R24	has_context Arg1:T29 Arg2:T47	
+*	OR T8 T7
+T31	Drug 1185 1192	dapsone
+T6	Condition 158 178	SARS-CoV-2 infection
+T18	Competing_trial 739 823	Participating in another clinical trial of an investigational treatment for COVID-19
+T26	Drug 1131 1141	prilocaine
+T33	Condition 1239 1261	systolic heart failure
+T24	Measurement 963 977	pregnancy test
+T27	Drug 1143 1153	benzocaine
+T40	Condition 1387 1426	radiologically proven pulmonary embolus
+*	OR T25 T26 T27 T28 T30 T31
+R10	has_value Arg1:T15 Arg2:T16	
+R4	has_mood Arg1:T10 Arg2:T11	
+R9	subsumes Arg1:T35 Arg2:T36	
+T38	Condition 1332 1342	hemoptysis
+T2	Person 66 69	old
+T28	Drug 1155 1168	nitroprusside
+*	OR T23 T24
+R1	has_value Arg1:T2 Arg2:T3	
+T25	Drug 1120 1129	lidocaine
+T29	Procedure 993 1005	tracheostomy
+T46	Observation 555 577	chest x-ray or CT scan
+T3	Value 48 65	At least 18 years
+T47	Observation 988 992	Open
+R13	has_qualifier Arg1:T38 Arg2:T39	
+T10	Procedure 195 217	oxygen supplementation
+T15	Measurement 621 635	pregnancy test
+R12	has_temporal Arg1:T21 Arg2:T22	
+R22	has_context Arg1:T45 Arg2:T46	
+T12	Observation 1007 1048	Chronic use of a nitric oxide donor agent
+*	OR T33 T35
+T4	Measurement 825 838	Methemoglobin
+T30	Drug 1170 1180	isosorbide
+T22	Temporal 913 939	prior to initiation of iNO
+R11	has_qualifier Arg1:T19 Arg2:T20	
+T21	Procedure 901 912	ventilation
+T34	Value 954 962	positive
+R2	has_value Arg1:T4 Arg2:T5	
+T13	Drug 1057 1070	nitroglycerin
+R8	has_value Arg1:T36 Arg2:T37	
+T45	Condition 533 553	COVID-19 pneumonitis
+T17	Non-query-able 637 712	Willing and able to comply with the treatment schedule and study procedures
+T39	Qualifier 1324 1331	massive
+*	OR T38 T40
+R21	has_qualifier Arg1:T45 Arg2:T43	
+T8	Observation 140 154	high suspicion
+T7	Observation 130 136	proven
+R14	AND Arg1:T9 Arg2:T6	
+R15	AND Arg1:T6 Arg2:T10	
+*	OR T12 T14
+R7	has_temporal Arg1:T14 Arg2:T32	
+T41	Value 237 240	92%
+T42	Measurement 231 235	SpO2
+R17	has_value Arg1:T42 Arg2:T41	
+R18	subsumes Arg1:T10 Arg2:T42	
+R20	has_context Arg1:T45 Arg2:T44	
+T49	Observation 241 309;310 438	regardless of supplemental oxygen (ie on room air or on oxygen), or
+ SpO2  92% on supplemental O2 and in the opinion of the Investigator it is not safe to decrease or remove the supplemental oxygen
+T48	Procedure 448 467	supplemental oxygen
+T50	Value 471 495	no more than 10 L/minute
+R19	has_value Arg1:T48 Arg2:T50	
+T51	Mood 440 447	require
+R23	has_mood Arg1:T48 Arg2:T51	
+R25	AND Arg1:T48 Arg2:T45	
+T52	Observation 241 304	regardless of supplemental oxygen (ie on room air or on oxygen)
+T53	Observation 339 438	and in the opinion of the Investigator it is not safe to decrease or remove the supplemental oxygen
+T54	Procedure 323 338	supplemental O2
+T55	Value 316 319	92%
+T56	Measurement 310 314	SpO2
+R26	has_value Arg1:T56 Arg2:T55	
+R27	AND Arg1:T56 Arg2:T54	
+R28	has_context Arg1:T56 Arg2:T53	
+R29	has_context Arg1:T42 Arg2:T52	
+*	OR T42 T56 T48

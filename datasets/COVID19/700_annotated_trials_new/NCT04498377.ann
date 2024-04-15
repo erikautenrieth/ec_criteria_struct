@@ -1,0 +1,111 @@
+T1	Informed_consent 23 104	Willing to provide informed consent and able to comply with protocol requirements
+T2	Person 109 114	years
+T3	Value 106 123	18 years or older
+R1	has_value Arg1:T2 Arg2:T3	
+T4	Condition 131 139	COVID-19
+T5	Observation 150 166	confirmed by PCR
+R2	has_context Arg1:T4 Arg2:T5	
+T6	Measurement 245 290	Peripheral capillary oxygen saturation (SpO2)
+T7	Value 292 295	93%
+T8	Observation 296 307	on room air
+T9	Measurement 311 315	SpO2
+T10	Value 316 319	93%
+T11	Observation 320 384	on 10 liters per minute of supplemental oxygen via nasal cannula
+R3	has_value Arg1:T6 Arg2:T7	
+R4	has_context Arg1:T6 Arg2:T8	
+*	OR T6 T9
+R5	has_value Arg1:T9 Arg2:T10	
+R6	has_context Arg1:T9 Arg2:T11	
+T12	Visit 168 180	Hospitalized
+T13	Temporal 181 194	within 5 days
+R7	has_temporal Arg1:T12 Arg2:T13	
+T14	Observation 388 535	Radiographic (chest X-ray, computed tomography scan, or ultrasound) evidence of bilateral pulmonary infiltrates consistent with SARS-CoV-2/COVID-19
+T15	Observation 537 579	Clinical symptoms consistent with COVID-19
+T16	Pregnancy_considerations 648 750	If of reproductive potential, willing to abstain or agree to the use of highly effective contraception
+T17	Measurement 608 623	Body mass index
+T18	Value 624 646	between 18 to 40 kg/m2
+R8	has_value Arg1:T17 Arg2:T18	
+T19	Condition 777 796	Respiratory failure
+T20	Temporal 797 809	at screening
+R9	has_temporal Arg1:T19 Arg2:T20	
+T21	Condition 822 835	heart failure
+T22	Observation 811 821	History of
+R10	has_temporal Arg1:T21 Arg2:T22	
+T23	Observation 837 847	History of
+T24	Condition 856 872	bronchial asthma
+T25	Condition 848 852	COPD
+*	OR T25 T24
+R11	has_temporal Arg1:T25 Arg2:T23	
+T26	Condition 881 883	TB
+T27	Qualifier 874 880	Active
+T28	Observation 887 897	history of
+R12	has_temporal Arg1:T26 Arg2:T28	
+R13	has_qualifier Arg1:T26 Arg2:T27	
+T29	Condition 938 948	arrhythmia
+T30	Temporal 949 987	within 3 months prior to randomization
+T31	Qualifier 925 937	Uncontrolled
+R14	has_qualifier Arg1:T29 Arg2:T31	
+T32	Reference_point 965 987	prior to randomization
+R15	has_index Arg1:T30 Arg2:T32	
+R16	has_temporal Arg1:T29 Arg2:T30	
+T33	Condition 989 1002	Heart disease
+T34	Condition 1046 1065	renal insufficiency
+T35	Qualifier 1027 1045	Moderate to severe
+R17	has_qualifier Arg1:T34 Arg2:T35	
+T36	Condition 1067 1075;1091 1105	Abnormal platelet count
+T37	Condition 1067 1086;1100 1106	Abnormal white cell counts
+*	OR T37 T36
+T38	Procedure 1119 1150	transplantation of vital organs
+T39	Observation 1108 1118	History of
+R18	has_context Arg1:T38 Arg2:T39	
+T40	Procedure 1119 1134;1158 1163	transplantation heart
+T41	Procedure 1119 1134;1165 1169	transplantation lung
+T42	Procedure 1119 1134;1171 1176	transplantation liver
+T43	Procedure 1119 1134;1185 1191	transplantation kidney
+*	OR T40 T41 T42 T43
+R19	subsumes Arg1:T38 Arg2:T40	
+T44	Condition 1205 1210	tumor
+T45	Qualifier 1195 1204	Malignant
+R20	has_qualifier Arg1:T44 Arg2:T45	
+T46	Condition 1565 1573	Pregnant
+T47	Observation 1577 1590	breastfeeding
+*	OR T46 T47
+T48	Condition 1603 1613	drug abuse
+T49	Drug 1624 1633	narcotics
+T50	Observation 1592 1602	History of
+R21	has_temporal Arg1:T48 Arg2:T50	
+R22	has_temporal Arg1:T49 Arg2:T50	
+T51	Drug 1648 1664	immunomodulators
+T52	Drug 1668 1686	immunosuppressants
+*	OR T51 T52
+T53	Non-query-able 1688 1732	Other conditions resulting in increased risk
+T54	Qualifier 1489 1494	Known
+T55	Observation 1503 1563	allergic reaction or hypersensitivity to components of F-652
+T56	Qualifier 1495 1502	serious
+R23	has_qualifier Arg1:T55 Arg2:T56	
+R24	has_qualifier Arg1:T55 Arg2:T54	
+T57	Observation 1430 1440	History of
+T58	Condition 1441 1444	HIV
+T59	Condition 1456 1468	hepatitis B,
+T60	Condition 1476 1487	hepatitis C
+*	OR T58 T59 T60
+R25	has_temporal Arg1:T58 Arg2:T57	
+T61	Drug 1408 1418	interferon
+T62	Competing_trial 1350 1401	Received other investigational therapeutic products
+T63	Condition 1298 1313	Unhealed wounds
+T64	Condition 1322 1336	gastric ulcer,
+T65	Procedure 1341 1348	surgery
+T66	Qualifier 1315 1321	active
+R26	has_qualifier Arg1:T64 Arg2:T66	
+*	OR T63 T64 T65
+T67	Condition 1243 1253;1270 1277	autoimmune disease
+T68	Condition 1257 1277	inflammatory disease
+*	OR T67 T68
+T69	Qualifier 1225 1242	systemic or local
+T70	Qualifier 1212 1224	Uncontrolled
+R27	has_qualifier Arg1:T67 Arg2:T69	
+R28	has_qualifier Arg1:T67 Arg2:T70	
+T71	Condition 1286 1296	SARS-CoV-2
+T72	Negation 1278 1285	besides
+R29	has_negation Arg1:T71 Arg2:T72	
+R30	AND Arg1:T67 Arg2:T71	

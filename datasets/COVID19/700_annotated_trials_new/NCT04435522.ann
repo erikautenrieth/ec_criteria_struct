@@ -1,0 +1,39 @@
+T2	Informed_consent 271 386	Written informed consent obtained from subject and ability for subject to comply with the requirements of the study
+T12	Observation 537 550	breastfeeding
+T16	Condition 1035 1079	human immunodeficiency virus infection (HIV)
+T14	Temporal 591 624	during participation in the study
+T13	Pregnancy_considerations 555 590	unwilling to practice birth control
+R5	has_temporal Arg1:T12 Arg2:T14	
+T4	Person 49 52	age
+T6	Condition 93 113	SARS-CoV-2 diagnosis
+R1	has_value Arg1:T4 Arg2:T3	
+R4	has_temporal Arg1:T6 Arg2:T7	
+T10	Condition 253 270	air-space disease
+*	OR T24 T25
+T20	Qualifier 1295 1301	severe
+*	OR T21 T22
+T17	Competing_trial 1080 1271	Subjects enrolled in another clinical trial (including one for COVID-19) that excludes participation in other trials or includes a potent CYP3A inhibitor or inducer (e.g. lopinavir-ritonavir)
+T11	Condition 527 535	pregnant
+*	OR T11 T12
+T22	Drug 1359 1364;1379 1387	CYP3A inducers
+T19	Condition 1302 1315	renal failure
+*	OR T9 T10
+T9	Condition 228 249	multi-focal pneumonia
+R8	has_context Arg1:T21 Arg2:T23	
+*	OR T18 T19
+T8	Reference_point 173 193	at time of screening
+T23	Observation 1331 1337	potent
+T21	Drug 1359 1375	CYP3A inhibitors
+T1	Non-query-able 388 486	Subject able to safely swallow pills or receive Maraviroc through a nasogastric or orogastric tube
+R9	AND Arg1:T19 Arg2:T21	
+T5	Temporal 53 73	at time of screening
+R7	subsumes Arg1:T23 Arg2:T24	
+T25	Observation 1351 1357	strong
+R6	has_qualifier Arg1:T19 Arg2:T20	
+T24	Observation 1339 1347	moderate
+T7	Temporal 154 193	within twelve days at time of screening
+R2	has_temporal Arg1:T4 Arg2:T5	
+T3	Value 37 45	18 years
+T18	Condition 1287 1291	ESRD
+R3	has_index Arg1:T7 Arg2:T8	
+T15	Non-query-able 626 1000	Subjects with the presence of a condition or abnormality that in the opinion of the Investigator would compromise the safety of the patient or the quality of the data. This includes, but is not limited to, recent myocardial infarction in past 6 months, neurological, psychiatric, endocrine, or neoplastic diseases that are judged to interfere with participation in the study

@@ -1,0 +1,27 @@
+T1	Condition 193 201	dementia
+T2	Condition 231 251	cognitive impairment
+T3	Qualifier 215 230	moderate-severe
+R1	has_qualifier Arg1:T2 Arg2:T3	
+*	OR T1 T2
+T4	Non-query-able 412 445	inability to communicate by phone
+T5	Condition 380 410	controlled substance diversion
+T6	Qualifier 370 379	suspected
+R2	has_qualifier Arg1:T5 Arg2:T6	
+T7	Qualifier 253 261	unstable
+T8	Qualifier 265 281	severe untreated
+T9	Condition 282 302	psychiatric disorder
+T10	Condition 306 321	medical disease
+T11	Visit 336 351	hospitalization
+T12	Mood 327 335	requires
+R3	has_mood Arg1:T11 Arg2:T12	
+R4	AND Arg1:T10 Arg2:T11	
+*	OR T10 T9
+R5	has_qualifier Arg1:T9 Arg2:T8	
+*	OR T7 T8
+T13	Temporal 50 59	currently
+T14	Condition 77 89	chronic pain
+T15	Value 93 129	50 mg morphine equivalent daily dose
+T16	Drug 68 72	LTOT
+R6	AND Arg1:T16 Arg2:T14	
+R7	has_value Arg1:T16 Arg2:T15	
+R8	has_temporal Arg1:T16 Arg2:T13	

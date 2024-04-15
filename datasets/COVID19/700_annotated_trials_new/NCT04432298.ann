@@ -1,0 +1,57 @@
+T18	Device 420 433	nasal cannula
+T27	Competing_trial 744 832	Participation in a clinical trial with another investigational drug for COVID-19 disease
+T14	Observation 354 365	on room air
+R8	has_value Arg1:T12 Arg2:T13	
+R3	has_mood Arg1:T6 Arg2:T7	
+R5	AND Arg1:T5 Arg2:T6	
+T28	Non-query-able 833 990	Anticipated discharge from the hospital or transfer to another hospital or long-term care facility which is not a study site within 72 hours of randomization
+R4	has_context Arg1:T6 Arg2:T8	
+T26	Observation 736 743	nursing
+R1	has_value Arg1:T1 Arg2:T2	
+T8	Observation 118 130	for COVID-19
+T22	Procedure 509 544	extracorporeal membrane oxygenation
+R12	AND Arg1:T15 Arg2:T18	
+T21	Negation 465 468	Not
+R14	has_negation Arg1:T22 Arg2:T21	
+T2	Value 25 36	40-85 years
+T3	Condition 47 57	SARS-CoV-2
+T1	Person 21 24	Age
+T12	Measurement 342 346	SpO2
+T17	Mood 370 379	Requiring
+T5	Observation 69 91	Respiratory compromise
+T19	Device 435 444	face mask
+R11	has_mood Arg1:T15 Arg2:T17	
+T7	Mood 92 101	requiring
+T20	Procedure 479 501	mechanical ventilation
+T25	Condition 724 732	pregnant
+*	OR T18 T19
+T23	Temporal 556 580	at time of randomization
+R9	has_context Arg1:T12 Arg2:T14	
+R15	has_temporal Arg1:T22 Arg2:T23	
+T10	Observation 229 243	on CXR or HRCT
+*	OR T25 T26
+T9	Condition 206 228	Interstitial pneumonia
+R2	has_context Arg1:T3 Arg2:T4	
+T15	Procedure 380 412	non-invasive supplemental oxygen
+R13	has_negation Arg1:T20 Arg2:T21	
+*	OR T20 T22 T9 T12 T15
+R6	has_context Arg1:T9 Arg2:T10	
+T4	Observation 37 46	Confirmed
+T13	Value 348 353	< 94%
+T6	Visit 102 117	hospitalization
+T24	Competing_trial 581 677	Not participating in another clinical trial for the treatment of COVID-19 disease through Day 28
+T11	Condition 257 270	consolidation
+T37	Condition 274 296	ground glass opacities
+*	OR T11 T37
+R7	subsumes Arg1:T9 Arg2:T11	
+T16	Observation 446 462	to maintain SpO2
+R10	has_context Arg1:T15 Arg2:T16	
+T38	Mood 469 478	requiring
+R17	has_mood Arg1:T20 Arg2:T38	
+R18	has_mood Arg1:T22 Arg2:T38	
+T29	Condition 1014 1097	anaphylactic reaction to human, humanized, chimeric or murine monoclonal antibodies
+T30	Condition 1002 1010;1027 1097	allergic reaction to human, humanized, chimeric or murine monoclonal antibodies
+*	OR T30 T29
+T31	Observation 991 1001	History of
+R16	has_temporal Arg1:T30 Arg2:T31	
+R19	has_temporal Arg1:T29 Arg2:T31	
