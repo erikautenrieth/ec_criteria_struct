@@ -18,4 +18,5 @@ print(torch.Tensor([1,2]).cuda())
 
 device = torch.device("cuda")
 print(torch.rand(10).to(device))
+#%%
 
