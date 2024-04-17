@@ -6,7 +6,7 @@ import time
 
 
 tokenizer = AutoTokenizer.from_pretrained("databricks/dolly-v2-12b")
-model = AutoModelForCausalLM.from_pretrained("databricks/dolly-v2-12b").to('cuda')
+model = AutoModelForCausalLM.from_pretrained("databricks/dolly-v2-12b")#.to('cuda')
 
 
 prompt = """
@@ -27,7 +27,7 @@ Exclusion Criteria:
 Please format the information as a JSON object with arrays of strings for inclusion and exclusion criteria.Just return the JSON object once and no comments.
 """
 
-generator = pipeline('text-generation', model=model, tokenizer=tokenizer, device=0)
+generator = pipeline('text-generation', model=model, tokenizer=tokenizer)#, device=0)
 
 start_time = time.time()
 generated = generator(prompt, max_length=500, num_return_sequences=1)
