@@ -1,6 +1,9 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import pipeline
 import json
+import time
+
+
 
 tokenizer = AutoTokenizer.from_pretrained("databricks/dolly-v2-12b")
 model = AutoModelForCausalLM.from_pretrained("databricks/dolly-v2-12b").to('cuda')
@@ -23,15 +26,18 @@ Exclusion Criteria:
 
 Please format the information as a JSON object with arrays of strings for inclusion and exclusion criteria.Just return the JSON object once and no comments.
 """
-prompt = prompt.to('cuda')
 
 generator = pipeline('text-generation', model=model, tokenizer=tokenizer, device=0)
 
-
+start_time = time.time()
 generated = generator(prompt, max_length=500, num_return_sequences=1)
 generated_json = generated[0]['generated_text']
+end_time = time.time()
+elapsed_time = end_time - start_time
+minutes, seconds = divmod(elapsed_time, 60)
+print(f"Laufzeit: {int(minutes)} Minuten und {int(seconds)} Sekunden")
 
-print(generated_json)
+print("Generierter Text: \n", generated_json)
 
 try:
     data_json = json.loads(generated_json)
