@@ -3,13 +3,15 @@
 
 vim ~/.bashrc      Esc - :w 
 
-
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/eautenrieth/.local/lib/python3.10/site-packages/tensorrt
-
 
 ## Pfade
 
 export PYTHONPATH="${PYTHONPATH}:/home/eautenrieth/masterthesis/Masterthesis/llm"
+
+## VM Ressourcen
+
+df - h     // Disk speicher
 
 ## GPU
 

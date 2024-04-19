@@ -1,5 +1,6 @@
 from transformers import pipeline
-pipe = pipeline("text-generation", model="epfl-llm/meditron-7b")
+pipe = pipeline("text-generation", model="meta-llama/Meta-Llama-3-70B")
+#pipe = pipeline("text-generation", model="epfl-llm/meditron-7b")
 
 input_text = """Inclusion Criteria: Overweight or obese subjects [according to body mass index (BMI)]
 Fasting plasma glucose value between 100 and 125 mg/dl, with impaired fasting glucose or impaired glucose tolerance confirmed with oral glucose tolerance test (OGTT)
@@ -13,12 +14,16 @@ Use of products containing red yeast rice"""
 prompt = f"Transform the following medical criteria into a structured JSON format. Each inclusion and exclusion criterion should be numbered as 'IC1', 'IC2', etc., and 'EC1', 'EC2', etc. Here is the text to transform:"
 
 
-output = pipe(prompt, max_length=1000)[0]['generated_text']
+input_text = """Generiere eine detaillierte Erklärung darüber, was Diabetes ist, welche Haupttypen es gibt und wie diese behandelt werden können."""
+output = pipe(input_text)[0]['generated_text']
 
-with open('output.txt', 'w') as file:
-    file.write(output)
 
-print("Der generierte Text wurde erfolgreich in 'output.txt' gespeichert.")
+print("Generierter Text: \n", output)
+
+#with open('output.txt', 'w') as file:
+#    file.write(output)
+
+#print("Der generierte Text wurde erfolgreich in 'output.txt' gespeichert.")
 
 
 #%%

@@ -1,19 +1,30 @@
 import requests
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-API_TOKEN = os.getenv("API_TOKEN")
 # API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct"
 # API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-70B"
 # API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-70B-Instruct"
-API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B"
+#API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B"
 
-headers = {"Authorization": f"Bearer {API_TOKEN}"}
+
+
+#API_URL = "https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat-hf" # Pro
+#API_URL = "https://api-inference.huggingface.co/models/codellama/CodeLlama-7b-hf"
+
+#API_URL = "https://api-inference.huggingface.co/models/microsoft/phi-2" # geht nicht
+#API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-large"
+#API_URL = "https://api-inference.huggingface.co/models/google-t5/t5-base"
+
+#API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
+
+#API_URL = "https://api-inference.huggingface.co/models/openai-community/gpt2"
+headers = {"Authorization": "Bearer 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"}
 
 def query(payload):
-    response = requests.post(API_URL, headers=headers, json=payload)
-    return response.json()
+	response = requests.post(API_URL, headers=headers, json=payload)
+	return response.json()
+	
+output = query({
+	"inputs": "Can you please let us know more details about your ",
+})
 
 prompt = """
 Convert the following medical trial eligibility criteria into a structured JSON format:
@@ -39,5 +50,3 @@ output = query({"inputs": prompt})
 
 print("Ausgabe: \n")
 print(output)
-
-#%%
