@@ -2,7 +2,7 @@
 import requests
 import os
 from dotenv import load_dotenv
-from llm.template.helper.helper_functions import read_text_file, save_json
+from llm.template.models.helper_functions import read_text_file, save_json
 load_dotenv()
 API_TOKEN = os.getenv("API_TOKEN")
 

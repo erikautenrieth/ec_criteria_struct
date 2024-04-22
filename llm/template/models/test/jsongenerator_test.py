@@ -1,7 +1,7 @@
 from jsonformer import Jsonformer
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from llm.template.helper.helper_functions import read_text_file
+from llm.template.models.helper_functions import read_text_file
 
 
 model = AutoModelForCausalLM.from_pretrained("databricks/dolly-v2-12b")
