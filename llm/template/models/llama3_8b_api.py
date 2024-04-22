@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 API_TOKEN = os.getenv("API_TOKEN")
+#API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B"
 # API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct"
 # API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-70B"
 # API_URL = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-70B-Instruct"
@@ -40,4 +41,3 @@ output = query({"inputs": prompt})
 print("Ausgabe: \n")
 print(output)
 
-#%%
