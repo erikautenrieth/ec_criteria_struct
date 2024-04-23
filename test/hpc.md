@@ -14,7 +14,9 @@ srun --pty --partition=bigmem --nodes=1 --ntasks-per-node=1 --mem=750G --time=2:
 
 module load gcc openmpi
 
+## To wr14
 
+ssh -Y wr14
 
 
 
