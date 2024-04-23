@@ -25,6 +25,6 @@ output = query({"inputs": prompt,})
 
 print("Ausgabe: \n")
 print(output[0]["generated_text"])
-
+json_path = f'../output/{ec_data}.json'
 save_json(output, json_path)
 #%%

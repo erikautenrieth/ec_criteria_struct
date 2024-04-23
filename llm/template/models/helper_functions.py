@@ -14,11 +14,36 @@ def read_text_file(file_path):
         return f"Ein Fehler ist aufgetreten: {e}"
 
 
+
+def parse_json(text):
+    try:
+        # Finden des Starts des JSON-Teils
+        start_index = text.index('{')
+        # Extraktion des JSON-Strings ab der gefundenen Position
+        json_string = text[start_index:]
+        # Parsen des JSON-Strings zu einem Python-Dictionary
+        json_data = json.loads(json_string)
+        return json_data
+    except ValueError as e:
+        print(f"Error finding JSON start in text: {e}")
+        return None
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON: {e}")
+        return None
+
+
+
+
+
+
+
+
 def save_json(data, file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
     print(f"Die Daten wurden erfolgreich in '{file_path}' gespeichert.")
+
 
 def save_txt(data, file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
