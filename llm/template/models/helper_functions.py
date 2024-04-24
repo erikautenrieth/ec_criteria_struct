@@ -17,22 +17,25 @@ def read_text_file(file_path):
 
 def parse_json(text):
     try:
-        # Finden des Starts des JSON-Teils
+        # Finde die erste öffnende und die letzte schließende Klammer für den JSON-String
         start_index = text.index('{')
-        # Extraktion des JSON-Strings ab der gefundenen Position
-        json_string = text[start_index:]
-        # Parsen des JSON-Strings zu einem Python-Dictionary
+        end_index = text.rindex('}') + 1  # +1, um die schließende Klammer einzuschließen
+        json_string = text[start_index:end_index]
         json_data = json.loads(json_string)
         return json_data
     except ValueError as e:
-        print(f"Error finding JSON start in text: {e}")
+        print(f"Error finding JSON in text: {e}")
         return None
     except json.JSONDecodeError as e:
         print(f"Error decoding JSON: {e}")
         return None
 
 
-
+def load_json_string(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            json_string = json.dumps(data)
+            return json_string
 
 
 
@@ -44,11 +47,14 @@ def save_json(data, file_path):
 
     print(f"Die Daten wurden erfolgreich in '{file_path}' gespeichert.")
 
+def save_json_phi(data, file_path):
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(data)
+    print(f"Die Daten wurden erfolgreich in '{file_path}' gespeichert.")
 
 def save_txt(data, file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(data)
-
     print(f"Die Daten wurden erfolgreich in '{file_path}' gespeichert.")
 
 def time_it(func):
