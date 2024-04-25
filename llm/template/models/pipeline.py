@@ -20,7 +20,7 @@ label1 = load_json_string("llm/template/input/s1_label.json") #   ../input/s1_la
 input1 = read_text_file("llm/template/input/c1.txt") # ../input/c1.txt
 
 messages = [
-    {"role": "system", "content": "Create a JSON structure representing eligibility criteria for a clinical trial. Organize the criteria into inclusion (IC) and exclusion (EC) categories, each detailed with logical and numbered subcategories using AND, OR, and NOT operators.Return elegibility criterias of clinical studys in a logical form as json."},
+    {"role": "system", "content": "Create a JSON structure representing eligibility criteria for a clinical trial. Organize the criteria into inclusion (IC) and exclusion (EC) categories, each detailed with logical and numbered subcategories using AND, OR, and NOT operators with the corresponding IC or EC Tag. Return elegibility criterias of clinical studys in a logical form as json."},
     {"role": "user", "content": f"Return me this criterias in a logical form as json: {schema1}"},
     {"role": "assistant", "content": label1},
     {"role": "user", "content": f"Structure the following criterias as json: {input1}"},
