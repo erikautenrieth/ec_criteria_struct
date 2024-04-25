@@ -36,7 +36,7 @@ pipe = pipeline(
 generation_args = {
     "max_new_tokens": 700,
     "return_full_text": False,
-    "temperature": 8.0,
+    "temperature": 7.0,
     "do_sample": False,
 }
 
@@ -45,17 +45,19 @@ gen_output = output[0]['generated_text']
 print()
 print(gen_output)
 print()
-## Fehler hier wir der Anfang abgeschnitten
-json_object = json.loads(gen_output)
 
 
-print(json_object)
+
+
+
 # Ausgabe des JSON-Objekts
+#json_object = json.loads(gen_output)
+#print(json_object)
 #pars_output = parse_json(output_json)
 #print(pars_output)
 
 #save_json(json_object, "../output/phi3_c2.json")
 save_txt(gen_output, "llm/template/output/phi3_c1.txt")
 
-save_json_phi(json_object, "llm/template/output/phi3_c1.json") # "../output/phi3_c2.json"
+save_json_phi(gen_output, "llm/template/output/phi3_c1.json") # "../output/phi3_c2.json"
 
