@@ -32,14 +32,15 @@ def parse_json(text):
 
 
 def load_json_string(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-            data = json.load(file)
-            json_string = json.dumps(data)
-            return json_string
-
-
-
-
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+                data = json.load(file)
+                json_string = json.dumps(data)
+                return json_string
+    except FileNotFoundError:
+        return "Die Json Datei wurde nicht gefunden."
+    except Exception as e:
+        return f"Ein Fehler ist aufgetreten: {e}"
 
 def save_json(data, file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
