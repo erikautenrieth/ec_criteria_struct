@@ -4,6 +4,13 @@ import os
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 os.environ['TORCH_USE_CUDA_DSA'] = '1'
 
+import os
+
+# Erhalten des aktuellen Arbeitsverzeichnisses
+current_directory = os.getcwd()
+print(f"Das aktuelle Verzeichnis ist: {current_directory}")
+
+
 
 print("TensorFlow version:", tf.__version__)
 print("Torch Version:", torch.__version__)
