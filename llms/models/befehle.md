@@ -33,10 +33,13 @@ pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f htt
 ssh -Y wr14
 
 ## Cache speicher
+
 quota -s
 df -h /tmp
 df -h
 tree ~/.cache
+
+rm -rf /home/eauten2s/.cache/huggingface/hub/models--aaditya--OpenBioLLM-Llama3-70B
 
 ## HPC Cluster
 
