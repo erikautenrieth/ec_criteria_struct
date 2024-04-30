@@ -1,0 +1,64 @@
+
+
+
+
+
+{
+  "AND":[
+    {
+      "IC1":"Overweight or obese subjects [according to body mass index (BMI)]",
+      "OR":[
+        "Overweight",
+        "Obese"
+      ]
+    },
+    {
+      "IC2":"Fasting plasma glucose value between 100 and 125 mg/dl, with impaired fasting glucose or impaired glucose tolerance confirmed with oral glucose tolerance test (OGTT)",
+      "AND":[
+        "Fasting plasma glucose value between 100 and 125 mg/dl",
+        {
+          "OR":[
+            "Impaired fasting glucose confirmed with OGTT",
+            "Impaired glucose tolerance confirmed with OGTT"
+          ]
+        }
+      ]
+    },
+    {
+      "IC3":"Total cholesterol values ≥ 200 mg/dl"
+    }
+  ],
+  "NOT OR":[
+    {
+      "EC1":"Patients with neoplastic and liver diseases, renal failure",
+      "OR":[
+        "Neoplastic diseases",
+        "Liver diseases",
+        "Renal failure"
+      ]
+    },
+    {
+      "EC2":"Patients with type 1 or 2 diabetes mellitus",
+      "OR":[
+        "Type 1 diabetes mellitus",
+        "Type 2 diabetes mellitus"
+      ]
+    },
+    {
+      "EC3":"Pregnant or breastfeeding women",
+      "OR":[
+        "Pregnant",
+        "Breastfeeding"
+      ]
+    },
+    {
+      "EC4":"Hypersensitivity to any of the ingredients"
+    },
+    {
+      "EC5":"Therapy with lipid-lowering drugs"
+    },
+    {
+      "EC6":"Use of products containing red yeast rice"
+    }
+  ]
+}
