@@ -2,35 +2,46 @@ import transformers
 import torch
 import os
 
-os.environ['HF_HOME'] = '/work/eauten2s/.models'
-# export HF_HOME=/work/eauten2s/.models
-
-#os.environ['HF_HUB_CACHE'] = '/work/eauten2s/.models'
-# export HF_HUB_CACHE=/work/eauten2s/.models
 
 model_id = "aaditya/OpenBioLLM-Llama3-70B"
+save_directory = "./models/OpenBioLLM-Llama3-70B"
+
+
+if not os.path.exists(save_directory):
+    os.makedirs(save_directory)
+
+model = transformers.AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.bfloat16)
+tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
+
+model.save_pretrained(save_directory)
+tokenizer.save_pretrained(save_directory)
+
+model = transformers.AutoModelForCausalLM.from_pretrained(save_directory)
+tokenizer = transformers.AutoTokenizer.from_pretrained(save_directory)
+
 
 pipeline = transformers.pipeline(
     "text-generation",
-    model=model_id,
-    model_kwargs={"torch_dtype": torch.bfloat16},
-    device="cuda",
+    model=model,
+    tokenizer=tokenizer,
+    device="auto" 
 )
+
 
 messages = [
     {"role": "system", "content": "You are an expert and experienced from the healthcare and biomedical domain with extensive medical knowledge and practical experience. Your name is OpenBioLLM, and you were developed by Saama AI Labs. who's willing to help answer the user's query with explanation. In your explanation, leverage your deep medical expertise such as relevant anatomical structures, physiological processes, diagnostic criteria, treatment guidelines, or other pertinent medical concepts. Use precise medical terminology while still aiming to make the explanation clear and accessible to a general audience."},
     {"role": "user", "content": "How can i split a 3mg or 4mg waefin pill so i can get a 2.5mg pill?"},
 ]
 
-prompt = pipeline.tokenizer.apply_chat_template(
+prompt = tokenizer.apply_chat_template(
         messages, 
         tokenize=False, 
         add_generation_prompt=True
 )
 
 terminators = [
-    pipeline.tokenizer.eos_token_id,
-    pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
+    tokenizer.eos_token_id,
+    tokenizer.convert_tokens_to_ids("")
 ]
 
 outputs = pipeline(
