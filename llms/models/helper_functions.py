@@ -1,18 +1,27 @@
 import os
 import json
 import time
+import psutil
+import torch
+
+
+
 
 
 def read_text_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
-        return content
+        if content:
+            print(f"Das File: {file_path} wurde erfolgreich geladen.")
+            return content
+        else:
+            print("Das File ist leer.")
+            return "Keine Daten vorhanden."
     except FileNotFoundError:
         return "Die Datei wurde nicht gefunden."
     except Exception as e:
         return f"Ein Fehler ist aufgetreten: {e}"
-
 
 
 def parse_json(text):
@@ -42,21 +51,25 @@ def load_json_string(file_path):
     except Exception as e:
         return f"Ein Fehler ist aufgetreten: {e}"
 
+
 def save_json(data, file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
     print(f"Die Daten wurden erfolgreich in '{file_path}' gespeichert.")
 
+
 def save_json_phi(data, file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(data)
     print(f"Die Daten wurden erfolgreich in '{file_path}' gespeichert.")
 
+
 def save_txt(data, file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(data)
     print(f"Die Daten wurden erfolgreich in '{file_path}' gespeichert.")
+
 
 def time_it(func):
     def wrapper(*args, **kwargs):
@@ -68,3 +81,52 @@ def time_it(func):
         print(f"Laufzeit: {int(minutes)} Minuten und {int(seconds)} Sekunden")
         return result
     return wrapper
+
+
+
+
+def print_cluster_resources():
+    # CPU Informationen
+    print(f"Anzahl der Kerne (logisch): {psutil.cpu_count(logical=True)}")
+    print(f"Anzahl der Kerne (physisch): {psutil.cpu_count(logical=False)}")
+    print(f"Auslastung der CPU-Kerne: {psutil.cpu_percent(interval=1, percpu=True)} %")
+
+    # RAM Informationen
+    ram = psutil.virtual_memory()
+    print(f"Total RAM: {ram.total / (1024 ** 3):.2f} GB")
+    print(f"Verfügbarer RAM: {ram.available / (1024 ** 3):.2f} GB")
+    print(f"Verwendeter RAM: {ram.used / (1024 ** 3):.2f} GB")
+    print(f"RAM Auslastung: {ram.percent} %")
+
+    # Festplatteninformationen
+    partitions = psutil.disk_partitions()
+    for p in partitions:
+        usage = psutil.disk_usage(p.mountpoint)
+        print(f"Laufwerk: {p.device} ({p.fstype})")
+        print(f"Total: {usage.total / (1024 ** 3):.2f} GB")
+        print(f"Verwendet: {usage.used / (1024 ** 3):.2f} GB")
+        print(f"Frei: {usage.free / (1024 ** 3):.2f} GB")
+        print(f"Auslastung: {usage.percent} %")
+
+    # GPU Informationen (falls verfügbar)
+    if torch.cuda.is_available():
+        print("CUDA ist verfügbar. Folgende GPUs sind erreichbar:")
+        num_gpus = torch.cuda.device_count()
+        print(f"Anzahl verfügbarer GPUs: {num_gpus}")
+        for i in range(num_gpus):
+            gpu = torch.cuda.get_device_properties(i)
+            print(f"GPU {i}: {gpu.name}")
+            print(f"  Totaler Speicher: {gpu.total_memory / (1024 ** 3):.2f} GB")
+            print(f"  Multiprozessoren: {gpu.multi_processor_count}")
+    else:
+        print("Keine CUDA-fähigen GPUs gefunden.")
+
+def print_cluster_resources_1():
+    print(f"Anzahl der Kerne: {psutil.cpu_count(logical=True)}")
+    print(f"Total: {psutil.virtual_memory().total / (1024 ** 3):.2f} GB")
+    if torch.cuda.is_available():
+        print("CUDA ist verfügbar. Folgende GPUs sind erreichbar:")
+        num_gpus = torch.cuda.device_count()
+        print(f"Anzahl verfügbarer GPUs: {num_gpus}")
+        for i in range(num_gpus):
+            print(f"GPU {i}: {torch.cuda.get_device_name(i)}")

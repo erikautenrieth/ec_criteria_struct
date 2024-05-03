@@ -48,3 +48,6 @@ sinfo
 squeue
 
 sacct
+
+
+# Hugging face authent
