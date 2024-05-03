@@ -5,8 +5,8 @@ import os
 
 model_id = "aaditya/OpenBioLLM-Llama3-70B"
 save_directory = "./models/OpenBioLLM-Llama3-70B"
-
-
+# export HF_HOME=/work/eauten2s/.models
+# echo $HF_HOME
 if not os.path.exists(save_directory):
     os.makedirs(save_directory)
 
