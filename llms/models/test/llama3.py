@@ -1,29 +1,30 @@
 import transformers
 import torch
+import torch.distributed as dist
+from torch.nn.parallel import DataParallel
 
 from helper_functions import *
 import json
 import os
 
 # Setze die maximale Split-Größe für die Speicherallokation
-#os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:516"
-
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:516"
 
 
 @time_it
 def main():
-    #print_cluster_resources()
 
 
-    # "meta-llama/Meta-Llama-3-8B" 
+    # "meta-llama/Meta-Llama-3-8B"
     # "aaditya/Llama3-OpenBioLLM-8B"
-    model_id =  "meta-llama/Meta-Llama-3-8B-Instruct" 
+    model_id = "meta-llama/Meta-Llama-3-8B-Instruct"
 
     pipeline = transformers.pipeline(
         "text-generation",
-        model=model_id,
+        model=DataParallel(transformers.AutoModelForCausalLM.from_pretrained(model_id)).to("cuda:4"),
+        tokenizer=transformers.AutoTokenizer.from_pretrained(model_id),
         model_kwargs={"torch_dtype": torch.bfloat16},
-        device_map="auto", # device=cuda
+        device=f"cuda:{0}",
     )
 
     schema_input = read_text_file("llms/input/label_1/schema_0.txt")
