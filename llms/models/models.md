@@ -29,7 +29,7 @@ API_URL = "https://api-inference.huggingface.co/models/microsoft/phi-2" # geht n
 
 ### Medical LLMs
 
-"aaditya/Llama3-OpenBioLLM-70B
+aaditya/Llama3-OpenBioLLM-70B
 
 
 ## GatorTron 
