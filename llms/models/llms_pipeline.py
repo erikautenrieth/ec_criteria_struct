@@ -15,6 +15,7 @@ from helper_functions import *
 
 INPUT_PATH = "llms/input/label_1"
 OUTPUT_PATH = "llms/output/label_1"
+ITERS = 3
 
 @time_it
 def main():
@@ -37,11 +38,11 @@ def main():
     
     schema_input = read_text_file(f"{INPUT_PATH}/schema_0.txt")
     study_input = read_text_file(f"{INPUT_PATH}/study_1.txt")
-
+    model_desc = read_text_file(f"{INPUT_PATH}/model_description.txt")
    
 
     messages = [
-        {"role": "system", "content": f"{model_description}: {schema_input}"},
+        {"role": "system", "content": f"{model_desc}: {schema_input}"},
         {"role": "user", "content": f"{study_input}"},
     ]
 

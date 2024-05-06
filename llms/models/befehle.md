@@ -50,4 +50,10 @@ squeue
 sacct
 
 
+
+ssh -Y wr14
+cd /work/eauten2s/ec_criteria_struct/llms/models/
+
+
+
 # Hugging face authent

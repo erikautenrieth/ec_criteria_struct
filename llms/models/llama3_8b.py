@@ -13,8 +13,9 @@ from helper_functions import *
 # "aaditya/Llama3-OpenBioLLM-8B"
 # aaditya/Llama3-OpenBioLLM-70B
 
-INPUT_PATH = "llms/input/label_1"
-OUTPUT_PATH = "llms/output/label_1"
+INPUT_PATH = "/work/eauten2s/ec_criteria_struct/llms/input/label_1"
+OUTPUT_PATH = "/work/eauten2s/ec_criteria_struct/llms/output/label_1"
+
 
 @time_it
 def main():
@@ -30,18 +31,14 @@ def main():
         model_kwargs={"torch_dtype": torch.bfloat16},
         device_map="auto", # device=cuda
     )
-    ## Input Data
-    model_description = """You are a Elegibility Criteria to JSON machine. Return inclusion and exclusion criteria as JSON object. 
-                            For every critera a key and the description as values. Take only the descriptions, add nothing extra, and number them. If possible, 
-                            further subdivide the criteria logically as in the template. Retrun the Criteria in JSON Format. Use this template:"""
-    
+
     schema_input = read_text_file(f"{INPUT_PATH}/schema_0.txt")
     study_input = read_text_file(f"{INPUT_PATH}/study_1.txt")
-
+    model_desc = read_text_file(f"{INPUT_PATH}/model_description.txt")
    
 
     messages = [
-        {"role": "system", "content": f"{model_description}: {schema_input}"},
+        {"role": "system", "content": f"{model_desc}: {schema_input}"},
         {"role": "user", "content": f"{study_input}"},
     ]
 
@@ -58,10 +55,10 @@ def main():
 
     outputs = pipeline(
         prompt,
-        max_new_tokens=256,# 500 (LLama3), 256 (BIoLLama)
+        max_new_tokens=500,# 500 (LLama3), 256 (BIoLLama)
         eos_token_id=terminators,
         do_sample=True,
-        temperature=0.1,# 0.6 deterministich - kreativ
+        temperature=0.5,# 0.6 deterministich - kreativ
         top_p=0.9,
     )
 
@@ -75,9 +72,9 @@ def main():
 
 
 
-    save_txt(gen_output, f"{OUTPUT_PATH}/{model_name}_c1.txt")
+    save_txt(gen_output, f"{OUTPUT_PATH}/{model_name}_s1.txt")
 
-    save_json_phi(gen_output, f"{OUTPUT_PATH}/{model_name}_c1.json")
+    save_json_phi(gen_output, f"{OUTPUT_PATH}/{model_name}_s1.json")
 
 
 
