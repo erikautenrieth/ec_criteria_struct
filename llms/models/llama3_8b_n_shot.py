@@ -15,7 +15,7 @@ from helper_functions import *
 
 INPUT_PATH = "/work/eauten2s/ec_criteria_struct/llms/input/label_1"
 OUTPUT_PATH = "/work/eauten2s/ec_criteria_struct/llms/output/label_1"
-ITERS = 12
+ITERS = 7
 
 @time_it
 def main():
@@ -59,7 +59,7 @@ def main():
 
         outputs = pipeline(
             prompt,
-            max_new_tokens=1000,# 500 (LLama3), 256 (BIoLLama)
+            max_new_tokens=500,# 500 (LLama3), 256 (BIoLLama)
             eos_token_id=terminators,
             do_sample=True,
             temperature=0.5,# 0.6 deterministich - kreativ
@@ -68,8 +68,9 @@ def main():
 
 
         gen_output = outputs[0]["generated_text"][len(prompt):]
+        #   next_input = f"Structure the following criteria further in JSON with AND, OR if possible. Provide the result as JSON output.Separate diseases accordingly with AND/OR logic, and split if 'and' or 'or' appears in the sentence.: {gen_output}"
 
-        next_input = f"Structure the following criteria further in JSON with AND, OR if possible. Provide the result as JSON output.Separate diseases accordingly with AND/OR logic, and split if 'and' or 'or' appears in the sentence.: {gen_output}"
+        next_input = f"Structure the following criteria further in JSON with AND, OR if possible. Provide the result as JSON output: {gen_output}"
         if i>0:
             current_input = next_input
 
@@ -83,7 +84,7 @@ def main():
 
     save_txt(gen_output, f"{OUTPUT_PATH}/{model_name}_{ITERS}_shot_s1.txt")
 
-    save_json_phi(gen_output, f"{OUTPUT_PATH}/{model_name}_{ITERS}_shot_s1.json")
+    save_json_phi(gen_output, f"{OUTPUT_PATH}/{model_name}{ITERS}_shot_s1.json")
 
 
 
