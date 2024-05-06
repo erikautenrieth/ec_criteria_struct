@@ -1,0 +1,42 @@
+Here is the structured criteria further in JSON with AND, OR logic:
+
+{
+    "IC": {
+        "operator": "AND",
+        "IC1": {
+            "operator": "AND",
+            "IC1.1": "Individuals at least 18 years old",
+            "IC1.2": "Individuals must be symptomatic with respiratory symptoms"
+        },
+        "IC2": {
+            "operator": "AND",
+            "IC2.1": {
+                "operator": "AND",
+                "IC2.1.1": "Individuals must complete the UCAP-Q questionnaire and score a ≥ 6% probability of having either asthma or COPD.",
+                "IC2.1.2": {
+                    "operator": "AND",
+                    "IC2.1.2.1": "Individuals who have given written informed consent to participate in this trial in accordance with local regulations;",
+                    "IC2.1.2.2": "Individual must be able to perform pre and post bronchodilator spirometry to measure lung function"
+                }
+            }
+        },
+        "IC3": {
+            "operator": "OR",
+            "IC3.1": "Individuals who have undiagnosed airflow obstruction on spirometry testing (i.e. Asthma or COPD) will be asked to participate in the RCT."
+        }
+    },
+    "EC": {
+        "operator": "NOT OR",
+        "EC1": {
+            "operator": "OR",
+            "EC1.1": "Individuals who report a previous diagnosis of asthma, COPD, history of lung cancer, bronchiectasis, interstitial lung disease, cystic fibrosis or other significant diagnosed lung disease.",
+            "EC1.2": {
+                "operator": "OR",
+                "EC1.2.1": "Individuals currently under the care of a Respirologist.",
+                "EC1.2.2": "Individuals currently using inhaled corticosteroids or long-acting bronchodilators."
+            }
+        },
+        "EC2": {
+            "operator": "OR",
+            "EC2.1": "Individuals with history of myocardial infarction, stroke, aortic or cerebral aneurysm, or detached retina or eye surgery within the past 3 months (spirometry is contraindicated)",
+            "EC
