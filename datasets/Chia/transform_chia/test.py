@@ -1,3 +1,5 @@
+import re
+import json
 def parse_annotations(annotations):
     relations = {}
     entity_positions = {}
@@ -43,40 +45,64 @@ def main(txt_filepath, ann_filepath):
 
     import re
 
-def extract_offsets(text):
-    and_offsets = []
-    or_offsets = []
-    not_offsets = []
+def parse_to_structured_json(input_json):
+    data = json.loads(input_json)
 
-    # Finde AND-Beziehungen
-    and_matches = re.finditer(r'R\d+\s*\bAND\b', text)
-    for match in and_matches:
-        and_offsets.append((match.start(), match.end()))
+    def process_section(text, path):
+        # Initialisiere die rekursive Funktion zur Strukturierung der Segmente
+        def recursive_structure(segments, base_path):
+            if not segments:
+                return {}
 
-    # Finde OR-Beziehungen
-    or_matches = re.finditer(r'\*\s*\bOR\b', text)
-    for match in or_matches:
-        or_offsets.append((match.start(), match.end()))
+            structure = {}
+            current_operator = None
+            sub_elements = []
+            sub_path_index = 1
 
-    # Finde NOT-Beziehungen
-    not_matches = re.finditer(r'\bNOT\b', text)
-    for match in not_matches:
-        not_offsets.append((match.start(), match.end()))
+            for segment in segments:
+                segment = segment.strip()
+                if segment in ['[OR]', '[AND]', '[NEG]']:
+                    if current_operator:
+                        # Schließe die aktuelle Gruppe von Elementen ab und beginne eine neue
+                        if len(sub_elements) > 1 or isinstance(sub_elements[0], dict):
+                            structure[f"{base_path}.{sub_path_index}"] = {current_operator: recursive_structure(sub_elements, f"{base_path}.{sub_path_index}")}
+                        else:
+                            structure[f"{base_path}.{sub_path_index}"] = sub_elements[0]
+                        sub_elements = []
+                        sub_path_index += 1
+                    current_operator = "OR" if segment == '[OR]' else "AND" if segment == '[AND]' else "NOT"
+                else:
+                    clean_segment = re.sub(r'\[\w+\]', '', segment).strip()
+                    if clean_segment:
+                        # Segment kann mehrere Operatoren enthalten, rekursiv weiter zerlegen
+                        more_segments = re.split(r'(\[OR\]|\[AND\]|\[NEG\])', clean_segment)
+                        if len(more_segments) > 1:
+                            sub_elements.append(recursive_structure(more_segments, f"{base_path}.{sub_path_index}"))
+                        else:
+                            sub_elements.append(clean_segment)
 
-    return and_offsets, or_offsets, not_offsets
+            # Behandlung des letzten Segments nach Schleifendurchlauf
+            if current_operator and sub_elements:
+                if len(sub_elements) > 1 or isinstance(sub_elements[0], dict):
+                    structure[f"{base_path}.{sub_path_index}"] = {current_operator: recursive_structure(sub_elements, f"{base_path}.{sub_path_index}")}
+                else:
+                    structure[f"{base_path}.{sub_path_index}"] = sub_elements[0]
+            elif sub_elements:
+                structure = sub_elements[0] if len(sub_elements) == 1 else sub_elements
 
-text = read_ann_file(ann_file)
+            return structure
 
-and_offsets, or_offsets, not_offsets = extract_offsets(text)
+        # Aufteilen der Eingabe in Segmente basierend auf den Operatoren
+        initial_segments = re.split(r'(\[OR\]|\[AND\]|\[NEG\])', text)
+        return recursive_structure(initial_segments, path)
 
-print("AND-Beziehungen:")
-for start, end in and_offsets:
-    print(f"Offset: {start}-{end}")
+    result_structure = {"EC": {}}
+    index = 1
 
-print("\nOR-Beziehungen:")
-for start, end in or_offsets:
-    print(f"Offset: {start}-{end}")
+    # Iterieren über die Eingabe und Verarbeiten jedes Abschnitts
+    for key, value in data.items():
+        section_path = f"EC{index}"
+        result_structure["EC"][section_path] = process_section(value, section_path)
+        index += 1
 
-print("\nNOT-Beziehungen:")
-for start, end in not_offsets:
-    print(f"Offset: {start}-{end}")
+    return json.dumps(result_structure, indent=4, ensure_ascii=False)
