@@ -33,16 +33,21 @@ def main():
         device_map="auto", # device=cuda
     )
 
-    schema_input = read_text_file(f"{INPUT_PATH}/schema_0.txt")
-    study_input = read_text_file(f"{INPUT_PATH}/study_1.txt")
     model_desc = read_text_file(f"{INPUT_PATH}/model_description.txt")
+    schema_input = read_text_file(f"{INPUT_PATH}/schema_0.txt")
+    study0 = read_text_file(f"{INPUT_PATH}/stucy_0.txt")
+    study1 = read_text_file(f"{INPUT_PATH}/study_1.txt")
+    
    
     ## Teste offset .... geht aktuell nicht
-    zusatz = "Save only the offsets in the ICs: and ECs instead of entire records!"
+    befehl = "Structure the following criterias as json:"
+
     messages = [
-        {"role": "system", "content": f"{model_desc} {zusatz}: {schema_input}"},
-        {"role": "user", "content": f"{study_input}"},
+        {"role": "system", "content": f"{model_desc} {befehl}: {study0}"}, 
+        {"role": "assistant", "content": schema_input},
+        {"role": "user", "content": f"{befehl} {study1}"},
     ]
+
 
     prompt = pipeline.tokenizer.apply_chat_template(
             messages, 
