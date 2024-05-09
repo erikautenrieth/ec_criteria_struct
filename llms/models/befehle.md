@@ -43,6 +43,8 @@ rm -rf /home/eauten2s/.cache/huggingface/hub/models--aaditya--OpenBioLLM-Llama3-
 
 ## HPC Cluster
 
+sbatch
+
 sinfo
 
 squeue

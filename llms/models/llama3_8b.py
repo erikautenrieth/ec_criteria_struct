@@ -24,6 +24,7 @@ def main():
 
     model_name = "Llama-3-8B-Instruct"
     model_id =  "meta-llama/Meta-Llama-3-8B-Instruct" 
+    print("Start Pipeline \n")
 
     pipeline = transformers.pipeline(
         "text-generation",
@@ -36,9 +37,10 @@ def main():
     study_input = read_text_file(f"{INPUT_PATH}/study_1.txt")
     model_desc = read_text_file(f"{INPUT_PATH}/model_description.txt")
    
-
+    ## Teste offset .... geht aktuell nicht
+    zusatz = "Save only the offsets in the ICs: and ECs instead of entire records!"
     messages = [
-        {"role": "system", "content": f"{model_desc}: {schema_input}"},
+        {"role": "system", "content": f"{model_desc} {zusatz}: {schema_input}"},
         {"role": "user", "content": f"{study_input}"},
     ]
 
@@ -52,7 +54,7 @@ def main():
         pipeline.tokenizer.eos_token_id,
         pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
     ]
-
+    print("start Output")
     outputs = pipeline(
         prompt,
         max_new_tokens=500,# 500 (LLama3), 256 (BIoLLama)
@@ -72,9 +74,9 @@ def main():
 
 
 
-    save_txt(gen_output, f"{OUTPUT_PATH}/{model_name}_s1.txt")
+    save_txt(gen_output, f"{OUTPUT_PATH}/{model_name}_offset_s1.txt")
 
-    save_json_phi(gen_output, f"{OUTPUT_PATH}/{model_name}_s1.json")
+    save_json_phi(gen_output, f"{OUTPUT_PATH}/{model_name}_offset_s1.json")
 
 
 
