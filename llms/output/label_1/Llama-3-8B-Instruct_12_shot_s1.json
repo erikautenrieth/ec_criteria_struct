@@ -1,0 +1,58 @@
+Here is the JSON output:
+
+{
+    "IC": {
+        "operator": "AND",
+        "IC1": {
+            "operator": "OR",
+            "IC1.1": {
+                "operator": "OR",
+                "IC1.1.1": "Overweight subjects [according to body mass index (BMI)]",
+                "IC1.1.2": "Obese subjects [according to body mass index (BMI)]"
+            }
+        },
+        "IC2": {
+            "operator": "AND",
+            "IC2.1": {
+                "operator": "AND",
+                "IC2.1.1": "Fasting plasma glucose value between 100 and 125 mg/dl",
+                "IC2.1.2": "Confirmed with oral glucose tolerance test (OGTT)"
+            },
+            "IC2.2": {
+                "operator": "OR",
+                "IC2.2.1": "Impaired fasting glucose",
+                "IC2.2.2": "Impaired glucose tolerance"
+            }
+        }
+    },
+    "EC": {
+        "operator": "NOT OR",
+        "EC1": {
+            "operator": "OR",
+            "EC1.1": {
+                "operator": "OR",
+                "EC1.1.1": {
+                    "operator": "OR",
+                    "EC1.1.1.1": "Patients with neoplastic diseases",
+                    "EC1.1.1.2": "Patients with liver diseases"
+                },
+                "EC1.1.2": "Patients with renal failure"
+            }
+        },
+        "EC2": {
+            "operator": "OR",
+            "EC2.1": "Patients with type 1 diabetes mellitus",
+            "EC2.2": "Patients with type 2 diabetes mellitus"
+        },
+        "EC3": {
+            "operator": "OR",
+            "EC3.1": "Pregnant women",
+            "EC3.2": "Breastfeeding women"
+        },
+        "EC4": "Hypersensitivity to any of the ingredients",
+        "EC5": "Therapy with lipid-lowering drugs",
+        "EC6": "Use of products containing red yeast rice"
+    }
+}
+
+This JSON structure accurately captures the inclusion and exclusion criteria, with each criterion represented as a key-value pair, and the logical connectives (AND, OR, NOT) used to combine the criteria.
