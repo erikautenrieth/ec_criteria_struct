@@ -8,3 +8,5 @@
 
 module load cuda
 python llama3_8b.py
+
+
