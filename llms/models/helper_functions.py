@@ -4,10 +4,6 @@ import time
 import psutil
 import torch
 
-
-
-
-
 def read_text_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
