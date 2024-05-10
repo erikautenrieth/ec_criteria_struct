@@ -19,29 +19,29 @@ def main():
         device_map="auto", # device=cuda
     )
 
-    contents = read_all_files_from_directory(INPUT_PATH)
-    keys = list(contents.keys())
+    model_desc = read_text_file(f"/work/eauten2s/ec_criteria_struct/llms/input/model_description.txt")
 
-    model_desc = read_text_file(f"{INPUT_PATH}/model_description.txt")
+    s1 = read_text_file(INPUT_PATH+"NCT00050349_desc.txt")
+    l1 = read_text_file(INPUT_PATH+"NCT00050349.txt")
 
-    l1 = contents[keys[0]]
-    s1 = contents[keys[1]]
-    l2 = contents[keys[2]]
-    s2 = contents[keys[3]]
-    l3 = contents[keys[4]]
-    s3 = contents[keys[5]]
-    s4_test = contents[keys[6]]
+    s2 = read_text_file(INPUT_PATH+"NCT00061308_desc.txt")
+    l2 = read_text_file(INPUT_PATH+"NCT00061308.txt")
+    s3 = read_text_file(INPUT_PATH+"NCT00094861_desc.txt")
+    l3 = read_text_file(INPUT_PATH+"NCT00094861.txt")
 
+    s4_test = read_text_file(INPUT_PATH+"NCT00122070_desc.txt")
 
+    print(s4_test)
 
     messages = [
         {"role": "system", "content": f"{model_desc}: {s1}"},
         {"role": "assistant", "content": l1},
-        {"role": "user", "content": s2},
+        {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {s2}"},
         {"role": "assistant", "content": l2},
-        {"role": "user", "content": f"{s4_test}"},
+        {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {s3}"},
+        {"role": "assistant", "content": l3},
+        {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {s4_test}"},
     ]
-
 
     prompt = pipeline.tokenizer.apply_chat_template(
             messages, 
@@ -56,26 +56,19 @@ def main():
     print("start Output")
     outputs = pipeline(
         prompt,
-        max_new_tokens=500,# 500 (LLama3), 256 (BIoLLama)
+        max_new_tokens=1000,# 500 (LLama3), 256 (BIoLLama)
         eos_token_id=terminators,
         do_sample=True,
         temperature=0.5,# 0.6 deterministich - kreativ
         top_p=0.9,
     )
 
-
     gen_output = outputs[0]["generated_text"][len(prompt):]
-
     ausgabe_js = parse_json(gen_output)
 
     print(f"\n {model_name} Output: \n  {gen_output} \n")
-
-
-
-
-    save_txt(gen_output, f"{OUTPUT_PATH}/{model_name}_NCT00122070.txt")
-
-    save_json_phi(gen_output, f"{OUTPUT_PATH}/{model_name}_NCT00122070.json")
+    #save_txt(gen_output, f"{OUTPUT_PATH}{model_name}_NCT00122070.txt")
+    save_json_phi(gen_output, f"{OUTPUT_PATH}{model_name}_NCT00122070.json")
 
 
 
