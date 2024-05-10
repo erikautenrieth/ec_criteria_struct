@@ -106,3 +106,50 @@ def parse_to_structured_json(input_json):
         index += 1
 
     return json.dumps(result_structure, indent=4, ensure_ascii=False)
+
+
+## Aktuelleste Version
+# Versin 1 es werden nur die ersten Operatoren erkannt
+def parse_to_structured_json(input_json):
+    data = json.loads(input_json)
+
+    def process_section(text, path):
+        # Segmentierung des Textes basierend auf den Operatoren [OR], [AND], [NOT]
+        segments = re.split(r'(\[OR\]|\[AND\]|\[NOT\])', text)
+        print(segments)  # Debug-Ausgabe der Segmente
+        structure = {}
+        operator = None
+        elements = []
+
+        # Durchlaufen der Segmente und Erkennen von Operatoren
+        for segment in segments:
+            segment = segment.strip()
+            if segment in ['[OR]', '[AND]', '[NOT]']:
+                operator = segment.strip('[]')  # Entfernt die Klammern und verwendet das Ergebnis als Operator
+            else:
+                # Entfernung aller übriggebliebenen Tags und Streichen von Leerzeichen
+                clean_segment = re.sub(r'\[\w+\]', '', segment).strip()
+                if clean_segment:
+                    elements.append(clean_segment)
+
+        if operator:
+            structure['operator'] = operator
+            for index, element in enumerate(elements, 1):
+                structure[f"{path}.{index}"] = element
+        else:
+            # Wenn kein Operator vorhanden ist, füge alle Elemente direkt hinzu, ohne weitere Unterteilung
+            if elements:
+                structure = ' '.join(elements)
+
+        return structure
+
+    result_structure = {"EC": {}}
+    index = 1
+
+    # Iterieren über die Eingabe und Verarbeiten jedes Abschnitts
+    for key, value in data.items():
+        section_path = f"EC{index}"
+        result_structure["EC"][section_path] = process_section(value, section_path)
+        index += 1
+
+    return json.dumps(result_structure, indent=4, ensure_ascii=False)
