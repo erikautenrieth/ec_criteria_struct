@@ -126,3 +126,19 @@ def print_cluster_resources_1():
         print(f"Anzahl verfügbarer GPUs: {num_gpus}")
         for i in range(num_gpus):
             print(f"GPU {i}: {torch.cuda.get_device_name(i)}")
+
+
+def read_all_files_from_directory(directory_path):
+    files_content = {}
+    try:
+        for file_name in os.listdir(directory_path):
+            file_path = os.path.join(directory_path, file_name)
+            content = read_text_file(file_path)
+            key = os.path.splitext(file_name)[0]
+            files_content[key] = content
+    except FileNotFoundError:
+        print(f"Das Verzeichnis {directory_path} wurde nicht gefunden.")
+    except Exception as e:
+        print(f"Ein Fehler ist aufgetreten: {e}")
+
+    return files_content
