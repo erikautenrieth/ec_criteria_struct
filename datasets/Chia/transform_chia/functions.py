@@ -185,7 +185,7 @@ def parse_to_structured_json(input_json, type):
         result_structure[type][section_path] = process_section(value, section_path, type)
         index += 1
 
-    return json.dumps(result_structure, indent=4, ensure_ascii=False)
+    return json.dumps(result_structure, indent=4, ensure_ascii=False, separators=(',', ': '))
 
 def merge_files_in_directory(input_directory, output_directory):
     # Erstellen von Dictionaries, um die Pfade der IC- und EC-Dateien zu speichern
@@ -227,7 +227,7 @@ def merge_ic_and_ec_files(nct_number, ic_file_path, ec_file_path, output_directo
     except Exception as e:
         print(f"An error occurred while merging files for {nct_number}: {e}")
 
-def convert_json_to_model_input(input_directory, output_directory):
+def convert_json_to_model_input(input_directory, output_directory, indent):
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
     for filename in os.listdir(input_directory):
@@ -236,12 +236,11 @@ def convert_json_to_model_input(input_directory, output_directory):
             output_file_path = os.path.join(output_directory, filename.replace(".json", ".txt"))
 
             try:
-                # Lese die JSON-Daten
                 with open(input_file_path, 'r', encoding='utf-8') as input_file:
                     data = json.load(input_file)
 
                 # Konvertiere die Daten in einen JSON-String
-                json_string = json.dumps(data, indent=None)
+                json_string = json.dumps(data, indent=indent)
 
                 # Schreibe den JSON-String in eine Textdatei, vorformatiert für Modelleingabe
                 with open(output_file_path, 'w', encoding='utf-8') as output_file:
@@ -252,3 +251,40 @@ def convert_json_to_model_input(input_directory, output_directory):
                 print(f"Error decoding JSON from file {filename}: {e}")
             except Exception as e:
                 print(f"An error occurred while processing file {filename}: {e}")
+
+def extract_unique_ids(directory, type):
+    unique_ids = []
+    for filename in os.listdir(directory):
+        base_id = filename.rsplit('.', 1)[0]
+        if type in base_id and  base_id not in unique_ids:
+            unique_ids.append(base_id)
+    return unique_ids
+
+def merge_inclusion_exclusion(input_directory, output_directory):
+    if not os.path.exists(output_directory):
+        os.makedirs(output_directory)
+    inc_files = {}
+    exc_files = {}
+
+    for filename in os.listdir(input_directory):
+        if filename.endswith(".txt"):
+            nct_number = filename.split('_')[0]  # Annahme, dass NCT-Nummer vor einem Unterstrich steht
+            if 'inc' in filename:
+                inc_files[nct_number] = os.path.join(input_directory, filename)
+            elif 'exc' in filename:
+                exc_files[nct_number] = os.path.join(input_directory, filename)
+    for nct_number in inc_files:
+        if nct_number in exc_files:
+            output_file_path = os.path.join(output_directory, f"{nct_number}_desc.txt")
+            try:
+                # Schreibe die kombinierten Inhalte in eine neue Datei
+                with open(output_file_path, 'w', encoding='utf-8') as output_file:
+                    output_file.write("Inclusion Criteria:\n\n")
+                    with open(inc_files[nct_number], 'r', encoding='utf-8') as inc_file:
+                        output_file.write(inc_file.read() + "\n")
+                    output_file.write("\nExclusion Criteria:\n\n")
+                    with open(exc_files[nct_number], 'r', encoding='utf-8') as exc_file:
+                        output_file.write(exc_file.read() + "\n")
+                print(f"Merged file created successfully: {output_file_path}")
+            except Exception as e:
+                print(f"An error occurred while merging files for {nct_number}: {e}")
