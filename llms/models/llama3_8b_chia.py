@@ -13,7 +13,7 @@ model_name = "Llama-3-8B-Instruct"
 
 model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 
-study_files = os.listdir(study_path)[6:20]
+study_files = os.listdir(study_path)[20:100]
 
 model_desc = read_text_file(f"/work/eauten2s/ec_criteria_struct/llms/input/model_description.txt")
 s1 = read_text_file(INPUT_PATH+"NCT00050349_desc.txt")
