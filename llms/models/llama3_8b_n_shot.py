@@ -1,92 +1,79 @@
 import transformers
-import torch
 from helper_functions import *
+import time
+## Studys
+
+#model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
+#model_name = "Llama-3-8B-Instruct"
+
+model_name  = "Nxcode_7B_orpo"
+model_id = "NTQAI/Nxcode-CQ-7B-orpo"
+
+study_path = "/work/eauten2s/ec_criteria_struct/datasets/Chia/transform_chia/input/studys/"
+output_path = f"/work/eauten2s/ec_criteria_struct/datasets/Chia/transform_chia/eval/{model_name}_3_shot/"
 
 
-# Setze die maximale Split-Größe für die Speicherallokation
-#os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:516"
+INPUT_PATH = "/work/eauten2s/ec_criteria_struct/llms/input/chia/"
+OUTPUT_PATH = "/work/eauten2s/ec_criteria_struct/llms/output/chia/"
 
-## LLama3
-# "meta-llama/Meta-Llama-3-8B-Instruct" 
-# "meta-llama/Meta-Llama-3-8B" 
-## BIO LLMS
-# "aaditya/Llama3-OpenBioLLM-8B"
-# aaditya/Llama3-OpenBioLLM-70B
 
-INPUT_PATH = "/work/eauten2s/ec_criteria_struct/llms/input/label_1"
-OUTPUT_PATH = "/work/eauten2s/ec_criteria_struct/llms/output/label_1"
-ITERS = 7
 
-@time_it
-def main():
-    ## Print Cluster Resources
-    #print_cluster_resources()
 
-    model_name = "Llama-3-8B-Instruct"
-    model_id =  "meta-llama/Meta-Llama-3-8B-Instruct" 
+study_files = os.listdir(study_path)[:5]   # mit LLama3 8B instruct bis [20:100]
 
-    pipeline = transformers.pipeline(
-        "text-generation",
-        model=model_id,
-        model_kwargs={"torch_dtype": torch.bfloat16},
-        device_map="auto", # device=cuda
-    )
+model_desc = read_text_file(f"/work/eauten2s/ec_criteria_struct/llms/input/model_description.txt")
+s1 = read_text_file(INPUT_PATH+"NCT00050349_desc.txt")
+l1 = read_text_file(INPUT_PATH+"NCT00050349.txt")
+s2 = read_text_file(INPUT_PATH+"NCT00061308_desc.txt")
+l2 = read_text_file(INPUT_PATH+"NCT00061308.txt")
+s3 = read_text_file(INPUT_PATH+"NCT00094861_desc.txt")
+l3 = read_text_file(INPUT_PATH+"NCT00094861.txt")
 
-    schema_input = read_text_file(f"{INPUT_PATH}/schema_0.txt")
-    study_input = read_text_file(f"{INPUT_PATH}/study_1.txt")
-    model_desc = read_text_file(f"{INPUT_PATH}/model_description.txt")
+pipeline = transformers.pipeline(
+            "text-generation",
+            model=model_id,
+            model_kwargs={"torch_dtype": torch.bfloat16},
+            device_map="auto", 
+        )
+
+for file in study_files:
+    file_name = file.split("_")[0]
+    print("File:", file_name, "\n")
     
-    
+    test_file = read_text_file(study_path+file)
 
-    current_input = study_input
-    for i in range(ITERS):
-        print(f"Round NO.{i}")
-        messages = [
-            {"role": "system", "content": f"{model_desc}: {schema_input}"},
-            {"role": "user", "content": f"{current_input}"},
+    messages = [
+            {"role": "system", "content": f"{model_desc}: {s1}"},
+            {"role": "assistant", "content": l1},
+            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {s2}"},
+            {"role": "assistant", "content": l2},
+            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {s3}"},
+            {"role": "assistant", "content": l3},
+            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {test_file}"},
         ]
 
-        prompt = pipeline.tokenizer.apply_chat_template(
+    prompt = pipeline.tokenizer.apply_chat_template(
                 messages, 
                 tokenize=False, 
                 add_generation_prompt=True
-        )
+    )
 
-        terminators = [
+    terminators = [
             pipeline.tokenizer.eos_token_id,
             pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
-        ]
+    ]
 
-        outputs = pipeline(
+
+    outputs = pipeline(
             prompt,
-            max_new_tokens=500,# 500 (LLama3), 256 (BIoLLama)
+            max_new_tokens=2000,# 500 (LLama3), 256 (BIoLLama)
             eos_token_id=terminators,
             do_sample=True,
             temperature=0.5,# 0.6 deterministich - kreativ
             top_p=0.9,
-        )
+    )
 
-
-        gen_output = outputs[0]["generated_text"][len(prompt):]
-        #   next_input = f"Structure the following criteria further in JSON with AND, OR if possible. Provide the result as JSON output.Separate diseases accordingly with AND/OR logic, and split if 'and' or 'or' appears in the sentence.: {gen_output}"
-
-        next_input = f"Structure the following criteria further in JSON with AND, OR if possible. Provide the result as JSON output: {gen_output}"
-        if i>0:
-            current_input = next_input
-
-
-    ausgabe_js = parse_json(gen_output)
-
+    gen_output = outputs[0]["generated_text"][len(prompt):]
     print(f"\n {model_name} Output: \n  {gen_output} \n")
-
-
-
-
-    save_txt(gen_output, f"{OUTPUT_PATH}/{model_name}_{ITERS}_shot_s1.txt")
-
-    save_json_phi(gen_output, f"{OUTPUT_PATH}/{model_name}{ITERS}_shot_s1.json")
-
-
-
-if __name__ == "__main__":
-    main()
+    
+    save_json_phi(gen_output, f"{output_path}{model_name}_{file_name}_3_shot.json")
