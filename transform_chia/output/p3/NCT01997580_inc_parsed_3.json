@@ -1,0 +1,50 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "DSM-IV-TR major depressive disorder",
+      "Qualifier": [
+        "DSM-IV-TR"
+      ],
+      "Condition": [
+        "major depressive disorder"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "aged between 20 and 80",
+          "Person": [
+            "aged"
+          ],
+          "Value": [
+            "between 20 and 80"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "durg-n",
+                  "Drug": [
+                    "durg"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "ug-free",
+                      "Negation": [
+                        "free"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

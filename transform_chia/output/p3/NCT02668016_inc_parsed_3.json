@@ -1,0 +1,104 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Aged 18 years or older",
+      "Person": [
+        "Aged"
+      ],
+      "Value": [
+        "18 years or older"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Previously taken one or more statins",
+          "Multiplier": [
+            "one or more"
+          ],
+          "Drug": [
+            "statins"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Withdrawn from statins because of perceived side effects",
+              "Drug": [
+                "statins"
+              ],
+              "Non-query-able": [
+                "Withdrawn from statins because of perceived side effects"
+              ],
+              "Condition": [
+                "side effects"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Developed side effects within 2 weeks of initiation",
+                  "Condition": [
+                    "side effects"
+                  ],
+                  "Temporal": [
+                    "within 2 weeks of initiation"
+                  ],
+                  "Reference_point": [
+                    "initiation"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Clinical indication for",
+                          "Condition": [
+                            "indication"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "statins for primary or",
+                              "Drug": [
+                                "statins"
+                              ],
+                              "Qualifier": [
+                                "primary"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "secondary prevention of cardiovascular disease or",
+                                  "Observation": [
+                                    "prevention of cardiovascular disease"
+                                  ],
+                                  "Qualifier": [
+                                    "secondary"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "dyslipidaemia, on either no medication or non-statin lipid lowering therapy (e.g, ezetimibe)",
+                                  "Condition": [
+                                    "dyslipidaemia"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

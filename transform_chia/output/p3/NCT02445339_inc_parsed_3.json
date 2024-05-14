@@ -1,0 +1,124 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "English"
+        },
+        "right": {
+          "raw_text": "or Spanish speaking*",
+          "Observation": [
+            "Spanish speaking"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Emergency Department patient",
+          "Visit": [
+            "Emergency Department"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Aged 18-80",
+              "Person": [
+                "Aged"
+              ],
+              "Value": [
+                "18-80"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Have had >4 emergency department visits within 12 months for 2 consecutive 12-month periods. Period of time can be extended by up to 6 months if incarcerated or",
+                      "Multiplier": [
+                        ">4",
+                        "2 consecutive"
+                      ],
+                      "Visit": [
+                        "emergency department visits"
+                      ],
+                      "Temporal": [
+                        "within 12 months",
+                        "12-month periods",
+                        "extended by up to 6 months"
+                      ],
+                      "Person": [
+                        "incarcerated"
+                      ],
+                      "Value": [
+                        ">4"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "institutionalized for \u2265 6 months.",
+                      "Person": [
+                        "institutionalized"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Meet Diagnostic and Statistical Manual version IV (DSM-IV) criteria for alcohol dependence or & DSM-V criteria for alcohol use disorder, severe.",
+                      "Qualifier": [
+                        "Diagnostic and Statistical Manual version IV (DSM-IV) criteria",
+                        "DSM-V criteria",
+                        "severe"
+                      ],
+                      "Condition": [
+                        "alcohol dependence",
+                        "alcohol use disorder"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Have \u22652 days/week of heavy drinking (>4 drinks/day)",
+                          "Multiplier": [
+                            ">4",
+                            "\u22652 days/week"
+                          ],
+                          "Condition": [
+                            "heavy drinking"
+                          ],
+                          "Value": [
+                            ">4"
+                          ],
+                          "Measurement": [
+                            "drinks/day"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Capable of giving informed consent.",
+                              "Observation": [
+                                "informed consent"
+                              ],
+                              "Mood": [
+                                "Capable of giving"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

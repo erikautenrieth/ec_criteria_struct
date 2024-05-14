@@ -1,0 +1,107 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "More than three doses of any opioid within one week of surgery",
+      "Multiplier": [
+        "More than three doses"
+      ],
+      "Drug": [
+        "opioid"
+      ],
+      "Temporal": [
+        "within one week of surgery"
+      ],
+      "Reference_point": [
+        "surgery"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Pregnancy",
+          "Condition": [
+            "Pregnancy"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Prisoners",
+              "Person": [
+                "Prisoners"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Unable to provide consent",
+                  "Informed_consent": [
+                    "Unable to provide consent"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Emergency surgery",
+                      "Reference_point": [
+                        "surgery"
+                      ],
+                      "Procedure": [
+                        "Emergency surgery"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Chronic kidney disease stage 5 (GFR < 15 ml/min)",
+                          "Condition": [
+                            "Chronic kidney disease"
+                          ],
+                          "Qualifier": [
+                            "stage 5"
+                          ],
+                          "Measurement": [
+                            "GFR"
+                          ],
+                          "Value": [
+                            "< 15 ml/min)"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Severe hepatic impairment",
+                              "Condition": [
+                                "hepatic impairment"
+                              ],
+                              "Qualifier": [
+                                "Severe"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "Recent myocardial infarction (within the last 3 months)",
+                                  "Condition": [
+                                    "myocardial infarction"
+                                  ],
+                                  "Temporal": [
+                                    "the last 3 months"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

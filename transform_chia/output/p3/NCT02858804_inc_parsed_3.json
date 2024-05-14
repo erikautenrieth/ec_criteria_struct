@@ -1,0 +1,104 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "age=65 years",
+      "Person": [
+        "age"
+      ],
+      "Value": [
+        "=65 years"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "diagnosis with mantle cell lymphoma",
+          "Condition": [
+            "mantle cell lymphoma"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Ann Arbor stage II,I",
+                  "Person": [
+                    "age"
+                  ],
+                  "Measurement": [
+                    "Ann Arbor stage"
+                  ],
+                  "Value": [
+                    "II"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "II o",
+                      "Value": [
+                        "II"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "r IV",
+                      "Value": [
+                        "IV"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "ECOG=1",
+                      "Measurement": [
+                        "ECOG"
+                      ],
+                      "Value": [
+                        "=1"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or if ECOG=2",
+                          "Measurement": [
+                            "ECOG"
+                          ],
+                          "Value": [
+                            "=2"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "but recover after pretreatment.",
+                          "Temporal": [
+                            "after pretreatment"
+                          ],
+                          "Reference_point": [
+                            "pretreatment"
+                          ],
+                          "Condition": [
+                            "recover"
+                          ],
+                          "Procedure": [
+                            "pretreatment"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

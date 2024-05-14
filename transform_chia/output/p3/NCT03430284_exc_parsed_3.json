@@ -1,0 +1,159 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "type 1 diabetes",
+          "Condition": [
+            "type 1 diabetes",
+            "diabetes"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ",specific types of diabetes",
+              "Condition": [
+                "diabetes"
+              ],
+              "Qualifier": [
+                "specific types"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ",gestational diabetes",
+                  "Condition": [
+                    "diabetes",
+                    "gestational diabetes"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or pregestational diabetes;",
+                  "Condition": [
+                    "diabetes",
+                    "gestational diabetes",
+                    "pregestational diabetes"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "acute cardiovascular or cerebrovascular accidents",
+              "Condition": [
+                "cerebrovascular accidents"
+              ],
+              "Qualifier": [
+                "acute"
+              ],
+              "Scope": [
+                "cardiovascular or cerebrovascular accidents"
+              ]
+            },
+            "right": {
+              "raw_text": "within past 3 months;",
+              "Temporal": [
+                "within past 3 months"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "severe hepatic o",
+                  "Qualifier": [
+                    "severe"
+                  ]
+                },
+                "right": {
+                  "raw_text": "r renal dysfunction;",
+                  "Condition": [
+                    "renal dysfunction"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "malignant tumor;",
+                  "Condition": [
+                    "malignant tumor"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "allergic his",
+                          "Condition": [
+                            "allergic"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "tory or contraindication for",
+                              "Condition": [
+                                "contraindication"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "any drugs in trials;",
+                              "Drug": [
+                                "drugs in trials"
+                              ],
+                              "Qualifier": [
+                                "any"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "taking part in other clinical trials;",
+                          "Competing_trial": [
+                            "taking part in other clinical trials"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "obviously poor compliance.",
+                              "Qualifier": [
+                                "obviously"
+                              ],
+                              "Observation": [
+                                "poor compliance"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

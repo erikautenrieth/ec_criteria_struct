@@ -1,0 +1,150 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "no cardiac activity OR",
+          "Negation": [
+            "no"
+          ],
+          "Observation": [
+            "cardiac activity"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "o fetal growth",
+                  "Observation": [
+                    "fetal growth"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "at least one week later",
+                      "Temporal": [
+                        "at least one week later"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "OR"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "At least one week after diagnosis OR a discrepancy of at least one week between crown-rump length and calendar gestational age",
+              "Measurement": [
+                "crown-rump length"
+              ],
+              "Negation": [
+                "no"
+              ],
+              "Temporal": [
+                "At least one week after diagnosis",
+                "at least one week between crown-rump length and calendar gestational age"
+              ],
+              "Reference_point": [
+                "diagnosis",
+                "crown-rump length",
+                "calendar gestational age"
+              ],
+              "Condition": [
+                "discrepancy"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Intra-uterine pregnancy",
+                  "Condition": [
+                    "Intra-uterine pregnancy"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Women aged above 16 years",
+                      "Person": [
+                        "Women",
+                        "aged"
+                      ],
+                      "Value": [
+                        "above 16 years"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Hemodynamic stable patient",
+                          "Condition": [
+                            "Hemodynamic stable"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "ns of infection"
+                                }
+                              }
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "NOT": {
+                                    "left": {
+                                      "raw_text": "s of incomplete abortion"
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "NOT": {
+                                        "left": {
+                                          "OR": {
+                                            "left": {
+                                              "raw_text": "aindications for mifepristone or miso",
+                                              "Drug": [
+                                                "mifepristone"
+                                              ]
+                                            },
+                                            "right": {
+                                              "raw_text": "prostol"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Born prior to 34 weeks",
+      "Person": [
+        "Born"
+      ],
+      "Value": [
+        "prior to 34 weeks"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Neonatal intensive care unit admission",
+          "Visit": [
+            "Neonatal intensive care unit"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Serious medical comorbidities",
+              "Condition": [
+                "medical comorbidities"
+              ],
+              "Qualifier": [
+                "Serious"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "opioids",
+                      "Drug": [
+                        "opioids"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

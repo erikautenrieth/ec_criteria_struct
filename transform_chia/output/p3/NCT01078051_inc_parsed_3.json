@@ -1,0 +1,150 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Patients with angina",
+          "Condition": [
+            "angina"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or silent ischemia",
+              "Condition": [
+                "ischemia"
+              ],
+              "Qualifier": [
+                "silent"
+              ]
+            },
+            "right": {
+              "raw_text": "and documented ischemia",
+              "Condition": [
+                "ischemia"
+              ],
+              "Qualifier": [
+                "documented"
+              ],
+              "Grammar_Error": [
+                "and"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients who are eligible for intracoronary stenting",
+          "Procedure": [
+            "intracoronary stenting"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Age > 18 years",
+              "Person": [
+                "Age"
+              ],
+              "Value": [
+                "> 18 years"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "De novo lesion CTO",
+                  "Condition": [
+                    "CTO"
+                  ],
+                  "Qualifier": [
+                    "De novo lesion"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Reference vessel size 2.5 mm by visual estimation",
+                      "Value": [
+                        "2.5 mm"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "At least one CTO lesions located in proximal or m",
+                              "Condition": [
+                                "CTO",
+                                "CTO lesions"
+                              ],
+                              "Multiplier": [
+                                "At least one"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "id epicardial coronary artery. (If the patient has two CTO lesions, one CTO lesion should be located in proximal or mid epicardial coronary artery)",
+                              "Condition": [
+                                "CTO",
+                                "CTO lesions",
+                                "coronary artery"
+                              ],
+                              "Qualifier": [
+                                "mid epicardial coronary artery"
+                              ],
+                              "Scope": [
+                                "in proximal or mid epicardial coronary artery"
+                              ],
+                              "Parsing_Error": [
+                                "If the patient has two CTO lesions, one CTO lesion should be located in proximal or mid epicardial coronary artery"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Angiographically defined total occlusion over 3 months",
+                              "Condition": [
+                                "total occlusion"
+                              ],
+                              "Qualifier": [
+                                "Angiographically defined"
+                              ],
+                              "Temporal": [
+                                "3 months"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "If no definite symptom with total occlusion, two experienced operators decide CTO in consideration of angiographical morphology (degree of calcification, bridging collaterals, non-tapered stump, angiographic filling from collaterals)",
+                                  "Condition": [
+                                    "CTO",
+                                    "total occlusion"
+                                  ],
+                                  "Subjective_judgement": [
+                                    "If no definite symptom with total occlusion, two experienced operators decide CTO in consideration of angiographical morphology (degree of calcification, bridging collaterals, non-tapered stump, angiographic filling from collaterals)"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Adult patients (age = 18)",
+      "Person": [
+        "Adult",
+        "age"
+      ],
+      "Value": [
+        "= 18"
+      ],
+      "Scope": [
+        "age = 18"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Diagnosed by preoperative imaging modalities",
+              "Temporal": [
+                "preoperative"
+              ],
+              "Procedure": [
+                "imaging modalities"
+              ]
+            },
+            "right": {
+              "raw_text": "to have a brain tumor (including metastatic brain tumors) or vascular lesions (aneurysm, arteriovenous malformation or arteriovenous fistula) requiring surgical intervention.",
+              "Condition": [
+                "brain tumor",
+                "metastatic brain tumors",
+                "vascular lesions",
+                "aneurysm",
+                "arteriovenous malformation",
+                "arteriovenous fistula",
+                "tumor",
+                "vascular lesion"
+              ],
+              "Procedure": [
+                "surgical intervention"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "The patient is determined by a board certified neurosurgeon to have a tumor o",
+                  "Condition": [
+                    "tumor"
+                  ]
+                },
+                "right": {
+                  "raw_text": "r vascular lesion that would take up fluorescein",
+                  "Condition": [
+                    "vascular lesion"
+                  ],
+                  "Qualifier": [
+                    "would take up fluorescein"
+                  ],
+                  "Drug": [
+                    "fluorescein"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Patient or legally authorized representative provides written informed consent to enroll in this study",
+                  "Informed_consent": [
+                    "Patient or legally authorized representative provides written informed consent to enroll in this study"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

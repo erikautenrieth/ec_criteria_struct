@@ -1,0 +1,122 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "previous use of insulin pump",
+      "Device": [
+        "insulin pump"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "pregnancy",
+              "Condition": [
+                "pregnancy"
+              ]
+            },
+            "right": {
+              "raw_text": "or planning to become pregnant in the next 2 years,",
+              "Mood": [
+                "planning to become"
+              ],
+              "Condition": [
+                "pregnant"
+              ],
+              "Temporal": [
+                "in the next 2 years"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "ck of ability to use the study devices",
+                  "Observation": [
+                    "ability to use the study devices"
+                  ],
+                  "Device": [
+                    "study devices"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "history of severe chronic diseases",
+                  "Qualifier": [
+                    "severe"
+                  ],
+                  "Condition": [
+                    "chronic diseases"
+                  ],
+                  "Observation": [
+                    "history"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "recent or",
+                          "Temporal": [
+                            "recent"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "concomitant use of corticosteroids",
+                          "Temporal": [
+                            "concomitant"
+                          ],
+                          "Drug": [
+                            "corticosteroids"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "drug or a"
+                            },
+                            "right": {
+                              "raw_text": "lcohol abuse"
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "psychiatric complaints that interfere with the correct use of the devices",
+                              "Condition": [
+                                "psychiatric complaints"
+                              ],
+                              "Observation": [
+                                "correct use of the devices"
+                              ],
+                              "Mood": [
+                                "interfere with"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

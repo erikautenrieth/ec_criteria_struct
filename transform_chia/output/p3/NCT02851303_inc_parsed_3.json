@@ -1,0 +1,93 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Born at University of New Mexico Hospital",
+      "Visit": [
+        "University of New Mexico Hospital"
+      ],
+      "Person": [
+        "Born"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Greater than 34 weeks gestation",
+          "Condition": [
+            "gestation"
+          ],
+          "Value": [
+            "Greater than 34 weeks"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Primary in-utero drug exposure w",
+                  "Qualifier": [
+                    "in-utero"
+                  ],
+                  "Observation": [
+                    "drug exposure"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "her than buprenorphine",
+                      "Drug": [
+                        "buprenorphine"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Maternal or",
+                      "Qualifier": [
+                        "Maternal"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "infant urine drug screen positive for methadone an",
+                          "Qualifier": [
+                            "infant",
+                            "methadone"
+                          ],
+                          "Measurement": [
+                            "urine drug screen"
+                          ],
+                          "Value": [
+                            "positive"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "d/or opioids on admission",
+                          "Drug": [
+                            "opioids"
+                          ],
+                          "Qualifier": [
+                            "opioids"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

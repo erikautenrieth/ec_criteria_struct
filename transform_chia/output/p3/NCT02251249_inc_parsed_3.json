@@ -1,0 +1,136 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Patient over 18 years weighing between 65 and 85 Kg",
+      "Person": [
+        "years"
+      ],
+      "Value": [
+        "over 18",
+        "between 65 and 85 Kg"
+      ],
+      "Measurement": [
+        "weighing"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Referred for STEMI",
+              "Condition": [
+                "STEMI"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "within 6 hours from beginning of chest pain or stable coronary artery disease requiring a loading dose of Prasugrel",
+                  "Multiplier": [
+                    "loading dose"
+                  ],
+                  "Drug": [
+                    "Prasugrel"
+                  ],
+                  "Temporal": [
+                    "within 6 hours from beginning of chest pain"
+                  ],
+                  "Reference_point": [
+                    "beginning of chest pain"
+                  ],
+                  "Condition": [
+                    "coronary artery disease",
+                    "chest pain"
+                  ],
+                  "Qualifier": [
+                    "stable"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or Ticagrelor according to the international recommendations.",
+                  "Drug": [
+                    "Ticagrelor"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "previous treatment with Clopidogrel,",
+                      "Drug": [
+                        "Clopidogrel"
+                      ],
+                      "Temporal": [
+                        "previous"
+                      ],
+                      "Procedure": [
+                        "treatment"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Prasugrel o",
+                          "Drug": [
+                            "Prasugrel"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "r Ticagrelor.",
+                          "Drug": [
+                            "Ticagrelor"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Patient fasting for at least 6 hours.",
+                  "Observation": [
+                    "fasting"
+                  ],
+                  "Temporal": [
+                    "for at least 6 hours."
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Affiliate or receiving a social security system.",
+                      "Non-query-able": [
+                        "Affiliate or receiving a social security system"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Written informed consent.",
+                          "Observation": [
+                            "Written informed consent"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

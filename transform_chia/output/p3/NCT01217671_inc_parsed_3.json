@@ -1,0 +1,502 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Diagnosis of emphysema",
+          "Condition": [
+            "emphysema"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "C"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "T scan is not available",
+                      "Negation": [
+                        "not available"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "at site documenting then a CT scan is to be performed at screening",
+                      "Procedure": [
+                        "CT scan"
+                      ],
+                      "Temporal": [
+                        "at screening"
+                      ],
+                      "Reference_point": [
+                        "screening"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Male",
+              "Person": [
+                "Male"
+              ]
+            },
+            "right": {
+              "raw_text": "or female patients at least 18 years of age.",
+              "Person": [
+                "female",
+                "age"
+              ],
+              "Value": [
+                "at least 18 years"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Able and willing to sign an informed consent.",
+              "Post-eligibility": [
+                "Able and willing to sign an informed consent."
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Patient with record of congenital AAT deficiency of phenotype PiZZ (homozygote)",
+                      "Condition": [
+                        "congenital AAT deficiency of phenotype PiZZ (homozygote)"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or other rare phenotypes related to AAT deficiency and with AAT serum level \u2264 11 micromole. For patients receiving IV AAT augmentation therapy the serum AAT level threshold does not apply.",
+                      "Condition": [
+                        "rare phenotypes related to AAT deficiency"
+                      ],
+                      "Measurement": [
+                        "AAT serum level"
+                      ],
+                      "Value": [
+                        "\u2264 11 micromole"
+                      ],
+                      "Procedure": [
+                        "IV AAT augmentation therapy",
+                        "therapy"
+                      ],
+                      "Context_Error": [
+                        "For patients receiving IV AAT augmentation therapy the serum AAT level threshold does not apply."
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "FEV1/SVC <70% of predicted value post bronchodilator",
+                          "Measurement": [
+                            "FEV1/SVC",
+                            "FEV1"
+                          ],
+                          "Value": [
+                            "<70% of predicted value"
+                          ],
+                          "Qualifier": [
+                            "post bronchodilator"
+                          ],
+                          "Temporal": [
+                            "post bronchodilator"
+                          ],
+                          "Drug": [
+                            "bronchodilator"
+                          ],
+                          "Reference_point": [
+                            "bronchodilator"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "(SVC is slow VC) and FEV1 < 80% of predicted value post-bronchodilator",
+                              "Drug": [
+                                "bronchodilator"
+                              ],
+                              "Measurement": [
+                                "FEV1"
+                              ],
+                              "Value": [
+                                "< 80% of predicted value"
+                              ],
+                              "Qualifier": [
+                                "post-bronchodilator"
+                              ],
+                              "Temporal": [
+                                "post-bronchodilator"
+                              ],
+                              "Reference_point": [
+                                "bronchodilator"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": ""
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "History of at least two moderate",
+                              "Multiplier": [
+                                "at least two"
+                              ],
+                              "Qualifier": [
+                                "moderate"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "or severe exacerbations that required change in treatment",
+                                  "Qualifier": [
+                                    "severe",
+                                    "required change in treatment"
+                                  ],
+                                  "Condition": [
+                                    "exacerbations"
+                                  ],
+                                  "Observation": [
+                                    "change in treatment"
+                                  ],
+                                  "Procedure": [
+                                    "treatment"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "(antibiotics",
+                                      "Drug": [
+                                        "antibiotics"
+                                      ]
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": ", systemic steroids",
+                                          "Drug": [
+                                            "systemic steroids"
+                                          ],
+                                          "Qualifier": [
+                                            "systemic"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": ", hospitalization) in the last 18 months prior to date of screening , with at least one of these occurring within the last 12 months prior to screening.",
+                                          "Reference_point": [
+                                            "screening",
+                                            "date of screening"
+                                          ],
+                                          "Procedure": [
+                                            "hospitalization"
+                                          ],
+                                          "Temporal": [
+                                            "in the last 18 months prior to date of screening",
+                                            "within the last 12 months prior to screening"
+                                          ],
+                                          "Multiplier": [
+                                            "at least one"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Ability to comply with completion of electronic diary.",
+                              "Observation": [
+                                "comply with completion of electronic diary"
+                              ],
+                              "Post-eligibility": [
+                                "Ability to comply with completion of electronic diary."
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "Ability to self-administer inhaled AAT.",
+                                  "Observation": [
+                                    "self-administer inhaled AAT"
+                                  ],
+                                  "Post-eligibility": [
+                                    "Ability to self-administer inhaled AAT."
+                                  ]
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "No significant abnormalities in serum hematology, serum chemistry and serum inflammatory / immunogenic markers according to the Principal Investigator's judgment, taking into considerations the potential effects of the AAT deficiency.",
+                                      "Post-eligibility": [
+                                        "No significant abnormalities in serum hematology, serum chemistry and serum inflammatory / immunogenic markers according to the Principal Investigator's judgment, taking into considerations the potential effects of the AAT deficiency."
+                                      ],
+                                      "Subjective_judgement": [
+                                        "No significant abnormalities in serum hematology, serum chemistry and serum inflammatory / immunogenic markers according to the Principal Investigator's judgment, taking into considerations the potential effects of the AAT deficiency."
+                                      ],
+                                      "Qualifier": [
+                                        "significant"
+                                      ],
+                                      "Negation": [
+                                        "No"
+                                      ]
+                                    },
+                                    "right": {
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "No significant abnormalities in urinalysis according to the Principal Investigator's judgment, taking into considerations the potential effects of the AAT deficiency.",
+                                          "Post-eligibility": [
+                                            "No significant abnormalities in urinalysis according to the Principal Investigator's judgment, taking into considerations the potential effects of the AAT deficiency."
+                                          ],
+                                          "Subjective_judgement": [
+                                            "No significant abnormalities in urinalysis according to the Principal Investigator's judgment, taking into considerations the potential effects of the AAT deficiency."
+                                          ],
+                                          "Qualifier": [
+                                            "significant"
+                                          ],
+                                          "Negation": [
+                                            "No"
+                                          ]
+                                        },
+                                        "right": {
+                                          "AND": {
+                                            "left": {
+                                              "NOT": {
+                                                "left": {
+                                                  "AND": {
+                                                    "left": {
+                                                      "raw_text": "No significant abnormalities in ECG",
+                                                      "Procedure": [
+                                                        "ECG"
+                                                      ],
+                                                      "Condition": [
+                                                        "abnormalities in ECG"
+                                                      ],
+                                                      "Qualifier": [
+                                                        "significant"
+                                                      ],
+                                                      "Negation": [
+                                                        "No"
+                                                      ]
+                                                    },
+                                                    "right": {
+                                                      "raw_text": "per investigator judgment."
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "right": {
+                                              "AND": {
+                                                "left": {
+                                                  "raw_text": "Negative for HBsAg and for antibodies to HCV, HIV-1.",
+                                                  "Measurement": [
+                                                    "HBsAg",
+                                                    "antibodies to HCV",
+                                                    "HIV-1"
+                                                  ],
+                                                  "Value": [
+                                                    "Negative"
+                                                  ]
+                                                },
+                                                "right": {
+                                                  "AND": {
+                                                    "left": {
+                                                      "AND": {
+                                                        "left": {
+                                                          "raw_text": "AAT deficient",
+                                                          "Condition": [
+                                                            "AAT deficient"
+                                                          ]
+                                                        },
+                                                        "right": {
+                                                          "OR": {
+                                                            "left": {
+                                                              "raw_text": "patients who are either na\u00efve",
+                                                              "Condition": [
+                                                                "na\u00efve"
+                                                              ]
+                                                            },
+                                                            "right": {
+                                                              "NOT": {
+                                                                "left": {
+                                                                  "raw_text": "not receiving IV augmentation therapy) or AAT deficient patients (receiving IV augmentation therapy), if they have been stable on regular therapy for at least 3 months prior to the screening visit and are willing to continue the same regime throughout this trial. Note that only sites in Germany can recruit patients who are currently being treated with IV AAT.Patients who stopped IV augmentation treatment 6 months prior to screening date and will not re-start this treatment for the course of the study will be considered Na\u00efve.",
+                                                                  "Reference_point": [
+                                                                    "screening",
+                                                                    "the screening",
+                                                                    "this trial"
+                                                                  ],
+                                                                  "Procedure": [
+                                                                    "treatment",
+                                                                    "IV augmentation therapy",
+                                                                    "therapy"
+                                                                  ],
+                                                                  "Negation": [
+                                                                    "No",
+                                                                    "not receiving"
+                                                                  ],
+                                                                  "Condition": [
+                                                                    "AAT deficient"
+                                                                  ],
+                                                                  "Temporal": [
+                                                                    "for at least 3 months prior to the screening",
+                                                                    "throughout this trial"
+                                                                  ],
+                                                                  "Observation": [
+                                                                    "willing to continue"
+                                                                  ],
+                                                                  "Qualifier": [
+                                                                    "stable"
+                                                                  ]
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "right": {
+                                                      "AND": {
+                                                        "left": {
+                                                          "NOT": {
+                                                            "left": {
+                                                              "NOT": {
+                                                                "left": {
+                                                                  "OR": {
+                                                                    "left": {
+                                                                      "raw_text": "non-lactating female patients, whose screening pregnancy test",
+                                                                      "Reference_point": [
+                                                                        "screening"
+                                                                      ],
+                                                                      "Person": [
+                                                                        "female"
+                                                                      ],
+                                                                      "Condition": [
+                                                                        "lactating"
+                                                                      ],
+                                                                      "Negation": [
+                                                                        "non"
+                                                                      ],
+                                                                      "Measurement": [
+                                                                        "pregnancy test"
+                                                                      ]
+                                                                    },
+                                                                    "right": {
+                                                                      "OR": {
+                                                                        "left": {
+                                                                          "raw_text": "is negative and who are using contraceptive methods",
+                                                                          "Value": [
+                                                                            "negative"
+                                                                          ],
+                                                                          "Device": [
+                                                                            "contraceptive methods"
+                                                                          ]
+                                                                        },
+                                                                        "right": {
+                                                                          "AND": {
+                                                                            "left": {
+                                                                              "raw_text": "deemed reliable by the investigator",
+                                                                              "Subjective_judgement": [
+                                                                                "deemed reliable by the investigator"
+                                                                              ],
+                                                                              "Qualifier": [
+                                                                                "deemed reliable by the investigator"
+                                                                              ]
+                                                                            },
+                                                                            "right": {
+                                                                              "OR": {
+                                                                                "left": {
+                                                                                  "raw_text": ", or who are at least 2 years post-menopausal",
+                                                                                  "Temporal": [
+                                                                                    "at least 2 years"
+                                                                                  ],
+                                                                                  "Condition": [
+                                                                                    "post-menopausal"
+                                                                                  ]
+                                                                                },
+                                                                                "right": {
+                                                                                  "AND": {
+                                                                                    "left": {
+                                                                                      "raw_text": "or surgically",
+                                                                                      "Procedure": [
+                                                                                        "surgically"
+                                                                                      ]
+                                                                                    },
+                                                                                    "right": {
+                                                                                      "raw_text": "sterilized."
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

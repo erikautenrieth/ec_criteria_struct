@@ -1,0 +1,76 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Inclusion Criteria Patients: Fulfilling the diagnostic criteria of schizophrenia",
+          "Observation": [
+            "Patients"
+          ],
+          "Condition": [
+            "schizophrenia"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or schizoaffective disorder according to ICD-10 (International Classification of Diseases version 10)",
+              "Condition": [
+                "schizoaffective disorder"
+              ],
+              "Qualifier": [
+                "ICD-10 (International Classification of Diseases version 10)"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Never treated with antipsychotic compounds or central nervous system (CNS) stimulants, Legally competent",
+                      "Negation": [
+                        "Never"
+                      ],
+                      "Drug": [
+                        "antipsychotic compounds",
+                        "central nervous system (CNS) stimulants"
+                      ],
+                      "Observation": [
+                        "Legally competent"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "o psychiatric"
+                    },
+                    "right": {
+                      "raw_text": "or physical disease.",
+                      "Condition": [
+                        "physical disease"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
