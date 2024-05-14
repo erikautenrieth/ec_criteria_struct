@@ -5,8 +5,8 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --time=03:00:00          # Time limit hrs:min:sec
 
-#SBATCH --output=llms_pipeline.%j.out   # Standard output and error log
-#SBATCH --error=llms_pipeline.%j.err    # Error log
+#SBATCH --output=llms_pipeline2.%j.out   # Standard output and error log
+#SBATCH --error=llms_pipeline2.%j.err    # Error log
 #SBATCH --job-name=llm_pipeline
 
 module load cuda
