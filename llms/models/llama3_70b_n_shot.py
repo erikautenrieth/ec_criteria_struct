@@ -6,8 +6,8 @@ from helper_functions import *
 
 
 # Model
-model_id =  "meta-llama/Meta-Llama-3-70B"
-model_name = "Meta-Llama-3-70B"
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
 
 
 
