@@ -15,8 +15,8 @@ model_name = "Llama-3-8B-Instruct"
 study_path = "/work/eauten2s/ec_criteria_struct/transform_chia/input/half_clinical_trials/"
 output_path = f"/work/eauten2s/ec_criteria_struct/transform_chia/model_output/{model_name}_3_shot/"
 
-anfang = 0 
-ende = 5
+anfang = 5 
+ende = 10
 
 study_files = os.listdir(study_path)[anfang:ende]   # mit LLama3 8B instruct bis [20:100]
 
@@ -46,14 +46,14 @@ label2 = labels[label_keys[1]]
 label3 = labels[label_keys[2]]
 
 
-
+print("Hier fängt die Pipeline an")
 pipeline = transformers.pipeline(
             "text-generation",
             model=model_id,
             model_kwargs={"torch_dtype": torch.bfloat16},
             device_map="auto", 
         )
-
+print("Pipeline fertig")
 for file in study_files:
     file_name = file.split("_")[0]
     print("File:", file_name, "\n")
