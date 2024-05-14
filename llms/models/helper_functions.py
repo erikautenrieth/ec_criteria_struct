@@ -3,7 +3,7 @@ import json
 import time
 import psutil
 import torch
-
+import re
 def read_text_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -142,3 +142,37 @@ def read_all_files_from_directory(directory_path):
         print(f"Ein Fehler ist aufgetreten: {e}")
 
     return files_content
+
+
+### Load n-Shot Data
+
+def extract_nct_number(filename):
+    match = re.search(r'(NCT\d{8})_(inc|exc)', filename)
+    return match.groups() if match else (None, None)
+
+def read_file_content(filepath):
+    with open(filepath, 'r', encoding='utf-8') as file:
+        return file.read()
+
+def read_matching_txt_files(study_folder, label_folder, max_files):
+    study_filenames = []
+    label_filenames = []
+    study_contents = []
+    label_contents = []
+
+    study_files = [f for f in os.listdir(study_folder) if f.endswith('.txt')][:max_files]
+    label_files = [f for f in os.listdir(label_folder) if f.endswith('.txt')][:max_files]
+    for filename in study_files:
+        nct_number, inc_exc = extract_nct_number(filename)
+        if nct_number:
+            study_filenames.append(f"{nct_number}_{inc_exc}_study")
+            filepath = os.path.join(study_folder, filename)
+            study_contents.append(read_file_content(filepath))
+    for filename in label_files:
+        nct_number, inc_exc = extract_nct_number(filename)
+        if nct_number:
+            label_filenames.append(f"{nct_number}_{inc_exc}_label")
+            filepath = os.path.join(label_folder, filename)
+            label_contents.append(read_file_content(filepath))
+
+    return study_filenames, study_contents, label_filenames, label_contents

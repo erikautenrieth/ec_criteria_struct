@@ -2,32 +2,50 @@ import transformers
 from helper_functions import *
 import time
 ## Studys
+#model_name  = "Nxcode_7B_orpo"
+#model_id = "NTQAI/Nxcode-CQ-7B-orpo"
 
-#model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
-#model_name = "Llama-3-8B-Instruct"
-
-model_name  = "Nxcode_7B_orpo"
-model_id = "NTQAI/Nxcode-CQ-7B-orpo"
-
-study_path = "/work/eauten2s/ec_criteria_struct/datasets/Chia/transform_chia/input/studys/"
-output_path = f"/work/eauten2s/ec_criteria_struct/datasets/Chia/transform_chia/eval/{model_name}_3_shot/"
-
-
-INPUT_PATH = "/work/eauten2s/ec_criteria_struct/llms/input/chia/"
-OUTPUT_PATH = "/work/eauten2s/ec_criteria_struct/llms/output/chia/"
+# Model
+model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
+model_name = "Llama-3-8B-Instruct"
 
 
 
+# Input/ Output
+study_path = "/work/eauten2s/ec_criteria_struct/transform_chia/input/half_clinical_trials/"
+output_path = f"/work/eauten2s/ec_criteria_struct/transform_chia/model_output/{model_name}_3_shot/"
 
-study_files = os.listdir(study_path)[:5]   # mit LLama3 8B instruct bis [20:100]
+anfang = 0 
+ende = 5
 
-model_desc = read_text_file(f"/work/eauten2s/ec_criteria_struct/llms/input/model_description.txt")
-s1 = read_text_file(INPUT_PATH+"NCT00050349_desc.txt")
-l1 = read_text_file(INPUT_PATH+"NCT00050349.txt")
-s2 = read_text_file(INPUT_PATH+"NCT00061308_desc.txt")
-l2 = read_text_file(INPUT_PATH+"NCT00061308.txt")
-s3 = read_text_file(INPUT_PATH+"NCT00094861_desc.txt")
-l3 = read_text_file(INPUT_PATH+"NCT00094861.txt")
+study_files = os.listdir(study_path)[anfang:ende]   # mit LLama3 8B instruct bis [20:100]
+
+
+
+model_desc = read_text_file(f"/work/eauten2s/ec_criteria_struct/transform_chia/chia_label/prompts/model_description.txt")
+
+
+
+study_folder = "/work/eauten2s/ec_criteria_struct/transform_chia/input/half_clinical_trials/" 
+label_folder = '/work/eauten2s/ec_criteria_struct/transform_chia/chia_label/p2_model_input' 
+max_files = 3  
+
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, max_files)
+studies = dict(zip(study_filenames, study_contents))
+labels = dict(zip(label_filenames, label_contents))
+
+study_keys = list(studies.keys())
+label_keys = list(labels.keys())
+
+study1 = studies[study_keys[0]]
+study2 = studies[study_keys[1]]
+study3 = studies[study_keys[2]]
+
+label1 = labels[label_keys[0]]
+label2 = labels[label_keys[1]]
+label3 = labels[label_keys[2]]
+
+
 
 pipeline = transformers.pipeline(
             "text-generation",
@@ -43,12 +61,12 @@ for file in study_files:
     test_file = read_text_file(study_path+file)
 
     messages = [
-            {"role": "system", "content": f"{model_desc}: {s1}"},
-            {"role": "assistant", "content": l1},
-            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {s2}"},
-            {"role": "assistant", "content": l2},
-            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {s3}"},
-            {"role": "assistant", "content": l3},
+            {"role": "system", "content": f"{model_desc}: {study1}"},
+            {"role": "assistant", "content": label1},
+            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {study2}"},
+            {"role": "assistant", "content": label2},
+            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {study3}"},
+            {"role": "assistant", "content": label3},
             {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {test_file}"},
         ]
 
