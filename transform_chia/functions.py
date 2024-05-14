@@ -10,6 +10,12 @@ def read_json(file_path):
         data = json.load(f)
     return data
 
+def save_json_to_txt(data, output_file):
+    compact_data = json.dumps(data, separators=(',', ':'))
+    with open(output_file, 'w') as f:
+        f.write(compact_data)
+
+
 def parse_ann_file(file_path):
     entities = {}
     relationships = []
