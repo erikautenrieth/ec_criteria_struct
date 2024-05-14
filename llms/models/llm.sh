@@ -6,6 +6,7 @@
 
 #SBATCH --output=llms_pipeline.%j.out   # Standard output and error log
 #SBATCH --error=llms_pipeline.%j.err    # Error log
+#SBATCH --job-name=llms_pipeline
 
 module load cuda
 python llama3_8b_n_shot.py
