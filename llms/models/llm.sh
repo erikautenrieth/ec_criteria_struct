@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=gpu4          # GPU partition
 #SBATCH --nodes=1                # number of nodes
-#SBATCH --mem=100G                # memory per node in MB (different units with suffix K|M|G|T)
+#SBATCH --mem=120G                # memory per node in MB (different units with suffix K|M|G|T)
 #SBATCH --gres=gpu:4 
 #SBATCH --time=03:00:00          # Time limit hrs:min:sec
 
