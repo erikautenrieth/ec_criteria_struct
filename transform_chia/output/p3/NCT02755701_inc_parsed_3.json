@@ -1,0 +1,99 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Age = 19 and = 70 years;",
+      "Person": [
+        "Age"
+      ],
+      "Value": [
+        "= 19 and = 70 years"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Presence of liver cirrhosis",
+          "Condition": [
+            "liver cirrhosis"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Serum albumin level = 3.5g/dl, ultrasound o",
+                  "Measurement": [
+                    "Serum albumin"
+                  ],
+                  "Value": [
+                    "= 3.5g/dl"
+                  ],
+                  "Procedure": [
+                    "ultrasound"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "r CT scan c",
+                      "Procedure": [
+                        "CT scan"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "onfirmed ascites (=Grade 1)",
+                      "Condition": [
+                        "ascites"
+                      ],
+                      "Qualifier": [
+                        "Grade 1"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "administration of diuretics an",
+                          "Drug": [
+                            "diuretics"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "d BCAA within the past 1 week",
+                          "Drug": [
+                            "BCAA"
+                          ],
+                          "Temporal": [
+                            "past 1 week"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Voluntary consent to take part in this trial",
+                      "Informed_consent": [
+                        "Voluntary consent to take part in this trial"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Type 2 diabetes mellitus with HbA1c > 7.5 %",
+      "Condition": [
+        "Type 2 diabetes mellitus"
+      ],
+      "Measurement": [
+        "HbA1c"
+      ],
+      "Value": [
+        "> 7.5 %"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Body mass index > 35 and < 50 kg/m2",
+          "Measurement": [
+            "Body mass index"
+          ],
+          "Value": [
+            "> 35 and < 50 kg/m2"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Candidate for Gastric By-Pass",
+              "Procedure": [
+                "Gastric By-Pass"
+              ],
+              "Mood": [
+                "Candidate"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Treatment with GLP1 (glucagon-like peptide) analogue or",
+                      "Drug": [
+                        "GLP1 (glucagon-like peptide) analogue"
+                      ],
+                      "Procedure": [
+                        "Treatment"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "insulin",
+                      "Drug": [
+                        "insulin"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Term"
+        },
+        "right": {
+          "raw_text": "singleton infants (>37 weeks gestational age)",
+          "Condition": [
+            "singleton infants"
+          ],
+          "Value": [
+            ">37 weeks"
+          ],
+          "Measurement": [
+            "gestational age"
+          ],
+          "Scope": [
+            ">37 weeks gestational age"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Birth weight > 2500g",
+          "Measurement": [
+            "Birth weight"
+          ],
+          "Value": [
+            "> 2500g"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Healthy at inclusion",
+              "Condition": [
+                "Healthy"
+              ],
+              "Temporal": [
+                "at inclusion"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Breastfed exclusively or",
+                      "Condition": [
+                        "Breastfed"
+                      ],
+                      "Qualifier": [
+                        "exclusively"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "predominantly (>50% meals) at inclusion",
+                      "Temporal": [
+                        "at inclusion"
+                      ],
+                      "Qualifier": [
+                        "predominantly"
+                      ],
+                      "Multiplier": [
+                        ">50% meals"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "revious iron supplementation",
+                          "Procedure": [
+                            "iron supplementation"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "evious blood transfusion",
+                              "Procedure": [
+                                "blood transfusion"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Informed consent given",
+                              "Informed_consent": [
+                                "Informed consent given"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

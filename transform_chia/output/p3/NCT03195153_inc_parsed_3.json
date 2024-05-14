@@ -1,0 +1,40 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "diabetic patient;",
+      "Condition": [
+        "diabetic"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "therapy with aspirin",
+              "Drug": [
+                "aspirin"
+              ]
+            },
+            "right": {
+              "raw_text": "and insulin;",
+              "Drug": [
+                "insulin"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "patient well responders",
+              "Condition": [
+                "well responders"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

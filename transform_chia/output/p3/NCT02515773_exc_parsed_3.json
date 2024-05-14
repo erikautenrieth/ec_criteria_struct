@@ -1,0 +1,144 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Patients will be excluded if they have had exposure to a total daily dose of MET 1000 mg bid for at least 2 weeks in the past 3 months;",
+      "Drug": [
+        "MET"
+      ],
+      "Multiplier": [
+        "1000 mg bid",
+        "2"
+      ],
+      "Temporal": [
+        "at least 2 weeks in the past 3 months"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Patients will be excluded if they could not tolerate",
+              "Condition": [
+                "not tolerate"
+              ]
+            },
+            "right": {
+              "raw_text": "MET during the recommended titration schedule outlined in the protocol;",
+              "Drug": [
+                "MET"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Major neurological or medical illnesses that affect weight gain (e.g., unstable thyroid disease)",
+                  "Condition": [
+                    "thyroid disease"
+                  ],
+                  "Qualifier": [
+                    "unstable"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or require a systemic medication that might impact weight or glucose regulation (e.g., diabetes mellitus [",
+                      "Condition": [
+                        "diabetes mellitus"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "insulin],",
+                          "Drug": [
+                            "insulin"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "chronic renal failure [",
+                              "Condition": [
+                                "chronic renal failure"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "steroids]);",
+                              "Drug": [
+                                "steroids"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Fasting glucose = 126 mg/dL on 2 occasions during screening indicating need for prompt treatment;",
+                  "Measurement": [
+                    "Fasting glucose"
+                  ],
+                  "Value": [
+                    "= 126 mg/dL"
+                  ],
+                  "Multiplier": [
+                    "2 o",
+                    "2"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "If lab results are available in the last 6 months, then a serum creatinine =1.3 mg/dL on 2 occasions during screening and/or follow-up, indicating potential impairment of renal functioning;",
+                      "Multiplier": [
+                        "2 o",
+                        "2"
+                      ],
+                      "Measurement": [
+                        "serum creatinine"
+                      ],
+                      "Value": [
+                        "=1.3 mg/dL"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Pregnant or breast feeding;",
+                          "Pregnancy_considerations": [
+                            "Pregnant or breast feeding"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Children and caregivers who are unable to complete assessments for any reason;",
+                              "Informed_consent": [
+                                "Children and caregivers who are unable to complete assessments for any reason"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

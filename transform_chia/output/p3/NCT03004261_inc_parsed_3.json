@@ -1,0 +1,120 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Any allogeneic stem cell transplant recipient = 14 years of age and = 60 years of age",
+      "Procedure": [
+        "allogeneic stem cell transplant"
+      ],
+      "Value": [
+        "= 14 years",
+        "= 60 years"
+      ],
+      "Person": [
+        "age"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Bilirubin/ SGOT/SGPT < 5 \u00d7 upper normal limits.",
+          "Measurement": [
+            "Bilirubin",
+            "SGOT",
+            "SGPT"
+          ],
+          "Value": [
+            "< 5 \u00d7 upper normal limits"
+          ],
+          "Negation": [
+            "no"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Creatinine < 2 \u00d7 upper normal limits.",
+              "Measurement": [
+                "Creatinine"
+              ],
+              "Value": [
+                "< 2 \u00d7 upper normal limits"
+              ],
+              "Negation": [
+                "no"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Ejection fraction =",
+                      "Measurement": [
+                        "Ejection fraction"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "severe arrhythmia.",
+                          "Qualifier": [
+                            "severe"
+                          ],
+                          "Condition": [
+                            "arrhythmia"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Estimated life expectancy = 6 months.",
+                      "Observation": [
+                        "Estimated life expectancy"
+                      ],
+                      "Value": [
+                        "= 6 months"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Patients' CMV-DNA = 1000cp/ml in treatment group and",
+                              "Measurement": [
+                                "CMV-DNA"
+                              ],
+                              "Value": [
+                                "= 1000cp/ml"
+                              ],
+                              "Person": [
+                                "treatment group"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "being negative in prophylactic group.",
+                              "Person": [
+                                "prophylactic group"
+                              ],
+                              "Value": [
+                                "negative"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

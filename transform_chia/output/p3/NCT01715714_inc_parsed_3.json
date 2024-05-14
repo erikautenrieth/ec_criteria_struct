@@ -1,0 +1,78 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients on chronic statin",
+          "Multiplier": [
+            "chronic"
+          ],
+          "Drug": [
+            "statin"
+          ]
+        },
+        "right": {
+          "raw_text": "treatment (>30 days) scheduled for isolated CABG, including on- or off-pump or repeat (redo's) revascularisation procedures",
+          "Procedure": [
+            "treatment",
+            "CABG",
+            "revascularisation procedures"
+          ],
+          "Value": [
+            ">30 days"
+          ],
+          "Qualifier": [
+            "isolated",
+            "on- or off-pump or repeat",
+            "redo's"
+          ],
+          "Mood": [
+            "scheduled"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Stable"
+            },
+            "right": {
+              "raw_text": "or unstable angina, including non ST-segment-elevation acute coronary syndrome (NSTE-ACS)",
+              "Condition": [
+                "unstable angina",
+                "non ST-segment-elevation acute coronary syndrome",
+                "NSTE-ACS"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Age = 18 years",
+              "Person": [
+                "Age"
+              ],
+              "Value": [
+                "= 18 years"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Written informed consent",
+                  "Non-query-able": [
+                    "Written informed consent"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

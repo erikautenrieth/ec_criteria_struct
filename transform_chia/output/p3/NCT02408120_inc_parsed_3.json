@@ -1,0 +1,139 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Subjects admitted to the hospital",
+          "Observation": [
+            "admitted to the hospital"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "with acute",
+              "Qualifier": [
+                "acute"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or chronic medical illnesses",
+                  "Condition": [
+                    "medical illnesses"
+                  ],
+                  "Qualifier": [
+                    "chronic"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or for elective",
+                      "Qualifier": [
+                        "elective"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "and emergency surgical illness",
+                          "Condition": [
+                            "surgical illness"
+                          ],
+                          "Qualifier": [
+                            "emergency"
+                          ],
+                          "Grammar_Error": [
+                            "and"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or trauma",
+                          "Condition": [
+                            "trauma"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Known history of Type 2 diabetes mellitus for >3 months",
+          "Condition": [
+            "Type 2 diabetes mellitus"
+          ],
+          "Value": [
+            ">3 months"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Treated with either diet a",
+                  "Procedure": [
+                    "diet"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "lone, any combination of oral antidiabetic agents,",
+                      "Drug": [
+                        "oral antidiabetic agents"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "non-insulin injectables o",
+                          "Drug": [
+                            "insulin"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "r insulin therapy",
+                          "Drug": [
+                            "insulin"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "hout laboratory evidence of diabetic ketoacidosis",
+                      "Qualifier": [
+                        "laboratory evidence"
+                      ],
+                      "Condition": [
+                        "diabetic ketoacidosis"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

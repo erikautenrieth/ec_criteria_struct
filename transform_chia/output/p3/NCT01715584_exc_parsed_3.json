@@ -1,0 +1,79 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "patient refusal",
+      "Observation": [
+        "patient refusal"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "age less than 40",
+              "Person": [
+                "age"
+              ],
+              "Value": [
+                "less than 40"
+              ]
+            },
+            "right": {
+              "raw_text": "or over 80 years",
+              "Value": [
+                "over 80 years"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "combined surgical procedures",
+              "Procedure": [
+                "combined surgical procedures"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "emergency surgery",
+                  "Procedure": [
+                    "emergency surgery"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Left ventricular ejection fraction less than 50 per cent",
+                      "Measurement": [
+                        "Left ventricular ejection fraction"
+                      ],
+                      "Value": [
+                        "less than 50 per cent"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "calculated creatinine clearance less than 60 mL per minute",
+                          "Measurement": [
+                            "calculated creatinine clearance"
+                          ],
+                          "Value": [
+                            "less than 60 mL per minute"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

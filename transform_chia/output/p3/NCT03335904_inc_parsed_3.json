@@ -1,0 +1,105 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "normotensive",
+      "Condition": [
+        "normotensive"
+      ],
+      "Negation": [
+        "no"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "forced expiratory volume in 1s : forced vital capacity ratio > 0.75",
+          "Measurement": [
+            "forced expiratory volume in 1s : forced vital capacity ratio"
+          ],
+          "Value": [
+            "> 0.75"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "medical history of cardiovascular a",
+                      "Observation": [
+                        "medical history"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "nd respiratory disease",
+                      "Condition": [
+                        "respiratory disease"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "taking medications ot",
+                          "Drug": [
+                            "medications"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "er than oral contraceptives",
+                              "Drug": [
+                                "oral contraceptives"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "from sleep apnea",
+                          "Condition": [
+                            "sleep apnea"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "body mass index less than 30 kg/m2",
+                          "Measurement": [
+                            "body mass index"
+                          ],
+                          "Value": [
+                            "less than 30 kg/m2"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

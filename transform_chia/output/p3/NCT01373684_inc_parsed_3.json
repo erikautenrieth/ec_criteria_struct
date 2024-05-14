@@ -1,0 +1,109 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Chronic hepatitis B",
+          "Condition": [
+            "Chronic hepatitis B"
+          ]
+        },
+        "right": {
+          "raw_text": "(HBsAg positive > 6 months)",
+          "Measurement": [
+            "HBsAg"
+          ],
+          "Value": [
+            "positive"
+          ],
+          "Temporal": [
+            "> 6 months"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "HBeAg negative within six months prior to initiation of peginterferon alfa-2a",
+          "Measurement": [
+            "HBeAg"
+          ],
+          "Value": [
+            "negative"
+          ],
+          "Temporal": [
+            "within six months prior to initiation of peginterferon alfa-2a"
+          ],
+          "Reference_point": [
+            "initiation of peginterferon alfa-2a"
+          ],
+          "Drug": [
+            "peginterferon alfa-2a"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "cept Telbivudine) treatment within one month prior to initiation of peginterferon alfa-2a",
+                  "Reference_point": [
+                    "initiation of peginterferon alfa-2a"
+                  ],
+                  "Drug": [
+                    "peginterferon alfa-2a",
+                    "Telbivudine"
+                  ],
+                  "Temporal": [
+                    "within one month prior to initiation of peginterferon alfa-2a"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "C"
+                    },
+                    "right": {
+                      "raw_text": "ompensated liver disease",
+                      "Condition": [
+                        "liver disease"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Age > 18 years",
+                      "Person": [
+                        "Age"
+                      ],
+                      "Value": [
+                        "> 18 years"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Written informed consent",
+                          "Informed_consent": [
+                            "Written informed consent"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

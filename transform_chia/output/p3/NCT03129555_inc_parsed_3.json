@@ -1,0 +1,75 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "A diagnosis of VTE in outpatient clinic",
+          "Condition": [
+            "VTE"
+          ],
+          "Visit": [
+            "outpatient clinic"
+          ]
+        },
+        "right": {
+          "raw_text": "or as discharge diagnosis after hospitalization.",
+          "Qualifier": [
+            "discharge diagnosis"
+          ],
+          "Temporal": [
+            "after hospitalization"
+          ],
+          "Reference_point": [
+            "hospitalization"
+          ],
+          "Procedure": [
+            "hospitalization",
+            "discharge"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "A claimed prescription",
+              "Procedure": [
+                "prescription"
+              ],
+              "Qualifier": [
+                "claimed"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "of a NOAC from a Danish pharmacy within 14 days of discharge",
+                  "Drug": [
+                    "NOAC"
+                  ],
+                  "Qualifier": [
+                    "Danish pharmacy"
+                  ],
+                  "Procedure": [
+                    "discharge"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or outpatient clinic visit.",
+                  "Visit": [
+                    "outpatient clinic"
+                  ],
+                  "Procedure": [
+                    "outpatient clinic visit"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

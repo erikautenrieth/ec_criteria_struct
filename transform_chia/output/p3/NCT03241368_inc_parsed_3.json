@@ -1,0 +1,67 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Subject has provided informed consent.",
+      "Non-query-able": [
+        "Subject has provided informed consent."
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Subject is \u2265 18 years of age",
+          "Person": [
+            "age"
+          ],
+          "Value": [
+            "\u2265 18 years"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Subject is willing and able to comply with all aspects of treatment and evaluation schedule.",
+              "Non-query-able": [
+                "Subject is willing and able to comply with all aspects of treatment and evaluation schedule."
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Subject has known CD and a recent history (within last 2 years) of mucosal disease (diagnosis based on radiologic",
+                      "Condition": [
+                        "mucosal disease"
+                      ],
+                      "Temporal": [
+                        "within last 2 years",
+                        "recent history"
+                      ],
+                      "Undefined_semantics": [
+                        "CD"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", endoscopic"
+                        },
+                        "right": {
+                          "raw_text": ", or histological evidence).",
+                          "Observation": [
+                            "histological evidence"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

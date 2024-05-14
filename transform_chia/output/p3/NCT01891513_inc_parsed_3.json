@@ -1,0 +1,143 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Age 65 years and older",
+      "Person": [
+        "Age"
+      ],
+      "Value": [
+        "65 years and older"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Hypertension - untreated",
+              "Condition": [
+                "Hypertension"
+              ],
+              "Qualifier": [
+                "untreated",
+                "treated"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "(Systolic Blood Pressure (SBP)",
+                  "Measurement": [
+                    "Systolic Blood Pressure (SBP)"
+                  ]
+                },
+                "right": {
+                  "raw_text": "\u2265 140 mm Hg or Diastolic Blood Pressure (DBP) \u2265 90 mm Hg) or treated",
+                  "Value": [
+                    "\u2265 140 mm Hg",
+                    "\u2265 90 mm Hg"
+                  ],
+                  "Measurement": [
+                    "Diastolic Blood Pressure (DBP)"
+                  ],
+                  "Qualifier": [
+                    "treated"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Physical limitations evidenced by either:",
+              "Parsing_Error": [
+                "Physical limitations evidenced by either:"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Score \u2264 10 on the Short Physical Performance Battery",
+                      "Measurement": [
+                        "Short Physical Performance Battery"
+                      ],
+                      "Value": [
+                        "Score \u2264 10"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "OR Walking speed",
+                          "Measurement": [
+                            "Walking speed"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "< 1.2 m/sec during 400 m usual-paced test",
+                          "Value": [
+                            "< 1.2 m/sec"
+                          ],
+                          "Procedure": [
+                            "400 m usual-paced test"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Sedentary lifestyle",
+                          "Condition": [
+                            "Sedentary lifestyle"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": ", defined as <150 min/wk of moderate physical activity",
+                              "Value": [
+                                "<150 min/wk"
+                              ],
+                              "Measurement": [
+                                "moderate physical activity"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "as assessed by CHAMPS questionnaire",
+                              "Procedure": [
+                                "CHAMPS questionnaire"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Willingness to participate in all study procedures",
+                          "Non-query-able": [
+                            "Willingness to participate in all study procedures"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Patients older than 18 years",
+      "Value": [
+        "older than 18"
+      ],
+      "Person": [
+        "years"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Classification of the American Society of Anesthesiologists (ASA I-III)",
+          "Measurement": [
+            "Classification of the American Society of Anesthesiologists",
+            "ASA"
+          ],
+          "Value": [
+            "I-III"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "cognitive deficits",
+                  "Condition": [
+                    "cognitive deficits"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Signed informed consent prior to surgery",
+                  "Informed_consent": [
+                    "Signed informed consent prior to surgery"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

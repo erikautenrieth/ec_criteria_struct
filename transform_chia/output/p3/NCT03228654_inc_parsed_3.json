@@ -1,0 +1,104 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "uterine size <12 weeks.",
+      "Measurement": [
+        "uterine size"
+      ],
+      "Value": [
+        "<12 weeks"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "presence of benign cause",
+              "Condition": [
+                "benign cause"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "for the hysterectomy e.g. fibroid uterus,",
+                  "Procedure": [
+                    "hysterectomy"
+                  ],
+                  "Condition": [
+                    "fibroid uterus"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "perimenopausal beeding",
+                      "Condition": [
+                        "perimenopausal beeding"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "ot responding to medical treatment or complex endometrial hyperplasia",
+                              "Qualifier": [
+                                "responding to medical treatment"
+                              ],
+                              "Procedure": [
+                                "medical treatment"
+                              ],
+                              "Condition": [
+                                "complex endometrial hyperplasia"
+                              ]
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "ithout atypia.",
+                                  "Condition": [
+                                    "atypia"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "sence of significant scarring in the pelvis from previous surgeries.",
+                  "Condition": [
+                    "significant scarring"
+                  ],
+                  "Qualifier": [
+                    "pelvis",
+                    "from previous surgeries"
+                  ],
+                  "Temporal": [
+                    "previous"
+                  ],
+                  "Procedure": [
+                    "surgeries"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

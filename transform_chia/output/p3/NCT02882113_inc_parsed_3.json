@@ -1,0 +1,78 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "19 years old and above.",
+      "Person": [
+        "old"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients who previously have received a liver transplant over the last six months and within last three years.",
+          "Procedure": [
+            "liver transplant"
+          ],
+          "Temporal": [
+            "last six months and within last three years"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Patients who are on Tacrolimus immunosuppressive therapy twice a day for at least two weeks.",
+              "Drug": [
+                "Tacrolimus"
+              ],
+              "Multiplier": [
+                "twice a day"
+              ],
+              "Temporal": [
+                "at least two weeks"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Patients who have normal liver function and renal function.",
+                  "Qualifier": [
+                    "normal"
+                  ],
+                  "Condition": [
+                    "liver function",
+                    "renal function"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "out complication such as acute rejection.",
+                          "Condition": [
+                            "complication",
+                            "acute rejection"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Patients willing to sign his/her consent.",
+                          "Informed_consent": [
+                            "Patients willing to sign his/her consent"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

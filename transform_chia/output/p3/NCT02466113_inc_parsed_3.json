@@ -1,0 +1,86 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "The informed consent has been obtained from the patient.",
+      "Non-query-able": [
+        "The informed consent has been obtained from the patient."
+      ],
+      "Post-eligibility": [
+        "The informed consent has been obtained from the patient."
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "With confirmed diagnosis of stage II colon cancer.",
+          "Condition": [
+            "colon cancer"
+          ],
+          "Qualifier": [
+            "stage II"
+          ],
+          "Negation": [
+            "no"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "With moderate/good ECOG health rating (PS): 0-1 score.",
+              "Measurement": [
+                "ECOG health rating (PS)"
+              ],
+              "Value": [
+                "0-1 score",
+                "moderate/good"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "no anti-cancer treatment before primary surgery.",
+                      "Drug": [
+                        "anti-cancer treatment"
+                      ],
+                      "Negation": [
+                        "no"
+                      ],
+                      "Temporal": [
+                        "before primary surgery"
+                      ],
+                      "Procedure": [
+                        "primary surgery"
+                      ],
+                      "Reference_point": [
+                        "primary surgery"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "The patient receive radical operation"
+                        },
+                        "right": {
+                          "raw_text": "for colon cancer with negative margin.",
+                          "Condition": [
+                            "colon cancer"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

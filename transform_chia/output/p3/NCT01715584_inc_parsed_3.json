@@ -1,0 +1,63 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "age over 40",
+      "Person": [
+        "age"
+      ],
+      "Value": [
+        "over 40"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "composite head and neck tumor resection",
+          "Procedure": [
+            "composite head and neck tumor resection"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "treated hypertension",
+              "Condition": [
+                "hypertension"
+              ],
+              "Qualifier": [
+                "treated"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "hypertension medications ta",
+                      "Condition": [
+                        "hypertension"
+                      ],
+                      "Drug": [
+                        "hypertension medications"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "ept diuretics)",
+                          "Drug": [
+                            "diuretics"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

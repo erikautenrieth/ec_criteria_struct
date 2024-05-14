@@ -1,0 +1,88 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "1. Patient or relatives unable or unwilling to give informed consent",
+      "Parsing_Error": [
+        "1."
+      ],
+      "Non-query-able": [
+        "Patient or relatives unable or unwilling to give informed consent"
+      ],
+      "Post-eligibility": [
+        "Patient or relatives unable or unwilling to give informed consent"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "2. Contraindication",
+              "Parsing_Error": [
+                "2."
+              ],
+              "Condition": [
+                "Contraindication"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or allergy to paracetamol",
+                  "Condition": [
+                    "allergy"
+                  ],
+                  "Drug": [
+                    "paracetamol"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or artesunate therapy",
+                  "Drug": [
+                    "artesunate"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "3. Known cirrhosis",
+                  "Parsing_Error": [
+                    "3."
+                  ],
+                  "Condition": [
+                    "cirrhosis"
+                  ]
+                },
+                "right": {
+                  "raw_text": ", or >6 standard alcoholic drinks/day",
+                  "Condition": [
+                    ">6 standard alcoholic drinks/day"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "4. Pregnancy",
+                  "Parsing_Error": [
+                    "4."
+                  ],
+                  "Condition": [
+                    "Pregnancy"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

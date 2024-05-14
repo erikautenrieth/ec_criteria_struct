@@ -1,0 +1,152 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "estimated glomerular filtration rate (eGFR) > 60 ml/min",
+      "Measurement": [
+        "estimated glomerular filtration rate (eGFR)"
+      ],
+      "Value": [
+        "> 60 ml/min"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "preserved left ventricular ejection fraction",
+              "Measurement": [
+                "left ventricular ejection fraction"
+              ],
+              "Value": [
+                "preserved"
+              ]
+            },
+            "right": {
+              "raw_text": "(>= 50%) on echocardiography",
+              "Value": [
+                ">= 50%"
+              ],
+              "Procedure": [
+                "echocardiography"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "HEALTHY: normal cardiac structure a",
+                  "Condition": [
+                    "HEALTHY"
+                  ],
+                  "Value": [
+                    "normal cardiac structure"
+                  ]
+                },
+                "right": {
+                  "raw_text": "nd function on echocardiography, BP < 140/90",
+                  "Procedure": [
+                    "echocardiography"
+                  ],
+                  "Measurement": [
+                    "BP"
+                  ],
+                  "Value": [
+                    "< 140/90"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "HYPERTENSIVE: history of BP >140/90, 1 or more antihypertensive medications, LV ejection fraction (LVEF) at least 50%, current BP < 160/90",
+                  "Measurement": [
+                    "BP",
+                    "LV ejection fraction (LVEF)",
+                    "LVEF",
+                    "current BP"
+                  ],
+                  "Condition": [
+                    "HYPERTENSIVE"
+                  ],
+                  "Value": [
+                    ">140/90",
+                    "at least 50%",
+                    "< 160/90"
+                  ],
+                  "Observation": [
+                    "history"
+                  ],
+                  "Multiplier": [
+                    "1 or more"
+                  ],
+                  "Drug": [
+                    "antihypertensive medications"
+                  ],
+                  "Temporal": [
+                    "current"
+                  ],
+                  "Scope": [
+                    "history of BP >140/90, 1 or more antihypertensive medications, LV ejection fraction (LVEF) at least 50%, current BP < 160/90"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "HFpEF: physician-confirmed diagnosis of HF, symptomatic HF, LVEF at least 50%, elevated LV filling pressure by",
+                          "Condition": [
+                            "HFpEF",
+                            "HF"
+                          ],
+                          "Value": [
+                            "at least 50%",
+                            "elevated"
+                          ],
+                          "Qualifier": [
+                            "physician-confirmed",
+                            "symptomatic"
+                          ],
+                          "Measurement": [
+                            "LVEF",
+                            "LV filling pressure"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "catheterization, echocardiographic criteria or B-type-natriuretic peptide > 100, current BP < 160/90",
+                          "Measurement": [
+                            "BP",
+                            "B-type-natriuretic peptide",
+                            "current BP"
+                          ],
+                          "Temporal": [
+                            "current"
+                          ],
+                          "Value": [
+                            "< 160/90",
+                            "> 100"
+                          ],
+                          "Procedure": [
+                            "catheterization"
+                          ],
+                          "Non-representable": [
+                            "echocardiographic criteria"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

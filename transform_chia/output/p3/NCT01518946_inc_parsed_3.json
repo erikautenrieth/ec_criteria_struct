@@ -1,0 +1,113 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "1. Male",
+          "Person": [
+            "Male"
+          ],
+          "Multiplier": [
+            "1"
+          ]
+        },
+        "right": {
+          "raw_text": "and female subjects must be 18 years of age or older and ambulatory.",
+          "Person": [
+            "female",
+            "age"
+          ],
+          "Visit": [
+            "ambulatory"
+          ],
+          "Multiplier": [
+            "1"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "2. Females of child-bearing potential",
+              "Person": [
+                "Females"
+              ],
+              "Condition": [
+                "child-bearing potential"
+              ],
+              "Scope": [
+                "Females of child-bearing potential"
+              ]
+            },
+            "right": {
+              "raw_text": "(FOCP) must have a negative serum beta human chorionic gonadotropin (HCG) pregnancy test.",
+              "Measurement": [
+                "serum beta human chorionic gonadotropin (HCG) pregnancy test"
+              ],
+              "Value": [
+                "negative"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "3. A documented history of severe Symptomatic Orthostatic Hypotension (SOH) that, in the judgment of the treating physician, has required treatment with midodrine HCl , and has been at a stable dose for at least 3 months.",
+              "Condition": [
+                "Symptomatic Orthostatic Hypotension (SOH)"
+              ],
+              "Qualifier": [
+                "severe",
+                "stable dose"
+              ],
+              "Drug": [
+                "midodrine HCl"
+              ],
+              "Temporal": [
+                "for at least 3 months"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "not treated",
+                          "Procedure": [
+                            "treated"
+                          ],
+                          "Negation": [
+                            "not"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "for orthostatic hypotension (OH): dizziness, lightheadedness, feeling faint, or feeling like they might black out.",
+                          "Condition": [
+                            "dizziness",
+                            "lightheadedness",
+                            "feeling faint",
+                            "feeling like they might black out",
+                            "orthostatic hypotension (OH)"
+                          ],
+                          "Scope": [
+                            "dizziness, lightheadedness, feeling faint, or feeling like they might black out"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

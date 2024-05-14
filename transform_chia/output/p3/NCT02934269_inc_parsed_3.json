@@ -1,0 +1,106 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Healthy male",
+          "Person": [
+            "male"
+          ],
+          "Condition": [
+            "Healthy"
+          ]
+        },
+        "right": {
+          "raw_text": "and/or female subjects between the ages of 18 and 55 years, and a body mass index (BMI) of \u2265 18 and \u2264 33 kg/m2 with body weight \u2265 50 and \u2264 90 kg at screening.",
+          "Person": [
+            "male",
+            "female",
+            "ages"
+          ],
+          "Measurement": [
+            "body mass index (BMI)",
+            "body weight"
+          ],
+          "Value": [
+            "\u2265 18 and \u2264 33 kg/m2",
+            "\u2265 50 and \u2264 90 kg"
+          ],
+          "Temporal": [
+            "at screening"
+          ],
+          "Reference_point": [
+            "screening"
+          ],
+          "Scope": [
+            "body mass index (BMI) of \u2265 18 and \u2264 33 kg/m2 with body weight \u2265 50 and \u2264 90 kg"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Females must have been surgically sterilized",
+              "Person": [
+                "male",
+                "Females"
+              ],
+              "Condition": [
+                "surgically sterilized"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "(hysterectomy",
+                  "Procedure": [
+                    "hysterectomy"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", bilateral oophorectomy",
+                      "Procedure": [
+                        "bilateral oophorectomy"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "without menses before screening, with a follicle-stimulating hormone [FSH] level of > 40 IU/L at screening).",
+                          "Temporal": [
+                            "at screening",
+                            "before screening"
+                          ],
+                          "Reference_point": [
+                            "screening"
+                          ],
+                          "Condition": [
+                            "menses"
+                          ],
+                          "Negation": [
+                            "without"
+                          ],
+                          "Measurement": [
+                            "follicle-stimulating hormone [FSH]"
+                          ],
+                          "Value": [
+                            "> 40 IU/L"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
