@@ -15,10 +15,10 @@ model_name = "Llama-3-8B-Instruct"
 study_path = "/work/eauten2s/ec_criteria_struct/transform_chia/input/half_clinical_trials/"
 output_path = f"/work/eauten2s/ec_criteria_struct/transform_chia/model_output/{model_name}_3_shot/"
 
-anfang = 100 
-ende = 200
+anfang = 200 
+ende = 2000
 
-study_files = os.listdir(study_path) [anfang:ende]   # mit LLama3 8B instruct bis [20:100]
+study_files = os.listdir(study_path)[anfang:ende]   # mit LLama3 8B instruct bis [20:100]
 
 
 
