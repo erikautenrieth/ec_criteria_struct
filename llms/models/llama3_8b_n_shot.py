@@ -15,10 +15,10 @@ model_name = "Llama-3-8B-Instruct"
 study_path = "/work/eauten2s/ec_criteria_struct/transform_chia/input/half_clinical_trials/"
 output_path = f"/work/eauten2s/ec_criteria_struct/transform_chia/model_output/{model_name}_3_shot/"
 
-anfang = 5 
-ende = 10
+anfang = 100 
+ende = 200
 
-study_files = os.listdir(study_path)[anfang:ende]   # mit LLama3 8B instruct bis [20:100]
+study_files = os.listdir(study_path) [anfang:ende]   # mit LLama3 8B instruct bis [20:100]
 
 
 
@@ -55,7 +55,7 @@ pipeline = transformers.pipeline(
         )
 print("Pipeline fertig")
 for file in study_files:
-    file_name = file.split("_")[0]
+    file_name = file.split(".")[0]
     print("File:", file_name, "\n")
     
     test_file = read_text_file(study_path+file)
