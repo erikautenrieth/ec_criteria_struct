@@ -1,49 +1,41 @@
 import transformers
 from helper_functions import *
-
-
-
-
+# Path
+transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 
 # Model
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
-
-
+# N Shots
+n_shot = 10 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
-study_path = "/work/eauten2s/ec_criteria_struct/transform_chia/input/half_clinical_trials/"
-output_path = f"/work/eauten2s/ec_criteria_struct/transform_chia/model_output/{model_name}_3_shot/"
+study_path = f"{transform_chia}/input/half_clinical_trials/"
+output_path = f"{transform_chia}/model_output/{model_name}_{n_shot}_shot/"
 
+# Load Prediction Files
 anfang = 0 
 ende = 2000
-
-study_files = os.listdir(study_path) #[anfang:ende]   # mit LLama3 8B instruct bis [20:100]
-
+study_files = os.listdir(study_path)[anfang:ende]  
 
 
-model_desc = read_text_file(f"/work/eauten2s/ec_criteria_struct/transform_chia/chia_label/prompts/model_description.txt")
+# Load Model Description
+model_desc = read_text_file(f"{transform_chia}/chia_label/prompts/model_desc_p2.txt")
 
 
-
-study_folder = "/work/eauten2s/ec_criteria_struct/transform_chia/input/half_clinical_trials/" 
-label_folder = '/work/eauten2s/ec_criteria_struct/transform_chia/chia_label/p2_model_input' 
-max_files = 3  
-
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, max_files)
+# Load n-shot Data
+study_folder = f"{transform_chia}/input/half_clinical_trials/" 
+label_folder = f'{transform_chia}/chia_label/p2_model_input' 
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, n_shot)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
+messages = []
 
-study_keys = list(studies.keys())
-label_keys = list(labels.keys())
+command = "bring the following study in JSON format with logical operators. Only return JSON:"
 
-study1 = studies[study_keys[0]]
-study2 = studies[study_keys[1]]
-study3 = studies[study_keys[2]]
-
-label1 = labels[label_keys[0]]
-label2 = labels[label_keys[1]]
-label3 = labels[label_keys[2]]
+for i in range(n_shot):
+    messages.append({"role": "system", "content": f"{model_desc} {command}{studies[study_filenames[i]]}"})
+    messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
 print("Hier fängt die Pipeline an")
@@ -53,22 +45,18 @@ pipeline = transformers.pipeline(
             model_kwargs={"torch_dtype": torch.bfloat16},
             device_map="auto", 
         )
-print("Pipeline fertig")
+
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
     
     test_file = read_text_file(study_path+file)
 
-    messages = [
-            {"role": "system", "content": f"{model_desc}: {study1}"},
-            {"role": "assistant", "content": label1},
-            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {study2}"},
-            {"role": "assistant", "content": label2},
-            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {study3}"},
-            {"role": "assistant", "content": label3},
-            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {test_file}"},
-        ]
+    if len(messages) > n_shot * 2:
+        messages[-1] = {"role": "user", "content": f"{command} {test_file}"}
+    else:
+        messages.append({"role": "user", "content": f"{command} {test_file}"})
+
 
     prompt = pipeline.tokenizer.apply_chat_template(
                 messages, 
@@ -92,6 +80,7 @@ for file in study_files:
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
+   
     print(f"\n {model_name} Output: \n  {gen_output} \n")
     
-    save_json_phi(gen_output, f"{output_path}{model_name}_{file_name}_3_shot.json")
+    save_json(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.json")
