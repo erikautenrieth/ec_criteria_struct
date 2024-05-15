@@ -1,0 +1,108 @@
+Here is the study in JSON format with logical operators and extracted entities and relations:
+
+```
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "History of any chemotherapy for MBC",
+          "Condition": ["MBC"],
+          "Procedure": ["chemotherapy"]
+        },
+        "right": {
+          "raw_text": "."
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "An interval of < 6 months from the completion of cytotoxic chemotherapy in the neo-adjuvant or adjuvant setting until the time of metastatic diagnosis",
+              "Temporal": ["< 6 months"],
+              "Reference_point": ["completion of cytotoxic chemotherapy"],
+              "Condition": ["neo-adjuvant", "adjuvant", "metastatic diagnosis"]
+            },
+            "right": {
+              "raw_text": "."
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Trastuzumab ≤ 21 days prior to randomization",
+              "Drug": ["Trastuzumab"],
+              "Temporal": ["≤ 21 days prior to randomization"]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Hormone therapy < 7 days prior to randomization",
+                      "Drug": ["Hormone therapy"],
+                      "Temporal": ["< 7 days prior to randomization"]
+                    },
+                    "right": {
+                      "raw_text": "."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+Entities:
+
+* MBC (Metastatic Breast Cancer)
+* Chemotherapy
+* Trastuzumab
+* Hormone therapy
+* Cytotoxic chemotherapy
+* Neo-adjuvant
+* Adjuvant
+* Metastatic diagnosis
+* Anthracyclines
+* Doxorubicin
+* Liposomal doxorubicin
+* Epirubicin
+* Mitoxantrone
+* Idarubicin
+* Cardiac troponin I
+* Left ventricular ejection fraction (LVEF)
+* Congestive heart failure (CHF)
+* Ventricular arrhythmia
+* Myocardial infarction
+* Human immunodeficiency virus (HIV)
+* Hepatitis B
+* Hepatitis C
+* Polysorbate 80
+* Docetaxel
+
+Relations:
+
+* History of chemotherapy for MBC → MBC
+* Interval of < 6 months → cytotoxic chemotherapy
+* Trastuzumab ≤ 21 days prior to randomization → Trastuzumab
+* Hormone therapy < 7 days prior to randomization → Hormone therapy
+* Current peripheral neuropathy of Grade ≥ 3 → peripheral neuropathy
+* History of other malignancy within the last 5 years → other malignancy
+* Previous radiotherapy for the treatment of unresectable, locally advanced or metastatic breast cancer → radiotherapy
+* Brain metastases that are untreated, symptomatic, or require therapy to control symptoms → brain metastases
+* History of exposure to the following cumulative doses of anthracyclines → anthracyclines
+* Current unstable angina → unstable angina
+* History of symptomatic congestive heart failure → congestive heart failure
+* History of myocardial infarction → myocardial infarction
+* History of intolerance → intolerance
+* Known hypersensitivity → hypersensitivity
+* Known hypersensitivity → hypersensitivity
+* Assessed by the investigator → investigator
