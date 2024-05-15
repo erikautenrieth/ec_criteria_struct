@@ -6,8 +6,9 @@ transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 # Model
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
+
 # N Shots
-n_shot = 7 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
