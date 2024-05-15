@@ -1,9 +1,8 @@
 import transformers
 from helper_functions import *
 import time
-## Studys
-#model_name  = "Nxcode_7B_orpo"
-#model_id = "NTQAI/Nxcode-CQ-7B-orpo"
+
+transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 
 # Model
 model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
@@ -12,24 +11,19 @@ model_name = "Llama-3-8B-Instruct"
 
 
 # Input/ Output
-study_path = "/work/eauten2s/ec_criteria_struct/transform_chia/input/half_clinical_trials/"
+study_path = f"{transform_chia}/input/half_clinical_trials/"
 output_path = f"/work/eauten2s/ec_criteria_struct/transform_chia/model_output/p3_output/{model_name}_3_shot/"
 
 anfang = 0 
 ende = 100
-
 study_files = os.listdir(study_path)[anfang:ende]   # mit LLama3 8B instruct bis [20:100]
 
+model_desc = read_text_file(f"{transform_chia}/chia_label/prompts/model_desc_p3.txt")
+study_folder = f"{transform_chia}/input/half_clinical_trials/" 
+label_folder = f'{transform_chia}/chia_label/p3_model_input' 
 
 
-model_desc = read_text_file(f"/work/eauten2s/ec_criteria_struct/transform_chia/chia_label/prompts/model_description.txt")
-
-
-
-study_folder = "/work/eauten2s/ec_criteria_struct/transform_chia/input/half_clinical_trials/" 
-label_folder = '/work/eauten2s/ec_criteria_struct/transform_chia/chia_label/p2_model_input' 
-max_files = 3  
-
+max_files = 4  
 study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, max_files)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
@@ -40,11 +34,12 @@ label_keys = list(labels.keys())
 study1 = studies[study_keys[0]]
 study2 = studies[study_keys[1]]
 study3 = studies[study_keys[2]]
+study4 = studies[study_keys[3]]
 
 label1 = labels[label_keys[0]]
 label2 = labels[label_keys[1]]
 label3 = labels[label_keys[2]]
-
+label4 = labels[label_keys[3]]
 
 print("Hier fängt die Pipeline an")
 pipeline = transformers.pipeline(
@@ -53,6 +48,7 @@ pipeline = transformers.pipeline(
             model_kwargs={"torch_dtype": torch.bfloat16},
             device_map="auto", 
         )
+
 print("Pipeline fertig")
 for file in study_files:
     file_name = file.split(".")[0]
@@ -63,11 +59,13 @@ for file in study_files:
     messages = [
             {"role": "system", "content": f"{model_desc}: {study1}"},
             {"role": "assistant", "content": label1},
-            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {study2}"},
+            {"role": "user", "content": f"bring the following study in json format with logical operators and extract entitys and realtions: {study2}"},
             {"role": "assistant", "content": label2},
-            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {study3}"},
+            {"role": "user", "content": f"bring the following study in json format with logical operators and extract entitys and realtions: {study3}"},
             {"role": "assistant", "content": label3},
-            {"role": "user", "content": f"bring the following study in json format with logical operators as in the example: {test_file}"},
+            {"role": "user", "content": f"bring the following study in json format with logical operators and extract entitys and realtions: {study4}"},
+            {"role": "assistant", "content": label4},    
+            {"role": "user", "content": f"bring the following study in json format with logical operators and extract entitys and realtions: {test_file}"},
         ]
 
     prompt = pipeline.tokenizer.apply_chat_template(
