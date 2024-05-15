@@ -31,7 +31,8 @@ study_filenames, study_contents, label_filenames, label_contents = read_matching
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
-command = "bring the following study in json format with logical operators:"
+
+command = "bring the following study in JSON format with logical operators. Only return JSON:"
 
 for i in range(n_shot):
     messages.append({"role": "system", "content": f"{model_desc} {command}{studies[study_filenames[i]]}"})
