@@ -1,0 +1,54 @@
+Here is the study in JSON format with logical operators:
+
+```
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "The treating physician has chosen Ventavis as a suitable long-term treatment for the patient"
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Patient with primary pulmonary hypertension"
+            },
+            "right": {
+              "raw_text": "and classified as NYHA functional class III"
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "No prior treatment with Ventavis"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or other active treatments for primary pulmonary hypertension"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "within 6 weeks of date of study inclusion"
+    }
+  }
+}
+```
+
+Note: The second "AND" node is used to combine the two conditions related to the patient's eligibility for the study. The first "AND" node is used to combine the two conditions related to the patient's treatment.

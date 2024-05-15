@@ -31,9 +31,10 @@ study_filenames, study_contents, label_filenames, label_contents = read_matching
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
+command = "bring the following study in json format with logical operators:"
 
 for i in range(n_shot):
-    messages.append({"role": "system", "content": f"{model_desc}: {studies[study_filenames[i]]}"})
+    messages.append({"role": "system", "content": f"{model_desc} {command}{studies[study_filenames[i]]}"})
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
@@ -52,9 +53,9 @@ for file in study_files:
     test_file = read_text_file(study_path+file)
 
     if len(messages) > n_shot * 2:
-        messages[-1] = {"role": "user", "content": f"bring the following study in json format with logical operators: {test_file}"}
+        messages[-1] = {"role": "user", "content": f"{command} {test_file}"}
     else:
-        messages.append({"role": "user", "content": f"bring the following study in json format with logical operators: {test_file}"})
+        messages.append({"role": "user", "content": f"{command} {test_file}"})
 
 
     prompt = pipeline.tokenizer.apply_chat_template(
