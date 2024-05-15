@@ -1,0 +1,116 @@
+Here is the study in JSON format with logical operators:
+
+```
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients aged from 18 to 65 years old.",
+          "Condition": ["Patients"],
+          "Value": ["18", "65"],
+          "Qualifier": ["years old"]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Both genders eligible for study.",
+              "Qualifier": ["both", "genders", "eligible", "study"]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Female participants must use a contraceptive method.",
+                  "Qualifier": ["female", "participants", "must", "use", "contraceptive", "method"]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Feasibility of patch testing.",
+                      "Procedure": ["patch testing"],
+                      "Qualifier": ["feasibility"]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Participants must be able to understand and sign the Informed Consent, and comply with all aspects of the protocol.",
+                          "Qualifier": ["participants", "must", "be able", "understand", "sign", "Informed Consent", "comply", "protocol"]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Patients must be registered in a social security system or with a health insurance coverage",
+                              "Qualifier": ["patients", "must", "be registered", "social security system", "health insurance coverage"]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "First group: allergic patients",
+          "Qualifier": ["first", "group", "allergic", "patients"]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Patients with allergic contact dermatitis to para-phenylenediamine (PPD) based on a history of PPD contact dermatitis and positive PPD patch tests.",
+              "Condition": ["allergic contact dermatitis"],
+              "Drug": ["para-phenylenediamine", "PPD"],
+              "Qualifier": ["based on", "history", "PPD contact dermatitis", "positive", "PPD patch tests"]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Second group: healthy volunteers",
+          "Qualifier": ["second", "group", "healthy", "volunteers"]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "No history of PPD allergic contact dermatitis, with a negative PPD patch test.",
+              "Qualifier": ["no", "history", "PPD allergic contact dermatitis", "negative", "PPD patch test"]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+Entities:
+
+* Patients
+* Genders
+* Female participants
+* Contraceptive method
+* Patch testing
+* Informed Consent
+* Protocol
+* Social security system
+* Health insurance coverage
+* Allergic contact dermatitis
+* Para-phenylenediamine (PPD)
+* PPD contact dermatitis
+* PPD patch tests
+* Healthy volunteers
+
+Relationships:
+
+* Patients are eligible for study
+* Female participants must use a contraceptive method
+* Patients must be able to understand and sign the Informed Consent
+* Patients must be registered in a social security system or with a health insurance coverage
+* Allergic patients have allergic contact dermatitis to PPD
+* Healthy volunteers do not have a history of PPD allergic contact dermatitis
+* PPD patch tests are used to diagnose allergic contact dermatitis
