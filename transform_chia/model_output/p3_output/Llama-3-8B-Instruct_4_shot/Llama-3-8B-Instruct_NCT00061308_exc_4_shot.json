@@ -1,0 +1,177 @@
+Here is the study in JSON format with logical operators:
+
+```
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Women of child-bearing potential",
+          "Person": ["Women"],
+          "Condition": ["child-bearing potential"]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "that do not practice adequate contraception.",
+              "Negation": ["do not"],
+              "Procedure": ["adequate contraception"]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Pregnant",
+          "Condition": ["Pregnant"]
+        },
+        "right": {
+          "raw_text": "or lactating."
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "raw_text": "Received more than one primary chemotherapy regimen."
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Concomitant"
+            },
+            "right": {
+              "raw_text": "or previous malignancies"
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "with the exception of adequately treated basal cell"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or squamous cell skin cancer"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", in situ cervical cancer"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", incidental carcinoid"
+                            },
+                            "right": {
+                              "raw_text": ", or other cancer from which the patient has been disease free for 5 years."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "raw_text": "Active uncontrolled infection requiring antibiotics."
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Concurrent severe medical problems unrelated to the malignancy which would limit full compliance with the study."
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Received radiation to more than 10% of bone."
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Prior treatment with topotecan"
+                    },
+                    "right": {
+                      "raw_text": "or gemcitabine."
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Hypersensitivity to camptothecin"
+                        },
+                        "right": {
+                          "raw_text": "or nucleoside analogues."
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Use of an investigational agent within 30 days."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+Entities:
+
+* Women
+* Child-bearing potential
+* Pregnancy
+* Lactation
+* Chemotherapy regimen
+* Malignancy
+* Basal cell skin cancer
+* Squamous cell skin cancer
+* In situ cervical cancer
+* Incidental carcinoid
+* Other cancer
+* Antibiotics
+* Radiation
+* Topotecan
+* Gemcitabine
+* Camptothecin
+* Nucleoside analogues
+* Investigational agent
+* Medical problems
+* Study
+
+Relations:
+
+* Women of child-bearing potential -> do not practice adequate contraception
+* Pregnant or lactating -> do not practice adequate contraception
+* Received more than one primary chemotherapy regimen -> received radiation to more than 10% of bone
+* Concomitant or previous malignancies -> with the exception of adequately treated basal cell or squamous cell skin cancer
+* Active uncontrolled infection -> requiring antibiotics
+* Concurrent severe medical problems -> unrelated to the malignancy
+* Received radiation -> to more than 10% of bone
+* Prior treatment -> with topotecan or gemcitabine
+* Hypersensitivity -> to camptothecin or nucleoside analogues
+* Use of investigational agent -> within 30 days

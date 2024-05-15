@@ -7,12 +7,12 @@ transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 # Model
 model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 model_name = "Llama-3-8B-Instruct"
-
+n_shot = 4
 
 
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
-output_path = f"/work/eauten2s/ec_criteria_struct/transform_chia/model_output/p3_output/{model_name}_3_shot/"
+output_path = f"/work/eauten2s/ec_criteria_struct/transform_chia/model_output/p3_output/{model_name}_{n_shot}_shot/"
 
 anfang = 0 
 ende = 100
@@ -92,4 +92,4 @@ for file in study_files:
     gen_output = outputs[0]["generated_text"][len(prompt):]
     print(f"\n {model_name} Output: \n  {gen_output} \n")
     
-    save_json_phi(gen_output, f"{output_path}{model_name}_{file_name}_3_shot.json")
+    save_json_phi(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.json")
