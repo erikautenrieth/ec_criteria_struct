@@ -1,3 +1,4 @@
+import os
 import transformers
 from helper_functions import *
 # Path
@@ -14,6 +15,7 @@ n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
 output_path = f"{transform_chia}/model_output/{model_name}_{n_shot}_shot/"
+os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
 anfang = 0 
