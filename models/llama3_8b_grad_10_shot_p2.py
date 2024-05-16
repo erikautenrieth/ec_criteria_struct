@@ -5,10 +5,10 @@ from helper_functions import *
 transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 
 # Model
-model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
-model_name = "Llama-3-8B-Instruct"
+model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
+model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 # N Shots
-n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 20 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
@@ -16,7 +16,7 @@ output_path = f"{transform_chia}/model_output/{model_name}_{n_shot}_shot/output/
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
-anfang = 0 
+anfang = n_shot 
 ende = 2000
 study_files = os.listdir(study_path)[anfang:ende]  
 
