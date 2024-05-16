@@ -8,7 +8,7 @@ transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 # N Shots
-n_shot = 10 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 20 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
