@@ -3,7 +3,7 @@
 #SBATCH --nodes=1                # number of nodes
 #SBATCH --mem=180G                # memory per node in MB (different units with suffix K|M|G|T)
 #SBATCH --gres=gpu:4 
-#SBATCH --time=00:40:00          # Time limit hrs:min:sec
+#SBATCH --time=30:00:00          # Time limit hrs:min:sec
 
 #SBATCH --output=log/llama3_8b_grad_10_shot.%j.out   # Standard output and error log
 #SBATCH --error=log/llama3_8b_grad_10_shot.%j.err    # Error log
