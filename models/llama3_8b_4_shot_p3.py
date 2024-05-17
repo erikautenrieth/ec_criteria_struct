@@ -92,4 +92,4 @@ for file in study_files:
     gen_output = outputs[0]["generated_text"][len(prompt):]
     print(f"\n {model_name} Output: \n  {gen_output} \n")
     
-    save_json_phi(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.json")
+    save_json(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.json")
