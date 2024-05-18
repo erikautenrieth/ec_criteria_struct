@@ -1,0 +1,192 @@
+Here are the criteria in JSON format with logical operators:
+
+{
+  "AND": [
+    {
+      "OR": [
+        {
+          "raw_text": "Prior treatment with gemcitabine"
+        },
+        {
+          "raw_text": "or carboplatin (except in the adjuvant setting)"
+        },
+        {
+          "raw_text": "or Iniparib."
+        }
+      ]
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "Past or current history of neoplasm other than the entry diagnosis"
+        },
+        {
+          "AND": [
+            {
+              "NOT": {
+                "OR": [
+                  {
+                    "raw_text": "treated non-melanoma skin cancer"
+                  },
+                  {
+                    "raw_text": "or carcinoma in-situ of any primary site"
+                  },
+                  {
+                    "raw_text": "or invasive cancers treated definitively"
+                  }
+                ]
+              }
+            },
+            {
+              "AND": [
+                {
+                  "raw_text": "with treatment ending >5 years previously"
+                },
+                {
+                  "raw_text": "and no evidence of recurrences."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "AND": [
+        {
+          "OR": [
+            {
+              "raw_text": "Malignant hypertension"
+            },
+            {
+              "raw_text": "or Unstable angina"
+            },
+            {
+              "raw_text": "or Congestive heart failure"
+            }
+          ]
+        },
+        {
+          "OR": [
+            {
+              "raw_text": "Myocardial infarction within the previous 6 months"
+            },
+            {
+              "raw_text": "or Symptomatic, unstable or uncontrolled, cardiac arrhythmias"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "NOT": {
+        "OR": [
+          {
+            "raw_text": "Active brain metastases"
+          },
+          {
+            "AND": [
+              {
+                "raw_text": "Patients with treated brain metastases are eligible"
+              },
+              {
+                "AND": [
+                  {
+                    "raw_text": "if radiation therapy was completed at least 2 weeks prior to study entry"
+                  },
+                  {
+                    "raw_text": "and follow-up scan shows no disease progression"
+                  },
+                  {
+                    "raw_text": "and patient does not require steroids."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "Women who are pregnant"
+        },
+        {
+          "raw_text": "or lactating."
+        }
+      ]
+    },
+    {
+      "NOT": {
+        "OR": [
+          {
+            "raw_text": "Any serious, active infection (> Grade 2)"
+          }
+        ]
+      }
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "A serious underlying medical condition"
+        },
+        {
+          "raw_text": "that would impair the ability of the patient to receive protocol treatment"
+        }
+      ]
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "A major surgical procedure"
+        },
+        {
+          "OR": [
+            {
+              "raw_text": "or significant traumatic injury ≤28 days of beginning treatment"
+            },
+            {
+              "raw_text": "or anticipation of the need for major surgery during the course of the study"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "NOT": {
+        "OR": [
+          {
+            "raw_text": "Uncontrolled or intercurrent illness"
+          }
+        ]
+      }
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "History of any medical or psychiatric condition"
+        },
+        {
+          "OR": [
+            {
+              "raw_text": "or laboratory abnormality"
+            },
+            {
+              "raw_text": "that, in the opinion of the investigator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "NOT": {
+        "OR": [
+          {
+            "raw_text": "Known or suspected allergy/hypersensitivity"
+          }
+        ]
+      }
+    }
+  ]
+}

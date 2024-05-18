@@ -1,0 +1,57 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "FEV1"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "<20% of predicted value post-bronchodilator"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "or FEV1 >= 80%"
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "FEV1/SVC>=70%"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "History of lung transplant"
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Any lung surgery within the past two years"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "On any thoracic surgery waiting list"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
