@@ -1,0 +1,75 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Clear indication for specific duration of dual anti-platelet therapy"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Type 2 myocardial infarction"
+            },
+            "right": {
+              "raw_text": "or other reason for dual anti-platelet therapy"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Contraindication to aspirin"
+                },
+                "right": {
+                  "raw_text": "or P2Y12 receptor antagonist"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Non-resident of Scotland"
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Previous recruitment into the trial"
+                        },
+                        "right": {
+                          "raw_text": "or other reason for exclusion"
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Inability or unwilling to give informed consent"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Age < 45 or > 55 years.",
+      "Person": [
+        "Age"
+      ],
+      "Value": [
+        "< 45 or > 55 years"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Blood disorders",
+              "Condition": [
+                "Blood disorders"
+              ]
+            },
+            "right": {
+              "raw_text": "or coagulopathy.",
+              "Condition": [
+                "coagulopathy"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Diagnosed",
+                  "Mood": [
+                    "Diagnosed"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or suspected local gynecologic lesion (polyp",
+                      "Condition": [
+                        "local gynecologic lesion",
+                        "polyp"
+                      ],
+                      "Mood": [
+                        "suspected"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", adenomyosis",
+                          "Condition": [
+                            "adenomyosis"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", myoma",
+                              "Condition": [
+                                "myoma"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", malignancy",
+                                  "Condition": [
+                                    "malignancy"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or cervical pathology).",
+                                  "Condition": [
+                                    "cervical pathology"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Use intrauterine contraceptive device.",
+                  "Device": [
+                    "intrauterine contraceptive device"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Pregnancy related conditions.",
+                      "Condition": [
+                        "Pregnancy",
+                        "conditions"
+                      ],
+                      "Qualifier": [
+                        "Pregnancy related"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

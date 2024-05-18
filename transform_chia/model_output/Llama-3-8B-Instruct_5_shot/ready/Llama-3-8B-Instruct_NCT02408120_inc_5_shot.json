@@ -1,0 +1,84 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Subjects admitted to the hospital"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "with acute or chronic medical illnesses"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or for elective and emergency surgical illness"
+                },
+                "right": {
+                  "raw_text": "or trauma"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Known history of Type 2 diabetes mellitus"
+            },
+            "right": {
+              "raw_text": "for >3 months"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Treated with either diet alone"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "any combination of oral antidiabetic agents"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "non-insulin injectables or insulin therapy"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "OR": {
+          "left": {
+            "raw_text": "Blood glucose levels between"
+          },
+          "right": {
+            "raw_text": ">140 mg and <400 mg/dL"
+          }
+        }
+      },
+      "right": {
+        "NOT": {
+          "left": {
+            "raw_text": "without laboratory evidence of diabetic ketoacidosis"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "History of seizures within last 10 years",
+      "Condition": [
+        "seizures"
+      ],
+      "Temporal": [
+        "within last 10 years"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "History of epilepsy",
+          "Condition": [
+            "epilepsy"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "History of prior stroke",
+              "Condition": [
+                "stroke"
+              ],
+              "Temporal": [
+                "prior"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Currently prescribed medication with anti-epileptic activity (keppra",
+                      "Drug": [
+                        "medication",
+                        "keppra"
+                      ],
+                      "Qualifier": [
+                        "anti-epileptic activity"
+                      ],
+                      "Scope": [
+                        "medication with anti-epileptic activity"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", dilantin",
+                          "Drug": [
+                            "dilantin"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", tegretol",
+                              "Drug": [
+                                "tegretol"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", lamictal",
+                                  "Drug": [
+                                    "lamictal"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": ", topamax, etc.)",
+                                  "Drug": [
+                                    "topamax"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Brain tumor",
+                      "Condition": [
+                        "Brain tumor"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Pregnant",
+                              "Condition": [
+                                "Pregnant"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or nursing woman",
+                              "Condition": [
+                                "nursing"
+                              ],
+                              "Person": [
+                                "woman"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "Known levetiracetam",
+                                  "Drug": [
+                                    "levetiracetam"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "allergy",
+                                  "Condition": [
+                                    "allergy"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

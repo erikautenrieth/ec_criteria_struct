@@ -1,0 +1,57 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Age > 18 Years"
+            },
+            "right": {
+              "raw_text": "Physician discretion"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Septic or hypovolemic shock"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Signs of life-threatening cerebral edema"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or multi-organ failure upon presentation to the emergency room or pediatric intensive care unit"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Enrollment time more than 1 hr since arrival to emergency room or PICU"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "Pregnancy"
+        }
+      }
+    }
+  }
+}

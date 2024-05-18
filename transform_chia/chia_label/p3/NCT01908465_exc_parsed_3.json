@@ -1,0 +1,81 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "IBS subtype with constipation",
+      "Condition": [
+        "IBS subtype",
+        "constipation"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "medication: antidepressants",
+              "Drug": [
+                "antidepressants"
+              ]
+            },
+            "right": {
+              "raw_text": "or H1-receptor antagonists",
+              "Drug": [
+                "H1-receptor antagonists"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "pregnancy",
+                  "Condition": [
+                    "pregnancy"
+                  ]
+                },
+                "right": {
+                  "raw_text": ", breast feeding",
+                  "Observation": [
+                    "breast feeding"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "co-morbidity: severe kidney",
+                      "Qualifier": [
+                        "severe"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- and/or liver disease",
+                          "Condition": [
+                            "liver disease"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or other gastrointestinal diseases",
+                          "Condition": [
+                            "gastrointestinal diseases"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

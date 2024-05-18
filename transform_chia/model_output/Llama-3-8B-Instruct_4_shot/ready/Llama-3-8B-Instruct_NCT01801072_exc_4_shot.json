@@ -1,0 +1,56 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "History of seizures within last 10 years"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "History of epilepsy"
+            },
+            "right": {
+              "raw_text": "History of prior stroke"
+            }
+          }
+        }
+      },
+      "right": {
+        "OR": {
+          "left": {
+            "raw_text": "Currently prescribed medication with anti-epileptic activity (keppra, dilantin, tegretol, lamictal, topamax, etc.)"
+          },
+          "right": {
+            "AND": {
+              "left": {
+                "OR": {
+                  "left": {
+                    "raw_text": "Brain tumor"
+                  },
+                  "right": {
+                    "OR": {
+                      "left": {
+                        "raw_text": "Pregnant"
+                      },
+                      "right": {
+                        "raw_text": "or nursing woman"
+                      }
+                    }
+                  }
+                }
+              },
+              "right": {
+                "NOT": {
+                  "left": {
+                    "raw_text": "Known levetiracetam allergy"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

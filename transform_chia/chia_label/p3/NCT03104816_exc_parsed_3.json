@@ -1,0 +1,146 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients requiring surgery",
+          "Procedure": [
+            "surgery"
+          ],
+          "Mood": [
+            "requiring"
+          ]
+        },
+        "right": {
+          "raw_text": "for neoplastic processes",
+          "Condition": [
+            "neoplastic processes"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Allergy",
+              "Condition": [
+                "Allergy"
+              ]
+            },
+            "right": {
+              "raw_text": "to acetaminophen",
+              "Drug": [
+                "acetaminophen"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Liver dysfunction and elevated Liver Function Tests (LFTs)",
+              "Condition": [
+                "Liver dysfunction"
+              ],
+              "Value": [
+                "elevated"
+              ],
+              "Measurement": [
+                "Liver Function Tests",
+                "LFTs"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Alcohol"
+                    },
+                    "right": {
+                      "raw_text": "or drug dependency",
+                      "Condition": [
+                        "drug dependency"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Mental retardation",
+                      "Condition": [
+                        "Mental retardation"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Less than 50 kg of weight",
+                          "Value": [
+                            "Less than 50 kg"
+                          ],
+                          "Measurement": [
+                            "weight"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "regnant women",
+                              "Condition": [
+                                "regnant"
+                              ],
+                              "Person": [
+                                "women"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "Patients requiring long-acting opioid pain management (including fentanyl patch",
+                                      "Drug": [
+                                        "long-acting opioid",
+                                        "fentanyl patch"
+                                      ],
+                                      "Mood": [
+                                        "requiring"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": ", oxycontin, etc) for over 3 weeks immediately prior to surgery",
+                                      "Procedure": [
+                                        "surgery"
+                                      ],
+                                      "Drug": [
+                                        "oxycontin"
+                                      ],
+                                      "Multiplier": [
+                                        "for over 3 weeks"
+                                      ],
+                                      "Temporal": [
+                                        "immediately prior to surgery"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

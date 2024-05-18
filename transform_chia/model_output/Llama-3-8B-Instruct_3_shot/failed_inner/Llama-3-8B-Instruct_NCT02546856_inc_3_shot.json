@@ -1,0 +1,49 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Patient with "de novo" heart Failure"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "and LVEF <= 40%"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "admitted in hospital"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "contraindications for BB prescription"
+                        },
+                        "right": {
+                          "raw_text": "with cardiologist up-titration prescription"
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "without having achieved BB target dose previous discharge"
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "and signing informed consent"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

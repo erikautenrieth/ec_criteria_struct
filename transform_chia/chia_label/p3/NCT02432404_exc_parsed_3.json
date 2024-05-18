@@ -1,0 +1,94 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Current pregnancy",
+      "Condition": [
+        "pregnancy"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Desire/intent to become pregnant over the course of the study",
+          "Observation": [
+            "Desire/intent to become pregnant"
+          ],
+          "Condition": [
+            "pregnant"
+          ],
+          "Temporal": [
+            "over the course of the study"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Women who are less than 6 weeks postpartum",
+              "Person": [
+                "Women"
+              ],
+              "Temporal": [
+                "less than 6 weeks postpartum"
+              ],
+              "Reference_point": [
+                "postpartum"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Contraindications to hormonal contraceptive use per package insert, including history of deep vein thrombosis",
+                      "Procedure": [
+                        "hormonal contraceptive"
+                      ],
+                      "Observation": [
+                        "Contraindications to hormonal contraceptive"
+                      ],
+                      "Condition": [
+                        "deep vein thrombosis"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": ", smoking in women older than 35 years",
+                      "Person": [
+                        "women"
+                      ],
+                      "Observation": [
+                        "smoking"
+                      ],
+                      "Value": [
+                        "older than 35 years"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Current IUD",
+                      "Procedure": [
+                        "IUD"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Unable to comprehend consent material because of language barrier or psychological difficulty",
+                          "Subjective_judgement": [
+                            "Unable to comprehend consent material because of language barrier or psychological difficulty"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
