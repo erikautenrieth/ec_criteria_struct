@@ -9,7 +9,7 @@ model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 model_name = "Llama-3-8B-Instruct"
 # N Shots
 n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
-temp = 9
+temp = 1
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
 output_path = f"{transform_chia}/model_output/{model_name}_{n_shot}_shot_temp_{temp}/output/"
