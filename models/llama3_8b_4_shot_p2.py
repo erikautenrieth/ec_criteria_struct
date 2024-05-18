@@ -17,7 +17,7 @@ os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
 anfang = 0 
-ende = 2000
+ende = 300
 study_files = os.listdir(study_path)[anfang:ende]  
 
 
@@ -35,8 +35,10 @@ messages = []
 
 command = "bring the following study in JSON format with logical operators. Only return JSON:"
 
+messages.append({"role": "system", "content": f"{model_desc}"})
+
 for i in range(n_shot):
-    messages.append({"role": "system", "content": f"{model_desc} {command} {studies[study_filenames[i]]}"})
+    messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
@@ -48,16 +50,19 @@ pipeline = transformers.pipeline(
             device_map="auto", 
         )
 
+first_call = True
+
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
     
     test_file = read_text_file(study_path+file)
 
-    if len(messages) > n_shot * 2:
-        messages[-1] = {"role": "user", "content": f"{command} {test_file}"}
-    else:
+    if first_call:
         messages.append({"role": "user", "content": f"{command} {test_file}"})
+        first_call = False
+    else:
+        messages[-1] = {"role": "user", "content": f"{command} {test_file}"}
 
 
     prompt = pipeline.tokenizer.apply_chat_template(

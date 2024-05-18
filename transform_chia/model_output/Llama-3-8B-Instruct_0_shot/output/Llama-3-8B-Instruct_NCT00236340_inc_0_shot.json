@@ -1,0 +1,43 @@
+Here is the JSON representation of the study criteria:
+
+{
+    "raw_text": "Pregnant women with abdomen discumfort and ultrasound diagnosis of polyhydramnios (AFI>25cm) Single or twin pregnancies",
+    "operator": "AND",
+    "left": {
+        "raw_text": "Pregnant women with abdomen discumfort and ultrasound diagnosis of polyhydramnios (AFI>25cm)",
+        "operator": "AND",
+        "left": {
+            "raw_text": "Pregnant women",
+            "operator": "NOT",
+            "left": null
+        },
+        "right": {
+            "raw_text": "abdomen discumfort and ultrasound diagnosis of polyhydramnios (AFI>25cm)",
+            "operator": "AND",
+            "left": {
+                "raw_text": "abdomen discumfort",
+                "operator": "NOT",
+                "left": null
+            },
+            "right": {
+                "raw_text": "ultrasound diagnosis of polyhydramnios (AFI>25cm)",
+                "operator": "NOT",
+                "left": null
+            }
+        }
+    },
+    "right": {
+        "raw_text": "Single or twin pregnancies",
+        "operator": "OR",
+        "left": {
+            "raw_text": "Single pregnancies",
+            "operator": "NOT",
+            "left": null
+        },
+        "right": {
+            "raw_text": "twin pregnancies",
+            "operator": "NOT",
+            "left": null
+        }
+    }
+}
