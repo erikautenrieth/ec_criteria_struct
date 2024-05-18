@@ -29,13 +29,13 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "any wound o",
+                  "raw_text": "any wound",
                   "Condition": [
                     "wound"
                   ]
                 },
                 "right": {
-                  "raw_text": "r infection related to puncture site",
+                  "raw_text": "or infection related to puncture site",
                   "Condition": [
                     "infection"
                   ],
@@ -61,9 +61,15 @@
                     "left": {
                       "NOT": {
                         "left": {
-                          "raw_text": "ure to gain consent of parents.",
+                          "raw_text": "failure to gain consent of parents.",
                           "Observation": [
                             "consent of parents"
+                          ],
+                          "Negation": [
+                            "failure to gain"
+                          ],
+                          "Informed_consent": [
+                            "failure to gain consent of parents"
                           ]
                         }
                       }

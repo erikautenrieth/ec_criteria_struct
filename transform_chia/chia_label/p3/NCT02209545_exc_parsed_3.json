@@ -26,35 +26,35 @@
         "right": {
           "AND": {
             "left": {
-              "raw_text": "Patients with known bleeding/clotting disorders",
-              "Condition": [
-                "clotting disorders"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "Patients with known bleeding/clotting disorders",
+                  "Condition": [
+                    "clotting disorders"
+                  ]
+                },
+                "right": {
+                  "raw_text": ""
+                }
+              }
             },
             "right": {
               "AND": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "P"
-                    },
-                    "right": {
-                      "raw_text": "atients with a history of gynecologic malignancy",
-                      "Condition": [
-                        "gynecologic malignancy"
-                      ],
-                      "Observation": [
-                        "history"
-                      ]
-                    }
-                  }
+                  "raw_text": "Patients with a history of gynecologic malignancy",
+                  "Condition": [
+                    "gynecologic malignancy"
+                  ],
+                  "Observation": [
+                    "history"
+                  ]
                 },
                 "right": {
                   "AND": {
                     "left": {
                       "AND": {
                         "left": {
-                          "raw_text": "History of allergic reactions att",
+                          "raw_text": "History of allergic reactions",
                           "Observation": [
                             "History"
                           ],
@@ -63,7 +63,7 @@
                           ]
                         },
                         "right": {
-                          "raw_text": "ributed to compounds of similar chemical or biologic composition to misoprostol",
+                          "raw_text": "attributed to compounds of similar chemical or biologic composition to misoprostol",
                           "Drug": [
                             "compounds of similar chemical or biologic composition to misoprostol",
                             "misoprostol"
@@ -76,7 +76,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Any cases converted to abdominal hysterectomy or o",
+                              "raw_text": "Any cases converted to abdominal hysterectomy",
                               "Procedure": [
                                 "abdominal hysterectomy"
                               ],
@@ -85,14 +85,15 @@
                               ]
                             },
                             "right": {
-                              "raw_text": "ther additional elective surgical procedures performed at time of abdominal myomectomy will be excluded from data analysis",
+                              "raw_text": "or other additional elective surgical procedures performed at time of abdominal myomectomy will be excluded from data analysis",
                               "Procedure": [
                                 "abdominal myomectomy",
                                 "surgical procedures"
                               ],
                               "Qualifier": [
                                 "elective",
-                                "additional"
+                                "additional",
+                                "other"
                               ],
                               "Temporal": [
                                 "at time of abdominal myomectomy"
@@ -108,7 +109,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Uncontrolled intercurrent illness including, but not limited to, ongoing or ac",
+                                  "raw_text": "Uncontrolled intercurrent illness including, but not limited to, ongoing",
                                   "Qualifier": [
                                     "Uncontrolled"
                                   ],
@@ -125,7 +126,10 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "tive infection, symp",
+                                      "raw_text": "or active infection",
+                                      "Qualifier": [
+                                        "active"
+                                      ],
                                       "Condition": [
                                         "infection"
                                       ]
@@ -133,7 +137,10 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "tomatic congestive heart failure, unst",
+                                          "raw_text": ", symptomatic congestive heart failure",
+                                          "Qualifier": [
+                                            "symptomatic"
+                                          ],
                                           "Condition": [
                                             "congestive heart failure"
                                           ]
@@ -141,20 +148,32 @@
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "able angina pectoris, card"
+                                              "raw_text": ", unstable angina pectoris",
+                                              "Condition": [
+                                                "unstable angina pectoris"
+                                              ]
                                             },
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "iac arrhythmia, or p"
+                                                  "raw_text": ", cardiac arrhythmia",
+                                                  "Condition": [
+                                                    "cardiac arrhythmia"
+                                                  ]
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "sychiatric illness/socia"
+                                                      "raw_text": ", or psychiatric illness",
+                                                      "Condition": [
+                                                        "psychiatric illness"
+                                                      ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "l situations that would limit compliance with study requirements."
+                                                      "raw_text": "/social situations that would limit compliance with study requirements.",
+                                                      "Observation": [
+                                                        "social situations that would limit compliance with study requirements"
+                                                      ]
                                                     }
                                                   }
                                                 }

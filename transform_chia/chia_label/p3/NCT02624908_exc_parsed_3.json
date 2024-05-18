@@ -33,13 +33,16 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "raw_text": "Chronic heart failure NY",
+                      "raw_text": "Chronic heart failure",
                       "Condition": [
                         "Chronic heart failure"
                       ]
                     },
                     "right": {
-                      "raw_text": "HA class III or IV",
+                      "raw_text": "NYHA class III or IV",
+                      "Measurement": [
+                        "NYHA"
+                      ],
                       "Value": [
                         "class III or IV"
                       ]
@@ -51,7 +54,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Current haemodialysis or",
+                          "raw_text": "Current haemodialysis",
                           "Procedure": [
                             "haemodialysis"
                           ],
@@ -60,7 +63,7 @@
                           ]
                         },
                         "right": {
-                          "raw_text": "peritoneal dialysis",
+                          "raw_text": "or peritoneal dialysis",
                           "Procedure": [
                             "peritoneal dialysis"
                           ]
@@ -72,7 +75,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "End stage liver disease, defined as acute or c",
+                              "raw_text": "End stage liver disease, defined as acute",
                               "Condition": [
                                 "End stage liver disease"
                               ]
@@ -80,33 +83,46 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "hronic liver disease and recent history of one of the following: ascites, enc",
+                                  "raw_text": "or chronic liver disease and recent history of one of the following: ascites",
+                                  "Condition": [
+                                    "chronic liver disease",
+                                    "ascites"
+                                  ],
                                   "Temporal": [
                                     "recent"
-                                  ],
-                                  "Condition": [
-                                    "ascites"
                                   ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "ephalopathy, var"
+                                      "raw_text": ", encephalopathy",
+                                      "Condition": [
+                                        "encephalopathy"
+                                      ]
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "iceal bleeding, bil"
+                                          "raw_text": ", variceal bleeding",
+                                          "Condition": [
+                                            "variceal bleeding"
+                                          ]
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "irubin equa"
+                                              "raw_text": ", bilirubin",
+                                              "Measurement": [
+                                                "bilirubin"
+                                              ]
                                             },
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "l or greater than 2.0 mg/dL, albumin equa",
+                                                  "raw_text": "equal or greater than 2.0 mg/dL, albumin",
+                                                  "Value": [
+                                                    "equal or greater than 2.0 mg/dL"
+                                                  ],
                                                   "Measurement": [
                                                     "albumin"
                                                   ]
@@ -114,7 +130,10 @@
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "l or less than 3.5 g/ dL, prothrombin time grea",
+                                                      "raw_text": "equal or less than 3.5 g/ dL, prothrombin time",
+                                                      "Value": [
+                                                        "equal or less than 3.5 g/ dL"
+                                                      ],
                                                       "Measurement": [
                                                         "prothrombin time"
                                                       ]
@@ -122,13 +141,19 @@
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "ter or equal to 4 seconds, INR grea",
+                                                          "raw_text": "greater or equal to 4 seconds, INR",
+                                                          "Value": [
+                                                            "greater or equal to 4 seconds"
+                                                          ],
                                                           "Measurement": [
                                                             "INR"
                                                           ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "ter than or equal to 1.7 or prior liver transplant",
+                                                          "raw_text": "greater than or equal to 1.7 or prior liver transplant",
+                                                          "Value": [
+                                                            "greater than or equal to 1.7"
+                                                          ],
                                                           "Temporal": [
                                                             "prior"
                                                           ],
@@ -157,7 +182,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Known or su",
+                                  "raw_text": "Known",
                                   "Mood": [
                                     "Known"
                                   ]
@@ -165,16 +190,22 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "spected hypersensitivity to trial products or re",
+                                      "raw_text": "or suspected hypersensitivity to trial products",
                                       "Condition": [
                                         "hypersensitivity"
                                       ],
                                       "Drug": [
                                         "trial products"
+                                      ],
+                                      "Mood": [
+                                        "suspected"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "lated products"
+                                      "raw_text": "or related products",
+                                      "Drug": [
+                                        "related products"
+                                      ]
                                     }
                                   }
                                 }
@@ -209,10 +240,9 @@
                                             "left": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "Current or past (",
+                                                  "raw_text": "Current",
                                                   "Temporal": [
-                                                    "Current",
-                                                    "past"
+                                                    "Current"
                                                   ]
                                                 },
                                                 "right": {
@@ -220,10 +250,16 @@
                                                     "left": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "al cell and squam"
+                                                          "raw_text": "except basal cell",
+                                                          "Negation": [
+                                                            "except"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "ous cell skin carcinoma)"
+                                                          "raw_text": "and squamous cell skin carcinoma)",
+                                                          "Condition": [
+                                                            "squamous cell skin carcinoma"
+                                                          ]
                                                         }
                                                       }
                                                     }

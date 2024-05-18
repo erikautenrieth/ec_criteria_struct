@@ -67,21 +67,22 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Systolic blood pressure = 1",
+                          "raw_text": "Systolic blood pressure",
                           "Measurement": [
                             "Systolic blood pressure"
                           ]
                         },
                         "right": {
-                          "raw_text": "80 mmHg or diastolic blood pressure = 110 mm Hg at the baseline visit.",
+                          "raw_text": "= 180 mmHg or diastolic blood pressure = 110 mm Hg at the baseline visit.",
                           "Temporal": [
                             "at the baseline visit"
                           ],
+                          "Value": [
+                            "= 180 mmHg",
+                            "= 110 mm Hg"
+                          ],
                           "Measurement": [
                             "diastolic blood pressure"
-                          ],
-                          "Value": [
-                            "= 110 mm Hg"
                           ]
                         }
                       }
@@ -91,7 +92,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Stroke, tra",
+                              "raw_text": "Stroke",
                               "Condition": [
                                 "Stroke"
                               ]
@@ -99,23 +100,29 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "nsient ischemic attack, acu"
+                                  "raw_text": ", transient ischemic attack",
+                                  "Condition": [
+                                    "transient ischemic attack"
+                                  ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "te coronary syndrome, or"
+                                      "raw_text": ", acute coronary syndrome",
+                                      "Condition": [
+                                        "acute coronary syndrome"
+                                      ]
                                     },
                                     "right": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "hospitalization for",
+                                          "raw_text": ", or hospitalization",
                                           "Procedure": [
                                             "hospitalization"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "heart failure worsening, within the previous 30 days.",
+                                          "raw_text": "for heart failure worsening, within the previous 30 days.",
                                           "Condition": [
                                             "heart failure"
                                           ],
@@ -139,7 +146,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Professional drivers, risk",
+                                  "raw_text": "Professional drivers",
                                   "Person": [
                                     "Professional drivers"
                                   ]
@@ -147,10 +154,16 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "profession or re"
+                                      "raw_text": ", risk profession",
+                                      "Person": [
+                                        "risk profession"
+                                      ]
                                     },
                                     "right": {
-                                      "raw_text": "spiratory failure."
+                                      "raw_text": "or respiratory failure.",
+                                      "Condition": [
+                                        "respiratory failure"
+                                      ]
                                     }
                                   }
                                 }
@@ -182,7 +195,7 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Concomitant treatment with hi",
+                                          "raw_text": "Concomitant treatment",
                                           "Temporal": [
                                             "Concomitant"
                                           ],
@@ -193,22 +206,26 @@
                                         "right": {
                                           "AND": {
                                             "left": {
-                                              "raw_text": "gh doses of acetylsalicylic acid (> 500 mg/day) or continuous treatment with no",
+                                              "raw_text": "with high doses of acetylsalicylic acid (> 500 mg/day) or continuous treatment",
                                               "Procedure": [
                                                 "treatment"
                                               ],
+                                              "Multiplier": [
+                                                "high doses",
+                                                "> 500 mg/day"
+                                              ],
                                               "Drug": [
                                                 "acetylsalicylic acid"
-                                              ],
-                                              "Multiplier": [
-                                                "> 500 mg/day"
                                               ],
                                               "Temporal": [
                                                 "continuous"
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "n-steroidal anti-inflammatory drugs"
+                                              "raw_text": "with non-steroidal anti-inflammatory drugs",
+                                              "Drug": [
+                                                "non-steroidal anti-inflammatory drugs"
+                                              ]
                                             }
                                           }
                                         }
@@ -219,7 +236,7 @@
                                         "left": {
                                           "AND": {
                                             "left": {
-                                              "raw_text": "Previous treatment with CPA",
+                                              "raw_text": "Previous treatment",
                                               "Procedure": [
                                                 "treatment"
                                               ],
@@ -228,7 +245,10 @@
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "P"
+                                              "raw_text": "with CPAP",
+                                              "Device": [
+                                                "CPAP"
+                                              ]
                                             }
                                           }
                                         },

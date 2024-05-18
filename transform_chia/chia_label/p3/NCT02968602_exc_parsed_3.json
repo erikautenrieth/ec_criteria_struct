@@ -35,9 +35,12 @@
                         "left": {
                           "NOT": {
                             "left": {
-                              "raw_text": "xcept nicotine)",
+                              "raw_text": "except nicotine)",
                               "Drug": [
                                 "nicotine"
+                              ],
+                              "Negation": [
+                                "except"
                               ]
                             }
                           }
@@ -55,7 +58,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "DSM-IV diagnosis of Alcohol o",
+                  "raw_text": "DSM-IV diagnosis of Alcohol",
                   "Qualifier": [
                     "DSM-IV"
                   ]
@@ -63,7 +66,7 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "r Substance Abuse w",
+                      "raw_text": "or Substance Abuse",
                       "Condition": [
                         "Substance Abuse"
                       ]
@@ -73,9 +76,12 @@
                         "left": {
                           "AND": {
                             "left": {
-                              "raw_text": "cept nicotine) or DSM-5 diagnosis of Substance Use Disorder i",
+                              "raw_text": "except nicotine) or DSM-5 diagnosis of Substance Use Disorder",
                               "Drug": [
                                 "nicotine"
+                              ],
+                              "Negation": [
+                                "except"
                               ],
                               "Qualifier": [
                                 "DSM-5"
@@ -87,9 +93,12 @@
                             "right": {
                               "NOT": {
                                 "left": {
-                                  "raw_text": "cept nicotine)",
+                                  "raw_text": "except nicotine)",
                                   "Drug": [
                                     "nicotine"
+                                  ],
+                                  "Negation": [
+                                    "except"
                                   ]
                                 }
                               }
@@ -107,13 +116,13 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Pregnancy or",
+                      "raw_text": "Pregnancy",
                       "Condition": [
                         "Pregnancy"
                       ]
                     },
                     "right": {
-                      "raw_text": "lactation",
+                      "raw_text": "or lactation",
                       "Condition": [
                         "lactation"
                       ]
@@ -145,7 +154,7 @@
                         "left": {
                           "AND": {
                             "left": {
-                              "raw_text": "Previous known hypersensitivity to t",
+                              "raw_text": "Previous known hypersensitivity",
                               "Condition": [
                                 "hypersensitivity"
                               ],
@@ -154,7 +163,11 @@
                               ]
                             },
                             "right": {
-                              "raw_text": "etracyclines"
+                              "raw_text": "to tetracyclines",
+                              "Drug": [
+                                "tetracyclines",
+                                "tetracycline"
+                              ]
                             }
                           }
                         },
@@ -163,7 +176,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Current treatment with tetracycline or de",
+                                  "raw_text": "Current treatment with tetracycline",
                                   "Temporal": [
                                     "Current"
                                   ],
@@ -175,7 +188,7 @@
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "rivative"
+                                  "raw_text": "or derivative"
                                 }
                               }
                             },
@@ -184,7 +197,7 @@
                                 "left": {
                                   "AND": {
                                     "left": {
-                                      "raw_text": "Treatment with o",
+                                      "raw_text": "Treatment",
                                       "Procedure": [
                                         "Treatment"
                                       ]
@@ -192,12 +205,15 @@
                                     "right": {
                                       "NOT": {
                                         "left": {
-                                          "raw_text": "a second form of birth control is used and documented)",
+                                          "raw_text": "unless a second form of birth control is used and documented)",
                                           "Observation": [
                                             "birth control"
                                           ],
                                           "Qualifier": [
                                             "second form"
+                                          ],
+                                          "Negation": [
+                                            "unless"
                                           ]
                                         }
                                       }
@@ -209,7 +225,7 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Treatment with cholestyramine or cole",
+                                          "raw_text": "Treatment with cholestyramine",
                                           "Procedure": [
                                             "Treatment"
                                           ],
@@ -218,7 +234,10 @@
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "stipol"
+                                          "raw_text": "or colestipol",
+                                          "Drug": [
+                                            "colestipol"
+                                          ]
                                         }
                                       }
                                     },
@@ -227,7 +246,7 @@
                                         "left": {
                                           "AND": {
                                             "left": {
-                                              "raw_text": "Treatment with Uri",
+                                              "raw_text": "Treatment",
                                               "Procedure": [
                                                 "Treatment"
                                               ]
@@ -235,13 +254,17 @@
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "nary alkalinizers (e.g., sodium lactate, potassi",
+                                                  "raw_text": "with Urinary alkalinizers (e.g., sodium lactate",
                                                   "Drug": [
+                                                    "Urinary alkalinizers",
                                                     "sodium lactate"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "um citrate)"
+                                                  "raw_text": ", potassium citrate)",
+                                                  "Drug": [
+                                                    "potassium citrate"
+                                                  ]
                                                 }
                                               }
                                             }
@@ -252,13 +275,16 @@
                                             "left": {
                                               "AND": {
                                                 "left": {
-                                                  "raw_text": "Treatment with warf",
+                                                  "raw_text": "Treatment",
                                                   "Procedure": [
                                                     "Treatment"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "arin"
+                                                  "raw_text": "with warfarin",
+                                                  "Drug": [
+                                                    "warfarin"
+                                                  ]
                                                 }
                                               }
                                             },
@@ -267,7 +293,7 @@
                                                 "left": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "Treatment with bupropion, varenicli",
+                                                      "raw_text": "Treatment with bupropion",
                                                       "Procedure": [
                                                         "Treatment"
                                                       ],
@@ -278,10 +304,17 @@
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "ne, or nicoti"
+                                                          "raw_text": ", varenicline",
+                                                          "Drug": [
+                                                            "varenicline"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "ne replacement products in the month prior to study inclusion",
+                                                          "raw_text": ", or nicotine replacement products in the month prior to study inclusion",
+                                                          "Drug": [
+                                                            "nicotine",
+                                                            "nicotine replacement products"
+                                                          ],
                                                           "Temporal": [
                                                             "in the month prior to study inclusion"
                                                           ],
@@ -298,7 +331,7 @@
                                                     "left": {
                                                       "AND": {
                                                         "left": {
-                                                          "raw_text": "Less than two months treatment of adjuncti",
+                                                          "raw_text": "Less than two months treatment",
                                                           "Procedure": [
                                                             "treatment"
                                                           ],
@@ -309,27 +342,37 @@
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "ve medications AND less than one month on same dose: beta blockers, antidepres",
+                                                              "raw_text": "of adjunctive medications AND less than one month on same dose: beta blockers",
+                                                              "Drug": [
+                                                                "adjunctive medications",
+                                                                "beta blockers"
+                                                              ],
                                                               "Multiplier": [
                                                                 "less than one month",
                                                                 "same dose"
-                                                              ],
-                                                              "Drug": [
-                                                                "beta blockers"
                                                               ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "sants, mood stabi"
+                                                                  "raw_text": ", antidepressants",
+                                                                  "Drug": [
+                                                                    "antidepressants"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "lizers, antianxiet"
+                                                                      "raw_text": ", mood stabilizers",
+                                                                      "Drug": [
+                                                                        "mood stabilizers"
+                                                                      ]
                                                                     },
                                                                     "right": {
-                                                                      "raw_text": "y medications."
+                                                                      "raw_text": ", antianxiety medications.",
+                                                                      "Drug": [
+                                                                        "antianxiety medications"
+                                                                      ]
                                                                     }
                                                                   }
                                                                 }
@@ -358,47 +401,52 @@
                                                             "left": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "History of head injury, seizures, or",
+                                                                  "raw_text": "History of head injury",
                                                                   "Observation": [
                                                                     "History of",
                                                                     "History"
                                                                   ],
                                                                   "Condition": [
-                                                                    "head injury",
-                                                                    "seizures"
+                                                                    "head injury"
                                                                   ]
                                                                 },
                                                                 "right": {
-                                                                  "raw_text": "stroke",
-                                                                  "Condition": [
-                                                                    "stroke"
-                                                                  ]
+                                                                  "OR": {
+                                                                    "left": {
+                                                                      "raw_text": ", seizures",
+                                                                      "Condition": [
+                                                                        "seizures"
+                                                                      ]
+                                                                    },
+                                                                    "right": {
+                                                                      "raw_text": ", or stroke",
+                                                                      "Condition": [
+                                                                        "stroke"
+                                                                      ]
+                                                                    }
+                                                                  }
                                                                 }
                                                               }
                                                             },
                                                             "right": {
                                                               "AND": {
                                                                 "left": {
-                                                                  "OR": {
-                                                                    "left": {
-                                                                      "raw_text": "Po"
-                                                                    },
-                                                                    "right": {
-                                                                      "raw_text": "sitive urine toxicology screen for substances of non-therapeutic use prior to craving assessments",
-                                                                      "Measurement": [
-                                                                        "urine toxicology screen"
-                                                                      ],
-                                                                      "Qualifier": [
-                                                                        "substances of non-therapeutic use"
-                                                                      ],
-                                                                      "Temporal": [
-                                                                        "prior to craving assessments"
-                                                                      ],
-                                                                      "Reference_point": [
-                                                                        "craving assessments"
-                                                                      ]
-                                                                    }
-                                                                  }
+                                                                  "raw_text": "Positive urine toxicology screen for substances of non-therapeutic use prior to craving assessments",
+                                                                  "Measurement": [
+                                                                    "urine toxicology screen"
+                                                                  ],
+                                                                  "Qualifier": [
+                                                                    "substances of non-therapeutic use"
+                                                                  ],
+                                                                  "Value": [
+                                                                    "Positive"
+                                                                  ],
+                                                                  "Temporal": [
+                                                                    "prior to craving assessments"
+                                                                  ],
+                                                                  "Reference_point": [
+                                                                    "craving assessments"
+                                                                  ]
                                                                 }
                                                               }
                                                             }

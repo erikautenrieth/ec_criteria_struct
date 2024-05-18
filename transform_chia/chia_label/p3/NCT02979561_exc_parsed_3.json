@@ -83,7 +83,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Contraindications to warfarin or",
+                      "raw_text": "Contraindications to warfarin",
                       "Condition": [
                         "Contraindications"
                       ],
@@ -92,7 +92,7 @@
                       ]
                     },
                     "right": {
-                      "raw_text": "pradaxa according to Russian Instructions for medical use of these drugs",
+                      "raw_text": "or pradaxa according to Russian Instructions for medical use of these drugs",
                       "Drug": [
                         "pradaxa"
                       ],
@@ -132,13 +132,16 @@
                             "left": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "Intracranial hemorrhage in an",
+                                  "raw_text": "Intracranial hemorrhage",
                                   "Condition": [
                                     "Intracranial hemorrhage"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "amnesis"
+                                  "raw_text": "in anamnesis",
+                                  "Procedure": [
+                                    "anamnesis"
+                                  ]
                                 }
                               }
                             },
@@ -147,7 +150,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Active bleeding, bleed",
+                                      "raw_text": "Active bleeding",
                                       "Condition": [
                                         "bleeding"
                                       ],
@@ -156,7 +159,11 @@
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "ing diathesis."
+                                      "raw_text": ", bleeding diathesis.",
+                                      "Condition": [
+                                        "bleeding",
+                                        "bleeding diathesis"
+                                      ]
                                     }
                                   }
                                 },
@@ -179,7 +186,7 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "Trauma or exten",
+                                              "raw_text": "Trauma",
                                               "Condition": [
                                                 "Trauma"
                                               ]
@@ -187,21 +194,23 @@
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "sive surgery within 1",
+                                                  "raw_text": "or extensive surgery",
                                                   "Procedure": [
+                                                    "extensive surgery",
                                                     "surgery"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "month before randomization or surgery planned in the next 6 months after randomization.",
+                                                  "raw_text": "within 1 month before randomization or surgery planned in the next 6 months after randomization.",
+                                                  "Temporal": [
+                                                    "within 1 month before randomization",
+                                                    "in the next 6 months after randomization"
+                                                  ],
                                                   "Procedure": [
                                                     "surgery"
                                                   ],
                                                   "Mood": [
                                                     "planned"
-                                                  ],
-                                                  "Temporal": [
-                                                    "in the next 6 months after randomization"
                                                   ]
                                                 }
                                               }
@@ -213,7 +222,7 @@
                                             "left": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "Intracranial pathology: tumor, arteriov",
+                                                  "raw_text": "Intracranial pathology: tumor",
                                                   "Condition": [
                                                     "Intracranial pathology",
                                                     "tumor"
@@ -222,10 +231,16 @@
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "enous fistula or aneury"
+                                                      "raw_text": ", arteriovenous fistula",
+                                                      "Condition": [
+                                                        "arteriovenous fistula"
+                                                      ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "sm."
+                                                      "raw_text": "or aneurysm.",
+                                                      "Condition": [
+                                                        "aneurysm"
+                                                      ]
                                                     }
                                                   }
                                                 }
@@ -248,7 +263,7 @@
                                                     "left": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "Gastric ulcer or duodenal",
+                                                          "raw_text": "Gastric ulcer",
                                                           "Condition": [
                                                             "Gastric ulcer"
                                                           ]
@@ -256,29 +271,36 @@
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "ulcer with clinic"
+                                                              "raw_text": "or duodenal ulcer",
+                                                              "Condition": [
+                                                                "duodenal ulcer"
+                                                              ]
                                                             },
                                                             "right": {
                                                               "AND": {
                                                                 "left": {
-                                                                  "raw_text": "al manifestations or endoscopically identified acute ulcer without sig",
+                                                                  "raw_text": "with clinical manifestations or endoscopically identified acute ulcer",
+                                                                  "Condition": [
+                                                                    "clinical manifestations",
+                                                                    "acute ulcer"
+                                                                  ],
                                                                   "Qualifier": [
                                                                     "endoscopically identified"
                                                                   ],
                                                                   "Procedure": [
                                                                     "endoscopically"
-                                                                  ],
-                                                                  "Condition": [
-                                                                    "acute ulcer"
-                                                                  ],
-                                                                  "Negation": [
-                                                                    "without"
                                                                   ]
                                                                 },
                                                                 "right": {
                                                                   "NOT": {
                                                                     "left": {
-                                                                      "raw_text": "s of scarring during previous 30 days.",
+                                                                      "raw_text": "without signs of scarring during previous 30 days.",
+                                                                      "Negation": [
+                                                                        "without"
+                                                                      ],
+                                                                      "Condition": [
+                                                                        "signs of scarring"
+                                                                      ],
                                                                       "Temporal": [
                                                                         "during previous 30 days"
                                                                       ]
@@ -296,7 +318,7 @@
                                                         "left": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "Uncontrolled hypertension (systolic blood pressure> 180 mm Hg.",
+                                                              "raw_text": "Uncontrolled hypertension (systolic blood pressure",
                                                               "Measurement": [
                                                                 "systolic blood pressure"
                                                               ],
@@ -305,18 +327,16 @@
                                                               ],
                                                               "Condition": [
                                                                 "hypertension"
-                                                              ],
-                                                              "Value": [
-                                                                "> 180 mm Hg"
                                                               ]
                                                             },
                                                             "right": {
-                                                              "raw_text": "and / or diastolic blood pressure> 100 mm.hg in patients receiving antihypertensive drugs).",
+                                                              "raw_text": "> 180 mm Hg. and / or diastolic blood pressure> 100 mm.hg in patients receiving antihypertensive drugs).",
+                                                              "Value": [
+                                                                "> 180 mm Hg",
+                                                                "> 100 mm.hg"
+                                                              ],
                                                               "Measurement": [
                                                                 "diastolic blood pressure"
-                                                              ],
-                                                              "Value": [
-                                                                "> 100 mm.hg"
                                                               ],
                                                               "Drug": [
                                                                 "antihypertensive drugs"
@@ -416,20 +436,19 @@
                                                                                             "left": {
                                                                                               "OR": {
                                                                                                 "left": {
-                                                                                                  "raw_text": "Allergic to contrast substance or radioisotope drugs",
+                                                                                                  "raw_text": "Allergic to contrast substance",
                                                                                                   "Condition": [
                                                                                                     "Allergic"
                                                                                                   ],
                                                                                                   "Drug": [
-                                                                                                    "contrast substance",
-                                                                                                    "radioisotope drugs"
-                                                                                                  ],
-                                                                                                  "Scope": [
-                                                                                                    "contrast substance or radioisotope drugs"
+                                                                                                    "contrast substance"
                                                                                                   ]
                                                                                                 },
                                                                                                 "right": {
-                                                                                                  "raw_text": "used in procedures to assess endpoints of the study, which according to researchers, may be a contraindication to the implementation of these research methods."
+                                                                                                  "raw_text": "or radioisotope drugs used in procedures to assess endpoints of the study, which according to researchers, may be a contraindication to the implementation of these research methods.",
+                                                                                                  "Drug": [
+                                                                                                    "radioisotope drugs"
+                                                                                                  ]
                                                                                                 }
                                                                                               }
                                                                                             }

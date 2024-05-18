@@ -1,0 +1,30 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "Patients that have a valid Ontario Health Insurance Plan (OHIP) number at time of first transfusion"
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Patients that require emergent release of a RBC transfusion"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "and in whom emergency randomization could not be completed"
+            }
+          }
+        }
+      }
+    }
+  },
+  "OR": {
+    "left": {
+      "raw_text": "Patients with complex antibody profile in which it is impossible to match RBC units"
+    }
+  }
+}

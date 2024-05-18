@@ -1,0 +1,45 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Patients with a contraindication to VCE (small bowel strictures, oropharyngeal dysphagia, pregnancy, patients who are not surgical candidates)"
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Endoscopic insertion of video capsule endoscope"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Inpatient procedures for active GI bleeding"
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Patients with fluid restriction"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or who are unable to drink up to 900 ml of fluid within 10 minutes prior to the VCE"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

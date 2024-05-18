@@ -106,49 +106,7 @@ def remove_last_elements(data):
 
     return data
 
-def insert_character_at_offsets(file_path, data):
-    all_offsets = []
-    label_for_offsets = {}
-    inserted_positions = set()  # Zum Speichern bereits eingefügter Positionen
 
-    # Verarbeiten von AND und Has_negation Beziehungen
-    for relationship in data['relationships']:
-        arg1_offset = f"{relationship['arg1']}"
-        if relationship['type'] == "AND":
-            label_for_offsets[arg1_offset] = ' [AND]'  # Nach dem Offset
-            all_offsets.append(arg1_offset)
-        elif relationship['type'] == "Has_negation":
-            start_pos = int(arg1_offset.split('-')[0])  # Beginn des Offsets für Negation
-            label_for_offsets[arg1_offset] = '[NOT] '  # Vor dem Offset
-            all_offsets.append(arg1_offset)
-            inserted_positions.add(start_pos)  # Markiere den Startpunkt für Negation
-
-    # Verarbeiten von OR Gruppen
-    for or_group in data['scope_or']:
-        for offset in or_group['entities']:
-            label_for_offsets[offset] = ' [OR]'  # Nach jedem Offset in der Gruppe
-            all_offsets.append(offset)
-
-    # Datei lesen
-    with open(file_path, 'r', encoding='utf-8') as file:
-        content = file.read()
-
-    # Sortieren der Offsets in umgekehrter Reihenfolge, um die Positionen korrekt zu aktualisieren
-    sorted_offsets = sorted([(int(offset.split('-')[1]), offset) for offset in all_offsets], reverse=True)
-
-    # Einfügen der Labels in den Text
-    for end_pos, offset in sorted_offsets:
-        if end_pos not in inserted_positions:  # Überprüfe, ob das Tag bereits eingefügt wurde
-            label = label_for_offsets[offset]
-            insert_pos = int(offset.split('-')[0]) if label.strip() == '[NOT]' else end_pos
-            content = content[:insert_pos] + label + content[insert_pos:]
-            inserted_positions.add(insert_pos)
-
-    # Ausgabe in eine neue Datei schreiben
-    #with open("output_with_tags.txt", 'w') as file:
-    #    file.write(content)
-
-    return content
 
 def criteria_to_json(text, output_file:str, type):
     sentences = text.strip().split('\n')
@@ -361,3 +319,28 @@ def read_matching_txt_files(study_folder, label_folder, max_files):
             label_contents.append(read_file_content(filepath))
 
     return study_filenames, study_contents, label_filenames, label_contents
+
+
+
+def replace_ids_with_words(file_path, data):
+    entities = data['entities']
+    relationships = data['relationships']
+    scope_or = data['scope_or']
+    for relationship in relationships:
+        if relationship['type'] in ["AND", "Has_negation"]:
+            if relationship['arg1'] in entities and relationship['arg2'] in entities:
+                word1 = entities[relationship['arg1']]['text']
+                word2 = entities[relationship['arg2']]['text']
+                relationship['arg1'] = word1
+                relationship['arg2'] = word2
+    new_scope_or = []
+    for group in scope_or:
+        words = [entities[id]['text'] for id in group['entities'] if id in entities]
+        new_scope_or.append({'type': group['type'], 'entities': words})
+
+    updated_data = {
+        'entities': entities,
+        'relationships': relationships,
+        'scope_or': new_scope_or
+    }
+    return updated_data

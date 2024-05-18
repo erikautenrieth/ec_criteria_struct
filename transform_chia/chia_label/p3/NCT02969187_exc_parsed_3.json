@@ -35,15 +35,18 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "cept simple appendectomy a",
+                      "raw_text": "except simple appendectomy",
                       "Procedure": [
                         "simple appendectomy"
+                      ],
+                      "Negation": [
+                        "except"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "nd common OB/GYN procedures in the pelvis (hysterectomy,",
+                          "raw_text": "and common OB/GYN procedures in the pelvis (hysterectomy",
                           "Procedure": [
                             "common OB/GYN procedures",
                             "hysterectomy"
@@ -58,7 +61,7 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "C-section,",
+                              "raw_text": ", C-section",
                               "Procedure": [
                                 "C-section"
                               ]
@@ -66,13 +69,13 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "and oophorectomy,",
+                                  "raw_text": ", and oophorectomy",
                                   "Procedure": [
                                     "oophorectomy"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "tubal ligation)",
+                                  "raw_text": ", tubal ligation)",
                                   "Procedure": [
                                     "tubal ligation"
                                   ]
@@ -92,12 +95,12 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "laparoscopic bowel or"
+                      "raw_text": "laparoscopic bowel"
                     },
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "solid organ resection ex",
+                          "raw_text": "or solid organ resection",
                           "Procedure": [
                             "solid organ resection"
                           ]
@@ -105,7 +108,10 @@
                         "right": {
                           "NOT": {
                             "left": {
-                              "raw_text": "ept laparoscopic cholecystectomy",
+                              "raw_text": "except laparoscopic cholecystectomy",
+                              "Negation": [
+                                "except"
+                              ],
                               "Procedure": [
                                 "laparoscopic cholecystectomy"
                               ]
@@ -121,13 +127,17 @@
                     "left": {
                       "AND": {
                         "left": {
-                          "raw_text": "ventral hernia rep",
+                          "raw_text": "ventral hernia",
                           "Condition": [
                             "ventral hernia"
                           ]
                         },
                         "right": {
-                          "raw_text": "air with mesh"
+                          "raw_text": "repair with mesh",
+                          "Procedure": [
+                            "repair with mesh",
+                            "repair"
+                          ]
                         }
                       }
                     },
@@ -136,7 +146,7 @@
                         "left": {
                           "AND": {
                             "left": {
-                              "raw_text": "Preoperative chronic opiate use",
+                              "raw_text": "Preoperative chronic opiate",
                               "Temporal": [
                                 "Preoperative"
                               ],
@@ -148,58 +158,58 @@
                               ]
                             },
                             "right": {
-                              "raw_text": "for chronic pain defined as opiate usage at least 60 mg/day of morphine equivalent for = 3 months (as defined by International Association for the Study of Pain22) in the one year period prior to the bariatric surgery",
-                              "Condition": [
-                                "chronic pain"
-                              ],
-                              "Drug": [
-                                "opiate"
-                              ],
-                              "Multiplier": [
-                                "chronic",
-                                "at least 60 mg/day of morphine equivalent",
-                                "for = 3 months"
-                              ],
-                              "Temporal": [
-                                "in the one year period prior to the bariatric surgery"
-                              ],
-                              "Reference_point": [
-                                "the bariatric surgery"
-                              ],
-                              "Procedure": [
-                                "bariatric surgery",
-                                "surgery"
-                              ],
-                              "Scope": [
-                                "opiate usage at least 60 mg/day of morphine equivalent for = 3 months"
-                              ]
+                              "AND": {
+                                "left": {
+                                  "raw_text": "use for chronic pain defined as opiate usage at least 60 mg/day of morphine equivalent for = 3 months (as defined by International Association for the Study of Pain22) in the one year period prior to the bariatric surgery",
+                                  "Condition": [
+                                    "chronic pain"
+                                  ],
+                                  "Drug": [
+                                    "opiate"
+                                  ],
+                                  "Multiplier": [
+                                    "chronic",
+                                    "at least 60 mg/day of morphine equivalent",
+                                    "for = 3 months"
+                                  ],
+                                  "Temporal": [
+                                    "in the one year period prior to the bariatric surgery"
+                                  ],
+                                  "Reference_point": [
+                                    "the bariatric surgery"
+                                  ],
+                                  "Procedure": [
+                                    "bariatric surgery",
+                                    "surgery"
+                                  ],
+                                  "Scope": [
+                                    "opiate usage at least 60 mg/day of morphine equivalent for = 3 months"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": ""
+                                }
+                              }
                             }
                           }
                         },
                         "right": {
                           "AND": {
                             "left": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "The"
-                                },
-                                "right": {
-                                  "raw_text": "American Society of Anesthesiologists (ASA) score > 3",
-                                  "Measurement": [
-                                    "American Society of Anesthesiologists (ASA) score"
-                                  ],
-                                  "Value": [
-                                    "> 3"
-                                  ]
-                                }
-                              }
+                              "raw_text": "The American Society of Anesthesiologists (ASA) score > 3",
+                              "Measurement": [
+                                "American Society of Anesthesiologists (ASA) score"
+                              ],
+                              "Value": [
+                                "> 3"
+                              ]
                             },
                             "right": {
                               "AND": {
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "History of hypersensitivity or adv",
+                                      "raw_text": "History of hypersensitivity",
                                       "Condition": [
                                         "hypersensitivity"
                                       ]
@@ -207,13 +217,19 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "erse reaction to bupivacaine or nar",
+                                          "raw_text": "or adverse reaction to bupivacaine",
+                                          "Condition": [
+                                            "adverse reaction"
+                                          ],
                                           "Drug": [
                                             "bupivacaine"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "cotics"
+                                          "raw_text": "or narcotics",
+                                          "Drug": [
+                                            "narcotics"
+                                          ]
                                         }
                                       }
                                     }
@@ -230,35 +246,35 @@
                                     "right": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "ventral hernia repair",
-                                          "Condition": [
-                                            "ventral hernia"
-                                          ],
-                                          "Procedure": [
-                                            "repair"
-                                          ]
+                                          "AND": {
+                                            "left": {
+                                              "raw_text": "ventral hernia",
+                                              "Condition": [
+                                                "ventral hernia"
+                                              ]
+                                            },
+                                            "right": {
+                                              "raw_text": "repair",
+                                              "Procedure": [
+                                                "repair"
+                                              ]
+                                            }
+                                          }
                                         },
                                         "right": {
                                           "AND": {
                                             "left": {
-                                              "AND": {
-                                                "left": {
-                                                  "raw_text": "C"
-                                                },
-                                                "right": {
-                                                  "raw_text": "holecystectomy"
-                                                }
-                                              }
+                                              "raw_text": "Cholecystectomy",
+                                              "Procedure": [
+                                                "Cholecystectomy"
+                                              ]
                                             },
                                             "right": {
                                               "AND": {
                                                 "left": {
                                                   "AND": {
                                                     "left": {
-                                                      "raw_text": "hiatal hernia repair wit",
-                                                      "Procedure": [
-                                                        "repair"
-                                                      ],
+                                                      "raw_text": "hiatal hernia",
                                                       "Condition": [
                                                         "hiatal hernia"
                                                       ]
@@ -266,10 +282,16 @@
                                                     "right": {
                                                       "AND": {
                                                         "left": {
-                                                          "raw_text": "h poste"
+                                                          "raw_text": "repair",
+                                                          "Procedure": [
+                                                            "repair"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "rior cruroplasty"
+                                                          "raw_text": "with posterior cruroplasty",
+                                                          "Procedure": [
+                                                            "posterior cruroplasty"
+                                                          ]
                                                         }
                                                       }
                                                     }
@@ -302,7 +324,7 @@
                                                             "left": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "Addition of trocar(s) or convers",
+                                                                  "raw_text": "Addition of trocar",
                                                                   "Drug": [
                                                                     "trocar"
                                                                   ],
@@ -313,30 +335,29 @@
                                                                 "right": {
                                                                   "AND": {
                                                                     "left": {
-                                                                      "raw_text": "ion of surgery to hand-assis",
+                                                                      "raw_text": "(s) or conversion of surgery",
+                                                                      "Observation": [
+                                                                        "conversion of surgery"
+                                                                      ],
                                                                       "Procedure": [
                                                                         "surgery"
                                                                       ]
                                                                     },
                                                                     "right": {
-                                                                      "raw_text": "ted or open",
-                                                                      "Procedure": [
-                                                                        "open"
-                                                                      ]
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "right": {
-                                                              "AND": {
-                                                                "left": {
-                                                                  "OR": {
-                                                                    "left": {
-                                                                      "raw_text": ""
-                                                                    },
-                                                                    "right": {
-                                                                      "raw_text": ""
+                                                                      "OR": {
+                                                                        "left": {
+                                                                          "raw_text": "to hand-assisted",
+                                                                          "Procedure": [
+                                                                            "hand-assisted"
+                                                                          ]
+                                                                        },
+                                                                        "right": {
+                                                                          "raw_text": "or open",
+                                                                          "Procedure": [
+                                                                            "open"
+                                                                          ]
+                                                                        }
+                                                                      }
                                                                     }
                                                                   }
                                                                 }

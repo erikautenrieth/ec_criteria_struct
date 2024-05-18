@@ -74,13 +74,13 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Subject has permanent pacemaker or",
+                          "raw_text": "Subject has permanent pacemaker",
                           "Device": [
                             "permanent pacemaker"
                           ]
                         },
                         "right": {
-                          "raw_text": "defibrillator implant.",
+                          "raw_text": "or defibrillator implant.",
                           "Device": [
                             "defibrillator implant"
                           ]
@@ -92,7 +92,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Subject has 2\u00b0 type II, 3\u00b0",
+                              "raw_text": "Subject has 2\u00b0 type II",
                               "Value": [
                                 "II"
                               ]
@@ -100,15 +100,24 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "degree AV-block or l"
+                                  "raw_text": ", 3\u00b0 degree AV-block",
+                                  "Condition": [
+                                    "3\u00b0 degree AV-block"
+                                  ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "eft/righ"
+                                      "raw_text": "or left",
+                                      "Qualifier": [
+                                        "left"
+                                      ]
                                     },
                                     "right": {
-                                      "raw_text": "t bundle branch block pattern."
+                                      "raw_text": "/right bundle branch block pattern.",
+                                      "Condition": [
+                                        "right bundle branch block"
+                                      ]
                                     }
                                   }
                                 }
@@ -129,13 +138,16 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Subject has history of previous myocardial infarction or per",
+                                      "raw_text": "Subject has history of previous myocardial infarction",
                                       "Condition": [
                                         "myocardial infarction"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "cutaneous intervention during the last three months.",
+                                      "raw_text": "or percutaneous intervention during the last three months.",
+                                      "Procedure": [
+                                        "percutaneous intervention"
+                                      ],
                                       "Temporal": [
                                         "last three months"
                                       ]
@@ -158,14 +170,14 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "Subject has chronic obstructive pulmonary disease with detected pulmonary hypertension or any o",
+                                              "raw_text": "Subject has chronic obstructive pulmonary disease with detected pulmonary hypertension",
                                               "Condition": [
                                                 "chronic obstructive pulmonary disease",
                                                 "pulmonary hypertension"
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "ther evidence of significant lung disease.",
+                                              "raw_text": "or any other evidence of significant lung disease.",
                                               "Condition": [
                                                 "lung disease"
                                               ],
@@ -180,13 +192,16 @@
                                             "left": {
                                               "AND": {
                                                 "left": {
-                                                  "raw_text": "Subject has any contraindication for oral",
+                                                  "raw_text": "Subject has any contraindication",
                                                   "Condition": [
                                                     "contraindication"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "anticoagulation."
+                                                  "raw_text": "for oral anticoagulation.",
+                                                  "Drug": [
+                                                    "oral anticoagulation"
+                                                  ]
                                                 }
                                               }
                                             },
@@ -195,14 +210,16 @@
                                                 "left": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "Subject has any history of previous transient ischemic attack or stroke.",
+                                                      "raw_text": "Subject has any history of previous transient ischemic attack",
                                                       "Condition": [
-                                                        "transient ischemic attack",
-                                                        "stroke"
+                                                        "transient ischemic attack"
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": ""
+                                                      "raw_text": "or stroke.",
+                                                      "Condition": [
+                                                        "stroke"
+                                                      ]
                                                     }
                                                   }
                                                 },
@@ -219,7 +236,13 @@
                                                         "left": {
                                                           "NOT": {
                                                             "left": {
-                                                              "raw_text": "tent foramen ovale that is allowed)."
+                                                              "raw_text": "except for patent foramen ovale that is allowed).",
+                                                              "Negation": [
+                                                                "except"
+                                                              ],
+                                                              "Condition": [
+                                                                "patent foramen ovale"
+                                                              ]
                                                             }
                                                           }
                                                         },
@@ -228,34 +251,42 @@
                                                             "left": {
                                                               "AND": {
                                                                 "left": {
-                                                                  "raw_text": "Subject has evidence of congestive heart failure (NYHA class I",
-                                                                  "Qualifier": [
-                                                                    "class I"
-                                                                  ],
+                                                                  "raw_text": "Subject has evidence of congestive heart failure",
                                                                   "Condition": [
                                                                     "congestive heart failure"
-                                                                  ],
-                                                                  "Measurement": [
-                                                                    "NYHA class"
                                                                   ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "I, III or IV) i",
+                                                                      "raw_text": "(NYHA class II",
+                                                                      "Qualifier": [
+                                                                        "class I"
+                                                                      ],
+                                                                      "Measurement": [
+                                                                        "NYHA class"
+                                                                      ],
                                                                       "Value": [
-                                                                        "II",
-                                                                        "III",
-                                                                        "IV"
+                                                                        "II"
                                                                       ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "n sin"
+                                                                          "raw_text": ", III",
+                                                                          "Value": [
+                                                                            "II",
+                                                                            "III"
+                                                                          ]
                                                                         },
                                                                         "right": {
-                                                                          "raw_text": "us rhythm."
+                                                                          "raw_text": "or IV) in sinus rhythm.",
+                                                                          "Value": [
+                                                                            "IV"
+                                                                          ],
+                                                                          "Condition": [
+                                                                            "sinus rhythm"
+                                                                          ]
                                                                         }
                                                                       }
                                                                     }
@@ -276,40 +307,51 @@
                                                                     "left": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "Subject has abnormal long or short QT int",
+                                                                          "raw_text": "Subject has abnormal long",
                                                                           "Qualifier": [
                                                                             "abnormal"
                                                                           ],
                                                                           "Value": [
-                                                                            "long",
-                                                                            "short"
-                                                                          ],
-                                                                          "Scope": [
-                                                                            "long or short"
+                                                                            "long"
                                                                           ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "erval, signs of Bruga"
+                                                                              "raw_text": "or short QT interval",
+                                                                              "Measurement": [
+                                                                                "QT interval"
+                                                                              ],
+                                                                              "Value": [
+                                                                                "short"
+                                                                              ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "da syndrome, known inheriti"
+                                                                                  "raw_text": ", signs of Brugada syndrome",
+                                                                                  "Condition": [
+                                                                                    "Brugada syndrome"
+                                                                                  ]
                                                                                 },
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "ng ion channel disease on the family, arrhythmogenic",
-                                                                                      "Qualifier": [
-                                                                                        "arrhythmogenic"
+                                                                                      "raw_text": ", known inheriting ion channel disease on the family",
+                                                                                      "Condition": [
+                                                                                        "inheriting ion channel disease"
+                                                                                      ],
+                                                                                      "Observation": [
+                                                                                        "inheriting ion channel disease on the family"
                                                                                       ]
                                                                                     },
                                                                                     "right": {
-                                                                                      "raw_text": "right ventricular dysplasia.",
+                                                                                      "raw_text": ", arrhythmogenic right ventricular dysplasia.",
                                                                                       "Condition": [
                                                                                         "right ventricular dysplasia"
+                                                                                      ],
+                                                                                      "Qualifier": [
+                                                                                        "arrhythmogenic"
                                                                                       ]
                                                                                     }
                                                                                   }
@@ -355,27 +397,33 @@
                                                                                     "left": {
                                                                                       "OR": {
                                                                                         "left": {
-                                                                                          "raw_text": "Subject has thrombocytosis (platelet count > 6",
+                                                                                          "raw_text": "Subject has thrombocytosis",
                                                                                           "Condition": [
                                                                                             "thrombocytosis"
-                                                                                          ],
-                                                                                          "Measurement": [
-                                                                                            "platelet count"
                                                                                           ]
                                                                                         },
                                                                                         "right": {
                                                                                           "AND": {
                                                                                             "left": {
-                                                                                              "raw_text": "00,000 / \u00b5l) or thrombocytopenia (platelet count <10",
+                                                                                              "raw_text": "(platelet count > 600,000 / \u00b5l) or thrombocytopenia",
                                                                                               "Measurement": [
                                                                                                 "platelet count"
+                                                                                              ],
+                                                                                              "Value": [
+                                                                                                "> 600,000 / \u00b5l"
                                                                                               ],
                                                                                               "Condition": [
                                                                                                 "thrombocytopenia"
                                                                                               ]
                                                                                             },
                                                                                             "right": {
-                                                                                              "raw_text": "0,000 / \u00b5l)."
+                                                                                              "raw_text": "(platelet count <100,000 / \u00b5l).",
+                                                                                              "Measurement": [
+                                                                                                "platelet count"
+                                                                                              ],
+                                                                                              "Value": [
+                                                                                                "<100,000 / \u00b5l"
+                                                                                              ]
                                                                                             }
                                                                                           }
                                                                                         }
@@ -386,45 +434,50 @@
                                                                                         "left": {
                                                                                           "OR": {
                                                                                             "left": {
-                                                                                              "raw_text": "Subject has any untreated or uncontrolled hype",
+                                                                                              "raw_text": "Subject has any untreated",
                                                                                               "Qualifier": [
-                                                                                                "untreated",
-                                                                                                "uncontrolled"
-                                                                                              ],
-                                                                                              "Scope": [
-                                                                                                "untreated or uncontrolled"
+                                                                                                "untreated"
                                                                                               ]
                                                                                             },
                                                                                             "right": {
-                                                                                              "raw_text": "rthyroidism or hypothyroidism.",
-                                                                                              "Condition": [
-                                                                                                "hypothyroidism"
-                                                                                              ]
+                                                                                              "OR": {
+                                                                                                "left": {
+                                                                                                  "raw_text": "or uncontrolled hyperthyroidism",
+                                                                                                  "Condition": [
+                                                                                                    "hyperthyroidism"
+                                                                                                  ],
+                                                                                                  "Qualifier": [
+                                                                                                    "uncontrolled"
+                                                                                                  ]
+                                                                                                },
+                                                                                                "right": {
+                                                                                                  "raw_text": "or hypothyroidism.",
+                                                                                                  "Condition": [
+                                                                                                    "hypothyroidism"
+                                                                                                  ]
+                                                                                                }
+                                                                                              }
                                                                                             }
                                                                                           }
                                                                                         },
                                                                                         "right": {
                                                                                           "AND": {
                                                                                             "left": {
-                                                                                              "OR": {
+                                                                                              "AND": {
                                                                                                 "left": {
-                                                                                                  "raw_text": "S"
+                                                                                                  "raw_text": "Subject has renal dysfunction",
+                                                                                                  "Condition": [
+                                                                                                    "renal dysfunction"
+                                                                                                  ]
                                                                                                 },
                                                                                                 "right": {
-                                                                                                  "AND": {
-                                                                                                    "left": {
-                                                                                                      "raw_text": "ubject has renal dysfunction with glomerular filtr",
-                                                                                                      "Condition": [
-                                                                                                        "renal dysfunction"
-                                                                                                      ]
-                                                                                                    },
-                                                                                                    "right": {
-                                                                                                      "raw_text": "ation rate < 60 ml / min.",
-                                                                                                      "Value": [
-                                                                                                        "< 60 ml / min"
-                                                                                                      ]
-                                                                                                    }
-                                                                                                  }
+                                                                                                  "raw_text": "with glomerular filtration rate < 60 ml / min.",
+                                                                                                  "Measurement": [
+                                                                                                    "glomerular filtration rate"
+                                                                                                  ],
+                                                                                                  "Value": [
+                                                                                                    "< 60 ml / min"
+                                                                                                  ]
                                                                                                 }
                                                                                               }
                                                                                             },
@@ -439,24 +492,29 @@
                                                                                                 "right": {
                                                                                                   "AND": {
                                                                                                     "left": {
-                                                                                                      "raw_text": "Subject has a reversible causes for AF like hyperthyroidism and alcoholism.",
-                                                                                                      "Condition": [
-                                                                                                        "AF",
-                                                                                                        "hyperthyroidism",
-                                                                                                        "alcoholism"
-                                                                                                      ]
+                                                                                                      "OR": {
+                                                                                                        "left": {
+                                                                                                          "raw_text": "Subject has a reversible causes for AF like hyperthyroidism",
+                                                                                                          "Condition": [
+                                                                                                            "AF",
+                                                                                                            "hyperthyroidism"
+                                                                                                          ]
+                                                                                                        },
+                                                                                                        "right": {
+                                                                                                          "raw_text": "and alcoholism.",
+                                                                                                          "Condition": [
+                                                                                                            "alcoholism"
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      }
                                                                                                     },
                                                                                                     "right": {
                                                                                                       "AND": {
                                                                                                         "left": {
-                                                                                                          "OR": {
-                                                                                                            "left": {
-                                                                                                              "raw_text": "Subject"
-                                                                                                            },
-                                                                                                            "right": {
-                                                                                                              "raw_text": "is a pregnant woman or woman of childbearing potential not on adequate birth control: only woman with a highly effective method of contraception [oral contraception or intra-uterine device] (who must have a negative pregnancy test within 1 week of the start of the therapy) or sterile woman can be enrolled."
-                                                                                                            }
-                                                                                                          }
+                                                                                                          "raw_text": "Subject is a pregnant woman or woman of childbearing potential not on adequate birth control: only woman with a highly effective method of contraception [oral contraception or intra-uterine device] (who must have a negative pregnancy test within 1 week of the start of the therapy) or sterile woman can be enrolled.",
+                                                                                                          "Pregnancy_considerations": [
+                                                                                                            "Subject is a pregnant woman or woman of childbearing potential not on adequate birth control: only woman with a highly effective method of contraception [oral contraception or intra-uterine device] (who must have a negative pregnancy test within 1 week of the start of the therapy) or sterile woman can be enrolled"
+                                                                                                          ]
                                                                                                         },
                                                                                                         "right": {
                                                                                                           "AND": {

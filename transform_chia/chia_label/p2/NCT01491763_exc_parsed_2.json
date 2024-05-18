@@ -8,24 +8,24 @@
         "left": {
           "OR": {
             "left": {
-              "raw_text": "Patients with a history of coronary artery disease,"
+              "raw_text": "Patients with a history of coronary artery disease"
             },
             "right": {
-              "raw_text": "valvular or hypertensive heart disease"
+              "OR": {
+                "left": {
+                  "raw_text": ", valvular or hypertensive heart disease"
+                },
+                "right": {
+                  "raw_text": ""
+                }
+              }
             }
           }
         },
         "right": {
           "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": ""
-                },
-                "right": {
-                  "raw_text": "Patients with chronic liver disease"
-                }
-              }
+              "raw_text": "Patients with chronic liver disease"
             },
             "right": {
               "AND": {
@@ -37,12 +37,12 @@
                     "left": {
                       "AND": {
                         "left": {
-                          "raw_text": "Renal failure not"
+                          "raw_text": "Renal failure"
                         },
                         "right": {
                           "NOT": {
                             "left": {
-                              "raw_text": "due to LAL"
+                              "raw_text": "not due to LAL"
                             }
                           }
                         }
@@ -60,10 +60,10 @@
                                 "left": {
                                   "AND": {
                                     "left": {
-                                      "raw_text": "ious neurological abnormalities due t"
+                                      "raw_text": "No serious neurological abnormalities"
                                     },
                                     "right": {
-                                      "raw_text": "o LAL"
+                                      "raw_text": "due to LAL"
                                     }
                                   }
                                 }
@@ -79,10 +79,10 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Pregnant or brea"
+                                          "raw_text": "Pregnant"
                                         },
                                         "right": {
-                                          "raw_text": "stfeeding"
+                                          "raw_text": "or breastfeeding"
                                         }
                                       }
                                     },

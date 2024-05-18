@@ -1,0 +1,161 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Emergency surgery",
+      "Procedure": [
+        "Emergency surgery"
+      ],
+      "Visit": [
+        "Emergency"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Monitored Anesthesia Care (i.e., regional anesthesia",
+              "Procedure": [
+                "Monitored Anesthesia Care",
+                "regional anesthesia"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "ithout plans for general anesthesia)",
+                  "Mood": [
+                    "plans for"
+                  ],
+                  "Procedure": [
+                    "general anesthesia"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Surgery involving the eye,",
+                  "Procedure": [
+                    "Surgery"
+                  ],
+                  "Qualifier": [
+                    "eye"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "eyebrow,",
+                      "Qualifier": [
+                        "eye",
+                        "eyebrow"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "forehead,",
+                          "Qualifier": [
+                            "forehead"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or frontal scalp near the sensor placement",
+                          "Qualifier": [
+                            "frontal scalp"
+                          ],
+                          "Non-representable": [
+                            "near the sensor placement"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Poor health literacy",
+                  "Observation": [
+                    "Poor health literacy"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Allergy, or",
+                          "Condition": [
+                            "Allergy"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "have experienced any drug reaction to",
+                              "Condition": [
+                                "drug reaction"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "ketamine",
+                              "Drug": [
+                                "ketamine"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Pregnant or l",
+                              "Condition": [
+                                "Pregnant"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "actating"
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Currently in active alcohol withdrawal",
+                              "Qualifier": [
+                                "active"
+                              ],
+                              "Condition": [
+                                "alcohol withdrawal"
+                              ],
+                              "Temporal": [
+                                "Currently"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

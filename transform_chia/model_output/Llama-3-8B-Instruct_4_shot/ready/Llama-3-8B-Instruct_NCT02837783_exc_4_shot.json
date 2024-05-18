@@ -1,0 +1,53 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Patient has history of loose or watery stools"
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Patient has both clinically significant findings"
+            },
+            "right": {
+              "raw_text": "and unexplained clinically significant alarm symptoms"
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Patient has symptoms of or been diagnosed with a medical condition"
+                },
+                "right": {
+                  "raw_text": "that may contribute to abdominal pain"
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Patient has any protocol-excluded or clinically significant medical or surgical history"
+                    },
+                    "right": {
+                      "raw_text": "that could confound the study assessments"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -40,7 +40,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Patient with hypersensitivity/al",
+                      "raw_text": "Patient with hypersensitivity",
                       "Condition": [
                         "hypersensitivity"
                       ]
@@ -48,7 +48,10 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "lergy to either morphine, N",
+                          "raw_text": "/allergy to either morphine",
+                          "Condition": [
+                            "allergy"
+                          ],
                           "Drug": [
                             "morphine"
                           ]
@@ -56,10 +59,13 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "SAIDs, o"
+                              "raw_text": ", NSAIDs",
+                              "Drug": [
+                                "NSAIDs"
+                              ]
                             },
                             "right": {
-                              "raw_text": "r acetaminophen",
+                              "raw_text": ", or acetaminophen",
                               "Drug": [
                                 "acetaminophen"
                               ]
@@ -86,13 +92,16 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Patient with known liver disease or r",
+                              "raw_text": "Patient with known liver disease",
                               "Condition": [
                                 "liver disease"
                               ]
                             },
                             "right": {
-                              "raw_text": "enal disease"
+                              "raw_text": "or renal disease",
+                              "Condition": [
+                                "renal disease"
+                              ]
                             }
                           }
                         },
@@ -101,10 +110,16 @@
                             "left": {
                               "NOT": {
                                 "left": {
-                                  "raw_text": "quiring IV morphine (pain score 5/10 or less)",
+                                  "raw_text": "not requiring IV morphine (pain score 5/10 or less)",
                                   "Drug": [
                                     "morphine",
                                     "IV morphine"
+                                  ],
+                                  "Negation": [
+                                    "not"
+                                  ],
+                                  "Mood": [
+                                    "requiring"
                                   ],
                                   "Measurement": [
                                     "pain score"
@@ -113,6 +128,7 @@
                                     "5/10 or less"
                                   ],
                                   "Scope": [
+                                    "not requiring IV morphine",
                                     "pain score 5/10 or less"
                                   ]
                                 }

@@ -51,13 +51,13 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "Treated currently with golimumab o",
+                  "raw_text": "Treated currently with golimumab",
                   "Drug": [
                     "golimumab"
                   ]
                 },
                 "right": {
-                  "raw_text": "r certolizumab",
+                  "raw_text": "or certolizumab",
                   "Drug": [
                     "certolizumab"
                   ]
@@ -99,15 +99,18 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Treated with intramuscular or i",
+                              "raw_text": "Treated with intramuscular",
                               "Qualifier": [
                                 "intramuscular"
                               ]
                             },
                             "right": {
-                              "raw_text": "ntravenous corticosteroids in the last 6 months for RA activity",
+                              "raw_text": "or intravenous corticosteroids in the last 6 months for RA activity",
                               "Temporal": [
                                 "in the last 6 months"
+                              ],
+                              "Qualifier": [
+                                "intravenous"
                               ],
                               "Drug": [
                                 "corticosteroids"
@@ -123,7 +126,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Treated with anakinra, abat",
+                                  "raw_text": "Treated with anakinra",
                                   "Drug": [
                                     "anakinra"
                                   ]
@@ -131,12 +134,18 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "acept, or t"
+                                      "raw_text": ", abatacept",
+                                      "Drug": [
+                                        "abatacept"
+                                      ]
                                     },
                                     "right": {
-                                      "raw_text": "ocilizumab in the last 6 months",
+                                      "raw_text": ", or tocilizumab in the last 6 months",
                                       "Temporal": [
                                         "in the last 6 months"
+                                      ],
+                                      "Drug": [
+                                        "tocilizumab"
                                       ]
                                     }
                                   }
@@ -176,13 +185,13 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "Pregnant (or anti",
+                                              "raw_text": "Pregnant",
                                               "Condition": [
                                                 "Pregnant"
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "cipate pregnancy during the study period) or lactating women",
+                                              "raw_text": "(or anticipate pregnancy during the study period) or lactating women",
                                               "Condition": [
                                                 "lactating",
                                                 "pregnancy"
@@ -198,7 +207,10 @@
                                             "left": {
                                               "NOT": {
                                                 "left": {
-                                                  "raw_text": "documentation in the medical record of clinical remission for the last 6 months",
+                                                  "raw_text": "Absence of documentation in the medical record of clinical remission for the last 6 months",
+                                                  "Negation": [
+                                                    "Absence of"
+                                                  ],
                                                   "Condition": [
                                                     "clinical remission"
                                                   ],
@@ -213,7 +225,7 @@
                                                 "left": {
                                                   "AND": {
                                                     "left": {
-                                                      "raw_text": "Unwilling to discontinue anti-TNF a",
+                                                      "raw_text": "Unwilling to discontinue",
                                                       "Mood": [
                                                         "Unwilling"
                                                       ],
@@ -222,7 +234,10 @@
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "gent"
+                                                      "raw_text": "anti-TNF agent",
+                                                      "Drug": [
+                                                        "anti-TNF agent"
+                                                      ]
                                                     }
                                                   }
                                                 },
@@ -233,7 +248,10 @@
                                                         "left": {
                                                           "AND": {
                                                             "left": {
-                                                              "raw_text": "ocumentation of negative tuberculin skin test, negative QuantiFERON-TB Gold test, or treatment for latent",
+                                                              "raw_text": "Absence of documentation of negative tuberculin skin test, negative QuantiFERON-TB Gold test, or treatment",
+                                                              "Negation": [
+                                                                "Absence of"
+                                                              ],
                                                               "Value": [
                                                                 "negative"
                                                               ],
@@ -243,15 +261,15 @@
                                                               ],
                                                               "Measurement": [
                                                                 "QuantiFERON-TB Gold test"
-                                                              ],
-                                                              "Qualifier": [
-                                                                "latent"
                                                               ]
                                                             },
                                                             "right": {
-                                                              "raw_text": "tuberculosis prior to starting treatment with the anti-TNF agent",
+                                                              "raw_text": "for latent tuberculosis prior to starting treatment with the anti-TNF agent",
                                                               "Drug": [
                                                                 "anti-TNF agent"
+                                                              ],
+                                                              "Qualifier": [
+                                                                "latent"
                                                               ],
                                                               "Condition": [
                                                                 "tuberculosis"
@@ -276,7 +294,7 @@
                                                         "left": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "Treatment of solid malignancy or non-melan",
+                                                              "raw_text": "Treatment of solid malignancy",
                                                               "Condition": [
                                                                 "solid malignancy"
                                                               ]
@@ -284,12 +302,19 @@
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "oma skin cancer within the p"
+                                                                  "raw_text": "or non-melanoma skin cancer",
+                                                                  "Condition": [
+                                                                    "non-melanoma skin cancer",
+                                                                    "melanoma"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "ast 5 years, or any history of melanoma or hematolog",
+                                                                      "raw_text": "within the past 5 years, or any history of melanoma",
+                                                                      "Temporal": [
+                                                                        "within the past 5 years"
+                                                                      ],
                                                                       "Condition": [
                                                                         "melanoma"
                                                                       ]
@@ -297,10 +322,16 @@
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "ic or lymphopro"
+                                                                          "raw_text": "or hematologic",
+                                                                          "Condition": [
+                                                                            "hematologic"
+                                                                          ]
                                                                         },
                                                                         "right": {
-                                                                          "raw_text": "liferative malignancy"
+                                                                          "raw_text": "or lymphoproliferative malignancy",
+                                                                          "Condition": [
+                                                                            "lymphoproliferative malignancy"
+                                                                          ]
                                                                         }
                                                                       }
                                                                     }
@@ -337,16 +368,15 @@
                                                                     "left": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "mentation of negative hepatitis B serologies, absence of co",
+                                                                          "raw_text": "Absence of documentation of negative hepatitis B serologies",
+                                                                          "Negation": [
+                                                                            "Absence of"
+                                                                          ],
                                                                           "Value": [
                                                                             "negative"
                                                                           ],
                                                                           "Measurement": [
                                                                             "hepatitis B serologies"
-                                                                          ],
-                                                                          "Negation": [
-                                                                            "absence of",
-                                                                            "absence"
                                                                           ]
                                                                         },
                                                                         "right": {
@@ -354,26 +384,37 @@
                                                                             "left": {
                                                                               "AND": {
                                                                                 "left": {
-                                                                                  "raw_text": "letion of treatment for chronic he",
+                                                                                  "raw_text": "absence of completion of treatment",
                                                                                   "Procedure": [
                                                                                     "treatment"
+                                                                                  ],
+                                                                                  "Negation": [
+                                                                                    "absence of",
+                                                                                    "absence"
+                                                                                  ],
+                                                                                  "Non-representable": [
+                                                                                    "completion of"
                                                                                   ]
                                                                                 },
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "patitis B, or absence of",
-                                                                                      "Negation": [
-                                                                                        "absence of",
-                                                                                        "absence"
+                                                                                      "raw_text": "for chronic hepatitis B",
+                                                                                      "Condition": [
+                                                                                        "chronic hepatitis B"
                                                                                       ]
                                                                                     },
                                                                                     "right": {
                                                                                       "NOT": {
                                                                                         "left": {
-                                                                                          "raw_text": "ressive antiviral treatment",
+                                                                                          "raw_text": "absence of suppressive antiviral treatment",
                                                                                           "Procedure": [
-                                                                                            "treatment"
+                                                                                            "treatment",
+                                                                                            "suppressive antiviral treatment"
+                                                                                          ],
+                                                                                          "Negation": [
+                                                                                            "absence of",
+                                                                                            "absence"
                                                                                           ]
                                                                                         }
                                                                                       }

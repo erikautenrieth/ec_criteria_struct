@@ -1,0 +1,87 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Adults 18-65 years"
+                },
+                "right": {
+                  "raw_text": "who are diagnosed with functional neurologic symptom"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or conversion disorder."
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "IF": {
+                "condition": "diagnosis of seizure type",
+                "then": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "video EEG with diagnosis confirmed by board-certified neurologist"
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "with subspecialty training in epilepsy and clinical neurophysiology using the criteria of the International Classification of the Epilepsies"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "ELSE": {
+                "AND": {
+                  "left": {
+                    "AND": {
+                      "left": {
+                        "OR": {
+                          "left": {
+                            "raw_text": "diagnosis of motor type"
+                          },
+                          "right": {
+                            "raw_text": "documented and clinically established levels of diagnostic certainty (Williams,1995)"
+                          }
+                        }
+                      },
+                      "right": {
+                        "raw_text": "confirmed by 2 neurologists"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Participants must have at least one symptom per month in the month prior to enrollment"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Fluency in English spoken language"
+            }
+          }
+        }
+      }
+    }
+  }
+}

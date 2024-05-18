@@ -1,0 +1,42 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Patient not expected to survive more than 4 days"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Patient allergic to a penicillin or a carbapenem"
+            },
+            "right": {
+              "raw_text": "Patient with significant polymicrobial bacteraemia"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "Treatment is not with the intent to cure the infection"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnancy or breast-feeding"
+            },
+            "right": {
+              "raw_text": "Use of concomitant antimicrobials in the first 4 days after enrolment with known activity against Gram-negative bacilli"
+            }
+          }
+        }
+      }
+    }
+  }
+}

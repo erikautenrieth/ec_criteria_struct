@@ -76,7 +76,10 @@
             "left": {
               "NOT": {
                 "left": {
-                  "raw_text": "t been weight stable (>2 kg weight change in past 3 months)",
+                  "raw_text": "not been weight stable (>2 kg weight change in past 3 months)",
+                  "Negation": [
+                    "not"
+                  ],
                   "Observation": [
                     "weight stable"
                   ],
@@ -90,7 +93,8 @@
                     "in past 3 months"
                   ],
                   "Scope": [
-                    ">2 kg weight change in past 3 months"
+                    ">2 kg weight change in past 3 months",
+                    "not been weight stable"
                   ]
                 }
               }
@@ -124,13 +128,13 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Subjects who are smokers or",
+                          "raw_text": "Subjects who are smokers",
                           "Observation": [
                             "smokers"
                           ]
                         },
                         "right": {
-                          "raw_text": "who have quit smoking <5 years ago",
+                          "raw_text": "or who have quit smoking <5 years ago",
                           "Observation": [
                             "quit smoking"
                           ],
@@ -145,13 +149,13 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Subjects prescribed metformin or h",
+                              "raw_text": "Subjects prescribed metformin",
                               "Drug": [
                                 "metformin"
                               ]
                             },
                             "right": {
-                              "raw_text": "ave taken metformin within 1 year.",
+                              "raw_text": "or have taken metformin within 1 year.",
                               "Drug": [
                                 "metformin"
                               ],
@@ -177,7 +181,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Hypertriglyceridemic (>400",
+                                      "raw_text": "Hypertriglyceridemic",
                                       "Condition": [
                                         "Hypertriglyceridemic"
                                       ],
@@ -186,15 +190,16 @@
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "mg/dl) and hypercholesterolemic (>260 mg/dl) subjects",
+                                      "raw_text": "(>400 mg/dl) and hypercholesterolemic (>260 mg/dl) subjects",
+                                      "Value": [
+                                        ">400 mg/dl",
+                                        ">260 mg/dl"
+                                      ],
                                       "Condition": [
                                         "hypercholesterolemic"
                                       ],
                                       "Measurement": [
                                         "cholesterol"
-                                      ],
-                                      "Value": [
-                                        ">260 mg/dl"
                                       ]
                                     }
                                   }
@@ -218,7 +223,7 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "Subjects currently taking medications that affect heart rate and rhythm (i.e. Ca++ channel blockers, nitrate",
+                                              "raw_text": "Subjects currently taking medications that affect heart rate and rhythm (i.e. Ca++ channel blockers",
                                               "Drug": [
                                                 "medications",
                                                 "Ca++ channel blockers"
@@ -233,15 +238,21 @@
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "s, alpha-"
+                                                  "raw_text": ", nitrates",
+                                                  "Drug": [
+                                                    "nitrates"
+                                                  ]
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "or beta-"
+                                                      "raw_text": ", alpha-"
                                                     },
                                                     "right": {
-                                                      "raw_text": "blockers)."
+                                                      "raw_text": "or beta-blockers).",
+                                                      "Drug": [
+                                                        "beta-blockers"
+                                                      ]
                                                     }
                                                   }
                                                 }
@@ -254,70 +265,95 @@
                                             "left": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "Subjects with a history of significant metabolic, cardiac,",
+                                                  "raw_text": "Subjects with a history of significant metabolic",
                                                   "Observation": [
                                                     "history"
                                                   ],
                                                   "Qualifier": [
                                                     "significant",
-                                                    "metabolic",
-                                                    "cardiac"
+                                                    "metabolic"
                                                   ]
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "congesti"
+                                                      "raw_text": ", cardiac",
+                                                      "Qualifier": [
+                                                        "cardiac"
+                                                      ]
                                                     },
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "ve heart failure, cerebrov"
+                                                          "raw_text": ", congestive heart failure",
+                                                          "Condition": [
+                                                            "congestive heart failure"
+                                                          ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "ascular, hematolo"
+                                                              "raw_text": ", cerebrovascular",
+                                                              "Qualifier": [
+                                                                "cerebrovascular"
+                                                              ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "gical, pulmonar"
+                                                                  "raw_text": ", hematological",
+                                                                  "Qualifier": [
+                                                                    "hematological"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "y, gastroin"
+                                                                      "raw_text": ", pulmonary",
+                                                                      "Qualifier": [
+                                                                        "pulmonary"
+                                                                      ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "testinal, liver, r",
+                                                                          "raw_text": ", gastrointestinal",
                                                                           "Qualifier": [
-                                                                            "liver"
+                                                                            "gastrointestinal"
                                                                           ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "enal, o"
+                                                                              "raw_text": ", liver",
+                                                                              "Qualifier": [
+                                                                                "liver"
+                                                                              ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "r endoc"
+                                                                                  "raw_text": ", renal",
+                                                                                  "Qualifier": [
+                                                                                    "renal"
+                                                                                  ]
                                                                                 },
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "rine disease or cancer",
+                                                                                      "raw_text": ", or endocrine disease",
+                                                                                      "Qualifier": [
+                                                                                        "endocrine"
+                                                                                      ],
                                                                                       "Condition": [
-                                                                                        "disease",
-                                                                                        "cancer"
+                                                                                        "disease"
                                                                                       ]
                                                                                     },
                                                                                     "right": {
-                                                                                      "raw_text": "that in the investigator's opinion would interfere with or alter the outcome measures, or impact subject safety.",
+                                                                                      "raw_text": "or cancer that in the investigator's opinion would interfere with or alter the outcome measures, or impact subject safety.",
+                                                                                      "Condition": [
+                                                                                        "cancer"
+                                                                                      ],
                                                                                       "Non-query-able": [
                                                                                         "that in the investigator's opinion would interfere with or alter the outcome measures, or impact subject safety."
                                                                                       ]
@@ -347,13 +383,13 @@
                                                 "left": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "Pregnant (as eviden",
+                                                      "raw_text": "Pregnant",
                                                       "Condition": [
                                                         "Pregnant"
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "ced by positive pregnancy test) or nursing women",
+                                                      "raw_text": "(as evidenced by positive pregnancy test) or nursing women",
                                                       "Measurement": [
                                                         "pregnancy test"
                                                       ],
@@ -385,51 +421,68 @@
                                                         "left": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "Currently taking active weight suppression medication (e.g. phentermine,orlistat, lo",
+                                                              "raw_text": "Currently taking active weight suppression medication (e.g. phentermine",
                                                               "Condition": [
                                                                 "active"
                                                               ],
                                                               "Drug": [
                                                                 "active weight suppression medication",
-                                                                "phentermine",
-                                                                "orlistat"
+                                                                "phentermine"
                                                               ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "rcaserin,"
+                                                                  "raw_text": ",orlistat",
+                                                                  "Drug": [
+                                                                    "orlistat"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "naltrexone-"
+                                                                      "raw_text": ", lorcaserin",
+                                                                      "Drug": [
+                                                                        "lorcaserin"
+                                                                      ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "bupropion in combination, liraglutide",
+                                                                          "raw_text": ", naltrexone-bupropion in combination",
                                                                           "Drug": [
-                                                                            "liraglutide"
+                                                                            "naltrexone-bupropion in combination"
                                                                           ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": ", benzephetam"
+                                                                              "raw_text": ", liraglutide",
+                                                                              "Drug": [
+                                                                                "liraglutide"
+                                                                              ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "ine, diethylprop"
+                                                                                  "raw_text": ", benzephetamine",
+                                                                                  "Drug": [
+                                                                                    "benzephetamine"
+                                                                                  ]
                                                                                 },
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "ion, phendimetra"
+                                                                                      "raw_text": ", diethylpropion",
+                                                                                      "Drug": [
+                                                                                        "diethylpropion"
+                                                                                      ]
                                                                                     },
                                                                                     "right": {
-                                                                                      "raw_text": "zine)"
+                                                                                      "raw_text": ", phendimetrazine)",
+                                                                                      "Drug": [
+                                                                                        "phendimetrazine"
+                                                                                      ]
                                                                                     }
                                                                                   }
                                                                                 }
@@ -450,17 +503,15 @@
                                                             "left": {
                                                               "AND": {
                                                                 "left": {
-                                                                  "raw_text": "Known hypersensitivity to perflutren",
+                                                                  "raw_text": "Known hypersensitivity",
                                                                   "Condition": [
                                                                     "hypersensitivity"
-                                                                  ],
-                                                                  "Drug": [
-                                                                    "perflutren"
                                                                   ]
                                                                 },
                                                                 "right": {
-                                                                  "raw_text": "(contained in Definity)",
+                                                                  "raw_text": "to perflutren (contained in Definity)",
                                                                   "Drug": [
+                                                                    "perflutren",
                                                                     "Definity"
                                                                   ]
                                                                 }

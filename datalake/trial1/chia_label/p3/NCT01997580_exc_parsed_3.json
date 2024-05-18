@@ -1,0 +1,60 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "DSM-IV-TR substance-related disorders",
+          "Qualifier": [
+            "DSM-IV-TR"
+          ],
+          "Condition": [
+            "substance-related disorders"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "except nicotine)",
+              "Drug": [
+                "nicotine"
+              ],
+              "Negation": [
+                "except"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "significant medical or neurological conditions",
+          "Post-eligibility": [
+            "significant medical or neurological conditions"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "mental retardation o",
+                  "Condition": [
+                    "mental retardation"
+                  ]
+                },
+                "right": {
+                  "raw_text": "r organic brain damage",
+                  "Condition": [
+                    "organic brain damage"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -32,13 +32,13 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "The patient is pregnant o",
+                  "raw_text": "The patient is pregnant",
                   "Condition": [
                     "pregnant"
                   ]
                 },
                 "right": {
-                  "raw_text": "r breastfeeding",
+                  "raw_text": "or breastfeeding",
                   "Observation": [
                     "breastfeeding"
                   ]
@@ -50,7 +50,7 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "raw_text": "Patients have a history of allergy to",
+                      "raw_text": "Patients have a history of allergy",
                       "Observation": [
                         "history"
                       ],
@@ -61,7 +61,7 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "one component of triple therapy regimen (proton pump inhibitor, p",
+                          "raw_text": "to one component of triple therapy regimen (proton pump inhibitor",
                           "Drug": [
                             "component of triple therapy regimen",
                             "proton pump inhibitor"
@@ -70,10 +70,13 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "enicillin, a"
+                              "raw_text": ", penicillin",
+                              "Drug": [
+                                "penicillin"
+                              ]
                             },
                             "right": {
-                              "raw_text": "nd / or macrolide) before.",
+                              "raw_text": ", and / or macrolide) before.",
                               "Drug": [
                                 "macrolide"
                               ]
@@ -89,7 +92,13 @@
                     "left": {
                       "NOT": {
                         "left": {
-                          "raw_text": "revious liver disease.",
+                          "raw_text": "no previous liver disease.",
+                          "Temporal": [
+                            "previous"
+                          ],
+                          "Negation": [
+                            "no"
+                          ],
                           "Condition": [
                             "liver disease"
                           ]
@@ -101,7 +110,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Patients were found to have arrhythmias or o",
+                              "raw_text": "Patients were found to have arrhythmias",
                               "Condition": [
                                 "arrhythmias"
                               ]
@@ -109,13 +118,16 @@
                             "right": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "btained QT wave elongation on e",
+                                  "raw_text": "or obtained QT wave elongation",
                                   "Condition": [
                                     "QT wave elongation"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "lectrocardiographic"
+                                  "raw_text": "on electrocardiographic",
+                                  "Procedure": [
+                                    "electrocardiographic"
+                                  ]
                                 }
                               }
                             }

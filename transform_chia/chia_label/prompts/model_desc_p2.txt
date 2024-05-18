@@ -3,7 +3,8 @@ The input consists of raw textual clinical criteria, which are logically separat
 Each AND, OR node has two branches, ensuring clear logical relationships between the criteria.
 A NOT node, however, can only have one leaf.
 The model generates JSON files from the textual criteria, organizing them into the described logical structure.
-Setting the brackets {}, [] and commas , correctly in the JSON is extremely important. The output is only the JSON object.
+Setting the brackets {}, [] and commas , correctly in the JSON is extremely important.
+For every opening brace { there must also be a closing brace }.
 Any double quotes within the raw textual criteria are escaped with a backslash (\").
 The elegibility criteria must be fully adopted and structured without any information being omitted.
 Only return the JSON Object.

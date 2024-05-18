@@ -31,7 +31,7 @@
         "left": {
           "OR": {
             "left": {
-              "raw_text": "Any history of cervical, penile,",
+              "raw_text": "Any history of cervical, penile",
               "Observation": [
                 "Any history"
               ]
@@ -39,13 +39,20 @@
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "oral"
+                  "raw_text": ", oral"
                 },
                 "right": {
-                  "raw_text": "or anal cancers",
-                  "Condition": [
-                    "anal cancers"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "or anal cancers",
+                      "Condition": [
+                        "anal cancers"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": ""
+                    }
+                  }
                 }
               }
             }
@@ -56,26 +63,19 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": ""
+                  "raw_text": "Being pregnant",
+                  "Condition": [
+                    "pregnant"
+                  ]
                 },
                 "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Being pregnant o",
-                      "Condition": [
-                        "pregnant"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "r plan on immediately becoming pregnant",
-                      "Condition": [
-                        "pregnant"
-                      ],
-                      "Mood": [
-                        "plan on immediately becoming"
-                      ]
-                    }
-                  }
+                  "raw_text": "or plan on immediately becoming pregnant",
+                  "Condition": [
+                    "pregnant"
+                  ],
+                  "Mood": [
+                    "plan on immediately becoming"
+                  ]
                 }
               }
             }

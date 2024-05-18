@@ -1,0 +1,127 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients with a history of an untreated malignancy",
+          "Qualifier": [
+            "untreated"
+          ],
+          "Condition": [
+            "malignancy"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "except local skin cancers)",
+              "Condition": [
+                "local skin cancers"
+              ],
+              "Negation": [
+                "except"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Ischemic stroke (determined using the Questionnaire for Verifying Stroke-Free Status (QVSFS)",
+          "Condition": [
+            "Ischemic stroke"
+          ],
+          "Qualifier": [
+            "Questionnaire for Verifying Stroke-Free Status (QVSFS)"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Patients on renal dialysis o",
+                  "Procedure": [
+                    "renal dialysis"
+                  ]
+                },
+                "right": {
+                  "raw_text": "r with end-stage hepatic dysfunction",
+                  "Condition": [
+                    "end-stage hepatic dysfunction"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Acute infection/in",
+                      "Qualifier": [
+                        "Acute"
+                      ],
+                      "Condition": [
+                        "infection"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "flammation (Temperature >",
+                          "Measurement": [
+                            "Temperature"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "101.5 F, and/or WBC> 15, 000)",
+                          "Measurement": [
+                            "WBC"
+                          ],
+                          "Value": [
+                            "> 15, 000"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Inability to obtain informed consent from patient or next of kin",
+                      "Informed_consent": [
+                        "Inability to obtain informed consent from patient or next of kin"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Anticoagulant use (warfarin or h",
+                              "Drug": [
+                                "Anticoagulant",
+                                "warfarin"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "eparin)"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

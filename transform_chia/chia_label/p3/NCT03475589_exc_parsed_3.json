@@ -24,12 +24,15 @@
         "left": {
           "NOT": {
             "left": {
-              "raw_text": "ot be controlled by drugs;",
+              "raw_text": "not be controlled by drugs;",
               "Qualifier": [
                 "controlled by drugs"
               ],
               "Drug": [
                 "drugs"
+              ],
+              "Negation": [
+                "not"
               ]
             }
           }
@@ -39,7 +42,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "A history of active hemorragge,",
+                  "raw_text": "A history of active hemorragge",
                   "Qualifier": [
                     "active"
                   ],
@@ -53,7 +56,7 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "ulcer,",
+                      "raw_text": ", ulcer",
                       "Condition": [
                         "ulcer"
                       ]
@@ -61,7 +64,7 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "intestinal perforation,",
+                          "raw_text": ", intestinal perforation",
                           "Condition": [
                             "intestinal perforation"
                           ]
@@ -69,13 +72,13 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "intestinal obstruction,",
+                              "raw_text": ", intestinal obstruction",
                               "Condition": [
                                 "intestinal obstruction"
                               ]
                             },
                             "right": {
-                              "raw_text": "or major surgery no older than 30 days;",
+                              "raw_text": ", or major surgery no older than 30 days;",
                               "Condition": [
                                 "major surgery"
                               ],
@@ -96,7 +99,7 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "raw_text": "NYHA II",
+                      "raw_text": "NYHA",
                       "Measurement": [
                         "NYHA"
                       ]
@@ -104,13 +107,16 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "I-IV heart function, o",
+                          "raw_text": "III-IV heart function",
+                          "Value": [
+                            "III-IV"
+                          ],
                           "Condition": [
                             "heart function"
                           ]
                         },
                         "right": {
-                          "raw_text": "r severe hepatic or renal insufficiency (Grade 4);",
+                          "raw_text": ", or severe hepatic or renal insufficiency (Grade 4);",
                           "Qualifier": [
                             "severe",
                             "Grade 4"
@@ -131,7 +137,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Presence of multiple factors that affect oral medications, such as difficulty swallowing, na",
+                          "raw_text": "Presence of multiple factors that affect oral medications, such as difficulty swallowing",
                           "Observation": [
                             "factors that affect oral medications"
                           ],
@@ -142,20 +148,29 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "usea, vo"
+                              "raw_text": ", nausea",
+                              "Condition": [
+                                "nausea"
+                              ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "miting, ch"
+                                  "raw_text": ", vomiting",
+                                  "Condition": [
+                                    "vomiting"
+                                  ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "ronic diarrhea and"
+                                      "raw_text": ", chronic diarrhea",
+                                      "Condition": [
+                                        "chronic diarrhea"
+                                      ]
                                     },
                                     "right": {
-                                      "raw_text": "intestinal obstruction;",
+                                      "raw_text": "and intestinal obstruction;",
                                       "Condition": [
                                         "intestinal obstruction"
                                       ]
@@ -184,12 +199,9 @@
                             "left": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "Patients who have a history of psychotropics abuse",
+                                  "raw_text": "Patients who have a history of psychotropics",
                                   "Observation": [
                                     "history"
-                                  ],
-                                  "Condition": [
-                                    "abuse"
                                   ],
                                   "Drug": [
                                     "psychotropics"
@@ -198,15 +210,21 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "and c"
+                                      "raw_text": "abuse",
+                                      "Condition": [
+                                        "abuse"
+                                      ]
                                     },
                                     "right": {
-                                      "raw_text": "an not quit, or who have mental disorders;",
+                                      "raw_text": "and can not quit, or who have mental disorders;",
                                       "Negation": [
                                         "not"
                                       ],
                                       "Condition": [
                                         "mental disorders"
+                                      ],
+                                      "Non-representable": [
+                                        "and can not quit"
                                       ]
                                     }
                                   }
@@ -226,14 +244,17 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Prior therapy with VEGFR inhibitors such as sorafenib and sun",
+                                          "raw_text": "Prior therapy with VEGFR inhibitors such as sorafenib",
                                           "Drug": [
                                             "VEGFR inhibitors",
                                             "sorafenib"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "itinib;"
+                                          "raw_text": "and sunitinib;",
+                                          "Drug": [
+                                            "sunitinib"
+                                          ]
                                         }
                                       }
                                     },
@@ -252,15 +273,21 @@
                                                 "left": {
                                                   "AND": {
                                                     "left": {
-                                                      "raw_text": "te apatinib",
-                                                      "Drug": [
-                                                        "apatinib"
+                                                      "raw_text": "not tolerate",
+                                                      "Negation": [
+                                                        "not"
+                                                      ],
+                                                      "Condition": [
+                                                        "tolerate"
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "treatment as judged by the investigator depending on the their medical history;",
+                                                      "raw_text": "apatinib treatment as judged by the investigator depending on the their medical history;",
                                                       "Observation": [
                                                         "history"
+                                                      ],
+                                                      "Drug": [
+                                                        "apatinib"
                                                       ]
                                                     }
                                                   }

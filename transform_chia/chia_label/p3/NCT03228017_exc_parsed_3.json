@@ -25,7 +25,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "Autoimmune, rheumatologic or inflammatory disease w",
+                  "raw_text": "Autoimmune, rheumatologic or inflammatory disease",
                   "Condition": [
                     "inflammatory disease"
                   ],
@@ -38,13 +38,16 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "t psoriasis o",
+                          "raw_text": "not psoriasis",
+                          "Negation": [
+                            "not"
+                          ],
                           "Condition": [
                             "psoriasis"
                           ]
                         },
                         "right": {
-                          "raw_text": "r psoriatic arthritis",
+                          "raw_text": "or psoriatic arthritis",
                           "Condition": [
                             "psoriatic arthritis"
                           ]
@@ -60,7 +63,7 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "raw_text": "Known active cancer re",
+                      "raw_text": "Known active cancer",
                       "Condition": [
                         "cancer"
                       ],
@@ -69,7 +72,7 @@
                       ]
                     },
                     "right": {
-                      "raw_text": "ceiving treatment",
+                      "raw_text": "receiving treatment",
                       "Procedure": [
                         "treatment"
                       ]
@@ -89,7 +92,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Anemia (hem",
+                              "raw_text": "Anemia",
                               "Condition": [
                                 "Anemia"
                               ]
@@ -97,7 +100,10 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "oglobin < 9 mg/dl) or thrombocytopenia (Pla",
+                                  "raw_text": "(hemoglobin < 9 mg/dl) or thrombocytopenia",
+                                  "Measurement": [
+                                    "hemoglobin"
+                                  ],
                                   "Value": [
                                     "< 9 mg/dl"
                                   ],
@@ -106,7 +112,7 @@
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "telet count <75), or thrombocytosis (Platelet count >600)",
+                                  "raw_text": "(Platelet count <75), or thrombocytosis (Platelet count >600)",
                                   "Measurement": [
                                     "Platelet count"
                                   ],
@@ -145,7 +151,7 @@
                                 "left": {
                                   "AND": {
                                     "left": {
-                                      "raw_text": "Current medication use wh",
+                                      "raw_text": "Current medication",
                                       "Temporal": [
                                         "Current"
                                       ],
@@ -156,7 +162,7 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "ich interact with either aspirin or ato",
+                                          "raw_text": "use which interact with either aspirin",
                                           "Drug": [
                                             "aspirin"
                                           ],
@@ -165,8 +171,9 @@
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "rvastatin",
+                                          "raw_text": "or atorvastatin",
                                           "Drug": [
+                                            "atorvastatin",
                                             "statin"
                                           ]
                                         }

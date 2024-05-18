@@ -1,0 +1,138 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Age< 18",
+      "Person": [
+        "Age"
+      ],
+      "Value": [
+        "< 18"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Pregnancy",
+          "Condition": [
+            "Pregnancy"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Bradycardia (HR<55bpm)",
+              "Condition": [
+                "Bradycardia"
+              ],
+              "Measurement": [
+                "HR"
+              ],
+              "Value": [
+                "<55bpm"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Systolic Blood Pressure <",
+                      "Measurement": [
+                        "Systolic Blood Pressure"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "80 mmHg / Mean arterial pressure < 50 mmHg on maximal support",
+                      "Measurement": [
+                        "Mean arterial pressure"
+                      ],
+                      "Value": [
+                        "< 50 mmHg"
+                      ],
+                      "Qualifier": [
+                        "on maximal support"
+                      ],
+                      "Procedure": [
+                        "support"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Death imminent",
+                      "Condition": [
+                        "Death"
+                      ],
+                      "Temporal": [
+                        "imminent"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Unlikely to survive 90 days",
+                          "Non-representable": [
+                            "Unlikely to survive 90 days"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Acute liver failure",
+                              "Condition": [
+                                "Acute liver failure"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "Dementia",
+                                  "Condition": [
+                                    "Dementia"
+                                  ]
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "High-grade block in the",
+                                          "Condition": [
+                                            "High-grade block"
+                                          ]
+                                        },
+                                        "right": {
+                                          "NOT": {
+                                            "left": {
+                                              "raw_text": "bsence of a functioning pacemaker.",
+                                              "Device": [
+                                                "pacemaker"
+                                              ],
+                                              "Qualifier": [
+                                                "functioning"
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

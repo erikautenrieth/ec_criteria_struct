@@ -41,13 +41,13 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "HIV co-infection i",
+                  "raw_text": "HIV co-infection",
                   "Condition": [
                     "HIV co-infection"
                   ]
                 },
                 "right": {
-                  "raw_text": "f on a protease inhibitor based regimen",
+                  "raw_text": "if on a protease inhibitor based regimen",
                   "Drug": [
                     "protease inhibitor"
                   ]
@@ -82,7 +82,10 @@
                         "left": {
                           "NOT": {
                             "left": {
-                              "raw_text": "than HCV",
+                              "raw_text": "other than HCV",
+                              "Negation": [
+                                "other"
+                              ],
                               "Observation": [
                                 "HCV"
                               ]
@@ -94,13 +97,16 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "F4 or de",
+                                  "raw_text": "F4",
                                   "Observation": [
                                     "F4"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "compensated cirrhotic patients"
+                                  "raw_text": "or decompensated cirrhotic patients",
+                                  "Condition": [
+                                    "decompensated cirrhotic"
+                                  ]
                                 }
                               }
                             },
@@ -120,23 +126,22 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "AST or ALT",
+                                          "raw_text": "AST",
                                           "Measurement": [
-                                            "AST",
-                                            "ALT"
-                                          ],
-                                          "Scope": [
-                                            "AST or ALT"
+                                            "AST"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": ">350 within 6 months prior to enrollment",
+                                          "raw_text": "or ALT >350 within 6 months prior to enrollment",
                                           "Temporal": [
                                             "prior to enrollment",
                                             "within 6 months prior to enrollment"
                                           ],
                                           "Reference_point": [
                                             "enrollment"
+                                          ],
+                                          "Measurement": [
+                                            "ALT"
                                           ],
                                           "Value": [
                                             ">350"
@@ -177,7 +182,7 @@
                                                 "left": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "History of clinically significant allergy or adverse",
+                                                      "raw_text": "History of clinically significant allergy",
                                                       "Condition": [
                                                         "allergy"
                                                       ]
@@ -185,10 +190,17 @@
                                                     "right": {
                                                       "AND": {
                                                         "left": {
-                                                          "raw_text": "event with prote"
+                                                          "raw_text": "or adverse event",
+                                                          "Condition": [
+                                                            "adverse event"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "ase inhibitors"
+                                                          "raw_text": "with protease inhibitors",
+                                                          "Drug": [
+                                                            "protease inhibitor",
+                                                            "protease inhibitors"
+                                                          ]
                                                         }
                                                       }
                                                     }
@@ -224,7 +236,7 @@
                                                             "left": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "Cyclosporine; St. John's W",
+                                                                  "raw_text": "Cyclosporine",
                                                                   "Drug": [
                                                                     "Cyclosporine"
                                                                   ]
@@ -232,59 +244,76 @@
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "ort; Efavirenz; P",
+                                                                      "raw_text": "; St. John's Wort",
                                                                       "Drug": [
-                                                                        "Efavirenz"
+                                                                        "St. John's Wort"
                                                                       ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "henytoin; C"
+                                                                          "raw_text": "; Efavirenz",
+                                                                          "Drug": [
+                                                                            "Efavirenz"
+                                                                          ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "arbamazepin"
+                                                                              "raw_text": "; Phenytoin",
+                                                                              "Drug": [
+                                                                                "Phenytoin"
+                                                                              ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "e; Bosentan; HI",
+                                                                                  "raw_text": "; Carbamazepine",
                                                                                   "Drug": [
-                                                                                    "Bosentan"
+                                                                                    "Carbamazepine"
                                                                                   ]
                                                                                 },
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "V protease"
+                                                                                      "raw_text": "; Bosentan",
+                                                                                      "Drug": [
+                                                                                        "Bosentan"
+                                                                                      ]
                                                                                     },
                                                                                     "right": {
                                                                                       "OR": {
                                                                                         "left": {
-                                                                                          "raw_text": "inhibitors; modafinil; k",
+                                                                                          "raw_text": "; HIV protease inhibitors",
                                                                                           "Drug": [
-                                                                                            "modafinil"
+                                                                                            "protease inhibitor",
+                                                                                            "protease inhibitors",
+                                                                                            "HIV protease inhibitors"
                                                                                           ]
                                                                                         },
                                                                                         "right": {
                                                                                           "OR": {
                                                                                             "left": {
-                                                                                              "raw_text": "etoconazole"
+                                                                                              "raw_text": "; modafinil",
+                                                                                              "Drug": [
+                                                                                                "modafinil"
+                                                                                              ]
                                                                                             },
                                                                                             "right": {
                                                                                               "OR": {
                                                                                                 "left": {
-                                                                                                  "raw_text": "; or rifampin",
+                                                                                                  "raw_text": "; ketoconazole",
                                                                                                   "Drug": [
-                                                                                                    "rifampin"
+                                                                                                    "ketoconazole"
                                                                                                   ]
                                                                                                 },
                                                                                                 "right": {
-                                                                                                  "raw_text": "use within 7 days of enrollment",
+                                                                                                  "raw_text": "; or rifampin use within 7 days of enrollment",
                                                                                                   "Reference_point": [
                                                                                                     "enrollment"
+                                                                                                  ],
+                                                                                                  "Drug": [
+                                                                                                    "rifampin"
                                                                                                   ],
                                                                                                   "Temporal": [
                                                                                                     "within 7 days of enrollment"
@@ -313,7 +342,7 @@
                                                                 "left": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "Coadministration of more than 20 mg atorvastatin; 10 mg rosuvas",
+                                                                      "raw_text": "Coadministration of more than 20 mg atorvastatin",
                                                                       "Multiplier": [
                                                                         "more than 20 mg"
                                                                       ],
@@ -324,26 +353,32 @@
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "tatin; 20 mg of fluv"
+                                                                          "raw_text": "; 10 mg rosuvastatin",
+                                                                          "Drug": [
+                                                                            "rosuvastatin"
+                                                                          ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "astatin, lovastatin or",
+                                                                              "raw_text": "; 20 mg of fluvastatin",
                                                                               "Drug": [
-                                                                                "lovastatin"
+                                                                                "fluvastatin"
                                                                               ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "simvastatin",
+                                                                                  "raw_text": ", lovastatin",
                                                                                   "Drug": [
-                                                                                    "simvastatin"
+                                                                                    "lovastatin"
                                                                                   ]
                                                                                 },
                                                                                 "right": {
-                                                                                  "raw_text": ""
+                                                                                  "raw_text": "or simvastatin",
+                                                                                  "Drug": [
+                                                                                    "simvastatin"
+                                                                                  ]
                                                                                 }
                                                                               }
                                                                             }

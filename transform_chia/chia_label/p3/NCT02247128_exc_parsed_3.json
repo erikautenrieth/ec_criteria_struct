@@ -39,58 +39,59 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Bare-metal stent i",
+                  "raw_text": "Bare-metal stent",
                   "Device": [
                     "Bare-metal stent"
                   ]
                 },
                 "right": {
-                  "raw_text": "mplantation within 1 month prior to TAVI procedure;",
-                  "Reference_point": [
-                    "TAVI procedure"
-                  ],
-                  "Procedure": [
-                    "TAVI procedure"
-                  ],
-                  "Temporal": [
-                    "within 1 month prior to TAVI procedure"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "implantation within 1 month prior to TAVI procedure",
+                      "Procedure": [
+                        "implantation",
+                        "TAVI procedure"
+                      ],
+                      "Reference_point": [
+                        "TAVI procedure"
+                      ],
+                      "Temporal": [
+                        "within 1 month prior to TAVI procedure"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": ";"
+                    }
+                  }
                 }
               }
             },
             "right": {
               "AND": {
                 "left": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "raw_text": ""
+                      "raw_text": "Allergy",
+                      "Condition": [
+                        "Allergy"
+                      ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "Allergy or",
+                          "raw_text": "or intolerance to aspirin",
                           "Condition": [
-                            "Allergy"
+                            "intolerance"
+                          ],
+                          "Drug": [
+                            "aspirin"
                           ]
                         },
                         "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "intolerance to aspirin or",
-                              "Condition": [
-                                "intolerance"
-                              ],
-                              "Drug": [
-                                "aspirin"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "clopidogrel.",
-                              "Drug": [
-                                "clopidogrel"
-                              ]
-                            }
-                          }
+                          "raw_text": "or clopidogrel.",
+                          "Drug": [
+                            "clopidogrel"
+                          ]
                         }
                       }
                     }
@@ -101,20 +102,21 @@
                     "left": {
                       "AND": {
                         "left": {
-                          "raw_text": "Drug-eluting stent imp",
+                          "raw_text": "Drug-eluting stent",
                           "Device": [
                             "Drug-eluting stent"
                           ]
                         },
                         "right": {
-                          "raw_text": "lantation within 3 months prior to TAVI procedure;",
+                          "raw_text": "implantation within 3 months prior to TAVI procedure;",
+                          "Procedure": [
+                            "implantation",
+                            "TAVI procedure"
+                          ],
                           "Temporal": [
                             "within 3 months prior to TAVI procedure"
                           ],
                           "Reference_point": [
-                            "TAVI procedure"
-                          ],
-                          "Procedure": [
                             "TAVI procedure"
                           ]
                         }
@@ -125,17 +127,18 @@
                         "left": {
                           "AND": {
                             "left": {
-                              "raw_text": "Bare-metal stent impl",
+                              "raw_text": "Bare-metal stent",
                               "Device": [
                                 "Bare-metal stent"
                               ]
                             },
                             "right": {
-                              "raw_text": "antation within 1 month prior to TAVI procedure;",
-                              "Reference_point": [
+                              "raw_text": "implantation within 1 month prior to TAVI procedure;",
+                              "Procedure": [
+                                "implantation",
                                 "TAVI procedure"
                               ],
-                              "Procedure": [
+                              "Reference_point": [
                                 "TAVI procedure"
                               ],
                               "Temporal": [
@@ -149,7 +152,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Allergy or in",
+                                  "raw_text": "Allergy",
                                   "Condition": [
                                     "Allergy"
                                   ]
@@ -157,13 +160,19 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "tolerance to (N)OAC or cl",
+                                      "raw_text": "or intolerance to (N)OAC",
+                                      "Condition": [
+                                        "intolerance"
+                                      ],
                                       "Drug": [
                                         "(N)OAC"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "opidogrel."
+                                      "raw_text": "or clopidogrel.",
+                                      "Drug": [
+                                        "clopidogrel"
+                                      ]
                                     }
                                   }
                                 }

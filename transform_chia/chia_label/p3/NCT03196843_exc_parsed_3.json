@@ -43,7 +43,7 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Patient have contraindication t",
+                  "raw_text": "Patient have contraindication",
                   "Condition": [
                     "contraindication"
                   ]
@@ -51,7 +51,7 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "o chemotherapy(eg.uncontrolled coronarism a",
+                      "raw_text": "to chemotherapy(eg.uncontrolled coronarism",
                       "Procedure": [
                         "chemotherapy"
                       ],
@@ -66,7 +66,7 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "nd heart failure;",
+                          "raw_text": "and heart failure",
                           "Condition": [
                             "heart failure"
                           ]
@@ -74,7 +74,7 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "History of myocardial infarction w",
+                              "raw_text": "; History of myocardial infarction",
                               "Observation": [
                                 "History"
                               ],
@@ -85,7 +85,10 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "ithin the past 6 months, Chronic obstructive pulmonary,",
+                                  "raw_text": "within the past 6 months, Chronic obstructive pulmonary",
+                                  "Temporal": [
+                                    "within the past 6 months"
+                                  ],
                                   "Condition": [
                                     "Chronic obstructive pulmonary"
                                   ]
@@ -93,7 +96,7 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "uncontrolled epileptic attack a",
+                                      "raw_text": ", uncontrolled epileptic attack",
                                       "Qualifier": [
                                         "uncontrolled"
                                       ],
@@ -104,7 +107,7 @@
                                     "right": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "nd other disease t",
+                                          "raw_text": "and other disease",
                                           "Qualifier": [
                                             "other"
                                           ],
@@ -113,16 +116,23 @@
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "hat investigator consider it unsuitable for the chemotherapy)",
-                                          "Procedure": [
-                                            "chemotherapy"
-                                          ],
-                                          "Qualifier": [
-                                            "other"
-                                          ],
-                                          "Condition": [
-                                            "unsuitable for the chemotherapy"
-                                          ]
+                                          "AND": {
+                                            "left": {
+                                              "raw_text": "that investigator consider it unsuitable for the chemotherapy",
+                                              "Procedure": [
+                                                "chemotherapy"
+                                              ],
+                                              "Qualifier": [
+                                                "other"
+                                              ],
+                                              "Condition": [
+                                                "unsuitable for the chemotherapy"
+                                              ]
+                                            },
+                                            "right": {
+                                              "raw_text": ")"
+                                            }
+                                          }
                                         }
                                       }
                                     }
@@ -133,20 +143,6 @@
                           }
                         }
                       }
-                    }
-                  }
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": ""
-                    },
-                    "right": {
-                      "raw_text": ""
                     }
                   }
                 }
