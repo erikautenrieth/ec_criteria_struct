@@ -1,0 +1,64 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Patients unable to give informed consent."
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Any patient whose condition"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "not allow for placement"
+                    },
+                    "right": {
+                      "raw_text": "of the electrode PadSet."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "not extubated in OR"
+                    },
+                    "right": {
+                      "raw_text": "or PACU."
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Patients with Impaired Renal Function with a have a known estimated CrCl<30 ml/min"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Patients using oral contraception."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
