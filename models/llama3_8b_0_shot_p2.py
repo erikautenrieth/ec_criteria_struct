@@ -7,37 +7,22 @@ transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 # Model
 model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 model_name = "Llama-3-8B-Instruct"
-# N Shots
-n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
-output_path = f"{transform_chia}/model_output/{model_name}_{n_shot}_shot/output/"
+output_path = f"{transform_chia}/model_output/{model_name}_0_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
 anfang = 0 
-ende = 2000
+ende = 300
 study_files = os.listdir(study_path)[anfang:ende]  
 
 
 # Load Model Description
-model_desc = read_text_file(f"{transform_chia}/chia_label/prompts/model_desc_p2.txt")
-
-
-# Load n-shot Data
-study_folder = f"{transform_chia}/input/half_clinical_trials/" 
-label_folder = f'{transform_chia}/chia_label/p2_model_input' 
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, n_shot)
-studies = dict(zip(study_filenames, study_contents))
-labels = dict(zip(label_filenames, label_contents))
-messages = []
+model_desc_0_shot = read_text_file(f"{transform_chia}/chia_label/prompts/model_desc_0_shot.txt")
 
 command = "bring the following study in JSON format with logical operators. Only return JSON:"
-
-for i in range(n_shot):
-    messages.append({"role": "system", "content": f"{model_desc} {command} {studies[study_filenames[i]]}"})
-    messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
 print("Hier fängt die Pipeline an")
@@ -54,11 +39,10 @@ for file in study_files:
     
     test_file = read_text_file(study_path+file)
 
-    if len(messages) > n_shot * 2:
-        messages[-1] = {"role": "user", "content": f"{command} {test_file}"}
-    else:
-        messages.append({"role": "user", "content": f"{command} {test_file}"})
-
+    messages = [
+    {"role": "system", "content": f"{model_desc_0_shot}"},
+    {"role": "user", "content": f"{command} {test_file}"},
+    ]
 
     prompt = pipeline.tokenizer.apply_chat_template(
                 messages, 
@@ -70,7 +54,6 @@ for file in study_files:
             pipeline.tokenizer.eos_token_id,
             pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
     ]
-
 
     outputs = pipeline(
             prompt,
@@ -85,4 +68,4 @@ for file in study_files:
    
     #print(f"\n {model_name} Output: \n  {gen_output} \n")
     
-    save_json(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.json")
+    save_json(gen_output, f"{output_path}{model_name}_{file_name}_0_shot.json")
