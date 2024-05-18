@@ -41,6 +41,9 @@ label2 = labels[label_keys[1]]
 label3 = labels[label_keys[2]]
 label4 = labels[label_keys[3]]
 
+
+command = "bring the following study in json format with logical operators and extract entitys and realtions:"
+
 print("Hier fängt die Pipeline an")
 pipeline = transformers.pipeline(
             "text-generation",
@@ -58,14 +61,15 @@ for file in study_files:
 
     messages = [
             {"role": "system", "content": f"{model_desc}: {study1}"},
+            {"role": "user", "content": f" {command} {study1}"},
             {"role": "assistant", "content": label1},
-            {"role": "user", "content": f"bring the following study in json format with logical operators and extract entitys and realtions: {study2}"},
+            {"role": "user", "content": f" {study2}"},
             {"role": "assistant", "content": label2},
-            {"role": "user", "content": f"bring the following study in json format with logical operators and extract entitys and realtions: {study3}"},
+            {"role": "user", "content": f"{command} {study3}"},
             {"role": "assistant", "content": label3},
-            {"role": "user", "content": f"bring the following study in json format with logical operators and extract entitys and realtions: {study4}"},
+            {"role": "user", "content": f"{command} {study4}"},
             {"role": "assistant", "content": label4},    
-            {"role": "user", "content": f"bring the following study in json format with logical operators and extract entitys and realtions: {test_file}"},
+            {"role": "user", "content": f"{command} {test_file}"},
         ]
 
     prompt = pipeline.tokenizer.apply_chat_template(
