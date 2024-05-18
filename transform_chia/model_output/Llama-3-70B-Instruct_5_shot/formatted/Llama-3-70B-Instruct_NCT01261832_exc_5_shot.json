@@ -1,0 +1,90 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "The patient has a known hypersensitivity or contraindication to any of the following medications: Heparin"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", Aspirin"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", Clopidogrel"
+                },
+                "right": {
+                  "raw_text": ", Cilostazol"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Uncontrolled hypertension"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "History of bleeding diathesis"
+                },
+                "right": {
+                  "raw_text": "or known coagulopathy (including heparin-induced thrombocytopenia)"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or refuses blood transfusions"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Baseline hemogram with Hb<10g/dL"
+                    },
+                    "right": {
+                      "raw_text": "or PLT count<100,000/μL"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "raw_text": "Patients already taking warfarin, cilostazol or any other type of anti-platelet agents except aspirin and clopidogrel"
+      },
+      "right": {
+        "AND": {
+          "left": {
+            "raw_text": "Gastrointestinal or genitourinary bleeding within the prior 3 months"
+          },
+          "right": {
+            "OR": {
+              "left": {
+                "raw_text": "or major surgery within 2 months"
+              },
+              "right": {
+                "raw_text": "Pregnancy"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

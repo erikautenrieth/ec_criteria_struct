@@ -1,0 +1,142 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Women who are pregnant",
+          "Condition": [
+            "pregnant"
+          ],
+          "Person": [
+            "Women"
+          ]
+        },
+        "right": {
+          "raw_text": "or breastfeeding (pregnancy defined as the state of a female after conception until the termination of gestation, confirmed by a positive human chorionic gonadotropin laboratory test (> 5mIU/mL)",
+          "Observation": [
+            "breastfeeding"
+          ],
+          "Measurement": [
+            "human chorionic gonadotropin"
+          ],
+          "Procedure": [
+            "human chorionic gonadotropin laboratory test"
+          ],
+          "Value": [
+            "positive",
+            "> 5mIU/mL"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Women of child bearing potential",
+              "Person": [
+                "Women"
+              ],
+              "Condition": [
+                "child bearing potential"
+              ],
+              "Scope": [
+                "Women of child bearing potential"
+              ]
+            },
+            "right": {
+              "raw_text": "must be practicing effective contraception implemented during the trial and for at least 28 days following the last dose of study medication",
+              "Qualifier": [
+                "effective"
+              ],
+              "Procedure": [
+                "contraception"
+              ],
+              "Temporal": [
+                "during the trial",
+                "for at least 28 days following the last dose of study medication"
+              ],
+              "Multiplier": [
+                "last dose"
+              ],
+              "Drug": [
+                "study medication"
+              ],
+              "Reference_point": [
+                "the last dose of study medication"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Tromboembolic event (CVA",
+                  "Condition": [
+                    "Tromboembolic event",
+                    "CVA"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or transient ischemic attack",
+                      "Condition": [
+                        "transient ischemic attack"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": ", AMI) less than 3 months prior to the intravitreal injection",
+                          "Condition": [
+                            "AMI"
+                          ],
+                          "Procedure": [
+                            "intravitreal injection"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "of bevacizumab",
+                          "Drug": [
+                            "bevacizumab"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "History of hypersensitivity",
+                      "Condition": [
+                        "hypersensitivity"
+                      ],
+                      "Observation": [
+                        "History"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "for bevacizumab.",
+                      "Drug": [
+                        "bevacizumab"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Body mass index less than 18 kg/m2",
+          "Measurement": [
+            "Body mass index"
+          ],
+          "Value": [
+            "less than 18 kg/m2"
+          ]
+        },
+        "right": {
+          "raw_text": "or greater than 30 kg/m2.",
+          "Value": [
+            "greater than 30 kg/m2"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "History of previous open-laparotomy.",
+          "Procedure": [
+            "open-laparotomy"
+          ],
+          "Temporal": [
+            "previous"
+          ],
+          "Observation": [
+            "History"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Surgery with major complication",
+                  "Condition": [
+                    "major complication"
+                  ],
+                  "Procedure": [
+                    "Surgery"
+                  ]
+                },
+                "right": {
+                  "raw_text": ", or need blood transfusion.",
+                  "Mood": [
+                    "need"
+                  ],
+                  "Condition": [
+                    "blood transfusion"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "History of hypersensitivity",
+                      "Observation": [
+                        "History"
+                      ],
+                      "Condition": [
+                        "hypersensitivity"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or adverse reaction to local anesthetics",
+                          "Condition": [
+                            "adverse reaction"
+                          ],
+                          "Drug": [
+                            "local anesthetics"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", opioid",
+                              "Drug": [
+                                "opioid"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": ", or any ingredient of the medications administered in this study.",
+                              "Drug": [
+                                "ingredient of the medications administered in this study"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Severe comorbidity.",
+                      "Condition": [
+                        "comorbidity"
+                      ],
+                      "Qualifier": [
+                        "Severe"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Chronic preoperative opioid consumption.",
+                          "Drug": [
+                            "opioid"
+                          ],
+                          "Qualifier": [
+                            "Chronic"
+                          ],
+                          "Temporal": [
+                            "preoperative"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "Pregnant",
+                                  "Condition": [
+                                    "Pregnant"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or breastfeeding.",
+                                  "Observation": [
+                                    "breastfeeding"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "Inability",
+                                      "Condition": [
+                                        "Inability"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "to use the PCA device.",
+                                      "Procedure": [
+                                        "use the PCA"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

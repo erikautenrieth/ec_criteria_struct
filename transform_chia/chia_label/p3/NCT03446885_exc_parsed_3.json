@@ -1,0 +1,105 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "any medical condition",
+          "Condition": [
+            "medical condition"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "that would contraindicate",
+              "Condition": [
+                "contraindicate"
+              ]
+            },
+            "right": {
+              "raw_text": "use of stimulant medication",
+              "Drug": [
+                "stimulant medication"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "any prior adverse response to lisdexamfetamine dimesylate",
+              "Temporal": [
+                "prior"
+              ],
+              "Condition": [
+                "adverse response"
+              ],
+              "Drug": [
+                "lisdexamfetamine dimesylate"
+              ]
+            },
+            "right": {
+              "raw_text": "or other stimulant medication",
+              "Drug": [
+                "stimulant medication"
+              ],
+              "Qualifier": [
+                "other"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "use of concurrent,non-stimulant psychoactive medication",
+              "Temporal": [
+                "concurrent"
+              ],
+              "Drug": [
+                "non-stimulant psychoactive medication"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "diagnosis of schizophrenia",
+                      "Condition": [
+                        "schizophrenia"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or presence of thought disorder symptoms",
+                      "Condition": [
+                        "thought disorder"
+                      ],
+                      "Mood": [
+                        "symptoms"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "autism spectrum disorder",
+                      "Condition": [
+                        "autism spectrum disorder"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

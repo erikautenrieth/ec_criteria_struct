@@ -1,0 +1,78 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Age"
+        },
+        "right": {
+          "BETWEEN": {
+            "left": {
+              "raw_text": "0"
+            },
+            "right": {
+              "raw_text": "18 years"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Venous pH"
+        },
+        "right": {
+          "LESS THAN": {
+            "raw_text": "7.25"
+          }
+        }
+      },
+      "AND": {
+        "left": {
+          "raw_text": "Ketonuria"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "as confirmed on"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "urine point-of-care testing"
+                },
+                "right": {
+                  "raw_text": "or urinalysis"
+                }
+              }
+            }
+          }
+        }
+      },
+      "AND": {
+        "left": {
+          "raw_text": "Hyperglycemia"
+        },
+        "right": {
+          "raw_text": "(Serum glucose > 200 mg/dl)"
+        }
+      },
+      "AND": {
+        "left": {
+          "raw_text": "Serum bicarbonate"
+        },
+        "right": {
+          "LESS THAN": {
+            "raw_text": "15 mmol/L"
+          }
+        }
+      },
+      "AND": {
+        "left": {
+          "raw_text": "PICU admission"
+        }
+      }
+    }
+  }
+}

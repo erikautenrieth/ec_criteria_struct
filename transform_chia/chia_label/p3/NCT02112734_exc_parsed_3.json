@@ -1,0 +1,78 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Infants who have already received postnatal vitamin D supplementation",
+      "Person": [
+        "Infants"
+      ],
+      "Procedure": [
+        "postnatal vitamin D supplementation"
+      ],
+      "Drug": [
+        "vitamin D"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "prematurity",
+              "Condition": [
+                "prematurity"
+              ]
+            },
+            "right": {
+              "raw_text": "(<37 weeks)/low birthweight <2500 g",
+              "Condition": [
+                "low birthweight"
+              ],
+              "Measurement": [
+                "birthweight"
+              ],
+              "Value": [
+                "<2500 g"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "poor health due to a current",
+                  "Condition": [
+                    "poor health"
+                  ],
+                  "Temporal": [
+                    "current"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or past significant disease state",
+                      "Temporal": [
+                        "past"
+                      ],
+                      "Condition": [
+                        "significant disease state"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or congenital abnormality.",
+                      "Condition": [
+                        "congenital abnormality"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

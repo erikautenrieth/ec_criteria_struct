@@ -1,0 +1,122 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Age less than 18 years",
+      "Person": [
+        "Age"
+      ],
+      "Value": [
+        "less than 18 years"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "American Society of Anesthesiologist Class 5",
+          "Measurement": [
+            "American Society of Anesthesiologist Class"
+          ],
+          "Value": [
+            "5"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Projected life expectancy less than 30 days",
+              "Observation": [
+                "Projected life expectancy"
+              ],
+              "Value": [
+                "less than 30 days"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Known",
+                      "Mood": [
+                        "Known"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or suspected hypersensitivity",
+                          "Mood": [
+                            "suspected"
+                          ],
+                          "Condition": [
+                            "hypersensitivity"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "to either propofol",
+                              "Drug": [
+                                "propofol"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", e.g. egg",
+                                  "Drug": [
+                                    "egg"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or soy allergy, or volatile general anesthetic agents",
+                                  "Drug": [
+                                    "soy",
+                                    "volatile general anesthetic agents"
+                                  ],
+                                  "Condition": [
+                                    "allergy"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Known",
+                          "Mood": [
+                            "Known"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or suspected history of malignant hyperthermia",
+                          "Mood": [
+                            "suspected"
+                          ],
+                          "Condition": [
+                            "malignant hyperthermia"
+                          ],
+                          "Observation": [
+                            "history"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

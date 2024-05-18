@@ -1,0 +1,46 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Patients with 2 or more doses of methylprednisolone"
+        },
+        "right": {
+          "raw_text": "/prednisone per day"
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "other than methylprednisolone"
+                },
+                "right": {
+                  "raw_text": "or prednisone"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Pregnancy"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "estimated glomerular filtration rate (eGFR) < 45 ml/min/1.73m2"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

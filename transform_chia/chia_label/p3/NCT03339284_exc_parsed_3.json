@@ -1,0 +1,181 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "age under 18y or over 85y",
+      "Person": [
+        "age"
+      ],
+      "Value": [
+        "under 18y or over 85y"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "diabetes type 1",
+              "Condition": [
+                "diabetes type 1"
+              ]
+            },
+            "right": {
+              "raw_text": "with complications",
+              "Condition": [
+                "complications"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "no co-operation",
+                      "Observation": [
+                        "co-operation"
+                      ],
+                      "Negation": [
+                        "no"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or inadequate finnish language skills",
+                      "Person": [
+                        "age"
+                      ],
+                      "Observation": [
+                        "inadequate finnish language skills"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "persistent pain for other reason",
+                  "Condition": [
+                    "persistent pain"
+                  ],
+                  "Qualifier": [
+                    "other reason"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "severe hepatic insufficiency",
+                          "Qualifier": [
+                            "severe"
+                          ],
+                          "Condition": [
+                            "hepatic insufficiency"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "or paracetamol",
+                              "Drug": [
+                                "paracetamol"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "(acetaminophen) is contraindicated for other reason",
+                              "Negation": [
+                                "no"
+                              ],
+                              "Qualifier": [
+                                "other reason"
+                              ],
+                              "Drug": [
+                                "acetaminophen"
+                              ],
+                              "Condition": [
+                                "contraindicated"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "any type of steroid in regular use",
+                          "Drug": [
+                            "steroid"
+                          ],
+                          "Multiplier": [
+                            "regular use"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "oxycodone",
+                                  "Drug": [
+                                    "oxycodone"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "contraindicated",
+                                  "Condition": [
+                                    "contraindicated"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "medications changing notably paracetamol",
+                                      "Negation": [
+                                        "no"
+                                      ],
+                                      "Drug": [
+                                        "paracetamol"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "(acetaminophen) and/or ropivacaine metabolism in regular use",
+                                      "Negation": [
+                                        "no"
+                                      ],
+                                      "Drug": [
+                                        "acetaminophen",
+                                        "ropivacaine"
+                                      ],
+                                      "Multiplier": [
+                                        "regular use"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

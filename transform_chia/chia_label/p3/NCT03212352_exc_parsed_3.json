@@ -1,0 +1,67 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Patient does not meet inclusion criteria, discovered after randomization",
+      "Post-eligibility": [
+        "Patient does not meet inclusion criteria, discovered after randomization"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Inability to give informed consent",
+          "Post-eligibility": [
+            "Inability to give informed consent"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Known clotting disorder",
+                  "Condition": [
+                    "clotting disorder"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or use of anticoagulants",
+                  "Drug": [
+                    "anticoagulants"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Known risk factors"
+                    },
+                    "right": {
+                      "raw_text": "for, or presence of, a cardiovascular disease",
+                      "Condition": [
+                        "cardiovascular disease"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Language barrier",
+                      "Non-query-able": [
+                        "Language barrier"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

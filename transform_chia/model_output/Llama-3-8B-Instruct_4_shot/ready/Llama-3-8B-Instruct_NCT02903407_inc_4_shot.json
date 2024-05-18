@@ -1,0 +1,44 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "All patients admitted to the Duke CICU"
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "who require intubation"
+            },
+            "right": {
+              "raw_text": "and sedation for mechanical ventilation"
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "that is expected to be >24 hours in duration"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "unless they meet the specified exclusion criteria."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "OR": {
+    "left": {
+      "raw_text": "Patients intubated within one hour prior to care transition to the CICU will also be screened for inclusion."
+    }
+  }
+}
