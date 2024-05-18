@@ -1,0 +1,426 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Previously enrolled in this study (i.e. patient now at repeat encounter)",
+      "Observation": [
+        "enrolled in this study"
+      ],
+      "Temporal": [
+        "Previously",
+        "Previous"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Concomitant surgical procedure",
+              "Procedure": [
+                "surgical procedure"
+              ],
+              "Temporal": [
+                "Concomitant"
+              ]
+            },
+            "right": {
+              "raw_text": "other than CABG",
+              "Procedure": [
+                "CABG"
+              ],
+              "Qualifier": [
+                "other than"
+              ],
+              "Negation": [
+                "other than"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Anticoagulant treatment after the operation (e.g. warfarin,",
+                  "Procedure": [
+                    "Anticoagulant treatment",
+                    "operation"
+                  ],
+                  "Temporal": [
+                    "after the operation"
+                  ],
+                  "Reference_point": [
+                    "the operation"
+                  ],
+                  "Drug": [
+                    "warfarin"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "direct thrombin inhibitors (",
+                      "Drug": [
+                        "direct thrombin inhibitors"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "dabigatran), FXa inhibitors (rivaroxaban,",
+                          "Drug": [
+                            "dabigatran",
+                            "FXa inhibitors",
+                            "rivaroxaban"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "apixaban,",
+                              "Drug": [
+                                "apixaban"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "heparin,",
+                                  "Drug": [
+                                    "heparin"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "low-molecular weight heparin,",
+                                      "Drug": [
+                                        "heparin",
+                                        "low-molecular weight heparin"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "fondaparinux)",
+                                      "Drug": [
+                                        "fondaparinux"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Discharge fr",
+                      "Observation": [
+                        "Discharge"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "om the operating hospital to an ICU at another hospital",
+                      "Visit": [
+                        "operating hospital",
+                        "ICU",
+                        "hospital"
+                      ],
+                      "Qualifier": [
+                        "another"
+                      ],
+                      "Scope": [
+                        "ICU at another hospital"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Pregnancy or lactation",
+                      "Condition": [
+                        "Pregnancy",
+                        "lactation"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Known intolerance or c",
+                              "Condition": [
+                                "intolerance"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "ontraindication to ticagrelor or A",
+                                  "Drug": [
+                                    "ticagrelor"
+                                  ],
+                                  "Condition": [
+                                    "indication"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "SA"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Any disorder that may interfere with drug absorption",
+                              "Condition": [
+                                "disorder"
+                              ],
+                              "Qualifier": [
+                                "may interfere with drug absorption"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "Any condition other",
+                                      "Condition": [
+                                        "condition"
+                                      ]
+                                    },
+                                    "right": {
+                                      "NOT": {
+                                        "left": {
+                                          "raw_text": "han coronary artery disease with a life expectancy <12 months",
+                                          "Condition": [
+                                            "coronary artery disease"
+                                          ],
+                                          "Observation": [
+                                            "life expectancy"
+                                          ],
+                                          "Value": [
+                                            "<12 months"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "Known chronic liver disease, renal",
+                                          "Condition": [
+                                            "chronic liver disease"
+                                          ]
+                                        },
+                                        "right": {
+                                          "OR": {
+                                            "left": {
+                                              "raw_text": "disease requiri"
+                                            },
+                                            "right": {
+                                              "raw_text": "ng dialysis or bleeding disorder",
+                                              "Condition": [
+                                                "disorder",
+                                                "bleeding disorder"
+                                              ],
+                                              "Procedure": [
+                                                "dialysis"
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "right": {
+                                      "AND": {
+                                        "left": {
+                                          "OR": {
+                                            "left": {
+                                              "raw_text": "Atrioventricular block II and I",
+                                              "Condition": [
+                                                "Atrioventricular block II"
+                                              ]
+                                            },
+                                            "right": {
+                                              "NOT": {
+                                                "left": {
+                                                  "raw_text": "acemaker"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "right": {
+                                          "AND": {
+                                            "left": {
+                                              "AND": {
+                                                "left": {
+                                                  "raw_text": "Any other indication for dual",
+                                                  "Condition": [
+                                                    "indication"
+                                                  ]
+                                                },
+                                                "right": {
+                                                  "raw_text": "antiplatelet therapy, i.e. recent stent implantation",
+                                                  "Procedure": [
+                                                    "stent implantation"
+                                                  ],
+                                                  "Temporal": [
+                                                    "recent"
+                                                  ],
+                                                  "Scope": [
+                                                    "recent stent implantation"
+                                                  ]
+                                                }
+                                              }
+                                            },
+                                            "right": {
+                                              "AND": {
+                                                "left": {
+                                                  "AND": {
+                                                    "left": {
+                                                      "raw_text": "Debilitating stroke wit",
+                                                      "Condition": [
+                                                        "stroke",
+                                                        "Debilitating"
+                                                      ]
+                                                    },
+                                                    "right": {
+                                                      "raw_text": "hin 90 days before inclusion"
+                                                    }
+                                                  }
+                                                },
+                                                "right": {
+                                                  "AND": {
+                                                    "left": {
+                                                      "raw_text": "Previous intracranial bleeding",
+                                                      "Temporal": [
+                                                        "Previous"
+                                                      ],
+                                                      "Procedure": [
+                                                        "intracranial bleeding"
+                                                      ]
+                                                    },
+                                                    "right": {
+                                                      "AND": {
+                                                        "left": {
+                                                          "OR": {
+                                                            "left": {
+                                                              "raw_text": "Treatment with immunosuppressants (e.g. cyclosporine and tacrolim",
+                                                              "Drug": [
+                                                                "immunosuppressants",
+                                                                "cyclosporine"
+                                                              ]
+                                                            },
+                                                            "right": {
+                                                              "raw_text": "us)"
+                                                            }
+                                                          }
+                                                        },
+                                                        "right": {
+                                                          "AND": {
+                                                            "left": {
+                                                              "OR": {
+                                                                "left": {
+                                                                  "raw_text": "Treatment with strong CYP3A4-inhibitors (e.g. ketoconazole, clarithromyc",
+                                                                  "Drug": [
+                                                                    "strong CYP3A4-inhibitors",
+                                                                    "ketoconazole"
+                                                                  ]
+                                                                },
+                                                                "right": {
+                                                                  "OR": {
+                                                                    "left": {
+                                                                      "raw_text": "in, nefazodone,",
+                                                                      "Drug": [
+                                                                        "nefazodone"
+                                                                      ]
+                                                                    },
+                                                                    "right": {
+                                                                      "OR": {
+                                                                        "left": {
+                                                                          "raw_text": "ritonavir or",
+                                                                          "Drug": [
+                                                                            "ritonavir"
+                                                                          ]
+                                                                        },
+                                                                        "right": {
+                                                                          "OR": {
+                                                                            "left": {
+                                                                              "raw_text": "atazanavir",
+                                                                              "Drug": [
+                                                                                "atazanavir"
+                                                                              ]
+                                                                            },
+                                                                            "right": {
+                                                                              "raw_text": ")"
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "right": {
+                                                              "AND": {
+                                                                "left": {
+                                                                  "raw_text": "Any condition that in the opinion of the investigator may interfere with adherence to trial protocol",
+                                                                  "Condition": [
+                                                                    "condition"
+                                                                  ],
+                                                                  "Non-query-able": [
+                                                                    "Any condition that in the opinion of the investigator may interfere with adherence to trial protocol"
+                                                                  ]
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

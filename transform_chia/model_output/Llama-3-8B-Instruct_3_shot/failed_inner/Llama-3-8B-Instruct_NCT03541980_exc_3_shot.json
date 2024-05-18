@@ -1,0 +1,104 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Patient with fever (38C or 100.4F)"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Patient less than age 4 years"
+                    },
+                    "right": {
+                      "raw_text": "and"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Patient greater than age 16 years"
+                    },
+                    "right": {
+                      "raw_text": "and"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "right": {
+        "AND": {
+          "left": {
+            "OR": {
+              "left": {
+                "raw_text": "Patient with hypersensitivity/allergy to either morphine"
+                },
+              "right": {
+                "OR": {
+                  "left": {
+                    "raw_text": "or NSAIDs"
+                    },
+                  "right": {
+                    "raw_text": "or acetaminophen"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Patient received acetaminophen within the past 4 hours"
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Patient with known liver disease"
+                        },
+                        "right": {
+                          "raw_text": "or renal disease"
+                        }
+                      }
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Patient not requiring IV morphine (pain score 5/10 or less)"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "right": {
+            "NOT": {
+              "left": {
+                "raw_text": "Patient enrolled in the study within the past 72 hours"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

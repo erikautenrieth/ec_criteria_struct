@@ -56,7 +56,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Current therapy with Insulin, th",
+                          "raw_text": "Current therapy with Insulin",
                           "Drug": [
                             "Insulin"
                           ]
@@ -64,15 +64,21 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "iazolidinediones, st"
+                              "raw_text": ", thiazolidinediones",
+                              "Drug": [
+                                "thiazolidinediones"
+                              ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "eroids or"
+                                  "raw_text": ", steroids",
+                                  "Drug": [
+                                    "steroids"
+                                  ]
                                 },
                                 "right": {
-                                  "raw_text": "atypical antipsychotic medication",
+                                  "raw_text": "or atypical antipsychotic medication",
                                   "Drug": [
                                     "atypical antipsychotic medication"
                                   ]
@@ -99,7 +105,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Known macrovascular disease including coronary artery disease, stro",
+                                  "raw_text": "Known macrovascular disease including coronary artery disease",
                                   "Condition": [
                                     "macrovascular disease",
                                     "coronary artery disease"
@@ -108,18 +114,24 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "ke/TIA o",
+                                      "raw_text": ", stroke",
                                       "Condition": [
-                                        "TIA"
+                                        "stroke"
                                       ]
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "r pe"
+                                          "raw_text": "/TIA",
+                                          "Condition": [
+                                            "TIA"
+                                          ]
                                         },
                                         "right": {
-                                          "raw_text": "ripheral vascular disease"
+                                          "raw_text": "or peripheral vascular disease",
+                                          "Condition": [
+                                            "peripheral vascular disease"
+                                          ]
                                         }
                                       }
                                     }
@@ -132,7 +144,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Presence of arrhythmia (including atrial fibrillation, atria",
+                                      "raw_text": "Presence of arrhythmia (including atrial fibrillation",
                                       "Condition": [
                                         "arrhythmia",
                                         "atrial fibrillation"
@@ -141,15 +153,21 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "l flutter, or 2n"
+                                          "raw_text": ", atrial flutter",
+                                          "Condition": [
+                                            "atrial flutter"
+                                          ]
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "d or 3rd"
+                                              "raw_text": ", or 2nd"
                                             },
                                             "right": {
-                                              "raw_text": "degree atrioventricular block)"
+                                              "raw_text": "or 3rd degree atrioventricular block)",
+                                              "Condition": [
+                                                "3rd degree atrioventricular block"
+                                              ]
                                             }
                                           }
                                         }
@@ -180,13 +198,16 @@
                                                 "left": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "to exercise or undert",
+                                                      "raw_text": "Inability to exercise",
                                                       "Observation": [
                                                         "exercise"
+                                                      ],
+                                                      "Negation": [
+                                                        "Inability"
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "ake a MRP",
+                                                      "raw_text": "or undertake a MRP",
                                                       "Procedure": [
                                                         "MRP"
                                                       ]
@@ -198,33 +219,37 @@
                                             "right": {
                                               "AND": {
                                                 "left": {
-                                                  "raw_text": "Absolute contraindication to CMR",
-                                                  "Condition": [
-                                                    "contraindication"
-                                                  ],
-                                                  "Procedure": [
-                                                    "CMR"
-                                                  ]
+                                                  "AND": {
+                                                    "left": {
+                                                      "raw_text": "Absolute contraindication",
+                                                      "Condition": [
+                                                        "contraindication"
+                                                      ]
+                                                    },
+                                                    "right": {
+                                                      "raw_text": "to CMR",
+                                                      "Procedure": [
+                                                        "CMR"
+                                                      ]
+                                                    }
+                                                  }
                                                 },
                                                 "right": {
                                                   "AND": {
                                                     "left": {
-                                                      "AND": {
+                                                      "OR": {
                                                         "left": {
-                                                          "raw_text": "Car"
+                                                          "raw_text": "Cardiovascular symptoms (angina",
+                                                          "Condition": [
+                                                            "Cardiovascular symptoms",
+                                                            "angina"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "OR": {
-                                                            "left": {
-                                                              "raw_text": "diovascular symptoms (angina, limiting d",
-                                                              "Condition": [
-                                                                "angina"
-                                                              ]
-                                                            },
-                                                            "right": {
-                                                              "raw_text": "yspnoea during normal physical activity)"
-                                                            }
-                                                          }
+                                                          "raw_text": ", limiting dyspnoea during normal physical activity)",
+                                                          "Condition": [
+                                                            "dyspnoea"
+                                                          ]
                                                         }
                                                       }
                                                     },
@@ -233,14 +258,17 @@
                                                         "left": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "Inflammatory condition e.g. Connective tissue disorder, Rheumatoid a",
+                                                              "raw_text": "Inflammatory condition e.g. Connective tissue disorder,",
                                                               "Condition": [
                                                                 "Inflammatory",
                                                                 "Connective tissue disorder,"
                                                               ]
                                                             },
                                                             "right": {
-                                                              "raw_text": "rthritis"
+                                                              "raw_text": "Rheumatoid arthritis",
+                                                              "Condition": [
+                                                                "Rheumatoid arthritis"
+                                                              ]
                                                             }
                                                           }
                                                         }

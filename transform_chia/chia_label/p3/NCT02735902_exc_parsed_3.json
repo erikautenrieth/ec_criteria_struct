@@ -76,16 +76,22 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "uire treatment with aspirin or any",
+                                          "raw_text": "not require treatment with aspirin",
                                           "Drug": [
                                             "aspirin"
+                                          ],
+                                          "Negation": [
+                                            "not"
+                                          ],
+                                          "Mood": [
+                                            "require"
                                           ],
                                           "Procedure": [
                                             "treatment"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "other antiplatelet agent",
+                                          "raw_text": "or any other antiplatelet agent",
                                           "Drug": [
                                             "antiplatelet agent"
                                           ],
@@ -102,19 +108,19 @@
                                     "left": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "The patient has a history of aspirin allergy",
+                                          "raw_text": "The patient has a history of aspirin",
                                           "Drug": [
                                             "aspirin"
-                                          ],
-                                          "Condition": [
-                                            "allergy"
                                           ],
                                           "Observation": [
                                             "history of"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": ""
+                                          "raw_text": "allergy",
+                                          "Condition": [
+                                            "allergy"
+                                          ]
                                         }
                                       }
                                     },
@@ -123,7 +129,7 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "High bleeding risk; such as platelets <50,000",
+                                              "raw_text": "High bleeding risk; such as platelets",
                                               "Observation": [
                                                 "bleeding risk"
                                               ],
@@ -137,7 +143,10 @@
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "/ mm3 during screening, Hb <8.5 g /",
+                                                  "raw_text": "<50,000 / mm3 during screening, Hb",
+                                                  "Value": [
+                                                    "<50,000 / mm3"
+                                                  ],
                                                   "Measurement": [
                                                     "Hb"
                                                   ]
@@ -145,7 +154,10 @@
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "dL, history of intracranial hemorrhage or subdu",
+                                                      "raw_text": "<8.5 g / dL, history of intracranial hemorrhage",
+                                                      "Value": [
+                                                        "<8.5 g / dL"
+                                                      ],
                                                       "Condition": [
                                                         "intracranial hemorrhage"
                                                       ],
@@ -156,37 +168,50 @@
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "ral hematoma, major s"
+                                                          "raw_text": "or subdural hematoma",
+                                                          "Condition": [
+                                                            "subdural hematoma"
+                                                          ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "urgery, parenchy"
+                                                              "raw_text": ", major surgery,",
+                                                              "Procedure": [
+                                                                "major surgery,"
+                                                              ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "mal organ biopsy or sever"
+                                                                  "raw_text": "parenchymal organ biopsy",
+                                                                  "Procedure": [
+                                                                    "parenchymal organ biopsy"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "e trauma within 3",
+                                                                      "raw_text": "or severe trauma",
                                                                       "Condition": [
                                                                         "trauma"
+                                                                      ],
+                                                                      "Qualifier": [
+                                                                        "severe"
                                                                       ]
                                                                     },
                                                                     "right": {
-                                                                      "raw_text": "0 days before inclusion, active gastrointestinal ulcer in the last 3 months;",
+                                                                      "raw_text": "within 30 days before inclusion, active gastrointestinal ulcer in the last 3 months;",
+                                                                      "Temporal": [
+                                                                        "within 30 days",
+                                                                        "last 3 months",
+                                                                        "in the last 3 months"
+                                                                      ],
                                                                       "Qualifier": [
                                                                         "active"
                                                                       ],
                                                                       "Condition": [
                                                                         "gastrointestinal ulcer"
-                                                                      ],
-                                                                      "Temporal": [
-                                                                        "last 3 months",
-                                                                        "in the last 3 months"
                                                                       ]
                                                                     }
                                                                   }
@@ -223,23 +248,20 @@
                                                 "left": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "Moderate or severe",
+                                                      "raw_text": "Moderate",
                                                       "Qualifier": [
-                                                        "severe",
                                                         "Moderate"
-                                                      ],
-                                                      "Scope": [
-                                                        "Moderate or severe"
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "liver affection associated with coagulopathy",
+                                                      "raw_text": "or severe liver affection associated with coagulopathy",
+                                                      "Qualifier": [
+                                                        "severe",
+                                                        "associated with coagulopathy"
+                                                      ],
                                                       "Condition": [
                                                         "liver affection",
                                                         "coagulopathy"
-                                                      ],
-                                                      "Qualifier": [
-                                                        "associated with coagulopathy"
                                                       ]
                                                     }
                                                   }
@@ -263,7 +285,7 @@
                                                         "left": {
                                                           "AND": {
                                                             "left": {
-                                                              "raw_text": "Active tumor treated at t",
+                                                              "raw_text": "Active tumor",
                                                               "Qualifier": [
                                                                 "Active"
                                                               ],
@@ -272,13 +294,16 @@
                                                               ],
                                                               "Condition": [
                                                                 "tumor"
-                                                              ],
-                                                              "Procedure": [
-                                                                "treated"
                                                               ]
                                                             },
                                                             "right": {
-                                                              "raw_text": "he time of inclusion associated with expected survival less than one year",
+                                                              "raw_text": "treated at the time of inclusion associated with expected survival less than one year",
+                                                              "Procedure": [
+                                                                "treated"
+                                                              ],
+                                                              "Temporal": [
+                                                                "at the time of inclusion"
+                                                              ],
                                                               "Measurement": [
                                                                 "expected survival"
                                                               ],

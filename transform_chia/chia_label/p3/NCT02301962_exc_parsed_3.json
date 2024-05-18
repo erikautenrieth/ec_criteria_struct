@@ -16,9 +16,12 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "xcept: Malignancy",
+                  "raw_text": "except: Malignancy",
                   "Condition": [
                     "Malignancy"
+                  ],
+                  "Negation": [
+                    "except"
                   ]
                 },
                 "right": {
@@ -26,7 +29,7 @@
                     "left": {
                       "AND": {
                         "left": {
-                          "raw_text": "o known active disease present for >=5 years prior to enrolment and felt to be at low risk for recurrence by the treating physician; Adequately treated",
+                          "raw_text": "no known active disease present for >=5 years prior to enrolment and felt to be at low risk for recurrence by the treating physician; Adequately treated",
                           "Negation": [
                             "no"
                           ],
@@ -76,7 +79,7 @@
                                     "left": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "ithout evidence of disease; Adequately treated",
+                                          "raw_text": "without evidence of disease; Adequately treated",
                                           "Qualifier": [
                                             "Adequately"
                                           ],
@@ -86,6 +89,9 @@
                                           "Condition": [
                                             "evidence of disease",
                                             "disease"
+                                          ],
+                                          "Negation": [
+                                            "without"
                                           ],
                                           "Mood": [
                                             "evidence of"
@@ -107,11 +113,14 @@
                                                 "left": {
                                                   "AND": {
                                                     "left": {
-                                                      "raw_text": "ithout evidence of disease; Prostatic intraepithelial neoplasia",
+                                                      "raw_text": "without evidence of disease; Prostatic intraepithelial neoplasia",
                                                       "Condition": [
                                                         "evidence of disease",
                                                         "disease",
                                                         "Prostatic intraepithelial neoplasia"
+                                                      ],
+                                                      "Negation": [
+                                                        "without"
                                                       ],
                                                       "Mood": [
                                                         "evidence of"
@@ -120,7 +129,10 @@
                                                     "right": {
                                                       "NOT": {
                                                         "left": {
-                                                          "raw_text": "ithout evidence of prostate cancer.",
+                                                          "raw_text": "without evidence of prostate cancer.",
+                                                          "Negation": [
+                                                            "without"
+                                                          ],
                                                           "Condition": [
                                                             "prostate cancer"
                                                           ],
@@ -157,7 +169,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "Known immediate o",
+                  "raw_text": "Known immediate",
                   "Negation": [
                     "no"
                   ]
@@ -165,7 +177,7 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "r delayed hypersensitivity reaction o",
+                      "raw_text": "or delayed hypersensitivity reaction",
                       "Condition": [
                         "delayed hypersensitivity reaction"
                       ]
@@ -173,7 +185,7 @@
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "r idiosyncrasy t",
+                          "raw_text": "or idiosyncrasy",
                           "Condition": [
                             "idiosyncrasy"
                           ]
@@ -181,14 +193,14 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "o drugs chemically related to panitumumab o",
+                              "raw_text": "to drugs chemically related to panitumumab",
                               "Drug": [
                                 "drugs chemically related to panitumumab",
                                 "panitumumab"
                               ]
                             },
                             "right": {
-                              "raw_text": "r excipients that contraindicates their participation."
+                              "raw_text": "or excipients that contraindicates their participation."
                             }
                           }
                         }
@@ -203,16 +215,17 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Prior anti-epidermal growth factor receptor (E"
+                      "raw_text": "Prior anti-epidermal growth factor receptor"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "GFr) antibody therapy (e.g., panitumumab or",
+                          "raw_text": "(EGFr) antibody therapy (e.g., panitumumab",
                           "Drug": [
                             "panitumumab"
                           ],
                           "Procedure": [
+                            "EGFr",
                             "antibody therapy",
                             "therapy"
                           ]
@@ -220,7 +233,7 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "cetuximab) or treatment with small molecule EGFr inhibitors (e.g., gefitinib, e",
+                              "raw_text": "or cetuximab) or treatment with small molecule EGFr inhibitors (e.g., gefitinib",
                               "Drug": [
                                 "cetuximab",
                                 "gefitinib"
@@ -236,10 +249,16 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "rlotinib, l"
+                                  "raw_text": ", erlotinib",
+                                  "Drug": [
+                                    "erlotinib"
+                                  ]
                                 },
                                 "right": {
-                                  "raw_text": "apatinib)."
+                                  "raw_text": ", lapatinib).",
+                                  "Drug": [
+                                    "lapatinib"
+                                  ]
                                 }
                               }
                             }
@@ -254,7 +273,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Antitumor therapy (e.",
+                          "raw_text": "Antitumor therapy",
                           "Procedure": [
                             "Antitumor therapy",
                             "therapy"
@@ -263,7 +282,7 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "g., chemotherapy, ho",
+                              "raw_text": "(e.g., chemotherapy",
                               "Procedure": [
                                 "chemotherapy",
                                 "therapy"
@@ -275,19 +294,21 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "rmonal therapy, im",
+                                  "raw_text": ", hormonal therapy",
                                   "Procedure": [
+                                    "hormonal therapy",
                                     "therapy"
                                   ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "munotherapy, an",
+                                      "raw_text": ", immunotherapy",
                                       "Negation": [
                                         "no"
                                       ],
                                       "Procedure": [
+                                        "immunotherapy",
                                         "therapy"
                                       ],
                                       "Qualifier": [
@@ -297,20 +318,22 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "tibody therapy, ra",
+                                          "raw_text": ", antibody therapy",
                                           "Procedure": [
+                                            "antibody therapy",
                                             "therapy"
                                           ]
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "diotherapy), or investigational agent or",
+                                              "raw_text": ", radiotherapy), or investigational agent",
+                                              "Procedure": [
+                                                "radiotherapy",
+                                                "therapy"
+                                              ],
                                               "Drug": [
                                                 "investigational agent"
-                                              ],
-                                              "Procedure": [
-                                                "therapy"
                                               ],
                                               "Qualifier": [
                                                 "other"
@@ -319,15 +342,18 @@
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "therapy <=3",
+                                                  "raw_text": "or therapy",
                                                   "Procedure": [
                                                     "therapy"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "0 days before first dose of study treatment or not recovered from any acute toxicity.",
+                                                  "raw_text": "<=30 days before first dose of study treatment or not recovered from any acute toxicity.",
                                                   "Negation": [
                                                     "no"
+                                                  ],
+                                                  "Temporal": [
+                                                    "<=30 days before first dose of study treatment"
                                                   ],
                                                   "Condition": [
                                                     "not recovered from any acute toxicity",
@@ -374,7 +400,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "History of interstitial lung disease (ILD) e.g., interstitial pneumonitis, pulm",
+                                  "raw_text": "History of interstitial lung disease (ILD) e.g., interstitial pneumonitis",
                                   "Condition": [
                                     "disease",
                                     "interstitial lung disease",
@@ -388,18 +414,27 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "onary fibrosis or ev"
+                                      "raw_text": ", pulmonary fibrosis",
+                                      "Condition": [
+                                        "pulmonary fibrosis"
+                                      ]
                                     },
                                     "right": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "idence of ILD on ba",
+                                          "raw_text": "or evidence of ILD",
+                                          "Mood": [
+                                            "evidence of"
+                                          ],
                                           "Condition": [
                                             "ILD"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "seline chest computer tomography.",
+                                          "raw_text": "on baseline chest computer tomography.",
+                                          "Temporal": [
+                                            "baseline"
+                                          ],
                                           "Procedure": [
                                             "chest computer tomography"
                                           ]
@@ -423,7 +458,7 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "History of keratitis, ulcera",
+                                          "raw_text": "History of keratitis",
                                           "Condition": [
                                             "keratitis"
                                           ]
@@ -431,13 +466,17 @@
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "tive keratitis or seve",
+                                              "raw_text": ", ulcerative keratitis",
                                               "Condition": [
-                                                "keratitis"
+                                                "keratitis",
+                                                "ulcerative keratitis"
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "re dry eye.",
+                                              "raw_text": "or severe dry eye.",
+                                              "Qualifier": [
+                                                "severe"
+                                              ],
                                               "Condition": [
                                                 "dry eye"
                                               ]
@@ -451,13 +490,13 @@
                                         "left": {
                                           "AND": {
                                             "left": {
-                                              "raw_text": "Major surgery (e.g., r",
+                                              "raw_text": "Major surgery",
                                               "Procedure": [
                                                 "Major surgery"
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "equiring general anesthesia) <=30 days before first dose of study treatment. Subjects must have recovered from any surgery related toxicities.",
+                                              "raw_text": "(e.g., requiring general anesthesia) <=30 days before first dose of study treatment. Subjects must have recovered from any surgery related toxicities.",
                                               "Temporal": [
                                                 "<=30 days before first dose of study treatment"
                                               ],
@@ -485,7 +524,7 @@
                                             "left": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "Minor surgical procedure (e.g., op",
+                                                  "raw_text": "Minor surgical procedure",
                                                   "Negation": [
                                                     "no"
                                                   ],
@@ -498,10 +537,17 @@
                                                     "left": {
                                                       "AND": {
                                                         "left": {
-                                                          "raw_text": "covered from prio"
+                                                          "raw_text": "not yet recovered",
+                                                          "Negation": [
+                                                            "no",
+                                                            "not yet"
+                                                          ],
+                                                          "Condition": [
+                                                            "recovered"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "r minor surgery Note: uncomplicated placement of vascular access device, fine needle aspiration, thoracocentesis or paracentesis >=3 days prior to first dose of study treatment is acceptable.",
+                                                          "raw_text": "from prior minor surgery Note: uncomplicated placement of vascular access device, fine needle aspiration, thoracocentesis or paracentesis >=3 days prior to first dose of study treatment is acceptable.",
                                                           "Negation": [
                                                             "no"
                                                           ],
@@ -531,7 +577,7 @@
                                                 "left": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "Clinically significant cardiovasc",
+                                                      "raw_text": "Clinically significant",
                                                       "Qualifier": [
                                                         "Clinically significant",
                                                         "significant"
@@ -540,39 +586,47 @@
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "ular disease (including myocardial infarction, unstable",
+                                                          "raw_text": "cardiovascular disease (including myocardial infarction",
                                                           "Condition": [
                                                             "disease",
+                                                            "cardiovascular disease",
                                                             "myocardial infarction"
-                                                          ],
-                                                          "Qualifier": [
-                                                            "stable"
                                                           ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "angina, symptomat"
+                                                              "raw_text": ", unstable angina",
+                                                              "Condition": [
+                                                                "unstable angina"
+                                                              ],
+                                                              "Qualifier": [
+                                                                "stable"
+                                                              ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "ic congestive heart failure, serious u",
+                                                                  "raw_text": ", symptomatic congestive heart failure",
                                                                   "Condition": [
                                                                     "congestive heart failure"
                                                                   ],
                                                                   "Qualifier": [
-                                                                    "serious"
+                                                                    "symptomatic"
                                                                   ]
                                                                 },
                                                                 "right": {
-                                                                  "raw_text": "ncontrolled cardiac arrhythmia) <=6 months prior to enrolment.",
+                                                                  "raw_text": ", serious uncontrolled cardiac arrhythmia) <=6 months prior to enrolment.",
                                                                   "Reference_point": [
                                                                     "enrolment"
                                                                   ],
                                                                   "Temporal": [
                                                                     "prior",
                                                                     "<=6 months prior to enrolment"
+                                                                  ],
+                                                                  "Qualifier": [
+                                                                    "serious",
+                                                                    "uncontrolled"
                                                                   ],
                                                                   "Condition": [
                                                                     "cardiac arrhythmia"
@@ -605,7 +659,7 @@
                                                         "left": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "Unstable pulmonary embolism, deep vein t",
+                                                              "raw_text": "Unstable pulmonary embolism",
                                                               "Qualifier": [
                                                                 "Unstable",
                                                                 "stable"
@@ -617,39 +671,53 @@
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "hrombosis, or other si",
-                                                                  "Qualifier": [
-                                                                    "other"
+                                                                  "raw_text": ", deep vein thrombosis",
+                                                                  "Condition": [
+                                                                    "deep vein thrombosis"
                                                                   ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "gnificant arterial/venous throm",
-                                                                      "Negation": [
-                                                                        "no"
+                                                                      "raw_text": ", or other significant arterial",
+                                                                      "Qualifier": [
+                                                                        "other",
+                                                                        "significant"
                                                                       ]
                                                                     },
                                                                     "right": {
-                                                                      "raw_text": "boembolic event <=30 days before first dose of study treatment. If on anticoagulation, subject must be on stable therapeutic dose prior to first dose of study treatment.",
-                                                                      "Temporal": [
-                                                                        "<=30 days before first dose of study treatment",
-                                                                        "prior",
-                                                                        "prior to first dose of study treatment"
-                                                                      ],
-                                                                      "Reference_point": [
-                                                                        "first dose of study treatment",
-                                                                        "treatment"
-                                                                      ],
-                                                                      "Procedure": [
-                                                                        "anticoagulation"
-                                                                      ],
-                                                                      "Qualifier": [
-                                                                        "stable"
-                                                                      ],
-                                                                      "Multiplier": [
-                                                                        "therapeutic dose"
-                                                                      ]
+                                                                      "OR": {
+                                                                        "left": {
+                                                                          "raw_text": "/venous thromboembolic event <=30 days before first dose of study treatment. If on anticoagulation, subject must be on stable therapeutic dose prior to first dose of study treatment",
+                                                                          "Negation": [
+                                                                            "no"
+                                                                          ],
+                                                                          "Temporal": [
+                                                                            "<=30 days before first dose of study treatment",
+                                                                            "prior",
+                                                                            "prior to first dose of study treatment"
+                                                                          ],
+                                                                          "Reference_point": [
+                                                                            "first dose of study treatment",
+                                                                            "treatment"
+                                                                          ],
+                                                                          "Condition": [
+                                                                            "venous thromboembolic event"
+                                                                          ],
+                                                                          "Procedure": [
+                                                                            "anticoagulation"
+                                                                          ],
+                                                                          "Qualifier": [
+                                                                            "stable"
+                                                                          ],
+                                                                          "Multiplier": [
+                                                                            "therapeutic dose"
+                                                                          ]
+                                                                        },
+                                                                        "right": {
+                                                                          "raw_text": "."
+                                                                        }
+                                                                      }
                                                                     }
                                                                   }
                                                                 }
@@ -662,42 +730,41 @@
                                                             "left": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "Subject who"
+                                                                  "raw_text": "Subject who is pregnant",
+                                                                  "Condition": [
+                                                                    "pregnant"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "is pregnant or breast fee",
-                                                                      "Condition": [
-                                                                        "pregnant"
+                                                                      "raw_text": "or breast feeding",
+                                                                      "Observation": [
+                                                                        "breast feeding"
                                                                       ]
                                                                     },
                                                                     "right": {
-                                                                      "OR": {
-                                                                        "left": {
-                                                                          "raw_text": "ding, or planning"
-                                                                        },
-                                                                        "right": {
-                                                                          "raw_text": "to become pregnant during treatment and within 2 months after the discontinuation of study treatment.",
-                                                                          "Condition": [
-                                                                            "pregnant"
-                                                                          ],
-                                                                          "Observation": [
-                                                                            "become pregnant"
-                                                                          ],
-                                                                          "Temporal": [
-                                                                            "during treatment",
-                                                                            "within 2 months after the discontinuation of study treatment"
-                                                                          ],
-                                                                          "Reference_point": [
-                                                                            "the discontinuation of study treatment",
-                                                                            "treatment"
-                                                                          ],
-                                                                          "Scope": [
-                                                                            "during treatment and within 2 months after the discontinuation of study treatment"
-                                                                          ]
-                                                                        }
-                                                                      }
+                                                                      "raw_text": ", or planning to become pregnant during treatment and within 2 months after the discontinuation of study treatment.",
+                                                                      "Condition": [
+                                                                        "pregnant"
+                                                                      ],
+                                                                      "Observation": [
+                                                                        "become pregnant"
+                                                                      ],
+                                                                      "Temporal": [
+                                                                        "during treatment",
+                                                                        "within 2 months after the discontinuation of study treatment"
+                                                                      ],
+                                                                      "Reference_point": [
+                                                                        "the discontinuation of study treatment",
+                                                                        "treatment"
+                                                                      ],
+                                                                      "Scope": [
+                                                                        "during treatment and within 2 months after the discontinuation of study treatment"
+                                                                      ],
+                                                                      "Mood": [
+                                                                        "planning to"
+                                                                      ]
                                                                     }
                                                                   }
                                                                 }
@@ -725,7 +792,7 @@
                                                                     "left": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "Active infection requiring syste",
+                                                                          "raw_text": "Active infection",
                                                                           "Condition": [
                                                                             "infection"
                                                                           ],
@@ -738,7 +805,11 @@
                                                                             "left": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "on of uncomplicated urinary tract infection or upper respir",
+                                                                                  "raw_text": "with the exception of uncomplicated urinary tract infection",
+                                                                                  "Negation": [
+                                                                                    "except",
+                                                                                    "with the exception of"
+                                                                                  ],
                                                                                   "Condition": [
                                                                                     "infection",
                                                                                     "urinary tract infection"
@@ -748,9 +819,10 @@
                                                                                   ]
                                                                                 },
                                                                                 "right": {
-                                                                                  "raw_text": "atory tract infection).",
+                                                                                  "raw_text": "or upper respiratory tract infection).",
                                                                                   "Condition": [
-                                                                                    "infection"
+                                                                                    "infection",
+                                                                                    "upper respiratory tract infection"
                                                                                   ]
                                                                                 }
                                                                               }

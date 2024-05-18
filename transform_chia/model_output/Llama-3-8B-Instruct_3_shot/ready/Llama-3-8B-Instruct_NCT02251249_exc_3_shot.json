@@ -1,0 +1,89 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Allergy or contraindication to paracetamol"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Prasugrel"
+            },
+            "right": {
+              "raw_text": "or Ticagrelor"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "Paracetamol ingestion in the previous 48 hours"
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Patient treated with drugs supposed to alter gastric emptying times (calcium antagonists, Alimentary tract treatments, opioid analgesics, tricyclic antidepressants, antibiotics)."
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Conditions or pathologies supposed to alter gastric emptying times (Thyroid dysfunction, chronic renal failure, Parkinson's disease, scleroderma, amyloidosis, any gastrointestinal disease, any not cured malignancy, and any advanced psychiatric or neurological disease)."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Presence of vomiting"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Cardiogenic shock, ventricular arrhythmia or resuscitated cardiac arrest"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Hepatic insufficiency"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Severe respiratory disease"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Pregnant or breastfeeding women"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

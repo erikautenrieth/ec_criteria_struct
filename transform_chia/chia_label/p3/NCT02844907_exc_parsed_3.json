@@ -48,14 +48,14 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Pulmonary disorders, including COPD and",
+                          "raw_text": "Pulmonary disorders, including COPD",
                           "Condition": [
                             "Pulmonary disorders",
                             "COPD"
                           ]
                         },
                         "right": {
-                          "raw_text": "asthma",
+                          "raw_text": "and asthma",
                           "Condition": [
                             "asthma"
                           ]
@@ -67,14 +67,14 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Malabsorptive GI disease, such as celiac disease, or",
+                              "raw_text": "Malabsorptive GI disease, such as celiac disease",
                               "Condition": [
                                 "Malabsorptive GI disease",
                                 "celiac disease"
                               ]
                             },
                             "right": {
-                              "raw_text": "gastric bypass",
+                              "raw_text": ", or gastric bypass",
                               "Procedure": [
                                 "gastric bypass"
                               ]
@@ -114,18 +114,24 @@
                                     "left": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "Anemia (hemato",
+                                          "raw_text": "Anemia",
                                           "Condition": [
                                             "Anemia"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "crit < 34%) as measured at screening visit",
+                                          "raw_text": "(hematocrit < 34%) as measured at screening visit",
+                                          "Measurement": [
+                                            "hematocrit"
+                                          ],
                                           "Value": [
                                             "< 34%"
                                           ],
                                           "Visit": [
                                             "screening visit"
+                                          ],
+                                          "Scope": [
+                                            "hematocrit < 34%"
                                           ]
                                         }
                                       }
@@ -146,7 +152,7 @@
                                             "left": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "Consumption of daily medications that alter glucose metabolism of GI function (glucocorticoids, psychotr",
+                                                  "raw_text": "Consumption of daily medications that alter glucose metabolism of GI function (glucocorticoids",
                                                   "Multiplier": [
                                                     "daily"
                                                   ],
@@ -161,15 +167,24 @@
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "opics, narcotic"
+                                                      "raw_text": ", psychotropics",
+                                                      "Drug": [
+                                                        "psychotropics"
+                                                      ]
                                                     },
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "s, metoclop"
+                                                          "raw_text": ", narcotics",
+                                                          "Drug": [
+                                                            "narcotics"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "ramide)"
+                                                          "raw_text": ", metoclopramide)",
+                                                          "Drug": [
+                                                            "metoclopramide"
+                                                          ]
                                                         }
                                                       }
                                                     }
@@ -182,41 +197,44 @@
                                                 "left": {
                                                   "AND": {
                                                     "left": {
-                                                      "raw_text": "Consumption or injection of insulin",
-                                                      "Drug": [
-                                                        "insulin"
-                                                      ],
+                                                      "raw_text": "Consumption or injection",
                                                       "Procedure": [
                                                         "injection"
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": ""
+                                                      "OR": {
+                                                        "left": {
+                                                          "raw_text": "of insulin",
+                                                          "Drug": [
+                                                            "insulin"
+                                                          ]
+                                                        },
+                                                        "right": {
+                                                          "raw_text": ""
+                                                        }
+                                                      }
                                                     }
                                                   }
                                                 },
                                                 "right": {
                                                   "AND": {
                                                     "left": {
-                                                      "OR": {
+                                                      "AND": {
                                                         "left": {
-                                                          "raw_text": "Apparent s"
+                                                          "raw_text": "Apparent sensitivity",
+                                                          "Condition": [
+                                                            "sensitivity"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "AND": {
-                                                            "left": {
-                                                              "raw_text": "ensitivity to any of t"
-                                                            },
-                                                            "right": {
-                                                              "raw_text": "he study peptides as determined by the skin test",
-                                                              "Drug": [
-                                                                "study peptides"
-                                                              ],
-                                                              "Procedure": [
-                                                                "skin test"
-                                                              ]
-                                                            }
-                                                          }
+                                                          "raw_text": "to any of the study peptides as determined by the skin test",
+                                                          "Drug": [
+                                                            "study peptides"
+                                                          ],
+                                                          "Procedure": [
+                                                            "skin test"
+                                                          ]
                                                         }
                                                       }
                                                     },
@@ -225,57 +243,64 @@
                                                         "left": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "Diagnosis or h/o PTSD, depression,",
+                                                              "raw_text": "Diagnosis or h/o PTSD",
                                                               "Condition": [
-                                                                "PTSD",
-                                                                "depression"
+                                                                "PTSD"
                                                               ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "substance u"
+                                                                  "raw_text": ", depression",
+                                                                  "Condition": [
+                                                                    "depression"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "se, mental heal"
+                                                                      "raw_text": ", substance use",
+                                                                      "Condition": [
+                                                                        "substance use"
+                                                                      ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "th problems, sleep disor"
+                                                                          "raw_text": ", mental health problems",
+                                                                          "Condition": [
+                                                                            "mental health problems"
+                                                                          ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "ders, HPA disrupt"
+                                                                              "raw_text": ", sleep disorders",
+                                                                              "Condition": [
+                                                                                "sleep disorders"
+                                                                              ]
                                                                             },
                                                                             "right": {
-                                                                              "raw_text": "ion and/or TBI",
-                                                                              "Condition": [
-                                                                                "TBI"
-                                                                              ]
+                                                                              "OR": {
+                                                                                "left": {
+                                                                                  "raw_text": ", HPA disruption",
+                                                                                  "Condition": [
+                                                                                    "HPA disruption"
+                                                                                  ]
+                                                                                },
+                                                                                "right": {
+                                                                                  "raw_text": "and/or TBI",
+                                                                                  "Condition": [
+                                                                                    "TBI"
+                                                                                  ]
+                                                                                }
+                                                                              }
                                                                             }
                                                                           }
                                                                         }
                                                                       }
                                                                     }
                                                                   }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        },
-                                                        "right": {
-                                                          "AND": {
-                                                            "left": {
-                                                              "OR": {
-                                                                "left": {
-                                                                  "raw_text": ""
-                                                                },
-                                                                "right": {
-                                                                  "raw_text": ""
                                                                 }
                                                               }
                                                             }

@@ -24,7 +24,10 @@
         "left": {
           "NOT": {
             "left": {
-              "raw_text": "ot scheduled for trans-jugular liver biopsy",
+              "raw_text": "not scheduled for trans-jugular liver biopsy",
+              "Negation": [
+                "not"
+              ],
               "Mood": [
                 "scheduled"
               ],
@@ -47,7 +50,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Patients with known or",
+                      "raw_text": "Patients with known",
                       "Mood": [
                         "known"
                       ]
@@ -55,7 +58,7 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "suspected right-to-left, b",
+                          "raw_text": "or suspected right-to-left",
                           "Mood": [
                             "suspected"
                           ]
@@ -63,10 +66,10 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "i-directional, o"
+                              "raw_text": ", bi-directional"
                             },
                             "right": {
-                              "raw_text": "r transient right-to-left cardiac shunts",
+                              "raw_text": ", or transient right-to-left cardiac shunts",
                               "Condition": [
                                 "transient right-to-left cardiac shunts",
                                 "right-to-left cardiac shunts"
@@ -83,13 +86,13 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Patients with pulmonary hypertension or",
+                          "raw_text": "Patients with pulmonary hypertension",
                           "Condition": [
                             "pulmonary hypertension"
                           ]
                         },
                         "right": {
-                          "raw_text": "unstable cardiopulmonary conditions",
+                          "raw_text": "or unstable cardiopulmonary conditions",
                           "Condition": [
                             "unstable cardiopulmonary conditions"
                           ]
@@ -101,7 +104,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Patients currently on chemotherapy or w",
+                              "raw_text": "Patients currently on chemotherapy",
                               "Procedure": [
                                 "chemotherapy"
                               ],
@@ -115,7 +118,7 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "ith other primary cancers requiring systemic or h",
+                                  "raw_text": "or with other primary cancers requiring systemic",
                                   "Condition": [
                                     "primary cancers"
                                   ],
@@ -124,7 +127,10 @@
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "epatic loco-regional treatment."
+                                  "raw_text": "or hepatic loco-regional treatment.",
+                                  "Procedure": [
+                                    "hepatic loco-regional treatment"
+                                  ]
                                 }
                               }
                             }
@@ -135,7 +141,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Patients who are medically unstable, pati",
+                                  "raw_text": "Patients who are medically unstable",
                                   "Condition": [
                                     "medically unstable"
                                   ]
@@ -143,15 +149,18 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "ents who are seriously or te"
+                                      "raw_text": ", patients who are seriously"
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "rminally ill, and"
+                                          "raw_text": "or terminally ill",
+                                          "Condition": [
+                                            "terminally ill"
+                                          ]
                                         },
                                         "right": {
-                                          "raw_text": "patients whose clinical course is unpredictable. For example:",
+                                          "raw_text": ", and patients whose clinical course is unpredictable. For example:",
                                           "Condition": [
                                             "clinical course is unpredictable"
                                           ]
@@ -167,13 +176,13 @@
                                 "left": {
                                   "AND": {
                                     "left": {
-                                      "raw_text": "Patients on life support or in",
+                                      "raw_text": "Patients on life support",
                                       "Procedure": [
                                         "life support"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "a critical care unit.",
+                                      "raw_text": "or in a critical care unit.",
                                       "Visit": [
                                         "critical care unit"
                                       ]
@@ -196,7 +205,7 @@
                                         "left": {
                                           "AND": {
                                             "left": {
-                                              "raw_text": "Patients with clinically unstable cardiac arrhythmias, such as",
+                                              "raw_text": "Patients with clinically unstable cardiac arrhythmias",
                                               "Qualifier": [
                                                 "clinically unstable"
                                               ],
@@ -208,7 +217,7 @@
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "recurrent ventricular tachycardia.",
+                                              "raw_text": ", such as recurrent ventricular tachycardia.",
                                               "Condition": [
                                                 "ventricular tachycardia"
                                               ],
@@ -252,79 +261,87 @@
                                                 "right": {
                                                   "AND": {
                                                     "left": {
-                                                      "raw_text": "Patients who have undergone surgery within 24 hours prior to the study sonographic examination.",
-                                                      "Procedure": [
-                                                        "surgery",
-                                                        "sonographic examination"
-                                                      ],
-                                                      "Temporal": [
-                                                        "within 24 hours prior to the study sonographic examination"
-                                                      ],
-                                                      "Reference_point": [
-                                                        "the study sonographic examination"
-                                                      ]
+                                                      "AND": {
+                                                        "left": {
+                                                          "raw_text": "Patients who have undergone surgery within 24 hours prior to the study sonographic examination",
+                                                          "Procedure": [
+                                                            "surgery",
+                                                            "sonographic examination"
+                                                          ],
+                                                          "Temporal": [
+                                                            "within 24 hours prior to the study sonographic examination"
+                                                          ],
+                                                          "Reference_point": [
+                                                            "the study sonographic examination"
+                                                          ]
+                                                        },
+                                                        "right": {
+                                                          "raw_text": "."
+                                                        }
+                                                      }
                                                     },
                                                     "right": {
                                                       "AND": {
                                                         "left": {
-                                                          "AND": {
+                                                          "OR": {
                                                             "left": {
-                                                              "raw_text": "Patients w"
+                                                              "raw_text": "Patients with a history of anaphylactic allergy to eggs",
+                                                              "Condition": [
+                                                                "anaphylactic allergy"
+                                                              ],
+                                                              "Drug": [
+                                                                "eggs"
+                                                              ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "ith a history of anaphylactic allergy to eggs or egg produ",
-                                                                  "Condition": [
-                                                                    "anaphylactic allergy"
-                                                                  ],
+                                                                  "raw_text": "or egg products, manifested by one or more of the following symptoms: generalized urticaria",
                                                                   "Drug": [
-                                                                    "eggs"
+                                                                    "egg products"
+                                                                  ],
+                                                                  "Condition": [
+                                                                    "generalized urticaria"
                                                                   ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "cts, manifested by one or more of the following symptoms: generalized urticaria, difficulty",
+                                                                      "raw_text": ", difficulty in breathing",
                                                                       "Condition": [
-                                                                        "generalized urticaria"
+                                                                        "difficulty in breathing"
                                                                       ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "in breathing, swelling of"
+                                                                          "raw_text": ", swelling of the"
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "the mouth and th"
+                                                                              "raw_text": "mouth"
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "roat,"
+                                                                                  "raw_text": "and throat, hypotension",
+                                                                                  "Condition": [
+                                                                                    "hypotension"
+                                                                                  ]
                                                                                 },
                                                                                 "right": {
-                                                                                  "OR": {
-                                                                                    "left": {
-                                                                                      "raw_text": "hypotension, or shock. (",
-                                                                                      "Condition": [
-                                                                                        "hypotension",
-                                                                                        "shock"
-                                                                                      ]
-                                                                                    },
-                                                                                    "right": {
-                                                                                      "raw_text": "Subjects with nonanaphylactic allergies to eggs or egg products may be enrolled in the study, but must be watched carefully for 1 h following the administration of SONAZOID).",
-                                                                                      "Drug": [
-                                                                                        "eggs",
-                                                                                        "egg products"
-                                                                                      ],
-                                                                                      "Scope": [
-                                                                                        "eggs or egg products"
-                                                                                      ]
-                                                                                    }
-                                                                                  }
+                                                                                  "raw_text": ", or shock. (Subjects with nonanaphylactic allergies to eggs or egg products may be enrolled in the study, but must be watched carefully for 1 h following the administration of SONAZOID).",
+                                                                                  "Drug": [
+                                                                                    "eggs",
+                                                                                    "egg products"
+                                                                                  ],
+                                                                                  "Scope": [
+                                                                                    "eggs or egg products"
+                                                                                  ],
+                                                                                  "Condition": [
+                                                                                    "shock"
+                                                                                  ]
                                                                                 }
                                                                               }
                                                                             }
@@ -351,7 +368,7 @@
                                                                 "left": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "Patients with severe emphysema, pulmonary vas",
+                                                                      "raw_text": "Patients with severe emphysema",
                                                                       "Qualifier": [
                                                                         "severe"
                                                                       ],
@@ -362,10 +379,13 @@
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "culitis, or a history"
+                                                                          "raw_text": ", pulmonary vasculitis",
+                                                                          "Condition": [
+                                                                            "pulmonary vasculitis"
+                                                                          ]
                                                                         },
                                                                         "right": {
-                                                                          "raw_text": "of pulmonary emboli.",
+                                                                          "raw_text": ", or a history of pulmonary emboli.",
                                                                           "Condition": [
                                                                             "pulmonary emboli"
                                                                           ]
@@ -387,7 +407,7 @@
                                                                         "left": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "Patients with thrombosis within the hepatic, portal, or mese",
+                                                                              "raw_text": "Patients with thrombosis within the hepatic",
                                                                               "Condition": [
                                                                                 "thrombosis"
                                                                               ]
@@ -395,10 +415,13 @@
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "nteric v"
+                                                                                  "raw_text": ", portal"
                                                                                 },
                                                                                 "right": {
-                                                                                  "raw_text": "eins."
+                                                                                  "raw_text": ", or mesenteric veins.",
+                                                                                  "Qualifier": [
+                                                                                    "mesenteric veins"
+                                                                                  ]
                                                                                 }
                                                                               }
                                                                             }

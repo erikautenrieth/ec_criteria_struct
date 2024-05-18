@@ -25,13 +25,13 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "History of intolerance t",
+                  "raw_text": "History of intolerance",
                   "Condition": [
                     "intolerance"
                   ]
                 },
                 "right": {
-                  "raw_text": "o colchicine",
+                  "raw_text": "to colchicine",
                   "Drug": [
                     "colchicine"
                   ]
@@ -43,13 +43,16 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Glomerular filtration rate <3",
+                      "raw_text": "Glomerular filtration rate",
                       "Measurement": [
                         "Glomerular filtration rate"
                       ]
                     },
                     "right": {
-                      "raw_text": "0mL/minute or on dialysis",
+                      "raw_text": "<30mL/minute or on dialysis",
+                      "Value": [
+                        "<30mL/minute"
+                      ],
                       "Procedure": [
                         "dialysis"
                       ]
@@ -61,7 +64,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Active malignancy or",
+                          "raw_text": "Active malignancy",
                           "Condition": [
                             "malignancy"
                           ],
@@ -70,7 +73,7 @@
                           ]
                         },
                         "right": {
-                          "raw_text": "infection",
+                          "raw_text": "or infection",
                           "Condition": [
                             "infection"
                           ]
@@ -104,7 +107,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Use of oral steroids or non",
+                                      "raw_text": "Use of oral steroids",
                                       "Drug": [
                                         "oral steroids"
                                       ]
@@ -112,22 +115,29 @@
                                     "right": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "-steroidal anti-inflammatory agents other"
+                                          "raw_text": "or non-steroidal anti-inflammatory agents",
+                                          "Drug": [
+                                            "non-steroidal anti-inflammatory agents"
+                                          ]
                                         },
                                         "right": {
                                           "NOT": {
                                             "left": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "han aspirin within 72 hou",
+                                                  "raw_text": "other than aspirin within",
                                                   "Drug": [
                                                     "aspirin"
+                                                  ],
+                                                  "Negation": [
+                                                    "other than"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "rs or 3 times the agent's half-life (whichever is longer)",
+                                                  "raw_text": "72 hours or 3 times the agent's half-life (whichever is longer)",
                                                   "Reference_point": [
-                                                    "3 times the agent's half-life"
+                                                    "3 times the agent's half-life",
+                                                    "72 hours"
                                                   ]
                                                 }
                                               }
@@ -143,7 +153,7 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Use of strong CYP3A4/P-glycoprotein inhibitors (specifically ritonavir, ketoco",
+                                          "raw_text": "Use of strong CYP3A4/P-glycoprotein inhibitors (specifically ritonavir",
                                           "Drug": [
                                             "strong CYP3A4/P-glycoprotein inhibitors",
                                             "ritonavir"
@@ -152,25 +162,40 @@
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "nazole, clarit"
+                                              "raw_text": ", ketoconazole",
+                                              "Drug": [
+                                                "ketoconazole"
+                                              ]
                                             },
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "hromycin, cyclos"
+                                                  "raw_text": ", clarithromycin",
+                                                  "Drug": [
+                                                    "clarithromycin"
+                                                  ]
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "porine, diltia"
+                                                      "raw_text": ", cyclosporine",
+                                                      "Drug": [
+                                                        "cyclosporine"
+                                                      ]
                                                     },
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "zem and ver"
+                                                          "raw_text": ", diltiazem",
+                                                          "Drug": [
+                                                            "diltiazem"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "apamil)"
+                                                          "raw_text": "and verapamil)",
+                                                          "Drug": [
+                                                            "verapamil"
+                                                          ]
                                                         }
                                                       }
                                                     }

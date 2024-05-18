@@ -22,13 +22,16 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "History of TBI m",
+                  "raw_text": "History of TBI",
                   "Condition": [
                     "TBI"
                   ]
                 },
                 "right": {
-                  "raw_text": "ore severe than mild by DVBIC criteria",
+                  "raw_text": "more severe than mild by DVBIC criteria",
+                  "Value": [
+                    "more severe than mild"
+                  ],
                   "Measurement": [
                     "DVBIC criteria"
                   ],
@@ -43,7 +46,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Diagnosis of a primary or",
+                      "raw_text": "Diagnosis of a primary",
                       "Qualifier": [
                         "primary"
                       ],
@@ -54,7 +57,7 @@
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "secondary HA disorder ot",
+                          "raw_text": "or secondary HA disorder",
                           "Qualifier": [
                             "secondary"
                           ],
@@ -65,9 +68,15 @@
                         "right": {
                           "NOT": {
                             "left": {
-                              "raw_text": "er than PTHA",
+                              "raw_text": "other than PTHA",
                               "Condition": [
                                 "PTHA"
+                              ],
+                              "Negation": [
+                                "other than"
+                              ],
+                              "Qualifier": [
+                                "other"
                               ]
                             }
                           }
@@ -81,7 +90,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Lifetime history of 5 or more migraine or",
+                          "raw_text": "Lifetime history of 5 or more migraine",
                           "Observation": [
                             "Lifetime history"
                           ],
@@ -93,7 +102,7 @@
                           ]
                         },
                         "right": {
-                          "raw_text": "probable migraine headaches pre-dating mTBI",
+                          "raw_text": "or probable migraine headaches pre-dating mTBI",
                           "Condition": [
                             "TBI",
                             "migraine"
@@ -137,7 +146,7 @@
                             "left": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "Continuous HAs of any kind (i.e., persistent daily HAs with",
+                                  "raw_text": "Continuous HAs of any kind (i.e., persistent daily HAs",
                                   "Condition": [
                                     "HAs"
                                   ],
@@ -153,9 +162,12 @@
                                 "right": {
                                   "NOT": {
                                     "left": {
-                                      "raw_text": "free period less than 8 hours between attacks)",
+                                      "raw_text": "no HA-free period less than 8 hours between attacks)",
                                       "Value": [
                                         "less than 8 hours"
+                                      ],
+                                      "Negation": [
+                                        "no"
                                       ]
                                     }
                                   }
@@ -167,7 +179,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Acute or ser",
+                                      "raw_text": "Acute",
                                       "Qualifier": [
                                         "Acute"
                                       ]
@@ -175,7 +187,10 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "ious medical illness or uns",
+                                          "raw_text": "or serious medical illness",
+                                          "Qualifier": [
+                                            "serious"
+                                          ],
                                           "Condition": [
                                             "medical illness"
                                           ]
@@ -183,7 +198,7 @@
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "table chronic medical illness (e.g., unstable angina, myoca",
+                                              "raw_text": "or unstable chronic medical illness (e.g., unstable angina",
                                               "Condition": [
                                                 "medical illness",
                                                 "chronic medical illness",
@@ -196,12 +211,18 @@
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "rdial infarction within"
+                                                  "raw_text": ", myocardial infarction",
+                                                  "Condition": [
+                                                    "myocardial infarction"
+                                                  ]
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "6 months, congestive heart failure, clini",
+                                                      "raw_text": "within 6 months, congestive heart failure",
+                                                      "Temporal": [
+                                                        "within 6 months"
+                                                      ],
                                                       "Condition": [
                                                         "congestive heart failure"
                                                       ]
@@ -209,12 +230,18 @@
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "cally significant or con"
+                                                          "raw_text": ", clinically significant",
+                                                          "Qualifier": [
+                                                            "clinically significant"
+                                                          ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "cerning cardiac arrhythmias; preex",
+                                                              "raw_text": "or concerning cardiac arrhythmias",
+                                                              "Qualifier": [
+                                                                "concerning"
+                                                              ],
                                                               "Condition": [
                                                                 "cardiac arrhythmias"
                                                               ]
@@ -222,7 +249,10 @@
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "isting hypotension [systo",
+                                                                  "raw_text": "; preexisting hypotension",
+                                                                  "Temporal": [
+                                                                    "preexisting"
+                                                                  ],
                                                                   "Condition": [
                                                                     "hypotension"
                                                                   ]
@@ -230,10 +260,13 @@
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "lic blood pressure<110] or orthostatic hypotension [systo",
+                                                                      "raw_text": "[systolic blood pressure<110] or orthostatic hypotension",
                                                                       "Condition": [
                                                                         "hypotension",
                                                                         "orthostatic hypotension"
+                                                                      ],
+                                                                      "Measurement": [
+                                                                        "systolic blood pressure"
                                                                       ],
                                                                       "Value": [
                                                                         "<110"
@@ -242,7 +275,10 @@
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "lic drop >20 mm Hg after 2 min standing accompanied by lightheadedness], chronic renal or hep",
+                                                                          "raw_text": "[systolic drop >20 mm Hg after 2 min standing accompanied by lightheadedness], chronic renal",
+                                                                          "Measurement": [
+                                                                            "systolic drop"
+                                                                          ],
                                                                           "Value": [
                                                                             ">20 mm Hg"
                                                                           ],
@@ -251,25 +287,37 @@
                                                                           ],
                                                                           "Condition": [
                                                                             "lightheadedness"
+                                                                          ],
+                                                                          "Scope": [
+                                                                            "systolic drop >20 mm Hg after 2 min standing accompanied by lightheadedness"
                                                                           ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "atic failure, acute"
+                                                                              "raw_text": "or hepatic failure",
+                                                                              "Condition": [
+                                                                                "hepatic failure"
+                                                                              ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "pancreatitis, Menie"
+                                                                                  "raw_text": ", acute pancreatitis",
+                                                                                  "Condition": [
+                                                                                    "acute pancreatitis"
+                                                                                  ]
                                                                                 },
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "re's disease, or di"
+                                                                                      "raw_text": ", Meniere's disease",
+                                                                                      "Condition": [
+                                                                                        "Meniere's disease"
+                                                                                      ]
                                                                                     },
                                                                                     "right": {
-                                                                                      "raw_text": "agnosed but untreated sleep apnea). The eligibility of potential participants having acute serious and/or chronic medical illnesses other than those listed will be evaluated on a case-by-case basis by a study physician, PA-C, or ARNP.",
+                                                                                      "raw_text": ", or diagnosed but untreated sleep apnea). The eligibility of potential participants having acute serious and/or chronic medical illnesses other than those listed will be evaluated on a case-by-case basis by a study physician, PA-C, or ARNP.",
                                                                                       "Negation": [
                                                                                         "other than",
                                                                                         "no"
@@ -319,7 +367,7 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Use of prazosin or othe",
+                                          "raw_text": "Use of prazosin",
                                           "Drug": [
                                             "prazosin"
                                           ]
@@ -327,9 +375,12 @@
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "r alpha-1 antagonist (including but not limited to alfuzosin, doxazo",
+                                              "raw_text": "or other alpha-1 antagonist (including but not limited to alfuzosin",
                                               "Negation": [
                                                 "no"
+                                              ],
+                                              "Qualifier": [
+                                                "other"
                                               ],
                                               "Drug": [
                                                 "alpha-1 antagonist",
@@ -339,20 +390,32 @@
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "sin, silodo"
+                                                  "raw_text": ", doxazosin",
+                                                  "Drug": [
+                                                    "doxazosin"
+                                                  ]
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "sin, tamsul"
+                                                      "raw_text": ", silodosin",
+                                                      "Drug": [
+                                                        "silodosin"
+                                                      ]
                                                     },
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "osin, terazo"
+                                                          "raw_text": ", tamsulosin",
+                                                          "Drug": [
+                                                            "tamsulosin"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "sin) for any purpose in the 2 weeks prior to initial screen (P1) visit and prohibited throughout the study",
+                                                          "raw_text": ", terazosin) for any purpose in the 2 weeks prior to initial screen (P1) visit and prohibited throughout the study",
+                                                          "Drug": [
+                                                            "terazosin"
+                                                          ],
                                                           "Temporal": [
                                                             "in the 2 weeks prior to initial screen (P1) visit",
                                                             "prior"
@@ -379,7 +442,7 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "Allergy or previ",
+                                              "raw_text": "Allergy",
                                               "Condition": [
                                                 "Allergy"
                                               ]
@@ -387,19 +450,22 @@
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "ous adverse reaction to prazosin or other",
+                                                  "raw_text": "or previous adverse reaction to prazosin",
                                                   "Drug": [
                                                     "prazosin"
                                                   ],
-                                                  "Qualifier": [
-                                                    "other"
-                                                  ],
                                                   "Condition": [
                                                     "adverse reaction"
+                                                  ],
+                                                  "Temporal": [
+                                                    "previous"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "alpha-1 antagonist",
+                                                  "raw_text": "or other alpha-1 antagonist",
+                                                  "Qualifier": [
+                                                    "other"
+                                                  ],
                                                   "Drug": [
                                                     "alpha-1 antagonist"
                                                   ]
@@ -413,7 +479,7 @@
                                             "left": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "Active psychosis or psycho",
+                                                  "raw_text": "Active psychosis",
                                                   "Condition": [
                                                     "psychosis"
                                                   ],
@@ -424,20 +490,26 @@
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "tic disorder, severe d",
-                                                      "Qualifier": [
-                                                        "severe"
+                                                      "raw_text": "or psychotic disorder",
+                                                      "Condition": [
+                                                        "psychotic disorder"
                                                       ]
                                                     },
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "epression (as deter"
+                                                          "raw_text": ", severe depression",
+                                                          "Condition": [
+                                                            "severe depression"
+                                                          ],
+                                                          "Qualifier": [
+                                                            "severe"
+                                                          ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "mined per clinician prescriber judgment), severe psychiatric instability or severe",
+                                                              "raw_text": "(as determined per clinician prescriber judgment), severe psychiatric instability",
                                                               "Condition": [
                                                                 "psychiatric instability"
                                                               ],
@@ -448,14 +520,20 @@
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "situational life crisis (including evidence of being actively suicidal or homici",
+                                                                  "raw_text": "or severe situational life crisis (including evidence of being actively suicidal",
+                                                                  "Qualifier": [
+                                                                    "severe"
+                                                                  ],
                                                                   "Condition": [
                                                                     "situational life crisis",
                                                                     "suicidal"
                                                                   ]
                                                                 },
                                                                 "right": {
-                                                                  "raw_text": "dal)."
+                                                                  "raw_text": "or homicidal).",
+                                                                  "Condition": [
+                                                                    "homicidal"
+                                                                  ]
                                                                 }
                                                               }
                                                             }
@@ -472,7 +550,7 @@
                                                 "left": {
                                                   "AND": {
                                                     "left": {
-                                                      "raw_text": "Meets Diagnostic and Statistical Manual of Mental Disorders, 5th Edition (DSM-5) criteria for any Su",
+                                                      "raw_text": "Meets Diagnostic and Statistical Manual of Mental Disorders, 5th Edition (DSM-5) criteria",
                                                       "Negation": [
                                                         "no"
                                                       ],
@@ -481,9 +559,6 @@
                                                       ],
                                                       "Value": [
                                                         "Meets"
-                                                      ],
-                                                      "Qualifier": [
-                                                        "any"
                                                       ]
                                                     },
                                                     "right": {
@@ -491,10 +566,19 @@
                                                         "left": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "eine-related disorders, or tobacc"
+                                                              "raw_text": "except caffeine-related disorders",
+                                                              "Condition": [
+                                                                "caffeine-related disorders"
+                                                              ],
+                                                              "Negation": [
+                                                                "except"
+                                                              ]
                                                             },
                                                             "right": {
-                                                              "raw_text": "o-related disorders."
+                                                              "raw_text": ", or tobacco-related disorders.",
+                                                              "Condition": [
+                                                                "tobacco-related disorders"
+                                                              ]
                                                             }
                                                           }
                                                         }
@@ -507,7 +591,7 @@
                                                     "left": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "History of delirium within the",
+                                                          "raw_text": "History of delirium",
                                                           "Condition": [
                                                             "delirium"
                                                           ]
@@ -515,32 +599,44 @@
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "prior 3 months, epilepsy, stroke, de",
-                                                              "Condition": [
-                                                                "epilepsy",
-                                                                "stroke"
-                                                              ],
+                                                              "raw_text": "within the prior 3 months, epilepsy",
                                                               "Temporal": [
+                                                                "within the prior 3 months",
                                                                 "prior"
+                                                              ],
+                                                              "Condition": [
+                                                                "epilepsy"
                                                               ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "mentia,"
+                                                                  "raw_text": ", stroke",
+                                                                  "Condition": [
+                                                                    "stroke"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "psychotic"
+                                                                      "raw_text": ", dementia",
+                                                                      "Condition": [
+                                                                        "dementia"
+                                                                      ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "disorder, or bipolar"
+                                                                          "raw_text": ", psychotic disorder",
+                                                                          "Condition": [
+                                                                            "psychotic disorder"
+                                                                          ]
                                                                         },
                                                                         "right": {
-                                                                          "raw_text": "disorder"
+                                                                          "raw_text": ", or bipolar disorder",
+                                                                          "Condition": [
+                                                                            "bipolar disorder"
+                                                                          ]
                                                                         }
                                                                       }
                                                                     }
@@ -557,26 +653,24 @@
                                                         "left": {
                                                           "AND": {
                                                             "left": {
-                                                              "raw_text": "Structural brain abnormalities on any prior",
+                                                              "raw_text": "Structural brain abnormalities",
                                                               "Negation": [
                                                                 "no"
                                                               ],
                                                               "Condition": [
                                                                 "Structural brain abnormalities"
+                                                              ]
+                                                            },
+                                                            "right": {
+                                                              "raw_text": "on any prior imaging with associated clinically evident manifestations",
+                                                              "Procedure": [
+                                                                "imaging"
                                                               ],
                                                               "Temporal": [
                                                                 "prior"
                                                               ],
                                                               "Qualifier": [
-                                                                "any"
-                                                              ]
-                                                            },
-                                                            "right": {
-                                                              "raw_text": "imaging with associated clinically evident manifestations",
-                                                              "Procedure": [
-                                                                "imaging"
-                                                              ],
-                                                              "Qualifier": [
+                                                                "any",
                                                                 "clinically evident"
                                                               ],
                                                               "Condition": [
@@ -603,18 +697,31 @@
                                                                     "left": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": ", planning to b"
+                                                                          "raw_text": "not be pregnant",
+                                                                          "Negation": [
+                                                                            "no",
+                                                                            "not be"
+                                                                          ],
+                                                                          "Condition": [
+                                                                            "pregnant"
+                                                                          ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "ecome pregnant during the stu",
+                                                                              "raw_text": ", planning to become pregnant",
                                                                               "Condition": [
                                                                                 "pregnant"
+                                                                              ],
+                                                                              "Mood": [
+                                                                                "planning to become"
                                                                               ]
                                                                             },
                                                                             "right": {
-                                                                              "raw_text": "dy period, or nursing.",
+                                                                              "raw_text": "during the study period, or nursing.",
+                                                                              "Temporal": [
+                                                                                "during the study period"
+                                                                              ],
                                                                               "Condition": [
                                                                                 "nursing"
                                                                               ]
@@ -821,38 +928,42 @@
                                                                                                                         "left": {
                                                                                                                           "OR": {
                                                                                                                             "left": {
-                                                                                                                              "raw_text": "Sildenafil (Viagra), tadalafil (Cialis)",
+                                                                                                                              "raw_text": "Sildenafil",
                                                                                                                               "Drug": [
-                                                                                                                                "Sildenafil",
-                                                                                                                                "Viagra",
-                                                                                                                                "tadalafil",
-                                                                                                                                "Cialis"
+                                                                                                                                "Sildenafil"
                                                                                                                               ]
                                                                                                                             },
                                                                                                                             "right": {
                                                                                                                               "OR": {
                                                                                                                                 "left": {
-                                                                                                                                  "raw_text": ", vardenafil (Levitr",
+                                                                                                                                  "raw_text": "(Viagra), tadalafil",
                                                                                                                                   "Drug": [
-                                                                                                                                    "vardenafil"
+                                                                                                                                    "Viagra",
+                                                                                                                                    "tadalafil"
                                                                                                                                   ]
                                                                                                                                 },
                                                                                                                                 "right": {
                                                                                                                                   "OR": {
                                                                                                                                     "left": {
-                                                                                                                                      "raw_text": "a), and avanafil (Ste",
+                                                                                                                                      "raw_text": "(Cialis), vardenafil",
                                                                                                                                       "Drug": [
-                                                                                                                                        "avanafil"
+                                                                                                                                        "Cialis",
+                                                                                                                                        "vardenafil"
                                                                                                                                       ]
                                                                                                                                     },
                                                                                                                                     "right": {
-                                                                                                                                      "raw_text": "ndra) will not be permitted during the study drug dose Titration Period, because of increased risk of hypotension in combination with alpha-1 blockers, but will be allowed at half the usual starting dose following the study drug dose Titration Period, per VA prescribing guidelines.",
+                                                                                                                                      "raw_text": "(Levitra), and avanafil (Stendra) will not be permitted during the study drug dose Titration Period, because of increased risk of hypotension in combination with alpha-1 blockers, but will be allowed at half the usual starting dose following the study drug dose Titration Period, per VA prescribing guidelines.",
                                                                                                                                       "Negation": [
                                                                                                                                         "no",
                                                                                                                                         "not be"
                                                                                                                                       ],
                                                                                                                                       "Condition": [
                                                                                                                                         "hypotension"
+                                                                                                                                      ],
+                                                                                                                                      "Drug": [
+                                                                                                                                        "Levitra",
+                                                                                                                                        "avanafil",
+                                                                                                                                        "Stendra"
                                                                                                                                       ],
                                                                                                                                       "Temporal": [
                                                                                                                                         "during the study drug dose Titration Period"
@@ -869,13 +980,13 @@
                                                                                                                             "left": {
                                                                                                                               "OR": {
                                                                                                                                 "left": {
-                                                                                                                                  "raw_text": "Use of supplements containing nitrates and supplements containing st",
+                                                                                                                                  "raw_text": "Use of supplements containing nitrates",
                                                                                                                                   "Drug": [
                                                                                                                                     "nitrates"
                                                                                                                                   ]
                                                                                                                                 },
                                                                                                                                 "right": {
-                                                                                                                                  "raw_text": "imulants (such as ephedra) are exclusionary in the two weeks prior to initial screen (P1) visit and prohibited throughout the study. Participants who take these supplements will be asked to discontinue them for a minimum of two weeks before the Preliminary Screening Period (P1 visit)..",
+                                                                                                                                  "raw_text": "and supplements containing stimulants (such as ephedra) are exclusionary in the two weeks prior to initial screen (P1) visit and prohibited throughout the study. Participants who take these supplements will be asked to discontinue them for a minimum of two weeks before the Preliminary Screening Period (P1 visit)..",
                                                                                                                                   "Reference_point": [
                                                                                                                                     "initial screen (P1) visit"
                                                                                                                                   ],
@@ -884,6 +995,7 @@
                                                                                                                                     "in the two weeks prior to initial screen (P1) visit"
                                                                                                                                   ],
                                                                                                                                   "Drug": [
+                                                                                                                                    "stimulants",
                                                                                                                                     "ephedra"
                                                                                                                                   ]
                                                                                                                                 }
@@ -894,19 +1006,15 @@
                                                                                                                                 "left": {
                                                                                                                                   "OR": {
                                                                                                                                     "left": {
-                                                                                                                                      "raw_text": "Use of prescribed stimulants (such as amphetamine or dextroamphetamine containin",
+                                                                                                                                      "raw_text": "Use of prescribed stimulants (such as amphetamine",
                                                                                                                                       "Drug": [
                                                                                                                                         "stimulants",
                                                                                                                                         "prescribed stimulants",
-                                                                                                                                        "amphetamine",
-                                                                                                                                        "dextroamphetamine"
-                                                                                                                                      ],
-                                                                                                                                      "Scope": [
-                                                                                                                                        "amphetamine or dextroamphetamine"
+                                                                                                                                        "amphetamine"
                                                                                                                                       ]
                                                                                                                                     },
                                                                                                                                     "right": {
-                                                                                                                                      "raw_text": "g medications) is exclusionary in the 2 weeks prior to the initial screen (P1) visit and prohibited throughout the study. Participants who take these medications will be asked to discontinue them for a minimum of 2 weeks before the Preliminary Screening Period.",
+                                                                                                                                      "raw_text": "or dextroamphetamine containing medications) is exclusionary in the 2 weeks prior to the initial screen (P1) visit and prohibited throughout the study. Participants who take these medications will be asked to discontinue them for a minimum of 2 weeks before the Preliminary Screening Period.",
                                                                                                                                       "Reference_point": [
                                                                                                                                         "initial screen (P1) visit"
                                                                                                                                       ],
@@ -915,7 +1023,9 @@
                                                                                                                                         "in the 2 weeks prior to the initial screen (P1) visit"
                                                                                                                                       ],
                                                                                                                                       "Drug": [
-                                                                                                                                        "medications"
+                                                                                                                                        "medications",
+                                                                                                                                        "amphetamine",
+                                                                                                                                        "dextroamphetamine"
                                                                                                                                       ]
                                                                                                                                     }
                                                                                                                                   }

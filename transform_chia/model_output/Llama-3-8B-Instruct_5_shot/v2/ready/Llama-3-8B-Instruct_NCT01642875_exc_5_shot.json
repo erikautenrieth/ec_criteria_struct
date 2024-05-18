@@ -1,0 +1,63 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Metastatic tumor"
+        },
+        "right": {
+          "raw_text": "Locally unresectable tumor"
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Previous gastric resection"
+            },
+            "right": {
+              "raw_text": "ASA IV-V"
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Age under 18 years"
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Preoperative complete parenteral or enteral feeding"
+                    },
+                    "right": {
+                      "raw_text": "Immunosuppressive therapy before operation"
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Severe malnutrition"
+                    },
+                    "right": {
+                      "raw_text": "Lack of the patient's consent for the trial participation, feeding tube insertion or epidural analgesia"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

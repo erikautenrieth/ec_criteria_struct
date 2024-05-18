@@ -48,12 +48,15 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "ther than Alcohol,"
+                      "raw_text": "other than Alcohol",
+                      "Negation": [
+                        "other than"
+                      ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "Nicotine"
+                          "raw_text": ", Nicotine"
                         },
                         "right": {
                           "raw_text": "or Caffeine Use Disorders",
@@ -74,7 +77,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "Lifetime history of Bipolar Disorder,",
+                  "raw_text": "Lifetime history of Bipolar Disorder",
                   "Observation": [
                     "history",
                     "Lifetime history"
@@ -86,13 +89,13 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "Schizophrenia o",
+                      "raw_text": ", Schizophrenia",
                       "Condition": [
                         "Schizophrenia"
                       ]
                     },
                     "right": {
-                      "raw_text": "r Schizoaffective Disorder",
+                      "raw_text": "or Schizoaffective Disorder",
                       "Condition": [
                         "Schizoaffective Disorder"
                       ]
@@ -106,7 +109,7 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "raw_text": "Any current psychiatric disorder, o",
+                      "raw_text": "Any current psychiatric disorder",
                       "Condition": [
                         "psychiatric disorder"
                       ],
@@ -117,7 +120,10 @@
                     "right": {
                       "NOT": {
                         "left": {
-                          "raw_text": "er than Alcohol Use Disorder, that, in the judgment of the investigator, will require treatment that will interfere with study participation.",
+                          "raw_text": "other than Alcohol Use Disorder, that, in the judgment of the investigator, will require treatment that will interfere with study participation.",
+                          "Negation": [
+                            "other than"
+                          ],
                           "Condition": [
                             "Alcohol Use Disorder",
                             "interfere"
@@ -135,7 +141,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Current severe depression (HA",
+                          "raw_text": "Current severe depression",
                           "Qualifier": [
                             "severe"
                           ],
@@ -147,15 +153,16 @@
                           ]
                         },
                         "right": {
-                          "raw_text": "M-D >24) or anxiety (HAM-A >24)",
+                          "raw_text": "(HAM-D >24) or anxiety (HAM-A >24)",
+                          "Measurement": [
+                            "HAM-D",
+                            "HAM-A"
+                          ],
                           "Value": [
                             ">24"
                           ],
                           "Condition": [
                             "anxiety"
-                          ],
-                          "Measurement": [
-                            "HAM-A"
                           ]
                         }
                       }
@@ -165,13 +172,16 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Significant suicide or v",
+                              "raw_text": "Significant suicide",
                               "Qualifier": [
                                 "Significant"
                               ]
                             },
                             "right": {
-                              "raw_text": "iolence risk"
+                              "raw_text": "or violence risk",
+                              "Condition": [
+                                "violence risk"
+                              ]
                             }
                           }
                         },
@@ -222,7 +232,7 @@
                                             "left": {
                                               "AND": {
                                                 "left": {
-                                                  "raw_text": "Contraindications to disulf",
+                                                  "raw_text": "Contraindications",
                                                   "Condition": [
                                                     "Contraindications"
                                                   ]
@@ -230,7 +240,10 @@
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "iram treatment (liver disease, kidney d",
+                                                      "raw_text": "to disulfiram treatment (liver disease",
+                                                      "Drug": [
+                                                        "disulfiram"
+                                                      ],
                                                       "Condition": [
                                                         "liver disease"
                                                       ]
@@ -238,54 +251,76 @@
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "isease, cardiac"
+                                                          "raw_text": ", kidney disease",
+                                                          "Condition": [
+                                                            "kidney disease"
+                                                          ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "disease, seizure",
+                                                              "raw_text": ", cardiac disease",
                                                               "Condition": [
-                                                                "seizure"
+                                                                "cardiac disease"
                                                               ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "disorder, hypothyr"
+                                                                  "raw_text": ", seizure disorder",
+                                                                  "Condition": [
+                                                                    "seizure disorder",
+                                                                    "seizure"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "oidism, diabetes"
+                                                                      "raw_text": ", hypothyroidism",
+                                                                      "Condition": [
+                                                                        "hypothyroidism"
+                                                                      ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "mellitus, pregnanc"
+                                                                          "raw_text": ", diabetes mellitus",
+                                                                          "Condition": [
+                                                                            "diabetes mellitus"
+                                                                          ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "y or lactat"
+                                                                              "raw_text": ", pregnancy",
+                                                                              "Condition": [
+                                                                                "pregnancy"
+                                                                              ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "ion, allergy",
+                                                                                  "raw_text": "or lactation",
                                                                                   "Condition": [
-                                                                                    "allergy"
+                                                                                    "lactation"
                                                                                   ]
                                                                                 },
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "to disulfiram or thiura",
+                                                                                      "raw_text": ", allergy to disulfiram",
                                                                                       "Drug": [
                                                                                         "disulfiram"
+                                                                                      ],
+                                                                                      "Condition": [
+                                                                                        "allergy"
                                                                                       ]
                                                                                     },
                                                                                     "right": {
-                                                                                      "raw_text": "n derivatives)"
+                                                                                      "raw_text": "or thiuran derivatives)",
+                                                                                      "Drug": [
+                                                                                        "thiuran derivatives"
+                                                                                      ]
                                                                                     }
                                                                                   }
                                                                                 }
@@ -312,7 +347,7 @@
                                                 "left": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "Neurological or medical conditions that would",
+                                                      "raw_text": "Neurological or medical conditions",
                                                       "Condition": [
                                                         "medical conditions"
                                                       ],
@@ -323,13 +358,13 @@
                                                     "right": {
                                                       "AND": {
                                                         "left": {
-                                                          "raw_text": "interfere with MRI s",
+                                                          "raw_text": "that would interfere",
                                                           "Condition": [
                                                             "interfere"
                                                           ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "canning (e.g. history of stroke, seizure, brain tumor, brain infection, traumatic brain injury, multiple sclerosis, dementia, metal device in body, pregnancy, claustrophobia, color blindness, severe hearing impairment, weight>300 lbs., wheelchair-bound)",
+                                                          "raw_text": "with MRI scanning (e.g. history of stroke, seizure, brain tumor, brain infection, traumatic brain injury, multiple sclerosis, dementia, metal device in body, pregnancy, claustrophobia, color blindness, severe hearing impairment, weight>300 lbs., wheelchair-bound)",
                                                           "Qualifier": [
                                                             "severe"
                                                           ],
@@ -350,6 +385,9 @@
                                                             "hearing impairment",
                                                             "wheelchair-bound"
                                                           ],
+                                                          "Procedure": [
+                                                            "MRI scanning"
+                                                          ],
                                                           "Device": [
                                                             "metal device in body"
                                                           ],
@@ -369,7 +407,7 @@
                                                     "left": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "Currently taking medications containing alcohol, metronidaz",
+                                                          "raw_text": "Currently taking medications containing alcohol",
                                                           "Temporal": [
                                                             "Current",
                                                             "Currently"
@@ -381,39 +419,48 @@
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "ole, isoniazid,",
+                                                              "raw_text": ", metronidazole",
                                                               "Drug": [
-                                                                "isoniazid"
+                                                                "metronidazole"
                                                               ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "paraldehyd"
+                                                                  "raw_text": ", isoniazid",
+                                                                  "Drug": [
+                                                                    "isoniazid"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "e, phenytoin,",
+                                                                      "raw_text": ", paraldehyde",
                                                                       "Drug": [
-                                                                        "phenytoin"
+                                                                        "paraldehyde"
                                                                       ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "warfarin,",
+                                                                          "raw_text": ", phenytoin",
                                                                           "Drug": [
-                                                                            "warfarin"
+                                                                            "phenytoin"
                                                                           ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "or theophy"
+                                                                              "raw_text": ", warfarin",
+                                                                              "Drug": [
+                                                                                "warfarin"
+                                                                              ]
                                                                             },
                                                                             "right": {
-                                                                              "raw_text": "lline."
+                                                                              "raw_text": ", or theophylline.",
+                                                                              "Drug": [
+                                                                                "theophylline"
+                                                                              ]
                                                                             }
                                                                           }
                                                                         }

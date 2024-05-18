@@ -14,7 +14,7 @@
         "left": {
           "OR": {
             "left": {
-              "raw_text": "Patients with a history of coronary artery disease,",
+              "raw_text": "Patients with a history of coronary artery disease",
               "Observation": [
                 "history"
               ],
@@ -23,27 +23,27 @@
               ]
             },
             "right": {
-              "raw_text": "valvular or hypertensive heart disease",
-              "Condition": [
-                "hypertensive heart disease"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": ", valvular or hypertensive heart disease",
+                  "Condition": [
+                    "hypertensive heart disease"
+                  ]
+                },
+                "right": {
+                  "raw_text": ""
+                }
+              }
             }
           }
         },
         "right": {
           "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": ""
-                },
-                "right": {
-                  "raw_text": "Patients with chronic liver disease",
-                  "Condition": [
-                    "chronic liver disease"
-                  ]
-                }
-              }
+              "raw_text": "Patients with chronic liver disease",
+              "Condition": [
+                "chronic liver disease"
+              ]
             },
             "right": {
               "AND": {
@@ -58,20 +58,20 @@
                     "left": {
                       "AND": {
                         "left": {
-                          "raw_text": "Renal failure not",
+                          "raw_text": "Renal failure",
                           "Condition": [
                             "Renal failure"
-                          ],
-                          "Negation": [
-                            "not"
                           ]
                         },
                         "right": {
                           "NOT": {
                             "left": {
-                              "raw_text": "due to LAL",
+                              "raw_text": "not due to LAL",
                               "Condition": [
                                 "LAL"
+                              ],
+                              "Negation": [
+                                "not"
                               ],
                               "Mood": [
                                 "due to"
@@ -99,15 +99,24 @@
                                 "left": {
                                   "AND": {
                                     "left": {
-                                      "raw_text": "ious neurological abnormalities due t",
+                                      "raw_text": "No serious neurological abnormalities",
+                                      "Negation": [
+                                        "No"
+                                      ],
+                                      "Qualifier": [
+                                        "serious"
+                                      ],
                                       "Condition": [
                                         "neurological abnormalities"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "o LAL",
+                                      "raw_text": "due to LAL",
                                       "Condition": [
                                         "LAL"
+                                      ],
+                                      "Mood": [
+                                        "due to"
                                       ]
                                     }
                                   }
@@ -133,13 +142,16 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Pregnant or brea",
+                                          "raw_text": "Pregnant",
                                           "Observation": [
                                             "Pregnant"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "stfeeding"
+                                          "raw_text": "or breastfeeding",
+                                          "Observation": [
+                                            "breastfeeding"
+                                          ]
                                         }
                                       }
                                     },

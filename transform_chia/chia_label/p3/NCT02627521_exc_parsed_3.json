@@ -22,7 +22,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "Active bleeding o",
+                  "raw_text": "Active bleeding",
                   "Qualifier": [
                     "Active"
                   ],
@@ -31,7 +31,7 @@
                   ]
                 },
                 "right": {
-                  "raw_text": "r at high risk of bleeding",
+                  "raw_text": "or at high risk of bleeding",
                   "Condition": [
                     "bleeding"
                   ],
@@ -44,36 +44,39 @@
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Severe liver or renal disease.",
-                  "Condition": [
-                    "renal disease"
-                  ],
-                  "Qualifier": [
-                    "Severe"
-                  ],
-                  "Scope": [
-                    "liver or renal disease"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "Severe liver or renal disease",
+                      "Condition": [
+                        "renal disease"
+                      ],
+                      "Qualifier": [
+                        "Severe"
+                      ],
+                      "Scope": [
+                        "liver or renal disease"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "."
+                    }
+                  }
                 },
                 "right": {
                   "AND": {
                     "left": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": "H"
+                          "raw_text": "Hypersensitivity",
+                          "Condition": [
+                            "Hypersensitivity"
+                          ]
                         },
                         "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "ypersensitivity to"
-                            },
-                            "right": {
-                              "raw_text": "ticagrelor",
-                              "Drug": [
-                                "ticagrelor"
-                              ]
-                            }
-                          }
+                          "raw_text": "to ticagrelor",
+                          "Drug": [
+                            "ticagrelor"
+                          ]
                         }
                       }
                     },

@@ -42,7 +42,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "Anticoagulant treatment after the operation (e.g. warfarin,",
+                  "raw_text": "Anticoagulant treatment after the operation (e.g. warfarin",
                   "Procedure": [
                     "Anticoagulant treatment",
                     "operation"
@@ -60,7 +60,7 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "direct thrombin inhibitors (",
+                      "raw_text": ", direct thrombin inhibitors",
                       "Drug": [
                         "direct thrombin inhibitors"
                       ]
@@ -68,7 +68,7 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "dabigatran), FXa inhibitors (rivaroxaban,",
+                          "raw_text": "(dabigatran), FXa inhibitors (rivaroxaban",
                           "Drug": [
                             "dabigatran",
                             "FXa inhibitors",
@@ -78,7 +78,7 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "apixaban,",
+                              "raw_text": ", apixaban",
                               "Drug": [
                                 "apixaban"
                               ]
@@ -86,7 +86,7 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "heparin,",
+                                  "raw_text": ", heparin",
                                   "Drug": [
                                     "heparin"
                                   ]
@@ -94,14 +94,14 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "low-molecular weight heparin,",
+                                      "raw_text": ", low-molecular weight heparin",
                                       "Drug": [
                                         "heparin",
                                         "low-molecular weight heparin"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "fondaparinux)",
+                                      "raw_text": ", fondaparinux)",
                                       "Drug": [
                                         "fondaparinux"
                                       ]
@@ -123,13 +123,13 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "raw_text": "Discharge fr",
+                      "raw_text": "Discharge",
                       "Observation": [
                         "Discharge"
                       ]
                     },
                     "right": {
-                      "raw_text": "om the operating hospital to an ICU at another hospital",
+                      "raw_text": "from the operating hospital to an ICU at another hospital",
                       "Visit": [
                         "operating hospital",
                         "ICU",
@@ -158,7 +158,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Known intolerance or c",
+                              "raw_text": "Known intolerance",
                               "Condition": [
                                 "intolerance"
                               ]
@@ -166,16 +166,20 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "ontraindication to ticagrelor or A",
+                                  "raw_text": "or contraindication to ticagrelor",
+                                  "Condition": [
+                                    "contraindication",
+                                    "indication"
+                                  ],
                                   "Drug": [
                                     "ticagrelor"
-                                  ],
-                                  "Condition": [
-                                    "indication"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "SA"
+                                  "raw_text": "or ASA",
+                                  "Drug": [
+                                    "ASA"
+                                  ]
                                 }
                               }
                             }
@@ -197,7 +201,7 @@
                                 "left": {
                                   "AND": {
                                     "left": {
-                                      "raw_text": "Any condition other",
+                                      "raw_text": "Any condition",
                                       "Condition": [
                                         "condition"
                                       ]
@@ -205,9 +209,15 @@
                                     "right": {
                                       "NOT": {
                                         "left": {
-                                          "raw_text": "han coronary artery disease with a life expectancy <12 months",
+                                          "raw_text": "other than coronary artery disease with a life expectancy <12 months",
+                                          "Qualifier": [
+                                            "other than"
+                                          ],
                                           "Condition": [
                                             "coronary artery disease"
+                                          ],
+                                          "Negation": [
+                                            "other than"
                                           ],
                                           "Observation": [
                                             "life expectancy"
@@ -225,7 +235,7 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Known chronic liver disease, renal",
+                                          "raw_text": "Known chronic liver disease",
                                           "Condition": [
                                             "chronic liver disease"
                                           ]
@@ -233,16 +243,22 @@
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "disease requiri"
+                                              "raw_text": ", renal disease",
+                                              "Condition": [
+                                                "renal disease"
+                                              ]
                                             },
                                             "right": {
-                                              "raw_text": "ng dialysis or bleeding disorder",
+                                              "raw_text": "requiring dialysis or bleeding disorder",
                                               "Condition": [
                                                 "disorder",
                                                 "bleeding disorder"
                                               ],
                                               "Procedure": [
                                                 "dialysis"
+                                              ],
+                                              "Mood": [
+                                                "requiring"
                                               ]
                                             }
                                           }
@@ -254,15 +270,18 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "Atrioventricular block II and I",
-                                              "Condition": [
-                                                "Atrioventricular block II"
-                                              ]
+                                              "raw_text": "Atrioventricular block"
                                             },
                                             "right": {
                                               "NOT": {
                                                 "left": {
-                                                  "raw_text": "acemaker"
+                                                  "raw_text": "without pacemaker",
+                                                  "Negation": [
+                                                    "without"
+                                                  ],
+                                                  "Device": [
+                                                    "pacemaker"
+                                                  ]
                                                 }
                                               }
                                             }
@@ -273,13 +292,16 @@
                                             "left": {
                                               "AND": {
                                                 "left": {
-                                                  "raw_text": "Any other indication for dual",
+                                                  "raw_text": "Any other indication",
                                                   "Condition": [
                                                     "indication"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "antiplatelet therapy, i.e. recent stent implantation",
+                                                  "raw_text": "for dual antiplatelet therapy, i.e. recent stent implantation",
+                                                  "Condition": [
+                                                    "dual antiplatelet therapy"
+                                                  ],
                                                   "Procedure": [
                                                     "stent implantation"
                                                   ],
@@ -297,14 +319,19 @@
                                                 "left": {
                                                   "AND": {
                                                     "left": {
-                                                      "raw_text": "Debilitating stroke wit",
+                                                      "raw_text": "Debilitating",
                                                       "Condition": [
-                                                        "stroke",
                                                         "Debilitating"
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "hin 90 days before inclusion"
+                                                      "raw_text": "stroke within 90 days before inclusion",
+                                                      "Temporal": [
+                                                        "within 90 days before inclusion"
+                                                      ],
+                                                      "Condition": [
+                                                        "stroke"
+                                                      ]
                                                     }
                                                   }
                                                 },
@@ -324,14 +351,17 @@
                                                         "left": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "Treatment with immunosuppressants (e.g. cyclosporine and tacrolim",
+                                                              "raw_text": "Treatment with immunosuppressants (e.g. cyclosporine",
                                                               "Drug": [
                                                                 "immunosuppressants",
                                                                 "cyclosporine"
                                                               ]
                                                             },
                                                             "right": {
-                                                              "raw_text": "us)"
+                                                              "raw_text": "and tacrolimus)",
+                                                              "Drug": [
+                                                                "tacrolimus"
+                                                              ]
                                                             }
                                                           }
                                                         },
@@ -340,7 +370,7 @@
                                                             "left": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "Treatment with strong CYP3A4-inhibitors (e.g. ketoconazole, clarithromyc",
+                                                                  "raw_text": "Treatment with strong CYP3A4-inhibitors (e.g. ketoconazole",
                                                                   "Drug": [
                                                                     "strong CYP3A4-inhibitors",
                                                                     "ketoconazole"
@@ -349,29 +379,32 @@
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "in, nefazodone,",
+                                                                      "raw_text": ", clarithromycin",
                                                                       "Drug": [
-                                                                        "nefazodone"
+                                                                        "clarithromycin"
                                                                       ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "ritonavir or",
+                                                                          "raw_text": ", nefazodone",
                                                                           "Drug": [
-                                                                            "ritonavir"
+                                                                            "nefazodone"
                                                                           ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "atazanavir",
+                                                                              "raw_text": ", ritonavir",
                                                                               "Drug": [
-                                                                                "atazanavir"
+                                                                                "ritonavir"
                                                                               ]
                                                                             },
                                                                             "right": {
-                                                                              "raw_text": ")"
+                                                                              "raw_text": "or atazanavir)",
+                                                                              "Drug": [
+                                                                                "atazanavir"
+                                                                              ]
                                                                             }
                                                                           }
                                                                         }

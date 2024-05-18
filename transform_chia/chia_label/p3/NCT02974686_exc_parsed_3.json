@@ -42,7 +42,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "Evidence of any GI disorder i",
+                  "raw_text": "Evidence of any GI disorder",
                   "Condition": [
                     "GI disorder"
                   ]
@@ -50,7 +50,10 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "nduced by an infection, underlying medical condition,",
+                      "raw_text": "induced by an infection, underlying medical condition",
+                      "Qualifier": [
+                        "induced by an infection"
+                      ],
                       "Condition": [
                         "infection",
                         "underlying medical condition"
@@ -59,7 +62,7 @@
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "or concomitant medication o",
+                          "raw_text": ", or concomitant medication",
                           "Drug": [
                             "medication"
                           ]
@@ -67,9 +70,12 @@
                         "right": {
                           "NOT": {
                             "left": {
-                              "raw_text": "her than MPA",
+                              "raw_text": "other than MPA",
                               "Drug": [
                                 "MPA"
+                              ],
+                              "Negation": [
+                                "other than"
                               ]
                             }
                           }
@@ -146,7 +152,7 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Wound healing issues at time of possible conversion (eg, wound dehiscence, wound",
+                                          "raw_text": "Wound healing issues at time of possible conversion (eg, wound dehiscence",
                                           "Temporal": [
                                             "at time of possible conversion"
                                           ],
@@ -158,26 +164,33 @@
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "infection, incisi",
+                                              "raw_text": ", wound infection",
                                               "Condition": [
-                                                "infection"
+                                                "infection",
+                                                "wound infection"
                                               ]
                                             },
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "onal hernia, lympho"
+                                                  "raw_text": ", incisional hernia",
+                                                  "Condition": [
+                                                    "incisional hernia"
+                                                  ]
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "cele, seroma",
+                                                      "raw_text": ", lymphocele",
                                                       "Condition": [
-                                                        "seroma"
+                                                        "lymphocele"
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": ")"
+                                                      "raw_text": ", seroma)",
+                                                      "Condition": [
+                                                        "seroma"
+                                                      ]
                                                     }
                                                   }
                                                 }
@@ -209,7 +222,7 @@
                                             "left": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "Hypersensitivity to everolimus, sirolimu",
+                                                  "raw_text": "Hypersensitivity to everolimus",
                                                   "Condition": [
                                                     "Hypersensitivity"
                                                   ],
@@ -220,10 +233,13 @@
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "s, or other"
+                                                      "raw_text": ", sirolimus",
+                                                      "Drug": [
+                                                        "sirolimus"
+                                                      ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "rapamycin deriviatives",
+                                                      "raw_text": ", or other rapamycin deriviatives",
                                                       "Drug": [
                                                         "rapamycin"
                                                       ]

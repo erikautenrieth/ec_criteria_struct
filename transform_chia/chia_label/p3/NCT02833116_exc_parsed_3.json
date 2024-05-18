@@ -49,7 +49,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Patients with allergy or i",
+                              "raw_text": "Patients with allergy",
                               "Condition": [
                                 "allergy"
                               ]
@@ -57,10 +57,13 @@
                             "right": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "ntolerance to a"
+                                  "raw_text": "or intolerance",
+                                  "Condition": [
+                                    "intolerance"
+                                  ]
                                 },
                                 "right": {
-                                  "raw_text": "ny of the drugs used.",
+                                  "raw_text": "to any of the drugs used.",
                                   "Drug": [
                                     "drugs"
                                   ]
@@ -105,7 +108,7 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "Patients with type I diabetes or poorl",
+                                              "raw_text": "Patients with type I diabetes",
                                               "Condition": [
                                                 "type I diabetes"
                                               ]
@@ -113,16 +116,22 @@
                                             "right": {
                                               "AND": {
                                                 "left": {
-                                                  "raw_text": "y controlled type II diabetes (Hb1Ac>8",
+                                                  "raw_text": "or poorly controlled type II diabetes",
+                                                  "Qualifier": [
+                                                    "poorly controlled"
+                                                  ],
                                                   "Condition": [
                                                     "type II diabetes"
-                                                  ],
-                                                  "Measurement": [
-                                                    "Hb1Ac"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": ".5)."
+                                                  "raw_text": "(Hb1Ac>8.5).",
+                                                  "Measurement": [
+                                                    "Hb1Ac"
+                                                  ],
+                                                  "Value": [
+                                                    ">8.5"
+                                                  ]
                                                 }
                                               }
                                             }
@@ -149,13 +158,16 @@
                                                     "left": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "Patients with pre-treatment with steroid injections/or local an",
+                                                          "raw_text": "Patients with pre-treatment with steroid injections",
                                                           "Procedure": [
                                                             "steroid injections"
                                                           ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "esthetics."
+                                                          "raw_text": "/or local anesthetics.",
+                                                          "Procedure": [
+                                                            "local anesthetics"
+                                                          ]
                                                         }
                                                       }
                                                     },

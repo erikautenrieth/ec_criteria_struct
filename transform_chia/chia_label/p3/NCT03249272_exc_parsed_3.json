@@ -74,13 +74,13 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "Accelerating angina o",
+                  "raw_text": "Accelerating angina",
                   "Condition": [
                     "Accelerating angina"
                   ]
                 },
                 "right": {
-                  "raw_text": "r unstable angina",
+                  "raw_text": "or unstable angina",
                   "Condition": [
                     "unstable angina"
                   ]
@@ -92,7 +92,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Inability to physically tolerate MRI or",
+                      "raw_text": "Inability to physically tolerate MRI",
                       "Condition": [
                         "Inability to physically tolerate"
                       ],
@@ -101,7 +101,7 @@
                       ]
                     },
                     "right": {
-                      "raw_text": "implanted objects that are MRI incompatible",
+                      "raw_text": "or implanted objects that are MRI incompatible",
                       "Procedure": [
                         "MRI"
                       ],
@@ -138,7 +138,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Advanced heart block or si",
+                                  "raw_text": "Advanced heart block",
                                   "Condition": [
                                     "heart block"
                                   ],
@@ -147,7 +147,10 @@
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "nus node dysfunction"
+                                  "raw_text": "or sinus node dysfunction",
+                                  "Condition": [
+                                    "sinus node dysfunction"
+                                  ]
                                 }
                               }
                             },
@@ -156,7 +159,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Hypersensitivity or all",
+                                      "raw_text": "Hypersensitivity",
                                       "Condition": [
                                         "Hypersensitivity"
                                       ]
@@ -164,13 +167,19 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "ergic reaction to regadenoson or ade",
+                                          "raw_text": "or allergic reaction to regadenoson",
+                                          "Condition": [
+                                            "allergic"
+                                          ],
                                           "Drug": [
                                             "regadenoson"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "nosine"
+                                          "raw_text": "or adenosine",
+                                          "Drug": [
+                                            "adenosine"
+                                          ]
                                         }
                                       }
                                     }
@@ -189,7 +198,7 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "Active bronchospasm or histo",
+                                              "raw_text": "Active bronchospasm",
                                               "Qualifier": [
                                                 "Active"
                                               ],
@@ -200,13 +209,19 @@
                                             "right": {
                                               "AND": {
                                                 "left": {
-                                                  "raw_text": "ry of hospitalization due to b",
+                                                  "raw_text": "or history of hospitalization",
+                                                  "Observation": [
+                                                    "history"
+                                                  ],
                                                   "Procedure": [
                                                     "hospitalization"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "ronchospasm"
+                                                  "raw_text": "due to bronchospasm",
+                                                  "Condition": [
+                                                    "bronchospasm"
+                                                  ]
                                                 }
                                               }
                                             }
@@ -250,13 +265,16 @@
                                                         "left": {
                                                           "AND": {
                                                             "left": {
-                                                              "raw_text": "Contraindication to aminophyl",
+                                                              "raw_text": "Contraindication",
                                                               "Condition": [
                                                                 "Contraindication"
                                                               ]
                                                             },
                                                             "right": {
-                                                              "raw_text": "line"
+                                                              "raw_text": "to aminophylline",
+                                                              "Drug": [
+                                                                "aminophylline"
+                                                              ]
                                                             }
                                                           }
                                                         },
@@ -265,7 +283,7 @@
                                                             "left": {
                                                               "AND": {
                                                                 "left": {
-                                                                  "raw_text": "Severe renal insufficiency with estimate",
+                                                                  "raw_text": "Severe renal insufficiency",
                                                                   "Qualifier": [
                                                                     "Severe"
                                                                   ],
@@ -274,7 +292,10 @@
                                                                   ]
                                                                 },
                                                                 "right": {
-                                                                  "raw_text": "d glomerular filtration rate <30 ml/min/ 1.73 m2",
+                                                                  "raw_text": "with estimated glomerular filtration rate <30 ml/min/ 1.73 m2",
+                                                                  "Measurement": [
+                                                                    "estimated glomerular filtration rate"
+                                                                  ],
                                                                   "Value": [
                                                                     "<30 ml/min/ 1.73 m2"
                                                                   ]
@@ -284,23 +305,18 @@
                                                             "right": {
                                                               "AND": {
                                                                 "left": {
-                                                                  "raw_text": "Pregnant or nursing",
-                                                                  "Condition": [
-                                                                    "Pregnant",
-                                                                    "nursing"
-                                                                  ]
-                                                                },
-                                                                "right": {
-                                                                  "AND": {
+                                                                  "OR": {
                                                                     "left": {
-                                                                      "OR": {
-                                                                        "left": {
-                                                                          "raw_text": ""
-                                                                        },
-                                                                        "right": {
-                                                                          "raw_text": ""
-                                                                        }
-                                                                      }
+                                                                      "raw_text": "Pregnant",
+                                                                      "Condition": [
+                                                                        "Pregnant"
+                                                                      ]
+                                                                    },
+                                                                    "right": {
+                                                                      "raw_text": "or nursing",
+                                                                      "Condition": [
+                                                                        "nursing"
+                                                                      ]
                                                                     }
                                                                   }
                                                                 }

@@ -1,0 +1,68 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Patients receiving prednisone = 1mg/kg/d for the treatment of acute GVHD",
+          "Drug": [
+            "prednisone"
+          ],
+          "Value": [
+            "= 1mg/kg/d"
+          ],
+          "Condition": [
+            "acute GVHD",
+            "GVHD"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or mild",
+              "Qualifier": [
+                "mild"
+              ]
+            },
+            "right": {
+              "raw_text": ", severe chronic GVHD.",
+              "Qualifier": [
+                "severe",
+                "chronic"
+              ],
+              "Condition": [
+                "GVHD"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Recipient < 14years of age",
+          "Value": [
+            "< 14years"
+          ],
+          "Person": [
+            "age"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Donor is sero-positive in H"
+                },
+                "right": {
+                  "raw_text": "BV/HCV/HIV or RPR."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

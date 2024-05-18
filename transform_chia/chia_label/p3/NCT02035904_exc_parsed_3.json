@@ -36,13 +36,13 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "drug-alcoholics addiction ;",
+                  "raw_text": "drug-alcoholics addiction",
                   "Condition": [
                     "alcoholics addiction"
                   ]
                 },
                 "right": {
-                  "raw_text": ""
+                  "raw_text": ";"
                 }
               }
             },
@@ -59,7 +59,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "kidney failure (cr",
+                          "raw_text": "kidney failure",
                           "Condition": [
                             "kidney failure"
                           ]
@@ -67,13 +67,13 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "eatinin > 2",
-                              "Value": [
-                                "> 2"
+                              "raw_text": "(creatinin",
+                              "Measurement": [
+                                "creatinin"
                               ]
                             },
                             "right": {
-                              "raw_text": "g/dl, creatinin <clearance 30 ml/h) and/or hepatic failure (cholinesterase < 2000 UI);",
+                              "raw_text": "> 2 g/dl, creatinin <clearance 30 ml/h) and/or hepatic failure (cholinesterase < 2000 UI);",
                               "Measurement": [
                                 "creatinin",
                                 "creatinin <clearance",
@@ -81,7 +81,9 @@
                               ],
                               "Value": [
                                 "30 ml/h",
-                                "< 2000 UI"
+                                "> 2 g/dl",
+                                "< 2000 UI",
+                                "> 2"
                               ],
                               "Condition": [
                                 "hepatic failure"
@@ -112,13 +114,16 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Psychiatric, cognitive disorders, menta",
+                                      "raw_text": "Psychiatric, cognitive disorders",
                                       "Condition": [
                                         "Psychiatric, cognitive disorders"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "l retardation;"
+                                      "raw_text": ", mental retardation;",
+                                      "Condition": [
+                                        "mental retardation"
+                                      ]
                                     }
                                   }
                                 },
@@ -127,21 +132,22 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Coagulopathies (INR > 2, ac",
+                                          "raw_text": "Coagulopathies (INR",
                                           "Condition": [
                                             "Coagulopathies"
                                           ],
                                           "Measurement": [
                                             "INR"
-                                          ],
-                                          "Value": [
-                                            "> 2"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "tivated partial thromboplastin time - aPTT>44 sec);",
+                                          "raw_text": "> 2, activated partial thromboplastin time - aPTT>44 sec);",
                                           "Value": [
+                                            "> 2",
                                             ">44 sec"
+                                          ],
+                                          "Measurement": [
+                                            "activated partial thromboplastin time - aPTT"
                                           ]
                                         }
                                       }
@@ -173,13 +179,16 @@
                                                 "left": {
                                                   "AND": {
                                                     "left": {
-                                                      "raw_text": "Allergies to study d",
+                                                      "raw_text": "Allergies",
                                                       "Condition": [
                                                         "Allergies"
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "rugs."
+                                                      "raw_text": "to study drugs.",
+                                                      "Drug": [
+                                                        "study drugs"
+                                                      ]
                                                     }
                                                   }
                                                 }

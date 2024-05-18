@@ -1,0 +1,70 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "age"
+        },
+        "right": {
+          "range": {
+            "min": 35,
+            "max": 75,
+            "raw_text": "years;"
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Diagnosis of Type 2 Diabetes"
+        },
+        "right": {
+          "raw_text": "from at least 3 years;"
+        }
+      },
+      "right": {
+        "AND": {
+          "left": {
+            "raw_text": "HbA1c"
+          },
+          "right": {
+            "range": {
+              "min": 0,
+              "max": 10,
+              "raw_text": "%"
+            }
+          }
+        }
+      },
+      "right": {
+        "AND": {
+          "left": {
+            "raw_text": "normal blood pressure"
+          },
+          "right": {
+            "OR": {
+              "left": {
+                "raw_text": "or controlled hypertension;"
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "BMI"
+            },
+            "right": {
+              "range": {
+                "min": 0,
+                "max": 40,
+                "raw_text": ";"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -51,7 +51,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Clinical diagnosis of Type 1 diabetes, m",
+                      "raw_text": "Clinical diagnosis of Type 1 diabetes",
                       "Condition": [
                         "Type 1 diabetes"
                       ]
@@ -59,15 +59,21 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "aturity onset diabetes of the young, s"
+                          "raw_text": ", maturity onset diabetes of the young",
+                          "Condition": [
+                            "maturity onset diabetes of the young"
+                          ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "econdary diabetes or"
+                              "raw_text": ", secondary diabetes",
+                              "Condition": [
+                                "secondary diabetes"
+                              ]
                             },
                             "right": {
-                              "raw_text": "diabetes insipidus.",
+                              "raw_text": "or diabetes insipidus.",
                               "Condition": [
                                 "diabetes insipidus"
                               ]
@@ -83,7 +89,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Unstable/rap",
+                          "raw_text": "Unstable",
                           "Qualifier": [
                             "Unstable"
                           ]
@@ -91,14 +97,17 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "idly progressing renal disease or",
+                              "raw_text": "/rapidly progressing renal disease",
                               "Condition": [
                                 "disease",
                                 "renal disease"
+                              ],
+                              "Qualifier": [
+                                "rapidly progressing"
                               ]
                             },
                             "right": {
-                              "raw_text": "estimated Glomerular Filtration Rate < 60 mL/min (Cockcroft-Gault formula).",
+                              "raw_text": "or estimated Glomerular Filtration Rate < 60 mL/min (Cockcroft-Gault formula).",
                               "Measurement": [
                                 "estimated Glomerular Filtration Rate"
                               ],
@@ -118,7 +127,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Clinically significant out of range values of serum levels of either alanine aminotransferase (ALT), asp",
+                              "raw_text": "Clinically significant out of range values of serum levels of either alanine aminotransferase (ALT)",
                               "Qualifier": [
                                 "Clinically significant"
                               ],
@@ -132,10 +141,16 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "artate aminotransferase (AST) or a"
+                                  "raw_text": ", aspartate aminotransferase (AST)",
+                                  "Measurement": [
+                                    "aspartate aminotransferase (AST)"
+                                  ]
                                 },
                                 "right": {
-                                  "raw_text": "lkaline phosphatase (ALP) in the Investigator's opinion."
+                                  "raw_text": "or alkaline phosphatase (ALP) in the Investigator's opinion.",
+                                  "Measurement": [
+                                    "alkaline phosphatase (ALP)"
+                                  ]
                                 }
                               }
                             }
@@ -146,13 +161,16 @@
                             "left": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "Contraindications to da",
+                                  "raw_text": "Contraindications",
                                   "Condition": [
                                     "Contraindications"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "pagliflozin according to the local label."
+                                  "raw_text": "to dapagliflozin according to the local label.",
+                                  "Drug": [
+                                    "dapagliflozin"
+                                  ]
                                 }
                               }
                             },
@@ -161,26 +179,29 @@
                                 "left": {
                                   "AND": {
                                     "left": {
-                                      "raw_text": "Use of antidiabetic drugs other",
+                                      "raw_text": "Use of antidiabetic drugs",
                                       "Drug": [
                                         "antidiabetic drugs"
-                                      ],
-                                      "Qualifier": [
-                                        "other"
                                       ]
                                     },
                                     "right": {
                                       "NOT": {
                                         "left": {
-                                          "raw_text": "han metformin within 3 months prior to screening.",
+                                          "raw_text": "other than metformin within 3 months prior to screening.",
                                           "Drug": [
                                             "metformin"
+                                          ],
+                                          "Negation": [
+                                            "other than"
                                           ],
                                           "Temporal": [
                                             "within 3 months prior to screening"
                                           ],
                                           "Reference_point": [
                                             "screening"
+                                          ],
+                                          "Qualifier": [
+                                            "other"
                                           ]
                                         }
                                       }
@@ -192,23 +213,20 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Weight gain or",
-                                          "Measurement": [
-                                            "Weight gain"
-                                          ]
+                                          "raw_text": "Weight"
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "loss > 5 kg",
-                                              "Value": [
-                                                "> 5 kg"
-                                              ]
+                                              "raw_text": "gain or loss"
                                             },
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "in the last 3 months, ongoing weight-loss diet (hypoca",
+                                                  "raw_text": "> 5 kg in the last 3 months, ongoing weight-loss diet",
+                                                  "Value": [
+                                                    "> 5 kg"
+                                                  ],
                                                   "Temporal": [
                                                     "in the last 3 months",
                                                     "ongoing"
@@ -218,7 +236,10 @@
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "loric diet) or use of weight loss agents.",
+                                                  "raw_text": "(hypocaloric diet) or use of weight loss agents.",
+                                                  "Observation": [
+                                                    "hypocaloric diet"
+                                                  ],
                                                   "Drug": [
                                                     "weight loss agents"
                                                   ]
@@ -234,14 +255,17 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "History of drug abuse or alcoh",
+                                              "raw_text": "History of drug abuse",
                                               "Observation": [
                                                 "drug abuse",
                                                 "History"
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "ol abuse in the past 12 months.",
+                                              "raw_text": "or alcohol abuse in the past 12 months.",
+                                              "Observation": [
+                                                "alcohol abuse"
+                                              ],
                                               "Temporal": [
                                                 "in the past 12 months"
                                               ]
@@ -265,7 +289,7 @@
                                                 "left": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "Plasma donation within one",
+                                                      "raw_text": "Plasma donation",
                                                       "Procedure": [
                                                         "Plasma donation"
                                                       ]
@@ -273,33 +297,39 @@
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "month of screening or any blood donation/blood loss",
+                                                          "raw_text": "within one month of screening or any blood donation",
+                                                          "Temporal": [
+                                                            "within one month of screening"
+                                                          ],
                                                           "Reference_point": [
                                                             "screening"
                                                           ],
                                                           "Procedure": [
                                                             "blood donation"
-                                                          ],
-                                                          "Measurement": [
-                                                            "blood loss"
                                                           ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "> 500 mL within 3 months prior to screening or during",
+                                                              "raw_text": "/blood loss > 500 mL within 3 months prior to screening",
                                                               "Temporal": [
                                                                 "within 3 months prior to screening"
                                                               ],
                                                               "Reference_point": [
                                                                 "screening"
                                                               ],
+                                                              "Measurement": [
+                                                                "blood loss"
+                                                              ],
                                                               "Value": [
                                                                 "> 500 mL"
                                                               ]
                                                             },
                                                             "right": {
-                                                              "raw_text": "the study."
+                                                              "raw_text": "or during the study.",
+                                                              "Temporal": [
+                                                                "during the study"
+                                                              ]
                                                             }
                                                           }
                                                         }
@@ -312,22 +342,20 @@
                                                     "left": {
                                                       "AND": {
                                                         "left": {
-                                                          "raw_text": "Anemia defined as Hemoglobin (Hb) < 115 g/L (",
+                                                          "raw_text": "Anemia defined as Hemoglobin (Hb)",
                                                           "Condition": [
                                                             "Anemia"
                                                           ],
                                                           "Measurement": [
                                                             "Hemoglobin (Hb)"
-                                                          ],
-                                                          "Value": [
-                                                            "< 115 g/L"
                                                           ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "7.1 mM) in women and < 120 g",
+                                                              "raw_text": "< 115 g/L (7.1 mM) in women",
                                                               "Value": [
+                                                                "< 115 g/L",
                                                                 "7.1 mM"
                                                               ],
                                                               "Person": [
@@ -336,8 +364,9 @@
                                                               ]
                                                             },
                                                             "right": {
-                                                              "raw_text": "/L (7.5 mM) in men.",
+                                                              "raw_text": "and < 120 g/L (7.5 mM) in men.",
                                                               "Value": [
+                                                                "< 120 g/L",
                                                                 "7.5 mM"
                                                               ],
                                                               "Person": [
@@ -353,7 +382,7 @@
                                                         "left": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "Use of anti-coagulant treatment such as heparin, warfarin, p",
+                                                              "raw_text": "Use of anti-coagulant treatment such as heparin",
                                                               "Person": [
                                                                 "men"
                                                               ],
@@ -361,30 +390,38 @@
                                                                 "anti-coagulant treatment"
                                                               ],
                                                               "Drug": [
-                                                                "heparin",
-                                                                "warfarin"
+                                                                "heparin"
                                                               ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "latelet in"
+                                                                  "raw_text": ", warfarin",
+                                                                  "Drug": [
+                                                                    "warfarin"
+                                                                  ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "hibitors, thrombin an",
+                                                                      "raw_text": ", platelet inhibitors",
                                                                       "Drug": [
-                                                                        "thrombin"
+                                                                        "platelet inhibitors"
                                                                       ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "d factor X"
+                                                                          "raw_text": ", thrombin",
+                                                                          "Drug": [
+                                                                            "thrombin"
+                                                                          ]
                                                                         },
                                                                         "right": {
-                                                                          "raw_text": "inhibitors."
+                                                                          "raw_text": "and factor X inhibitors.",
+                                                                          "Drug": [
+                                                                            "factor X inhibitors"
+                                                                          ]
                                                                         }
                                                                       }
                                                                     }
@@ -399,7 +436,7 @@
                                                             "left": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "Use of medication such as oral glucocorticoids, anti-estroge",
+                                                                  "raw_text": "Use of medication such as oral glucocorticoids",
                                                                   "Drug": [
                                                                     "oral glucocorticoids"
                                                                   ]
@@ -407,14 +444,18 @@
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "ns or other medi",
-                                                                      "Qualifier": [
-                                                                        "other"
+                                                                      "raw_text": ", anti-estrogens",
+                                                                      "Drug": [
+                                                                        "anti-estrogens"
                                                                       ]
                                                                     },
                                                                     "right": {
-                                                                      "raw_text": "cations that are known to markedly influence insulin sensitivity.",
+                                                                      "raw_text": "or other medications that are known to markedly influence insulin sensitivity.",
+                                                                      "Drug": [
+                                                                        "medications"
+                                                                      ],
                                                                       "Qualifier": [
+                                                                        "other",
                                                                         "markedly influence insulin sensitivity"
                                                                       ]
                                                                     }
@@ -435,10 +476,7 @@
                                                                     "left": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "Regular smoking and other regul",
-                                                                          "Qualifier": [
-                                                                            "other"
-                                                                          ],
+                                                                          "raw_text": "Regular smoking",
                                                                           "Observation": [
                                                                             "smoking"
                                                                           ],
@@ -447,9 +485,15 @@
                                                                           ]
                                                                         },
                                                                         "right": {
-                                                                          "raw_text": "ar nicotine use.",
+                                                                          "raw_text": "and other regular nicotine use.",
+                                                                          "Qualifier": [
+                                                                            "other"
+                                                                          ],
                                                                           "Drug": [
                                                                             "nicotine"
+                                                                          ],
+                                                                          "Multiplier": [
+                                                                            "regular"
                                                                           ]
                                                                         }
                                                                       }
@@ -473,46 +517,51 @@
                                                                             "right": {
                                                                               "AND": {
                                                                                 "left": {
-                                                                                  "raw_text": "Implanted cardiac pacemaker of defibrillator",
-                                                                                  "Device": [
-                                                                                    "cardiac pacemaker",
-                                                                                    "defibrillator"
-                                                                                  ]
+                                                                                  "OR": {
+                                                                                    "left": {
+                                                                                      "raw_text": "Implanted cardiac pacemaker",
+                                                                                      "Device": [
+                                                                                        "cardiac pacemaker"
+                                                                                      ]
+                                                                                    },
+                                                                                    "right": {
+                                                                                      "raw_text": "of defibrillator",
+                                                                                      "Device": [
+                                                                                        "defibrillator"
+                                                                                      ]
+                                                                                    }
+                                                                                  }
                                                                                 },
                                                                                 "right": {
                                                                                   "AND": {
                                                                                     "left": {
-                                                                                      "OR": {
-                                                                                        "left": {
-                                                                                          "raw_text": "C"
-                                                                                        },
-                                                                                        "right": {
-                                                                                          "raw_text": "ochlear implant"
-                                                                                        }
-                                                                                      }
+                                                                                      "raw_text": "Cochlear implant",
+                                                                                      "Device": [
+                                                                                        "Cochlear implant"
+                                                                                      ]
                                                                                     },
                                                                                     "right": {
                                                                                       "AND": {
                                                                                         "left": {
-                                                                                          "raw_text": "Metal containing corpora aliena in the eye or brain.",
-                                                                                          "Device": [
-                                                                                            "corpora aliena in the eye"
-                                                                                          ],
-                                                                                          "Qualifier": [
-                                                                                            "Metal containing"
-                                                                                          ]
+                                                                                          "OR": {
+                                                                                            "left": {
+                                                                                              "raw_text": "Metal containing corpora aliena in the",
+                                                                                              "Qualifier": [
+                                                                                                "Metal containing"
+                                                                                              ]
+                                                                                            },
+                                                                                            "right": {
+                                                                                              "raw_text": "eye or brain."
+                                                                                            }
+                                                                                          }
                                                                                         },
                                                                                         "right": {
                                                                                           "AND": {
                                                                                             "left": {
-                                                                                              "OR": {
-                                                                                                "left": {
-                                                                                                  "raw_text": "Patien"
-                                                                                                },
-                                                                                                "right": {
-                                                                                                  "raw_text": "ts, who do not want to be informed about unexpected medical findings, or do not wish that their physician be informed about coincidental findings, cannot participate in the study."
-                                                                                                }
-                                                                                              }
+                                                                                              "raw_text": "Patients, who do not want to be informed about unexpected medical findings, or do not wish that their physician be informed about coincidental findings, cannot participate in the study.",
+                                                                                              "Non-query-able": [
+                                                                                                "Patients, who do not want to be informed about unexpected medical findings, or do not wish that their physician be informed about coincidental findings, cannot participate in the study."
+                                                                                              ]
                                                                                             }
                                                                                           }
                                                                                         }

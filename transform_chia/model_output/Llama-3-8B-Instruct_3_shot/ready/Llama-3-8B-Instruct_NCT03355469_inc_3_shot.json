@@ -1,0 +1,72 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Male"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or female"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": ">40 and <70 years old."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Has a body mass index"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": ">27 and <47 kg/m2."
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Not diagnosed with Type 2 diabetes."
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Not currently engaged in > 60 min/wk of exercise"
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Meet at least 3 of 5 National Cholesterol Education Adult Treatment Panel III"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -35,7 +35,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "colostomy,",
+                  "raw_text": "colostomy",
                   "Procedure": [
                     "colostomy"
                   ]
@@ -43,11 +43,12 @@
                 "right": {
                   "NOT": {
                     "left": {
-                      "raw_text": "not perform regular bowel care for any reason",
+                      "raw_text": "do not perform regular bowel care for any reason",
                       "Procedure": [
                         "regular bowel care"
                       ],
                       "Negation": [
+                        "do not perform",
                         "not"
                       ]
                     }
@@ -69,7 +70,10 @@
                     "left": {
                       "NOT": {
                         "left": {
-                          "raw_text": "speak English",
+                          "raw_text": "not speak English",
+                          "Negation": [
+                            "not"
+                          ],
                           "Observation": [
                             "speak English"
                           ]
@@ -92,15 +96,18 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "are pregnant or th",
+                                  "raw_text": "are pregnant",
                                   "Condition": [
                                     "pregnant"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "ink you might be pregnant",
+                                  "raw_text": "or think you might be pregnant",
                                   "Condition": [
                                     "pregnant"
+                                  ],
+                                  "Mood": [
+                                    "think you might be"
                                   ]
                                 }
                               }
@@ -110,15 +117,21 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "medical/psychi"
+                                      "raw_text": "medical"
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "atric condition or sub"
+                                          "raw_text": "/psychiatric condition",
+                                          "Condition": [
+                                            "psychiatric condition"
+                                          ]
                                         },
                                         "right": {
-                                          "raw_text": "stance abuse that is likely to affect your ability to complete this study"
+                                          "raw_text": "or substance abuse that is likely to affect your ability to complete this study",
+                                          "Condition": [
+                                            "substance abuse"
+                                          ]
                                         }
                                       }
                                     }
@@ -141,13 +154,16 @@
                                         "left": {
                                           "AND": {
                                             "left": {
-                                              "raw_text": "allergy to lidoc",
+                                              "raw_text": "allergy",
                                               "Condition": [
                                                 "allergy"
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "aine"
+                                              "raw_text": "to lidocaine",
+                                              "Drug": [
+                                                "lidocaine"
+                                              ]
                                             }
                                           }
                                         }

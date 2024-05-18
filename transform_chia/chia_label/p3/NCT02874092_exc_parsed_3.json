@@ -85,14 +85,14 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Severe hepatic impairment (eg, ascites and/",
+                              "raw_text": "Severe hepatic impairment (eg, ascites",
                               "Condition": [
                                 "Severe hepatic impairment",
                                 "ascites"
                               ]
                             },
                             "right": {
-                              "raw_text": "or clinical signs of coagulopathy)",
+                              "raw_text": "and/or clinical signs of coagulopathy)",
                               "Condition": [
                                 "coagulopathy"
                               ],
@@ -107,19 +107,19 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Renal failure (eGFR <30 o",
+                                  "raw_text": "Renal failure (eGFR",
                                   "Condition": [
                                     "Renal failure"
                                   ],
                                   "Measurement": [
                                     "eGFR"
-                                  ],
-                                  "Value": [
-                                    "<30"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "r requiring dialysis)",
+                                  "raw_text": "<30 or requiring dialysis)",
+                                  "Value": [
+                                    "<30"
+                                  ],
                                   "Mood": [
                                     "requiring"
                                   ],
@@ -134,7 +134,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "A known bleeding diathesis, hemos",
+                                      "raw_text": "A known bleeding diathesis",
                                       "Condition": [
                                         "bleeding diathesis"
                                       ]
@@ -142,17 +142,23 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "tatic or coa"
+                                          "raw_text": ", hemostatic"
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "gulation disorder, or pr"
+                                              "raw_text": "or coagulation disorder",
+                                              "Condition": [
+                                                "coagulation disorder"
+                                              ]
                                             },
                                             "right": {
-                                              "raw_text": "ior major bleeding",
+                                              "raw_text": ", or prior major bleeding",
                                               "Condition": [
                                                 "major bleeding"
+                                              ],
+                                              "Temporal": [
+                                                "prior"
                                               ]
                                             }
                                           }
@@ -213,7 +219,7 @@
                                                     "left": {
                                                       "AND": {
                                                         "left": {
-                                                          "raw_text": "Patients considered to be at risk of bradycardic events (e.g., know",
+                                                          "raw_text": "Patients considered to be at risk of bradycardic events",
                                                           "Condition": [
                                                             "bradycardic events"
                                                           ],
@@ -224,7 +230,7 @@
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "n sick sinus syndrome or second o",
+                                                              "raw_text": "(e.g., known sick sinus syndrome",
                                                               "Condition": [
                                                                 "sick sinus syndrome"
                                                               ]
@@ -232,14 +238,17 @@
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "r third de"
+                                                                  "raw_text": "or second"
                                                                 },
                                                                 "right": {
                                                                   "NOT": {
                                                                     "left": {
-                                                                      "raw_text": "dy treated with a permanent pacemaker",
+                                                                      "raw_text": "unless already treated with a permanent pacemaker",
                                                                       "Device": [
                                                                         "permanent pacemaker"
+                                                                      ],
+                                                                      "Negation": [
+                                                                        "unless"
                                                                       ]
                                                                     }
                                                                   }
@@ -281,26 +290,35 @@
                                                             "right": {
                                                               "AND": {
                                                                 "left": {
-                                                                  "raw_text": "Concomitant use of strong CYP 3A inhibitors or inducers",
-                                                                  "Drug": [
-                                                                    "strong CYP 3A inhibitors"
-                                                                  ]
+                                                                  "OR": {
+                                                                    "left": {
+                                                                      "raw_text": "Concomitant use of strong CYP 3A inhibitors",
+                                                                      "Drug": [
+                                                                        "strong CYP 3A inhibitors"
+                                                                      ]
+                                                                    },
+                                                                    "right": {
+                                                                      "raw_text": "or inducers"
+                                                                    }
+                                                                  }
                                                                 },
                                                                 "right": {
                                                                   "AND": {
                                                                     "left": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "Hi"
+                                                                          "raw_text": "History of thrombocytopenia",
+                                                                          "Observation": [
+                                                                            "History"
+                                                                          ],
+                                                                          "Condition": [
+                                                                            "thrombocytopenia"
+                                                                          ]
                                                                         },
                                                                         "right": {
-                                                                          "raw_text": "story of thrombocytopenia or neutropenia",
+                                                                          "raw_text": "or neutropenia",
                                                                           "Condition": [
-                                                                            "thrombocytopenia",
                                                                             "neutropenia"
-                                                                          ],
-                                                                          "Scope": [
-                                                                            "thrombocytopenia or neutropenia"
                                                                           ]
                                                                         }
                                                                       }
@@ -310,47 +328,42 @@
                                                                         "left": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": ""
+                                                                              "raw_text": "Pregnant",
+                                                                              "Condition": [
+                                                                                "Pregnant"
+                                                                              ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "Pregnant or nursing women",
+                                                                                  "raw_text": "or nursing women",
                                                                                   "Condition": [
-                                                                                    "Pregnant",
                                                                                     "nursing"
                                                                                   ],
                                                                                   "Person": [
                                                                                     "women"
-                                                                                  ],
-                                                                                  "Scope": [
-                                                                                    "Pregnant or nursing women"
                                                                                   ]
                                                                                 },
                                                                                 "right": {
-                                                                                  "OR": {
-                                                                                    "left": {
-                                                                                      "raw_text": ", or females with",
-                                                                                      "Person": [
-                                                                                        "females"
-                                                                                      ]
-                                                                                    },
-                                                                                    "right": {
-                                                                                      "raw_text": "a positive pregnancy test at screening",
-                                                                                      "Value": [
-                                                                                        "positive"
-                                                                                      ],
-                                                                                      "Measurement": [
-                                                                                        "pregnancy test"
-                                                                                      ],
-                                                                                      "Temporal": [
-                                                                                        "at screening"
-                                                                                      ],
-                                                                                      "Reference_point": [
-                                                                                        "screening"
-                                                                                      ]
-                                                                                    }
-                                                                                  }
+                                                                                  "raw_text": ", or females with a positive pregnancy test at screening",
+                                                                                  "Person": [
+                                                                                    "females"
+                                                                                  ],
+                                                                                  "Value": [
+                                                                                    "positive"
+                                                                                  ],
+                                                                                  "Measurement": [
+                                                                                    "pregnancy test"
+                                                                                  ],
+                                                                                  "Temporal": [
+                                                                                    "at screening"
+                                                                                  ],
+                                                                                  "Scope": [
+                                                                                    "females with a positive pregnancy test at screening"
+                                                                                  ],
+                                                                                  "Reference_point": [
+                                                                                    "screening"
+                                                                                  ]
                                                                                 }
                                                                               }
                                                                             }
@@ -361,17 +374,29 @@
                                                                             "left": {
                                                                               "NOT": {
                                                                                 "left": {
-                                                                                  "raw_text": "le method of birth control prior to or during study",
-                                                                                  "Temporal": [
-                                                                                    "prior",
-                                                                                    "during study"
-                                                                                  ],
-                                                                                  "Observation": [
-                                                                                    "method of birth control"
-                                                                                  ],
-                                                                                  "Scope": [
-                                                                                    "prior to or during study"
-                                                                                  ]
+                                                                                  "OR": {
+                                                                                    "left": {
+                                                                                      "raw_text": "not using acceptable method of birth control prior to",
+                                                                                      "Temporal": [
+                                                                                        "prior"
+                                                                                      ],
+                                                                                      "Qualifier": [
+                                                                                        "acceptable"
+                                                                                      ],
+                                                                                      "Observation": [
+                                                                                        "method of birth control"
+                                                                                      ],
+                                                                                      "Negation": [
+                                                                                        "not"
+                                                                                      ]
+                                                                                    },
+                                                                                    "right": {
+                                                                                      "raw_text": "or during study",
+                                                                                      "Temporal": [
+                                                                                        "during study"
+                                                                                      ]
+                                                                                    }
+                                                                                  }
                                                                                 }
                                                                               }
                                                                             },
@@ -380,35 +405,21 @@
                                                                                 "left": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "C"
+                                                                                      "raw_text": "Concern for inability",
+                                                                                      "Mood": [
+                                                                                        "Concern for"
+                                                                                      ]
                                                                                     },
                                                                                     "right": {
                                                                                       "OR": {
                                                                                         "left": {
-                                                                                          "raw_text": "oncern for inability of the patient to"
+                                                                                          "raw_text": "of the patient to comply with study procedures and/or follow up (eg, alcohol"
                                                                                         },
                                                                                         "right": {
-                                                                                          "raw_text": "comply with study procedures and/or follow up (eg, alcohol or drug abuse)",
+                                                                                          "raw_text": "or drug abuse)",
                                                                                           "Condition": [
                                                                                             "drug abuse"
-                                                                                          ],
-                                                                                          "Scope": [
-                                                                                            "alcohol or drug abuse"
                                                                                           ]
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                },
-                                                                                "right": {
-                                                                                  "AND": {
-                                                                                    "left": {
-                                                                                      "OR": {
-                                                                                        "left": {
-                                                                                          "raw_text": ""
-                                                                                        },
-                                                                                        "right": {
-                                                                                          "raw_text": ""
                                                                                         }
                                                                                       }
                                                                                     }

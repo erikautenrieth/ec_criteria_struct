@@ -58,7 +58,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "Current treatment with corticosteroids (",
+                  "raw_text": "Current treatment with corticosteroids",
                   "Drug": [
                     "corticosteroids"
                   ],
@@ -72,7 +72,7 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "topical or systemic), corticosteroid use w",
+                      "raw_text": "(topical or systemic), corticosteroid use",
                       "Qualifier": [
                         "topical",
                         "systemic"
@@ -85,16 +85,17 @@
                       ]
                     },
                     "right": {
-                      "raw_text": "ithin 3 months before possible start of trial treatment, or anticipated start of corticosteroid treatment within the first 2 years from the start of the trial period;",
+                      "raw_text": "within 3 months before possible start of trial treatment, or anticipated start of corticosteroid treatment within the first 2 years from the start of the trial period;",
+                      "Temporal": [
+                        "within 3 months before possible start of trial treatment",
+                        "within the first 2 years from the start of the trial period"
+                      ],
                       "Reference_point": [
                         "possible start of trial treatment",
                         "the first 2 years from the start of the trial period"
                       ],
                       "Procedure": [
                         "corticosteroid treatment"
-                      ],
-                      "Temporal": [
-                        "within the first 2 years from the start of the trial period"
                       ],
                       "Mood": [
                         "anticipated"
@@ -131,7 +132,7 @@
                         "left": {
                           "AND": {
                             "left": {
-                              "raw_text": "Profound chorioretinal atrophy in c",
+                              "raw_text": "Profound chorioretinal atrophy",
                               "Qualifier": [
                                 "Profound"
                               ],
@@ -140,7 +141,10 @@
                               ]
                             },
                             "right": {
-                              "raw_text": "entral macular area on ophthalmoscopy and OCT;",
+                              "raw_text": "in central macular area on ophthalmoscopy and OCT;",
+                              "Qualifier": [
+                                "central macular area"
+                              ],
                               "Procedure": [
                                 "ophthalmoscopy",
                                 "OCT"
@@ -170,13 +174,13 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Visual loss and/or",
+                                      "raw_text": "Visual loss",
                                       "Condition": [
                                         "Visual loss"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "serous detachment on OCT < 6 weeks;",
+                                      "raw_text": "and/or serous detachment on OCT < 6 weeks;",
                                       "Procedure": [
                                         "OCT"
                                       ],
@@ -197,7 +201,7 @@
                                     "left": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "Continuous and/or",
+                                          "raw_text": "Continuous",
                                           "Qualifier": [
                                             "Continuous"
                                           ],
@@ -208,7 +212,7 @@
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "progressive visual loss > 18 mo",
+                                              "raw_text": "and/or progressive visual loss",
                                               "Qualifier": [
                                                 "progressive"
                                               ],
@@ -219,21 +223,24 @@
                                             "right": {
                                               "AND": {
                                                 "left": {
-                                                  "raw_text": "nths or serous detachment on OCT",
-                                                  "Procedure": [
-                                                    "OCT"
-                                                  ],
+                                                  "raw_text": "> 18 months or serous detachment",
                                                   "Condition": [
                                                     "serous detachment"
                                                   ],
-                                                  "Value": [
-                                                    "C"
+                                                  "Temporal": [
+                                                    "> 18 months"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "> 18 months;",
+                                                  "raw_text": "on OCT > 18 months;",
+                                                  "Procedure": [
+                                                    "OCT"
+                                                  ],
                                                   "Temporal": [
                                                     "> 18 months"
+                                                  ],
+                                                  "Value": [
+                                                    "C"
                                                   ]
                                                 }
                                               }
@@ -247,15 +254,19 @@
                                         "left": {
                                           "NOT": {
                                             "left": {
-                                              "raw_text": "luorescence on ICGA;",
+                                              "raw_text": "No hyperfluorescence on ICGA;",
                                               "Measurement": [
                                                 "ICGA"
                                               ],
+                                              "Value": [
+                                                "hyperfluorescence",
+                                                "C"
+                                              ],
+                                              "Negation": [
+                                                "No"
+                                              ],
                                               "Procedure": [
                                                 "ICGA"
-                                              ],
-                                              "Value": [
-                                                "C"
                                               ]
                                             }
                                           }
@@ -263,38 +274,47 @@
                                         "right": {
                                           "AND": {
                                             "left": {
-                                              "raw_text": "Intraretinal edema on OCT;",
-                                              "Procedure": [
-                                                "OCT"
-                                              ],
-                                              "Condition": [
-                                                "Intraretinal edema"
-                                              ],
-                                              "Value": [
-                                                "C"
-                                              ]
+                                              "AND": {
+                                                "left": {
+                                                  "raw_text": "Intraretinal edema",
+                                                  "Condition": [
+                                                    "Intraretinal edema"
+                                                  ]
+                                                },
+                                                "right": {
+                                                  "raw_text": "on OCT;",
+                                                  "Procedure": [
+                                                    "OCT"
+                                                  ],
+                                                  "Value": [
+                                                    "C"
+                                                  ]
+                                                }
+                                              }
                                             },
                                             "right": {
                                               "AND": {
                                                 "left": {
-                                                  "AND": {
+                                                  "OR": {
                                                     "left": {
-                                                      "raw_text": "("
-                                                    },
-                                                    "right": {
-                                                      "raw_text": "relative) Contraindications for FA or ICGA;",
-                                                      "Measurement": [
-                                                        "ICGA"
-                                                      ],
+                                                      "raw_text": "(relative) Contraindications for FA",
                                                       "Condition": [
                                                         "Contraindications"
                                                       ],
                                                       "Procedure": [
-                                                        "FA",
+                                                        "FA"
+                                                      ],
+                                                      "Value": [
+                                                        "C"
+                                                      ]
+                                                    },
+                                                    "right": {
+                                                      "raw_text": "or ICGA;",
+                                                      "Measurement": [
                                                         "ICGA"
                                                       ],
-                                                      "Scope": [
-                                                        "FA or ICGA"
+                                                      "Procedure": [
+                                                        "ICGA"
                                                       ],
                                                       "Value": [
                                                         "C"
@@ -305,48 +325,47 @@
                                                 "right": {
                                                   "AND": {
                                                     "left": {
-                                                      "OR": {
+                                                      "AND": {
                                                         "left": {
-                                                          "raw_text": "("
+                                                          "raw_text": "(relative) Contraindications",
+                                                          "Condition": [
+                                                            "Contraindications"
+                                                          ],
+                                                          "Value": [
+                                                            "C"
+                                                          ]
                                                         },
                                                         "right": {
-                                                          "AND": {
+                                                          "OR": {
                                                             "left": {
-                                                              "raw_text": "relative) Contraindications for photody",
-                                                              "Condition": [
-                                                                "Contraindications"
+                                                              "raw_text": "for photodynamic treatment (pregnancy",
+                                                              "Procedure": [
+                                                                "photodynamic treatment"
                                                               ],
-                                                              "Value": [
-                                                                "C"
+                                                              "Condition": [
+                                                                "pregnancy"
                                                               ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "namic treatment (pregnancy, porphyria,",
+                                                                  "raw_text": ", porphyria",
                                                                   "Condition": [
-                                                                    "pregnancy",
                                                                     "porphyria"
                                                                   ]
                                                                 },
                                                                 "right": {
-                                                                  "OR": {
-                                                                    "left": {
-                                                                      "raw_text": "severely d",
-                                                                      "Qualifier": [
-                                                                        "severely"
-                                                                      ]
-                                                                    },
-                                                                    "right": {
-                                                                      "raw_text": "isturbed liver function). Pregnancy will not be routinely tested in female patients, but the possibility of pregnancy will be discussed during screening",
-                                                                      "Condition": [
-                                                                        "pregnancy"
-                                                                      ],
-                                                                      "Non-representable": [
-                                                                        "Pregnancy will not be routinely tested in female patients, but the possibility of pregnancy will be discussed during screening"
-                                                                      ]
-                                                                    }
-                                                                  }
+                                                                  "raw_text": ", severely disturbed liver function). Pregnancy will not be routinely tested in female patients, but the possibility of pregnancy will be discussed during screening",
+                                                                  "Condition": [
+                                                                    "pregnancy",
+                                                                    "disturbed liver function"
+                                                                  ],
+                                                                  "Qualifier": [
+                                                                    "severely"
+                                                                  ],
+                                                                  "Non-representable": [
+                                                                    "Pregnancy will not be routinely tested in female patients, but the possibility of pregnancy will be discussed during screening"
+                                                                  ]
                                                                 }
                                                               }
                                                             }
@@ -359,7 +378,7 @@
                                                         "left": {
                                                           "AND": {
                                                             "left": {
-                                                              "raw_text": "(relative) Known contraindications for initiati",
+                                                              "raw_text": "(relative) Known contraindications",
                                                               "Condition": [
                                                                 "contraindications"
                                                               ]
@@ -367,37 +386,43 @@
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "on of eplerenone treatment (hyperkalemia, abnormal re",
+                                                                  "raw_text": "for initiation of eplerenone treatment (hyperkalemia",
                                                                   "Drug": [
                                                                     "eplerenone"
                                                                   ],
                                                                   "Condition": [
                                                                     "hyperkalemia"
-                                                                  ],
-                                                                  "Value": [
-                                                                    "abnormal"
                                                                   ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "nal clearance, severe hepa"
+                                                                      "raw_text": ", abnormal renal clearance",
+                                                                      "Condition": [
+                                                                        "abnormal renal clearance"
+                                                                      ],
+                                                                      "Measurement": [
+                                                                        "renal clearance"
+                                                                      ],
+                                                                      "Value": [
+                                                                        "abnormal"
+                                                                      ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "tic insufficiency (Child-Pugh",
-                                                                          "Measurement": [
-                                                                            "Child-Pugh"
-                                                                          ],
-                                                                          "Value": [
-                                                                            "C"
+                                                                          "raw_text": ", severe hepatic insufficiency",
+                                                                          "Condition": [
+                                                                            "severe hepatic insufficiency"
                                                                           ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "C), type 2 diabetes mellitus with microalbuminuria, concomitant",
+                                                                              "raw_text": "(Child-Pugh C), type 2 diabetes mellitus with microalbuminuria",
+                                                                              "Measurement": [
+                                                                                "Child-Pugh"
+                                                                              ],
                                                                               "Value": [
                                                                                 "C"
                                                                               ],
@@ -407,15 +432,15 @@
                                                                               ],
                                                                               "Scope": [
                                                                                 "type 2 diabetes mellitus with microalbuminuria"
-                                                                              ],
-                                                                              "Temporal": [
-                                                                                "concomitant"
                                                                               ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "use of potassium supplements, potassium-s",
+                                                                                  "raw_text": ", concomitant use of potassium supplements",
+                                                                                  "Temporal": [
+                                                                                    "concomitant"
+                                                                                  ],
                                                                                   "Drug": [
                                                                                     "potassium supplements"
                                                                                   ]
@@ -423,18 +448,24 @@
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "paring diuretics, strong CYP3",
-                                                                                      "Value": [
-                                                                                        "C"
+                                                                                      "raw_text": ", potassium-sparing diuretics",
+                                                                                      "Drug": [
+                                                                                        "potassium-sparing diuretics"
                                                                                       ]
                                                                                     },
                                                                                     "right": {
                                                                                       "OR": {
                                                                                         "left": {
-                                                                                          "raw_text": "A4 inhibitors, or the comb"
+                                                                                          "raw_text": ", strong CYP3A4 inhibitors",
+                                                                                          "Value": [
+                                                                                            "C"
+                                                                                          ],
+                                                                                          "Drug": [
+                                                                                            "strong CYP3A4 inhibitors"
+                                                                                          ]
                                                                                         },
                                                                                         "right": {
-                                                                                          "raw_text": "ination of an ACE-inhibitor and an angiotensin receptor blocking agent). Pregnancy will not be routinely tested in female patients, but the possibility of pregnancy will be discussed during screening;",
+                                                                                          "raw_text": ", or the combination of an ACE-inhibitor and an angiotensin receptor blocking agent). Pregnancy will not be routinely tested in female patients, but the possibility of pregnancy will be discussed during screening;",
                                                                                           "Condition": [
                                                                                             "pregnancy"
                                                                                           ],
@@ -474,7 +505,7 @@
                                                             "left": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "Soft drusen in treated ey",
+                                                                  "raw_text": "Soft drusen",
                                                                   "Condition": [
                                                                     "Soft drusen"
                                                                   ]
@@ -482,15 +513,18 @@
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "e or fellow eye",
+                                                                      "raw_text": "in treated eye",
                                                                       "Qualifier": [
-                                                                        "fellow eye"
+                                                                        "treated eye"
                                                                       ]
                                                                     },
                                                                     "right": {
                                                                       "AND": {
                                                                         "left": {
-                                                                          "raw_text": ", signs of choroidal neovascularization on ophthalmos",
+                                                                          "raw_text": "or fellow eye, signs of choroidal neovascularization",
+                                                                          "Qualifier": [
+                                                                            "fellow eye"
+                                                                          ],
                                                                           "Condition": [
                                                                             "choroidal neovascularization"
                                                                           ]
@@ -498,21 +532,33 @@
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "copy and/or FA/ICG",
+                                                                              "raw_text": "on ophthalmoscopy",
                                                                               "Procedure": [
-                                                                                "FA"
-                                                                              ],
-                                                                              "Value": [
-                                                                                "C"
+                                                                                "ophthalmoscopy"
                                                                               ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "A of the s"
+                                                                                  "raw_text": "and/or FA",
+                                                                                  "Procedure": [
+                                                                                    "FA"
+                                                                                  ]
                                                                                 },
                                                                                 "right": {
-                                                                                  "raw_text": "tudy eye."
+                                                                                  "raw_text": "/ICGA of the study eye.",
+                                                                                  "Measurement": [
+                                                                                    "ICGA"
+                                                                                  ],
+                                                                                  "Procedure": [
+                                                                                    "ICGA"
+                                                                                  ],
+                                                                                  "Value": [
+                                                                                    "C"
+                                                                                  ],
+                                                                                  "Qualifier": [
+                                                                                    "study eye"
+                                                                                  ]
                                                                                 }
                                                                               }
                                                                             }

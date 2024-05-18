@@ -23,7 +23,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "On treatment with a P2Y12 receptor antagonist (ticlopidine,",
+                  "raw_text": "On treatment with a P2Y12 receptor antagonist (ticlopidine",
                   "Drug": [
                     "P2Y12 receptor antagonist",
                     "ticlopidine"
@@ -32,7 +32,7 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "clopidogrel,",
+                      "raw_text": ", clopidogrel",
                       "Drug": [
                         "clopidogrel"
                       ]
@@ -40,13 +40,13 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "prasugrel,",
+                          "raw_text": ", prasugrel",
                           "Drug": [
                             "prasugrel"
                           ]
                         },
                         "right": {
-                          "raw_text": "ticagrelor) in the prior 10 days",
+                          "raw_text": ", ticagrelor) in the prior 10 days",
                           "Qualifier": [
                             "prior"
                           ],
@@ -68,7 +68,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Known allergies to aspirin, t",
+                      "raw_text": "Known allergies to aspirin",
                       "Condition": [
                         "allergies"
                       ],
@@ -79,10 +79,13 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "icagrelor or"
+                          "raw_text": ", ticagrelor",
+                          "Drug": [
+                            "ticagrelor"
+                          ]
                         },
                         "right": {
-                          "raw_text": "cangrelor",
+                          "raw_text": "or cangrelor",
                           "Drug": [
                             "cangrelor"
                           ]
@@ -185,13 +188,16 @@
                                                     "left": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "Known creatinine clearance <30 mL/minu",
+                                                          "raw_text": "Known creatinine clearance",
                                                           "Measurement": [
                                                             "creatinine clearance"
                                                           ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "te or on hemodialysis.",
+                                                          "raw_text": "<30 mL/minute or on hemodialysis.",
+                                                          "Value": [
+                                                            "<30 mL/minute"
+                                                          ],
                                                           "Procedure": [
                                                             "hemodialysis"
                                                           ]
@@ -214,27 +220,33 @@
                                                             "left": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "Patients with sick sinus syndrome (SSS) or high",
+                                                                  "raw_text": "Patients with sick sinus syndrome",
                                                                   "Condition": [
-                                                                    "sick sinus syndrome",
-                                                                    "SSS"
+                                                                    "sick sinus syndrome"
                                                                   ]
                                                                 },
                                                                 "right": {
                                                                   "AND": {
                                                                     "left": {
-                                                                      "raw_text": "degree AV block without pacem",
+                                                                      "raw_text": "(SSS) or high degree AV block",
                                                                       "Condition": [
+                                                                        "SSS",
                                                                         "AV block"
                                                                       ],
-                                                                      "Negation": [
-                                                                        "without"
+                                                                      "Qualifier": [
+                                                                        "high degree"
                                                                       ]
                                                                     },
                                                                     "right": {
                                                                       "NOT": {
                                                                         "left": {
-                                                                          "raw_text": "ker protection"
+                                                                          "raw_text": "without pacemaker protection",
+                                                                          "Procedure": [
+                                                                            "pacemaker"
+                                                                          ],
+                                                                          "Negation": [
+                                                                            "without"
+                                                                          ]
                                                                         }
                                                                       }
                                                                     }
@@ -247,7 +259,7 @@
                                                                 "left": {
                                                                   "AND": {
                                                                     "left": {
-                                                                      "raw_text": "Current treatment with drugs interfering wi",
+                                                                      "raw_text": "Current treatment with drugs",
                                                                       "Drug": [
                                                                         "drugs"
                                                                       ]
@@ -255,14 +267,16 @@
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "th CYP3A4 metabolism (to avoid interaction with ticagrelor): Ketoconazole, itraconazole,",
+                                                                          "raw_text": "interfering with CYP3A4 metabolism (to avoid interaction with ticagrelor): Ketoconazole",
                                                                           "Drug": [
                                                                             "ticagrelor",
-                                                                            "Ketoconazole",
-                                                                            "itraconazole"
+                                                                            "Ketoconazole"
                                                                           ],
                                                                           "Condition": [
                                                                             "CYP3A4 metabolism"
+                                                                          ],
+                                                                          "Mood": [
+                                                                            "interfering with"
                                                                           ],
                                                                           "Non-query-able": [
                                                                             "to avoid interaction with ticagrelor"
@@ -271,56 +285,80 @@
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "voriconazole,",
+                                                                              "raw_text": ", itraconazole",
                                                                               "Drug": [
-                                                                                "voriconazole"
+                                                                                "itraconazole"
                                                                               ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "clarithromyci"
+                                                                                  "raw_text": ", voriconazole",
+                                                                                  "Drug": [
+                                                                                    "voriconazole"
+                                                                                  ]
                                                                                 },
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "n, nefazodone, r",
+                                                                                      "raw_text": ", clarithromycin",
                                                                                       "Drug": [
-                                                                                        "nefazodone"
+                                                                                        "clarithromycin"
                                                                                       ]
                                                                                     },
                                                                                     "right": {
                                                                                       "OR": {
                                                                                         "left": {
-                                                                                          "raw_text": "itonavir, sa"
+                                                                                          "raw_text": ", nefazodone",
+                                                                                          "Drug": [
+                                                                                            "nefazodone"
+                                                                                          ]
                                                                                         },
                                                                                         "right": {
                                                                                           "OR": {
                                                                                             "left": {
-                                                                                              "raw_text": "quinavir, n"
+                                                                                              "raw_text": ", ritonavir",
+                                                                                              "Drug": [
+                                                                                                "ritonavir"
+                                                                                              ]
                                                                                             },
                                                                                             "right": {
                                                                                               "OR": {
                                                                                                 "left": {
-                                                                                                  "raw_text": "elfinavir, i"
+                                                                                                  "raw_text": ", saquinavir",
+                                                                                                  "Drug": [
+                                                                                                    "saquinavir"
+                                                                                                  ]
                                                                                                 },
                                                                                                 "right": {
                                                                                                   "OR": {
                                                                                                     "left": {
-                                                                                                      "raw_text": "ndinavir, at"
+                                                                                                      "raw_text": ", nelfinavir",
+                                                                                                      "Drug": [
+                                                                                                        "nelfinavir"
+                                                                                                      ]
                                                                                                     },
                                                                                                     "right": {
                                                                                                       "OR": {
                                                                                                         "left": {
-                                                                                                          "raw_text": "azanavir, a"
+                                                                                                          "raw_text": ", indinavir",
+                                                                                                          "Drug": [
+                                                                                                            "indinavir"
+                                                                                                          ]
                                                                                                         },
                                                                                                         "right": {
                                                                                                           "OR": {
                                                                                                             "left": {
-                                                                                                              "raw_text": "nd telithrom"
+                                                                                                              "raw_text": ", atazanavir",
+                                                                                                              "Drug": [
+                                                                                                                "atazanavir"
+                                                                                                              ]
                                                                                                             },
                                                                                                             "right": {
-                                                                                                              "raw_text": "izycin."
+                                                                                                              "raw_text": ", and telithromizycin.",
+                                                                                                              "Drug": [
+                                                                                                                "telithromizycin"
+                                                                                                              ]
                                                                                                             }
                                                                                                           }
                                                                                                         }
@@ -349,17 +387,19 @@
                                                                     "left": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "Pregnant or lactating fe",
+                                                                          "raw_text": "Pregnant",
                                                                           "Condition": [
-                                                                            "Pregnant",
-                                                                            "lactating"
-                                                                          ],
-                                                                          "Scope": [
-                                                                            "Pregnant or lactating"
+                                                                            "Pregnant"
                                                                           ]
                                                                         },
                                                                         "right": {
-                                                                          "raw_text": "males."
+                                                                          "raw_text": "or lactating females.",
+                                                                          "Condition": [
+                                                                            "lactating"
+                                                                          ],
+                                                                          "Person": [
+                                                                            "females"
+                                                                          ]
                                                                         }
                                                                       }
                                                                     }

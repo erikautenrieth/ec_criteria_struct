@@ -40,26 +40,29 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Patients with severe renal impairment (C",
+                      "raw_text": "Patients with severe renal impairment",
                       "Condition": [
                         "renal impairment"
                       ],
                       "Qualifier": [
                         "severe"
-                      ],
-                      "Value": [
-                        "C"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "Lcr ="
+                          "raw_text": "(CLcr",
+                          "Measurement": [
+                            "CLcr"
+                          ],
+                          "Value": [
+                            "C"
+                          ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "29 mL/min, or eGFR = 29 mL/min/1.73 m2), or moderate or",
+                              "raw_text": "= 29 mL/min, or eGFR = 29 mL/min/1.73 m2), or moderate",
                               "Value": [
                                 "= 29 mL/min",
                                 "= 29 mL/min/1.73 m2",
@@ -75,7 +78,7 @@
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "severe hepatic impairment (Child-Pugh classes B or",
+                                  "raw_text": "or severe hepatic impairment (Child-Pugh classes B",
                                   "Qualifier": [
                                     "severe"
                                   ],
@@ -91,7 +94,7 @@
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "C).",
+                                  "raw_text": "or C).",
                                   "Value": [
                                     "C"
                                   ]
@@ -138,26 +141,23 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Patients with supine systolic blood pressure (SBP)",
-                                  "Value": [
-                                    "B"
-                                  ],
+                                  "raw_text": "Patients with supine systolic blood pressure",
                                   "Measurement": [
-                                    "systolic blood pressure",
-                                    "SBP"
+                                    "systolic blood pressure"
                                   ],
                                   "Qualifier": [
                                     "supine"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "= 180 mm Hg, or diastolic blood pressure (DBP) = 110 mm Hg.",
+                                  "raw_text": "(SBP) = 180 mm Hg, or diastolic blood pressure (DBP) = 110 mm Hg.",
                                   "Value": [
                                     "B",
                                     "= 180 mm Hg",
                                     "= 110 mm Hg"
                                   ],
                                   "Measurement": [
+                                    "SBP",
                                     "diastolic blood pressure",
                                     "DBP"
                                   ]
@@ -169,7 +169,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Clinically significant, uncontrolled cardiac arrhythmia, unsta",
+                                      "raw_text": "Clinically significant, uncontrolled cardiac arrhythmia",
                                       "Value": [
                                         "C"
                                       ],
@@ -183,28 +183,36 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "ble angina, conge"
+                                          "raw_text": ", unstable angina",
+                                          "Condition": [
+                                            "unstable angina"
+                                          ]
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "stive heart failure (NYHA"
+                                              "raw_text": ", congestive heart failure",
+                                              "Condition": [
+                                                "congestive heart failure"
+                                              ]
                                             },
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "Class 3 or 4),",
+                                                  "raw_text": "(NYHA Class 3",
                                                   "Value": [
                                                     "C",
-                                                    "3",
-                                                    "4"
+                                                    "3"
                                                   ],
-                                                  "Scope": [
-                                                    "3 or 4"
+                                                  "Measurement": [
+                                                    "NYHA Class"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "or history of myocardial infarction in the preceding 2 years.",
+                                                  "raw_text": "or 4), or history of myocardial infarction in the preceding 2 years.",
+                                                  "Value": [
+                                                    "4"
+                                                  ],
                                                   "Condition": [
                                                     "myocardial infarction"
                                                   ],
@@ -227,7 +235,10 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "an successfully treated, non-metastatic, squamous cell or basal cell carcinoma, or cer",
+                                              "raw_text": "other than successfully treated, non-metastatic, squamous cell or basal cell carcinoma",
+                                              "Negation": [
+                                                "other"
+                                              ],
                                               "Condition": [
                                                 "basal cell carcinoma"
                                               ],
@@ -237,9 +248,10 @@
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "vical cancer in situ.",
+                                              "raw_text": ", or cervical cancer in situ.",
                                               "Condition": [
-                                                "cancer"
+                                                "cancer",
+                                                "cervical cancer in situ"
                                               ]
                                             }
                                           }
@@ -290,9 +302,8 @@
                                                     "left": {
                                                       "AND": {
                                                         "left": {
-                                                          "raw_text": "Current or previous, within the 60 days preceding the baseline visit (Visit 2), treatment with antimuscarinic agents for OAB sym",
+                                                          "raw_text": "Current or previous, within the 60 days preceding the baseline visit (Visit 2), treatment with antimuscarinic agents",
                                                           "Value": [
-                                                            "B",
                                                             "C"
                                                           ],
                                                           "Reference_point": [
@@ -306,9 +317,15 @@
                                                           ]
                                                         },
                                                         "right": {
-                                                          "raw_text": "ptoms; and, willingness to not use antimuscarinic agents for the duration of the study.",
+                                                          "raw_text": "for OAB symptoms; and, willingness to not use antimuscarinic agents for the duration of the study.",
+                                                          "Value": [
+                                                            "B"
+                                                          ],
                                                           "Drug": [
                                                             "antimuscarinic agents"
+                                                          ],
+                                                          "Condition": [
+                                                            "OAB symptoms"
                                                           ],
                                                           "Post-eligibility": [
                                                             "willingness to not use antimuscarinic agents for the duration of the study"

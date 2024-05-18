@@ -1,0 +1,99 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "implanted hardware or other material that would prohibit treatment planning or delivery",
+      "Non-query-able": [
+        "implanted hardware or other material that would prohibit treatment planning or delivery"
+      ],
+      "Reference_point": [
+        "treatment"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "chemotherapy",
+              "Procedure": [
+                "chemotherapy"
+              ]
+            },
+            "right": {
+              "raw_text": "for a malignancy within the previous 5 years",
+              "Condition": [
+                "malignancy"
+              ],
+              "Temporal": [
+                "within the previous 5 years"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "her than this prostate cancer,o",
+                      "Condition": [
+                        "prostate cancer"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "r basal o"
+                        },
+                        "right": {
+                          "raw_text": "r squamous skin cancers) within prior 5 years",
+                          "Condition": [
+                            "squamous skin cancers"
+                          ],
+                          "Temporal": [
+                            "within prior 5 years"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "hormone ablation for 2 months prior to treatment or",
+                      "Procedure": [
+                        "hormone ablation"
+                      ],
+                      "Temporal": [
+                        "for 2 months prior to treatment"
+                      ],
+                      "Reference_point": [
+                        "treatment"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "during treatment",
+                      "Reference_point": [
+                        "treatment"
+                      ],
+                      "Temporal": [
+                        "during treatment"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

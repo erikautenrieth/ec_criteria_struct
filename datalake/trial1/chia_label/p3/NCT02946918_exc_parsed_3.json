@@ -1,0 +1,115 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "AJCC Stage III or greater",
+      "Measurement": [
+        "AJCC"
+      ],
+      "Value": [
+        "Stage III or greater"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Undifferentiated,"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Anaplastic"
+                },
+                "right": {
+                  "raw_text": "or Medullary Thyroid Cancer",
+                  "Condition": [
+                    "Medullary Thyroid Cancer"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "her than 0.1-0.5 mU/L",
+                  "Value": [
+                    "0.1-0.5 mU/L"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "History of gastrointestinal malabsorption or",
+                      "Condition": [
+                        "gastrointestinal malabsorption"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "gastric bypass surgery",
+                      "Procedure": [
+                        "gastric bypass surgery"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Pregnancy",
+                      "Pregnancy_considerations": [
+                        "Pregnancy"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "NOT": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "the absorption or m"
+                                },
+                                "right": {
+                                  "raw_text": "etabolism of levothyroxine",
+                                  "Drug": [
+                                    "levothyroxine"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Prior use of levothyroxine",
+                              "Drug": [
+                                "levothyroxine"
+                              ],
+                              "Temporal": [
+                                "Prior"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

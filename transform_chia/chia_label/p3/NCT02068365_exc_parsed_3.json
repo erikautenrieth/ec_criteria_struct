@@ -156,13 +156,13 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "received interferon o",
+                  "raw_text": "received interferon",
                   "Drug": [
                     "interferon"
                   ]
                 },
                 "right": {
-                  "raw_text": "r peginterferon treatment in the past.",
+                  "raw_text": "or peginterferon treatment in the past.",
                   "Temporal": [
                     "in the past"
                   ],
@@ -184,7 +184,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "received antiviral therapy fo",
+                      "raw_text": "received antiviral therapy",
                       "Procedure": [
                         "antiviral therapy"
                       ]
@@ -192,7 +192,7 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "r any systemic anti-viral, anti-neoplastic or",
+                          "raw_text": "for any systemic anti-viral, anti-neoplastic",
                           "Drug": [
                             "systemic anti-viral"
                           ],
@@ -203,7 +203,7 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "immuno-modulatory treatment (including supraphysiologic doses of steroids an",
+                              "raw_text": "or immuno-modulatory treatment (including supraphysiologic doses of steroids",
                               "Procedure": [
                                 "treatment",
                                 "immuno-modulatory treatment"
@@ -219,7 +219,7 @@
                               ]
                             },
                             "right": {
-                              "raw_text": "d radiation) within the past 6 months.",
+                              "raw_text": "and radiation) within the past 6 months.",
                               "Temporal": [
                                 "in the past",
                                 "within the past 6 months"
@@ -239,13 +239,16 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Positive test at",
+                          "raw_text": "Positive test",
                           "Value": [
                             "Positive"
                           ]
                         },
                         "right": {
-                          "raw_text": "screening for anti-HIV, anti-HCV."
+                          "raw_text": "at screening for anti-HIV, anti-HCV.",
+                          "Temporal": [
+                            "at screening"
+                          ]
                         }
                       }
                     },
@@ -256,16 +259,19 @@
                             "left": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "tion: patients who have had a limited (<=7 days) course of acyclovir for",
+                                  "raw_text": "Exception: patients who have had a limited (<=7 days) course of acyclovir",
                                   "Drug": [
                                     "acyclovir"
                                   ],
                                   "Multiplier": [
                                     "<=7 days"
+                                  ],
+                                  "Negation": [
+                                    "Exception"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "herpetic lesions more than 1 month prior to the first administration of test drug are not excluded.",
+                                  "raw_text": "for herpetic lesions more than 1 month prior to the first administration of test drug are not excluded.",
                                   "Condition": [
                                     "herpetic lesions",
                                     "lesion"
@@ -303,7 +309,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "History or other evidence of bleeding from e",
+                                      "raw_text": "History or other evidence of bleeding",
                                       "Qualifier": [
                                         "other"
                                       ],
@@ -312,13 +318,14 @@
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "sophageal varices or other conditions consistent with decompensated liver disease.",
+                                      "raw_text": "from esophageal varices or other conditions consistent with decompensated liver disease.",
                                       "Qualifier": [
                                         "decompensated",
                                         "other"
                                       ],
                                       "Condition": [
                                         "liver disease",
+                                        "esophageal varices",
                                         "conditions consistent with decompensated liver disease"
                                       ],
                                       "Scope": [
@@ -332,7 +339,7 @@
                                     "left": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "History or other evidence of a medical condition associa",
+                                          "raw_text": "History or other evidence of a medical condition",
                                           "Qualifier": [
                                             "other"
                                           ],
@@ -345,46 +352,69 @@
                                             "left": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "an HBV (e.g., hemochromatosis, autoim",
+                                                  "raw_text": "other than HBV (e.g., hemochromatosis",
+                                                  "Qualifier": [
+                                                    "other"
+                                                  ],
+                                                  "Negation": [
+                                                    "other than"
+                                                  ],
                                                   "Condition": [
                                                     "HBV",
                                                     "hemochromatosis"
+                                                  ],
+                                                  "Scope": [
+                                                    "other than HBV"
                                                   ]
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "mune hepatitis, metabo"
+                                                      "raw_text": ", autoimmune hepatitis",
+                                                      "Condition": [
+                                                        "autoimmune hepatitis"
+                                                      ]
                                                     },
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "lic liver diseases including Wilson's and alp",
+                                                          "raw_text": ", metabolic liver diseases including Wilson's",
                                                           "Condition": [
                                                             "liver disease",
+                                                            "metabolic liver diseases",
                                                             "Wilson's"
                                                           ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "ha1-antitrypsin deficiency, alcoho"
+                                                              "raw_text": "and alpha1-antitrypsin deficiency",
+                                                              "Condition": [
+                                                                "alpha1-antitrypsin deficiency"
+                                                              ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "lic liver disease, toxin",
+                                                                  "raw_text": ", alcoholic liver disease",
                                                                   "Condition": [
-                                                                    "liver disease"
+                                                                    "liver disease",
+                                                                    "alcoholic liver disease"
                                                                   ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "exposures, thalas"
+                                                                      "raw_text": ", toxin exposures",
+                                                                      "Condition": [
+                                                                        "toxin exposures"
+                                                                      ]
                                                                     },
                                                                     "right": {
-                                                                      "raw_text": "semia)."
+                                                                      "raw_text": ", thalassemia).",
+                                                                      "Condition": [
+                                                                        "thalassemia"
+                                                                      ]
                                                                     }
                                                                   }
                                                                 }
@@ -407,7 +437,7 @@
                                         "left": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "Women with ongoing pregnancy or who a",
+                                              "raw_text": "Women with ongoing pregnancy",
                                               "Person": [
                                                 "Women",
                                                 "men"
@@ -420,7 +450,7 @@
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "re breast feeding.",
+                                              "raw_text": "or who are breast feeding.",
                                               "Observation": [
                                                 "breast feeding"
                                               ]
@@ -432,21 +462,22 @@
                                             "left": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "Neutrophil count <1500 cel",
+                                                  "raw_text": "Neutrophil count",
                                                   "Measurement": [
                                                     "Neutrophil count"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "ls/mm3 or platelet count <90,000 cells/mm3 at screening.",
+                                                  "raw_text": "<1500 cells/mm3 or platelet count <90,000 cells/mm3 at screening.",
                                                   "Temporal": [
                                                     "at screening"
                                                   ],
+                                                  "Value": [
+                                                    "<1500 cells/mm3",
+                                                    "<90,000 cells/mm3"
+                                                  ],
                                                   "Measurement": [
                                                     "platelet count"
-                                                  ],
-                                                  "Value": [
-                                                    "<90,000 cells/mm3"
                                                   ]
                                                 }
                                               }
@@ -456,7 +487,7 @@
                                                 "left": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "Hemoglobin < 11.5 g/dL for females and < 12.5",
+                                                      "raw_text": "Hemoglobin < 11.5 g/dL for females",
                                                       "Measurement": [
                                                         "Hemoglobin"
                                                       ],
@@ -468,9 +499,12 @@
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "g/dL for men at screening.",
+                                                      "raw_text": "and < 12.5 g/dL for men at screening.",
                                                       "Temporal": [
                                                         "at screening"
+                                                      ],
+                                                      "Value": [
+                                                        "< 12.5 g/dL"
                                                       ],
                                                       "Person": [
                                                         "men"
@@ -505,7 +539,7 @@
                                                         "left": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "History of severe psychiatric disease, especially depression. Severe psychiatric",
+                                                              "raw_text": "History of severe psychiatric disease, especially depression. Severe",
                                                               "Qualifier": [
                                                                 "severe",
                                                                 "Severe"
@@ -521,22 +555,25 @@
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "disease is defined as major depression or psychosis",
+                                                                  "raw_text": "psychiatric disease is defined as major depression",
                                                                   "Condition": [
                                                                     "depression",
-                                                                    "major depression",
-                                                                    "psychosis"
+                                                                    "psychiatric disease",
+                                                                    "major depression"
                                                                   ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": ", a period of"
+                                                                      "raw_text": "or psychosis",
+                                                                      "Condition": [
+                                                                        "psychosis"
+                                                                      ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "treatment with an anti",
+                                                                          "raw_text": ", a period of treatment",
                                                                           "Procedure": [
                                                                             "treatment"
                                                                           ],
@@ -547,15 +584,21 @@
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "depressant medication or major tra"
+                                                                              "raw_text": "with an antidepressant medication",
+                                                                              "Drug": [
+                                                                                "antidepressant medication"
+                                                                              ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "nquilizer at therapeutic doses for depression or psychosis for at least",
+                                                                                  "raw_text": "or major tranquilizer at therapeutic doses for depression or psychosis",
                                                                                   "Condition": [
                                                                                     "depression",
                                                                                     "psychosis"
+                                                                                  ],
+                                                                                  "Drug": [
+                                                                                    "major tranquilizer"
                                                                                   ],
                                                                                   "Multiplier": [
                                                                                     "therapeutic doses"
@@ -564,7 +607,10 @@
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "3 months, a suicidal attempt, hospitaliza",
+                                                                                      "raw_text": "for at least 3 months, a suicidal attempt",
+                                                                                      "Temporal": [
+                                                                                        "for at least 3 months"
+                                                                                      ],
                                                                                       "Condition": [
                                                                                         "suicidal attempt"
                                                                                       ]
@@ -572,18 +618,25 @@
                                                                                     "right": {
                                                                                       "OR": {
                                                                                         "left": {
-                                                                                          "raw_text": "tion for psychiat"
+                                                                                          "raw_text": ", hospitalization",
+                                                                                          "Procedure": [
+                                                                                            "hospitalization"
+                                                                                          ]
                                                                                         },
                                                                                         "right": {
                                                                                           "AND": {
                                                                                             "left": {
-                                                                                              "raw_text": "ric disease, or a period of disability due to a psy",
+                                                                                              "raw_text": "for psychiatric disease, or a period of disability",
                                                                                               "Condition": [
+                                                                                                "psychiatric disease",
                                                                                                 "disability"
                                                                                               ]
                                                                                             },
                                                                                             "right": {
-                                                                                              "raw_text": "chiatric disease."
+                                                                                              "raw_text": "due to a psychiatric disease.",
+                                                                                              "Condition": [
+                                                                                                "psychiatric disease"
+                                                                                              ]
                                                                                             }
                                                                                           }
                                                                                         }
@@ -608,7 +661,7 @@
                                                             "left": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "History of immunologically mediated disease (e.g., inflammatory bowel disease, idiopathic t",
+                                                                  "raw_text": "History of immunologically mediated disease (e.g., inflammatory bowel disease",
                                                                   "Condition": [
                                                                     "inflammatory bowel disease",
                                                                     "immunologically mediated disease"
@@ -617,36 +670,51 @@
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "hrombocytopenic purpura, lupus erythe"
+                                                                      "raw_text": ", idiopathic thrombocytopenic purpura",
+                                                                      "Condition": [
+                                                                        "idiopathic thrombocytopenic purpura"
+                                                                      ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "matosus, autoimmune h"
+                                                                          "raw_text": ", lupus erythematosus",
+                                                                          "Condition": [
+                                                                            "lupus erythematosus"
+                                                                          ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "emolytic anemia, scleroderma,",
+                                                                              "raw_text": ", autoimmune hemolytic anemia",
                                                                               "Condition": [
-                                                                                "scleroderma"
+                                                                                "autoimmune hemolytic anemia"
                                                                               ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "severe psori",
-                                                                                  "Qualifier": [
-                                                                                    "severe"
+                                                                                  "raw_text": ", scleroderma",
+                                                                                  "Condition": [
+                                                                                    "scleroderma"
                                                                                   ]
                                                                                 },
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "asis, rheumatoid a"
+                                                                                      "raw_text": ", severe psoriasis",
+                                                                                      "Qualifier": [
+                                                                                        "severe"
+                                                                                      ],
+                                                                                      "Condition": [
+                                                                                        "psoriasis"
+                                                                                      ]
                                                                                     },
                                                                                     "right": {
-                                                                                      "raw_text": "rthritis)."
+                                                                                      "raw_text": ", rheumatoid arthritis).",
+                                                                                      "Condition": [
+                                                                                        "rheumatoid arthritis"
+                                                                                      ]
                                                                                     }
                                                                                   }
                                                                                 }
@@ -665,7 +733,7 @@
                                                                 "left": {
                                                                   "AND": {
                                                                     "left": {
-                                                                      "raw_text": "History or other evidence of chronic pulmonary disease associated wit",
+                                                                      "raw_text": "History or other evidence of chronic pulmonary disease",
                                                                       "Qualifier": [
                                                                         "other"
                                                                       ],
@@ -676,7 +744,7 @@
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "h functional limitation. Severe cardiac disease (e.g., NYHA Functional Cla",
+                                                                          "raw_text": "associated with functional limitation. Severe cardiac disease (e.g., NYHA",
                                                                           "Condition": [
                                                                             "cardiac disease",
                                                                             "functional limitation"
@@ -694,7 +762,10 @@
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "ss III or IV, myocardial infarction within 6 month",
+                                                                              "raw_text": "Functional Class III or IV, myocardial infarction",
+                                                                              "Value": [
+                                                                                "Functional Class III or IV"
+                                                                              ],
                                                                               "Condition": [
                                                                                 "myocardial infarction"
                                                                               ]
@@ -702,7 +773,10 @@
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "s, ventricular tachyarrhythmias requiring ongo",
+                                                                                  "raw_text": "within 6 months, ventricular tachyarrhythmias",
+                                                                                  "Temporal": [
+                                                                                    "within 6 months"
+                                                                                  ],
                                                                                   "Condition": [
                                                                                     "ventricular tachyarrhythmias"
                                                                                   ]
@@ -710,12 +784,12 @@
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "ing treatment, unstable angina or other signi",
-                                                                                      "Qualifier": [
-                                                                                        "other"
-                                                                                      ],
+                                                                                      "raw_text": "requiring ongoing treatment, unstable angina",
                                                                                       "Procedure": [
                                                                                         "treatment"
+                                                                                      ],
+                                                                                      "Temporal": [
+                                                                                        "ongoing"
                                                                                       ],
                                                                                       "Person": [
                                                                                         "men"
@@ -725,7 +799,11 @@
                                                                                       ]
                                                                                     },
                                                                                     "right": {
-                                                                                      "raw_text": "ficant cardiovascular diseases).",
+                                                                                      "raw_text": "or other significant cardiovascular diseases).",
+                                                                                      "Qualifier": [
+                                                                                        "other",
+                                                                                        "significant"
+                                                                                      ],
                                                                                       "Condition": [
                                                                                         "cardiovascular diseases"
                                                                                       ]
@@ -745,19 +823,22 @@
                                                                     "left": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "History of a severe seizure disorder or current anti",
+                                                                          "raw_text": "History of a severe seizure disorder",
                                                                           "Qualifier": [
                                                                             "severe"
                                                                           ],
                                                                           "Condition": [
                                                                             "seizure disorder"
+                                                                          ]
+                                                                        },
+                                                                        "right": {
+                                                                          "raw_text": "or current anticonvulsant use.",
+                                                                          "Drug": [
+                                                                            "anticonvulsant"
                                                                           ],
                                                                           "Temporal": [
                                                                             "current"
                                                                           ]
-                                                                        },
-                                                                        "right": {
-                                                                          "raw_text": "convulsant use."
                                                                         }
                                                                       }
                                                                     },
@@ -766,26 +847,26 @@
                                                                         "left": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "Evidence of an active or suspected can",
+                                                                              "raw_text": "Evidence of an active",
                                                                               "Temporal": [
                                                                                 "active"
-                                                                              ],
-                                                                              "Mood": [
-                                                                                "suspected"
-                                                                              ],
-                                                                              "Scope": [
-                                                                                "active or suspected"
                                                                               ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "cer or a history of"
+                                                                                  "raw_text": "or suspected cancer",
+                                                                                  "Mood": [
+                                                                                    "suspected"
+                                                                                  ],
+                                                                                  "Condition": [
+                                                                                    "cancer"
+                                                                                  ]
                                                                                 },
                                                                                 "right": {
                                                                                   "AND": {
                                                                                     "left": {
-                                                                                      "raw_text": "malignancy where the risk o",
+                                                                                      "raw_text": "or a history of malignancy",
                                                                                       "Condition": [
                                                                                         "malignancy"
                                                                                       ]
@@ -793,30 +874,34 @@
                                                                                     "right": {
                                                                                       "AND": {
                                                                                         "left": {
-                                                                                          "raw_text": "f recurrence is >=20% within 2 years. Patients with a lesion suspicious of he",
+                                                                                          "raw_text": "where the risk of recurrence is >=20% within 2 years. Patients with a lesion",
+                                                                                          "Measurement": [
+                                                                                            "risk of recurrence"
+                                                                                          ],
                                                                                           "Value": [
                                                                                             ">=20% within 2 years"
                                                                                           ],
                                                                                           "Condition": [
                                                                                             "lesion"
-                                                                                          ],
-                                                                                          "Mood": [
-                                                                                            "suspicious"
                                                                                           ]
                                                                                         },
                                                                                         "right": {
                                                                                           "AND": {
                                                                                             "left": {
-                                                                                              "raw_text": "patic malignancy on a screening imaging study will only be eli",
+                                                                                              "raw_text": "suspicious of hepatic malignancy on a screening imaging study",
                                                                                               "Condition": [
-                                                                                                "malignancy"
+                                                                                                "malignancy",
+                                                                                                "hepatic malignancy"
+                                                                                              ],
+                                                                                              "Mood": [
+                                                                                                "suspicious"
                                                                                               ],
                                                                                               "Procedure": [
                                                                                                 "screening imaging study"
                                                                                               ]
                                                                                             },
                                                                                             "right": {
-                                                                                              "raw_text": "gible if the likelihood of carcinoma is <=10% following an appropriate evaluation.",
+                                                                                              "raw_text": "will only be eligible if the likelihood of carcinoma is <=10% following an appropriate evaluation.",
                                                                                               "Measurement": [
                                                                                                 "likelihood of carcinoma"
                                                                                               ],
@@ -839,7 +924,7 @@
                                                                             "left": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "History of having received any systemic anti-neoplastic (including radiat",
+                                                                                  "raw_text": "History of having received any systemic anti-neoplastic",
                                                                                   "Qualifier": [
                                                                                     "systemic"
                                                                                   ]
@@ -847,9 +932,10 @@
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": "ion) or immunomodulatory treatment (including systemic corticosteroids) <=6 months prior",
+                                                                                      "raw_text": "(including radiation) or immunomodulatory treatment (including systemic corticosteroids)",
                                                                                       "Procedure": [
                                                                                         "treatment",
+                                                                                        "radiation",
                                                                                         "immunomodulatory treatment"
                                                                                       ],
                                                                                       "Drug": [
@@ -864,12 +950,16 @@
                                                                                       ]
                                                                                     },
                                                                                     "right": {
-                                                                                      "raw_text": "to the first dose of study drug or the expectation that such treatment will be needed at any time during the study.",
+                                                                                      "raw_text": "<=6 months prior to the first dose of study drug or the expectation that such treatment will be needed at any time during the study.",
                                                                                       "Procedure": [
                                                                                         "treatment"
                                                                                       ],
                                                                                       "Person": [
                                                                                         "men"
+                                                                                      ],
+                                                                                      "Temporal": [
+                                                                                        "<=6 months prior to the first dose of study drug",
+                                                                                        "at any time during the study"
                                                                                       ],
                                                                                       "Reference_point": [
                                                                                         "the first dose of study drug"
@@ -877,9 +967,6 @@
                                                                                       "Mood": [
                                                                                         "expectation",
                                                                                         "will be needed"
-                                                                                      ],
-                                                                                      "Temporal": [
-                                                                                        "at any time during the study"
                                                                                       ]
                                                                                     }
                                                                                   }
@@ -899,7 +986,7 @@
                                                                                     "left": {
                                                                                       "AND": {
                                                                                         "left": {
-                                                                                          "raw_text": "Thyroid disease with thyroid functi",
+                                                                                          "raw_text": "Thyroid disease",
                                                                                           "Condition": [
                                                                                             "Thyroid disease"
                                                                                           ]
@@ -907,36 +994,43 @@
                                                                                         "right": {
                                                                                           "OR": {
                                                                                             "left": {
-                                                                                              "raw_text": "on poorly controlled on prescribed medications. Patients with abnormal thyroid stimulating hormone or T4 concentration",
+                                                                                              "raw_text": "with thyroid function poorly controlled on prescribed medications. Patients with abnormal thyroid stimulating hormone",
+                                                                                              "Measurement": [
+                                                                                                "thyroid function",
+                                                                                                "thyroid stimulating hormone"
+                                                                                              ],
                                                                                               "Value": [
                                                                                                 "poorly controlled",
                                                                                                 "abnormal"
                                                                                               ],
                                                                                               "Qualifier": [
                                                                                                 "on prescribed medications"
-                                                                                              ],
-                                                                                              "Measurement": [
-                                                                                                "thyroid stimulating hormone"
                                                                                               ]
                                                                                             },
                                                                                             "right": {
                                                                                               "OR": {
                                                                                                 "left": {
-                                                                                                  "raw_text": "s, with elevation of",
-                                                                                                  "Value": [
-                                                                                                    "elevation"
+                                                                                                  "raw_text": "or T4 concentrations",
+                                                                                                  "Measurement": [
+                                                                                                    "T4 concentrations"
                                                                                                   ]
                                                                                                 },
                                                                                                 "right": {
                                                                                                   "OR": {
                                                                                                     "left": {
-                                                                                                      "raw_text": "antibodies to thyroid peroxidase and any clinical ma",
+                                                                                                      "raw_text": ", with elevation of antibodies to thyroid peroxidase",
                                                                                                       "Measurement": [
                                                                                                         "antibodies to thyroid peroxidase"
+                                                                                                      ],
+                                                                                                      "Value": [
+                                                                                                        "elevation"
                                                                                                       ]
                                                                                                     },
                                                                                                     "right": {
-                                                                                                      "raw_text": "nifestations of thyroid disease are excluded."
+                                                                                                      "raw_text": "and any clinical manifestations of thyroid disease are excluded.",
+                                                                                                      "Condition": [
+                                                                                                        "clinical manifestations of thyroid disease"
+                                                                                                      ]
                                                                                                     }
                                                                                                   }
                                                                                                 }
@@ -951,14 +1045,13 @@
                                                                                         "left": {
                                                                                           "OR": {
                                                                                             "left": {
-                                                                                              "raw_text": "History or other evidence of severe retinopathy (e.g. CMV retinitis,",
+                                                                                              "raw_text": "History or other evidence of severe retinopathy",
                                                                                               "Qualifier": [
                                                                                                 "severe",
                                                                                                 "other"
                                                                                               ],
                                                                                               "Condition": [
-                                                                                                "retinopathy",
-                                                                                                "CMV retinitis"
+                                                                                                "retinopathy"
                                                                                               ],
                                                                                               "Scope": [
                                                                                                 "severe retinopathy"
@@ -967,28 +1060,38 @@
                                                                                             "right": {
                                                                                               "OR": {
                                                                                                 "left": {
-                                                                                                  "raw_text": "macula degeneration",
+                                                                                                  "raw_text": "(e.g. CMV retinitis",
                                                                                                   "Condition": [
-                                                                                                    "macula degeneration"
+                                                                                                    "CMV retinitis"
                                                                                                   ]
                                                                                                 },
                                                                                                 "right": {
                                                                                                   "OR": {
                                                                                                     "left": {
-                                                                                                      "raw_text": ") or clinically relevant ophthalmological dis",
+                                                                                                      "raw_text": ", macula degeneration) or clinically relevant",
+                                                                                                      "Condition": [
+                                                                                                        "macula degeneration"
+                                                                                                      ],
                                                                                                       "Qualifier": [
                                                                                                         "clinically relevant"
                                                                                                       ]
                                                                                                     },
                                                                                                     "right": {
-                                                                                                      "raw_text": "order due to diabetes mellitus or hypertension",
-                                                                                                      "Condition": [
-                                                                                                        "diabetes mellitus",
-                                                                                                        "hypertension"
-                                                                                                      ],
-                                                                                                      "Scope": [
-                                                                                                        "diabetes mellitus or hypertension"
-                                                                                                      ]
+                                                                                                      "OR": {
+                                                                                                        "left": {
+                                                                                                          "raw_text": "ophthalmological disorder due to diabetes mellitus",
+                                                                                                          "Condition": [
+                                                                                                            "ophthalmological disorder",
+                                                                                                            "diabetes mellitus"
+                                                                                                          ]
+                                                                                                        },
+                                                                                                        "right": {
+                                                                                                          "raw_text": "or hypertension",
+                                                                                                          "Condition": [
+                                                                                                            "hypertension"
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      }
                                                                                                     }
                                                                                                   }
                                                                                                 }
@@ -999,17 +1102,13 @@
                                                                                         "right": {
                                                                                           "AND": {
                                                                                             "left": {
-                                                                                              "OR": {
-                                                                                                "left": {
-                                                                                                  "raw_text": "Inab"
-                                                                                                },
-                                                                                                "right": {
-                                                                                                  "raw_text": "ility or unwillingness to provide informed consent or abide by the requirements of the study.",
-                                                                                                  "Person": [
-                                                                                                    "men"
-                                                                                                  ]
-                                                                                                }
-                                                                                              }
+                                                                                              "raw_text": "Inability or unwillingness to provide informed consent or abide by the requirements of the study.",
+                                                                                              "Person": [
+                                                                                                "men"
+                                                                                              ],
+                                                                                              "Post-eligibility": [
+                                                                                                "Inability or unwillingness to provide informed consent or abide by the requirements of the study."
+                                                                                              ]
                                                                                             },
                                                                                             "right": {
                                                                                               "AND": {
@@ -1028,7 +1127,7 @@
                                                                                                     "left": {
                                                                                                       "NOT": {
                                                                                                         "left": {
-                                                                                                          "raw_text": "han 10% increase) has been documented over at least the previous 3 months.",
+                                                                                                          "raw_text": "unless stability (less than 10% increase) has been documented over at least the previous 3 months.",
                                                                                                           "Person": [
                                                                                                             "men"
                                                                                                           ],
@@ -1038,8 +1137,20 @@
                                                                                                           "Reference_point": [
                                                                                                             "the previous 3 months"
                                                                                                           ],
+                                                                                                          "Condition": [
+                                                                                                            "stability"
+                                                                                                          ],
+                                                                                                          "Value": [
+                                                                                                            "less than 10%"
+                                                                                                          ],
                                                                                                           "Measurement": [
                                                                                                             "increase"
+                                                                                                          ],
+                                                                                                          "Scope": [
+                                                                                                            "less than 10% increase"
+                                                                                                          ],
+                                                                                                          "Negation": [
+                                                                                                            "unless"
                                                                                                           ]
                                                                                                         }
                                                                                                       }
@@ -1049,28 +1160,38 @@
                                                                                                         "left": {
                                                                                                           "OR": {
                                                                                                             "left": {
-                                                                                                              "raw_text": "Evidence of drug and/or alcohol abuse (20",
-                                                                                                              "Condition": [
-                                                                                                                "alcohol abuse"
-                                                                                                              ]
+                                                                                                              "raw_text": "Evidence of drug"
                                                                                                             },
                                                                                                             "right": {
                                                                                                               "OR": {
                                                                                                                 "left": {
-                                                                                                                  "raw_text": "g/day for women & 30g/day for",
-                                                                                                                  "Person": [
-                                                                                                                    "men",
-                                                                                                                    "women"
+                                                                                                                  "raw_text": "and/or alcohol abuse (20g/day",
+                                                                                                                  "Condition": [
+                                                                                                                    "alcohol abuse"
                                                                                                                   ],
                                                                                                                   "Multiplier": [
-                                                                                                                    "30g/day"
+                                                                                                                    "20g/day"
                                                                                                                   ]
                                                                                                                 },
                                                                                                                 "right": {
-                                                                                                                  "raw_text": "men).",
-                                                                                                                  "Person": [
-                                                                                                                    "men"
-                                                                                                                  ]
+                                                                                                                  "AND": {
+                                                                                                                    "left": {
+                                                                                                                      "raw_text": "for women & 30g/day",
+                                                                                                                      "Person": [
+                                                                                                                        "men",
+                                                                                                                        "women"
+                                                                                                                      ],
+                                                                                                                      "Multiplier": [
+                                                                                                                        "30g/day"
+                                                                                                                      ]
+                                                                                                                    },
+                                                                                                                    "right": {
+                                                                                                                      "raw_text": "for men).",
+                                                                                                                      "Person": [
+                                                                                                                        "men"
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  }
                                                                                                                 }
                                                                                                               }
                                                                                                             }
@@ -1079,40 +1200,29 @@
                                                                                                         "right": {
                                                                                                           "AND": {
                                                                                                             "left": {
-                                                                                                              "AND": {
-                                                                                                                "left": {
-                                                                                                                  "raw_text": "Patients inclu"
-                                                                                                                },
-                                                                                                                "right": {
-                                                                                                                  "raw_text": "ded in another trial or having been given investigational drugs within 12 weeks prior to screening",
-                                                                                                                  "Qualifier": [
-                                                                                                                    "other"
-                                                                                                                  ]
-                                                                                                                }
-                                                                                                              }
+                                                                                                              "raw_text": "Patients included in another trial or having been given investigational drugs within 12 weeks prior to screening",
+                                                                                                              "Qualifier": [
+                                                                                                                "other"
+                                                                                                              ],
+                                                                                                              "Post-eligibility": [
+                                                                                                                "Patients included in another trial or having been given investigational drugs within 12 weeks prior to screening"
+                                                                                                              ]
                                                                                                             },
                                                                                                             "right": {
                                                                                                               "AND": {
                                                                                                                 "left": {
-                                                                                                                  "raw_text": "Any known history of hypersensitivity to interferon.",
-                                                                                                                  "Drug": [
-                                                                                                                    "interferon"
-                                                                                                                  ],
-                                                                                                                  "Condition": [
-                                                                                                                    "hypersensitivity"
-                                                                                                                  ]
-                                                                                                                },
-                                                                                                                "right": {
                                                                                                                   "AND": {
                                                                                                                     "left": {
-                                                                                                                      "AND": {
-                                                                                                                        "left": {
-                                                                                                                          "raw_text": ""
-                                                                                                                        },
-                                                                                                                        "right": {
-                                                                                                                          "raw_text": ""
-                                                                                                                        }
-                                                                                                                      }
+                                                                                                                      "raw_text": "Any known history of hypersensitivity",
+                                                                                                                      "Condition": [
+                                                                                                                        "hypersensitivity"
+                                                                                                                      ]
+                                                                                                                    },
+                                                                                                                    "right": {
+                                                                                                                      "raw_text": "to interferon.",
+                                                                                                                      "Drug": [
+                                                                                                                        "interferon"
+                                                                                                                      ]
                                                                                                                     }
                                                                                                                   }
                                                                                                                 }

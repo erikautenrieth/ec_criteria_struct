@@ -36,7 +36,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "Uncontrolled ascites o",
+                  "raw_text": "Uncontrolled ascites",
                   "Condition": [
                     "ascites"
                   ],
@@ -45,7 +45,7 @@
                   ]
                 },
                 "right": {
-                  "raw_text": "r hepatic encephalopathy",
+                  "raw_text": "or hepatic encephalopathy",
                   "Condition": [
                     "hepatic encephalopathy"
                   ]
@@ -57,7 +57,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Severe coagulation disorder: prothrombin time <4",
+                      "raw_text": "Severe coagulation disorder: prothrombin time",
                       "Condition": [
                         "coagulation disorder"
                       ],
@@ -71,18 +71,22 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "0% (or INR >1",
+                          "raw_text": "<40% (or INR",
+                          "Value": [
+                            "<40%"
+                          ],
                           "Measurement": [
                             "INR"
                           ]
                         },
                         "right": {
-                          "raw_text": ".7) or platelet count <30,000/mm3",
+                          "raw_text": ">1.7) or platelet count <30,000/mm3",
+                          "Value": [
+                            ">1.7",
+                            "<30,000/mm3"
+                          ],
                           "Measurement": [
                             "platelet count"
-                          ],
-                          "Value": [
-                            "<30,000/mm3"
                           ]
                         }
                       }
@@ -94,7 +98,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Medium or",
+                          "raw_text": "Medium",
                           "Qualifier": [
                             "Medium"
                           ]
@@ -102,13 +106,13 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "large sized gastric or",
+                              "raw_text": "or large sized gastric",
                               "Qualifier": [
                                 "large"
                               ]
                             },
                             "right": {
-                              "raw_text": "duodenal varices",
+                              "raw_text": "or duodenal varices",
                               "Condition": [
                                 "duodenal varices"
                               ]
@@ -133,7 +137,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "Severe cardiovascular disorder, rena",
+                                  "raw_text": "Severe cardiovascular disorder",
                                   "Qualifier": [
                                     "Severe"
                                   ],
@@ -144,15 +148,24 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "l failure, peri"
+                                      "raw_text": ", renal failure",
+                                      "Condition": [
+                                        "renal failure"
+                                      ]
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "tonitis, seps"
+                                          "raw_text": ", peritonitis",
+                                          "Condition": [
+                                            "peritonitis"
+                                          ]
                                         },
                                         "right": {
-                                          "raw_text": "is"
+                                          "raw_text": ", sepsis",
+                                          "Condition": [
+                                            "sepsis"
+                                          ]
                                         }
                                       }
                                     }
@@ -165,7 +178,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Severe erosive esophagitis, sever",
+                                      "raw_text": "Severe erosive esophagitis",
                                       "Qualifier": [
                                         "Severe"
                                       ],
@@ -176,18 +189,27 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "e esophageal stricture, activ",
+                                          "raw_text": ", severe esophageal stricture",
                                           "Condition": [
                                             "esophageal stricture"
+                                          ],
+                                          "Qualifier": [
+                                            "severe"
                                           ]
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "e gastric or duo"
+                                              "raw_text": ", active gastric",
+                                              "Qualifier": [
+                                                "active"
+                                              ]
                                             },
                                             "right": {
-                                              "raw_text": "denal ulcer"
+                                              "raw_text": "or duodenal ulcer",
+                                              "Condition": [
+                                                "duodenal ulcer"
+                                              ]
                                             }
                                           }
                                         }
@@ -200,13 +222,16 @@
                                     "left": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "Contraindication to beta",
+                                          "raw_text": "Contraindication",
                                           "Condition": [
                                             "Contraindication"
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "-blocker"
+                                          "raw_text": "to beta-blocker",
+                                          "Drug": [
+                                            "beta-blocker"
+                                          ]
                                         }
                                       }
                                     },

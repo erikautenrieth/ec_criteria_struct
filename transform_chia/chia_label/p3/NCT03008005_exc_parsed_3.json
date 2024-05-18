@@ -82,7 +82,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "presence of contraindications, c",
+                      "raw_text": "presence of contraindications",
                       "Condition": [
                         "contraindications"
                       ]
@@ -90,12 +90,15 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "urrent or"
+                          "raw_text": ", current",
+                          "Temporal": [
+                            "current"
+                          ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "past allergic or adverse reaction, o",
+                              "raw_text": "or past allergic or adverse reaction",
                               "Temporal": [
                                 "past"
                               ],
@@ -109,7 +112,7 @@
                             "right": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "r known sensitivity to",
+                                  "raw_text": ", or known sensitivity",
                                   "Condition": [
                                     "sensitivity"
                                   ]
@@ -117,7 +120,7 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "cannabinoid-like substances (dronabinol/ma",
+                                      "raw_text": "to cannabinoid-like substances (dronabinol",
                                       "Drug": [
                                         "dronabinol",
                                         "cannabinoid-like substances"
@@ -126,40 +129,61 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "rijuana/ca"
+                                          "raw_text": "/marijuana",
+                                          "Drug": [
+                                            "marijuana"
+                                          ]
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "nnabis/TH"
+                                              "raw_text": "/cannabis",
+                                              "Drug": [
+                                                "cannabis"
+                                              ]
                                             },
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "C, c"
+                                                  "raw_text": "/THC",
+                                                  "Drug": [
+                                                    "THC"
+                                                  ]
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "annabinoid oil, s"
+                                                      "raw_text": ", cannabinoid oil",
+                                                      "Drug": [
+                                                        "cannabinoid oil"
+                                                      ]
                                                     },
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "esame oil, g"
+                                                          "raw_text": ", sesame oil",
+                                                          "Drug": [
+                                                            "sesame oil"
+                                                          ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "elatin, g"
+                                                              "raw_text": ", gelatin",
+                                                              "Drug": [
+                                                                "gelatin"
+                                                              ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "lycerin, a"
+                                                                  "raw_text": ", glycerin",
+                                                                  "Drug": [
+                                                                    "glycerin"
+                                                                  ]
                                                                 },
                                                                 "right": {
-                                                                  "raw_text": "nd titanium dioxide)",
+                                                                  "raw_text": ", and titanium dioxide)",
                                                                   "Drug": [
                                                                     "titanium dioxide"
                                                                   ]
@@ -201,7 +225,7 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "positive drug screen or a",
+                              "raw_text": "positive drug screen",
                               "Measurement": [
                                 "drug screen"
                               ],
@@ -210,7 +234,10 @@
                               ]
                             },
                             "right": {
-                              "raw_text": "lcohol breathalyzer"
+                              "raw_text": "or alcohol breathalyzer",
+                              "Measurement": [
+                                "alcohol breathalyzer"
+                              ]
                             }
                           }
                         },
@@ -227,7 +254,7 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "currently pregnant (posit",
+                                      "raw_text": "currently pregnant",
                                       "Temporal": [
                                         "current",
                                         "currently"
@@ -242,7 +269,10 @@
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "ive pregnancy test), planning pregnancy, or la",
+                                          "raw_text": "(positive pregnancy test), planning pregnancy",
+                                          "Value": [
+                                            "positive"
+                                          ],
                                           "Measurement": [
                                             "pregnancy test"
                                           ],
@@ -254,7 +284,10 @@
                                           ]
                                         },
                                         "right": {
-                                          "raw_text": "ctating (women)"
+                                          "raw_text": ", or lactating (women)",
+                                          "Condition": [
+                                            "lactating"
+                                          ]
                                         }
                                       }
                                     }
@@ -289,13 +322,22 @@
                                                 "left": {
                                                   "AND": {
                                                     "left": {
-                                                      "raw_text": "to tolerate small, enclosed spaces without anxiety (e.g. cla",
+                                                      "raw_text": "inability to tolerate small, enclosed spaces without anxiety",
                                                       "Condition": [
                                                         "tolerate small, enclosed spaces without anxiety"
+                                                      ],
+                                                      "Mood": [
+                                                        "inability"
+                                                      ],
+                                                      "Negation": [
+                                                        "inability"
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "ustrophobia), as determined by self-report and/or a preliminary session in a mock scanner",
+                                                      "raw_text": "(e.g. claustrophobia), as determined by self-report and/or a preliminary session in a mock scanner",
+                                                      "Condition": [
+                                                        "claustrophobia"
+                                                      ],
                                                       "Procedure": [
                                                         "self-report"
                                                       ]
@@ -317,20 +359,25 @@
                                                     "left": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "presence of ferrous-containing metals within the body (e.g., aneurysm clips, shrapnel/r",
+                                                          "raw_text": "presence of ferrous-containing metals within the body (e.g., aneurysm clips",
                                                           "Device": [
                                                             "ferrous-containing metals",
-                                                            "aneurysm clips",
-                                                            "shrapnel"
+                                                            "aneurysm clips"
                                                           ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "etained pa"
+                                                              "raw_text": ", shrapnel",
+                                                              "Device": [
+                                                                "shrapnel"
+                                                              ]
                                                             },
                                                             "right": {
-                                                              "raw_text": "rticles)"
+                                                              "raw_text": "/retained particles)",
+                                                              "Device": [
+                                                                "retained particles"
+                                                              ]
                                                             }
                                                           }
                                                         }
@@ -355,7 +402,7 @@
                                                             "left": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": "current diagnosis of a mood, anxiety, or",
+                                                                  "raw_text": "current diagnosis of a mood",
                                                                   "Temporal": [
                                                                     "current"
                                                                   ]
@@ -363,17 +410,16 @@
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "other dis",
-                                                                      "Qualifier": [
-                                                                        "other"
-                                                                      ]
+                                                                      "raw_text": ", anxiety"
                                                                     },
                                                                     "right": {
-                                                                      "raw_text": "order that is more clinically salient than PTSD",
+                                                                      "raw_text": ", or other disorder that is more clinically salient than PTSD",
                                                                       "Condition": [
+                                                                        "disorder",
                                                                         "PTSD"
                                                                       ],
                                                                       "Qualifier": [
+                                                                        "other",
                                                                         "more clinically salient than PTSD"
                                                                       ]
                                                                     }
@@ -386,28 +432,31 @@
                                                                 "left": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": "current moderate or severe alco",
+                                                                      "raw_text": "current moderate",
                                                                       "Temporal": [
                                                                         "current"
                                                                       ],
                                                                       "Qualifier": [
-                                                                        "moderate",
-                                                                        "severe"
-                                                                      ],
-                                                                      "Scope": [
-                                                                        "moderate or severe"
+                                                                        "moderate"
                                                                       ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "hol/drug use disor"
+                                                                          "raw_text": "or severe alcohol",
+                                                                          "Qualifier": [
+                                                                            "severe"
+                                                                          ]
                                                                         },
                                                                         "right": {
-                                                                          "raw_text": "der or in the past 8 weeks",
+                                                                          "raw_text": "/drug use disorder or in the past 8 weeks",
                                                                           "Temporal": [
                                                                             "past",
                                                                             "in the past 8 weeks"
+                                                                          ],
+                                                                          "Condition": [
+                                                                            "disorder",
+                                                                            "drug use disorder"
                                                                           ]
                                                                         }
                                                                       }
@@ -419,16 +468,13 @@
                                                                     "left": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": "current or past diagnosis of bipolar and other relat",
+                                                                          "raw_text": "current or past diagnosis of bipolar",
                                                                           "Temporal": [
                                                                             "current",
                                                                             "past"
                                                                           ],
                                                                           "Scope": [
                                                                             "current or past"
-                                                                          ],
-                                                                          "Qualifier": [
-                                                                            "other"
                                                                           ],
                                                                           "Condition": [
                                                                             "bipolar"
@@ -437,23 +483,31 @@
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": "ed disorders, schizophrenia",
+                                                                              "raw_text": "and other related disorders",
                                                                               "Condition": [
-                                                                                "disorder"
+                                                                                "disorder",
+                                                                                "related disorders"
+                                                                              ],
+                                                                              "Qualifier": [
+                                                                                "other"
                                                                               ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": "spectrum, or other psych",
-                                                                                  "Qualifier": [
-                                                                                    "other"
+                                                                                  "raw_text": ", schizophrenia spectrum",
+                                                                                  "Condition": [
+                                                                                    "schizophrenia spectrum"
                                                                                   ]
                                                                                 },
                                                                                 "right": {
-                                                                                  "raw_text": "otic disorders",
+                                                                                  "raw_text": ", or other psychotic disorders",
                                                                                   "Condition": [
-                                                                                    "disorder"
+                                                                                    "disorder",
+                                                                                    "psychotic disorders"
+                                                                                  ],
+                                                                                  "Qualifier": [
+                                                                                    "other"
                                                                                   ]
                                                                                 }
                                                                               }
@@ -467,10 +521,7 @@
                                                                         "left": {
                                                                           "AND": {
                                                                             "left": {
-                                                                              "raw_text": "concomitant treatments with medication",
-                                                                              "Drug": [
-                                                                                "medication"
-                                                                              ],
+                                                                              "raw_text": "concomitant treatments",
                                                                               "Procedure": [
                                                                                 "treatments"
                                                                               ]
@@ -478,63 +529,78 @@
                                                                             "right": {
                                                                               "AND": {
                                                                                 "left": {
-                                                                                  "raw_text": "known to have dr"
+                                                                                  "raw_text": "with medication",
+                                                                                  "Drug": [
+                                                                                    "medication"
+                                                                                  ]
                                                                                 },
                                                                                 "right": {
                                                                                   "AND": {
                                                                                     "left": {
-                                                                                      "raw_text": "ug interactions with dronabinol,",
-                                                                                      "Drug": [
-                                                                                        "dronabinol"
+                                                                                      "raw_text": "known to have drug interactions",
+                                                                                      "Condition": [
+                                                                                        "drug interactions"
                                                                                       ]
                                                                                     },
                                                                                     "right": {
                                                                                       "OR": {
                                                                                         "left": {
-                                                                                          "raw_text": "such as, central nervous system depressants (barbiturates, b",
+                                                                                          "raw_text": "with dronabinol, such as, central nervous system depressants",
                                                                                           "Drug": [
-                                                                                            "central nervous system depressants",
-                                                                                            "barbiturates"
+                                                                                            "dronabinol",
+                                                                                            "central nervous system depressants"
                                                                                           ]
                                                                                         },
                                                                                         "right": {
                                                                                           "OR": {
                                                                                             "left": {
-                                                                                              "raw_text": "enzodiazepines"
+                                                                                              "raw_text": "(barbiturates",
+                                                                                              "Drug": [
+                                                                                                "barbiturates"
+                                                                                              ]
                                                                                             },
                                                                                             "right": {
                                                                                               "OR": {
                                                                                                 "left": {
-                                                                                                  "raw_text": ", buspirone, lith",
+                                                                                                  "raw_text": ", benzodiazepines",
                                                                                                   "Drug": [
-                                                                                                    "buspirone"
+                                                                                                    "benzodiazepines"
                                                                                                   ]
                                                                                                 },
                                                                                                 "right": {
                                                                                                   "OR": {
                                                                                                     "left": {
-                                                                                                      "raw_text": "ium, etc) a"
+                                                                                                      "raw_text": ", buspirone",
+                                                                                                      "Drug": [
+                                                                                                        "buspirone"
+                                                                                                      ]
                                                                                                     },
                                                                                                     "right": {
                                                                                                       "OR": {
                                                                                                         "left": {
-                                                                                                          "raw_text": "nd anticholinergic agents (atropine, scopolamine, an",
+                                                                                                          "raw_text": ", lithium, etc) and anticholinergic agents (atropine",
                                                                                                           "Person": [
                                                                                                             "age"
                                                                                                           ],
                                                                                                           "Drug": [
+                                                                                                            "lithium",
                                                                                                             "anticholinergic agents",
-                                                                                                            "atropine",
-                                                                                                            "scopolamine"
+                                                                                                            "atropine"
                                                                                                           ]
                                                                                                         },
                                                                                                         "right": {
                                                                                                           "OR": {
                                                                                                             "left": {
-                                                                                                              "raw_text": "tihistamines,"
+                                                                                                              "raw_text": ", scopolamine",
+                                                                                                              "Drug": [
+                                                                                                                "scopolamine"
+                                                                                                              ]
                                                                                                             },
                                                                                                             "right": {
-                                                                                                              "raw_text": "etc)."
+                                                                                                              "raw_text": ", antihistamines, etc).",
+                                                                                                              "Drug": [
+                                                                                                                "antihistamines"
+                                                                                                              ]
                                                                                                             }
                                                                                                           }
                                                                                                         }

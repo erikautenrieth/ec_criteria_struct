@@ -65,7 +65,7 @@
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "History of bleeding diathesis o",
+                  "raw_text": "History of bleeding diathesis",
                   "Condition": [
                     "bleeding diathesis"
                   ],
@@ -76,13 +76,13 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "r known coagulopathy (",
+                      "raw_text": "or known coagulopathy",
                       "Condition": [
                         "coagulopathy"
                       ]
                     },
                     "right": {
-                      "raw_text": "including heparin-induced thrombocytopenia), or refuses blood transfusions.",
+                      "raw_text": "(including heparin-induced thrombocytopenia), or refuses blood transfusions.",
                       "Condition": [
                         "heparin-induced thrombocytopenia"
                       ],
@@ -102,7 +102,7 @@
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Baseline hemogram with Hb<10",
+                      "raw_text": "Baseline hemogram with Hb",
                       "Procedure": [
                         "hemogram"
                       ],
@@ -114,12 +114,13 @@
                       ]
                     },
                     "right": {
-                      "raw_text": "g/dL or PLT count<100,000/\u03bcL",
+                      "raw_text": "<10g/dL or PLT count<100,000/\u03bcL",
+                      "Value": [
+                        "<10g/dL",
+                        "<100,000/\u03bcL"
+                      ],
                       "Measurement": [
                         "PLT count"
-                      ],
-                      "Value": [
-                        "<100,000/\u03bcL"
                       ]
                     }
                   }
@@ -129,7 +130,7 @@
                     "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "Patients already taking warfarin, ci",
+                          "raw_text": "Patients already taking warfarin",
                           "Drug": [
                             "warfarin"
                           ]
@@ -137,20 +138,26 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "lostazol or"
+                              "raw_text": ", cilostazol",
+                              "Drug": [
+                                "cilostazol"
+                              ]
                             },
                             "right": {
                               "NOT": {
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "pt aspirin and",
+                                      "raw_text": "except aspirin",
                                       "Drug": [
                                         "aspirin"
+                                      ],
+                                      "Negation": [
+                                        "except"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "clopidogrel",
+                                      "raw_text": "and clopidogrel",
                                       "Drug": [
                                         "clopidogrel"
                                       ]
@@ -168,20 +175,24 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "Gastrointestinal or g"
+                              "raw_text": "Gastrointestinal"
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "enitourinary bleeding with"
+                                  "raw_text": "or genitourinary bleeding",
+                                  "Condition": [
+                                    "genitourinary bleeding"
+                                  ]
                                 },
                                 "right": {
-                                  "raw_text": "in the prior 3 months, or major surgery within 2 months.",
+                                  "raw_text": "within the prior 3 months, or major surgery within 2 months.",
+                                  "Temporal": [
+                                    "within the prior 3 months",
+                                    "within 2 months"
+                                  ],
                                   "Procedure": [
                                     "major surgery"
-                                  ],
-                                  "Temporal": [
-                                    "within 2 months"
                                   ]
                                 }
                               }
