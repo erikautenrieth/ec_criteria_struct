@@ -1,37 +1,37 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "History of significant head trauma",
-          "Condition": [
-            "head trauma"
-          ],
-          "Observation": [
-            "History"
-          ]
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": ", seizure disorder",
+              "raw_text": "History of significant head trauma",
               "Condition": [
-                "seizure disorder"
+                "head trauma"
+              ],
+              "Observation": [
+                "History"
               ]
             },
             "right": {
-              "raw_text": ", or mental retardation",
-              "Condition": [
-                "mental retardation"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": ", seizure disorder",
+                  "Condition": [
+                    "seizure disorder"
+                  ]
+                },
+                "right": {
+                  "raw_text": ", or mental retardation",
+                  "Condition": [
+                    "mental retardation"
+                  ]
+                }
+              }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "History of alcohol or drug abuse",
@@ -56,22 +56,18 @@
               }
             }
           }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "History of violence within 6 months prior to study entry",
-              "Observation": [
-                "History",
-                "violence"
-              ],
-              "Temporal": [
-                "within 6 months prior"
-              ]
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "History of violence within 6 months prior to study entry",
+      "Observation": [
+        "History",
+        "violence"
+      ],
+      "Temporal": [
+        "within 6 months prior"
+      ]
     }
   }
 }

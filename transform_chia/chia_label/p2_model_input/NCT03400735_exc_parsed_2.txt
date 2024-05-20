@@ -1,74 +1,70 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Pregnancy"
-        },
-        "right": {
-          "raw_text": "or breastfeeding"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Allergy against to penicillin"
-            },
-            "right": {
-              "raw_text": "or cephalosporins"
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Renal impairment"
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Active hepatic disease"
-                },
-                "right": {
                   "AND": {
                     "left": {
                       "AND": {
                         "left": {
-                          "raw_text": "Antibiotic"
+                          "OR": {
+                            "left": {
+                              "raw_text": "Pregnancy"
+                            },
+                            "right": {
+                              "raw_text": "or breastfeeding"
+                            }
+                          }
                         },
                         "right": {
-                          "NOT": {
+                          "OR": {
                             "left": {
-                              "raw_text": "except study drugs"
+                              "raw_text": "Allergy against to penicillin"
+                            },
+                            "right": {
+                              "raw_text": "or cephalosporins"
                             }
                           }
                         }
                       }
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Immunosuppressive therapy before 6 months of study initiation"
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Use of probenecid like drugs"
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "Renal impairment"
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Active hepatic disease"
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Antibiotic"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "except study drugs"
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "Immunosuppressive therapy before 6 months of study initiation"
         }
       }
+    },
+    "right": {
+      "raw_text": "Use of probenecid like drugs"
     }
   }
 }

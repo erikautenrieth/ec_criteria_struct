@@ -1,74 +1,70 @@
 {
   "AND": {
     "left": {
-      "raw_text": "previous use of insulin pump"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "pregnancy"
-            },
-            "right": {
-              "raw_text": "or planning to become pregnant in the next 2 years,"
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "NOT": {
-                "left": {
-                  "raw_text": "lack of ability to use the study devices"
-                }
-              }
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "history of severe chronic diseases"
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": "recent"
+                          "raw_text": "previous use of insulin pump"
                         },
                         "right": {
-                          "raw_text": "or concomitant use of corticosteroids"
+                          "OR": {
+                            "left": {
+                              "raw_text": "pregnancy"
+                            },
+                            "right": {
+                              "raw_text": "or planning to become pregnant in the next 2 years,"
+                            }
+                          }
                         }
                       }
                     },
                     "right": {
-                      "AND": {
+                      "NOT": {
                         "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "drug"
-                            },
-                            "right": {
-                              "raw_text": "or alcohol abuse"
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "psychiatric complaints that interfere with the correct use of the devices"
-                            }
-                          }
+                          "raw_text": "lack of ability to use the study devices"
                         }
                       }
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "history of severe chronic diseases"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "recent"
+                },
+                "right": {
+                  "raw_text": "or concomitant use of corticosteroids"
                 }
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "drug"
+            },
+            "right": {
+              "raw_text": "or alcohol abuse"
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "psychiatric complaints that interfere with the correct use of the devices"
     }
   }
 }

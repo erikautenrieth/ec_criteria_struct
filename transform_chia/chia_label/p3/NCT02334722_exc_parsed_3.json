@@ -1,42 +1,46 @@
 {
   "AND": {
     "left": {
-      "NOT": {
-        "left": {
-          "raw_text": "No known history of seizure activity.",
-          "Negation": [
-            "No"
-          ],
-          "Observation": [
-            "history"
-          ],
-          "Condition": [
-            "seizure activity"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Pregnant",
-              "Condition": [
-                "Pregnant"
-              ]
-            },
-            "right": {
-              "raw_text": "or breastfeeding.",
-              "Observation": [
-                "breastfeeding"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "No known history of seizure activity.",
+                      "Negation": [
+                        "No"
+                      ],
+                      "Observation": [
+                        "history"
+                      ],
+                      "Condition": [
+                        "seizure activity"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Pregnant",
+                      "Condition": [
+                        "Pregnant"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or breastfeeding.",
+                      "Observation": [
+                        "breastfeeding"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "raw_text": "Renal dysfunction (CrCl < 30ml/min).",
               "Condition": [
                 "Renal dysfunction"
@@ -50,41 +54,33 @@
               "Scope": [
                 "CrCl < 30ml/min"
               ]
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Beck's Depression Inventory (BDI) =14",
-                  "Measurement": [
-                    "Beck's Depression Inventory (BDI)"
-                  ],
-                  "Value": [
-                    "=14"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Allergy",
-                          "Condition": [
-                            "Allergy"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "to levetiracetam.",
-                          "Drug": [
-                            "levetiracetam"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Beck's Depression Inventory (BDI) =14",
+          "Measurement": [
+            "Beck's Depression Inventory (BDI)"
+          ],
+          "Value": [
+            "=14"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Allergy",
+          "Condition": [
+            "Allergy"
+          ]
+        },
+        "right": {
+          "raw_text": "to levetiracetam.",
+          "Drug": [
+            "levetiracetam"
+          ]
         }
       }
     }

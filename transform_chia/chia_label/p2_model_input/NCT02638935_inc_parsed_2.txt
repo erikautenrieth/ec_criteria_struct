@@ -1,16 +1,20 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Female"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Age \u226518 years"
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Female"
+                },
+                "right": {
+                  "raw_text": "Age \u226518 years"
+                }
+              }
+            },
+            "right": {
               "AND": {
                 "left": {
                   "raw_text": "Patients with a lesion"
@@ -26,37 +30,26 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Informed consent about histological examination (core cut biopsy (CCB)"
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Informed consent about histological examination (core cut biopsy (CCB)"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", vacuum-assisted biopsy (VAB)"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", fine needle aspiration (FNA)"
-                            },
-                            "right": {
-                              "raw_text": "or surgery) has already been given in the course of clinical routine"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": ", vacuum-assisted biopsy (VAB)"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "raw_text": "Signed informed consent of study participation"
+                      "raw_text": ", fine needle aspiration (FNA)"
+                    },
+                    "right": {
+                      "raw_text": "or surgery) has already been given in the course of clinical routine"
                     }
                   }
                 }
@@ -65,6 +58,9 @@
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Signed informed consent of study participation"
     }
   }
 }

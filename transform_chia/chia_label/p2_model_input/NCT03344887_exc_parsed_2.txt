@@ -1,29 +1,25 @@
 {
   "AND": {
     "left": {
-      "NOT": {
-        "left": {
-          "raw_text": "not have a valid Ontario Health Insurance Plan (OHIP) number at time of first transfusion"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "not have a valid Ontario Health Insurance Plan (OHIP) number at time of first transfusion"
+            }
+          }
+        },
+        "right": {
           "NOT": {
             "left": {
               "raw_text": "emergency randomization could not be completed"
             }
           }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Patients with complex antibody profile in which it is impossible to match RBC units"
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Patients with complex antibody profile in which it is impossible to match RBC units"
     }
   }
 }

@@ -1,11 +1,11 @@
 {
   "AND": {
     "left": {
-      "raw_text": "HbA1c > 13.0 %"
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "HbA1c > 13.0 %"
+        },
+        "right": {
           "NOT": {
             "left": {
               "OR": {
@@ -18,20 +18,16 @@
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "20 ="
         },
         "right": {
-          "AND": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "20 ="
-                },
-                "right": {
-                  "raw_text": "Age < 80 years"
-                }
-              }
-            }
-          }
+          "raw_text": "Age < 80 years"
         }
       }
     }

@@ -1,68 +1,64 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Preexisting untreated medical condition (thyroid disease"
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": ", diabetes mellitus"
-            },
-            "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", hypertension"
+                  "raw_text": "Preexisting untreated medical condition (thyroid disease"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", pulmonary conditions"
+                      "raw_text": ", diabetes mellitus"
                     },
                     "right": {
-                      "raw_text": ", cardiac condition\u2026)"
+                      "OR": {
+                        "left": {
+                          "raw_text": ", hypertension"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", pulmonary conditions"
+                            },
+                            "right": {
+                              "raw_text": ", cardiac condition\u2026)"
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
               }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "History of three or more consecutively failed In Vitro Fertilization (IVF) cycles after embryo transfer"
+                },
+                "right": {
+                  "raw_text": "empty set"
+                }
+              }
             }
           }
+        },
+        "right": {
+          "raw_text": "History of three or more miscarriages"
         }
       }
     },
     "right": {
       "AND": {
         "left": {
-          "AND": {
-            "left": {
-              "raw_text": "History of three or more consecutively failed In Vitro Fertilization (IVF) cycles after embryo transfer"
-            },
-            "right": {
-              "raw_text": ""
-            }
-          }
+          "raw_text": "Previous allergy"
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "History of three or more miscarriages"
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Previous allergy"
-                    },
-                    "right": {
-                      "raw_text": "reactions to progesterone products"
-                    }
-                  }
-                }
-              }
-            }
-          }
+          "raw_text": "reactions to progesterone products"
         }
       }
     }

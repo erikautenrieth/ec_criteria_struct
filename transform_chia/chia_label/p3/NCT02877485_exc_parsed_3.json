@@ -1,72 +1,68 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Intranasal steroid use within the last three months",
-      "Procedure": [
-        "Intranasal steroid use"
-      ],
-      "Temporal": [
-        "within the last three months"
-      ],
-      "Drug": [
-        "steroid"
-      ],
-      "Qualifier": [
-        "Intranasal"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Current systemic steroid use",
-          "Temporal": [
-            "Current"
-          ],
-          "Procedure": [
-            "systemic steroid use"
-          ],
-          "Qualifier": [
-            "systemic"
-          ],
-          "Drug": [
-            "steroid"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Prior septal surgery",
-              "Temporal": [
-                "Prior"
-              ],
+              "raw_text": "Intranasal steroid use within the last three months",
               "Procedure": [
-                "septal surgery"
+                "Intranasal steroid use"
+              ],
+              "Temporal": [
+                "within the last three months"
+              ],
+              "Drug": [
+                "steroid"
+              ],
+              "Qualifier": [
+                "Intranasal"
               ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Individuals who are pregnant",
-                      "Condition": [
-                        "pregnant"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "or actively breastfeeding",
-                      "Temporal": [
-                        "actively"
-                      ],
-                      "Observation": [
-                        "breastfeeding"
-                      ]
-                    }
-                  }
-                }
-              }
+              "raw_text": "Current systemic steroid use",
+              "Temporal": [
+                "Current"
+              ],
+              "Procedure": [
+                "systemic steroid use"
+              ],
+              "Qualifier": [
+                "systemic"
+              ],
+              "Drug": [
+                "steroid"
+              ]
             }
           }
+        },
+        "right": {
+          "raw_text": "Prior septal surgery",
+          "Temporal": [
+            "Prior"
+          ],
+          "Procedure": [
+            "septal surgery"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Individuals who are pregnant",
+          "Condition": [
+            "pregnant"
+          ]
+        },
+        "right": {
+          "raw_text": "or actively breastfeeding",
+          "Temporal": [
+            "actively"
+          ],
+          "Observation": [
+            "breastfeeding"
+          ]
         }
       }
     }

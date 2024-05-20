@@ -1,22 +1,22 @@
 {
   "AND": {
     "left": {
-      "NOT": {
-        "left": {
-          "AND": {
-            "left": {
-              "raw_text": "not have been vaccinated"
-            },
-            "right": {
-              "raw_text": "against HPV-Gardasil-9 (both partners)"
-            }
-          }
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "not have been vaccinated"
+                },
+                "right": {
+                  "raw_text": "against HPV-Gardasil-9 (both partners)"
+                }
+              }
+            }
+          }
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "Any history of cervical, penile"
@@ -32,27 +32,23 @@
                       "raw_text": "or anal cancers"
                     },
                     "right": {
-                      "raw_text": ""
+                      "raw_text": "empty set"
                     }
                   }
                 }
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Being pregnant"
         },
         "right": {
-          "AND": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Being pregnant"
-                },
-                "right": {
-                  "raw_text": "or plan on immediately becoming pregnant"
-                }
-              }
-            }
-          }
+          "raw_text": "or plan on immediately becoming pregnant"
         }
       }
     }

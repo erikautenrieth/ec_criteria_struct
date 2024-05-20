@@ -1,37 +1,45 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Presence of VTE upon admission",
-      "Condition": [
-        "VTE"
-      ],
-      "Temporal": [
-        "upon admission"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Pregnant or nursing",
-          "Condition": [
-            "Pregnant",
-            "nursing"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Inability to give informed consent by patient or healthcare proxy",
-              "Observation": [
-                "Inability to give informed consent"
-              ],
-              "Informed_consent": [
-                "Inability to give informed consent by patient or healthcare proxy"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Presence of VTE upon admission",
+                          "Condition": [
+                            "VTE"
+                          ],
+                          "Temporal": [
+                            "upon admission"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "Pregnant or nursing",
+                          "Condition": [
+                            "Pregnant",
+                            "nursing"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Inability to give informed consent by patient or healthcare proxy",
+                      "Observation": [
+                        "Inability to give informed consent"
+                      ],
+                      "Informed_consent": [
+                        "Inability to give informed consent by patient or healthcare proxy"
+                      ]
+                    }
+                  }
+                },
+                "right": {
                   "AND": {
                     "left": {
                       "raw_text": "Contraindication",
@@ -46,78 +54,66 @@
                       ]
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Contraindication",
+                  "Condition": [
+                    "Contraindication"
+                  ]
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Contraindication",
-                          "Condition": [
-                            "Contraindication"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "to aspirin",
-                          "Drug": [
-                            "aspirin"
-                          ]
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Epidural"
-                            },
-                            "right": {
-                              "raw_text": "or subdural hematoma",
-                              "Condition": [
-                                "subdural hematoma"
-                              ]
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Presence"
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", or removal"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "within the last 12 hours, of an epidural or spinal catheter, or recent (within the last 12 hours) epidural",
-                                          "Temporal": [
-                                            "within the last 12 hours",
-                                            "recent"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": "or spinal anesthesia/procedures",
-                                          "Procedure": [
-                                            "spinal anesthesia"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "to aspirin",
+                  "Drug": [
+                    "aspirin"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Epidural"
+            },
+            "right": {
+              "raw_text": "or subdural hematoma",
+              "Condition": [
+                "subdural hematoma"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Presence"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", or removal"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "within the last 12 hours, of an epidural or spinal catheter, or recent (within the last 12 hours) epidural",
+                  "Temporal": [
+                    "within the last 12 hours",
+                    "recent"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or spinal anesthesia/procedures",
+                  "Procedure": [
+                    "spinal anesthesia"
+                  ]
                 }
               }
             }

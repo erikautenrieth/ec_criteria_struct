@@ -3,32 +3,36 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Contraindication"
-        },
-        "right": {
-          "raw_text": "to antiplatelet therapy"
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Need to continue clopidogrel due to stroke"
+              "AND": {
+                "left": {
+                  "raw_text": "Contraindication"
+                },
+                "right": {
+                  "raw_text": "to antiplatelet therapy"
+                }
+              }
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", peripheral disease"
+                  "raw_text": "Need to continue clopidogrel due to stroke"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", significant carotid disease"
+                      "raw_text": ", peripheral disease"
                     },
                     "right": {
-                      "raw_text": "or recent acute coronary syndrome"
+                      "OR": {
+                        "left": {
+                          "raw_text": ", significant carotid disease"
+                        },
+                        "right": {
+                          "raw_text": "or recent acute coronary syndrome"
+                        }
+                      }
                     }
                   }
                 }
@@ -37,27 +41,19 @@
           }
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Major bleeding"
-                },
-                "right": {
-                  "raw_text": "history or bleeding diathesis"
-                }
-              }
+              "raw_text": "Major bleeding"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Pregnancy"
-                }
-              }
+              "raw_text": "history or bleeding diathesis"
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Pregnancy"
     }
   }
 }

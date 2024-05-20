@@ -1,21 +1,29 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Upper limb bites"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Multiple (> 1) bites"
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Wound manipulation"
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Upper limb bites"
+                        },
+                        "right": {
+                          "raw_text": "Multiple (> 1) bites"
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Wound manipulation"
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Extensive local"
@@ -24,52 +32,40 @@
                       "raw_text": "necrosis or blebs"
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Seriously-ill patients with hypotension"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Seriously-ill patients with hypotension"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "/capillary leak"
-                            },
-                            "right": {
-                              "raw_text": "/life threatening bleeding."
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "/capillary leak"
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Suspected cobra bite, OR"
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Pregnant"
-                                },
-                                "right": {
-                                  "raw_text": "/breast-feeding women"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "/life threatening bleeding."
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "Suspected cobra bite, OR"
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Pregnant"
+        },
+        "right": {
+          "raw_text": "/breast-feeding women"
         }
       }
     }

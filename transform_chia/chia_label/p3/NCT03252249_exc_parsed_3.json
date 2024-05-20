@@ -3,89 +3,85 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Clear indication for specific duration",
-          "Condition": [
-            "Clear indication for specific duration"
-          ]
-        },
-        "right": {
-          "raw_text": "of dual anti-platelet therapy",
-          "Procedure": [
-            "dual anti-platelet therapy"
-          ]
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Type 2 myocardial infarction",
-          "Condition": [
-            "Type 2 myocardial infarction"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "Contraindication to aspirin",
-                  "Condition": [
-                    "Contraindication",
-                    "aspirin"
-                  ]
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Clear indication for specific duration",
+                          "Condition": [
+                            "Clear indication for specific duration"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "of dual anti-platelet therapy",
+                          "Procedure": [
+                            "dual anti-platelet therapy"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Type 2 myocardial infarction",
+                      "Condition": [
+                        "Type 2 myocardial infarction"
+                      ]
+                    }
+                  }
                 },
                 "right": {
-                  "raw_text": "or P2Y12 receptor antagonist",
-                  "Condition": [
-                    "P2Y12 receptor antagonist"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "Contraindication to aspirin",
+                      "Condition": [
+                        "Contraindication",
+                        "aspirin"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or P2Y12 receptor antagonist",
+                      "Condition": [
+                        "P2Y12 receptor antagonist"
+                      ]
+                    }
+                  }
                 }
               }
             },
             "right": {
               "AND": {
                 "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Non-resident",
-                      "Person": [
-                        "Non-resident"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "of Scotland",
-                      "Visit": [
-                        "Scotland"
-                      ]
-                    }
-                  }
+                  "raw_text": "Non-resident",
+                  "Person": [
+                    "Non-resident"
+                  ]
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Previous recruitment into the trial",
-                      "Competing_trial": [
-                        "Previous recruitment into the trial"
-                      ]
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Inability or unwilling to give informed consent",
-                          "Informed_consent": [
-                            "Inability or unwilling to give informed consent"
-                          ]
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "of Scotland",
+                  "Visit": [
+                    "Scotland"
+                  ]
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "Previous recruitment into the trial",
+          "Competing_trial": [
+            "Previous recruitment into the trial"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Inability or unwilling to give informed consent",
+      "Informed_consent": [
+        "Inability or unwilling to give informed consent"
+      ]
     }
   }
 }

@@ -1,25 +1,29 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Emergency surgery needed",
-      "Procedure": [
-        "Emergency surgery"
-      ],
-      "Mood": [
-        "needed"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Bowel obstruction",
-          "Condition": [
-            "Bowel obstruction"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Emergency surgery needed",
+                  "Procedure": [
+                    "Emergency surgery"
+                  ],
+                  "Mood": [
+                    "needed"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Bowel obstruction",
+                  "Condition": [
+                    "Bowel obstruction"
+                  ]
+                }
+              }
+            },
+            "right": {
               "AND": {
                 "left": {
                   "raw_text": "Colonoscopy",
@@ -40,65 +44,57 @@
                   ]
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Other reason indicating mechanical preparation",
+              "Procedure": [
+                "mechanical preparation"
+              ]
             },
             "right": {
-              "AND": {
+              "raw_text": "or contradicting it",
+              "Condition": [
+                "contradicting"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Allergy",
+          "Condition": [
+            "Allergy"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "to used drugs (PEG",
+              "Drug": [
+                "drugs",
+                "PEG"
+              ]
+            },
+            "right": {
+              "OR": {
                 "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Other reason indicating mechanical preparation",
-                      "Procedure": [
-                        "mechanical preparation"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "or contradicting it",
-                      "Condition": [
-                        "contradicting"
-                      ]
-                    }
-                  }
+                  "raw_text": ", neomycin",
+                  "Drug": [
+                    "neomycin"
+                  ]
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Allergy",
-                          "Condition": [
-                            "Allergy"
-                          ]
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "to used drugs (PEG",
-                              "Drug": [
-                                "drugs",
-                                "PEG"
-                              ]
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": ", neomycin",
-                                  "Drug": [
-                                    "neomycin"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": ", metronidazole)",
-                                  "Drug": [
-                                    "metronidazole"
-                                  ]
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": ", metronidazole)",
+                  "Drug": [
+                    "metronidazole"
+                  ]
                 }
               }
             }

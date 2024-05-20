@@ -1,11 +1,11 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Age 19 and more"
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "Age 19 and more"
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "On dual"
@@ -21,37 +21,33 @@
               }
             }
           }
-        },
-        "right": {
-          "AND": {
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
             "left": {
-              "NOT": {
+              "raw_text": "No history of death"
+            },
+            "right": {
+              "OR": {
                 "left": {
+                  "raw_text": ", serious myocardial infarction"
+                },
+                "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "No history of death"
+                      "raw_text": ", stroke"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", serious myocardial infarction"
+                          "raw_text": ", repeat revascularization"
                         },
                         "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", stroke"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": ", repeat revascularization"
-                                },
-                                "right": {
-                                  "raw_text": ", or major bleeding"
-                                }
-                              }
-                            }
-                          }
+                          "raw_text": ", or major bleeding"
                         }
                       }
                     }

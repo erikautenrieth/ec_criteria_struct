@@ -1,21 +1,29 @@
 {
   "AND": {
     "left": {
-      "raw_text": "History of seizures within last 10 years"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "History of epilepsy"
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "History of prior stroke"
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "History of seizures within last 10 years"
+                        },
+                        "right": {
+                          "raw_text": "History of epilepsy"
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "History of prior stroke"
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Currently prescribed medication with anti-epileptic activity (keppra"
@@ -45,45 +53,33 @@
                       }
                     }
                   }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Brain tumor"
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Pregnant"
-                            },
-                            "right": {
-                              "raw_text": "or nursing woman"
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "Known levetiracetam"
-                                },
-                                "right": {
-                                  "raw_text": "allergy"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Brain tumor"
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnant"
+            },
+            "right": {
+              "raw_text": "or nursing woman"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Known levetiracetam"
+        },
+        "right": {
+          "raw_text": "allergy"
         }
       }
     }

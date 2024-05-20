@@ -1,23 +1,27 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "congenital"
-        },
-        "right": {
-          "raw_text": "or valvular cardiomyopathy;"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "ischemic heart disease;"
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "congenital"
+                    },
+                    "right": {
+                      "raw_text": "or valvular cardiomyopathy;"
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "ischemic heart disease;"
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "endocrine diseases: male hypogonadism"
@@ -40,36 +44,28 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "proliferative retinopathy"
-                    },
-                    "right": {
-                      "raw_text": "or autonomic neuropathy;"
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "contraindications to sildenafil"
-                        },
-                        "right": {
-                          "raw_text": "use or CMR imaging;"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "proliferative retinopathy"
+            },
+            "right": {
+              "raw_text": "or autonomic neuropathy;"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "contraindications to sildenafil"
+        },
+        "right": {
+          "raw_text": "use or CMR imaging;"
         }
       }
     }

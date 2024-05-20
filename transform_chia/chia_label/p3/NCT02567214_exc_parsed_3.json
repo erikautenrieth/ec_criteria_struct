@@ -1,31 +1,35 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Respiratory exacerbation within the 2 months preceding the study",
-      "Condition": [
-        "Respiratory exacerbation"
-      ],
-      "Temporal": [
-        "within the 2 months preceding the study"
-      ],
-      "Reference_point": [
-        "the study"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Current diagnostic of asthma",
-          "Temporal": [
-            "Current"
-          ],
-          "Condition": [
-            "diagnostic of asthma"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Respiratory exacerbation within the 2 months preceding the study",
+                  "Condition": [
+                    "Respiratory exacerbation"
+                  ],
+                  "Temporal": [
+                    "within the 2 months preceding the study"
+                  ],
+                  "Reference_point": [
+                    "the study"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Current diagnostic of asthma",
+                  "Temporal": [
+                    "Current"
+                  ],
+                  "Condition": [
+                    "diagnostic of asthma"
+                  ]
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Significant O2 desaturation (SpO2 < 85%) at rest",
@@ -53,34 +57,26 @@
                   ]
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Presence of another pathology that could influence exercise tolerance",
-                  "Qualifier": [
-                    "another",
-                    "influence exercise tolerance"
-                  ],
-                  "Condition": [
-                    "pathology"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Use of home oxygen",
-                      "Procedure": [
-                        "home oxygen"
-                      ]
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Presence of another pathology that could influence exercise tolerance",
+          "Qualifier": [
+            "another",
+            "influence exercise tolerance"
+          ],
+          "Condition": [
+            "pathology"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Use of home oxygen",
+      "Procedure": [
+        "home oxygen"
+      ]
     }
   }
 }

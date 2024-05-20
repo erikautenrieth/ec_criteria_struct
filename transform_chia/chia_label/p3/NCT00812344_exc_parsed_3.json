@@ -1,40 +1,40 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Significant illness",
-          "Condition": [
-            "illness"
-          ],
-          "Qualifier": [
-            "Significant"
-          ],
-          "Subjective_judgement": [
-            "Significant"
-          ]
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": ", trauma",
+              "raw_text": "Significant illness",
               "Condition": [
-                "trauma"
+                "illness"
+              ],
+              "Qualifier": [
+                "Significant"
+              ],
+              "Subjective_judgement": [
+                "Significant"
               ]
             },
             "right": {
-              "raw_text": "or surgical procedures.",
-              "Procedure": [
-                "surgical procedures"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": ", trauma",
+                  "Condition": [
+                    "trauma"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or surgical procedures.",
+                  "Procedure": [
+                    "surgical procedures"
+                  ]
+                }
+              }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "raw_text": "Clinically significant laboratory abnormalities.",
           "Condition": [
             "laboratory abnormalities"
@@ -48,24 +48,20 @@
           "Subjective_judgement": [
             "Clinically significant"
           ]
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Clinically significant medical history",
-              "Qualifier": [
-                "Clinically significant"
-              ],
-              "Subjective_judgement": [
-                "Clinically significant"
-              ],
-              "Observation": [
-                "medical history"
-              ]
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Clinically significant medical history",
+      "Qualifier": [
+        "Clinically significant"
+      ],
+      "Subjective_judgement": [
+        "Clinically significant"
+      ],
+      "Observation": [
+        "medical history"
+      ]
     }
   }
 }

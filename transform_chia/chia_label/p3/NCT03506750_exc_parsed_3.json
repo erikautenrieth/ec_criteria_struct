@@ -1,176 +1,172 @@
 {
   "AND": {
     "left": {
-      "raw_text": "previous retinal vein occlusion.",
-      "Condition": [
-        "retinal vein occlusion"
-      ],
-      "Temporal": [
-        "previous"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "any intraocular surgery within the previous 12 months.",
-          "Temporal": [
-            "previous",
-            "within the previous 12 months"
-          ],
-          "Procedure": [
-            "intraocular surgery"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "myopia of > or = to 8 diopters.",
-              "Condition": [
-                "myopia"
-              ],
-              "Value": [
-                "> or = to 8 diopters"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "active ocular",
-                      "Qualifier": [
-                        "active"
-                      ]
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "previous retinal vein occlusion.",
+                                  "Condition": [
+                                    "retinal vein occlusion"
+                                  ],
+                                  "Temporal": [
+                                    "previous"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "any intraocular surgery within the previous 12 months.",
+                                  "Temporal": [
+                                    "previous",
+                                    "within the previous 12 months"
+                                  ],
+                                  "Procedure": [
+                                    "intraocular surgery"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "myopia of > or = to 8 diopters.",
+                              "Condition": [
+                                "myopia"
+                              ],
+                              "Value": [
+                                "> or = to 8 diopters"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "active ocular",
+                              "Qualifier": [
+                                "active"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or periocular infection",
+                              "Condition": [
+                                "periocular infection",
+                                "ocular infection"
+                              ]
+                            }
+                          }
+                        }
+                      }
                     },
                     "right": {
-                      "raw_text": "or periocular infection",
-                      "Condition": [
-                        "periocular infection",
-                        "ocular infection"
+                      "raw_text": "treatment with an investigational agent for any condition 60 days prior to enrollment.",
+                      "Competing_trial": [
+                        "treatment with an investigational agent for any condition 60 days prior to enrollment"
                       ]
                     }
                   }
                 },
                 "right": {
-                  "AND": {
+                  "raw_text": "evidence of severe cardiac disease.",
+                  "Qualifier": [
+                    "severe"
+                  ],
+                  "Condition": [
+                    "cardiac disease"
+                  ],
+                  "Mood": [
+                    "evidence of"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "clinically significant peripheral vascular disease (previous surgery",
+                  "Temporal": [
+                    "previous"
+                  ],
+                  "Qualifier": [
+                    "clinically significant"
+                  ],
+                  "Condition": [
+                    "peripheral vascular disease"
+                  ],
+                  "Procedure": [
+                    "previous surgery"
+                  ],
+                  "Scope": [
+                    "clinically significant peripheral vascular disease"
+                  ]
+                },
+                "right": {
+                  "OR": {
                     "left": {
-                      "raw_text": "treatment with an investigational agent for any condition 60 days prior to enrollment.",
-                      "Competing_trial": [
-                        "treatment with an investigational agent for any condition 60 days prior to enrollment"
+                      "raw_text": ", amputation",
+                      "Procedure": [
+                        "amputation"
                       ]
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "evidence of severe cardiac disease.",
-                          "Qualifier": [
-                            "severe"
-                          ],
-                          "Condition": [
-                            "cardiac disease"
-                          ],
-                          "Mood": [
-                            "evidence of"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "clinically significant peripheral vascular disease (previous surgery",
-                                  "Temporal": [
-                                    "previous"
-                                  ],
-                                  "Qualifier": [
-                                    "clinically significant"
-                                  ],
-                                  "Condition": [
-                                    "peripheral vascular disease"
-                                  ],
-                                  "Procedure": [
-                                    "previous surgery"
-                                  ],
-                                  "Scope": [
-                                    "clinically significant peripheral vascular disease"
-                                  ]
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", amputation",
-                                      "Procedure": [
-                                        "amputation"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": ", or symptoms of claudication)",
-                                      "Condition": [
-                                        "symptoms of claudication"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "uncontrolled hypertension (treated systolic blood pressure",
-                                      "Condition": [
-                                        "hypertension"
-                                      ],
-                                      "Qualifier": [
-                                        "uncontrolled",
-                                        "treated"
-                                      ],
-                                      "Measurement": [
-                                        "systolic blood pressure"
-                                      ],
-                                      "Scope": [
-                                        "uncontrolled hypertension"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "> 155 mmHg or diastolic blood pressure > 95 mmHg)",
-                                      "Value": [
-                                        "> 155 mmHg",
-                                        "> 95 mmHg"
-                                      ],
-                                      "Measurement": [
-                                        "diastolic blood pressure"
-                                      ]
-                                    }
-                                  }
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "stroke within the preceding 12 months.",
-                                      "Condition": [
-                                        "stroke"
-                                      ],
-                                      "Temporal": [
-                                        "within the preceding 12 months"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": ", or symptoms of claudication)",
+                      "Condition": [
+                        "symptoms of claudication"
+                      ]
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "uncontrolled hypertension (treated systolic blood pressure",
+              "Condition": [
+                "hypertension"
+              ],
+              "Qualifier": [
+                "uncontrolled",
+                "treated"
+              ],
+              "Measurement": [
+                "systolic blood pressure"
+              ],
+              "Scope": [
+                "uncontrolled hypertension"
+              ]
+            },
+            "right": {
+              "raw_text": "> 155 mmHg or diastolic blood pressure > 95 mmHg)",
+              "Value": [
+                "> 155 mmHg",
+                "> 95 mmHg"
+              ],
+              "Measurement": [
+                "diastolic blood pressure"
+              ]
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "stroke within the preceding 12 months.",
+      "Condition": [
+        "stroke"
+      ],
+      "Temporal": [
+        "within the preceding 12 months"
+      ]
     }
   }
 }

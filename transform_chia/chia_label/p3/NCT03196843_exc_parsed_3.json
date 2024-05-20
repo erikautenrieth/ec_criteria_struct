@@ -1,21 +1,21 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Patients with a history of any other malignancy.",
-      "Condition": [
-        "malignancy"
-      ],
-      "Qualifier": [
-        "any other",
-        "other"
-      ],
-      "Observation": [
-        "history"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "Patients with a history of any other malignancy.",
+          "Condition": [
+            "malignancy"
+          ],
+          "Qualifier": [
+            "any other",
+            "other"
+          ],
+          "Observation": [
+            "history"
+          ]
+        },
+        "right": {
           "AND": {
             "left": {
               "raw_text": "Concomitant treatment",
@@ -37,104 +37,100 @@
               ]
             }
           }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Patient have contraindication",
+          "Condition": [
+            "contraindication"
+          ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "AND": {
+              "raw_text": "to chemotherapy(eg.uncontrolled coronarism",
+              "Procedure": [
+                "chemotherapy"
+              ],
+              "Qualifier": [
+                "uncontrolled",
+                "other"
+              ],
+              "Condition": [
+                "coronarism"
+              ]
+            },
+            "right": {
+              "OR": {
                 "left": {
-                  "raw_text": "Patient have contraindication",
+                  "raw_text": "and heart failure",
                   "Condition": [
-                    "contraindication"
+                    "heart failure"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "to chemotherapy(eg.uncontrolled coronarism",
-                      "Procedure": [
-                        "chemotherapy"
-                      ],
-                      "Qualifier": [
-                        "uncontrolled",
-                        "other"
+                      "raw_text": "; History of myocardial infarction",
+                      "Observation": [
+                        "History"
                       ],
                       "Condition": [
-                        "coronarism"
+                        "myocardial infarction"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "and heart failure",
+                          "raw_text": "within the past 6 months, Chronic obstructive pulmonary",
+                          "Temporal": [
+                            "within the past 6 months"
+                          ],
                           "Condition": [
-                            "heart failure"
+                            "Chronic obstructive pulmonary"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "; History of myocardial infarction",
-                              "Observation": [
-                                "History"
+                              "raw_text": ", uncontrolled epileptic attack",
+                              "Qualifier": [
+                                "uncontrolled"
                               ],
                               "Condition": [
-                                "myocardial infarction"
+                                "epileptic attack"
                               ]
                             },
                             "right": {
-                              "OR": {
+                              "AND": {
                                 "left": {
-                                  "raw_text": "within the past 6 months, Chronic obstructive pulmonary",
-                                  "Temporal": [
-                                    "within the past 6 months"
+                                  "raw_text": "and other disease",
+                                  "Qualifier": [
+                                    "other"
                                   ],
                                   "Condition": [
-                                    "Chronic obstructive pulmonary"
+                                    "disease"
                                   ]
                                 },
                                 "right": {
-                                  "OR": {
+                                  "AND": {
                                     "left": {
-                                      "raw_text": ", uncontrolled epileptic attack",
+                                      "raw_text": "that investigator consider it unsuitable for the chemotherapy",
+                                      "Procedure": [
+                                        "chemotherapy"
+                                      ],
                                       "Qualifier": [
-                                        "uncontrolled"
+                                        "other"
                                       ],
                                       "Condition": [
-                                        "epileptic attack"
+                                        "unsuitable for the chemotherapy"
                                       ]
                                     },
                                     "right": {
-                                      "AND": {
-                                        "left": {
-                                          "raw_text": "and other disease",
-                                          "Qualifier": [
-                                            "other"
-                                          ],
-                                          "Condition": [
-                                            "disease"
-                                          ]
-                                        },
-                                        "right": {
-                                          "AND": {
-                                            "left": {
-                                              "raw_text": "that investigator consider it unsuitable for the chemotherapy",
-                                              "Procedure": [
-                                                "chemotherapy"
-                                              ],
-                                              "Qualifier": [
-                                                "other"
-                                              ],
-                                              "Condition": [
-                                                "unsuitable for the chemotherapy"
-                                              ]
-                                            },
-                                            "right": {
-                                              "raw_text": ")"
-                                            }
-                                          }
-                                        }
-                                      }
+                                      "raw_text": ")"
                                     }
                                   }
                                 }

@@ -1,49 +1,45 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Babies who have been close to death"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Seizure occurred by metabolic factors (hypoglycemia"
+              "raw_text": "Babies who have been close to death"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", hypocalcemia"
+                  "raw_text": "Seizure occurred by metabolic factors (hypoglycemia"
                 },
                 "right": {
-                  "raw_text": ", electrolyte disorder)"
+                  "OR": {
+                    "left": {
+                      "raw_text": ", hypocalcemia"
+                    },
+                    "right": {
+                      "raw_text": ", electrolyte disorder)"
+                    }
+                  }
                 }
               }
             }
           }
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Babies who have received phenobarbitone"
-                },
-                "right": {
-                  "raw_text": "or any other anticonvulsive medication before hospitalization"
-                }
-              }
+              "raw_text": "Babies who have received phenobarbitone"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Abnormal renal function"
-                }
-              }
+              "raw_text": "or any other anticonvulsive medication before hospitalization"
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Abnormal renal function"
     }
   }
 }

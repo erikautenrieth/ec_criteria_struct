@@ -1,79 +1,66 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Age < 20"
-        },
-        "right": {
-          "raw_text": "or > 35 years."
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Congenital uterine malformation."
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Multifetal pregnancy."
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Known major fetal structural"
-                    },
-                    "right": {
-                      "raw_text": "or chromosomal abnormality."
-                    }
-                  }
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": "Known allergy"
-                        },
-                        "right": {
                           "AND": {
                             "left": {
-                              "raw_text": "or contraindication"
-                            },
-                            "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "(relative"
+                                  "raw_text": "Age < 20"
                                 },
                                 "right": {
-                                  "raw_text": "or absolute) to progesterone therapy."
+                                  "raw_text": "or > 35 years."
                                 }
                               }
+                            },
+                            "right": {
+                              "raw_text": "Congenital uterine malformation."
                             }
                           }
+                        },
+                        "right": {
+                          "raw_text": "Multifetal pregnancy."
                         }
                       }
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
-                          "raw_text": "Presence of contraindication to cervical cerclage."
+                          "raw_text": "Known major fetal structural"
                         },
                         "right": {
-                          "AND": {
+                          "raw_text": "or chromosomal abnormality."
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Known allergy"
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or contraindication"
+                        },
+                        "right": {
+                          "OR": {
                             "left": {
-                              "raw_text": "Medical conditions complicating pregnancy."
+                              "raw_text": "(relative"
                             },
                             "right": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "Vaginal bleeding."
-                                }
-                              }
+                              "raw_text": "or absolute) to progesterone therapy."
                             }
                           }
                         }
@@ -82,10 +69,19 @@
                   }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Presence of contraindication to cervical cerclage."
             }
           }
+        },
+        "right": {
+          "raw_text": "Medical conditions complicating pregnancy."
         }
       }
+    },
+    "right": {
+      "raw_text": "Vaginal bleeding."
     }
   }
 }

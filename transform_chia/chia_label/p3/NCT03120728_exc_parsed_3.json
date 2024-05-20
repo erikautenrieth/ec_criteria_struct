@@ -1,86 +1,94 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Currently pregnant",
-          "Condition": [
-            "pregnant"
-          ],
-          "Temporal": [
-            "Currently"
-          ]
-        },
-        "right": {
-          "raw_text": "or breastfeeding",
-          "Observation": [
-            "breastfeeding"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Severe pelvic organ prolapse",
-              "Qualifier": [
-                "Severe"
-              ],
-              "Condition": [
-                "pelvic organ prolapse",
-                "prolapse"
-              ]
-            },
-            "right": {
-              "raw_text": "or prolapse to any degree that may prevent retention of the vaginal ring after insertion",
-              "Condition": [
-                "prolapse"
-              ],
-              "Qualifier": [
-                "may prevent retention of the vaginal ring after insertion"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "Use of oral contraceptive pills",
-                  "Drug": [
-                    "oral contraceptive pills"
-                  ]
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Currently pregnant",
+                          "Condition": [
+                            "pregnant"
+                          ],
+                          "Temporal": [
+                            "Currently"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or breastfeeding",
+                          "Observation": [
+                            "breastfeeding"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Severe pelvic organ prolapse",
+                          "Qualifier": [
+                            "Severe"
+                          ],
+                          "Condition": [
+                            "pelvic organ prolapse",
+                            "prolapse"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or prolapse to any degree that may prevent retention of the vaginal ring after insertion",
+                          "Condition": [
+                            "prolapse"
+                          ],
+                          "Qualifier": [
+                            "may prevent retention of the vaginal ring after insertion"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", patches",
-                      "Device": [
-                        "patches"
+                      "raw_text": "Use of oral contraceptive pills",
+                      "Drug": [
+                        "oral contraceptive pills"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", implants",
+                          "raw_text": ", patches",
                           "Device": [
-                            "implants"
+                            "patches"
                           ]
                         },
                         "right": {
-                          "raw_text": "or hormonal intrauterine contraception in the month prior to screening",
-                          "Procedure": [
-                            "hormonal intrauterine contraception"
-                          ],
-                          "Temporal": [
-                            "in the month prior to screening"
-                          ],
-                          "Reference_point": [
-                            "screening"
-                          ]
+                          "OR": {
+                            "left": {
+                              "raw_text": ", implants",
+                              "Device": [
+                                "implants"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or hormonal intrauterine contraception in the month prior to screening",
+                              "Procedure": [
+                                "hormonal intrauterine contraception"
+                              ],
+                              "Temporal": [
+                                "in the month prior to screening"
+                              ],
+                              "Reference_point": [
+                                "screening"
+                              ]
+                            }
+                          }
                         }
                       }
                     }
@@ -89,371 +97,359 @@
               }
             },
             "right": {
-              "AND": {
+              "raw_text": "Use of depo medroxyprogesterone within 6 months of screening",
+              "Reference_point": [
+                "screening"
+              ],
+              "Drug": [
+                "depo medroxyprogesterone"
+              ],
+              "Temporal": [
+                "within 6 months of screening"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Use of medications that interact with",
+              "Drug": [
+                "medications"
+              ],
+              "Observation": [
+                "interact with"
+              ]
+            },
+            "right": {
+              "OR": {
                 "left": {
-                  "raw_text": "Use of depo medroxyprogesterone within 6 months of screening",
-                  "Reference_point": [
-                    "screening"
-                  ],
+                  "raw_text": "contraceptive steroid hormones: anti-epileptic medications",
                   "Drug": [
-                    "depo medroxyprogesterone"
-                  ],
-                  "Temporal": [
-                    "within 6 months of screening"
+                    "medications",
+                    "contraceptive steroid hormones",
+                    "anti-epileptic medications"
                   ]
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "AND": {
+                      "raw_text": ", rifampin",
+                      "Drug": [
+                        "rifampin"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
                         "left": {
-                          "raw_text": "Use of medications that interact with",
+                          "raw_text": ", rifabutin",
                           "Drug": [
-                            "medications"
-                          ],
-                          "Observation": [
-                            "interact with"
+                            "rifabutin"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": ", fosamprenavir, etc",
+                          "Drug": [
+                            "fosamprenavir"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Medical condition",
+          "Condition": [
+            "Medical condition"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "with safety"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "deemed to be category 3 or 4 when using a combined hormonal contraceptive, as determined by the Center for Disease Control Medical Eligibility Criteria: current",
+                  "Temporal": [
+                    "current"
+                  ],
+                  "Drug": [
+                    "combined hormonal contraceptive"
+                  ],
+                  "Value": [
+                    "3 or 4"
+                  ],
+                  "Measurement": [
+                    "Center for Disease Control Medical Eligibility Criteria"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or past history of breast cancer, severe decompensated cirrhosis, history of deep vein thrombosis or pulmonary embolus, diabetes with nephropathy",
+                      "Temporal": [
+                        "past"
+                      ],
+                      "Observation": [
+                        "history"
+                      ],
+                      "Condition": [
+                        "breast cancer",
+                        "cirrhosis",
+                        "deep vein thrombosis",
+                        "pulmonary embolus",
+                        "diabetes",
+                        "nephropathy"
+                      ],
+                      "Qualifier": [
+                        "severe",
+                        "decompensated"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "/retinopathy",
+                          "Condition": [
+                            "retinopathy"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "contraceptive steroid hormones: anti-epileptic medications",
-                              "Drug": [
-                                "medications",
-                                "contraceptive steroid hormones",
-                                "anti-epileptic medications"
+                              "raw_text": "/neuropathy",
+                              "Condition": [
+                                "neuropathy"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": ", rifampin",
-                                  "Drug": [
-                                    "rifampin"
+                                  "raw_text": "or other",
+                                  "Qualifier": [
+                                    "other"
                                   ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": ", rifabutin",
-                                      "Drug": [
-                                        "rifabutin"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": ", fosamprenavir, etc",
-                                      "Drug": [
-                                        "fosamprenavir"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Medical condition",
-                              "Condition": [
-                                "Medical condition"
-                              ]
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "with safety"
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "deemed to be category 3 or 4 when using a combined hormonal contraceptive, as determined by the Center for Disease Control Medical Eligibility Criteria: current",
-                                      "Temporal": [
-                                        "current"
-                                      ],
-                                      "Drug": [
-                                        "combined hormonal contraceptive"
-                                      ],
-                                      "Value": [
-                                        "3 or 4"
-                                      ],
-                                      "Measurement": [
-                                        "Center for Disease Control Medical Eligibility Criteria"
+                                      "raw_text": "vascular disease",
+                                      "Condition": [
+                                        "vascular disease"
                                       ]
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "or past history of breast cancer, severe decompensated cirrhosis, history of deep vein thrombosis or pulmonary embolus, diabetes with nephropathy",
+                                          "raw_text": "diagnosed more than 20 years ago, current symptomatic gallbladder disease",
                                           "Temporal": [
-                                            "past"
-                                          ],
-                                          "Observation": [
-                                            "history"
-                                          ],
-                                          "Condition": [
-                                            "breast cancer",
-                                            "cirrhosis",
-                                            "deep vein thrombosis",
-                                            "pulmonary embolus",
-                                            "diabetes",
-                                            "nephropathy"
+                                            "current",
+                                            "more than 20 years ago"
                                           ],
                                           "Qualifier": [
-                                            "severe",
-                                            "decompensated"
+                                            "symptomatic"
+                                          ],
+                                          "Condition": [
+                                            "gallbladder disease"
                                           ]
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "/retinopathy",
+                                              "raw_text": ", hypertension",
                                               "Condition": [
-                                                "retinopathy"
+                                                "hypertension"
                                               ]
                                             },
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": "/neuropathy",
+                                                  "raw_text": ", ischemic heart disease",
                                                   "Condition": [
-                                                    "neuropathy"
+                                                    "ischemic heart disease"
                                                   ]
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": "or other",
-                                                      "Qualifier": [
-                                                        "other"
+                                                      "raw_text": ", known thrombogenic mutations",
+                                                      "Condition": [
+                                                        "thrombogenic mutations"
                                                       ]
                                                     },
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": "vascular disease",
+                                                          "raw_text": ", hepatocellular adenoma",
                                                           "Condition": [
-                                                            "vascular disease"
+                                                            "hepatocellular adenoma"
                                                           ]
                                                         },
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "diagnosed more than 20 years ago, current symptomatic gallbladder disease",
-                                                              "Temporal": [
-                                                                "current",
-                                                                "more than 20 years ago"
-                                                              ],
-                                                              "Qualifier": [
-                                                                "symptomatic"
-                                                              ],
+                                                              "raw_text": ", malignant hepatoma",
                                                               "Condition": [
-                                                                "gallbladder disease"
+                                                                "malignant hepatoma"
                                                               ]
                                                             },
                                                             "right": {
                                                               "OR": {
                                                                 "left": {
-                                                                  "raw_text": ", hypertension",
+                                                                  "raw_text": ", multiple risk factors for atherosclerotic cardiovascular disease",
                                                                   "Condition": [
-                                                                    "hypertension"
+                                                                    "vascular disease",
+                                                                    "atherosclerotic cardiovascular disease"
+                                                                  ],
+                                                                  "Multiplier": [
+                                                                    "multiple"
+                                                                  ],
+                                                                  "Mood": [
+                                                                    "risk factors"
                                                                   ]
                                                                 },
                                                                 "right": {
                                                                   "OR": {
                                                                     "left": {
-                                                                      "raw_text": ", ischemic heart disease",
+                                                                      "raw_text": ", multiple sclerosis",
+                                                                      "Multiplier": [
+                                                                        "multiple"
+                                                                      ],
                                                                       "Condition": [
-                                                                        "ischemic heart disease"
+                                                                        "multiple sclerosis"
                                                                       ]
                                                                     },
                                                                     "right": {
                                                                       "OR": {
                                                                         "left": {
-                                                                          "raw_text": ", known thrombogenic mutations",
+                                                                          "raw_text": "with prolonged immobility, history of peripartum cardiomyopathy",
+                                                                          "Observation": [
+                                                                            "history"
+                                                                          ],
                                                                           "Condition": [
-                                                                            "thrombogenic mutations"
+                                                                            "prolonged immobility",
+                                                                            "peripartum cardiomyopathy"
+                                                                          ],
+                                                                          "Person": [
+                                                                            "yo"
                                                                           ]
                                                                         },
                                                                         "right": {
                                                                           "OR": {
                                                                             "left": {
-                                                                              "raw_text": ", hepatocellular adenoma",
-                                                                              "Condition": [
-                                                                                "hepatocellular adenoma"
+                                                                              "raw_text": ", cigarette smoking and =35yo",
+                                                                              "Observation": [
+                                                                                "cigarette smoking"
+                                                                              ],
+                                                                              "Value": [
+                                                                                "=35yo"
+                                                                              ],
+                                                                              "Person": [
+                                                                                "yo"
+                                                                              ],
+                                                                              "Scope": [
+                                                                                "cigarette smoking and =35yo"
                                                                               ]
                                                                             },
                                                                             "right": {
                                                                               "OR": {
                                                                                 "left": {
-                                                                                  "raw_text": ", malignant hepatoma",
-                                                                                  "Condition": [
-                                                                                    "malignant hepatoma"
+                                                                                  "raw_text": ", history of complicated solid organ transplant",
+                                                                                  "Observation": [
+                                                                                    "history"
+                                                                                  ],
+                                                                                  "Procedure": [
+                                                                                    "complicated solid organ transplant"
                                                                                   ]
                                                                                 },
                                                                                 "right": {
                                                                                   "OR": {
                                                                                     "left": {
-                                                                                      "raw_text": ", multiple risk factors for atherosclerotic cardiovascular disease",
+                                                                                      "raw_text": ", history of stroke",
+                                                                                      "Observation": [
+                                                                                        "history"
+                                                                                      ],
                                                                                       "Condition": [
-                                                                                        "vascular disease",
-                                                                                        "atherosclerotic cardiovascular disease"
-                                                                                      ],
-                                                                                      "Multiplier": [
-                                                                                        "multiple"
-                                                                                      ],
-                                                                                      "Mood": [
-                                                                                        "risk factors"
+                                                                                        "stroke"
                                                                                       ]
                                                                                     },
                                                                                     "right": {
                                                                                       "OR": {
                                                                                         "left": {
-                                                                                          "raw_text": ", multiple sclerosis",
-                                                                                          "Multiplier": [
-                                                                                            "multiple"
+                                                                                          "raw_text": ", history of superficial venous thrombosis",
+                                                                                          "Observation": [
+                                                                                            "history"
                                                                                           ],
                                                                                           "Condition": [
-                                                                                            "multiple sclerosis"
+                                                                                            "superficial venous thrombosis"
                                                                                           ]
                                                                                         },
                                                                                         "right": {
-                                                                                          "OR": {
+                                                                                          "AND": {
                                                                                             "left": {
-                                                                                              "raw_text": "with prolonged immobility, history of peripartum cardiomyopathy",
-                                                                                              "Observation": [
-                                                                                                "history"
-                                                                                              ],
-                                                                                              "Condition": [
-                                                                                                "prolonged immobility",
-                                                                                                "peripartum cardiomyopathy"
-                                                                                              ],
-                                                                                              "Person": [
-                                                                                                "yo"
+                                                                                              "raw_text": "not associated",
+                                                                                              "Qualifier": [
+                                                                                                "not associated"
                                                                                               ]
                                                                                             },
                                                                                             "right": {
                                                                                               "OR": {
                                                                                                 "left": {
-                                                                                                  "raw_text": ", cigarette smoking and =35yo",
-                                                                                                  "Observation": [
-                                                                                                    "cigarette smoking"
+                                                                                                  "raw_text": "with catheter, systemic lupus erythematosus",
+                                                                                                  "Device": [
+                                                                                                    "catheter"
                                                                                                   ],
-                                                                                                  "Value": [
-                                                                                                    "=35yo"
-                                                                                                  ],
-                                                                                                  "Person": [
-                                                                                                    "yo"
-                                                                                                  ],
-                                                                                                  "Scope": [
-                                                                                                    "cigarette smoking and =35yo"
+                                                                                                  "Condition": [
+                                                                                                    "systemic lupus erythematosus"
                                                                                                   ]
                                                                                                 },
                                                                                                 "right": {
                                                                                                   "OR": {
                                                                                                     "left": {
-                                                                                                      "raw_text": ", history of complicated solid organ transplant",
-                                                                                                      "Observation": [
-                                                                                                        "history"
+                                                                                                      "raw_text": "with positive antiphospholipid antibodies, valvular heart disease complicated by pulmonary hypertension",
+                                                                                                      "Condition": [
+                                                                                                        "hypertension",
+                                                                                                        "valvular heart disease",
+                                                                                                        "pulmonary hypertension"
                                                                                                       ],
-                                                                                                      "Procedure": [
-                                                                                                        "complicated solid organ transplant"
+                                                                                                      "Value": [
+                                                                                                        "positive"
+                                                                                                      ],
+                                                                                                      "Measurement": [
+                                                                                                        "antiphospholipid antibodies"
                                                                                                       ]
                                                                                                     },
                                                                                                     "right": {
                                                                                                       "OR": {
                                                                                                         "left": {
-                                                                                                          "raw_text": ", history of stroke",
-                                                                                                          "Observation": [
-                                                                                                            "history"
-                                                                                                          ],
+                                                                                                          "raw_text": "or atrial fibrillation",
                                                                                                           "Condition": [
-                                                                                                            "stroke"
+                                                                                                            "atrial fibrillation"
                                                                                                           ]
                                                                                                         },
                                                                                                         "right": {
                                                                                                           "OR": {
                                                                                                             "left": {
-                                                                                                              "raw_text": ", history of superficial venous thrombosis",
-                                                                                                              "Observation": [
-                                                                                                                "history"
-                                                                                                              ],
+                                                                                                              "raw_text": "or bacterial endocarditis",
                                                                                                               "Condition": [
-                                                                                                                "superficial venous thrombosis"
+                                                                                                                "bacterial endocarditis"
                                                                                                               ]
                                                                                                             },
                                                                                                             "right": {
-                                                                                                              "AND": {
-                                                                                                                "left": {
-                                                                                                                  "raw_text": "not associated",
-                                                                                                                  "Qualifier": [
-                                                                                                                    "not associated"
-                                                                                                                  ]
-                                                                                                                },
-                                                                                                                "right": {
-                                                                                                                  "OR": {
-                                                                                                                    "left": {
-                                                                                                                      "raw_text": "with catheter, systemic lupus erythematosus",
-                                                                                                                      "Device": [
-                                                                                                                        "catheter"
-                                                                                                                      ],
-                                                                                                                      "Condition": [
-                                                                                                                        "systemic lupus erythematosus"
-                                                                                                                      ]
-                                                                                                                    },
-                                                                                                                    "right": {
-                                                                                                                      "OR": {
-                                                                                                                        "left": {
-                                                                                                                          "raw_text": "with positive antiphospholipid antibodies, valvular heart disease complicated by pulmonary hypertension",
-                                                                                                                          "Condition": [
-                                                                                                                            "hypertension",
-                                                                                                                            "valvular heart disease",
-                                                                                                                            "pulmonary hypertension"
-                                                                                                                          ],
-                                                                                                                          "Value": [
-                                                                                                                            "positive"
-                                                                                                                          ],
-                                                                                                                          "Measurement": [
-                                                                                                                            "antiphospholipid antibodies"
-                                                                                                                          ]
-                                                                                                                        },
-                                                                                                                        "right": {
-                                                                                                                          "OR": {
-                                                                                                                            "left": {
-                                                                                                                              "raw_text": "or atrial fibrillation",
-                                                                                                                              "Condition": [
-                                                                                                                                "atrial fibrillation"
-                                                                                                                              ]
-                                                                                                                            },
-                                                                                                                            "right": {
-                                                                                                                              "OR": {
-                                                                                                                                "left": {
-                                                                                                                                  "raw_text": "or bacterial endocarditis",
-                                                                                                                                  "Condition": [
-                                                                                                                                    "bacterial endocarditis"
-                                                                                                                                  ]
-                                                                                                                                },
-                                                                                                                                "right": {
-                                                                                                                                  "raw_text": ", and acute viral hepatitis",
-                                                                                                                                  "Condition": [
-                                                                                                                                    "acute viral hepatitis"
-                                                                                                                                  ]
-                                                                                                                                }
-                                                                                                                              }
-                                                                                                                            }
-                                                                                                                          }
-                                                                                                                        }
-                                                                                                                      }
-                                                                                                                    }
-                                                                                                                  }
-                                                                                                                }
-                                                                                                              }
+                                                                                                              "raw_text": ", and acute viral hepatitis",
+                                                                                                              "Condition": [
+                                                                                                                "acute viral hepatitis"
+                                                                                                              ]
                                                                                                             }
                                                                                                           }
                                                                                                         }

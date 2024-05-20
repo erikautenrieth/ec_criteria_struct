@@ -1,58 +1,62 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Fasting plasma glucose",
-          "Measurement": [
-            "Fasting plasma glucose"
-          ]
-        },
-        "right": {
-          "raw_text": "> 7,0 mM, HbA1c > 48 mmol/mol 3 months after RYGB.",
-          "Value": [
-            "> 7,0 mM",
-            "> 48 mmol/mol"
-          ],
-          "Measurement": [
-            "HbA1c"
-          ],
-          "Temporal": [
-            "3 months after RYGB"
-          ],
-          "Procedure": [
-            "RYGB"
-          ],
-          "Reference_point": [
-            "RYGB"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Dysregulated thyroid diseases",
-              "Qualifier": [
-                "Dysregulated"
-              ],
-              "Condition": [
-                "thyroid diseases"
-              ]
-            },
-            "right": {
-              "raw_text": ", use of antithyroid treatment.",
-              "Procedure": [
-                "antithyroid treatment"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Fasting plasma glucose",
+                      "Measurement": [
+                        "Fasting plasma glucose"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "> 7,0 mM, HbA1c > 48 mmol/mol 3 months after RYGB.",
+                      "Value": [
+                        "> 7,0 mM",
+                        "> 48 mmol/mol"
+                      ],
+                      "Measurement": [
+                        "HbA1c"
+                      ],
+                      "Temporal": [
+                        "3 months after RYGB"
+                      ],
+                      "Procedure": [
+                        "RYGB"
+                      ],
+                      "Reference_point": [
+                        "RYGB"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Dysregulated thyroid diseases",
+                      "Qualifier": [
+                        "Dysregulated"
+                      ],
+                      "Condition": [
+                        "thyroid diseases"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": ", use of antithyroid treatment.",
+                      "Procedure": [
+                        "antithyroid treatment"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Late diabetic complications",
@@ -91,74 +95,60 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Complications",
+              "Condition": [
+                "Complications"
+              ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "AND": {
+                  "raw_text": "to RYGB. Documented reactive hypoglycaemia, severe dumping (vomiting",
+                  "Procedure": [
+                    "RYGB"
+                  ],
+                  "Reference_point": [
+                    "RYGB"
+                  ],
+                  "Condition": [
+                    "reactive hypoglycaemia",
+                    "dumping",
+                    "vomiting"
+                  ],
+                  "Qualifier": [
+                    "severe"
+                  ],
+                  "Scope": [
+                    "severe dumping"
+                  ]
+                },
+                "right": {
+                  "OR": {
                     "left": {
-                      "raw_text": "Complications",
+                      "raw_text": ", diarrhea",
                       "Condition": [
-                        "Complications"
+                        "diarrhea"
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "to RYGB. Documented reactive hypoglycaemia, severe dumping (vomiting",
-                          "Procedure": [
-                            "RYGB"
-                          ],
-                          "Reference_point": [
-                            "RYGB"
-                          ],
-                          "Condition": [
-                            "reactive hypoglycaemia",
-                            "dumping",
-                            "vomiting"
-                          ],
-                          "Qualifier": [
-                            "severe"
-                          ],
-                          "Scope": [
-                            "severe dumping"
-                          ]
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", diarrhea",
-                              "Condition": [
-                                "diarrhea"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": ", severe abdominal pain after food intake).",
-                              "Qualifier": [
-                                "severe"
-                              ],
-                              "Condition": [
-                                "abdominal pain"
-                              ],
-                              "Temporal": [
-                                "after food intake"
-                              ],
-                              "Reference_point": [
-                                "food intake"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Cholecystectomy",
-                      "Procedure": [
-                        "Cholecystectomy"
+                      "raw_text": ", severe abdominal pain after food intake).",
+                      "Qualifier": [
+                        "severe"
+                      ],
+                      "Condition": [
+                        "abdominal pain"
+                      ],
+                      "Temporal": [
+                        "after food intake"
+                      ],
+                      "Reference_point": [
+                        "food intake"
                       ]
                     }
                   }
@@ -168,6 +158,12 @@
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Cholecystectomy",
+      "Procedure": [
+        "Cholecystectomy"
+      ]
     }
   }
 }

@@ -1,28 +1,24 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Age less than one year"
+          "OR": {
+            "left": {
+              "raw_text": "Age less than one year"
+            },
+            "right": {
+              "raw_text": "or over 18 years"
+            }
+          }
         },
         "right": {
-          "raw_text": "or over 18 years"
+          "raw_text": "Patients with renal impairment"
         }
       }
     },
     "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Patients with renal impairment"
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Colistin use less than 72 hours"
-            }
-          }
-        }
-      }
+      "raw_text": "Colistin use less than 72 hours"
     }
   }
 }

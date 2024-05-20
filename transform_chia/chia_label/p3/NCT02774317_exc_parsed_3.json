@@ -1,37 +1,37 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Patients who are being prepared for surgery",
-          "Procedure": [
-            "surgery"
-          ],
-          "Mood": [
-            "being prepared for"
-          ]
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": ", or during"
-            },
-            "right": {
-              "raw_text": "or after surgery.",
+              "raw_text": "Patients who are being prepared for surgery",
               "Procedure": [
                 "surgery"
               ],
-              "Temporal": [
-                "after surgery"
+              "Mood": [
+                "being prepared for"
               ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", or during"
+                },
+                "right": {
+                  "raw_text": "or after surgery.",
+                  "Procedure": [
+                    "surgery"
+                  ],
+                  "Temporal": [
+                    "after surgery"
+                  ]
+                }
+              }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "Patients with congenital anomalies,",
@@ -56,18 +56,14 @@
               }
             }
           }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Patients whose parents refuse to consent.",
-              "Non-query-able": [
-                "Patients whose parents refuse to consent."
-              ]
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Patients whose parents refuse to consent.",
+      "Non-query-able": [
+        "Patients whose parents refuse to consent."
+      ]
     }
   }
 }

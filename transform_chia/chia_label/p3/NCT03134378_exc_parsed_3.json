@@ -1,143 +1,139 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Patients refuse to follow the research",
-      "Observation": [
-        "refuse to follow the research"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Patient has had previous eradication therapy",
-              "Temporal": [
-                "previous"
-              ],
-              "Procedure": [
-                "eradication therapy"
-              ]
-            },
-            "right": {
-              "raw_text": "of Helicobacter pylori infection.",
-              "Condition": [
-                "Helicobacter pylori infection"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "The patient is pregnant",
-                  "Condition": [
-                    "pregnant"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "Patients refuse to follow the research",
+                      "Observation": [
+                        "refuse to follow the research"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Patient has had previous eradication therapy",
+                          "Temporal": [
+                            "previous"
+                          ],
+                          "Procedure": [
+                            "eradication therapy"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "of Helicobacter pylori infection.",
+                          "Condition": [
+                            "Helicobacter pylori infection"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 },
                 "right": {
-                  "raw_text": "or breastfeeding",
-                  "Observation": [
-                    "breastfeeding"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "The patient is pregnant",
+                      "Condition": [
+                        "pregnant"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or breastfeeding",
+                      "Observation": [
+                        "breastfeeding"
+                      ]
+                    }
+                  }
                 }
               }
             },
             "right": {
               "AND": {
                 "left": {
-                  "AND": {
+                  "raw_text": "Patients have a history of allergy",
+                  "Observation": [
+                    "history"
+                  ],
+                  "Condition": [
+                    "allergy"
+                  ]
+                },
+                "right": {
+                  "OR": {
                     "left": {
-                      "raw_text": "Patients have a history of allergy",
-                      "Observation": [
-                        "history"
-                      ],
-                      "Condition": [
-                        "allergy"
+                      "raw_text": "to one component of triple therapy regimen (proton pump inhibitor",
+                      "Drug": [
+                        "component of triple therapy regimen",
+                        "proton pump inhibitor"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "to one component of triple therapy regimen (proton pump inhibitor",
+                          "raw_text": ", penicillin",
                           "Drug": [
-                            "component of triple therapy regimen",
-                            "proton pump inhibitor"
+                            "penicillin"
                           ]
                         },
                         "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", penicillin",
-                              "Drug": [
-                                "penicillin"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": ", and / or macrolide) before.",
-                              "Drug": [
-                                "macrolide"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "no previous liver disease.",
-                          "Temporal": [
-                            "previous"
-                          ],
-                          "Negation": [
-                            "no"
-                          ],
-                          "Condition": [
-                            "liver disease"
+                          "raw_text": ", and / or macrolide) before.",
+                          "Drug": [
+                            "macrolide"
                           ]
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Patients were found to have arrhythmias",
-                              "Condition": [
-                                "arrhythmias"
-                              ]
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "or obtained QT wave elongation",
-                                  "Condition": [
-                                    "QT wave elongation"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": "on electrocardiographic",
-                                  "Procedure": [
-                                    "electrocardiographic"
-                                  ]
-                                }
-                              }
-                            }
-                          }
                         }
                       }
                     }
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "no previous liver disease.",
+              "Temporal": [
+                "previous"
+              ],
+              "Negation": [
+                "no"
+              ],
+              "Condition": [
+                "liver disease"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Patients were found to have arrhythmias",
+          "Condition": [
+            "arrhythmias"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or obtained QT wave elongation",
+              "Condition": [
+                "QT wave elongation"
+              ]
+            },
+            "right": {
+              "raw_text": "on electrocardiographic",
+              "Procedure": [
+                "electrocardiographic"
+              ]
             }
           }
         }

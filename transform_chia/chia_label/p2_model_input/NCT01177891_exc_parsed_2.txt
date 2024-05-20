@@ -1,42 +1,38 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Blood donation of more than 450ml in the previous three months."
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Subject with an abnormal karyotype"
+              "raw_text": "Blood donation of more than 450ml in the previous three months."
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "in favor of Turner syndrome or having a premutation of the FMR1 gene"
+                  "raw_text": "Subject with an abnormal karyotype"
                 },
                 "right": {
-                  "raw_text": "or a syndromic form"
+                  "OR": {
+                    "left": {
+                      "raw_text": "in favor of Turner syndrome or having a premutation of the FMR1 gene"
+                    },
+                    "right": {
+                      "raw_text": "or a syndromic form"
+                    }
+                  }
                 }
               }
             }
           }
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Subject exclusion period in another study without direct individual benefit"
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Subject refusing to sign the consent form"
-                }
-              }
-            }
-          }
+          "raw_text": "Subject exclusion period in another study without direct individual benefit"
         }
       }
+    },
+    "right": {
+      "raw_text": "Subject refusing to sign the consent form"
     }
   }
 }

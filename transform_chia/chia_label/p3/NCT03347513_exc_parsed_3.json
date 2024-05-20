@@ -1,58 +1,62 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Severe Iron deficiency anemia (hemoglobin < 8.0 g/dL).",
-      "Qualifier": [
-        "Severe"
-      ],
-      "Condition": [
-        "Iron deficiency anemia"
-      ],
-      "Measurement": [
-        "hemoglobin"
-      ],
-      "Value": [
-        "< 8.0 g/dL"
-      ],
-      "Scope": [
-        "hemoglobin < 8.0 g/dL",
-        "Severe Iron deficiency anemia"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Parasitic worm infection",
-              "Condition": [
-                "Parasitic worm infection"
-              ]
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "e.g. schistosomiasis",
+                  "raw_text": "Severe Iron deficiency anemia (hemoglobin < 8.0 g/dL).",
+                  "Qualifier": [
+                    "Severe"
+                  ],
                   "Condition": [
-                    "schistosomiasis"
+                    "Iron deficiency anemia"
+                  ],
+                  "Measurement": [
+                    "hemoglobin"
+                  ],
+                  "Value": [
+                    "< 8.0 g/dL"
+                  ],
+                  "Scope": [
+                    "hemoglobin < 8.0 g/dL",
+                    "Severe Iron deficiency anemia"
                   ]
                 },
                 "right": {
-                  "raw_text": ", and hook worm by stool analysis.",
-                  "Condition": [
-                    "hook worm"
-                  ],
-                  "Procedure": [
-                    "stool analysis"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "Parasitic worm infection",
+                      "Condition": [
+                        "Parasitic worm infection"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "e.g. schistosomiasis",
+                          "Condition": [
+                            "schistosomiasis"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": ", and hook worm by stool analysis.",
+                          "Condition": [
+                            "hook worm"
+                          ],
+                          "Procedure": [
+                            "stool analysis"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Any cases giving clinical symptoms of gastritis e.g. nausea",
@@ -94,43 +98,35 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Cases with history of gastric ulcer",
+              "Condition": [
+                "gastric ulcer"
+              ],
+              "Observation": [
+                "history"
+              ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Cases with history of gastric ulcer",
-                      "Condition": [
-                        "gastric ulcer"
-                      ],
-                      "Observation": [
-                        "history"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "diagnosed by upper endoscopy.",
-                      "Procedure": [
-                        "upper endoscopy"
-                      ]
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Cases complaining of hematemesis.",
-                      "Condition": [
-                        "hematemesis"
-                      ]
-                    }
-                  }
-                }
-              }
+              "raw_text": "diagnosed by upper endoscopy.",
+              "Procedure": [
+                "upper endoscopy"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Cases complaining of hematemesis.",
+      "Condition": [
+        "hematemesis"
+      ]
     }
   }
 }

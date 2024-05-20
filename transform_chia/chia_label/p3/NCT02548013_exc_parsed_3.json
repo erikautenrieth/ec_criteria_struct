@@ -1,72 +1,68 @@
 {
   "AND": {
     "left": {
-      "NOT": {
+      "AND": {
         "left": {
-          "raw_text": "equivocal diagnosis of rupture of membranes",
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "equivocal diagnosis of rupture of membranes",
+                      "Condition": [
+                        "rupture of membranes"
+                      ],
+                      "Negation": [
+                        "equivocal"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "2. advanced labor",
+                  "Condition": [
+                    "advanced labor"
+                  ],
+                  "Parsing_Error": [
+                    "or"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "3. intrauterine infection",
+              "Condition": [
+                "intrauterine infection"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "4. vaginal bleeding or",
           "Condition": [
-            "rupture of membranes"
+            "vaginal bleeding"
           ],
-          "Negation": [
-            "equivocal"
+          "Parsing_Error": [
+            "or"
           ]
         }
       }
     },
     "right": {
-      "AND": {
-        "left": {
-          "raw_text": "2. advanced labor",
-          "Condition": [
-            "advanced labor"
-          ],
-          "Parsing_Error": [
-            "or"
-          ]
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "3. intrauterine infection",
-              "Condition": [
-                "intrauterine infection"
-              ]
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "4. vaginal bleeding or",
-                  "Condition": [
-                    "vaginal bleeding"
-                  ],
-                  "Parsing_Error": [
-                    "or"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "5. non reassuring fetal heart rate.",
-                      "Measurement": [
-                        "fetal heart rate"
-                      ],
-                      "Qualifier": [
-                        "non reassuring"
-                      ],
-                      "Subjective_judgement": [
-                        "non reassuring"
-                      ],
-                      "Context_Error": [
-                        "non reassuring"
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+      "raw_text": "5. non reassuring fetal heart rate.",
+      "Measurement": [
+        "fetal heart rate"
+      ],
+      "Qualifier": [
+        "non reassuring"
+      ],
+      "Subjective_judgement": [
+        "non reassuring"
+      ],
+      "Context_Error": [
+        "non reassuring"
+      ]
     }
   }
 }

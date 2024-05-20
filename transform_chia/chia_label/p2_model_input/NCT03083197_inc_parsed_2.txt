@@ -1,76 +1,84 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Age = 15 years old"
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Hospitalization"
-            },
-            "right": {
-              "raw_text": "with acute undifferentiated fever (temperature > 37.5 C, tympanic) =14 days or patients admitted to hospital with a history of fever = 14 days who subsequently develop fever within 24 hours of admission"
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "NOT": {
+              "AND": {
                 "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "no clear focus of infection and negative malaria blood smear"
+                      "raw_text": "Age = 15 years old"
                     },
                     "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Hospitalization"
+                        },
+                        "right": {
+                          "raw_text": "with acute undifferentiated fever (temperature > 37.5 C, tympanic) =14 days or patients admitted to hospital with a history of fever = 14 days who subsequently develop fever within 24 hours of admission"
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
                       "OR": {
                         "left": {
-                          "raw_text": "and/or negative malaria RDT. Patients may have one"
+                          "raw_text": "no clear focus of infection and negative malaria blood smear"
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", none"
+                              "raw_text": "and/or negative malaria RDT. Patients may have one"
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": ", or a combination of other clinical findings such as eschar"
+                                  "raw_text": ", none"
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": ", rash"
+                                      "raw_text": ", or a combination of other clinical findings such as eschar"
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": ", lymphadenopathy"
+                                          "raw_text": ", rash"
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": ", headache"
+                                              "raw_text": ", lymphadenopathy"
                                             },
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": ", myalgia"
+                                                  "raw_text": ", headache"
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": ", cough"
+                                                      "raw_text": ", myalgia"
                                                     },
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": ", nausea"
+                                                          "raw_text": ", cough"
                                                         },
                                                         "right": {
-                                                          "raw_text": "and abdominal discomfort."
+                                                          "OR": {
+                                                            "left": {
+                                                              "raw_text": ", nausea"
+                                                            },
+                                                            "right": {
+                                                              "raw_text": "and abdominal discomfort."
+                                                            }
+                                                          }
                                                         }
                                                       }
                                                     }
@@ -95,43 +103,31 @@
               }
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "A positive scrub typhus RDT"
-                    },
-                    "right": {
-                      "raw_text": "(Scrub Typhus IgM RDT, InBios International, Seattle, WA, USA) and/or positive PCR-based detection of O. tsutsugamushi DNA from the admission blood sample"
-                    }
-                  }
+                  "raw_text": "A positive scrub typhus RDT"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Written informed consent"
-                        },
-                        "right": {
-                          "raw_text": "and/or, written informed assent as required"
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Able to take oral medication"
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "(Scrub Typhus IgM RDT, InBios International, Seattle, WA, USA) and/or positive PCR-based detection of O. tsutsugamushi DNA from the admission blood sample"
                 }
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Written informed consent"
+            },
+            "right": {
+              "raw_text": "and/or, written informed assent as required"
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Able to take oral medication"
     }
   }
 }

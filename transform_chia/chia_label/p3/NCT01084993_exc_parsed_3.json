@@ -1,76 +1,72 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Intolerance",
-          "Condition": [
-            "Intolerance"
-          ]
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": "or allergy to ASA",
+              "raw_text": "Intolerance",
               "Condition": [
-                "allergy"
-              ],
-              "Drug": [
-                "ASA"
+                "Intolerance"
               ]
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", clopidogrel",
+                  "raw_text": "or allergy to ASA",
+                  "Condition": [
+                    "allergy"
+                  ],
                   "Drug": [
-                    "clopidogrel"
+                    "ASA"
                   ]
                 },
                 "right": {
-                  "NOT": {
+                  "OR": {
                     "left": {
-                      "raw_text": "precluding treatment for 12 months",
-                      "Temporal": [
-                        "for 12 months"
-                      ],
-                      "Negation": [
-                        "precluding"
-                      ],
-                      "Procedure": [
-                        "treatment"
-                      ],
-                      "Scope": [
-                        "precluding treatment for 12 months"
+                      "raw_text": ", clopidogrel",
+                      "Drug": [
+                        "clopidogrel"
                       ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "precluding treatment for 12 months",
+                          "Temporal": [
+                            "for 12 months"
+                          ],
+                          "Negation": [
+                            "precluding"
+                          ],
+                          "Procedure": [
+                            "treatment"
+                          ],
+                          "Scope": [
+                            "precluding treatment for 12 months"
+                          ]
+                        }
+                      }
                     }
                   }
                 }
               }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "raw_text": "Concurrent participation in other investigational study",
           "Competing_trial": [
             "Concurrent participation in other investigational study"
           ]
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Femoral sheath (artery)",
-              "Condition": [
-                "Femoral sheath (artery)"
-              ]
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Femoral sheath (artery)",
+      "Condition": [
+        "Femoral sheath (artery)"
+      ]
     }
   }
 }

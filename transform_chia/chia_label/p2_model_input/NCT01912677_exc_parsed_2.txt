@@ -1,23 +1,27 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Indication"
-        },
-        "right": {
-          "raw_text": "for emergent cesarean or known fetal anomaly"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Anti-hypertensive therapy received in the past 12 hours"
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Indication"
+                    },
+                    "right": {
+                      "raw_text": "for emergent cesarean or known fetal anomaly"
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Anti-hypertensive therapy received in the past 12 hours"
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "History of eclampsia"
@@ -33,46 +37,38 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Actively wheezing"
             },
             "right": {
-              "AND": {
+              "raw_text": "at time of enrollment or history of asthma complications"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Known coronary artery disease"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or type I DM"
+            },
+            "right": {
+              "OR": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Actively wheezing"
-                    },
-                    "right": {
-                      "raw_text": "at time of enrollment or history of asthma complications"
-                    }
-                  }
+                  "raw_text": "with microvascular complications or signs of heart failure"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Known coronary artery disease"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "or type I DM"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "with microvascular complications or signs of heart failure"
-                                },
-                                "right": {
-                                  "raw_text": "or clinical dissection of the aorta"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "or clinical dissection of the aorta"
                 }
               }
             }

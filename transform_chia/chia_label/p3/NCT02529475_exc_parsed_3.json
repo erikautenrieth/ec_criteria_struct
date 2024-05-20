@@ -1,97 +1,55 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Patients minors",
-      "Person": [
-        "minors"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Patients on a legal protection regime type guardianship",
-          "Person": [
-            "legal protection regime type guardianship"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "Respiratory pathologies",
-                  "Condition": [
-                    "Respiratory pathologies"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "Patients minors",
+                      "Person": [
+                        "minors"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "Patients on a legal protection regime type guardianship",
+                      "Person": [
+                        "legal protection regime type guardianship"
+                      ]
+                    }
+                  }
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", cardiovascular",
+                      "raw_text": "Respiratory pathologies",
                       "Condition": [
-                        "cardiovascular"
+                        "Respiratory pathologies"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", renal",
+                          "raw_text": ", cardiovascular",
                           "Condition": [
-                            "renal"
+                            "cardiovascular"
                           ]
                         },
                         "right": {
-                          "raw_text": ", diabetes",
-                          "Condition": [
-                            "diabetes"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Claustrophobia",
-                  "Condition": [
-                    "Claustrophobia"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Contraindications",
-                          "Condition": [
-                            "Contraindications"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "to exposure to a magnetic field",
-                          "Device": [
-                            "magnetic field"
-                          ]
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "AND": {
+                          "OR": {
                             "left": {
-                              "raw_text": "Contraindications",
+                              "raw_text": ", renal",
                               "Condition": [
-                                "Contraindications"
+                                "renal"
                               ]
                             },
                             "right": {
-                              "raw_text": "to injecting Dotarem \u00ae",
-                              "Drug": [
-                                "Dotarem"
+                              "raw_text": ", diabetes",
+                              "Condition": [
+                                "diabetes"
                               ]
                             }
                           }
@@ -101,8 +59,46 @@
                   }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Claustrophobia",
+              "Condition": [
+                "Claustrophobia"
+              ]
             }
           }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Contraindications",
+              "Condition": [
+                "Contraindications"
+              ]
+            },
+            "right": {
+              "raw_text": "to exposure to a magnetic field",
+              "Device": [
+                "magnetic field"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Contraindications",
+          "Condition": [
+            "Contraindications"
+          ]
+        },
+        "right": {
+          "raw_text": "to injecting Dotarem \u00ae",
+          "Drug": [
+            "Dotarem"
+          ]
         }
       }
     }

@@ -1,15 +1,15 @@
 {
   "AND": {
     "left": {
-      "NOT": {
-        "left": {
-          "raw_text": "not have breast cancer"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "not have breast cancer"
+            }
+          }
+        },
+        "right": {
           "NOT": {
             "left": {
               "OR": {
@@ -22,24 +22,20 @@
               }
             }
           }
-        },
-        "right": {
-          "AND": {
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
             "left": {
+              "raw_text": "not in menopause"
+            },
+            "right": {
               "NOT": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "not in menopause"
-                    },
-                    "right": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "not have hot flashes"
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "not have hot flashes"
                 }
               }
             }

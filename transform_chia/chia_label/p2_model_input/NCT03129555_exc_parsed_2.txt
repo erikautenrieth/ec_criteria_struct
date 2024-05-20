@@ -1,40 +1,36 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "A prescription of a NOAC within 90 days prior to hospitalization"
-        },
-        "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "or outpatient clinic visit"
+              "raw_text": "A prescription of a NOAC within 90 days prior to hospitalization"
             },
             "right": {
-              "raw_text": "for VTE."
+              "AND": {
+                "left": {
+                  "raw_text": "or outpatient clinic visit"
+                },
+                "right": {
+                  "raw_text": "for VTE."
+                }
+              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Patients with NOAC preference apart from preference consistent with current cluster randomized NOAC."
         }
       }
     },
     "right": {
       "AND": {
         "left": {
-          "raw_text": "Patients with NOAC preference apart from preference consistent with current cluster randomized NOAC."
+          "raw_text": "Other contraindications"
         },
         "right": {
-          "AND": {
-            "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Other contraindications"
-                },
-                "right": {
-                  "raw_text": "mentioned in the \"Summary of Product Characteristics\" for the respective NOAC."
-                }
-              }
-            }
-          }
+          "raw_text": "mentioned in the \"Summary of Product Characteristics\" for the respective NOAC."
         }
       }
     }

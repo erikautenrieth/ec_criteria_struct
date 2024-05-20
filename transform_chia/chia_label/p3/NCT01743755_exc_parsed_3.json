@@ -1,83 +1,99 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Immunocompromised patients:",
-      "Condition": [
-        "Immunocompromised"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Patients with a known congenital",
-              "Qualifier": [
-                "congenital"
-              ]
-            },
-            "right": {
-              "raw_text": "or acquired immunodeficiency.",
-              "Condition": [
-                "immunodeficiency"
-              ],
-              "Qualifier": [
-                "acquired"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Patients who received chemotherapy less than 6 weeks ago.",
-              "Procedure": [
-                "chemotherapy"
-              ],
-              "Temporal": [
-                "less than 6 weeks ago"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Patients who received corticosteroids in the last 6 weeks.",
-                  "Drug": [
-                    "corticosteroids"
-                  ],
-                  "Temporal": [
-                    "in the last 6 weeks"
-                  ]
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": "Patients who received immunosuppressive medication in the last 6 weeks (e.g. cyclosporin",
-                          "Temporal": [
-                            "in the last 6 weeks"
-                          ],
-                          "Procedure": [
-                            "immunosuppressive medication"
-                          ],
-                          "Drug": [
-                            "cyclosporin"
-                          ]
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "Immunocompromised patients:",
+                                      "Condition": [
+                                        "Immunocompromised"
+                                      ]
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "Patients with a known congenital",
+                                          "Qualifier": [
+                                            "congenital"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "or acquired immunodeficiency.",
+                                          "Condition": [
+                                            "immunodeficiency"
+                                          ],
+                                          "Qualifier": [
+                                            "acquired"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "raw_text": "Patients who received chemotherapy less than 6 weeks ago.",
+                                  "Procedure": [
+                                    "chemotherapy"
+                                  ],
+                                  "Temporal": [
+                                    "less than 6 weeks ago"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "Patients who received corticosteroids in the last 6 weeks.",
+                              "Drug": [
+                                "corticosteroids"
+                              ],
+                              "Temporal": [
+                                "in the last 6 weeks"
+                              ]
+                            }
+                          }
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", cyclophosphamide",
+                              "raw_text": "Patients who received immunosuppressive medication in the last 6 weeks (e.g. cyclosporin",
+                              "Temporal": [
+                                "in the last 6 weeks"
+                              ],
+                              "Procedure": [
+                                "immunosuppressive medication"
+                              ],
                               "Drug": [
-                                "cyclophosphamide"
+                                "cyclosporin"
                               ]
                             },
                             "right": {
-                              "raw_text": ", azathioprine).",
-                              "Drug": [
-                                "azathioprine"
-                              ]
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", cyclophosphamide",
+                                  "Drug": [
+                                    "cyclophosphamide"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": ", azathioprine).",
+                                  "Drug": [
+                                    "azathioprine"
+                                  ]
+                                }
+                              }
                             }
                           }
                         }
@@ -86,81 +102,61 @@
                     "right": {
                       "AND": {
                         "left": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Patients with chronic obstructive pulmonary disease",
-                              "Condition": [
-                                "chronic obstructive pulmonary disease"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "who are on systemic corticosteroids.",
-                              "Drug": [
-                                "corticosteroids",
-                                "systemic corticosteroids"
-                              ]
-                            }
-                          }
+                          "raw_text": "Patients with chronic obstructive pulmonary disease",
+                          "Condition": [
+                            "chronic obstructive pulmonary disease"
+                          ]
                         },
                         "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Patients who require intensive care unit treatment.",
-                              "Visit": [
-                                "intensive care unit"
-                              ]
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "Patients with tropical worm infection.",
-                                  "Condition": [
-                                    "tropical worm infection"
-                                  ]
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "AND": {
-                                        "left": {
-                                          "raw_text": "Patients with dexamethasone",
-                                          "Drug": [
-                                            "dexamethasone"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": "intolerance.",
-                                          "Condition": [
-                                            "intolerance"
-                                          ]
-                                        }
-                                      }
-                                    },
-                                    "right": {
-                                      "AND": {
-                                        "left": {
-                                          "raw_text": "Pregnant and breastfeeding women.",
-                                          "Pregnancy_considerations": [
-                                            "Pregnant and breastfeeding women"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
+                          "raw_text": "who are on systemic corticosteroids.",
+                          "Drug": [
+                            "corticosteroids",
+                            "systemic corticosteroids"
+                          ]
                         }
                       }
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "Patients who require intensive care unit treatment.",
+                  "Visit": [
+                    "intensive care unit"
+                  ]
                 }
               }
+            },
+            "right": {
+              "raw_text": "Patients with tropical worm infection.",
+              "Condition": [
+                "tropical worm infection"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Patients with dexamethasone",
+              "Drug": [
+                "dexamethasone"
+              ]
+            },
+            "right": {
+              "raw_text": "intolerance.",
+              "Condition": [
+                "intolerance"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Pregnant and breastfeeding women.",
+      "Pregnancy_considerations": [
+        "Pregnant and breastfeeding women"
+      ]
     }
   }
 }

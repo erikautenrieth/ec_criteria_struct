@@ -1,89 +1,85 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "PCOS",
-          "Condition": [
-            "PCOS"
-          ]
-        },
-        "right": {
-          "raw_text": "or polycystic ovary on ultrasound scan.",
-          "Condition": [
-            "polycystic ovary"
-          ],
-          "Procedure": [
-            "ultrasound scan"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Moderate",
-              "Qualifier": [
-                "Moderate"
-              ]
-            },
-            "right": {
-              "raw_text": "or severe endometriosis.",
-              "Qualifier": [
-                "severe"
-              ],
-              "Condition": [
-                "endometriosis"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Hydrosalpinx.",
-              "Condition": [
-                "Hydrosalpinx"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Uterine abnormalities",
+                      "raw_text": "PCOS",
                       "Condition": [
-                        "Uterine abnormalities"
+                        "PCOS"
                       ]
                     },
                     "right": {
-                      "raw_text": "or myoma.",
+                      "raw_text": "or polycystic ovary on ultrasound scan.",
                       "Condition": [
-                        "myoma"
+                        "polycystic ovary"
+                      ],
+                      "Procedure": [
+                        "ultrasound scan"
                       ]
                     }
                   }
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "raw_text": "Previous uterine surgery.",
-                      "Procedure": [
-                        "uterine surgery"
+                      "raw_text": "Moderate",
+                      "Qualifier": [
+                        "Moderate"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or severe endometriosis.",
+                      "Qualifier": [
+                        "severe"
                       ],
-                      "Temporal": [
-                        "Previous"
+                      "Condition": [
+                        "endometriosis"
                       ]
                     }
                   }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Hydrosalpinx.",
+              "Condition": [
+                "Hydrosalpinx"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Uterine abnormalities",
+              "Condition": [
+                "Uterine abnormalities"
+              ]
+            },
+            "right": {
+              "raw_text": "or myoma.",
+              "Condition": [
+                "myoma"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Previous uterine surgery.",
+      "Procedure": [
+        "uterine surgery"
+      ],
+      "Temporal": [
+        "Previous"
+      ]
     }
   }
 }

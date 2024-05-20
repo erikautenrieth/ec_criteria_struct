@@ -1,162 +1,135 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "1. Have dementia",
-          "Condition": [
-            "dementia"
-          ]
-        },
-        "right": {
-          "raw_text": "or delirium (as determined by the palliative care specialist) at study entry.",
-          "Condition": [
-            "delirium"
-          ],
-          "Temporal": [
-            "at study entry"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "2. Are pregnant",
-          "Condition": [
-            "pregnant"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "3. Have been taking corticosteroids for longer than 48 hours.",
-              "Drug": [
-                "corticosteroids"
-              ],
-              "Temporal": [
-                "longer than 48 hours"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "4. Have pulmonary edema",
-                      "Condition": [
-                        "pulmonary edema"
-                      ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", ascites",
-                          "Condition": [
-                            "ascites"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or pitting edema on clinical examination.",
-                          "Condition": [
-                            "pitting edema"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "5. Are unable to walk.",
-                      "Condition": [
-                        "unable to walk"
-                      ]
-                    },
-                    "right": {
                       "AND": {
                         "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "1. Have dementia",
+                                      "Condition": [
+                                        "dementia"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "or delirium (as determined by the palliative care specialist) at study entry.",
+                                      "Condition": [
+                                        "delirium"
+                                      ],
+                                      "Temporal": [
+                                        "at study entry"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "raw_text": "2. Are pregnant",
+                                  "Condition": [
+                                    "pregnant"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "3. Have been taking corticosteroids for longer than 48 hours.",
+                              "Drug": [
+                                "corticosteroids"
+                              ],
+                              "Temporal": [
+                                "longer than 48 hours"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "6. Have a history of serious adverse gastrointestinal events",
-                              "Observation": [
-                                "history"
-                              ],
+                              "raw_text": "4. Have pulmonary edema",
                               "Condition": [
-                                "adverse gastrointestinal events"
-                              ],
-                              "Qualifier": [
-                                "serious"
+                                "pulmonary edema"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "(i.e., bleeding",
+                                  "raw_text": ", ascites",
                                   "Condition": [
-                                    "bleeding"
+                                    "ascites"
                                   ]
                                 },
                                 "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "or perforation),history of a coagulopathy",
-                                      "Observation": [
-                                        "history"
-                                      ],
-                                      "Condition": [
-                                        "perforation",
-                                        "coagulopathy"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "or current anti-coagulant use.",
-                                      "Drug": [
-                                        "anti-coagulant"
-                                      ],
-                                      "Temporal": [
-                                        "current"
-                                      ]
-                                    }
-                                  }
+                                  "raw_text": "or pitting edema on clinical examination.",
+                                  "Condition": [
+                                    "pitting edema"
+                                  ]
                                 }
                               }
                             }
                           }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "5. Are unable to walk.",
+                      "Condition": [
+                        "unable to walk"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "6. Have a history of serious adverse gastrointestinal events",
+                      "Observation": [
+                        "history"
+                      ],
+                      "Condition": [
+                        "adverse gastrointestinal events"
+                      ],
+                      "Qualifier": [
+                        "serious"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "(i.e., bleeding",
+                          "Condition": [
+                            "bleeding"
+                          ]
                         },
                         "right": {
-                          "AND": {
+                          "OR": {
                             "left": {
-                              "raw_text": "7. Have an ALT/AST>3x upper limit of normal.",
-                              "Measurement": [
-                                "ALT/AST"
+                              "raw_text": "or perforation),history of a coagulopathy",
+                              "Observation": [
+                                "history"
                               ],
-                              "Value": [
-                                ">3x upper limit of normal"
+                              "Condition": [
+                                "perforation",
+                                "coagulopathy"
                               ]
                             },
                             "right": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "8. Patients on methotrexate.",
-                                  "Drug": [
-                                    "methotrexate"
-                                  ]
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "9. Patients taking melatonin receptor agonists (such as Rozerem\u00ae [ramelteon]).",
-                                      "Drug": [
-                                        "melatonin receptor agonists",
-                                        "Rozerem",
-                                        "ramelteon"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
+                              "raw_text": "or current anti-coagulant use.",
+                              "Drug": [
+                                "anti-coagulant"
+                              ],
+                              "Temporal": [
+                                "current"
+                              ]
                             }
                           }
                         }
@@ -165,10 +138,33 @@
                   }
                 }
               }
+            },
+            "right": {
+              "raw_text": "7. Have an ALT/AST>3x upper limit of normal.",
+              "Measurement": [
+                "ALT/AST"
+              ],
+              "Value": [
+                ">3x upper limit of normal"
+              ]
             }
           }
+        },
+        "right": {
+          "raw_text": "8. Patients on methotrexate.",
+          "Drug": [
+            "methotrexate"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "9. Patients taking melatonin receptor agonists (such as Rozerem\u00ae [ramelteon]).",
+      "Drug": [
+        "melatonin receptor agonists",
+        "Rozerem",
+        "ramelteon"
+      ]
     }
   }
 }

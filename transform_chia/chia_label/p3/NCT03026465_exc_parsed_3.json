@@ -1,155 +1,151 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Target lesion located in the left main stem",
-      "Condition": [
-        "Target lesion"
-      ],
-      "Qualifier": [
-        "left main stem"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "STEMI",
-          "Condition": [
-            "STEMI"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Restenosis",
-              "Condition": [
-                "Restenosis"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Cardiogenic shock",
-                  "Condition": [
-                    "Cardiogenic shock"
-                  ]
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": "Malignancies",
+                          "raw_text": "Target lesion located in the left main stem",
                           "Condition": [
-                            "Malignancies"
+                            "Target lesion"
+                          ],
+                          "Qualifier": [
+                            "left main stem"
                           ]
                         },
                         "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "or other comorbid conditions with life expectancy",
-                              "Condition": [
-                                "comorbid conditions"
-                              ],
-                              "Qualifier": [
-                                "other"
-                              ],
-                              "Observation": [
-                                "life expectancy"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "less than 12 months or that may result in protocol noncompliance",
-                              "Value": [
-                                "less than 12 months"
-                              ],
-                              "Observation": [
-                                "protocol noncompliance"
-                              ],
-                              "Mood": [
-                                "may"
-                              ]
-                            }
-                          }
+                          "raw_text": "STEMI",
+                          "Condition": [
+                            "STEMI"
+                          ]
                         }
                       }
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Known allergy",
-                              "Condition": [
-                                "allergy"
-                              ]
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "to the study medications (probucol",
-                                  "Drug": [
-                                    "study medications",
-                                    "probucol"
-                                  ]
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", sirolimus",
-                                      "Drug": [
-                                        "sirolimus"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": ", zotarolimus)",
-                                      "Drug": [
-                                        "zotarolimus"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Pregnancy (present",
-                                  "Condition": [
-                                    "Pregnancy"
-                                  ],
-                                  "Temporal": [
-                                    "present"
-                                  ]
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", suspected",
-                                      "Mood": [
-                                        "suspected"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": ", or planned)",
-                                      "Mood": [
-                                        "planned"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "Restenosis",
+                      "Condition": [
+                        "Restenosis"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Cardiogenic shock",
+                  "Condition": [
+                    "Cardiogenic shock"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Malignancies",
+                  "Condition": [
+                    "Malignancies"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or other comorbid conditions with life expectancy",
+                      "Condition": [
+                        "comorbid conditions"
+                      ],
+                      "Qualifier": [
+                        "other"
+                      ],
+                      "Observation": [
+                        "life expectancy"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "less than 12 months or that may result in protocol noncompliance",
+                      "Value": [
+                        "less than 12 months"
+                      ],
+                      "Observation": [
+                        "protocol noncompliance"
+                      ],
+                      "Mood": [
+                        "may"
+                      ]
                     }
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Known allergy",
+              "Condition": [
+                "allergy"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "to the study medications (probucol",
+                  "Drug": [
+                    "study medications",
+                    "probucol"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", sirolimus",
+                      "Drug": [
+                        "sirolimus"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": ", zotarolimus)",
+                      "Drug": [
+                        "zotarolimus"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Pregnancy (present",
+          "Condition": [
+            "Pregnancy"
+          ],
+          "Temporal": [
+            "present"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", suspected",
+              "Mood": [
+                "suspected"
+              ]
+            },
+            "right": {
+              "raw_text": ", or planned)",
+              "Mood": [
+                "planned"
+              ]
             }
           }
         }

@@ -1,83 +1,79 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Ulcers due to non-diabetic etiology.",
-      "Condition": [
-        "Ulcers"
-      ],
-      "Qualifier": [
-        "non-diabetic"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Uncontrolled diabetes defined as HbA1c above 70 mmol/mol and insufficient nutritional status.",
-          "Condition": [
-            "Uncontrolled diabetes",
-            "insufficient nutritional status"
-          ],
-          "Measurement": [
-            "HbA1c"
-          ],
-          "Value": [
-            "above 70 mmol/mol"
-          ],
-          "Scope": [
-            "HbA1c above 70 mmol/mol and insufficient nutritional status"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Ulcers older than 1 year.",
+              "raw_text": "Ulcers due to non-diabetic etiology.",
               "Condition": [
                 "Ulcers"
               ],
-              "Temporal": [
-                "older than 1 year"
+              "Qualifier": [
+                "non-diabetic"
               ]
             },
             "right": {
-              "AND": {
+              "raw_text": "Uncontrolled diabetes defined as HbA1c above 70 mmol/mol and insufficient nutritional status.",
+              "Condition": [
+                "Uncontrolled diabetes",
+                "insufficient nutritional status"
+              ],
+              "Measurement": [
+                "HbA1c"
+              ],
+              "Value": [
+                "above 70 mmol/mol"
+              ],
+              "Scope": [
+                "HbA1c above 70 mmol/mol and insufficient nutritional status"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Ulcers older than 1 year.",
+          "Condition": [
+            "Ulcers"
+          ],
+          "Temporal": [
+            "older than 1 year"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Any of gangrene",
+          "Condition": [
+            "gangrene"
+          ],
+          "Multiplier": [
+            "Any of"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", osteomyelitis",
+              "Condition": [
+                "osteomyelitis"
+              ]
+            },
+            "right": {
+              "OR": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Any of gangrene",
-                      "Condition": [
-                        "gangrene"
-                      ],
-                      "Multiplier": [
-                        "Any of"
-                      ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", osteomyelitis",
-                          "Condition": [
-                            "osteomyelitis"
-                          ]
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", cellulitis",
-                              "Condition": [
-                                "cellulitis"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": ", or Charcot osteoarthropathy.",
-                              "Condition": [
-                                "Charcot osteoarthropathy"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": ", cellulitis",
+                  "Condition": [
+                    "cellulitis"
+                  ]
+                },
+                "right": {
+                  "raw_text": ", or Charcot osteoarthropathy.",
+                  "Condition": [
+                    "Charcot osteoarthropathy"
+                  ]
                 }
               }
             }

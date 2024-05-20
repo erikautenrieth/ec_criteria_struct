@@ -1,47 +1,59 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Diagnosed with cutaneous vasculitis"
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": ", urticaria"
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": ", psoriasis"
-                },
-                "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", acne"
+                      "raw_text": "Diagnosed with cutaneous vasculitis"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", bullous skin diseases"
+                          "raw_text": ", urticaria"
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", sterile pustulosis"
+                              "raw_text": ", psoriasis"
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": ", leprosy"
+                                  "raw_text": ", acne"
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": ", pneumocystis pneumonia"
+                                      "raw_text": ", bullous skin diseases"
                                     },
                                     "right": {
-                                      "raw_text": "and any other patients who need dapsone administration."
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": ", sterile pustulosis"
+                                        },
+                                        "right": {
+                                          "OR": {
+                                            "left": {
+                                              "raw_text": ", leprosy"
+                                            },
+                                            "right": {
+                                              "OR": {
+                                                "left": {
+                                                  "raw_text": ", pneumocystis pneumonia"
+                                                },
+                                                "right": {
+                                                  "raw_text": "and any other patients who need dapsone administration."
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
                                     }
                                   }
                                 }
@@ -52,44 +64,28 @@
                       }
                     }
                   }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "NOT": {
-            "left": {
-              "raw_text": "apsone-naive."
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "All subjects must have a clinical need for treatment with dapsone that precedes the decision to participate in the study."
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "All subjects are willing to complete the 6-weeks period clinical trial."
                 },
                 "right": {
-                  "AND": {
+                  "NOT": {
                     "left": {
-                      "raw_text": "All subjects are written informed consent."
+                      "raw_text": "apsone-naive."
                     }
                   }
                 }
               }
+            },
+            "right": {
+              "raw_text": "All subjects must have a clinical need for treatment with dapsone that precedes the decision to participate in the study."
             }
           }
+        },
+        "right": {
+          "raw_text": "All subjects are willing to complete the 6-weeks period clinical trial."
         }
       }
+    },
+    "right": {
+      "raw_text": "All subjects are written informed consent."
     }
   }
 }

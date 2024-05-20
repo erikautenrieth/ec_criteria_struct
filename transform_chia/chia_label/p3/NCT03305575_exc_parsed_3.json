@@ -1,40 +1,44 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Abdominal and complex cervical cerclage (e.g. bulging bag)",
-      "Procedure": [
-        "cervical cerclage"
-      ],
-      "Qualifier": [
-        "complex",
-        "Abdominal",
-        "bulging bag"
-      ],
-      "Scope": [
-        "Abdominal and complex"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Contraindication",
-              "Condition": [
-                "Contraindication"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "Abdominal and complex cervical cerclage (e.g. bulging bag)",
+                  "Procedure": [
+                    "cervical cerclage"
+                  ],
+                  "Qualifier": [
+                    "complex",
+                    "Abdominal",
+                    "bulging bag"
+                  ],
+                  "Scope": [
+                    "Abdominal and complex"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Contraindication",
+                      "Condition": [
+                        "Contraindication"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "to neuraxial anesthesia",
+                      "Procedure": [
+                        "neuraxial anesthesia"
+                      ]
+                    }
+                  }
+                }
+              }
             },
             "right": {
-              "raw_text": "to neuraxial anesthesia",
-              "Procedure": [
-                "neuraxial anesthesia"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
               "OR": {
                 "left": {
                   "raw_text": "Known hypersensitivity to chloroprocaine",
@@ -69,33 +73,25 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Pseudocholinesterase deficiency",
-                  "Condition": [
-                    "Pseudocholinesterase deficiency"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Concomitant use with ergot-type oxytocic drugs",
-                      "Temporal": [
-                        "Concomitant"
-                      ],
-                      "Drug": [
-                        "ergot-type oxytocic drugs"
-                      ]
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Pseudocholinesterase deficiency",
+          "Condition": [
+            "Pseudocholinesterase deficiency"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Concomitant use with ergot-type oxytocic drugs",
+      "Temporal": [
+        "Concomitant"
+      ],
+      "Drug": [
+        "ergot-type oxytocic drugs"
+      ]
     }
   }
 }

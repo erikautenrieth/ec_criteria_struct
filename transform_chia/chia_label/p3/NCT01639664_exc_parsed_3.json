@@ -1,99 +1,95 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Age less than 14 years",
-      "Person": [
-        "Age"
-      ],
-      "Value": [
-        "less than 14 years"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Pregnancy",
-          "Condition": [
-            "Pregnancy"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Estimated life expectancy (due to comorbidities) less than 90 days",
-              "Person": [
-                "Estimated life expectancy"
-              ],
-              "Value": [
-                "less than 90 days"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "Presence of relative"
+                      "raw_text": "Age less than 14 years",
+                      "Person": [
+                        "Age"
+                      ],
+                      "Value": [
+                        "less than 14 years"
+                      ]
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "or absolute contraindications",
-                          "Condition": [
-                            "absolute contraindications"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "to CPFA",
-                          "Procedure": [
-                            "CPFA"
-                          ]
-                        }
-                      }
+                      "raw_text": "Pregnancy",
+                      "Condition": [
+                        "Pregnancy"
+                      ]
                     }
                   }
                 },
                 "right": {
+                  "raw_text": "Estimated life expectancy (due to comorbidities) less than 90 days",
+                  "Person": [
+                    "Estimated life expectancy"
+                  ],
+                  "Value": [
+                    "less than 90 days"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Presence of relative"
+                },
+                "right": {
                   "AND": {
                     "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Admission",
-                          "Procedure": [
-                            "Admission"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "from an other ICU where the patient remained for more than 24 hours",
-                          "Visit": [
-                            "an other ICU"
-                          ],
-                          "Observation": [
-                            "patient remained"
-                          ],
-                          "Multiplier": [
-                            "for more than 24 hours"
-                          ]
-                        }
-                      }
+                      "raw_text": "or absolute contraindications",
+                      "Condition": [
+                        "absolute contraindications"
+                      ]
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Absence of informed consent",
-                          "Informed_consent": [
-                            "Absence of informed consent"
-                          ]
-                        }
-                      }
+                      "raw_text": "to CPFA",
+                      "Procedure": [
+                        "CPFA"
+                      ]
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Admission",
+              "Procedure": [
+                "Admission"
+              ]
+            },
+            "right": {
+              "raw_text": "from an other ICU where the patient remained for more than 24 hours",
+              "Visit": [
+                "an other ICU"
+              ],
+              "Observation": [
+                "patient remained"
+              ],
+              "Multiplier": [
+                "for more than 24 hours"
+              ]
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Absence of informed consent",
+      "Informed_consent": [
+        "Absence of informed consent"
+      ]
     }
   }
 }

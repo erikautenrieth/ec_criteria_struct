@@ -1,37 +1,41 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Known hypersensitivity to paracetamol"
-        },
-        "right": {
-          "raw_text": "or mannitol (excipient with known effect)"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Severe hepatocellular insufficiency (ASAT"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "or ALAT"
-                },
-                "right": {
-                  "raw_text": "> 5N, or bilirubin > 2N)"
-                }
-              }
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Known hypersensitivity to paracetamol"
+                    },
+                    "right": {
+                      "raw_text": "or mannitol (excipient with known effect)"
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Severe hepatocellular insufficiency (ASAT"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or ALAT"
+                        },
+                        "right": {
+                          "raw_text": "> 5N, or bilirubin > 2N)"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Pharmacological intervention"
@@ -54,31 +58,23 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnant"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Pregnant"
-                    },
-                    "right": {
-                      "raw_text": "or breastfeeding women"
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Previous participation in this study"
-                    }
-                  }
-                }
-              }
+              "raw_text": "or breastfeeding women"
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Previous participation in this study"
     }
   }
 }
