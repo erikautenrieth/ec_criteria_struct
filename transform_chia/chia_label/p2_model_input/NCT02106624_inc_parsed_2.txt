@@ -1,33 +1,29 @@
 {
   "AND": {
     "left": {
-      "raw_text": "need mechanical ventilation for more than 2 days"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "mean blood pressure more than 60mmHg"
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "predicted ICU stay more than 7 days"
+              "raw_text": "need mechanical ventilation for more than 2 days"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "tolerance of parenteral"
-                    },
-                    "right": {
-                      "raw_text": "or enteral nutrition"
-                    }
-                  }
-                }
-              }
+              "raw_text": "mean blood pressure more than 60mmHg"
             }
           }
+        },
+        "right": {
+          "raw_text": "predicted ICU stay more than 7 days"
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "tolerance of parenteral"
+        },
+        "right": {
+          "raw_text": "or enteral nutrition"
         }
       }
     }

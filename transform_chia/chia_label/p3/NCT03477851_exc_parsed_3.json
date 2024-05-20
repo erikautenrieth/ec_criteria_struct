@@ -1,24 +1,24 @@
 {
   "AND": {
     "left": {
-      "NOT": {
-        "left": {
-          "raw_text": "No consent",
-          "Observation": [
-            "consent"
-          ],
-          "Negation": [
-            "No"
-          ],
-          "Informed_consent": [
-            "No consent"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "No consent",
+              "Observation": [
+                "consent"
+              ],
+              "Negation": [
+                "No"
+              ],
+              "Informed_consent": [
+                "No consent"
+              ]
+            }
+          }
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "Spinal anesthesia",
@@ -36,40 +36,36 @@
               ]
             }
           }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Known intolerance",
+          "Condition": [
+            "intolerance"
+          ]
         },
         "right": {
           "AND": {
             "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Known intolerance",
-                  "Condition": [
-                    "intolerance"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "to tramadol or other contraindications",
-                      "Drug": [
-                        "tramadol"
-                      ],
-                      "Condition": [
-                        "contraindications"
-                      ],
-                      "Qualifier": [
-                        "other"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "for the drug",
-                      "Drug": [
-                        "the drug"
-                      ]
-                    }
-                  }
-                }
-              }
+              "raw_text": "to tramadol or other contraindications",
+              "Drug": [
+                "tramadol"
+              ],
+              "Condition": [
+                "contraindications"
+              ],
+              "Qualifier": [
+                "other"
+              ]
+            },
+            "right": {
+              "raw_text": "for the drug",
+              "Drug": [
+                "the drug"
+              ]
             }
           }
         }

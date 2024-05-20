@@ -70,7 +70,6 @@ def insert_character_at_offsets(file_path, data):
     bool_ob_es_geht = compare_offsets(find_word_offsets(content), sorted_offsets)
     #print(find_word_offsets(content))
     #print(sorted_offsets)
-    print(bool_ob_es_geht)
     if bool_ob_es_geht:
         for end_pos, offset in sorted_offsets:
             if end_pos not in inserted_positions:

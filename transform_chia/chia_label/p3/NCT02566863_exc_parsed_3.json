@@ -1,14 +1,14 @@
 {
   "AND": {
     "left": {
-      "raw_text": "patient's refusal",
-      "Informed_consent": [
-        "patient's refusal"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "patient's refusal",
+          "Informed_consent": [
+            "patient's refusal"
+          ]
+        },
+        "right": {
           "AND": {
             "left": {
               "raw_text": "contraindications",
@@ -23,29 +23,25 @@
               ]
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "diseases",
+          "Condition": [
+            "diseases"
+          ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "diseases",
-                  "Condition": [
-                    "diseases"
-                  ]
-                },
-                "right": {
-                  "raw_text": "/drugs that influence on autonomic nervous system activity",
-                  "Drug": [
-                    "drugs"
-                  ],
-                  "Qualifier": [
-                    "influence on autonomic nervous system activity"
-                  ]
-                }
-              }
-            }
-          }
+          "raw_text": "/drugs that influence on autonomic nervous system activity",
+          "Drug": [
+            "drugs"
+          ],
+          "Qualifier": [
+            "influence on autonomic nervous system activity"
+          ]
         }
       }
     }

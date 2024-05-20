@@ -1,84 +1,80 @@
 {
   "AND": {
     "left": {
-      "NOT": {
-        "left": {
-          "raw_text": "not received influenza vaccination in the past or cannot be vaccinated due to previous severe reaction to influenza vaccine, egg, latex, or thimerosol allergies, or refusal of vaccination",
-          "Negation": [
-            "not"
-          ],
-          "Procedure": [
-            "influenza vaccination",
-            "influenza vaccine"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Participant has received a community available influenza vaccine within <6 months",
-          "Procedure": [
-            "influenza vaccine"
-          ],
-          "Temporal": [
-            "within <6 months"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "History of Guillain-Barr\u00e9 syndrome",
-              "Condition": [
-                "Guillain-Barr\u00e9 syndrome"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "OR": {
+                  "NOT": {
                     "left": {
-                      "raw_text": "Immunosuppressive disorders",
-                      "Condition": [
-                        "Immunosuppressive disorders"
+                      "raw_text": "not received influenza vaccination in the past or cannot be vaccinated due to previous severe reaction to influenza vaccine, egg, latex, or thimerosol allergies, or refusal of vaccination",
+                      "Negation": [
+                        "not"
+                      ],
+                      "Procedure": [
+                        "influenza vaccination",
+                        "influenza vaccine"
                       ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "or medications (including oral prednisone",
-                          "Drug": [
-                            "oral prednisone"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": ">10 mg daily, recent chemotherapy treatment)",
-                          "Multiplier": [
-                            ">10 mg daily"
-                          ],
-                          "Procedure": [
-                            "chemotherapy"
-                          ]
-                        }
-                      }
                     }
                   }
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Emergency cases as determined by the investigator or physician",
-                      "Non-query-able": [
-                        "Emergency cases as determined by the investigator or physician"
-                      ]
-                    }
-                  }
+                  "raw_text": "Participant has received a community available influenza vaccine within <6 months",
+                  "Procedure": [
+                    "influenza vaccine"
+                  ],
+                  "Temporal": [
+                    "within <6 months"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "History of Guillain-Barr\u00e9 syndrome",
+              "Condition": [
+                "Guillain-Barr\u00e9 syndrome"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Immunosuppressive disorders",
+              "Condition": [
+                "Immunosuppressive disorders"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or medications (including oral prednisone",
+                  "Drug": [
+                    "oral prednisone"
+                  ]
+                },
+                "right": {
+                  "raw_text": ">10 mg daily, recent chemotherapy treatment)",
+                  "Multiplier": [
+                    ">10 mg daily"
+                  ],
+                  "Procedure": [
+                    "chemotherapy"
+                  ]
                 }
               }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Emergency cases as determined by the investigator or physician",
+      "Non-query-able": [
+        "Emergency cases as determined by the investigator or physician"
+      ]
     }
   }
 }

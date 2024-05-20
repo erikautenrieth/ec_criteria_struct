@@ -1,61 +1,57 @@
 {
-  "AND": {
+  "OR": {
     "left": {
+      "raw_text": "current",
+      "Temporal": [
+        "current"
+      ]
+    },
+    "right": {
       "OR": {
         "left": {
-          "raw_text": "current",
+          "raw_text": "or recent (within one week of surgery) systemic antibiotic",
+          "Drug": [
+            "antibiotic"
+          ],
           "Temporal": [
-            "current"
+            "within one week of surgery",
+            "recent"
           ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "or recent (within one week of surgery) systemic antibiotic",
-              "Drug": [
-                "antibiotic"
-              ],
-              "Temporal": [
-                "within one week of surgery",
-                "recent"
+              "raw_text": "use, intolerance",
+              "Condition": [
+                "intolerance"
               ]
             },
             "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "use, intolerance",
+                  "raw_text": "to both clindamycin and cephalexin, discovery of a persistent cutaneous malignancy at the site of the defect following the reconstructive procedure",
+                  "Drug": [
+                    "clindamycin",
+                    "cephalexin"
+                  ],
                   "Condition": [
-                    "intolerance"
+                    "persistent cutaneous malignancy"
+                  ],
+                  "Qualifier": [
+                    "site of the defect"
+                  ],
+                  "Temporal": [
+                    "following the reconstructive procedure"
+                  ],
+                  "Reference_point": [
+                    "the reconstructive procedure"
+                  ],
+                  "Procedure": [
+                    "reconstructive procedure"
                   ]
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "to both clindamycin and cephalexin, discovery of a persistent cutaneous malignancy at the site of the defect following the reconstructive procedure",
-                      "Drug": [
-                        "clindamycin",
-                        "cephalexin"
-                      ],
-                      "Condition": [
-                        "persistent cutaneous malignancy"
-                      ],
-                      "Qualifier": [
-                        "site of the defect"
-                      ],
-                      "Temporal": [
-                        "following the reconstructive procedure"
-                      ],
-                      "Reference_point": [
-                        "the reconstructive procedure"
-                      ],
-                      "Procedure": [
-                        "reconstructive procedure"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "and previous reconstruction at the site of the skin/soft-tissue defect."
-                    }
-                  }
+                  "raw_text": "and previous reconstruction at the site of the skin/soft-tissue defect."
                 }
               }
             }

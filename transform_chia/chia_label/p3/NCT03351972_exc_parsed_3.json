@@ -1,66 +1,62 @@
 {
   "AND": {
     "left": {
-      "raw_text": "dysphagia",
-      "Condition": [
-        "dysphagia"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "severe gastroparesis",
+              "raw_text": "dysphagia",
               "Condition": [
-                "gastroparesis"
-              ],
-              "Qualifier": [
-                "severe"
+                "dysphagia"
               ]
             },
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "requiring endoscopic placement",
-                  "Procedure": [
-                    "endoscopic placement"
+                  "raw_text": "severe gastroparesis",
+                  "Condition": [
+                    "gastroparesis"
                   ],
-                  "Mood": [
-                    "requiring"
+                  "Qualifier": [
+                    "severe"
                   ]
                 },
                 "right": {
-                  "raw_text": "of capsule",
-                  "Device": [
-                    "capsule"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "requiring endoscopic placement",
+                      "Procedure": [
+                        "endoscopic placement"
+                      ],
+                      "Mood": [
+                        "requiring"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "of capsule",
+                      "Device": [
+                        "capsule"
+                      ]
+                    }
+                  }
                 }
               }
             }
           }
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "small bowel obstruction",
-              "Condition": [
-                "small bowel obstruction"
-              ]
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "pregnancy",
-                  "Condition": [
-                    "pregnancy"
-                  ]
-                }
-              }
-            }
-          }
+          "raw_text": "small bowel obstruction",
+          "Condition": [
+            "small bowel obstruction"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "pregnancy",
+      "Condition": [
+        "pregnancy"
+      ]
     }
   }
 }

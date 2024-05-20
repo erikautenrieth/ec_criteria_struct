@@ -1,49 +1,113 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "With severe comorbidities, such as cardiovascular disease",
-          "Condition": [
-            "comorbidities",
-            "cardiovascular disease"
-          ],
-          "Qualifier": [
-            "severe"
-          ],
-          "Undefined_semantics": [
-            "comorbidities"
-          ],
-          "Scope": [
-            "severe comorbidities"
-          ]
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": ", chronic obstructive pulmonary disease",
-              "Condition": [
-                "chronic obstructive pulmonary disease"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "With severe comorbidities, such as cardiovascular disease",
+                  "Condition": [
+                    "comorbidities",
+                    "cardiovascular disease"
+                  ],
+                  "Qualifier": [
+                    "severe"
+                  ],
+                  "Undefined_semantics": [
+                    "comorbidities"
+                  ],
+                  "Scope": [
+                    "severe comorbidities"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", chronic obstructive pulmonary disease",
+                      "Condition": [
+                        "chronic obstructive pulmonary disease"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", diabetes mellitus",
+                          "Condition": [
+                            "diabetes mellitus"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": ", and chronic renal dysfunction.",
+                          "Condition": [
+                            "chronic renal dysfunction"
+                          ],
+                          "Grammar_Error": [
+                            "and"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", diabetes mellitus",
+                  "raw_text": "With bad compliance",
                   "Condition": [
-                    "diabetes mellitus"
+                    "bad compliance"
+                  ],
+                  "Subjective_judgement": [
+                    "bad compliance"
                   ]
                 },
                 "right": {
-                  "raw_text": ", and chronic renal dysfunction.",
+                  "raw_text": "or contraindication to enrollment.",
                   "Condition": [
-                    "chronic renal dysfunction"
+                    "contraindication to enrollment",
+                    "contraindication"
                   ],
-                  "Grammar_Error": [
-                    "and"
+                  "Subjective_judgement": [
+                    "contraindication to enrollment",
+                    "contraindication"
+                  ],
+                  "Undefined_semantics": [
+                    "contraindication to enrollment",
+                    "contraindication"
                   ]
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnant woman",
+              "Condition": [
+                "Pregnant"
+              ],
+              "Person": [
+                "woman"
+              ],
+              "Scope": [
+                "Pregnant woman"
+              ]
+            },
+            "right": {
+              "raw_text": "or lactating woman.",
+              "Person": [
+                "woman"
+              ],
+              "Condition": [
+                "lactating"
+              ],
+              "Scope": [
+                "lactating woman"
+              ]
             }
           }
         }
@@ -52,90 +116,22 @@
     "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "With bad compliance",
-              "Condition": [
-                "bad compliance"
-              ],
-              "Subjective_judgement": [
-                "bad compliance"
-              ]
-            },
-            "right": {
-              "raw_text": "or contraindication to enrollment.",
-              "Condition": [
-                "contraindication to enrollment",
-                "contraindication"
-              ],
-              "Subjective_judgement": [
-                "contraindication to enrollment",
-                "contraindication"
-              ],
-              "Undefined_semantics": [
-                "contraindication to enrollment",
-                "contraindication"
-              ]
-            }
-          }
+          "raw_text": "With contraindication",
+          "Condition": [
+            "contraindication"
+          ],
+          "Subjective_judgement": [
+            "contraindication"
+          ],
+          "Undefined_semantics": [
+            "contraindication"
+          ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Pregnant woman",
-                  "Condition": [
-                    "Pregnant"
-                  ],
-                  "Person": [
-                    "woman"
-                  ],
-                  "Scope": [
-                    "Pregnant woman"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or lactating woman.",
-                  "Person": [
-                    "woman"
-                  ],
-                  "Condition": [
-                    "lactating"
-                  ],
-                  "Scope": [
-                    "lactating woman"
-                  ]
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "With contraindication",
-                      "Condition": [
-                        "contraindication"
-                      ],
-                      "Subjective_judgement": [
-                        "contraindication"
-                      ],
-                      "Undefined_semantics": [
-                        "contraindication"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "to receive adjuvant chemotherapy.",
-                      "Procedure": [
-                        "adjuvant chemotherapy"
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
+          "raw_text": "to receive adjuvant chemotherapy.",
+          "Procedure": [
+            "adjuvant chemotherapy"
+          ]
         }
       }
     }

@@ -1,16 +1,20 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Cases (with a history of TBI):"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "1. History of penetrating brain injury"
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Cases (with a history of TBI):"
+                },
+                "right": {
+                  "raw_text": "1. History of penetrating brain injury"
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "2. History of disabling neurological or psychiatric condition"
@@ -58,49 +62,41 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Controls (without a history of TBI):"
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "History of disabling neurological or psychiatric condition such as epilepsy"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", multiple sclerosis"
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "Controls (without a history of TBI):"
+                  "raw_text": ", cortical stroke"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
+                      "raw_text": ", hypoxic-ischemic encephalopathy"
+                    },
+                    "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "History of disabling neurological or psychiatric condition such as epilepsy"
+                          "raw_text": ", encephalitis"
                         },
                         "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", multiple sclerosis"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": ", cortical stroke"
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", hypoxic-ischemic encephalopathy"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": ", encephalitis"
-                                        },
-                                        "right": {
-                                          "raw_text": ", or schizophrenia"
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
+                          "raw_text": ", or schizophrenia"
                         }
                       }
                     }

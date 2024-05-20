@@ -1,49 +1,57 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Subjects with hypersensitivity reaction to Statin",
-          "Condition": [
-            "hypersensitivity"
-          ],
-          "Drug": [
-            "Statin"
-          ]
-        },
-        "right": {
-          "raw_text": "and Ezetimibe",
-          "Drug": [
-            "Ezetimibe"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Subjects with severe kidney disease",
-          "Qualifier": [
-            "severe"
-          ],
-          "Condition": [
-            "kidney disease"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Subjects with HIV positive result at the screening",
-              "Condition": [
-                "HIV positive"
-              ],
-              "Temporal": [
-                "at the screening"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Subjects with hypersensitivity reaction to Statin",
+                              "Condition": [
+                                "hypersensitivity"
+                              ],
+                              "Drug": [
+                                "Statin"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "and Ezetimibe",
+                              "Drug": [
+                                "Ezetimibe"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "Subjects with severe kidney disease",
+                          "Qualifier": [
+                            "severe"
+                          ],
+                          "Condition": [
+                            "kidney disease"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Subjects with HIV positive result at the screening",
+                      "Condition": [
+                        "HIV positive"
+                      ],
+                      "Temporal": [
+                        "at the screening"
+                      ]
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Pregnant",
@@ -58,65 +66,41 @@
                       ]
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Subjects with taking any medication",
+                  "Drug": [
+                    "medication"
+                  ]
                 },
                 "right": {
                   "AND": {
                     "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Subjects with taking any medication",
-                          "Drug": [
-                            "medication"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "affecting",
-                              "Condition": [
-                                "affecting"
-                              ]
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "level of LDL (Fenofibrate",
-                                  "Procedure": [
-                                    "LDL"
-                                  ],
-                                  "Drug": [
-                                    "Fenofibrate"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": ", Omega 3 fatty aicd etc.)",
-                                  "Drug": [
-                                    "Omega 3 fatty aicd"
-                                  ]
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "affecting",
+                      "Condition": [
+                        "affecting"
+                      ]
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
-                          "raw_text": "Insulin-treated Subjects",
+                          "raw_text": "level of LDL (Fenofibrate",
+                          "Procedure": [
+                            "LDL"
+                          ],
                           "Drug": [
-                            "Insulin"
+                            "Fenofibrate"
                           ]
                         },
                         "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Other exclusions applied",
-                              "Non-representable": [
-                                "Other exclusions applied"
-                              ]
-                            }
-                          }
+                          "raw_text": ", Omega 3 fatty aicd etc.)",
+                          "Drug": [
+                            "Omega 3 fatty aicd"
+                          ]
                         }
                       }
                     }
@@ -125,8 +109,20 @@
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "Insulin-treated Subjects",
+          "Drug": [
+            "Insulin"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Other exclusions applied",
+      "Non-representable": [
+        "Other exclusions applied"
+      ]
     }
   }
 }

@@ -1,34 +1,38 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Patients unable to give informed consent."
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Any patient whose condition"
-            },
-            "right": {
-              "NOT": {
+              "AND": {
                 "left": {
+                  "raw_text": "Patients unable to give informed consent."
+                },
+                "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "not allow for placement"
+                      "raw_text": "Any patient whose condition"
                     },
                     "right": {
-                      "raw_text": "of the electrode PadSet."
+                      "NOT": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "not allow for placement"
+                            },
+                            "right": {
+                              "raw_text": "of the electrode PadSet."
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "NOT": {
                 "left": {
                   "OR": {
@@ -41,24 +45,16 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Patients with Impaired Renal Function with a have a known estimated CrCl<30 ml/min"
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Patients using oral contraception."
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Patients with Impaired Renal Function with a have a known estimated CrCl<30 ml/min"
         }
       }
+    },
+    "right": {
+      "raw_text": "Patients using oral contraception."
     }
   }
 }

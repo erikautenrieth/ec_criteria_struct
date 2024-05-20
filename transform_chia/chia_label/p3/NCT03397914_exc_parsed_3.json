@@ -1,46 +1,42 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Age less than one year",
-          "Person": [
-            "Age"
-          ],
-          "Value": [
-            "less than one year"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "Age less than one year",
+              "Person": [
+                "Age"
+              ],
+              "Value": [
+                "less than one year"
+              ]
+            },
+            "right": {
+              "raw_text": "or over 18 years",
+              "Value": [
+                "over 18 years"
+              ]
+            }
+          }
         },
         "right": {
-          "raw_text": "or over 18 years",
-          "Value": [
-            "over 18 years"
+          "raw_text": "Patients with renal impairment",
+          "Condition": [
+            "renal impairment"
           ]
         }
       }
     },
     "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Patients with renal impairment",
-          "Condition": [
-            "renal impairment"
-          ]
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Colistin use less than 72 hours",
-              "Drug": [
-                "Colistin"
-              ],
-              "Temporal": [
-                "less than 72 hours"
-              ]
-            }
-          }
-        }
-      }
+      "raw_text": "Colistin use less than 72 hours",
+      "Drug": [
+        "Colistin"
+      ],
+      "Temporal": [
+        "less than 72 hours"
+      ]
     }
   }
 }

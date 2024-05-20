@@ -1,95 +1,91 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Women with Non-proteinuric hypertension",
-      "Condition": [
-        "Non-proteinuric hypertension"
-      ],
-      "Person": [
-        "Women"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "severe renal impairment",
-          "Qualifier": [
-            "severe"
-          ],
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Women with Non-proteinuric hypertension",
+                      "Condition": [
+                        "Non-proteinuric hypertension"
+                      ],
+                      "Person": [
+                        "Women"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "severe renal impairment",
+                      "Qualifier": [
+                        "severe"
+                      ],
+                      "Condition": [
+                        "renal impairment"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Myasthenia gravis",
+                  "Condition": [
+                    "Myasthenia gravis"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "High amount of magnesium in blood",
+              "Value": [
+                "High amount"
+              ],
+              "Measurement": [
+                "magnesium in blood"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Low"
+            },
+            "right": {
+              "raw_text": "or high amount of calcium in blood",
+              "Value": [
+                "high amount"
+              ],
+              "Measurement": [
+                "calcium in blood"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Myocardial damage",
           "Condition": [
-            "renal impairment"
+            "Myocardial damage"
           ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "Myasthenia gravis",
+              "raw_text": ", diabetic coma",
               "Condition": [
-                "Myasthenia gravis"
+                "diabetic coma"
               ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "High amount of magnesium in blood",
-                  "Value": [
-                    "High amount"
-                  ],
-                  "Measurement": [
-                    "magnesium in blood"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Low"
-                        },
-                        "right": {
-                          "raw_text": "or high amount of calcium in blood",
-                          "Value": [
-                            "high amount"
-                          ],
-                          "Measurement": [
-                            "calcium in blood"
-                          ]
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Myocardial damage",
-                              "Condition": [
-                                "Myocardial damage"
-                              ]
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": ", diabetic coma",
-                                  "Condition": [
-                                    "diabetic coma"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": ", heart block",
-                                  "Condition": [
-                                    "heart block"
-                                  ]
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": ", heart block",
+              "Condition": [
+                "heart block"
+              ]
             }
           }
         }

@@ -1,21 +1,29 @@
 {
   "AND": {
     "left": {
-      "raw_text": "adults 61 years old and above"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "smokers"
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "pregnant women"
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "adults 61 years old and above"
+                        },
+                        "right": {
+                          "raw_text": "smokers"
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "pregnant women"
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "taking any prescription pain"
@@ -24,61 +32,49 @@
                       "raw_text": "/ insulin medication"
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "has a history of taste"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "has a history of taste"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "or smell loss"
-                            },
-                            "right": {
-                              "raw_text": "or other oral disorders (e.g., burning mouth syndrome)"
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "or smell loss"
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "has current oral lesions"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": ", canker sores"
-                                },
-                                "right": {
-                                  "raw_text": ", or piercings"
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "has a history of food allergy"
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "or other oral disorders (e.g., burning mouth syndrome)"
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "has current oral lesions"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", canker sores"
+                },
+                "right": {
+                  "raw_text": ", or piercings"
+                }
+              }
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "has a history of food allergy"
     }
   }
 }

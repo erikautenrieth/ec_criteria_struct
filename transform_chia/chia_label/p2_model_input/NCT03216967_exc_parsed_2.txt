@@ -1,30 +1,34 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Known proved BKV nephropathy"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Hypersensitivity to everolimus"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": ", sirolimus"
-                },
-                "right": {
-                  "raw_text": "or excipient"
-                }
-              }
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Known proved BKV nephropathy"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Hypersensitivity to everolimus"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", sirolimus"
+                        },
+                        "right": {
+                          "raw_text": "or excipient"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Concomitant treatment by leflunomide"
@@ -47,33 +51,25 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Pregnant"
-                    },
-                    "right": {
-                      "raw_text": "or lactating women"
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "unless they are using a birth control method"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnant"
+            },
+            "right": {
+              "raw_text": "or lactating women"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "unless they are using a birth control method"
         }
       }
     }

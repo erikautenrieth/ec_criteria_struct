@@ -1,83 +1,91 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Contraindication to sitagliptin",
-          "Drug": [
-            "sitagliptin"
-          ],
-          "Condition": [
-            "Contraindication"
-          ]
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "or metformin",
-              "Drug": [
-                "metformin"
-              ]
-            },
-            "right": {
-              "raw_text": "or thiazolidinedione",
-              "Drug": [
-                "thiazolidinedione"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Pregnant",
-              "Condition": [
-                "Pregnant"
-              ]
-            },
-            "right": {
-              "raw_text": "or breast feeding women",
-              "Condition": [
-                "breast"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Type 1 diabetes",
-                  "Condition": [
-                    "Type 1 diabetes"
-                  ]
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": ", gestational diabetes",
-                      "Condition": [
-                        "gestational diabetes"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": ", or secondary forms of diabetes",
-                      "Condition": [
-                        "secondary forms of diabetes"
-                      ]
-                    }
-                  }
-                }
-              }
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Contraindication to sitagliptin",
+                              "Drug": [
+                                "sitagliptin"
+                              ],
+                              "Condition": [
+                                "Contraindication"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or metformin",
+                                  "Drug": [
+                                    "metformin"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or thiazolidinedione",
+                                  "Drug": [
+                                    "thiazolidinedione"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Pregnant",
+                              "Condition": [
+                                "Pregnant"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or breast feeding women",
+                              "Condition": [
+                                "breast"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Type 1 diabetes",
+                          "Condition": [
+                            "Type 1 diabetes"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", gestational diabetes",
+                              "Condition": [
+                                "gestational diabetes"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": ", or secondary forms of diabetes",
+                              "Condition": [
+                                "secondary forms of diabetes"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
                   "NOT": {
                     "left": {
                       "AND": {
@@ -99,90 +107,78 @@
                       }
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Medication",
+                  "Drug": [
+                    "Medication"
+                  ]
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Medication",
-                          "Drug": [
-                            "Medication"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "which affect glycemic control",
-                          "Observation": [
-                            "affect glycemic control"
-                          ]
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Disease which affect efficacy",
-                              "Drug": [
-                                "Disease"
-                              ],
-                              "Qualifier": [
-                                "affect efficacy"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "and safety of drugs",
-                              "Qualifier": [
-                                "safety of drugs"
-                              ]
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Any major illness (Liver disease",
-                                  "Condition": [
-                                    "major illness",
-                                    "Liver disease"
-                                  ]
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", Renal failure",
-                                      "Condition": [
-                                        "Renal failure"
-                                      ]
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": ", Heart disease",
-                                          "Condition": [
-                                            "Heart disease"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": ", Cancer, etc)",
-                                          "Condition": [
-                                            "Cancer"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "which affect glycemic control",
+                  "Observation": [
+                    "affect glycemic control"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Disease which affect efficacy",
+              "Drug": [
+                "Disease"
+              ],
+              "Qualifier": [
+                "affect efficacy"
+              ]
+            },
+            "right": {
+              "raw_text": "and safety of drugs",
+              "Qualifier": [
+                "safety of drugs"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Any major illness (Liver disease",
+          "Condition": [
+            "major illness",
+            "Liver disease"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", Renal failure",
+              "Condition": [
+                "Renal failure"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", Heart disease",
+                  "Condition": [
+                    "Heart disease"
+                  ]
+                },
+                "right": {
+                  "raw_text": ", Cancer, etc)",
+                  "Condition": [
+                    "Cancer"
+                  ]
                 }
               }
             }

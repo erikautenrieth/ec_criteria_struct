@@ -1,26 +1,38 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Limited English proficiency (LEP)"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Pregnant"
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Prisoners"
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Wolff Parkinson White syndrome"
-                },
-                "right": {
                   "AND": {
                     "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "Limited English proficiency (LEP)"
+                                },
+                                "right": {
+                                  "raw_text": "Pregnant"
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "Prisoners"
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "Wolff Parkinson White syndrome"
+                        }
+                      }
+                    },
+                    "right": {
                       "OR": {
                         "left": {
                           "raw_text": "Administration of electrical"
@@ -29,74 +41,58 @@
                           "raw_text": "or chemical cardioversion before screening"
                         }
                       }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Administration of other antiarrhythmics"
                     },
                     "right": {
-                      "AND": {
+                      "NOT": {
                         "left": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Administration of other antiarrhythmics"
-                            },
-                            "right": {
-                              "NOT": {
-                                "left": {
-                                  "raw_text": "excluding adenosine)"
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "History of allergy"
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "or idiosyncratic reaction"
-                                    },
-                                    "right": {
-                                      "raw_text": "to diltiazem"
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Unable to take"
-                                    },
-                                    "right": {
-                                      "raw_text": "oral medications"
-                                    }
-                                  }
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Heart rate <60 beats/min"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
+                          "raw_text": "excluding adenosine)"
                         }
                       }
                     }
                   }
                 }
               }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "History of allergy"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or idiosyncratic reaction"
+                    },
+                    "right": {
+                      "raw_text": "to diltiazem"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Unable to take"
+            },
+            "right": {
+              "raw_text": "oral medications"
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Heart rate <60 beats/min"
     }
   }
 }

@@ -6,6 +6,16 @@ import shutil
 from collections import defaultdict
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from functions import *
+
+def find_folders_with_output(directory):
+    folders_with_output = []
+    for root, dirs, files in os.walk(directory):
+        if 'output' in dirs:
+            folders_with_output.append(root.split('\\')[1])
+            dirs.remove('output')
+    return folders_with_output
+
+
 def extract_nct_number(filename):
     parts = filename.split('_')
     nct_number = None

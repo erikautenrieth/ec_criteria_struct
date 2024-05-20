@@ -1,28 +1,28 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "a history of non-standard treatment(chemotherapy",
-          "Procedure": [
-            "non-standard treatment",
-            "chemotherapy"
-          ],
-          "Observation": [
-            "history"
-          ]
-        },
-        "right": {
-          "raw_text": "or surgery)",
-          "Procedure": [
-            "surgery"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
+          "OR": {
+            "left": {
+              "raw_text": "a history of non-standard treatment(chemotherapy",
+              "Procedure": [
+                "non-standard treatment",
+                "chemotherapy"
+              ],
+              "Observation": [
+                "history"
+              ]
+            },
+            "right": {
+              "raw_text": "or surgery)",
+              "Procedure": [
+                "surgery"
+              ]
+            }
+          }
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "secondary osteosarcoma",
@@ -40,36 +40,32 @@
               ]
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "evident dysfunction of"
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
+              "raw_text": "cardia"
+            },
+            "right": {
               "OR": {
                 "left": {
-                  "raw_text": "evident dysfunction of"
+                  "raw_text": ",liver and kidney, or pregnant",
+                  "Condition": [
+                    "pregnant"
+                  ]
                 },
                 "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "cardia"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ",liver and kidney, or pregnant",
-                          "Condition": [
-                            "pregnant"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "women or women during lactation",
-                          "Condition": [
-                            "lactation"
-                          ]
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "women or women during lactation",
+                  "Condition": [
+                    "lactation"
+                  ]
                 }
               }
             }

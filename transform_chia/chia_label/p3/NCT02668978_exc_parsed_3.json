@@ -1,112 +1,108 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Traumatic pulmonary contusion",
-          "Condition": [
-            "pulmonary contusion"
-          ],
-          "Qualifier": [
-            "Traumatic"
-          ]
-        },
-        "right": {
-          "raw_text": "or laceration",
-          "Condition": [
-            "laceration"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Lung reduction surgery",
-          "Procedure": [
-            "Lung reduction surgery"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Planned removal of more than 10 lung lesions",
-              "Multiplier": [
-                "more than 10"
-              ],
-              "Condition": [
-                "lung lesions"
-              ],
-              "Mood": [
-                "Planned"
-              ],
-              "Procedure": [
-                "removal"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Pneumonectomy",
-                  "Procedure": [
-                    "Pneumonectomy"
-                  ]
-                },
-                "right": {
                   "AND": {
                     "left": {
                       "AND": {
                         "left": {
-                          "raw_text": "Known hypersensitivity",
-                          "Condition": [
-                            "hypersensitivity"
-                          ]
+                          "OR": {
+                            "left": {
+                              "raw_text": "Traumatic pulmonary contusion",
+                              "Condition": [
+                                "pulmonary contusion"
+                              ],
+                              "Qualifier": [
+                                "Traumatic"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or laceration",
+                              "Condition": [
+                                "laceration"
+                              ]
+                            }
+                          }
                         },
                         "right": {
-                          "raw_text": "to bovine protein",
-                          "Drug": [
-                            "bovine protein"
+                          "raw_text": "Lung reduction surgery",
+                          "Procedure": [
+                            "Lung reduction surgery"
                           ]
                         }
                       }
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Known hypersensitivity",
-                              "Condition": [
-                                "hypersensitivity"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "to Brilliant Blue FCF (E133)",
-                              "Drug": [
-                                "Brilliant Blue FCF (E133)"
-                              ]
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Presence of active infection",
-                              "Condition": [
-                                "active infection"
-                              ]
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "Planned removal of more than 10 lung lesions",
+                      "Multiplier": [
+                        "more than 10"
+                      ],
+                      "Condition": [
+                        "lung lesions"
+                      ],
+                      "Mood": [
+                        "Planned"
+                      ],
+                      "Procedure": [
+                        "removal"
+                      ]
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "Pneumonectomy",
+                  "Procedure": [
+                    "Pneumonectomy"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Known hypersensitivity",
+                  "Condition": [
+                    "hypersensitivity"
+                  ]
+                },
+                "right": {
+                  "raw_text": "to bovine protein",
+                  "Drug": [
+                    "bovine protein"
+                  ]
                 }
               }
             }
           }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Known hypersensitivity",
+              "Condition": [
+                "hypersensitivity"
+              ]
+            },
+            "right": {
+              "raw_text": "to Brilliant Blue FCF (E133)",
+              "Drug": [
+                "Brilliant Blue FCF (E133)"
+              ]
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Presence of active infection",
+      "Condition": [
+        "active infection"
+      ]
     }
   }
 }

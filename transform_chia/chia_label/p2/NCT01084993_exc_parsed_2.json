@@ -1,46 +1,42 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Intolerance"
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": "or allergy to ASA"
+              "raw_text": "Intolerance"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", clopidogrel"
+                  "raw_text": "or allergy to ASA"
                 },
                 "right": {
-                  "NOT": {
+                  "OR": {
                     "left": {
-                      "raw_text": "precluding treatment for 12 months"
+                      "raw_text": ", clopidogrel"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "precluding treatment for 12 months"
+                        }
+                      }
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "Concurrent participation in other investigational study"
         }
       }
     },
     "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Concurrent participation in other investigational study"
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Femoral sheath (artery)"
-            }
-          }
-        }
-      }
+      "raw_text": "Femoral sheath (artery)"
     }
   }
 }

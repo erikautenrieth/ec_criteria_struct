@@ -1,38 +1,42 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Clinically significant abnormalities of glucose metabolism"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Spinal cord compression"
-            },
-            "right": {
-              "NOT": {
+              "AND": {
                 "left": {
-                  "AND": {
+                  "raw_text": "Clinically significant abnormalities of glucose metabolism"
+                },
+                "right": {
+                  "OR": {
                     "left": {
-                      "raw_text": "unless asymptomatic, treated and stable"
+                      "raw_text": "Spinal cord compression"
                     },
                     "right": {
                       "NOT": {
                         "left": {
-                          "raw_text": "not requiring steroids)"
+                          "AND": {
+                            "left": {
+                              "raw_text": "unless asymptomatic, treated and stable"
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "not requiring steroids)"
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
                   }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Evidence of severe"
@@ -62,37 +66,26 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Evidence of clinically significant cardiac abnormalities"
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Evidence of clinically significant cardiac abnormalities"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", uncontrolled hypotension"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", left ventricular ejection fraction"
-                            },
-                            "right": {
-                              "raw_text": "below the lower limit of normal for the site or experience of significant cardiac interventional procedures"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": ", uncontrolled hypotension"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "raw_text": "A bad reaction to AZD5363 or any drugs similar to it in structure or class"
+                      "raw_text": ", left ventricular ejection fraction"
+                    },
+                    "right": {
+                      "raw_text": "below the lower limit of normal for the site or experience of significant cardiac interventional procedures"
                     }
                   }
                 }
@@ -101,6 +94,9 @@
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "A bad reaction to AZD5363 or any drugs similar to it in structure or class"
     }
   }
 }

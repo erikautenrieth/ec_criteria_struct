@@ -1,78 +1,74 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Patient has history of loose",
-          "Observation": [
-            "history of"
-          ]
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Patient has history of loose",
+                  "Observation": [
+                    "history of"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or watery stools",
+                  "Condition": [
+                    "watery stools"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "Patient has both clinically significant findings and unexplained clinically significant alarm symptoms",
+              "Condition": [
+                "clinically significant findings",
+                "clinically significant alarm symptoms"
+              ],
+              "Qualifier": [
+                "unexplained",
+                "clinically significant"
+              ]
+            }
+          }
         },
         "right": {
-          "raw_text": "or watery stools",
+          "raw_text": "Patient has symptoms of or been diagnosed with a medical condition that may contribute to abdominal pain",
           "Condition": [
-            "watery stools"
+            "medical condition",
+            "abdominal pain"
+          ],
+          "Qualifier": [
+            "may contribute to abdominal pain"
           ]
         }
       }
     },
     "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "raw_text": "Patient has both clinically significant findings and unexplained clinically significant alarm symptoms",
-          "Condition": [
-            "clinically significant findings",
-            "clinically significant alarm symptoms"
-          ],
+          "raw_text": "Patient has any protocol-excluded",
           "Qualifier": [
-            "unexplained",
-            "clinically significant"
+            "protocol-excluded"
           ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "Patient has symptoms of or been diagnosed with a medical condition that may contribute to abdominal pain",
-              "Condition": [
-                "medical condition",
-                "abdominal pain"
-              ],
+              "raw_text": "or clinically significant medical",
               "Qualifier": [
-                "may contribute to abdominal pain"
+                "clinically significant"
               ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Patient has any protocol-excluded",
-                      "Qualifier": [
-                        "protocol-excluded"
-                      ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "or clinically significant medical",
-                          "Qualifier": [
-                            "clinically significant"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or surgical history that could confound the study assessments",
-                          "Observation": [
-                            "surgical history"
-                          ],
-                          "Qualifier": [
-                            "could confound the study assessments"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "or surgical history that could confound the study assessments",
+              "Observation": [
+                "surgical history"
+              ],
+              "Qualifier": [
+                "could confound the study assessments"
+              ]
             }
           }
         }

@@ -1,39 +1,43 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Age >/=18 years at screening"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Patients with relapsing forms of multiple sclerosis (RMS) with active disease defined by clinical"
+              "raw_text": "Age >/=18 years at screening"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "or imaging features: (i) at least one clinical relapse over a 6-month period prior to screening; (ii) AND/OR at least one T1 gadolinium-enhancing lesion"
+                  "raw_text": "Patients with relapsing forms of multiple sclerosis (RMS) with active disease defined by clinical"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "or new"
+                      "raw_text": "or imaging features: (i) at least one clinical relapse over a 6-month period prior to screening; (ii) AND/OR at least one T1 gadolinium-enhancing lesion"
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
-                          "raw_text": "and/or enlarging T2 lesion"
+                          "raw_text": "or new"
                         },
                         "right": {
                           "AND": {
                             "left": {
-                              "raw_text": "as detected by brain Magnetic Resonance Imaging (MRI)"
+                              "raw_text": "and/or enlarging T2 lesion"
                             },
                             "right": {
-                              "NOT": {
+                              "AND": {
                                 "left": {
-                                  "raw_text": "no change of Disease-Modifying Treatment(s) (DMT) compared to a previous MRI performed within 24 months before screening"
+                                  "raw_text": "as detected by brain Magnetic Resonance Imaging (MRI)"
+                                },
+                                "right": {
+                                  "NOT": {
+                                    "left": {
+                                      "raw_text": "no change of Disease-Modifying Treatment(s) (DMT) compared to a previous MRI performed within 24 months before screening"
+                                    }
+                                  }
                                 }
                               }
                             }
@@ -48,20 +52,12 @@
           }
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "For women of childbearing potential: agreement to use an acceptable birth control method during the treatment period and for at least 12 months after the last dose of ocrelizumab"
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Participants should be beneficiary of healthcare coverage under the social security system"
-                }
-              }
-            }
-          }
+          "raw_text": "For women of childbearing potential: agreement to use an acceptable birth control method during the treatment period and for at least 12 months after the last dose of ocrelizumab"
         }
       }
+    },
+    "right": {
+      "raw_text": "Participants should be beneficiary of healthcare coverage under the social security system"
     }
   }
 }

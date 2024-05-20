@@ -1,16 +1,20 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Age = 19 and = 70 years;"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Presence of liver cirrhosis"
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Age = 19 and = 70 years;"
+                },
+                "right": {
+                  "raw_text": "Presence of liver cirrhosis"
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Serum albumin level = 3.5g/dl, ultrasound"
@@ -26,35 +30,27 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
                 "left": {
-                  "NOT": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "No administration of diuretics"
-                        },
-                        "right": {
-                          "raw_text": "and BCAA within the past 1 week"
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "No administration of diuretics"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Voluntary consent to take part in this trial"
-                    }
-                  }
+                  "raw_text": "and BCAA within the past 1 week"
                 }
               }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Voluntary consent to take part in this trial"
     }
   }
 }

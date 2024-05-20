@@ -1,54 +1,62 @@
 {
   "AND": {
     "left": {
-      "raw_text": "AJCC Stage III or greater",
-      "Measurement": [
-        "AJCC"
-      ],
-      "Value": [
-        "Stage III or greater"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Undifferentiated"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": ", Anaplastic"
-                },
-                "right": {
-                  "raw_text": "or Medullary Thyroid Cancer",
-                  "Condition": [
-                    "Medullary Thyroid Cancer"
-                  ]
-                }
-              }
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "NOT": {
-                "left": {
-                  "raw_text": "other than 0.1-0.5 mU/L",
-                  "Value": [
-                    "0.1-0.5 mU/L"
-                  ],
-                  "Negation": [
-                    "other than"
-                  ]
-                }
-              }
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "AJCC Stage III or greater",
+                          "Measurement": [
+                            "AJCC"
+                          ],
+                          "Value": [
+                            "Stage III or greater"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Undifferentiated"
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", Anaplastic"
+                                },
+                                "right": {
+                                  "raw_text": "or Medullary Thyroid Cancer",
+                                  "Condition": [
+                                    "Medullary Thyroid Cancer"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "other than 0.1-0.5 mU/L",
+                          "Value": [
+                            "0.1-0.5 mU/L"
+                          ],
+                          "Negation": [
+                            "other than"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "History of gastrointestinal malabsorption",
@@ -63,62 +71,50 @@
                       ]
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "Pregnancy",
+              "Pregnancy_considerations": [
+                "Pregnancy"
+              ]
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "alter the absorption",
+                  "Negation": [
+                    "alter"
+                  ]
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Pregnancy",
-                      "Pregnancy_considerations": [
-                        "Pregnancy"
-                      ]
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "NOT": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "alter the absorption",
-                                  "Negation": [
-                                    "alter"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": "or metabolism of levothyroxine",
-                                  "Observation": [
-                                    "metabolism of levothyroxine"
-                                  ],
-                                  "Drug": [
-                                    "levothyroxine"
-                                  ]
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Prior use of levothyroxine",
-                              "Drug": [
-                                "levothyroxine"
-                              ],
-                              "Temporal": [
-                                "Prior"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "or metabolism of levothyroxine",
+                  "Observation": [
+                    "metabolism of levothyroxine"
+                  ],
+                  "Drug": [
+                    "levothyroxine"
+                  ]
                 }
               }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Prior use of levothyroxine",
+      "Drug": [
+        "levothyroxine"
+      ],
+      "Temporal": [
+        "Prior"
+      ]
     }
   }
 }

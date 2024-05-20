@@ -1,64 +1,64 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Any active respiratory",
-          "Qualifier": [
-            "active"
-          ]
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": ", cardiovascular"
+              "raw_text": "Any active respiratory",
+              "Qualifier": [
+                "active"
+              ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "or other disease",
-                  "Qualifier": [
-                    "other"
-                  ],
-                  "Condition": [
-                    "disease"
-                  ]
+                  "raw_text": ", cardiovascular"
                 },
                 "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "requiring regular treatment or being otherwise relevant for tolerance of hypoxia",
+                      "raw_text": "or other disease",
                       "Qualifier": [
                         "other"
                       ],
-                      "Mood": [
-                        "requiring"
-                      ],
-                      "Procedure": [
-                        "treatment"
-                      ],
                       "Condition": [
-                        "tolerance",
-                        "hypoxia"
+                        "disease"
                       ]
                     },
                     "right": {
-                      "raw_text": "or altitude exposure.",
-                      "Condition": [
-                        "altitude exposure"
-                      ]
+                      "OR": {
+                        "left": {
+                          "raw_text": "requiring regular treatment or being otherwise relevant for tolerance of hypoxia",
+                          "Qualifier": [
+                            "other"
+                          ],
+                          "Mood": [
+                            "requiring"
+                          ],
+                          "Procedure": [
+                            "treatment"
+                          ],
+                          "Condition": [
+                            "tolerance",
+                            "hypoxia"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or altitude exposure.",
+                          "Condition": [
+                            "altitude exposure"
+                          ]
+                        }
+                      }
                     }
                   }
                 }
               }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "Any condition that may interfere with protocol compliance including current heavy smoking",
@@ -90,32 +90,28 @@
               ]
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Allergy to acetazolamide",
+          "Condition": [
+            "Allergy"
+          ],
+          "Drug": [
+            "acetazolamide"
+          ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Allergy to acetazolamide",
-                  "Condition": [
-                    "Allergy"
-                  ],
-                  "Drug": [
-                    "acetazolamide"
-                  ]
-                },
-                "right": {
-                  "raw_text": "and other sulfonamides.",
-                  "Qualifier": [
-                    "other"
-                  ],
-                  "Drug": [
-                    "sulfonamides"
-                  ]
-                }
-              }
-            }
-          }
+          "raw_text": "and other sulfonamides.",
+          "Qualifier": [
+            "other"
+          ],
+          "Drug": [
+            "sulfonamides"
+          ]
         }
       }
     }

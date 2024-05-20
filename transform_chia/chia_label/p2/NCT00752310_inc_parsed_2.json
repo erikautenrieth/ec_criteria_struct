@@ -1,36 +1,36 @@
 {
   "AND": {
     "left": {
-      "NOT": {
+      "AND": {
         "left": {
-          "OR": {
+          "NOT": {
             "left": {
-              "raw_text": "Non-smoking"
-            },
-            "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", or smoking no more than 10 cigarettes"
+                  "raw_text": "Non-smoking"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", or 2 cigars"
+                      "raw_text": ", or smoking no more than 10 cigarettes"
                     },
                     "right": {
-                      "raw_text": ", or 2 pipes per day for at least 3 months prior to selection"
+                      "OR": {
+                        "left": {
+                          "raw_text": ", or 2 cigars"
+                        },
+                        "right": {
+                          "raw_text": ", or 2 pipes per day for at least 3 months prior to selection"
+                        }
+                      }
                     }
                   }
                 }
               }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "AND": {
             "left": {
               "raw_text": "Normal weight"
@@ -46,27 +46,23 @@
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Able to comply with protocol requirements. Healthy"
         },
         "right": {
           "AND": {
             "left": {
-              "AND": {
+              "raw_text": "on the basis of a medical evaluation"
+            },
+            "right": {
+              "NOT": {
                 "left": {
-                  "raw_text": "Able to comply with protocol requirements. Healthy"
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "on the basis of a medical evaluation"
-                    },
-                    "right": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "absence of any clinically relevant abnormality and includes a physical examination, medical history, electrocardiogram (ECG), vital signs, and the results of blood biochemistry, blood coagulation, and hematology tests and a urinalysis carried out at screening."
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "absence of any clinically relevant abnormality and includes a physical examination, medical history, electrocardiogram (ECG), vital signs, and the results of blood biochemistry, blood coagulation, and hematology tests and a urinalysis carried out at screening."
                 }
               }
             }

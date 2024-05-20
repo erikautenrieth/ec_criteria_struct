@@ -1,67 +1,71 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Clinically significant abnormalities of glucose metabolism",
-      "Qualifier": [
-        "Clinically significant",
-        "significant"
-      ],
-      "Condition": [
-        "abnormalities of glucose metabolism"
-      ],
-      "Subjective_judgement": [
-        "significant"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Spinal cord compression",
-              "Condition": [
-                "Spinal cord compression"
-              ]
-            },
-            "right": {
-              "NOT": {
+              "AND": {
                 "left": {
-                  "AND": {
+                  "raw_text": "Clinically significant abnormalities of glucose metabolism",
+                  "Qualifier": [
+                    "Clinically significant",
+                    "significant"
+                  ],
+                  "Condition": [
+                    "abnormalities of glucose metabolism"
+                  ],
+                  "Subjective_judgement": [
+                    "significant"
+                  ]
+                },
+                "right": {
+                  "OR": {
                     "left": {
-                      "raw_text": "unless asymptomatic, treated and stable",
+                      "raw_text": "Spinal cord compression",
                       "Condition": [
-                        "asymptomatic"
-                      ],
-                      "Negation": [
-                        "unless"
-                      ],
-                      "Qualifier": [
-                        "treated",
-                        "stable"
+                        "Spinal cord compression"
                       ]
                     },
                     "right": {
                       "NOT": {
                         "left": {
-                          "raw_text": "not requiring steroids)",
-                          "Drug": [
-                            "steroids"
-                          ],
-                          "Negation": [
-                            "not"
-                          ]
+                          "AND": {
+                            "left": {
+                              "raw_text": "unless asymptomatic, treated and stable",
+                              "Condition": [
+                                "asymptomatic"
+                              ],
+                              "Negation": [
+                                "unless"
+                              ],
+                              "Qualifier": [
+                                "treated",
+                                "stable"
+                              ]
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "not requiring steroids)",
+                                  "Drug": [
+                                    "steroids"
+                                  ],
+                                  "Negation": [
+                                    "not"
+                                  ]
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
                   }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Evidence of severe",
@@ -107,82 +111,59 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Evidence of clinically significant cardiac abnormalities",
+              "Qualifier": [
+                "clinically significant",
+                "significant"
+              ],
+              "Undefined_semantics": [
+                "clinically significant"
+              ],
+              "Condition": [
+                "cardiac abnormalities"
+              ],
+              "Subjective_judgement": [
+                "significant"
+              ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
+                  "raw_text": ", uncontrolled hypotension",
+                  "Qualifier": [
+                    "uncontrolled"
+                  ],
+                  "Condition": [
+                    "uncontrolled hypotension"
+                  ]
+                },
+                "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "Evidence of clinically significant cardiac abnormalities",
-                      "Qualifier": [
-                        "clinically significant",
-                        "significant"
-                      ],
-                      "Undefined_semantics": [
-                        "clinically significant"
-                      ],
-                      "Condition": [
-                        "cardiac abnormalities"
-                      ],
-                      "Subjective_judgement": [
-                        "significant"
+                      "raw_text": ", left ventricular ejection fraction",
+                      "Measurement": [
+                        "left ventricular ejection fraction"
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", uncontrolled hypotension",
-                          "Qualifier": [
-                            "uncontrolled"
-                          ],
-                          "Condition": [
-                            "uncontrolled hypotension"
-                          ]
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", left ventricular ejection fraction",
-                              "Measurement": [
-                                "left ventricular ejection fraction"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "below the lower limit of normal for the site or experience of significant cardiac interventional procedures",
-                              "Value": [
-                                "below the lower limit of normal"
-                              ],
-                              "Procedure": [
-                                "cardiac interventional procedures"
-                              ],
-                              "Qualifier": [
-                                "significant"
-                              ],
-                              "Subjective_judgement": [
-                                "significant"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "A bad reaction to AZD5363 or any drugs similar to it in structure or class",
-                      "Condition": [
-                        "bad reaction to AZD5363"
+                      "raw_text": "below the lower limit of normal for the site or experience of significant cardiac interventional procedures",
+                      "Value": [
+                        "below the lower limit of normal"
                       ],
-                      "Drug": [
-                        "AZD5363"
+                      "Procedure": [
+                        "cardiac interventional procedures"
                       ],
-                      "Context_Error": [
-                        "A bad reaction to AZD5363 or any drugs similar to it in structure or class"
+                      "Qualifier": [
+                        "significant"
                       ],
-                      "Non-query-able": [
-                        "A bad reaction to AZD5363 or any drugs similar to it in structure or class"
+                      "Subjective_judgement": [
+                        "significant"
                       ]
                     }
                   }
@@ -192,6 +173,21 @@
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "A bad reaction to AZD5363 or any drugs similar to it in structure or class",
+      "Condition": [
+        "bad reaction to AZD5363"
+      ],
+      "Drug": [
+        "AZD5363"
+      ],
+      "Context_Error": [
+        "A bad reaction to AZD5363 or any drugs similar to it in structure or class"
+      ],
+      "Non-query-able": [
+        "A bad reaction to AZD5363 or any drugs similar to it in structure or class"
+      ]
     }
   }
 }

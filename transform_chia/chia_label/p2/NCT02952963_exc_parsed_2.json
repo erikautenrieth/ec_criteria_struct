@@ -1,30 +1,34 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Fasting plasma glucose"
-        },
-        "right": {
-          "raw_text": "> 7,0 mM, HbA1c > 48 mmol/mol 3 months after RYGB"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Dysregulated thyroid diseases"
-            },
-            "right": {
-              "raw_text": ", use of antithyroid treatment."
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Fasting plasma glucose"
+                    },
+                    "right": {
+                      "raw_text": "> 7,0 mM, HbA1c > 48 mmol/mol 3 months after RYGB"
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Dysregulated thyroid diseases"
+                    },
+                    "right": {
+                      "raw_text": ", use of antithyroid treatment."
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Late diabetic complications as retinopathy"
@@ -47,44 +51,33 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Complications"
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "AND": {
+                  "raw_text": "to RYGB. Documented reactive hypoglycaemia"
+                },
+                "right": {
+                  "OR": {
                     "left": {
-                      "raw_text": "Complications"
+                      "raw_text": ", severe dumping (vomiting"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "to RYGB. Documented reactive hypoglycaemia"
+                          "raw_text": ", diarrhea"
                         },
                         "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", severe dumping (vomiting"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": ", diarrhea"
-                                },
-                                "right": {
-                                  "raw_text": ", severe abdominal pain after food intake)"
-                                }
-                              }
-                            }
-                          }
+                          "raw_text": ", severe abdominal pain after food intake)"
                         }
                       }
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Cholecystectomy."
                     }
                   }
                 }
@@ -93,6 +86,9 @@
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Cholecystectomy."
     }
   }
 }

@@ -1,100 +1,112 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Patients with severe complications",
-          "Condition": [
-            "complications"
-          ],
-          "Qualifier": [
-            "severe"
-          ],
-          "Drug": [
-            "Patients"
-          ]
-        },
-        "right": {
-          "raw_text": "or severe infection;",
-          "Qualifier": [
-            "severe"
-          ],
-          "Condition": [
-            "infection"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Invasion of central nervous system;",
-          "Condition": [
-            "Invasion"
-          ],
-          "Qualifier": [
-            "central nervous system"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "Patients with severe heart disease history, including ventricular tachycardia",
-                  "Qualifier": [
-                    "severe"
-                  ],
-                  "Condition": [
-                    "heart disease",
-                    "ventricular tachycardia"
-                  ],
-                  "Drug": [
-                    "Patients"
-                  ]
-                },
-                "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "(VT), atrial fibrillation",
-                      "Condition": [
-                        "VT",
-                        "atrial fibrillation"
-                      ]
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Patients with severe complications",
+                              "Condition": [
+                                "complications"
+                              ],
+                              "Qualifier": [
+                                "severe"
+                              ],
+                              "Drug": [
+                                "Patients"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or severe infection;",
+                              "Qualifier": [
+                                "severe"
+                              ],
+                              "Condition": [
+                                "infection"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "Invasion of central nervous system;",
+                          "Condition": [
+                            "Invasion"
+                          ],
+                          "Qualifier": [
+                            "central nervous system"
+                          ]
+                        }
+                      }
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "(AF), heart block",
+                          "raw_text": "Patients with severe heart disease history, including ventricular tachycardia",
+                          "Qualifier": [
+                            "severe"
+                          ],
                           "Condition": [
-                            "AF",
-                            "heart block"
+                            "heart disease",
+                            "ventricular tachycardia"
+                          ],
+                          "Drug": [
+                            "Patients"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", myocardial infarction",
+                              "raw_text": "(VT), atrial fibrillation",
                               "Condition": [
-                                "myocardial infarction"
+                                "VT",
+                                "atrial fibrillation"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "(MI), congestive heart failure",
+                                  "raw_text": "(AF), heart block",
                                   "Condition": [
-                                    "MI",
-                                    "congestive heart failure"
+                                    "AF",
+                                    "heart block"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "(CHF), coronary heart disease patients needed therapy;",
-                                  "Condition": [
-                                    "heart disease",
-                                    "CHF",
-                                    "coronary heart disease"
-                                  ]
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": ", myocardial infarction",
+                                      "Condition": [
+                                        "myocardial infarction"
+                                      ]
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "(MI), congestive heart failure",
+                                          "Condition": [
+                                            "MI",
+                                            "congestive heart failure"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "(CHF), coronary heart disease patients needed therapy;",
+                                          "Condition": [
+                                            "heart disease",
+                                            "CHF",
+                                            "coronary heart disease"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
                                 }
                               }
                             }
@@ -103,12 +115,8 @@
                       }
                     }
                   }
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "patients with severe allergic",
@@ -155,78 +163,66 @@
                       }
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "patients received doxorubicin",
+                  "Drug": [
+                    "doxorubicin"
+                  ]
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "patients received doxorubicin",
-                          "Drug": [
-                            "doxorubicin"
-                          ]
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "therapy, total cumulative dose of adriamycin",
-                              "Drug": [
-                                "adriamycin"
-                              ],
-                              "Qualifier": [
-                                "total cumulative dose"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "was more than 300 mg/m2, total cumulative dose of epirubicin was more than 450 mg/m2;",
-                              "Multiplier": [
-                                "more than 300 mg/m2",
-                                "more than 450 mg/m2"
-                              ],
-                              "Qualifier": [
-                                "total cumulative dose"
-                              ],
-                              "Drug": [
-                                "epirubicin"
-                              ]
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "therapy, total cumulative dose of adriamycin",
+                      "Drug": [
+                        "adriamycin"
+                      ],
+                      "Qualifier": [
+                        "total cumulative dose"
+                      ]
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Patients participate in other clinical studies;",
-                          "Qualifier": [
-                            "other"
-                          ],
-                          "Drug": [
-                            "Patients"
-                          ],
-                          "Competing_trial": [
-                            "Patients participate in other clinical studies"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Other patients who are not suitable for the study.",
-                              "Non-query-able": [
-                                "Other patients who are not suitable for the study"
-                              ]
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "was more than 300 mg/m2, total cumulative dose of epirubicin was more than 450 mg/m2;",
+                      "Multiplier": [
+                        "more than 300 mg/m2",
+                        "more than 450 mg/m2"
+                      ],
+                      "Qualifier": [
+                        "total cumulative dose"
+                      ],
+                      "Drug": [
+                        "epirubicin"
+                      ]
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "Patients participate in other clinical studies;",
+          "Qualifier": [
+            "other"
+          ],
+          "Drug": [
+            "Patients"
+          ],
+          "Competing_trial": [
+            "Patients participate in other clinical studies"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Other patients who are not suitable for the study.",
+      "Non-query-able": [
+        "Other patients who are not suitable for the study"
+      ]
     }
   }
 }

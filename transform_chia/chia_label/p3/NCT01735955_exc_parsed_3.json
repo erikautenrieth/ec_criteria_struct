@@ -1,85 +1,89 @@
 {
   "AND": {
     "left": {
-      "NOT": {
+      "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "discontinued from nilotinib",
-              "Negation": [
-                "discontinued"
-              ],
-              "Drug": [
-                "nilotinib"
-              ]
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "treatment in the parent study due to unacceptable toxicity",
-                  "Procedure": [
-                    "treatment"
-                  ],
-                  "Condition": [
-                    "unacceptable toxicity"
-                  ]
-                },
-                "right": {
-                  "OR": {
+                  "NOT": {
                     "left": {
-                      "raw_text": ", non-compliance",
-                      "Observation": [
-                        "non-compliance"
-                      ]
-                    },
-                    "right": {
-                      "NOT": {
+                      "AND": {
                         "left": {
+                          "raw_text": "discontinued from nilotinib",
+                          "Negation": [
+                            "discontinued"
+                          ],
+                          "Drug": [
+                            "nilotinib"
+                          ]
+                        },
+                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "withdrawal of consent",
-                              "Negation": [
-                                "withdrawal"
+                              "raw_text": "treatment in the parent study due to unacceptable toxicity",
+                              "Procedure": [
+                                "treatment"
                               ],
-                              "Observation": [
-                                "consent"
+                              "Condition": [
+                                "unacceptable toxicity"
                               ]
                             },
                             "right": {
-                              "raw_text": "or any other reason",
-                              "Observation": [
-                                "any other reason"
-                              ]
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", non-compliance",
+                                  "Observation": [
+                                    "non-compliance"
+                                  ]
+                                },
+                                "right": {
+                                  "NOT": {
+                                    "left": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "withdrawal of consent",
+                                          "Negation": [
+                                            "withdrawal"
+                                          ],
+                                          "Observation": [
+                                            "consent"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "or any other reason",
+                                          "Observation": [
+                                            "any other reason"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             }
                           }
                         }
                       }
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "Patient has participated in a Novartis sponsored combination trial where nilotinib was dispensed in combination with another study medication and patient is still receiving combination therapy",
+                  "Drug": [
+                    "nilotinib"
+                  ],
+                  "Qualifier": [
+                    "Novartis sponsored"
+                  ],
+                  "Non-representable": [
+                    "Patient has participated in a Novartis sponsored combination trial where nilotinib was dispensed in combination with another study medication and patient is still receiving combination therapy"
+                  ]
                 }
               }
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Patient has participated in a Novartis sponsored combination trial where nilotinib was dispensed in combination with another study medication and patient is still receiving combination therapy",
-          "Drug": [
-            "nilotinib"
-          ],
-          "Qualifier": [
-            "Novartis sponsored"
-          ],
-          "Non-representable": [
-            "Patient has participated in a Novartis sponsored combination trial where nilotinib was dispensed in combination with another study medication and patient is still receiving combination therapy"
-          ]
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "AND": {
                 "left": {
                   "raw_text": "Patients who are currently receiving treatment",
@@ -122,69 +126,61 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Pregnant",
-                      "Observation": [
-                        "Pregnant"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "or nursing (lactating) women, where pregnancy is defined as the state of a female after conception and until the termination of gestation, confirmed by a positive hcG laboratory test.",
-                      "Observation": [
-                        "nursing",
-                        "lactating",
-                        "hcG laboratory test"
-                      ],
-                      "Person": [
-                        "women"
-                      ],
-                      "Value": [
-                        "positive"
-                      ]
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "unless they are using highly effective methods of contraception during the study and for 30 days after the final dose of nilotinib.",
-                          "Drug": [
-                            "nilotinib"
-                          ],
-                          "Negation": [
-                            "unless"
-                          ],
-                          "Qualifier": [
-                            "highly effective methods"
-                          ],
-                          "Observation": [
-                            "contraception"
-                          ],
-                          "Temporal": [
-                            "during the study",
-                            "for 30 days after the final dose of nilotinib"
-                          ],
-                          "Reference_point": [
-                            "the final dose of nilotinib"
-                          ],
-                          "Scope": [
-                            "during the study and for 30 days after the final dose of nilotinib"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnant",
+              "Observation": [
+                "Pregnant"
+              ]
+            },
+            "right": {
+              "raw_text": "or nursing (lactating) women, where pregnancy is defined as the state of a female after conception and until the termination of gestation, confirmed by a positive hcG laboratory test.",
+              "Observation": [
+                "nursing",
+                "lactating",
+                "hcG laboratory test"
+              ],
+              "Person": [
+                "women"
+              ],
+              "Value": [
+                "positive"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "unless they are using highly effective methods of contraception during the study and for 30 days after the final dose of nilotinib.",
+          "Drug": [
+            "nilotinib"
+          ],
+          "Negation": [
+            "unless"
+          ],
+          "Qualifier": [
+            "highly effective methods"
+          ],
+          "Observation": [
+            "contraception"
+          ],
+          "Temporal": [
+            "during the study",
+            "for 30 days after the final dose of nilotinib"
+          ],
+          "Reference_point": [
+            "the final dose of nilotinib"
+          ],
+          "Scope": [
+            "during the study and for 30 days after the final dose of nilotinib"
+          ]
         }
       }
     }

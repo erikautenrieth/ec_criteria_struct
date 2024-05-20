@@ -1,91 +1,87 @@
 {
-  "AND": {
+  "OR": {
     "left": {
+      "raw_text": "Pregnancy",
+      "Condition": [
+        "Pregnancy"
+      ]
+    },
+    "right": {
       "OR": {
         "left": {
-          "raw_text": "Pregnancy",
+          "raw_text": ", coagulopathy",
           "Condition": [
-            "Pregnancy"
+            "coagulopathy"
           ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": ", coagulopathy",
+              "raw_text": ", allergy",
               "Condition": [
-                "coagulopathy"
+                "allergy"
               ]
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", allergy",
+                  "raw_text": "to bupivacaine, renal failure",
+                  "Drug": [
+                    "bupivacaine"
+                  ],
                   "Condition": [
-                    "allergy"
+                    "renal failure"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "to bupivacaine, renal failure",
-                      "Drug": [
-                        "bupivacaine"
-                      ],
+                      "raw_text": ", hepatic insufficiency",
                       "Condition": [
-                        "renal failure"
+                        "hepatic insufficiency"
                       ]
                     },
                     "right": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": ", hepatic insufficiency",
+                          "raw_text": ", and/or inappropriate candidate",
                           "Condition": [
-                            "hepatic insufficiency"
+                            "inappropriate candidate"
                           ]
                         },
                         "right": {
-                          "AND": {
+                          "OR": {
                             "left": {
-                              "raw_text": ", and/or inappropriate candidate",
+                              "raw_text": "for usual therapy (specifically, if unable to receive the usual preoperative interscalene nerve block: preexisting nerve injury on side of surgery, refusal of nerve block",
+                              "Procedure": [
+                                "usual therapy",
+                                "preoperative interscalene nerve block"
+                              ],
+                              "Mood": [
+                                "unable to receive"
+                              ],
+                              "Temporal": [
+                                "preexisting"
+                              ],
                               "Condition": [
-                                "inappropriate candidate"
+                                "nerve injury",
+                                "refusal of nerve block"
+                              ],
+                              "Qualifier": [
+                                "side of surgery"
+                              ],
+                              "Scope": [
+                                "unable to receive the usual preoperative interscalene nerve block"
                               ]
                             },
                             "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "for usual therapy (specifically, if unable to receive the usual preoperative interscalene nerve block: preexisting nerve injury on side of surgery, refusal of nerve block",
-                                  "Procedure": [
-                                    "usual therapy",
-                                    "preoperative interscalene nerve block"
-                                  ],
-                                  "Mood": [
-                                    "unable to receive"
-                                  ],
-                                  "Temporal": [
-                                    "preexisting"
-                                  ],
-                                  "Condition": [
-                                    "nerve injury",
-                                    "refusal of nerve block"
-                                  ],
-                                  "Qualifier": [
-                                    "side of surgery"
-                                  ],
-                                  "Scope": [
-                                    "unable to receive the usual preoperative interscalene nerve block"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": ", infection at site of nerve block).",
-                                  "Condition": [
-                                    "infection"
-                                  ],
-                                  "Qualifier": [
-                                    "site of nerve block"
-                                  ]
-                                }
-                              }
+                              "raw_text": ", infection at site of nerve block).",
+                              "Condition": [
+                                "infection"
+                              ],
+                              "Qualifier": [
+                                "site of nerve block"
+                              ]
                             }
                           }
                         }

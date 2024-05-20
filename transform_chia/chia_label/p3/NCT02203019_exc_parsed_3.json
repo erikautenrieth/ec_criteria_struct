@@ -1,62 +1,70 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Patients with documented allergies to propofol",
-          "Condition": [
-            "allergies"
-          ],
-          "Drug": [
-            "propofol"
-          ]
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": ", dexmedetomidine",
-              "Drug": [
-                "dexmedetomidine"
-              ]
-            },
-            "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", fentanyl",
+                  "raw_text": "Patients with documented allergies to propofol",
+                  "Condition": [
+                    "allergies"
+                  ],
                   "Drug": [
-                    "fentanyl"
+                    "propofol"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", eggs",
-                      "Observation": [
-                        "eggs"
+                      "raw_text": ", dexmedetomidine",
+                      "Drug": [
+                        "dexmedetomidine"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "or egg products",
-                          "Observation": [
-                            "egg products"
+                          "raw_text": ", fentanyl",
+                          "Drug": [
+                            "fentanyl"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", or soy",
+                              "raw_text": ", eggs",
                               "Observation": [
-                                "soy"
+                                "eggs"
                               ]
                             },
                             "right": {
-                              "raw_text": "or soy products.",
-                              "Observation": [
-                                "soy",
-                                "soy products"
-                              ]
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or egg products",
+                                  "Observation": [
+                                    "egg products"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": ", or soy",
+                                      "Observation": [
+                                        "soy"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "or soy products.",
+                                      "Observation": [
+                                        "soy",
+                                        "soy products"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
                             }
                           }
                         }
@@ -65,73 +73,61 @@
                   }
                 }
               }
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "OR": {
-            "left": {
-              "raw_text": "A heart rate",
-              "Measurement": [
-                "heart rate"
-              ]
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "less than 50 beats/minute or grade 2",
-                  "Value": [
-                    "less than 50 beats/minute"
-                  ],
-                  "Qualifier": [
-                    "grade 2"
+                  "raw_text": "A heart rate",
+                  "Measurement": [
+                    "heart rate"
                   ]
                 },
                 "right": {
-                  "raw_text": "or 3 AV heart block",
-                  "Condition": [
-                    "AV heart block"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "less than 50 beats/minute or grade 2",
+                      "Value": [
+                        "less than 50 beats/minute"
+                      ],
+                      "Qualifier": [
+                        "grade 2"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or 3 AV heart block",
+                      "Condition": [
+                        "AV heart block"
+                      ]
+                    }
+                  }
                 }
               }
             }
           }
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Mean arterial pressure less than 55 mmHg despite appropriate fluid resuscitation and vasopressor support.",
-              "Measurement": [
-                "Mean arterial pressure"
-              ],
-              "Value": [
-                "less than 55 mmHg"
-              ],
-              "Procedure": [
-                "fluid resuscitation",
-                "vasopressor"
-              ]
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Current triglyceride level > 400 mg/dl",
-                  "Measurement": [
-                    "triglyceride level"
-                  ],
-                  "Value": [
-                    "> 400 mg/dl"
-                  ]
-                }
-              }
-            }
-          }
+          "raw_text": "Mean arterial pressure less than 55 mmHg despite appropriate fluid resuscitation and vasopressor support.",
+          "Measurement": [
+            "Mean arterial pressure"
+          ],
+          "Value": [
+            "less than 55 mmHg"
+          ],
+          "Procedure": [
+            "fluid resuscitation",
+            "vasopressor"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Current triglyceride level > 400 mg/dl",
+      "Measurement": [
+        "triglyceride level"
+      ],
+      "Value": [
+        "> 400 mg/dl"
+      ]
     }
   }
 }

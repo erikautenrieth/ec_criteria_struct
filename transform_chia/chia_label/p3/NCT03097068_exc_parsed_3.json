@@ -1,20 +1,20 @@
 {
   "AND": {
     "left": {
-      "raw_text": "History of anti-vascular endothelial growth factor treatment in the past 12 months",
-      "Drug": [
-        "anti-vascular endothelial growth factor"
-      ],
-      "Temporal": [
-        "in the past 12 months"
-      ],
-      "Procedure": [
-        "treatment"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "History of anti-vascular endothelial growth factor treatment in the past 12 months",
+          "Drug": [
+            "anti-vascular endothelial growth factor"
+          ],
+          "Temporal": [
+            "in the past 12 months"
+          ],
+          "Procedure": [
+            "treatment"
+          ]
+        },
+        "right": {
           "AND": {
             "left": {
               "raw_text": "Any diabetic macular edema",
@@ -32,45 +32,41 @@
               ]
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Heart attack",
+          "Condition": [
+            "Heart attack"
+          ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
+              "raw_text": ", stroke",
+              "Condition": [
+                "stroke"
+              ]
+            },
+            "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Heart attack",
+                  "raw_text": ", transient ischemic attack",
                   "Condition": [
-                    "Heart attack"
+                    "transient ischemic attack"
                   ]
                 },
                 "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": ", stroke",
-                      "Condition": [
-                        "stroke"
-                      ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", transient ischemic attack",
-                          "Condition": [
-                            "transient ischemic attack"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or acute congestive heart failure within 4 months",
-                          "Condition": [
-                            "acute congestive heart failure"
-                          ],
-                          "Temporal": [
-                            "within 4 months"
-                          ]
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "or acute congestive heart failure within 4 months",
+                  "Condition": [
+                    "acute congestive heart failure"
+                  ],
+                  "Temporal": [
+                    "within 4 months"
+                  ]
                 }
               }
             }

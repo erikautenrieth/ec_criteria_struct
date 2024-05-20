@@ -1,55 +1,127 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "cauda equina",
-          "Qualifier": [
-            "cauda equina"
-          ]
-        },
-        "right": {
-          "raw_text": "or conus lesion",
-          "Qualifier": [
-            "conus"
-          ],
-          "Condition": [
-            "lesion"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "currently use ventilator",
-          "Temporal": [
-            "currently"
-          ],
-          "Procedure": [
-            "ventilator"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "colostomy",
-                  "Procedure": [
-                    "colostomy"
-                  ]
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "cauda equina",
+                                          "Qualifier": [
+                                            "cauda equina"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "or conus lesion",
+                                          "Qualifier": [
+                                            "conus"
+                                          ],
+                                          "Condition": [
+                                            "lesion"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    "right": {
+                                      "raw_text": "currently use ventilator",
+                                      "Temporal": [
+                                        "currently"
+                                      ],
+                                      "Procedure": [
+                                        "ventilator"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "colostomy",
+                                      "Procedure": [
+                                        "colostomy"
+                                      ]
+                                    },
+                                    "right": {
+                                      "NOT": {
+                                        "left": {
+                                          "raw_text": "do not perform regular bowel care for any reason",
+                                          "Procedure": [
+                                            "regular bowel care"
+                                          ],
+                                          "Negation": [
+                                            "do not perform",
+                                            "not"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "any skin breakdown (pressure sores)",
+                              "Condition": [
+                                "skin breakdown",
+                                "pressure sores"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "not speak English",
+                              "Negation": [
+                                "not"
+                              ],
+                              "Observation": [
+                                "speak English"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "are under 19 years old",
+                      "Value": [
+                        "under 19 years"
+                      ],
+                      "Person": [
+                        "old"
+                      ]
+                    }
+                  }
                 },
                 "right": {
-                  "NOT": {
+                  "OR": {
                     "left": {
-                      "raw_text": "do not perform regular bowel care for any reason",
-                      "Procedure": [
-                        "regular bowel care"
+                      "raw_text": "are pregnant",
+                      "Condition": [
+                        "pregnant"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or think you might be pregnant",
+                      "Condition": [
+                        "pregnant"
                       ],
-                      "Negation": [
-                        "do not perform",
-                        "not"
+                      "Mood": [
+                        "think you might be"
                       ]
                     }
                   }
@@ -57,131 +129,55 @@
               }
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "any skin breakdown (pressure sores)",
-                  "Condition": [
-                    "skin breakdown",
-                    "pressure sores"
-                  ]
+                  "raw_text": "medical"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "not speak English",
-                          "Negation": [
-                            "not"
-                          ],
-                          "Observation": [
-                            "speak English"
-                          ]
-                        }
-                      }
+                      "raw_text": "/psychiatric condition",
+                      "Condition": [
+                        "psychiatric condition"
+                      ]
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "are under 19 years old",
-                          "Value": [
-                            "under 19 years"
-                          ],
-                          "Person": [
-                            "old"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "are pregnant",
-                                  "Condition": [
-                                    "pregnant"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": "or think you might be pregnant",
-                                  "Condition": [
-                                    "pregnant"
-                                  ],
-                                  "Mood": [
-                                    "think you might be"
-                                  ]
-                                }
-                              }
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "medical"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "/psychiatric condition",
-                                          "Condition": [
-                                            "psychiatric condition"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": "or substance abuse that is likely to affect your ability to complete this study",
-                                          "Condition": [
-                                            "substance abuse"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "currently using medications containing lidocaine",
-                                      "Temporal": [
-                                        "currently"
-                                      ],
-                                      "Drug": [
-                                        "medications containing lidocaine",
-                                        "lidocaine"
-                                      ]
-                                    },
-                                    "right": {
-                                      "AND": {
-                                        "left": {
-                                          "AND": {
-                                            "left": {
-                                              "raw_text": "allergy",
-                                              "Condition": [
-                                                "allergy"
-                                              ]
-                                            },
-                                            "right": {
-                                              "raw_text": "to lidocaine",
-                                              "Drug": [
-                                                "lidocaine"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "or substance abuse that is likely to affect your ability to complete this study",
+                      "Condition": [
+                        "substance abuse"
+                      ]
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "currently using medications containing lidocaine",
+          "Temporal": [
+            "currently"
+          ],
+          "Drug": [
+            "medications containing lidocaine",
+            "lidocaine"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "allergy",
+          "Condition": [
+            "allergy"
+          ]
+        },
+        "right": {
+          "raw_text": "to lidocaine",
+          "Drug": [
+            "lidocaine"
+          ]
         }
       }
     }

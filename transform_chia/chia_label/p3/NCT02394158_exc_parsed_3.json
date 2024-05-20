@@ -1,69 +1,73 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Established pre-existing diabetes (including unrecognised diabetes defined as a fasting plasma glucose",
-          "Condition": [
-            "diabetes"
-          ],
-          "Measurement": [
-            "fasting plasma glucose"
-          ]
-        },
-        "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "= 7.0mmol/L and/ or HbA1c = 48mmol/mol); Contraindications",
-              "Value": [
-                "= 7.0mmol/L",
-                "= 48mmol/mol)"
+              "raw_text": "Established pre-existing diabetes (including unrecognised diabetes defined as a fasting plasma glucose",
+              "Condition": [
+                "diabetes"
               ],
               "Measurement": [
-                "HbA1c"
-              ],
-              "Condition": [
-                "Contraindications"
+                "fasting plasma glucose"
               ]
             },
             "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "to metformin therapy (creatinine",
-                  "Drug": [
-                    "metformin"
+                  "raw_text": "= 7.0mmol/L and/ or HbA1c = 48mmol/mol); Contraindications",
+                  "Value": [
+                    "= 7.0mmol/L",
+                    "= 48mmol/mol)"
                   ],
                   "Measurement": [
-                    "creatinine"
+                    "HbA1c"
+                  ],
+                  "Condition": [
+                    "Contraindications"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "= 130\u00b5mol/L/ alanine transaminase",
-                      "Value": [
-                        "= 130\u00b5mol/L/"
+                      "raw_text": "to metformin therapy (creatinine",
+                      "Drug": [
+                        "metformin"
                       ],
                       "Measurement": [
-                        "alanine transaminase"
+                        "creatinine"
                       ]
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
-                          "raw_text": "= 2.0 x upper limit normal/ previous intolerance",
+                          "raw_text": "= 130\u00b5mol/L/ alanine transaminase",
                           "Value": [
-                            "= 2.0 x upper limit normal"
+                            "= 130\u00b5mol/L/"
                           ],
-                          "Condition": [
-                            "intolerance"
+                          "Measurement": [
+                            "alanine transaminase"
                           ]
                         },
                         "right": {
-                          "raw_text": "to metformin)",
-                          "Drug": [
-                            "metformin"
-                          ]
+                          "AND": {
+                            "left": {
+                              "raw_text": "= 2.0 x upper limit normal/ previous intolerance",
+                              "Value": [
+                                "= 2.0 x upper limit normal"
+                              ],
+                              "Condition": [
+                                "intolerance"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "to metformin)",
+                              "Drug": [
+                                "metformin"
+                              ]
+                            }
+                          }
                         }
                       }
                     }
@@ -72,28 +76,20 @@
               }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "raw_text": "Planned continued antenatal care/ delivery at centre not included in trial",
           "Competing_trial": [
             "Planned continued antenatal care/ delivery at centre not included in trial"
           ]
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Planned fast for cultural/ religious reasons e.g. Ramadan",
-              "Non-query-able": [
-                "Planned fast for cultural/ religious reasons e.g. Ramadan"
-              ]
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Planned fast for cultural/ religious reasons e.g. Ramadan",
+      "Non-query-able": [
+        "Planned fast for cultural/ religious reasons e.g. Ramadan"
+      ]
     }
   }
 }

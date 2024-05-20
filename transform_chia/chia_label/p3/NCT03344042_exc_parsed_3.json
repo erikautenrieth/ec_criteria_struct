@@ -1,32 +1,36 @@
 {
   "AND": {
     "left": {
-      "raw_text": "no consent",
-      "Informed_consent": [
-        "no consent"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "known allergy",
-              "Condition": [
-                "allergy"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "no consent",
+                  "Informed_consent": [
+                    "no consent"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "known allergy",
+                      "Condition": [
+                        "allergy"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "to administered opioid",
+                      "Drug": [
+                        "opioid"
+                      ]
+                    }
+                  }
+                }
+              }
             },
             "right": {
-              "raw_text": "to administered opioid",
-              "Drug": [
-                "opioid"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
               "AND": {
                 "left": {
                   "raw_text": "contraindications",
@@ -41,42 +45,34 @@
                   ]
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "coagulopathies including platelet count of less than 100,000",
-                  "Condition": [
-                    "coagulopathies"
-                  ],
-                  "Measurement": [
-                    "platelet count"
-                  ],
-                  "Value": [
-                    "less than 100,000"
-                  ],
-                  "Scope": [
-                    "platelet count of less than 100,000"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "spine surgery in past",
-                      "Procedure": [
-                        "spine surgery"
-                      ],
-                      "Temporal": [
-                        "in past"
-                      ]
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "coagulopathies including platelet count of less than 100,000",
+          "Condition": [
+            "coagulopathies"
+          ],
+          "Measurement": [
+            "platelet count"
+          ],
+          "Value": [
+            "less than 100,000"
+          ],
+          "Scope": [
+            "platelet count of less than 100,000"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "spine surgery in past",
+      "Procedure": [
+        "spine surgery"
+      ],
+      "Temporal": [
+        "in past"
+      ]
     }
   }
 }

@@ -1,87 +1,83 @@
 {
   "AND": {
     "left": {
-      "raw_text": "PRA > 50%",
-      "Measurement": [
-        "PRA"
-      ],
-      "Value": [
-        "> 50%"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "DSA > 1500 MFI",
-          "Measurement": [
-            "DSA"
-          ],
-          "Value": [
-            "> 1500 MFI"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "PRA > 50%",
+                  "Measurement": [
+                    "PRA"
+                  ],
+                  "Value": [
+                    "> 50%"
+                  ]
+                },
+                "right": {
+                  "raw_text": "DSA > 1500 MFI",
+                  "Measurement": [
+                    "DSA"
+                  ],
+                  "Value": [
+                    "> 1500 MFI"
+                  ]
+                }
+              }
+            },
+            "right": {
               "raw_text": "Retransplantation",
               "Condition": [
                 "Retransplantation"
               ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Patients who are planning to receive mycophenolate",
+              "Mood": [
+                "planning to"
+              ],
+              "Drug": [
+                "mycophenolate"
+              ]
             },
             "right": {
-              "AND": {
+              "NOT": {
                 "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Patients who are planning to receive mycophenolate",
-                      "Mood": [
-                        "planning to"
-                      ],
-                      "Drug": [
-                        "mycophenolate"
-                      ]
-                    },
-                    "right": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "instead of everolimus",
-                          "Negation": [
-                            "instead of"
-                          ],
-                          "Drug": [
-                            "everolimus"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Patients who have planning for follow-up",
-                          "Mood": [
-                            "planning for"
-                          ],
-                          "Procedure": [
-                            "follow-up"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "in another center",
-                          "Visit": [
-                            "another center"
-                          ]
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "instead of everolimus",
+                  "Negation": [
+                    "instead of"
+                  ],
+                  "Drug": [
+                    "everolimus"
+                  ]
                 }
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients who have planning for follow-up",
+          "Mood": [
+            "planning for"
+          ],
+          "Procedure": [
+            "follow-up"
+          ]
+        },
+        "right": {
+          "raw_text": "in another center",
+          "Visit": [
+            "another center"
+          ]
         }
       }
     }

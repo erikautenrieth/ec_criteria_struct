@@ -1,48 +1,52 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Known proved BKV nephropathy",
-      "Qualifier": [
-        "proved"
-      ],
-      "Condition": [
-        "BKV nephropathy"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Hypersensitivity to everolimus",
-              "Condition": [
-                "Hypersensitivity"
-              ],
-              "Drug": [
-                "everolimus"
-              ]
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": ", sirolimus",
-                  "Drug": [
-                    "sirolimus"
+                  "raw_text": "Known proved BKV nephropathy",
+                  "Qualifier": [
+                    "proved"
+                  ],
+                  "Condition": [
+                    "BKV nephropathy"
                   ]
                 },
                 "right": {
-                  "raw_text": "or excipient",
-                  "Drug": [
-                    "excipient"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "Hypersensitivity to everolimus",
+                      "Condition": [
+                        "Hypersensitivity"
+                      ],
+                      "Drug": [
+                        "everolimus"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", sirolimus",
+                          "Drug": [
+                            "sirolimus"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or excipient",
+                          "Drug": [
+                            "excipient"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Concomitant treatment by leflunomide",
@@ -81,48 +85,40 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Pregnant",
-                      "Condition": [
-                        "Pregnant"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "or lactating women",
-                      "Condition": [
-                        "lactating"
-                      ],
-                      "Person": [
-                        "women"
-                      ]
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "unless they are using a birth control method",
-                          "Negation": [
-                            "unless"
-                          ],
-                          "Procedure": [
-                            "birth control method"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnant",
+              "Condition": [
+                "Pregnant"
+              ]
+            },
+            "right": {
+              "raw_text": "or lactating women",
+              "Condition": [
+                "lactating"
+              ],
+              "Person": [
+                "women"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "unless they are using a birth control method",
+          "Negation": [
+            "unless"
+          ],
+          "Procedure": [
+            "birth control method"
+          ]
         }
       }
     }

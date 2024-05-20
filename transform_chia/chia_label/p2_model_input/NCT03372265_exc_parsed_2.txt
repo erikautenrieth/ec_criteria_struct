@@ -3,28 +3,32 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Allergy"
-        },
-        "right": {
-          "raw_text": "to LA"
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Infection in"
-            },
-            "right": {
-              "raw_text": "or near insertion site of the peripheral nerve catheter"
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Allergy"
+                    },
+                    "right": {
+                      "raw_text": "to LA"
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Infection in"
+                    },
+                    "right": {
+                      "raw_text": "or near insertion site of the peripheral nerve catheter"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "AND": {
                 "left": {
                   "raw_text": "Anatomical abnormalities"
@@ -40,31 +44,23 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Habitual use of opioids"
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Pregnancy"
-                        },
-                        "right": {
-                          "NOT": {
-                            "left": {
-                              "raw_text": "disproved by a negative pregnancy test before trial inclusion)"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Habitual use of opioids"
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Pregnancy"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "disproved by a negative pregnancy test before trial inclusion)"
             }
           }
         }

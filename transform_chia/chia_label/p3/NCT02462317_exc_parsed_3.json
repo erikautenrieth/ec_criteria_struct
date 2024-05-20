@@ -1,62 +1,58 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Previous antispastic drugs",
-      "Drug": [
-        "antispastic drugs"
-      ],
-      "Temporal": [
-        "Previous"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Contraindication for baclofen",
-              "Condition": [
-                "Contraindication"
-              ],
-              "Drug": [
-                "baclofen"
-              ]
-            },
-            "right": {
-              "raw_text": "or toxin",
-              "Drug": [
-                "toxin"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Antecedent of epileptic seizure",
-              "Condition": [
-                "epileptic seizure"
+              "raw_text": "Previous antispastic drugs",
+              "Drug": [
+                "antispastic drugs"
               ],
               "Temporal": [
-                "Antecedent"
+                "Previous"
               ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "Psychiatric antecedent",
+                  "raw_text": "Contraindication for baclofen",
                   "Condition": [
-                    "Psychiatric"
+                    "Contraindication"
                   ],
-                  "Temporal": [
-                    "antecedent"
+                  "Drug": [
+                    "baclofen"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or toxin",
+                  "Drug": [
+                    "toxin"
                   ]
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "Antecedent of epileptic seizure",
+          "Condition": [
+            "epileptic seizure"
+          ],
+          "Temporal": [
+            "Antecedent"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Psychiatric antecedent",
+      "Condition": [
+        "Psychiatric"
+      ],
+      "Temporal": [
+        "antecedent"
+      ]
     }
   }
 }

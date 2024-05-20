@@ -1,100 +1,42 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Age 65 - 79"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "History of coronary artery disease (MI"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "/heart attack"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": ", stroke"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", heart failure"
-                        },
-                        "right": {
-                          "raw_text": ", or peripheral artery disease)"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Cancer"
-                },
-                "right": {
-                  "NOT": {
-                    "left": {
-                      "raw_text": "no active treatment in the last year"
-                    }
-                  }
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "MCI (MoCA >18<26 -inclusive of 1 point if <12 years of education Group 2"
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "Decline physical function (walking speed < 1 m/s) Group 3 (Either or both)"
-                    },
-                    "right": {
                       "AND": {
                         "left": {
+                          "raw_text": "Age 65 - 79"
+                        },
+                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "Abdominal obesity (>88cm women"
+                              "raw_text": "History of coronary artery disease (MI"
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": ", >102cm men) AND hypertension (treated"
-                                },
-                                "right": {
-                                  "raw_text": "or resting blood pressure >140/90"
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Abdominal obesity (>88cm women"
+                                  "raw_text": "/heart attack"
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": ", >102cm men) AND hyperlipidemia (treated"
+                                      "raw_text": ", stroke"
                                     },
                                     "right": {
-                                      "raw_text": "or fasting total cholesterol >240 English literacy Willing to provide informed consent"
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": ", heart failure"
+                                        },
+                                        "right": {
+                                          "raw_text": ", or peripheral artery disease)"
+                                        }
+                                      }
                                     }
                                   }
                                 }
@@ -103,10 +45,64 @@
                           }
                         }
                       }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Cancer"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "no active treatment in the last year"
+                            }
+                          }
+                        }
+                      }
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "MCI (MoCA >18<26 -inclusive of 1 point if <12 years of education Group 2"
                 }
               }
+            },
+            "right": {
+              "raw_text": "Decline physical function (walking speed < 1 m/s) Group 3 (Either or both)"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Abdominal obesity (>88cm women"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", >102cm men) AND hypertension (treated"
+                },
+                "right": {
+                  "raw_text": "or resting blood pressure >140/90"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Abdominal obesity (>88cm women"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", >102cm men) AND hyperlipidemia (treated"
+            },
+            "right": {
+              "raw_text": "or fasting total cholesterol >240 English literacy Willing to provide informed consent"
             }
           }
         }

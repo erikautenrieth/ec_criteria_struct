@@ -1,87 +1,71 @@
 {
   "AND": {
     "left": {
-      "raw_text": "endometrial hyperplasia with atypia,",
-      "Condition": [
-        "endometrial hyperplasia",
-        "atypia"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "estrogen-progestin therapy in the 2 months before enrollment,",
-          "Procedure": [
-            "estrogen-progestin therapy"
-          ],
-          "Temporal": [
-            "in the 2 months before enrollment"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "autoimmune diseases,",
-              "Condition": [
-                "autoimmune diseases"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "endometrial hyperplasia with atypia,",
+                      "Condition": [
+                        "endometrial hyperplasia",
+                        "atypia"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "estrogen-progestin therapy in the 2 months before enrollment,",
+                      "Procedure": [
+                        "estrogen-progestin therapy"
+                      ],
+                      "Temporal": [
+                        "in the 2 months before enrollment"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "autoimmune diseases,",
+                  "Condition": [
+                    "autoimmune diseases"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "chronic, metabolic, systemic and endocrine disorders, including hyperandrogenism",
+                  "Condition": [
+                    "endocrine disorders",
+                    "hyperandrogenism"
+                  ],
+                  "Scope": [
+                    "chronic, metabolic, systemic and endocrine disorders"
+                  ]
+                },
+                "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "chronic, metabolic, systemic and endocrine disorders, including hyperandrogenism",
+                      "raw_text": ", hyperprolactinemia",
                       "Condition": [
-                        "endocrine disorders",
-                        "hyperandrogenism"
-                      ],
-                      "Scope": [
-                        "chronic, metabolic, systemic and endocrine disorders"
+                        "hyperprolactinemia"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", hyperprolactinemia",
+                          "raw_text": ", diabetes mellitus",
                           "Condition": [
-                            "hyperprolactinemia"
+                            "diabetes mellitus"
                           ]
                         },
                         "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", diabetes mellitus",
-                              "Condition": [
-                                "diabetes mellitus"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "and thyroid disease,",
-                              "Condition": [
-                                "thyroid disease"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "hypogonadotropic hypogonadism,",
-                      "Condition": [
-                        "hypogonadotropic hypogonadism"
-                      ]
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "majors clinical conditions",
+                          "raw_text": "and thyroid disease,",
                           "Condition": [
-                            "majors clinical conditions"
+                            "thyroid disease"
                           ]
                         }
                       }
@@ -91,8 +75,20 @@
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "hypogonadotropic hypogonadism,",
+          "Condition": [
+            "hypogonadotropic hypogonadism"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "majors clinical conditions",
+      "Condition": [
+        "majors clinical conditions"
+      ]
     }
   }
 }

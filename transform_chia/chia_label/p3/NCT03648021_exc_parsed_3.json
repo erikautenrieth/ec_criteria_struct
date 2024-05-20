@@ -1,65 +1,69 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Known hypersensitivity to paracetamol",
-          "Condition": [
-            "hypersensitivity"
-          ],
-          "Drug": [
-            "paracetamol"
-          ]
-        },
-        "right": {
-          "raw_text": "or mannitol (excipient with known effect)",
-          "Drug": [
-            "mannitol"
-          ],
-          "Non-representable": [
-            "(excipient with known effect)"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Severe hepatocellular insufficiency (ASAT",
-              "Condition": [
-                "hepatocellular insufficiency"
-              ],
-              "Measurement": [
-                "ASAT"
-              ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "or ALAT",
-                  "Measurement": [
-                    "ALAT"
-                  ]
-                },
-                "right": {
-                  "raw_text": "> 5N, or bilirubin > 2N)",
-                  "Value": [
-                    "> 5N",
-                    "> 2N"
-                  ],
-                  "Measurement": [
-                    "bilirubin"
-                  ]
-                }
-              }
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Known hypersensitivity to paracetamol",
+                      "Condition": [
+                        "hypersensitivity"
+                      ],
+                      "Drug": [
+                        "paracetamol"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or mannitol (excipient with known effect)",
+                      "Drug": [
+                        "mannitol"
+                      ],
+                      "Non-representable": [
+                        "(excipient with known effect)"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Severe hepatocellular insufficiency (ASAT",
+                      "Condition": [
+                        "hepatocellular insufficiency"
+                      ],
+                      "Measurement": [
+                        "ASAT"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or ALAT",
+                          "Measurement": [
+                            "ALAT"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "> 5N, or bilirubin > 2N)",
+                          "Value": [
+                            "> 5N",
+                            "> 2N"
+                          ],
+                          "Measurement": [
+                            "bilirubin"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Pharmacological intervention",
@@ -110,43 +114,35 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnant",
+              "Condition": [
+                "Pregnant"
+              ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Pregnant",
-                      "Condition": [
-                        "Pregnant"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "or breastfeeding women",
-                      "Observation": [
-                        "breastfeeding"
-                      ],
-                      "Person": [
-                        "women"
-                      ]
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Previous participation in this study",
-                      "Competing_trial": [
-                        "Previous participation in this study"
-                      ]
-                    }
-                  }
-                }
-              }
+              "raw_text": "or breastfeeding women",
+              "Observation": [
+                "breastfeeding"
+              ],
+              "Person": [
+                "women"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Previous participation in this study",
+      "Competing_trial": [
+        "Previous participation in this study"
+      ]
     }
   }
 }

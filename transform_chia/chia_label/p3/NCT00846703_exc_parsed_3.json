@@ -1,44 +1,48 @@
 {
   "AND": {
     "left": {
-      "NOT": {
-        "left": {
-          "raw_text": "No Down syndrome",
-          "Negation": [
-            "No"
-          ],
-          "Condition": [
-            "Down syndrome"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "NOT": {
-            "left": {
-              "raw_text": "No other major disease that prohibits study treatment (e.g., severe congenital heart disease)",
-              "Negation": [
-                "No"
-              ],
-              "Condition": [
-                "major disease",
-                "congenital heart disease"
-              ],
-              "Qualifier": [
-                "other",
-                "severe"
-              ],
-              "Non-query-able": [
-                "that prohibits study treatment"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "No Down syndrome",
+                      "Negation": [
+                        "No"
+                      ],
+                      "Condition": [
+                        "Down syndrome"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "No other major disease that prohibits study treatment (e.g., severe congenital heart disease)",
+                      "Negation": [
+                        "No"
+                      ],
+                      "Condition": [
+                        "major disease",
+                        "congenital heart disease"
+                      ],
+                      "Qualifier": [
+                        "other",
+                        "severe"
+                      ],
+                      "Non-query-able": [
+                        "that prohibits study treatment"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "raw_text": "Not requiring significant therapy modification owing to study therapy associated complications",
               "Negation": [
                 "No",
@@ -53,53 +57,45 @@
               "Non-query-able": [
                 "Not requiring significant therapy modification owing to study therapy associated complications"
               ]
-            },
-            "right": {
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
               "AND": {
                 "left": {
-                  "NOT": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "No complications",
-                          "Negation": [
-                            "No"
-                          ],
-                          "Condition": [
-                            "complications"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "due to other interventions",
-                          "Qualifier": [
-                            "other"
-                          ],
-                          "Procedure": [
-                            "interventions"
-                          ]
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "No complications",
+                  "Negation": [
+                    "No"
+                  ],
+                  "Condition": [
+                    "complications"
+                  ]
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "No one with missing data that are needed for the differential diagnosis, or for selection of the proper therapy arm",
-                      "Negation": [
-                        "No"
-                      ],
-                      "Non-query-able": [
-                        "o one with missing data that are needed for the differential diagnosis, or for selection of the proper therapy arm"
-                      ]
-                    }
-                  }
+                  "raw_text": "due to other interventions",
+                  "Qualifier": [
+                    "other"
+                  ],
+                  "Procedure": [
+                    "interventions"
+                  ]
                 }
               }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "No one with missing data that are needed for the differential diagnosis, or for selection of the proper therapy arm",
+      "Negation": [
+        "No"
+      ],
+      "Non-query-able": [
+        "o one with missing data that are needed for the differential diagnosis, or for selection of the proper therapy arm"
+      ]
     }
   }
 }

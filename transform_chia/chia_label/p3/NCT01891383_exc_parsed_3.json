@@ -1,25 +1,29 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Cases (with a history of TBI):",
-      "Parsing_Error": [
-        "Cases (with a history of TBI):"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "1. History of penetrating brain injury",
-          "Observation": [
-            "History"
-          ],
-          "Condition": [
-            "penetrating brain injury"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Cases (with a history of TBI):",
+                  "Parsing_Error": [
+                    "Cases (with a history of TBI):"
+                  ]
+                },
+                "right": {
+                  "raw_text": "1. History of penetrating brain injury",
+                  "Observation": [
+                    "History"
+                  ],
+                  "Condition": [
+                    "penetrating brain injury"
+                  ]
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "2. History of disabling neurological or psychiatric condition",
@@ -99,79 +103,71 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Controls (without a history of TBI):",
+          "Parsing_Error": [
+            "Controls (without a history of TBI):"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "History of disabling neurological or psychiatric condition such as epilepsy",
+          "Observation": [
+            "History"
+          ],
+          "Condition": [
+            "epilepsy"
+          ],
+          "Undefined_semantics": [
+            "disabling neurological or psychiatric condition"
+          ],
+          "Scope": [
+            "disabling neurological or psychiatric condition"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", multiple sclerosis",
+              "Condition": [
+                "multiple sclerosis"
+              ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "Controls (without a history of TBI):",
-                  "Parsing_Error": [
-                    "Controls (without a history of TBI):"
+                  "raw_text": ", cortical stroke",
+                  "Condition": [
+                    "cortical stroke"
                   ]
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
+                      "raw_text": ", hypoxic-ischemic encephalopathy",
+                      "Condition": [
+                        "hypoxic-ischemic encephalopathy"
+                      ]
+                    },
+                    "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "History of disabling neurological or psychiatric condition such as epilepsy",
-                          "Observation": [
-                            "History"
-                          ],
+                          "raw_text": ", encephalitis",
                           "Condition": [
-                            "epilepsy"
-                          ],
-                          "Undefined_semantics": [
-                            "disabling neurological or psychiatric condition"
-                          ],
-                          "Scope": [
-                            "disabling neurological or psychiatric condition"
+                            "encephalitis"
                           ]
                         },
                         "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", multiple sclerosis",
-                              "Condition": [
-                                "multiple sclerosis"
-                              ]
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": ", cortical stroke",
-                                  "Condition": [
-                                    "cortical stroke"
-                                  ]
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", hypoxic-ischemic encephalopathy",
-                                      "Condition": [
-                                        "hypoxic-ischemic encephalopathy"
-                                      ]
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": ", encephalitis",
-                                          "Condition": [
-                                            "encephalitis"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": ", or schizophrenia",
-                                          "Condition": [
-                                            "schizophrenia"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
+                          "raw_text": ", or schizophrenia",
+                          "Condition": [
+                            "schizophrenia"
+                          ]
                         }
                       }
                     }

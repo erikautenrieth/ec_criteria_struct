@@ -1,51 +1,55 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Patients with osteoarthritis"
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "of the hip secondary to degeneration, inflammatory arthritis"
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": ", gouty arthritis"
-                },
-                "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", acetabular dysplasia"
+                      "raw_text": "Patients with osteoarthritis"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "or osteonecrosis"
+                          "raw_text": "of the hip secondary to degeneration, inflammatory arthritis"
                         },
                         "right": {
-                          "raw_text": "of the femoral head, and undergoing primary unilateral minimally invasive THA"
+                          "OR": {
+                            "left": {
+                              "raw_text": ", gouty arthritis"
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", acetabular dysplasia"
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "or osteonecrosis"
+                                    },
+                                    "right": {
+                                      "raw_text": "of the femoral head, and undergoing primary unilateral minimally invasive THA"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "Age > 18 years and < 90 years"
                 }
               }
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Age > 18 years and < 90 years"
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Failure of medical treatment"
@@ -54,26 +58,18 @@
                   "raw_text": "or rehabilitation."
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Hemoglobin > 11g/dl,"
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "No use of non-steroid anti-inflammatory agent one week before operation"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Hemoglobin > 11g/dl,"
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "No use of non-steroid anti-inflammatory agent one week before operation"
         }
       }
     }

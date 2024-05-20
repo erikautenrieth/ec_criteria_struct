@@ -1,72 +1,80 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Patient diagnosed with dementia."
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Patients with serious and unstable illnesses including current hepatic"
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": ", renal"
+                  "raw_text": "Patient diagnosed with dementia."
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", gastroenterologic"
+                      "raw_text": "Patients with serious and unstable illnesses including current hepatic"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", respiratory"
+                          "raw_text": ", renal"
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", cardiovascular"
+                              "raw_text": ", gastroenterologic"
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "(including ischemic heart disease"
+                                  "raw_text": ", respiratory"
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "and congestive heart failure), endocrinologic"
+                                      "raw_text": ", cardiovascular"
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": ", neurologic (including stroke"
+                                          "raw_text": "(including ischemic heart disease"
                                         },
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": ", transient ischemic attack"
+                                              "raw_text": "and congestive heart failure), endocrinologic"
                                             },
                                             "right": {
                                               "OR": {
                                                 "left": {
-                                                  "raw_text": ", subarachnoidal bleeding"
+                                                  "raw_text": ", neurologic (including stroke"
                                                 },
                                                 "right": {
                                                   "OR": {
                                                     "left": {
-                                                      "raw_text": ", brain tumor"
+                                                      "raw_text": ", transient ischemic attack"
                                                     },
                                                     "right": {
                                                       "OR": {
                                                         "left": {
-                                                          "raw_text": ", encephalopathy"
+                                                          "raw_text": ", subarachnoidal bleeding"
                                                         },
                                                         "right": {
-                                                          "raw_text": ", and meningitis)."
+                                                          "OR": {
+                                                            "left": {
+                                                              "raw_text": ", brain tumor"
+                                                            },
+                                                            "right": {
+                                                              "OR": {
+                                                                "left": {
+                                                                  "raw_text": ", encephalopathy"
+                                                                },
+                                                                "right": {
+                                                                  "raw_text": ", and meningitis)."
+                                                                }
+                                                              }
+                                                            }
+                                                          }
                                                         }
                                                       }
                                                     }
@@ -89,12 +97,8 @@
                   }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Patients with a history of allergic reactions to loxapine"
@@ -103,24 +107,16 @@
                   "raw_text": "or amoxapine"
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Patients who have received an investigational drug within 30 days prior to the current agitation episode must be excluded."
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Patients who are considered by the investigator, for any reason, to be unable to self-administer the inhalation device."
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Patients who have received an investigational drug within 30 days prior to the current agitation episode must be excluded."
         }
       }
+    },
+    "right": {
+      "raw_text": "Patients who are considered by the investigator, for any reason, to be unable to self-administer the inhalation device."
     }
   }
 }

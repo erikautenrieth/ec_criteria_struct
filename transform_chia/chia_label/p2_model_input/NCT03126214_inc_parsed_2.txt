@@ -3,30 +3,34 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Age = 65 years with one additional stroke"
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "risk factor (hypertension"
+              "raw_text": "Age = 65 years with one additional stroke"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", diabetes"
+                  "raw_text": "risk factor (hypertension"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", heart failure"
+                      "raw_text": ", diabetes"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "history of or left ventricular ejection fraction <0.40), previous stroke"
+                          "raw_text": ", heart failure"
                         },
                         "right": {
-                          "raw_text": "or transient ischemic attack)."
+                          "OR": {
+                            "left": {
+                              "raw_text": "history of or left ventricular ejection fraction <0.40), previous stroke"
+                            },
+                            "right": {
+                              "raw_text": "or transient ischemic attack)."
+                            }
+                          }
                         }
                       }
                     }
@@ -35,12 +39,8 @@
               }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "AND": {
             "left": {
               "raw_text": "Atrial fibrillation and not"
@@ -49,15 +49,11 @@
               "raw_text": "on oral anticoagulation (OAC) therapy but eligible"
             }
           }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Atrial fibrillation on sub-optimal OAC"
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Atrial fibrillation on sub-optimal OAC"
     }
   }
 }

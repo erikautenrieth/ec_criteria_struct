@@ -3,77 +3,35 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "allergic",
-          "Condition": [
-            "allergic"
-          ]
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "to dexmedetomidine",
-              "Drug": [
-                "dexmedetomidine"
-              ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": ", similar active ingredients",
-                  "Drug": [
-                    "similar active ingredients"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or excipients",
-                  "Drug": [
-                    "excipients"
-                  ]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "G-6-PD deficiency",
-          "Condition": [
-            "G-6-PD deficiency"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "a history of arrhythmia",
+                  "raw_text": "allergic",
                   "Condition": [
-                    "arrhythmia"
-                  ],
-                  "Observation": [
-                    "history"
+                    "allergic"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", bronchial"
+                      "raw_text": "to dexmedetomidine",
+                      "Drug": [
+                        "dexmedetomidine"
+                      ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "and cardiovascular diseases",
-                          "Condition": [
-                            "cardiovascular diseases"
+                          "raw_text": ", similar active ingredients",
+                          "Drug": [
+                            "similar active ingredients"
                           ]
                         },
                         "right": {
-                          "raw_text": ", abnormal liver function and so on",
-                          "Condition": [
-                            "abnormal liver function"
+                          "raw_text": "or excipients",
+                          "Drug": [
+                            "excipients"
                           ]
                         }
                       }
@@ -83,23 +41,61 @@
               }
             },
             "right": {
-              "AND": {
+              "raw_text": "G-6-PD deficiency",
+              "Condition": [
+                "G-6-PD deficiency"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "a history of arrhythmia",
+              "Condition": [
+                "arrhythmia"
+              ],
+              "Observation": [
+                "history"
+              ]
+            },
+            "right": {
+              "OR": {
                 "left": {
+                  "raw_text": ", bronchial"
+                },
+                "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "a history of use of alpha 2 receptor",
-                      "Observation": [
-                        "history"
+                      "raw_text": "and cardiovascular diseases",
+                      "Condition": [
+                        "cardiovascular diseases"
                       ]
                     },
                     "right": {
-                      "raw_text": "agonists or antagonists."
+                      "raw_text": ", abnormal liver function and so on",
+                      "Condition": [
+                        "abnormal liver function"
+                      ]
                     }
                   }
                 }
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "a history of use of alpha 2 receptor",
+          "Observation": [
+            "history"
+          ]
+        },
+        "right": {
+          "raw_text": "agonists or antagonists."
         }
       }
     }

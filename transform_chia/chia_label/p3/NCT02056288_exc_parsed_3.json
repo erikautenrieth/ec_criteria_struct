@@ -1,103 +1,68 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Pulseless extremity",
-      "Condition": [
-        "Pulseless extremity"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Compromised neurologic status on exam (specifically assessment of radial, ulnar, and median nerve",
-              "Condition": [
-                "Compromised neurologic status"
-              ],
-              "Qualifier": [
-                "median nerve"
-              ],
-              "Scope": [
-                "radial, ulnar, and median nerve"
-              ]
-            },
-            "right": {
-              "raw_text": ")"
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Known allergy",
-                  "Condition": [
-                    "allergy"
-                  ]
-                },
-                "right": {
-                  "NOT": {
+                  "AND": {
                     "left": {
-                      "AND": {
+                      "raw_text": "Pulseless extremity",
+                      "Condition": [
+                        "Pulseless extremity"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
                         "left": {
-                          "raw_text": "Not scheduled for closed reduction with percutaneous pinning",
-                          "Negation": [
-                            "Not"
+                          "raw_text": "Compromised neurologic status on exam (specifically assessment of radial, ulnar, and median nerve",
+                          "Condition": [
+                            "Compromised neurologic status"
                           ],
-                          "Mood": [
-                            "scheduled for"
+                          "Qualifier": [
+                            "median nerve"
                           ],
-                          "Procedure": [
-                            "closed reduction with percutaneous pinning"
+                          "Scope": [
+                            "radial, ulnar, and median nerve"
                           ]
                         },
                         "right": {
-                          "raw_text": "under general anesthesia",
-                          "Procedure": [
-                            "general anesthesia"
-                          ]
+                          "raw_text": ")"
                         }
                       }
                     }
                   }
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Bleeding diathesis",
-                  "Condition": [
-                    "Bleeding diathesis"
-                  ]
                 },
                 "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "American Society of Anesthesiologist (ASA) status 4 or higher.",
-                      "Measurement": [
-                        "American Society of Anesthesiologist (ASA) status"
-                      ],
-                      "Value": [
-                        "4 or higher"
+                      "raw_text": "Known allergy",
+                      "Condition": [
+                        "allergy"
                       ]
                     },
                     "right": {
-                      "AND": {
+                      "NOT": {
                         "left": {
                           "AND": {
                             "left": {
-                              "raw_text": "Sleep apnea",
-                              "Condition": [
-                                "Sleep apnea"
+                              "raw_text": "Not scheduled for closed reduction with percutaneous pinning",
+                              "Negation": [
+                                "Not"
+                              ],
+                              "Mood": [
+                                "scheduled for"
+                              ],
+                              "Procedure": [
+                                "closed reduction with percutaneous pinning"
                               ]
                             },
                             "right": {
-                              "raw_text": "by polysomnography",
+                              "raw_text": "under general anesthesia",
                               "Procedure": [
-                                "polysomnography"
+                                "general anesthesia"
                               ]
                             }
                           }
@@ -107,8 +72,39 @@
                   }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Bleeding diathesis",
+              "Condition": [
+                "Bleeding diathesis"
+              ]
             }
           }
+        },
+        "right": {
+          "raw_text": "American Society of Anesthesiologist (ASA) status 4 or higher.",
+          "Measurement": [
+            "American Society of Anesthesiologist (ASA) status"
+          ],
+          "Value": [
+            "4 or higher"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Sleep apnea",
+          "Condition": [
+            "Sleep apnea"
+          ]
+        },
+        "right": {
+          "raw_text": "by polysomnography",
+          "Procedure": [
+            "polysomnography"
+          ]
         }
       }
     }

@@ -1,54 +1,62 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Active",
-          "Temporal": [
-            "Active"
-          ]
-        },
-        "right": {
-          "raw_text": "or past psychotic disorder, including a history of psychotic affective state",
-          "Condition": [
-            "psychotic disorder",
-            "psychotic affective state"
-          ],
-          "Temporal": [
-            "past"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Mental Retardation",
-              "Condition": [
-                "Mental Retardation"
-              ]
-            },
-            "right": {
-              "raw_text": "or Autistic Spectrum Disorder",
-              "Condition": [
-                "Autistic Spectrum Disorder"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Prominent personality disorder",
-              "Condition": [
-                "Prominent personality disorder"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Active",
+                              "Temporal": [
+                                "Active"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or past psychotic disorder, including a history of psychotic affective state",
+                              "Condition": [
+                                "psychotic disorder",
+                                "psychotic affective state"
+                              ],
+                              "Temporal": [
+                                "past"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Mental Retardation",
+                              "Condition": [
+                                "Mental Retardation"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or Autistic Spectrum Disorder",
+                              "Condition": [
+                                "Autistic Spectrum Disorder"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Prominent personality disorder",
+                      "Condition": [
+                        "Prominent personality disorder"
+                      ]
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Cardiac"
@@ -99,79 +107,67 @@
                       }
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "Chronic nasal congestion",
+              "Condition": [
+                "nasal congestion"
+              ],
+              "Temporal": [
+                "Chronic"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Active",
+              "Temporal": [
+                "Active"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or recent drug",
+                  "Temporal": [
+                    "recent"
+                  ]
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Chronic nasal congestion",
-                      "Condition": [
-                        "nasal congestion"
-                      ],
-                      "Temporal": [
-                        "Chronic"
-                      ]
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Active",
-                              "Temporal": [
-                                "Active"
-                              ]
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "or recent drug",
-                                  "Temporal": [
-                                    "recent"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": "or alcohol abuse",
-                                  "Condition": [
-                                    "alcohol abuse"
-                                  ]
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "Substantial suicidality",
-                                  "Condition": [
-                                    "suicidality"
-                                  ],
-                                  "Qualifier": [
-                                    "Substantial"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": "in a patient requiring admission but refuses to do so, and signs an \"against medical advice\" release form as part of clinical evaluation, and does not answer the terms for involuntary admission.",
-                                  "Procedure": [
-                                    "admission"
-                                  ],
-                                  "Non-representable": [
-                                    "signs an \"against medical advice\" release form as part of clinical evaluation, and does not answer the terms for involuntary admission"
-                                  ]
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "or alcohol abuse",
+                  "Condition": [
+                    "alcohol abuse"
+                  ]
                 }
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Substantial suicidality",
+          "Condition": [
+            "suicidality"
+          ],
+          "Qualifier": [
+            "Substantial"
+          ]
+        },
+        "right": {
+          "raw_text": "in a patient requiring admission but refuses to do so, and signs an \"against medical advice\" release form as part of clinical evaluation, and does not answer the terms for involuntary admission.",
+          "Procedure": [
+            "admission"
+          ],
+          "Non-representable": [
+            "signs an \"against medical advice\" release form as part of clinical evaluation, and does not answer the terms for involuntary admission"
+          ]
         }
       }
     }

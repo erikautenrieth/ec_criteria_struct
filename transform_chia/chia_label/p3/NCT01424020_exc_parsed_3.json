@@ -1,56 +1,52 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Unable to participate for administrative reasons",
-      "Observation": [
-        "Unable to participate"
-      ],
-      "Qualifier": [
-        "administrative reasons"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Psychiatric troubles",
-          "Condition": [
-            "Psychiatric troubles"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Pain at rest",
-                  "Condition": [
-                    "Pain at rest"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or critical limb ischemia",
-                  "Condition": [
-                    "critical limb ischemia"
-                  ]
-                }
-              }
+              "raw_text": "Unable to participate for administrative reasons",
+              "Observation": [
+                "Unable to participate"
+              ],
+              "Qualifier": [
+                "administrative reasons"
+              ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Unable to walk (ex: wheelchair subjects)",
-                  "Condition": [
-                    "Unable to walk"
-                  ],
-                  "Observation": [
-                    "wheelchair subjects"
-                  ]
-                }
-              }
+              "raw_text": "Psychiatric troubles",
+              "Condition": [
+                "Psychiatric troubles"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pain at rest",
+              "Condition": [
+                "Pain at rest"
+              ]
+            },
+            "right": {
+              "raw_text": "or critical limb ischemia",
+              "Condition": [
+                "critical limb ischemia"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Unable to walk (ex: wheelchair subjects)",
+      "Condition": [
+        "Unable to walk"
+      ],
+      "Observation": [
+        "wheelchair subjects"
+      ]
     }
   }
 }

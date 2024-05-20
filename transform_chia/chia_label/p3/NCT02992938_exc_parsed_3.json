@@ -1,40 +1,48 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Patients ASA III y IV",
-      "Measurement": [
-        "ASA"
-      ],
-      "Value": [
-        "III y IV"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Chronic pain history",
-          "Condition": [
-            "Chronic pain"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Drug"
-                },
-                "right": {
-                  "raw_text": "and alcohol abuse",
-                  "Condition": [
-                    "alcohol abuse"
-                  ]
-                }
-              }
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Patients ASA III y IV",
+                          "Measurement": [
+                            "ASA"
+                          ],
+                          "Value": [
+                            "III y IV"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "Chronic pain history",
+                          "Condition": [
+                            "Chronic pain"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Drug"
+                        },
+                        "right": {
+                          "raw_text": "and alcohol abuse",
+                          "Condition": [
+                            "alcohol abuse"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Chronic use of opioid",
@@ -52,64 +60,52 @@
                       ]
                     }
                   }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Neuropsychiatric illness",
-                      "Condition": [
-                        "Neuropsychiatric illness"
-                      ]
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "NSAID",
-                              "Drug": [
-                                "NSAID"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "and other analgesics used the 48 hours previous to the surgery",
-                              "Qualifier": [
-                                "other"
-                              ],
-                              "Drug": [
-                                "analgesics"
-                              ],
-                              "Temporal": [
-                                "48 hours previous to the surgery"
-                              ],
-                              "Reference_point": [
-                                "the surgery"
-                              ]
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "CMI > 30",
-                              "Measurement": [
-                                "CMI"
-                              ],
-                              "Value": [
-                                "> 3"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Neuropsychiatric illness",
+              "Condition": [
+                "Neuropsychiatric illness"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "NSAID",
+              "Drug": [
+                "NSAID"
+              ]
+            },
+            "right": {
+              "raw_text": "and other analgesics used the 48 hours previous to the surgery",
+              "Qualifier": [
+                "other"
+              ],
+              "Drug": [
+                "analgesics"
+              ],
+              "Temporal": [
+                "48 hours previous to the surgery"
+              ],
+              "Reference_point": [
+                "the surgery"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "CMI > 30",
+      "Measurement": [
+        "CMI"
+      ],
+      "Value": [
+        "> 3"
+      ]
     }
   }
 }
