@@ -13,10 +13,10 @@ n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
 output_path = f"{transform_chia}/model_output/{model_name}_{n_shot}_shot/"
-
+os.makedirs(output_path, exist_ok=True)
 # Load Prediction Files
-anfang = 0 
-ende = 2000
+anfang = n_shot 
+ende = 305
 study_files = os.listdir(study_path)[anfang:ende]  
 
 
