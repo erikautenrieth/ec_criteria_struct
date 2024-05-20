@@ -1,17 +1,17 @@
 {
   "AND": {
     "left": {
-      "raw_text": "younger than 18 years old",
-      "Value": [
-        "younger than 18 years"
-      ],
-      "Person": [
-        "old"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "younger than 18 years old",
+          "Value": [
+            "younger than 18 years"
+          ],
+          "Person": [
+            "old"
+          ]
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "HBsAg positive",
@@ -39,29 +39,25 @@
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "pregnant",
+          "Condition": [
+            "pregnant"
+          ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "pregnant",
-                  "Condition": [
-                    "pregnant"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or lactating women",
-                  "Condition": [
-                    "lactating"
-                  ],
-                  "Person": [
-                    "women"
-                  ]
-                }
-              }
-            }
-          }
+          "raw_text": "or lactating women",
+          "Condition": [
+            "lactating"
+          ],
+          "Person": [
+            "women"
+          ]
         }
       }
     }

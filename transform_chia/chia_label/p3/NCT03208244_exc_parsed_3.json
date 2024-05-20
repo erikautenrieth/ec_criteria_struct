@@ -1,57 +1,53 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Sensitization (i.e. PRA >20%)",
-      "Condition": [
-        "Sensitization"
-      ],
-      "Measurement": [
-        "PRA"
-      ],
-      "Value": [
-        ">20%"
-      ],
-      "Scope": [
-        "PRA >20%"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Any liver disease in recipient",
-          "Condition": [
-            "liver disease"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Albumin < 3g/dl or platelet count < 75 x 103/mL",
+              "raw_text": "Sensitization (i.e. PRA >20%)",
+              "Condition": [
+                "Sensitization"
+              ],
               "Measurement": [
-                "Albumin",
-                "platelet count"
+                "PRA"
               ],
               "Value": [
-                "< 3g/dl",
-                "< 75 x 103/mL"
+                ">20%"
+              ],
+              "Scope": [
+                "PRA >20%"
               ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Need for dual organ transplant",
-                  "Measurement": [
-                    "dual organ transplant"
-                  ],
-                  "Mood": [
-                    "Need for"
-                  ]
-                }
-              }
+              "raw_text": "Any liver disease in recipient",
+              "Condition": [
+                "liver disease"
+              ]
             }
           }
+        },
+        "right": {
+          "raw_text": "Albumin < 3g/dl or platelet count < 75 x 103/mL",
+          "Measurement": [
+            "Albumin",
+            "platelet count"
+          ],
+          "Value": [
+            "< 3g/dl",
+            "< 75 x 103/mL"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Need for dual organ transplant",
+      "Measurement": [
+        "dual organ transplant"
+      ],
+      "Mood": [
+        "Need for"
+      ]
     }
   }
 }

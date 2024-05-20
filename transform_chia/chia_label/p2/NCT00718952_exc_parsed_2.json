@@ -1,23 +1,27 @@
 {
   "AND": {
     "left": {
-      "raw_text": "The other types of pulmonary hypertension."
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Subjects who refuse to subscribe written informed consents"
-            },
-            "right": {
-              "raw_text": "or can't cooperate with the trial well."
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "The other types of pulmonary hypertension."
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Subjects who refuse to subscribe written informed consents"
+                    },
+                    "right": {
+                      "raw_text": "or can't cooperate with the trial well."
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Subjects with serious acute or chronic disease involved"
@@ -40,38 +44,30 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Subjects who are currently treated with sildenafil"
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Subjects who are currently treated with sildenafil"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "for PAH or taking sildenafil"
-                        },
-                        "right": {
-                          "raw_text": "or tadalafil."
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "for PAH or taking sildenafil"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Other contraindications in package insert."
-                    }
-                  }
+                  "raw_text": "or tadalafil."
                 }
               }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Other contraindications in package insert."
     }
   }
 }

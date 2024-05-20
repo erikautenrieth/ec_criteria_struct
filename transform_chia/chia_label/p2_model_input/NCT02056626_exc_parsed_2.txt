@@ -1,42 +1,38 @@
 {
   "AND": {
     "left": {
-      "raw_text": "abnormal renal function"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "currently pregnant"
+              "raw_text": "abnormal renal function"
             },
             "right": {
-              "raw_text": ", or trying to become pregnant"
+              "OR": {
+                "left": {
+                  "raw_text": "currently pregnant"
+                },
+                "right": {
+                  "raw_text": ", or trying to become pregnant"
+                }
+              }
             }
           }
         },
         "right": {
           "AND": {
             "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "being treated"
-                },
-                "right": {
-                  "raw_text": "with a beta-blocker"
-                }
-              }
+              "raw_text": "being treated"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "use of illicit drugs"
-                }
-              }
+              "raw_text": "with a beta-blocker"
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "use of illicit drugs"
     }
   }
 }

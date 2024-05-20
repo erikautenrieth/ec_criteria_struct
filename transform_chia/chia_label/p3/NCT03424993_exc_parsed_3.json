@@ -1,61 +1,69 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Abnormal resting ECG",
-      "Value": [
-        "Abnormal"
-      ],
-      "Procedure": [
-        "resting ECG"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Current abnormal blood panel (assessed by comprehensive metabolic panel, lipid panel and complete blood count).",
-          "Temporal": [
-            "Current"
-          ],
-          "Value": [
-            "abnormal"
-          ],
-          "Procedure": [
-            "blood panel",
-            "metabolic panel",
-            "lipid panel",
-            "complete blood count"
-          ],
-          "Scope": [
-            "metabolic panel, lipid panel and complete blood count"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Hypertension (currently taking anti-hypertensive medications",
-                  "Condition": [
-                    "Hypertension"
-                  ],
-                  "Drug": [
-                    "anti-hypertensive medications"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or resting blood pressure >140/90 mmHg)",
-                  "Measurement": [
-                    "resting blood pressure"
-                  ],
-                  "Value": [
-                    ">140/90 mmHg"
-                  ]
-                }
-              }
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Abnormal resting ECG",
+                          "Value": [
+                            "Abnormal"
+                          ],
+                          "Procedure": [
+                            "resting ECG"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "Current abnormal blood panel (assessed by comprehensive metabolic panel, lipid panel and complete blood count).",
+                          "Temporal": [
+                            "Current"
+                          ],
+                          "Value": [
+                            "abnormal"
+                          ],
+                          "Procedure": [
+                            "blood panel",
+                            "metabolic panel",
+                            "lipid panel",
+                            "complete blood count"
+                          ],
+                          "Scope": [
+                            "metabolic panel, lipid panel and complete blood count"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Hypertension (currently taking anti-hypertensive medications",
+                          "Condition": [
+                            "Hypertension"
+                          ],
+                          "Drug": [
+                            "anti-hypertensive medications"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or resting blood pressure >140/90 mmHg)",
+                          "Measurement": [
+                            "resting blood pressure"
+                          ],
+                          "Value": [
+                            ">140/90 mmHg"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Medical history of cardiovascular disease",
@@ -90,54 +98,42 @@
                       }
                     }
                   }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Obesity (Body Mass Index > 30)",
-                      "Condition": [
-                        "Obesity"
-                      ],
-                      "Measurement": [
-                        "Body Mass Index"
-                      ],
-                      "Value": [
-                        "> 30"
-                      ],
-                      "Scope": [
-                        "Body Mass Index > 30"
-                      ]
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Current pregnancy",
-                          "Temporal": [
-                            "Current"
-                          ],
-                          "Condition": [
-                            "pregnancy"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Unable to provide consent",
-                              "Informed_consent": [
-                                "Unable to provide consent"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Obesity (Body Mass Index > 30)",
+              "Condition": [
+                "Obesity"
+              ],
+              "Measurement": [
+                "Body Mass Index"
+              ],
+              "Value": [
+                "> 30"
+              ],
+              "Scope": [
+                "Body Mass Index > 30"
+              ]
             }
           }
+        },
+        "right": {
+          "raw_text": "Current pregnancy",
+          "Temporal": [
+            "Current"
+          ],
+          "Condition": [
+            "pregnancy"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Unable to provide consent",
+      "Informed_consent": [
+        "Unable to provide consent"
+      ]
     }
   }
 }

@@ -3,47 +3,43 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "histologically"
-        },
-        "right": {
-          "raw_text": "diagnosed primary classical osteosarcoma in extremities"
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "staging IIB"
-        },
-        "right": {
           "AND": {
             "left": {
-              "NOT": {
+              "AND": {
                 "left": {
-                  "raw_text": "no skip lesion"
+                  "raw_text": "histologically"
+                },
+                "right": {
+                  "raw_text": "diagnosed primary classical osteosarcoma in extremities"
                 }
               }
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "receive standard neo-adjuvant chemotherapy"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", adjuvant chemotherapy"
-                        },
-                        "right": {
-                          "raw_text": ",and standard surgical treatment"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "staging IIB"
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "no skip lesion"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "receive standard neo-adjuvant chemotherapy"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", adjuvant chemotherapy"
+            },
+            "right": {
+              "raw_text": ",and standard surgical treatment"
             }
           }
         }

@@ -1,23 +1,27 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Active bleeding without control;"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Receiving nasal"
-            },
-            "right": {
-              "raw_text": "or facial surgery recently;"
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Active bleeding without control;"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Receiving nasal"
+                    },
+                    "right": {
+                      "raw_text": "or facial surgery recently;"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "With severe cardio-pulmonary dysfunction, such as left heart failure"
@@ -26,43 +30,35 @@
                   "raw_text": ", unstable arrhythmia, etc."
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "With other respiratory diseases: such as active pulmonary tuberculosis"
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "With other respiratory diseases: such as active pulmonary tuberculosis"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", non-tuberculosis mycobacteria"
-                        },
-                        "right": {
-                          "raw_text": "(NTM) pulmonary disease, pulmonary aspergillosis, etc."
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": ", non-tuberculosis mycobacteria"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Be allergic"
-                        },
-                        "right": {
-                          "raw_text": "to amikacin"
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "(NTM) pulmonary disease, pulmonary aspergillosis, etc."
                 }
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Be allergic"
+        },
+        "right": {
+          "raw_text": "to amikacin"
         }
       }
     }

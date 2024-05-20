@@ -1,73 +1,27 @@
 {
   "AND": {
     "left": {
-      "NOT": {
-        "left": {
-          "AND": {
-            "left": {
-              "raw_text": "not get surgical treatment",
-              "Negation": [
-                "not"
-              ],
-              "Procedure": [
-                "surgical treatment",
-                "treatment"
-              ]
-            },
-            "right": {
-              "raw_text": "for their endometrial cancer",
-              "Condition": [
-                "endometrial cancer"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "NOT": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "not suffering from endometrial",
-                  "Negation": [
-                    "not"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or epithelial ovarian cancer",
-                  "Condition": [
-                    "epithelial ovarian cancer"
-                  ]
-                }
-              }
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
               "NOT": {
                 "left": {
                   "AND": {
                     "left": {
-                      "raw_text": "not agree to the proposed treatment or will receive (part of) the treatment",
+                      "raw_text": "not get surgical treatment",
                       "Negation": [
                         "not"
                       ],
-                      "Observation": [
-                        "agree to the proposed treatment"
-                      ],
                       "Procedure": [
+                        "surgical treatment",
                         "treatment"
                       ]
                     },
                     "right": {
-                      "raw_text": "in a non-participating centre",
-                      "Visit": [
-                        "non-participating centre"
+                      "raw_text": "for their endometrial cancer",
+                      "Condition": [
+                        "endometrial cancer"
                       ]
                     }
                   }
@@ -75,39 +29,81 @@
               }
             },
             "right": {
-              "AND": {
+              "NOT": {
                 "left": {
                   "OR": {
                     "left": {
-                      "raw_text": "Patients who cannot",
+                      "raw_text": "not suffering from endometrial",
                       "Negation": [
-                        "not",
-                        "cannot"
+                        "not"
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "or do not want to give informed consent",
-                          "Negation": [
-                            "not",
-                            "do not want to"
-                          ],
-                          "Observation": [
-                            "give informed consent"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "(including language barriers)",
-                          "Observation": [
-                            "language barriers"
-                          ]
-                        }
-                      }
+                      "raw_text": "or epithelial ovarian cancer",
+                      "Condition": [
+                        "epithelial ovarian cancer"
+                      ]
                     }
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "not agree to the proposed treatment or will receive (part of) the treatment",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Observation": [
+                    "agree to the proposed treatment"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ]
+                },
+                "right": {
+                  "raw_text": "in a non-participating centre",
+                  "Visit": [
+                    "non-participating centre"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Patients who cannot",
+          "Negation": [
+            "not",
+            "cannot"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or do not want to give informed consent",
+              "Negation": [
+                "not",
+                "do not want to"
+              ],
+              "Observation": [
+                "give informed consent"
+              ]
+            },
+            "right": {
+              "raw_text": "(including language barriers)",
+              "Observation": [
+                "language barriers"
+              ]
             }
           }
         }

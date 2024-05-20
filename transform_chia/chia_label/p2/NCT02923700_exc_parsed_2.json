@@ -1,35 +1,43 @@
 {
   "AND": {
     "left": {
-      "raw_text": "age > 80 years;"
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Kellgren-Lawrence score"
-            },
-            "right": {
-              "raw_text": "at X-ray evaluation > 3;"
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "major axial deviation (varus"
-                },
-                "right": {
-                  "raw_text": ">5\u00b0 , valgus > 5\u00b0),"
-                }
-              }
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "age > 80 years;"
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Kellgren-Lawrence score"
+                            },
+                            "right": {
+                              "raw_text": "at X-ray evaluation > 3;"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "major axial deviation (varus"
+                        },
+                        "right": {
+                          "raw_text": ">5\u00b0 , valgus > 5\u00b0),"
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "systemic disorders such as diabetes"
@@ -66,45 +74,33 @@
                       }
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "patients in therapy with anticoagulants"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "patients in therapy with anticoagulants"
-                        },
-                        "right": {
-                          "raw_text": "or antiaggregants;"
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "use of NSAIDs in the 5 days before blood donation;"
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "patients with Hb"
-                                },
-                                "right": {
-                                  "raw_text": "values < 11 g/dl and platelet values < 150,000/mmc."
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "or antiaggregants;"
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "use of NSAIDs in the 5 days before blood donation;"
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "patients with Hb"
+        },
+        "right": {
+          "raw_text": "values < 11 g/dl and platelet values < 150,000/mmc."
         }
       }
     }

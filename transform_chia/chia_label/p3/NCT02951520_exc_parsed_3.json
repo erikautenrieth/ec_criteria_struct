@@ -1,28 +1,32 @@
 {
   "AND": {
     "left": {
-      "raw_text": "BMI > 30 kg.m-2,",
-      "Measurement": [
-        "BMI"
-      ],
-      "Value": [
-        "> 30 kg.m-2"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "ASA physical state >II",
-          "Measurement": [
-            "ASA physical state"
-          ],
-          "Value": [
-            ">II"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "BMI > 30 kg.m-2,",
+                  "Measurement": [
+                    "BMI"
+                  ],
+                  "Value": [
+                    "> 30 kg.m-2"
+                  ]
+                },
+                "right": {
+                  "raw_text": "ASA physical state >II",
+                  "Measurement": [
+                    "ASA physical state"
+                  ],
+                  "Value": [
+                    ">II"
+                  ]
+                }
+              }
+            },
+            "right": {
               "AND": {
                 "left": {
                   "raw_text": "Allergy",
@@ -37,36 +41,28 @@
                   ]
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Infection at the injection site",
-                  "Condition": [
-                    "Infection"
-                  ],
-                  "Qualifier": [
-                    "injection site"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "age <18y",
-                      "Person": [
-                        "age"
-                      ],
-                      "Value": [
-                        "<18y"
-                      ]
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Infection at the injection site",
+          "Condition": [
+            "Infection"
+          ],
+          "Qualifier": [
+            "injection site"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "age <18y",
+      "Person": [
+        "age"
+      ],
+      "Value": [
+        "<18y"
+      ]
     }
   }
 }

@@ -3,91 +3,107 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Previous or concurrent hormonal management",
-          "Procedure": [
-            "hormonal management"
-          ]
-        },
-        "right": {
-          "raw_text": "of prostate cancer",
-          "Condition": [
-            "prostate cancer"
-          ]
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
           "AND": {
             "left": {
-              "raw_text": "Contraindication",
-              "Condition": [
-                "Contraindication"
-              ]
-            },
-            "right": {
-              "raw_text": "for prescription of Firmagon\u00ae",
-              "Drug": [
-                "Firmagon"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Concurrent treatment with a 5-a-reductase inhibitor",
-              "Drug": [
-                "5-a-reductase inhibitor"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Considered as a candidate for curative therapy",
-                  "Procedure": [
-                    "curative therapy"
-                  ]
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": "History of severe untreated asthma",
-                          "Condition": [
-                            "asthma"
-                          ],
-                          "Qualifier": [
-                            "untreated",
-                            "severe"
-                          ]
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "Previous or concurrent hormonal management",
+                                          "Procedure": [
+                                            "hormonal management"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "of prostate cancer",
+                                          "Condition": [
+                                            "prostate cancer"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    "right": {
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "Contraindication",
+                                          "Condition": [
+                                            "Contraindication"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "for prescription of Firmagon\u00ae",
+                                          "Drug": [
+                                            "Firmagon"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "raw_text": "Concurrent treatment with a 5-a-reductase inhibitor",
+                                  "Drug": [
+                                    "5-a-reductase inhibitor"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "Considered as a candidate for curative therapy",
+                              "Procedure": [
+                                "curative therapy"
+                              ]
+                            }
+                          }
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", anaphylactic reactions",
+                              "raw_text": "History of severe untreated asthma",
                               "Condition": [
-                                "anaphylactic reactions"
+                                "asthma"
+                              ],
+                              "Qualifier": [
+                                "untreated",
+                                "severe"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "or severe urticaria",
-                                  "Qualifier": [
-                                    "severe"
-                                  ],
+                                  "raw_text": ", anaphylactic reactions",
                                   "Condition": [
-                                    "urticaria"
+                                    "anaphylactic reactions"
                                   ]
                                 },
                                 "right": {
-                                  "raw_text": "and/or angioedema",
-                                  "Condition": [
-                                    "angioedema"
-                                  ]
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "or severe urticaria",
+                                      "Qualifier": [
+                                        "severe"
+                                      ],
+                                      "Condition": [
+                                        "urticaria"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "and/or angioedema",
+                                      "Condition": [
+                                        "angioedema"
+                                      ]
+                                    }
+                                  }
                                 }
                               }
                             }
@@ -96,156 +112,74 @@
                       }
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
+                          "raw_text": "QTc interval",
+                          "Measurement": [
+                            "QTc interval"
+                          ]
+                        },
+                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "QTc interval",
-                              "Measurement": [
-                                "QTc interval"
+                              "raw_text": "over 450 msec or risk factors for torsades de pointes",
+                              "Value": [
+                                "over 450 msec"
+                              ],
+                              "Observation": [
+                                "risk factors for torsades de pointes"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "over 450 msec or risk factors for torsades de pointes",
-                                  "Value": [
-                                    "over 450 msec"
-                                  ],
-                                  "Observation": [
-                                    "risk factors for torsades de pointes"
-                                  ]
+                                  "raw_text": "or on Class IA"
                                 },
                                 "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "or on Class IA"
-                                    },
-                                    "right": {
-                                      "raw_text": "and Class III anti arrhythmic medications",
-                                      "Drug": [
-                                        "Class III anti arrhythmic medications"
-                                      ]
-                                    }
-                                  }
+                                  "raw_text": "and Class III anti arrhythmic medications",
+                                  "Drug": [
+                                    "Class III anti arrhythmic medications"
+                                  ]
                                 }
                               }
                             }
                           }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "except prostate cancer",
+                          "Condition": [
+                            "prostate cancer"
+                          ],
+                          "Negation": [
+                            "except"
+                          ]
                         },
                         "right": {
                           "AND": {
                             "left": {
-                              "NOT": {
-                                "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "except prostate cancer",
-                                      "Condition": [
-                                        "prostate cancer"
-                                      ],
-                                      "Negation": [
-                                        "except"
-                                      ]
-                                    },
-                                    "right": {
-                                      "AND": {
-                                        "left": {
-                                          "raw_text": "and surgically",
-                                          "Procedure": [
-                                            "surgically"
-                                          ]
-                                        },
-                                        "right": {
-                                          "OR": {
-                                            "left": {
-                                              "raw_text": "removed basal"
-                                            },
-                                            "right": {
-                                              "raw_text": "or squamous cell carcinoma of the skin",
-                                              "Condition": [
-                                                "squamous cell carcinoma of the skin"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
+                              "raw_text": "and surgically",
+                              "Procedure": [
+                                "surgically"
+                              ]
                             },
                             "right": {
-                              "AND": {
+                              "OR": {
                                 "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "Known or suspected hepatic"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": ", symptomatic biliary disease (this includes moderate",
-                                          "Condition": [
-                                            "biliary disease"
-                                          ],
-                                          "Qualifier": [
-                                            "moderate"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": "to severe chronic hepatic impairment)",
-                                          "Qualifier": [
-                                            "severe"
-                                          ],
-                                          "Condition": [
-                                            "chronic hepatic impairment"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
+                                  "raw_text": "removed basal"
                                 },
                                 "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Patients with clinically significant laboratory abnormalities / disorders other than prostate cancer",
-                                      "Condition": [
-                                        "prostate cancer"
-                                      ],
-                                      "Non-query-able": [
-                                        "Patients with clinically significant laboratory abnormalities / disorders other than prostate cancer"
-                                      ]
-                                    },
-                                    "right": {
-                                      "AND": {
-                                        "left": {
-                                          "OR": {
-                                            "left": {
-                                              "raw_text": "Patient with Hepatitis B Virus"
-                                            },
-                                            "right": {
-                                              "OR": {
-                                                "left": {
-                                                  "raw_text": "(HBV), Hepatitis C Virus",
-                                                  "Condition": [
-                                                    "HBV"
-                                                  ]
-                                                },
-                                                "right": {
-                                                  "raw_text": "(HCV) and Human Immunodeficiency Virus (HIV) infections",
-                                                  "Condition": [
-                                                    "HCV",
-                                                    "HIV"
-                                                  ]
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
+                                  "raw_text": "or squamous cell carcinoma of the skin",
+                                  "Condition": [
+                                    "squamous cell carcinoma of the skin"
+                                  ]
                                 }
                               }
                             }
@@ -256,6 +190,68 @@
                   }
                 }
               }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Known or suspected hepatic"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", symptomatic biliary disease (this includes moderate",
+                      "Condition": [
+                        "biliary disease"
+                      ],
+                      "Qualifier": [
+                        "moderate"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "to severe chronic hepatic impairment)",
+                      "Qualifier": [
+                        "severe"
+                      ],
+                      "Condition": [
+                        "chronic hepatic impairment"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Patients with clinically significant laboratory abnormalities / disorders other than prostate cancer",
+          "Condition": [
+            "prostate cancer"
+          ],
+          "Non-query-able": [
+            "Patients with clinically significant laboratory abnormalities / disorders other than prostate cancer"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Patient with Hepatitis B Virus"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "(HBV), Hepatitis C Virus",
+              "Condition": [
+                "HBV"
+              ]
+            },
+            "right": {
+              "raw_text": "(HCV) and Human Immunodeficiency Virus (HIV) infections",
+              "Condition": [
+                "HCV",
+                "HIV"
+              ]
             }
           }
         }

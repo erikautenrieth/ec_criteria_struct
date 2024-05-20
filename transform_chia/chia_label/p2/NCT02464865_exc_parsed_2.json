@@ -1,67 +1,50 @@
 {
   "AND": {
     "left": {
-      "raw_text": "pathological obesity"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "chronic diseases e.g. cerebral palsy"
-            },
-            "right": {
-              "raw_text": ", metabolic disease, etc."
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "diseases of red blood cells"
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "on medication e.g. steroid"
+                      "raw_text": "pathological obesity"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", multivitamins"
+                          "raw_text": "chronic diseases e.g. cerebral palsy"
                         },
                         "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", thiamine-containing vitamins"
-                            },
-                            "right": {
-                              "raw_text": ", diuretic drugs"
-                            }
-                          }
+                          "raw_text": ", metabolic disease, etc."
                         }
                       }
                     }
                   }
                 },
                 "right": {
-                  "AND": {
+                  "raw_text": "diseases of red blood cells"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "on medication e.g. steroid"
+                },
+                "right": {
+                  "OR": {
                     "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "hemodialysis"
-                        },
-                        "right": {
-                          "raw_text": "or peritoneal dialysis"
-                        }
-                      }
+                      "raw_text": ", multivitamins"
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
-                          "raw_text": "bariatric surgery"
+                          "raw_text": ", thiamine-containing vitamins"
+                        },
+                        "right": {
+                          "raw_text": ", diuretic drugs"
                         }
                       }
                     }
@@ -70,8 +53,21 @@
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "hemodialysis"
+            },
+            "right": {
+              "raw_text": "or peritoneal dialysis"
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "bariatric surgery"
     }
   }
 }

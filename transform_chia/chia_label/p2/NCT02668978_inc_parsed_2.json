@@ -1,47 +1,43 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Patients over the age of 18 years who are able to give their informed consent"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Lobar"
+              "raw_text": "Patients over the age of 18 years who are able to give their informed consent"
             },
             "right": {
-              "raw_text": "and sublobar resections"
+              "OR": {
+                "left": {
+                  "raw_text": "Lobar"
+                },
+                "right": {
+                  "raw_text": "and sublobar resections"
+                }
+              }
             }
           }
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Open, video-assisted thoracoscopic"
-                },
-                "right": {
-                  "raw_text": "or robotic surgeries"
-                }
-              }
+              "raw_text": "Open, video-assisted thoracoscopic"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Diagnostic"
-                    },
-                    "right": {
-                      "raw_text": "or therapeutic procedures"
-                    }
-                  }
-                }
-              }
+              "raw_text": "or robotic surgeries"
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Diagnostic"
+        },
+        "right": {
+          "raw_text": "or therapeutic procedures"
         }
       }
     }

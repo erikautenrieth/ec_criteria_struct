@@ -1,35 +1,39 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "congenital",
-          "Qualifier": [
-            "congenital"
-          ]
-        },
-        "right": {
-          "raw_text": "or valvular cardiomyopathy;",
-          "Qualifier": [
-            "valvular"
-          ],
-          "Condition": [
-            "cardiomyopathy"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "ischemic heart disease;",
-          "Condition": [
-            "ischemic heart disease"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "congenital",
+                      "Qualifier": [
+                        "congenital"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or valvular cardiomyopathy;",
+                      "Qualifier": [
+                        "valvular"
+                      ],
+                      "Condition": [
+                        "cardiomyopathy"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "ischemic heart disease;",
+                  "Condition": [
+                    "ischemic heart disease"
+                  ]
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "endocrine diseases: male hypogonadism",
@@ -65,51 +69,43 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "proliferative retinopathy",
-                      "Condition": [
-                        "proliferative retinopathy"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "or autonomic neuropathy;",
-                      "Condition": [
-                        "autonomic neuropathy"
-                      ]
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "contraindications to sildenafil",
-                          "Condition": [
-                            "contraindications"
-                          ],
-                          "Drug": [
-                            "sildenafil"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "use or CMR imaging;",
-                          "Procedure": [
-                            "CMR imaging"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "proliferative retinopathy",
+              "Condition": [
+                "proliferative retinopathy"
+              ]
+            },
+            "right": {
+              "raw_text": "or autonomic neuropathy;",
+              "Condition": [
+                "autonomic neuropathy"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "contraindications to sildenafil",
+          "Condition": [
+            "contraindications"
+          ],
+          "Drug": [
+            "sildenafil"
+          ]
+        },
+        "right": {
+          "raw_text": "use or CMR imaging;",
+          "Procedure": [
+            "CMR imaging"
+          ]
         }
       }
     }

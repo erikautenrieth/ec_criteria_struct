@@ -3,35 +3,39 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Treated with a stable dose of one of the following for at least 3 months prior to screening: * >=1000 mg/day"
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "immediate-release metformin"
+              "raw_text": "Treated with a stable dose of one of the following for at least 3 months prior to screening: * >=1000 mg/day"
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "; or metformin"
+                  "raw_text": "immediate-release metformin"
                 },
                 "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": ">=1000 mg/day and sulfonylurea"
+                      "raw_text": "; or metformin"
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
-                          "raw_text": "; or sulfonylurea"
+                          "raw_text": ">=1000 mg/day and sulfonylurea"
                         },
                         "right": {
                           "AND": {
                             "left": {
-                              "raw_text": "/metformin"
+                              "raw_text": "; or sulfonylurea"
                             },
                             "right": {
-                              "raw_text": "combination therapy."
+                              "AND": {
+                                "left": {
+                                  "raw_text": "/metformin"
+                                },
+                                "right": {
+                                  "raw_text": "combination therapy."
+                                }
+                              }
                             }
                           }
                         }
@@ -42,22 +46,14 @@
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "HbA1c between 7.1% and 11.0%, inclusive."
         }
       }
     },
     "right": {
-      "AND": {
-        "left": {
-          "raw_text": "HbA1c between 7.1% and 11.0%, inclusive."
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Body Mass Index (BMI) >21 kg/m^2 and <35 kg/m^2."
-            }
-          }
-        }
-      }
+      "raw_text": "Body Mass Index (BMI) >21 kg/m^2 and <35 kg/m^2."
     }
   }
 }

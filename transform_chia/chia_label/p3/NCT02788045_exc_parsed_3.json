@@ -1,117 +1,129 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Has chronic hepatitis B",
-          "Condition": [
-            "chronic hepatitis B"
-          ]
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "(measured by hepatitis B surface antigen test) or active hepatitis C",
-              "Measurement": [
-                "hepatitis B surface antigen test"
-              ],
-              "Condition": [
-                "active hepatitis C"
-              ],
-              "Qualifier": [
-                "active"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "(measured by hepatitis C virus [HCV] Ab test; if positive",
-                  "Measurement": [
-                    "hepatitis C virus [HCV] Ab test"
-                  ],
-                  "Value": [
-                    "positive"
-                  ]
-                },
-                "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", HCV ribonucleic acid [RNA] PCR test will be used to confirm active versus past HCV infection), active syphilis infection",
-                      "Measurement": [
-                        "HCV ribonucleic acid [RNA] PCR test"
-                      ],
-                      "Qualifier": [
-                        "active"
-                      ],
+                      "raw_text": "Has chronic hepatitis B",
                       "Condition": [
-                        "syphilis infection",
-                        "syphilis"
+                        "chronic hepatitis B"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", chlamydia",
+                          "raw_text": "(measured by hepatitis B surface antigen test) or active hepatitis C",
+                          "Measurement": [
+                            "hepatitis B surface antigen test"
+                          ],
                           "Condition": [
-                            "chlamydia"
+                            "active hepatitis C"
+                          ],
+                          "Qualifier": [
+                            "active"
                           ]
                         },
                         "right": {
-                          "OR": {
+                          "AND": {
                             "left": {
-                              "raw_text": ", gonorrhea",
-                              "Condition": [
-                                "gonorrhea"
+                              "raw_text": "(measured by hepatitis C virus [HCV] Ab test; if positive",
+                              "Measurement": [
+                                "hepatitis C virus [HCV] Ab test"
+                              ],
+                              "Value": [
+                                "positive"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": ", or trichomonas",
+                                  "raw_text": ", HCV ribonucleic acid [RNA] PCR test will be used to confirm active versus past HCV infection), active syphilis infection",
+                                  "Measurement": [
+                                    "HCV ribonucleic acid [RNA] PCR test"
+                                  ],
+                                  "Qualifier": [
+                                    "active"
+                                  ],
                                   "Condition": [
-                                    "trichomonas"
+                                    "syphilis infection",
+                                    "syphilis"
                                   ]
                                 },
                                 "right": {
-                                  "AND": {
+                                  "OR": {
                                     "left": {
-                                      "raw_text": ". Active syphilis",
-                                      "Qualifier": [
-                                        "Active"
-                                      ],
+                                      "raw_text": ", chlamydia",
                                       "Condition": [
-                                        "syphilis"
+                                        "chlamydia"
                                       ]
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "documented by serology",
-                                          "Measurement": [
-                                            "serology"
+                                          "raw_text": ", gonorrhea",
+                                          "Condition": [
+                                            "gonorrhea"
                                           ]
                                         },
                                         "right": {
-                                          "NOT": {
+                                          "OR": {
                                             "left": {
+                                              "raw_text": ", or trichomonas",
+                                              "Condition": [
+                                                "trichomonas"
+                                              ]
+                                            },
+                                            "right": {
                                               "AND": {
                                                 "left": {
-                                                  "raw_text": "unless positive",
-                                                  "Value": [
-                                                    "positive"
+                                                  "raw_text": ". Active syphilis",
+                                                  "Qualifier": [
+                                                    "Active"
                                                   ],
-                                                  "Negation": [
-                                                    "unless"
+                                                  "Condition": [
+                                                    "syphilis"
                                                   ]
                                                 },
                                                 "right": {
-                                                  "raw_text": "serology is due to past treated infection",
-                                                  "Measurement": [
-                                                    "serology"
-                                                  ],
-                                                  "Condition": [
-                                                    "treated infection"
-                                                  ]
+                                                  "OR": {
+                                                    "left": {
+                                                      "raw_text": "documented by serology",
+                                                      "Measurement": [
+                                                        "serology"
+                                                      ]
+                                                    },
+                                                    "right": {
+                                                      "NOT": {
+                                                        "left": {
+                                                          "AND": {
+                                                            "left": {
+                                                              "raw_text": "unless positive",
+                                                              "Value": [
+                                                                "positive"
+                                                              ],
+                                                              "Negation": [
+                                                                "unless"
+                                                              ]
+                                                            },
+                                                            "right": {
+                                                              "raw_text": "serology is due to past treated infection",
+                                                              "Measurement": [
+                                                                "serology"
+                                                              ],
+                                                              "Condition": [
+                                                                "treated infection"
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
                                                 }
                                               }
                                             }
@@ -128,57 +140,49 @@
                       }
                     }
                   }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Has had a thyroidectomy",
-              "Procedure": [
-                "thyroidectomy"
-              ]
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "or active thyroid disease",
-                  "Qualifier": [
-                    "active"
-                  ],
-                  "Condition": [
-                    "thyroid disease"
-                  ]
                 },
                 "right": {
-                  "NOT": {
+                  "OR": {
                     "left": {
-                      "raw_text": "not excluded: a stable thyroid supplementation)",
-                      "Drug": [
-                        "thyroid supplementation"
-                      ],
-                      "Qualifier": [
-                        "stable"
-                      ],
-                      "Negation": [
-                        "not excluded"
+                      "raw_text": "Has had a thyroidectomy",
+                      "Procedure": [
+                        "thyroidectomy"
                       ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or active thyroid disease",
+                          "Qualifier": [
+                            "active"
+                          ],
+                          "Condition": [
+                            "thyroid disease"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "not excluded: a stable thyroid supplementation)",
+                              "Drug": [
+                                "thyroid supplementation"
+                              ],
+                              "Qualifier": [
+                                "stable"
+                              ],
+                              "Negation": [
+                                "not excluded"
+                              ]
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Has had major psychiatric illness and/or substance abuse problems during the past 12 months (including hospitalization",
@@ -215,134 +219,126 @@
                   ]
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Has been in receipt of any licensed vaccine within 14 days prior",
+              "Drug": [
+                "licensed vaccine"
+              ],
+              "Temporal": [
+                "within 14 days prior"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "to the first dose of study vaccine/placebo, plans to receive within 14 days after",
+                  "Reference_point": [
+                    "the first dose of study vaccine/placebo"
+                  ],
+                  "Temporal": [
+                    "within 14 days after"
+                  ],
+                  "Drug": [
+                    "study vaccine",
+                    "placebo"
+                  ],
+                  "Non-query-able": [
+                    "plans to"
+                  ]
+                },
+                "right": {
+                  "raw_text": "the first study vaccination, or plans to receive within 14 days before or after the second, third or fourth vaccination",
+                  "Reference_point": [
+                    "first study vaccination",
+                    "second, third or fourth vaccination"
+                  ],
+                  "Procedure": [
+                    "study vaccination"
+                  ],
+                  "Non-query-able": [
+                    "plans to"
+                  ],
+                  "Temporal": [
+                    "within 14 days before or after"
+                  ],
+                  "Drug": [
+                    "vaccination"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Is a recipient of a prophylactic",
+          "Qualifier": [
+            "prophylactic"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or therapeutic HIV vaccine candidate",
+              "Drug": [
+                "HIV vaccine candidate",
+                "HIV vaccine"
+              ],
+              "Qualifier": [
+                "therapeutic"
+              ]
             },
             "right": {
               "AND": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Has been in receipt of any licensed vaccine within 14 days prior",
-                      "Drug": [
-                        "licensed vaccine"
-                      ],
-                      "Temporal": [
-                        "within 14 days prior"
-                      ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "to the first dose of study vaccine/placebo, plans to receive within 14 days after",
-                          "Reference_point": [
-                            "the first dose of study vaccine/placebo"
-                          ],
-                          "Temporal": [
-                            "within 14 days after"
-                          ],
-                          "Drug": [
-                            "study vaccine",
-                            "placebo"
-                          ],
-                          "Non-query-able": [
-                            "plans to"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "the first study vaccination, or plans to receive within 14 days before or after the second, third or fourth vaccination",
-                          "Reference_point": [
-                            "first study vaccination",
-                            "second, third or fourth vaccination"
-                          ],
-                          "Procedure": [
-                            "study vaccination"
-                          ],
-                          "Non-query-able": [
-                            "plans to"
-                          ],
-                          "Temporal": [
-                            "within 14 days before or after"
-                          ],
-                          "Drug": [
-                            "vaccination"
-                          ]
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "at any time, or a recipient of other experimental vaccine(s) within the last 12 months. For participants who received an experimental vaccine",
+                  "Temporal": [
+                    "at any time",
+                    "within the last 12 months"
+                  ],
+                  "Drug": [
+                    "other experimental vaccine(s)",
+                    "experimental vaccine"
+                  ],
+                  "Context_Error": [
+                    "other experimental vaccine(s)",
+                    "experimental vaccine"
+                  ],
+                  "Undefined_semantics": [
+                    "experimental vaccine"
+                  ]
                 },
                 "right": {
-                  "AND": {
+                  "NOT": {
                     "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Is a recipient of a prophylactic",
-                          "Qualifier": [
-                            "prophylactic"
-                          ]
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "or therapeutic HIV vaccine candidate",
-                              "Drug": [
-                                "HIV vaccine candidate",
-                                "HIV vaccine"
-                              ],
-                              "Qualifier": [
-                                "therapeutic"
-                              ]
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "at any time, or a recipient of other experimental vaccine(s) within the last 12 months. For participants who received an experimental vaccine",
-                                  "Temporal": [
-                                    "at any time",
-                                    "within the last 12 months"
-                                  ],
-                                  "Drug": [
-                                    "other experimental vaccine(s)",
-                                    "experimental vaccine"
-                                  ],
-                                  "Context_Error": [
-                                    "other experimental vaccine(s)",
-                                    "experimental vaccine"
-                                  ],
-                                  "Undefined_semantics": [
-                                    "experimental vaccine"
-                                  ]
-                                },
-                                "right": {
-                                  "NOT": {
-                                    "left": {
-                                      "raw_text": "except HIV vaccine) more than 12 months ago, documentation of the identity of the experimental vaccine must be provided to the sponsor, who will determine eligibility on a case-by-case basis",
-                                      "Drug": [
-                                        "experimental vaccine",
-                                        "HIV vaccine"
-                                      ],
-                                      "Negation": [
-                                        "except"
-                                      ],
-                                      "Temporal": [
-                                        "more than 12 months ago"
-                                      ],
-                                      "Context_Error": [
-                                        "experimental vaccine"
-                                      ],
-                                      "Undefined_semantics": [
-                                        "experimental vaccine"
-                                      ],
-                                      "Subjective_judgement": [
-                                        "case-by-case basis"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "except HIV vaccine) more than 12 months ago, documentation of the identity of the experimental vaccine must be provided to the sponsor, who will determine eligibility on a case-by-case basis",
+                      "Drug": [
+                        "experimental vaccine",
+                        "HIV vaccine"
+                      ],
+                      "Negation": [
+                        "except"
+                      ],
+                      "Temporal": [
+                        "more than 12 months ago"
+                      ],
+                      "Context_Error": [
+                        "experimental vaccine"
+                      ],
+                      "Undefined_semantics": [
+                        "experimental vaccine"
+                      ],
+                      "Subjective_judgement": [
+                        "case-by-case basis"
+                      ]
                     }
                   }
                 }

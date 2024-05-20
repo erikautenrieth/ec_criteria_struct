@@ -1,30 +1,34 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Diagnosis of schizophrenia"
-        },
-        "right": {
-          "raw_text": "or schizoaffective disorder"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "If entering the study as an inpatient"
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Diagnosis of schizophrenia"
+                    },
+                    "right": {
+                      "raw_text": "or schizoaffective disorder"
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "If entering the study as an inpatient"
+                    },
+                    "right": {
+                      "raw_text": ", hospitalization was recent"
+                    }
+                  }
+                }
+              }
             },
             "right": {
-              "raw_text": ", hospitalization was recent"
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
               "AND": {
                 "left": {
                   "raw_text": "Currently receiving treatment"
@@ -40,24 +44,16 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Assumes primary responsibility for taking medication"
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Currently living in a stable environment"
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Assumes primary responsibility for taking medication"
         }
       }
+    },
+    "right": {
+      "raw_text": "Currently living in a stable environment"
     }
   }
 }

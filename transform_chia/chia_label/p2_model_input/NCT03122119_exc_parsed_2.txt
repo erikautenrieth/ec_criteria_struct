@@ -1,16 +1,20 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Patients under the age of 18 (Subjects under the age of 18 will not be included in this study due to the continued growth and development of their joints and unstudied effects on children.)"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Over the age of 80"
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Patients under the age of 18 (Subjects under the age of 18 will not be included in this study due to the continued growth and development of their joints and unstudied effects on children.)"
+                },
+                "right": {
+                  "raw_text": "Over the age of 80"
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Multiple pain sources"
@@ -75,46 +79,38 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Immunosuppressed"
             },
             "right": {
-              "AND": {
+              "raw_text": "/immune compromised"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Underlying comorbidities that contraindicate"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "the procedure (including but not limited to polycythemia"
+            },
+            "right": {
+              "OR": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Immunosuppressed"
-                    },
-                    "right": {
-                      "raw_text": "/immune compromised"
-                    }
-                  }
+                  "raw_text": ", coagulation disorder"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Underlying comorbidities that contraindicate"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "the procedure (including but not limited to polycythemia"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": ", coagulation disorder"
-                                },
-                                "right": {
-                                  "raw_text": ", or malignancy)."
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": ", or malignancy)."
                 }
               }
             }

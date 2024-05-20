@@ -3,42 +3,50 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Anaphylactic reaction"
-        },
-        "right": {
-          "raw_text": "to a previous dose of TIV(trivalent influenza vaccine)"
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
           "AND": {
             "left": {
-              "raw_text": "Known IgE( Immunoglobulin E)-mediated hypersensitivity"
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "to eggs manifested as hives"
+                  "AND": {
+                    "left": {
+                      "raw_text": "Anaphylactic reaction"
+                    },
+                    "right": {
+                      "raw_text": "to a previous dose of TIV(trivalent influenza vaccine)"
+                    }
+                  }
                 },
                 "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": ", swelling of the mouth and throat"
+                      "raw_text": "Known IgE( Immunoglobulin E)-mediated hypersensitivity"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", difficulty in breathing"
+                          "raw_text": "to eggs manifested as hives"
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", hypotension"
+                              "raw_text": ", swelling of the mouth and throat"
                             },
                             "right": {
-                              "raw_text": ", or shock"
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", difficulty in breathing"
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": ", hypotension"
+                                    },
+                                    "right": {
+                                      "raw_text": ", or shock"
+                                    }
+                                  }
+                                }
+                              }
                             }
                           }
                         }
@@ -47,45 +55,33 @@
                   }
                 }
               }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Guillain-Barr\u00e9 syndrome within eight weeks of a previous influenza vaccine"
+                },
+                "right": {
+                  "raw_text": "empty set"
+                }
+              }
             }
           }
         },
         "right": {
           "AND": {
             "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Guillain-Barr\u00e9 syndrome within eight weeks of a previous influenza vaccine"
-                },
-                "right": {
-                  "raw_text": ""
-                }
-              }
+              "raw_text": "Anaphylactic reaction"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Anaphylactic reaction"
-                    },
-                    "right": {
-                      "raw_text": "to neomycin"
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Patients who have had influenza vaccine in two of the three previous years"
-                    }
-                  }
-                }
-              }
+              "raw_text": "to neomycin"
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Patients who have had influenza vaccine in two of the three previous years"
     }
   }
 }

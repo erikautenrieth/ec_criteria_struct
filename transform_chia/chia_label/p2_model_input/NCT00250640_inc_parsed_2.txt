@@ -1,11 +1,11 @@
 {
   "AND": {
     "left": {
-      "raw_text": "The treating physician has chosen Ventavis as a suitable long-term treatment for the patient"
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "The treating physician has chosen Ventavis as a suitable long-term treatment for the patient"
+        },
+        "right": {
           "AND": {
             "left": {
               "raw_text": "Patient with primary pulmonary hypertension"
@@ -21,27 +21,23 @@
               }
             }
           }
-        },
-        "right": {
-          "AND": {
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
             "left": {
-              "NOT": {
+              "raw_text": "No prior treatment with Ventavis"
+            },
+            "right": {
+              "AND": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "No prior treatment with Ventavis"
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "or other active treatments for primary pulmonary hypertension"
-                        },
-                        "right": {
-                          "raw_text": "within 6 weeks of date of study inclusion (unless otherwise advised by Bayer Schering Pharma)"
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "or other active treatments for primary pulmonary hypertension"
+                },
+                "right": {
+                  "raw_text": "within 6 weeks of date of study inclusion (unless otherwise advised by Bayer Schering Pharma)"
                 }
               }
             }

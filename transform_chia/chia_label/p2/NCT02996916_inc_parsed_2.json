@@ -1,11 +1,11 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Written informed consent obtained"
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "Written informed consent obtained"
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "Male"
@@ -14,22 +14,18 @@
               "raw_text": "and female subjects aged 20 years or older at informed consent"
             }
           }
-        },
-        "right": {
-          "AND": {
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
             "left": {
-              "NOT": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "never received angiotensin II receptor antagonists"
-                    },
-                    "right": {
-                      "raw_text": "and calcium channel blockers"
-                    }
-                  }
-                }
-              }
+              "raw_text": "never received angiotensin II receptor antagonists"
+            },
+            "right": {
+              "raw_text": "and calcium channel blockers"
             }
           }
         }

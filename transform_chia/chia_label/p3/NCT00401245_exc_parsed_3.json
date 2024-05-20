@@ -3,35 +3,35 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "History of a seizure disorder",
-          "Condition": [
-            "seizure disorder"
-          ],
-          "Observation": [
-            "History"
-          ]
-        },
-        "right": {
-          "NOT": {
+          "AND": {
             "left": {
-              "raw_text": "other than a single childhood febrile seizure.",
+              "raw_text": "History of a seizure disorder",
               "Condition": [
-                "childhood febrile seizure"
+                "seizure disorder"
               ],
-              "Multiplier": [
-                "single"
-              ],
-              "Negation": [
-                "other than"
+              "Observation": [
+                "History"
               ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "other than a single childhood febrile seizure.",
+                  "Condition": [
+                    "childhood febrile seizure"
+                  ],
+                  "Multiplier": [
+                    "single"
+                  ],
+                  "Negation": [
+                    "other than"
+                  ]
+                }
+              }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "History or presence of clinically important",
@@ -43,48 +43,44 @@
               "raw_text": "hepatic or renal disease or other medical disease."
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Presence or recent history of major depressive disorder",
+          "Observation": [
+            "history"
+          ],
+          "Condition": [
+            "major depressive disorder"
+          ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
+              "raw_text": ", bipolar disorder",
+              "Condition": [
+                "bipolar disorder"
+              ]
+            },
+            "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Presence or recent history of major depressive disorder",
-                  "Observation": [
-                    "history"
-                  ],
+                  "raw_text": ", psychotic disorder",
                   "Condition": [
-                    "major depressive disorder"
+                    "psychotic disorder"
                   ]
                 },
                 "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": ", bipolar disorder",
-                      "Condition": [
-                        "bipolar disorder"
-                      ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", psychotic disorder",
-                          "Condition": [
-                            "psychotic disorder"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": ", or generalized anxiety disorder requiring therapy.",
-                          "Condition": [
-                            "generalized anxiety disorder"
-                          ],
-                          "Qualifier": [
-                            "requiring therapy"
-                          ]
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": ", or generalized anxiety disorder requiring therapy.",
+                  "Condition": [
+                    "generalized anxiety disorder"
+                  ],
+                  "Qualifier": [
+                    "requiring therapy"
+                  ]
                 }
               }
             }

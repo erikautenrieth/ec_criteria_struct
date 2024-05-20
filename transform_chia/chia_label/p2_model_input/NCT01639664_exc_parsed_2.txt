@@ -1,63 +1,59 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Age less than 14 years"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Pregnancy"
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Estimated life expectancy (due to comorbidities) less than 90 days"
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "Presence of relative"
+                      "raw_text": "Age less than 14 years"
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "or absolute contraindications"
-                        },
-                        "right": {
-                          "raw_text": "to CPFA"
-                        }
-                      }
+                      "raw_text": "Pregnancy"
                     }
                   }
                 },
                 "right": {
+                  "raw_text": "Estimated life expectancy (due to comorbidities) less than 90 days"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Presence of relative"
+                },
+                "right": {
                   "AND": {
                     "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Admission"
-                        },
-                        "right": {
-                          "raw_text": "from an other ICU where the patient remained for more than 24 hours"
-                        }
-                      }
+                      "raw_text": "or absolute contraindications"
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Absence of informed consent"
-                        }
-                      }
+                      "raw_text": "to CPFA"
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Admission"
+            },
+            "right": {
+              "raw_text": "from an other ICU where the patient remained for more than 24 hours"
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Absence of informed consent"
     }
   }
 }

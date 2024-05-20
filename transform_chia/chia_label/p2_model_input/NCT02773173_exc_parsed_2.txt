@@ -1,28 +1,36 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Emergency surgery"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Pregnancy"
-            },
-            "right": {
-              "raw_text": "or lactation"
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Immune disorders"
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Emergency surgery"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Pregnancy"
+                            },
+                            "right": {
+                              "raw_text": "or lactation"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Immune disorders"
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Kidney"
@@ -38,55 +46,43 @@
                       }
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "Patient refusal to participate in the study"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Patients under 18 years"
+            },
+            "right": {
+              "raw_text": "or inability to consent"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Associated neuromuscular disorders, contraindication for the use of rocuronium"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "/ sugammadex, allergy"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or hypersensitivity to rocuronium"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Patient refusal to participate in the study"
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Patients under 18 years"
-                            },
-                            "right": {
-                              "raw_text": "or inability to consent"
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Associated neuromuscular disorders, contraindication for the use of rocuronium"
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "/ sugammadex, allergy"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "or hypersensitivity to rocuronium"
-                                        },
-                                        "right": {
-                                          "raw_text": "/ sugammadex"
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "/ sugammadex"
                 }
               }
             }

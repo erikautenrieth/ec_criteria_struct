@@ -1,77 +1,73 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "use illicit drugs"
-        },
-        "right": {
-          "raw_text": "or relapse during the last trimester of pregnancy"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "positive drug screen at the time of delivery"
-        },
-        "right": {
           "AND": {
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "allergies"
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "use illicit drugs"
+                        },
+                        "right": {
+                          "raw_text": "or relapse during the last trimester of pregnancy"
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "positive drug screen at the time of delivery"
+                    }
+                  }
                 },
                 "right": {
-                  "raw_text": "to any medications used in the study"
+                  "AND": {
+                    "left": {
+                      "raw_text": "allergies"
+                    },
+                    "right": {
+                      "raw_text": "to any medications used in the study"
+                    }
+                  }
                 }
               }
             },
             "right": {
               "AND": {
                 "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "taking prescribed gabapentin at the time of admission"
-                    },
-                    "right": {
-                      "raw_text": "for CD"
-                    }
-                  }
+                  "raw_text": "taking prescribed gabapentin at the time of admission"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "contraindications"
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "to neuraxial anesthesia or require general anesthesia"
-                            },
-                            "right": {
-                              "raw_text": "for CD"
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "designated ASA physical status 4 or above"
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "for CD"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "contraindications"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "to neuraxial anesthesia or require general anesthesia"
+                },
+                "right": {
+                  "raw_text": "for CD"
                 }
               }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "designated ASA physical status 4 or above"
     }
   }
 }

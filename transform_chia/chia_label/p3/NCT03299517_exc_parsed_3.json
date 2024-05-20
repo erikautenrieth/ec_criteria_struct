@@ -1,33 +1,41 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Pregnancy",
-      "Condition": [
-        "Pregnancy"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Hemodynamic instability",
-          "Condition": [
-            "Hemodynamic instability"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Body mass index greater than 40 kg / m2",
-              "Measurement": [
-                "Body mass index"
-              ],
-              "Value": [
-                "greater than 40 kg / m2"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Pregnancy",
+                          "Condition": [
+                            "Pregnancy"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "Hemodynamic instability",
+                          "Condition": [
+                            "Hemodynamic instability"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Body mass index greater than 40 kg / m2",
+                      "Measurement": [
+                        "Body mass index"
+                      ],
+                      "Value": [
+                        "greater than 40 kg / m2"
+                      ]
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Use of intravenous amiodarone",
@@ -48,60 +56,48 @@
                       ]
                     }
                   }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Acute coronary syndrome",
-                      "Condition": [
-                        "Acute coronary syndrome"
-                      ]
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Presence of tachycardia with irregular",
-                              "Condition": [
-                                "tachycardia"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "or supraventricular RR",
-                              "Condition": [
-                                "supraventricular RR"
-                              ]
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "Contraindications",
-                                  "Condition": [
-                                    "Contraindications"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": "to study drugs",
-                                  "Drug": [
-                                    "study drugs"
-                                  ]
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Acute coronary syndrome",
+              "Condition": [
+                "Acute coronary syndrome"
+              ]
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Presence of tachycardia with irregular",
+              "Condition": [
+                "tachycardia"
+              ]
+            },
+            "right": {
+              "raw_text": "or supraventricular RR",
+              "Condition": [
+                "supraventricular RR"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Contraindications",
+          "Condition": [
+            "Contraindications"
+          ]
+        },
+        "right": {
+          "raw_text": "to study drugs",
+          "Drug": [
+            "study drugs"
+          ]
         }
       }
     }

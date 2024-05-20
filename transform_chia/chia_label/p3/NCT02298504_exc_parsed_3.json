@@ -1,37 +1,37 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Teeth with clinical symptoms of irriversible pulpitis",
-          "Condition": [
-            "irriversible pulpitis"
-          ],
-          "Qualifier": [
-            "Teeth"
-          ]
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": "or pulp necrosis",
+              "raw_text": "Teeth with clinical symptoms of irriversible pulpitis",
               "Condition": [
-                "pulp necrosis"
+                "irriversible pulpitis"
+              ],
+              "Qualifier": [
+                "Teeth"
               ]
             },
             "right": {
-              "raw_text": "or acute dental infection",
-              "Condition": [
-                "acute dental infection"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "or pulp necrosis",
+                  "Condition": [
+                    "pulp necrosis"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or acute dental infection",
+                  "Condition": [
+                    "acute dental infection"
+                  ]
+                }
+              }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "AND": {
             "left": {
               "raw_text": "Children with systemic illness",
@@ -59,21 +59,17 @@
               }
             }
           }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Teeth that are not restorable",
-              "Qualifier": [
-                "Teeth"
-              ],
-              "Observation": [
-                "Teeth that are not restorable"
-              ]
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Teeth that are not restorable",
+      "Qualifier": [
+        "Teeth"
+      ],
+      "Observation": [
+        "Teeth that are not restorable"
+      ]
     }
   }
 }

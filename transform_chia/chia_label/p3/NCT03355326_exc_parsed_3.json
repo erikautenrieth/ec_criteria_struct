@@ -1,20 +1,60 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Neurological Congenital malformations",
-          "Condition": [
-            "Neurological Congenital malformations"
-          ],
-          "Qualifier": [
-            "Congenital"
-          ]
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Neurological Congenital malformations",
+                  "Condition": [
+                    "Neurological Congenital malformations"
+                  ],
+                  "Qualifier": [
+                    "Congenital"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and/or those known to impair intestinal motility",
+                  "Condition": [
+                    "impair intestinal motility"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Additional congenital gastrointestinal abnormalities",
+                  "Condition": [
+                    "gastrointestinal abnormalities"
+                  ],
+                  "Qualifier": [
+                    "Additional",
+                    "congenital"
+                  ]
+                },
+                "right": {
+                  "raw_text": "requiring surgical intervention",
+                  "Procedure": [
+                    "surgical intervention"
+                  ],
+                  "Mood": [
+                    "requiring"
+                  ]
+                }
+              }
+            }
+          }
         },
         "right": {
-          "raw_text": "and/or those known to impair intestinal motility",
+          "raw_text": "Congenital Cyanotic heart disease",
+          "Qualifier": [
+            "Congenital"
+          ],
           "Condition": [
-            "impair intestinal motility"
+            "Cyanotic heart disease"
           ]
         }
       }
@@ -22,72 +62,28 @@
     "right": {
       "AND": {
         "left": {
-          "AND": {
-            "left": {
-              "raw_text": "Additional congenital gastrointestinal abnormalities",
-              "Condition": [
-                "gastrointestinal abnormalities"
-              ],
-              "Qualifier": [
-                "Additional",
-                "congenital"
-              ]
-            },
-            "right": {
-              "raw_text": "requiring surgical intervention",
-              "Procedure": [
-                "surgical intervention"
-              ],
-              "Mood": [
-                "requiring"
-              ]
-            }
-          }
+          "raw_text": "Surgical Closure",
+          "Procedure": [
+            "Surgical Closure"
+          ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "Congenital Cyanotic heart disease",
-              "Qualifier": [
-                "Congenital"
-              ],
+              "raw_text": "of abdominal wall defect with prosthetic material (e.g. prosthetic",
               "Condition": [
-                "Cyanotic heart disease"
+                "abdominal wall defect"
+              ],
+              "Device": [
+                "prosthetic material"
               ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Surgical Closure",
-                      "Procedure": [
-                        "Surgical Closure"
-                      ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "of abdominal wall defect with prosthetic material (e.g. prosthetic",
-                          "Condition": [
-                            "abdominal wall defect"
-                          ],
-                          "Device": [
-                            "prosthetic material"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or bio-prosthetic mesh)",
-                          "Device": [
-                            "prosthetic mesh",
-                            "bio-prosthetic mesh"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "or bio-prosthetic mesh)",
+              "Device": [
+                "prosthetic mesh",
+                "bio-prosthetic mesh"
+              ]
             }
           }
         }

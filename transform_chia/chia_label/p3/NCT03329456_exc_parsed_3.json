@@ -1,86 +1,82 @@
 {
-  "AND": {
+  "OR": {
     "left": {
+      "raw_text": "Exclusion criteria are pregnancy",
+      "Condition": [
+        "pregnancy"
+      ]
+    },
+    "right": {
       "OR": {
         "left": {
-          "raw_text": "Exclusion criteria are pregnancy",
+          "raw_text": ", patients with contraindications",
           "Condition": [
-            "pregnancy"
+            "contraindications"
           ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": ", patients with contraindications",
+              "raw_text": "to regional anesthesia, allergy",
+              "Procedure": [
+                "regional anesthesia"
+              ],
               "Condition": [
-                "contraindications"
+                "allergy"
               ]
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "to regional anesthesia, allergy",
-                  "Procedure": [
-                    "regional anesthesia"
-                  ],
-                  "Condition": [
-                    "allergy"
+                  "raw_text": "to LAs, patients taking opioids",
+                  "Drug": [
+                    "LAs",
+                    "opioids"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "to LAs, patients taking opioids",
+                      "raw_text": "regularly due to chronic pain, use of anticoagulation drugs",
+                      "Multiplier": [
+                        "regularly"
+                      ],
+                      "Condition": [
+                        "chronic pain"
+                      ],
                       "Drug": [
-                        "LAs",
-                        "opioids"
+                        "anticoagulation drugs"
                       ]
                     },
                     "right": {
-                      "OR": {
+                      "NOT": {
                         "left": {
-                          "raw_text": "regularly due to chronic pain, use of anticoagulation drugs",
-                          "Multiplier": [
-                            "regularly"
-                          ],
-                          "Condition": [
-                            "chronic pain"
-                          ],
-                          "Drug": [
-                            "anticoagulation drugs"
-                          ]
-                        },
-                        "right": {
-                          "NOT": {
+                          "OR": {
                             "left": {
+                              "raw_text": "other than acetylsalicylic acid",
+                              "Drug": [
+                                "acetylsalicylic acid"
+                              ],
+                              "Negation": [
+                                "other than"
+                              ]
+                            },
+                            "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "other than acetylsalicylic acid",
+                                  "raw_text": "or dipyridamole, atrioventricular block",
                                   "Drug": [
-                                    "acetylsalicylic acid"
+                                    "dipyridamole"
                                   ],
-                                  "Negation": [
-                                    "other than"
+                                  "Condition": [
+                                    "atrioventricular block"
                                   ]
                                 },
                                 "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "or dipyridamole, atrioventricular block",
-                                      "Drug": [
-                                        "dipyridamole"
-                                      ],
-                                      "Condition": [
-                                        "atrioventricular block"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": ", diabetes.",
-                                      "Condition": [
-                                        "diabetes"
-                                      ]
-                                    }
-                                  }
+                                  "raw_text": ", diabetes.",
+                                  "Condition": [
+                                    "diabetes"
+                                  ]
                                 }
                               }
                             }

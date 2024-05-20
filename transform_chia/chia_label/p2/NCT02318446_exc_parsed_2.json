@@ -1,51 +1,55 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Pregnancy"
-        },
-        "right": {
-          "raw_text": "and lactation"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Patients with diabetes"
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": ", Ischemic heart disease (IHD)"
+                  "OR": {
+                    "left": {
+                      "raw_text": "Pregnancy"
+                    },
+                    "right": {
+                      "raw_text": "and lactation"
+                    }
+                  }
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", stroke"
+                      "raw_text": "Patients with diabetes"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", malignancy"
+                          "raw_text": ", Ischemic heart disease (IHD)"
                         },
                         "right": {
-                          "raw_text": "and psychiatric diseases are excluded from study."
+                          "OR": {
+                            "left": {
+                              "raw_text": ", stroke"
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", malignancy"
+                                },
+                                "right": {
+                                  "raw_text": "and psychiatric diseases are excluded from study."
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
                   }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "The patients receiving vitamin supplements"
@@ -89,24 +93,16 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Patients who are already involved in any other trial."
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Patients not willing to fill consent/ assent form are also excluded from study."
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Patients who are already involved in any other trial."
         }
       }
+    },
+    "right": {
+      "raw_text": "Patients not willing to fill consent/ assent form are also excluded from study."
     }
   }
 }

@@ -3,26 +3,26 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Previous anaphylaxis",
-          "Condition": [
-            "anaphylaxis"
-          ],
-          "Temporal": [
-            "Previous"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "Previous anaphylaxis",
+              "Condition": [
+                "anaphylaxis"
+              ],
+              "Temporal": [
+                "Previous"
+              ]
+            },
+            "right": {
+              "raw_text": "following any component of Bexsero vaccine",
+              "Drug": [
+                "Bexsero vaccine",
+                "Bexsero"
+              ]
+            }
+          }
         },
         "right": {
-          "raw_text": "following any component of Bexsero vaccine",
-          "Drug": [
-            "Bexsero vaccine",
-            "Bexsero"
-          ]
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
           "raw_text": "Previous receipt of meningococcal B vaccine (Bexsero)",
           "Temporal": [
             "Previous"
@@ -31,18 +31,14 @@
             "meningococcal B vaccine",
             "Bexsero"
           ]
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Known pregnancy",
-              "Condition": [
-                "pregnancy"
-              ]
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Known pregnancy",
+      "Condition": [
+        "pregnancy"
+      ]
     }
   }
 }

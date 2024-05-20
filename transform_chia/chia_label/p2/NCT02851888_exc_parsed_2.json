@@ -1,44 +1,48 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Current"
-        },
-        "right": {
-          "raw_text": "or planned pregnancy"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "History of neuropathic pain"
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": ", chronic pain syndrome"
+                  "OR": {
+                    "left": {
+                      "raw_text": "Current"
+                    },
+                    "right": {
+                      "raw_text": "or planned pregnancy"
+                    }
+                  }
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", or preoperative use of narcotic"
+                      "raw_text": "History of neuropathic pain"
                     },
                     "right": {
-                      "raw_text": "or neuropathic pain medicine"
+                      "OR": {
+                        "left": {
+                          "raw_text": ", chronic pain syndrome"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", or preoperative use of narcotic"
+                            },
+                            "right": {
+                              "raw_text": "or neuropathic pain medicine"
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "AND": {
                 "left": {
                   "raw_text": "Radiographic signs of osteoarthritis"
@@ -47,29 +51,21 @@
                   "raw_text": "(> Tonis grade 1)"
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Inability to attend follow up visits"
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Documented allergy"
-                        },
-                        "right": {
-                          "raw_text": "to local anesthetic"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Inability to attend follow up visits"
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Documented allergy"
+        },
+        "right": {
+          "raw_text": "to local anesthetic"
         }
       }
     }

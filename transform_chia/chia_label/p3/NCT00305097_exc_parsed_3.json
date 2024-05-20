@@ -1,90 +1,94 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Any condition/illness that"
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": "may affect the study outcomes or would make participation potentially harmful such as pregnancy",
-              "Condition": [
-                "pregnancy"
-              ]
+              "raw_text": "Any condition/illness that"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "or breastfeeding",
-                  "Observation": [
-                    "breastfeeding"
+                  "raw_text": "may affect the study outcomes or would make participation potentially harmful such as pregnancy",
+                  "Condition": [
+                    "pregnancy"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", diabetes mellitus",
-                      "Condition": [
-                        "diabetes mellitus"
+                      "raw_text": "or breastfeeding",
+                      "Observation": [
+                        "breastfeeding"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", heart disease",
+                          "raw_text": ", diabetes mellitus",
                           "Condition": [
-                            "heart disease"
+                            "diabetes mellitus"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", stroke",
+                              "raw_text": ", heart disease",
                               "Condition": [
-                                "stroke"
+                                "heart disease"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": ", hypertension",
+                                  "raw_text": ", stroke",
                                   "Condition": [
-                                    "hypertension"
+                                    "stroke"
                                   ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": ", malabsorption syndromes",
+                                      "raw_text": ", hypertension",
                                       "Condition": [
-                                        "malabsorption syndromes"
+                                        "hypertension"
                                       ]
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": ", GERD",
+                                          "raw_text": ", malabsorption syndromes",
                                           "Condition": [
-                                            "GERD"
+                                            "malabsorption syndromes"
                                           ]
                                         },
                                         "right": {
-                                          "AND": {
+                                          "OR": {
                                             "left": {
-                                              "raw_text": ", a history of",
-                                              "Observation": [
-                                                "history of"
+                                              "raw_text": ", GERD",
+                                              "Condition": [
+                                                "GERD"
                                               ]
                                             },
                                             "right": {
-                                              "raw_text": "ulcer, according to a detailed medical history.",
-                                              "Condition": [
-                                                "ulcer"
-                                              ],
-                                              "Observation": [
-                                                "medical history"
-                                              ]
+                                              "AND": {
+                                                "left": {
+                                                  "raw_text": ", a history of",
+                                                  "Observation": [
+                                                    "history of"
+                                                  ]
+                                                },
+                                                "right": {
+                                                  "raw_text": "ulcer, according to a detailed medical history.",
+                                                  "Condition": [
+                                                    "ulcer"
+                                                  ],
+                                                  "Observation": [
+                                                    "medical history"
+                                                  ]
+                                                }
+                                              }
                                             }
                                           }
                                         }
@@ -103,12 +107,8 @@
               }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "Abnormal hepatic function",
@@ -160,84 +160,80 @@
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Present alcoholism",
+          "Condition": [
+            "alcoholism"
+          ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
+              "raw_text": "or drug abuse",
+              "Condition": [
+                "drug abuse"
+              ]
+            },
+            "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Present alcoholism",
-                  "Condition": [
-                    "alcoholism"
+                  "raw_text": "or use of medications that could interfere with the treatment including bronchodilators, quinolone antibiotics",
+                  "Drug": [
+                    "medications that could interfere with the treatment",
+                    "bronchodilators",
+                    "quinolone antibiotics"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "or drug abuse",
-                      "Condition": [
-                        "drug abuse"
+                      "raw_text": ", monoamine oxidase inhibitors",
+                      "Drug": [
+                        "monoamine oxidase inhibitors"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "or use of medications that could interfere with the treatment including bronchodilators, quinolone antibiotics",
+                          "raw_text": ", anxiolytics",
                           "Drug": [
-                            "medications that could interfere with the treatment",
-                            "bronchodilators",
-                            "quinolone antibiotics"
+                            "anxiolytics"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", monoamine oxidase inhibitors",
+                              "raw_text": ", ranitidine",
                               "Drug": [
-                                "monoamine oxidase inhibitors"
+                                "ranitidine"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": ", anxiolytics",
+                                  "raw_text": ", corticosteroids",
                                   "Drug": [
-                                    "anxiolytics"
+                                    "corticosteroids"
                                   ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": ", ranitidine",
+                                      "raw_text": ", growth hormone",
                                       "Drug": [
-                                        "ranitidine"
+                                        "growth hormone"
                                       ]
                                     },
                                     "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": ", corticosteroids",
-                                          "Drug": [
-                                            "corticosteroids"
-                                          ]
-                                        },
-                                        "right": {
-                                          "OR": {
-                                            "left": {
-                                              "raw_text": ", growth hormone",
-                                              "Drug": [
-                                                "growth hormone"
-                                              ]
-                                            },
-                                            "right": {
-                                              "raw_text": ", antihypertensives.",
-                                              "Drug": [
-                                                "antihypertensives"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
+                                      "raw_text": ", antihypertensives.",
+                                      "Drug": [
+                                        "antihypertensives"
+                                      ]
                                     }
                                   }
                                 }

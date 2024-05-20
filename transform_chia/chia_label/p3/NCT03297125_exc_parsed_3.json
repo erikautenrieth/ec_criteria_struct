@@ -1,105 +1,105 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Optune compliance < 75%; they would be excluded from the final analyses.",
-      "Observation": [
-        "Optune compliance"
-      ],
-      "Multiplier": [
-        "< 75%"
-      ],
-      "Non-query-able": [
-        "they would be excluded from the final analyses"
-      ],
-      "Device": [
-        "Optune"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "History of craniectomy",
-              "Procedure": [
-                "craniectomy"
+              "raw_text": "Optune compliance < 75%; they would be excluded from the final analyses.",
+              "Observation": [
+                "Optune compliance"
+              ],
+              "Multiplier": [
+                "< 75%"
+              ],
+              "Non-query-able": [
+                "they would be excluded from the final analyses"
+              ],
+              "Device": [
+                "Optune"
               ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "or significant skull defect (contraindication",
-                  "Condition": [
-                    "skull defect",
-                    "contraindication"
-                  ],
-                  "Qualifier": [
-                    "significant"
+                  "raw_text": "History of craniectomy",
+                  "Procedure": [
+                    "craniectomy"
                   ]
                 },
                 "right": {
-                  "raw_text": "to Optune).",
-                  "Device": [
-                    "Optune"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "or significant skull defect (contraindication",
+                      "Condition": [
+                        "skull defect",
+                        "contraindication"
+                      ],
+                      "Qualifier": [
+                        "significant"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "to Optune).",
+                      "Device": [
+                        "Optune"
+                      ]
+                    }
+                  }
                 }
               }
             }
           }
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
+              "raw_text": "Active implantable medical device (i.e. DBS",
+              "Device": [
+                "implantable medical device",
+                "DBS"
+              ],
+              "Qualifier": [
+                "Active"
+              ]
+            },
+            "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Active implantable medical device (i.e. DBS",
+                  "raw_text": ", spinal cord stimulator",
                   "Device": [
-                    "implantable medical device",
-                    "DBS"
-                  ],
-                  "Qualifier": [
-                    "Active"
+                    "spinal cord stimulator"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", spinal cord stimulator",
+                      "raw_text": ", pacemaker",
                       "Device": [
-                        "spinal cord stimulator"
+                        "pacemaker"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", pacemaker",
+                          "raw_text": ", defibrillator",
                           "Device": [
-                            "pacemaker"
+                            "defibrillator"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", defibrillator",
+                              "raw_text": ", vagus nerve stimulator",
                               "Device": [
-                                "defibrillator"
+                                "vagus nerve stimulator"
                               ]
                             },
                             "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": ", vagus nerve stimulator",
-                                  "Device": [
-                                    "vagus nerve stimulator"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": ", programmable shunt).",
-                                  "Device": [
-                                    "programmable shunt"
-                                  ]
-                                }
-                              }
+                              "raw_text": ", programmable shunt).",
+                              "Device": [
+                                "programmable shunt"
+                              ]
                             }
                           }
                         }
@@ -108,24 +108,20 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Karnofsky Performance Status (KPS) < 60.",
-                  "Measurement": [
-                    "Karnofsky Performance Status",
-                    "KPS"
-                  ],
-                  "Value": [
-                    "< 60"
-                  ]
-                }
-              }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Karnofsky Performance Status (KPS) < 60.",
+      "Measurement": [
+        "Karnofsky Performance Status",
+        "KPS"
+      ],
+      "Value": [
+        "< 60"
+      ]
     }
   }
 }

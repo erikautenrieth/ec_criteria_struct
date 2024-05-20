@@ -1,42 +1,38 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Age 18 years or older"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Blunt"
+              "raw_text": "Age 18 years or older"
             },
             "right": {
-              "raw_text": "or penetrating trauma"
+              "OR": {
+                "left": {
+                  "raw_text": "Blunt"
+                },
+                "right": {
+                  "raw_text": "or penetrating trauma"
+                }
+              }
             }
           }
         },
         "right": {
           "AND": {
             "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Requires VTE"
-                },
-                "right": {
-                  "raw_text": "thromboprophylaxis"
-                }
-              }
+              "raw_text": "Requires VTE"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "High-risk for VTE"
-                }
-              }
+              "raw_text": "thromboprophylaxis"
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "High-risk for VTE"
     }
   }
 }

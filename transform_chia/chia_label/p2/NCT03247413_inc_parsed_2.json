@@ -1,49 +1,45 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "patients with a diagnosis of either cervical"
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": ", thoracic"
+              "raw_text": "patients with a diagnosis of either cervical"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", or lumbar facet"
+                  "raw_text": ", thoracic"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "raw_text": "or sacroiliac joint pain who have responded"
+                      "raw_text": ", or lumbar facet"
                     },
                     "right": {
-                      "raw_text": "to medial branch blocks and are already scheduled for bilateral radiofrequency ablations"
+                      "AND": {
+                        "left": {
+                          "raw_text": "or sacroiliac joint pain who have responded"
+                        },
+                        "right": {
+                          "raw_text": "to medial branch blocks and are already scheduled for bilateral radiofrequency ablations"
+                        }
+                      }
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "age greater than 18 years old"
         }
       }
     },
     "right": {
-      "AND": {
-        "left": {
-          "raw_text": "age greater than 18 years old"
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "English speaking"
-            }
-          }
-        }
-      }
+      "raw_text": "English speaking"
     }
   }
 }

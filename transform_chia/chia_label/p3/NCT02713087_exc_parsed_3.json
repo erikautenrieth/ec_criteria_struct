@@ -1,81 +1,77 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Age younger than 18 yrs. or older than 75 yrs.",
-      "Person": [
-        "Age"
-      ],
-      "Value": [
-        "younger than 18 yrs. or older than 75 yrs."
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Pregnancy",
-              "Condition": [
-                "Pregnancy"
+              "raw_text": "Age younger than 18 yrs. or older than 75 yrs.",
+              "Person": [
+                "Age"
+              ],
+              "Value": [
+                "younger than 18 yrs. or older than 75 yrs."
               ]
             },
             "right": {
-              "raw_text": "or nursing (negative pregnancy blood test)",
-              "Condition": [
-                "nursing"
-              ],
-              "Value": [
-                "negative"
-              ],
-              "Measurement": [
-                "pregnancy blood test"
-              ],
-              "Scope": [
-                "negative pregnancy blood test"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "Pregnancy",
+                  "Condition": [
+                    "Pregnancy"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or nursing (negative pregnancy blood test)",
+                  "Condition": [
+                    "nursing"
+                  ],
+                  "Value": [
+                    "negative"
+                  ],
+                  "Measurement": [
+                    "pregnancy blood test"
+                  ],
+                  "Scope": [
+                    "negative pregnancy blood test"
+                  ]
+                }
+              }
             }
           }
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "History of allergic reactions to phenylephrine",
-                  "Observation": [
-                    "History"
-                  ],
-                  "Condition": [
-                    "allergic reactions"
-                  ],
-                  "Drug": [
-                    "phenylephrine"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or ephedrine",
-                  "Drug": [
-                    "ephedrine"
-                  ]
-                }
-              }
+              "raw_text": "History of allergic reactions to phenylephrine",
+              "Observation": [
+                "History"
+              ],
+              "Condition": [
+                "allergic reactions"
+              ],
+              "Drug": [
+                "phenylephrine"
+              ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "eGFR < 60ml/min/1.73m2",
-                  "Measurement": [
-                    "eGFR"
-                  ],
-                  "Value": [
-                    "< 60ml/min/1.73m2"
-                  ]
-                }
-              }
+              "raw_text": "or ephedrine",
+              "Drug": [
+                "ephedrine"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "eGFR < 60ml/min/1.73m2",
+      "Measurement": [
+        "eGFR"
+      ],
+      "Value": [
+        "< 60ml/min/1.73m2"
+      ]
     }
   }
 }
