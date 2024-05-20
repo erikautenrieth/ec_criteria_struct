@@ -1,42 +1,50 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Have osteoporosis"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Have a 10 yr probability of hip fracture >3% or major fracture >20% based on results of the FRAX tool"
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "Currently take bisphosphonates"
-                },
-                "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": ", estrogen replacement therapy"
+                      "AND": {
+                        "left": {
+                          "raw_text": "Have osteoporosis"
+                        },
+                        "right": {
+                          "raw_text": "Have a 10 yr probability of hip fracture >3% or major fracture >20% based on results of the FRAX tool"
+                        }
+                      }
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", glucocorticosteroids"
+                          "raw_text": "Currently take bisphosphonates"
                         },
                         "right": {
-                          "raw_text": ", or other drugs affecting bone"
+                          "OR": {
+                            "left": {
+                              "raw_text": ", estrogen replacement therapy"
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", glucocorticosteroids"
+                                },
+                                "right": {
+                                  "raw_text": ", or other drugs affecting bone"
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
                   }
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Currently participate in a resistance training"
@@ -45,63 +53,51 @@
                       "raw_text": "or high impact weight bearing exercise program two or more times weekly"
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "Weigh >300 lbs"
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Have abnormal results for the following laboratory tests: serum 25(OH)D; serum creatinine; serum calcium; PTH; TSH"
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Have Paget's disease"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", heart disease"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", uncontrolled hypertension"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "raw_text": "Weigh >300 lbs"
+                      "raw_text": ", renal disease"
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
-                          "raw_text": "Have abnormal results for the following laboratory tests: serum 25(OH)D; serum creatinine; serum calcium; PTH; TSH"
+                          "raw_text": ", or other concomitant conditions that prohibit participation in exercises"
                         },
                         "right": {
-                          "AND": {
+                          "OR": {
                             "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Have Paget's disease"
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", heart disease"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": ", uncontrolled hypertension"
-                                        },
-                                        "right": {
-                                          "OR": {
-                                            "left": {
-                                              "raw_text": ", renal disease"
-                                            },
-                                            "right": {
-                                              "OR": {
-                                                "left": {
-                                                  "raw_text": ", or other concomitant conditions that prohibit participation in exercises"
-                                                },
-                                                "right": {
-                                                  "OR": {
-                                                    "left": {
-                                                      "raw_text": ", risedronate therapy"
-                                                    },
-                                                    "right": {
-                                                      "raw_text": ", or use of CaD supplements."
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
+                              "raw_text": ", risedronate therapy"
+                            },
+                            "right": {
+                              "raw_text": ", or use of CaD supplements."
                             }
                           }
                         }

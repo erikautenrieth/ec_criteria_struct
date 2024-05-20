@@ -1,100 +1,43 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Acute coronary syndrome within 1 month",
-      "Condition": [
-        "Acute coronary syndrome"
-      ],
-      "Temporal": [
-        "within 1 month"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Heart failure",
-              "Condition": [
-                "Heart failure"
-              ]
-            },
-            "right": {
-              "raw_text": "NYHA III to IV",
-              "Measurement": [
-                "NYHA"
-              ],
-              "Value": [
-                "III to IV"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Contraindication",
-                  "Condition": [
-                    "Contraindication"
-                  ]
-                },
-                "right": {
-                  "raw_text": "to Aspirin",
-                  "Drug": [
-                    "Aspirin"
-                  ]
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "On anticoagulant therapy",
-                  "Procedure": [
-                    "anticoagulant therapy"
-                  ]
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "Emergent surgery",
-                      "Procedure": [
-                        "Emergent surgery"
-                      ]
-                    },
-                    "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "Cardiac surgery",
-                          "Procedure": [
-                            "Cardiac surgery"
-                          ]
-                        },
-                        "right": {
                           "AND": {
                             "left": {
-                              "OR": {
+                              "AND": {
                                 "left": {
-                                  "raw_text": "High bleeding risk surgeries, e.g., Intra-cranial surgery",
+                                  "raw_text": "Acute coronary syndrome within 1 month",
                                   "Condition": [
-                                    "High bleeding risk surgeries",
-                                    "Intra-cranial surgery"
+                                    "Acute coronary syndrome"
+                                  ],
+                                  "Temporal": [
+                                    "within 1 month"
                                   ]
                                 },
                                 "right": {
-                                  "OR": {
+                                  "AND": {
                                     "left": {
-                                      "raw_text": ", Intra-spinal surgery",
+                                      "raw_text": "Heart failure",
                                       "Condition": [
-                                        "Intra-spinal surgery"
+                                        "Heart failure"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": ", Retinal surgery",
-                                      "Condition": [
-                                        "Retinal surgery"
+                                      "raw_text": "NYHA III to IV",
+                                      "Measurement": [
+                                        "NYHA"
+                                      ],
+                                      "Value": [
+                                        "III to IV"
                                       ]
                                     }
                                   }
@@ -104,47 +47,100 @@
                             "right": {
                               "AND": {
                                 "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "Pregnancy",
-                                      "Condition": [
-                                        "Pregnancy"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "or breast-feeding",
-                                      "Condition": [
-                                        "breast-feeding"
-                                      ]
-                                    }
-                                  }
+                                  "raw_text": "Contraindication",
+                                  "Condition": [
+                                    "Contraindication"
+                                  ]
                                 },
                                 "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Life expectancy less than 1year",
-                                      "Observation": [
-                                        "Life expectancy"
-                                      ],
-                                      "Value": [
-                                        "less than 1year"
-                                      ]
-                                    }
-                                  }
+                                  "raw_text": "to Aspirin",
+                                  "Drug": [
+                                    "Aspirin"
+                                  ]
                                 }
                               }
                             }
                           }
+                        },
+                        "right": {
+                          "raw_text": "On anticoagulant therapy",
+                          "Procedure": [
+                            "anticoagulant therapy"
+                          ]
                         }
                       }
+                    },
+                    "right": {
+                      "raw_text": "Emergent surgery",
+                      "Procedure": [
+                        "Emergent surgery"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Cardiac surgery",
+                  "Procedure": [
+                    "Cardiac surgery"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "High bleeding risk surgeries, e.g., Intra-cranial surgery",
+                  "Condition": [
+                    "High bleeding risk surgeries",
+                    "Intra-cranial surgery"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", Intra-spinal surgery",
+                      "Condition": [
+                        "Intra-spinal surgery"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": ", Retinal surgery",
+                      "Condition": [
+                        "Retinal surgery"
+                      ]
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnancy",
+              "Condition": [
+                "Pregnancy"
+              ]
+            },
+            "right": {
+              "raw_text": "or breast-feeding",
+              "Condition": [
+                "breast-feeding"
+              ]
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Life expectancy less than 1year",
+      "Observation": [
+        "Life expectancy"
+      ],
+      "Value": [
+        "less than 1year"
+      ]
     }
   }
 }

@@ -1,78 +1,82 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Pregnancy",
-          "Condition": [
-            "Pregnancy"
-          ]
-        },
-        "right": {
-          "raw_text": "and lactation",
-          "Condition": [
-            "lactation"
-          ],
-          "Grammar_Error": [
-            "and"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Patients with diabetes",
-              "Condition": [
-                "diabetes"
-              ]
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": ", Ischemic heart disease (IHD)",
-                  "Condition": [
-                    "Ischemic heart disease (IHD)"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "Pregnancy",
+                      "Condition": [
+                        "Pregnancy"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and lactation",
+                      "Condition": [
+                        "lactation"
+                      ],
+                      "Grammar_Error": [
+                        "and"
+                      ]
+                    }
+                  }
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", stroke",
+                      "raw_text": "Patients with diabetes",
                       "Condition": [
-                        "stroke"
+                        "diabetes"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", malignancy",
+                          "raw_text": ", Ischemic heart disease (IHD)",
                           "Condition": [
-                            "malignancy"
+                            "Ischemic heart disease (IHD)"
                           ]
                         },
                         "right": {
-                          "raw_text": "and psychiatric diseases are excluded from study.",
-                          "Grammar_Error": [
-                            "and"
-                          ],
-                          "Condition": [
-                            "psychiatric diseases"
-                          ]
+                          "OR": {
+                            "left": {
+                              "raw_text": ", stroke",
+                              "Condition": [
+                                "stroke"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", malignancy",
+                                  "Condition": [
+                                    "malignancy"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "and psychiatric diseases are excluded from study.",
+                                  "Grammar_Error": [
+                                    "and"
+                                  ],
+                                  "Condition": [
+                                    "psychiatric diseases"
+                                  ]
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
                   }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "The patients receiving vitamin supplements",
@@ -141,33 +145,25 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Patients who are already involved in any other trial.",
-                  "Non-query-able": [
-                    "Patients who are already involved in any other trial."
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Patients not willing to fill consent/ assent form are also excluded from study.",
-                      "Post-eligibility": [
-                        "Patients not willing to fill consent/ assent form are also excluded from study."
-                      ],
-                      "Non-query-able": [
-                        "Patients not willing to fill consent/ assent form are also excluded from study."
-                      ]
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Patients who are already involved in any other trial.",
+          "Non-query-able": [
+            "Patients who are already involved in any other trial."
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Patients not willing to fill consent/ assent form are also excluded from study.",
+      "Post-eligibility": [
+        "Patients not willing to fill consent/ assent form are also excluded from study."
+      ],
+      "Non-query-able": [
+        "Patients not willing to fill consent/ assent form are also excluded from study."
+      ]
     }
   }
 }

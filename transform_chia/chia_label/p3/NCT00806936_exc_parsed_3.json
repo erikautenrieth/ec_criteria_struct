@@ -3,40 +3,44 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Known or suspected allergy"
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "to trial product(s)",
-              "Drug": [
-                "trial product(s)"
-              ]
-            },
-            "right": {
-              "raw_text": "or related products",
-              "Drug": [
-                "related products"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Subjects who are unlikely to comply with protocol requirements, e.g. uncooperative attitude, inability to return for the final visit",
-          "Non-query-able": [
-            "Subjects who are unlikely to comply with protocol requirements, e.g. uncooperative attitude, inability to return for the final visit"
-          ],
-          "Post-eligibility": [
-            "Subjects who are unlikely to comply with protocol requirements, e.g. uncooperative attitude, inability to return for the final visit"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Known or suspected allergy"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "to trial product(s)",
+                          "Drug": [
+                            "trial product(s)"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or related products",
+                          "Drug": [
+                            "related products"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Subjects who are unlikely to comply with protocol requirements, e.g. uncooperative attitude, inability to return for the final visit",
+                  "Non-query-able": [
+                    "Subjects who are unlikely to comply with protocol requirements, e.g. uncooperative attitude, inability to return for the final visit"
+                  ],
+                  "Post-eligibility": [
+                    "Subjects who are unlikely to comply with protocol requirements, e.g. uncooperative attitude, inability to return for the final visit"
+                  ]
+                }
+              }
+            },
+            "right": {
               "raw_text": "Subjects who previously enrolled in this study",
               "Context_Error": [
                 "Subjects who previously enrolled in this study"
@@ -44,69 +48,65 @@
               "Post-eligibility": [
                 "Subjects who previously enrolled in this study"
               ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Females of childbearing potential",
+              "Condition": [
+                "childbearing potential"
+              ],
+              "Person": [
+                "Females"
+              ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
+                  "raw_text": "who are pregnant",
+                  "Condition": [
+                    "pregnant"
+                  ]
+                },
+                "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "Females of childbearing potential",
+                      "raw_text": ", breast-feeding",
                       "Condition": [
-                        "childbearing potential"
-                      ],
-                      "Person": [
-                        "Females"
+                        "breast-feeding"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "who are pregnant",
-                          "Condition": [
-                            "pregnant"
+                          "raw_text": "or intend to become",
+                          "Mood": [
+                            "intend to become"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", breast-feeding",
+                              "raw_text": "pregnant",
                               "Condition": [
-                                "breast-feeding"
+                                "pregnant"
                               ]
                             },
                             "right": {
-                              "OR": {
+                              "NOT": {
                                 "left": {
-                                  "raw_text": "or intend to become",
-                                  "Mood": [
-                                    "intend to become"
+                                  "raw_text": "not using adequate contraceptive methods",
+                                  "Procedure": [
+                                    "contraceptive methods"
+                                  ],
+                                  "Qualifier": [
+                                    "adequate"
+                                  ],
+                                  "Negation": [
+                                    "not"
                                   ]
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "pregnant",
-                                      "Condition": [
-                                        "pregnant"
-                                      ]
-                                    },
-                                    "right": {
-                                      "NOT": {
-                                        "left": {
-                                          "raw_text": "not using adequate contraceptive methods",
-                                          "Procedure": [
-                                            "contraceptive methods"
-                                          ],
-                                          "Qualifier": [
-                                            "adequate"
-                                          ],
-                                          "Negation": [
-                                            "not"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
                                 }
                               }
                             }
@@ -115,28 +115,24 @@
                       }
                     }
                   }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "The receipt of any investigational product within 3 months prior to this trial",
-                      "Drug": [
-                        "investigational product"
-                      ],
-                      "Temporal": [
-                        "within 3 months prior to this trial"
-                      ],
-                      "Reference_point": [
-                        "this trial"
-                      ]
-                    }
-                  }
                 }
               }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "The receipt of any investigational product within 3 months prior to this trial",
+      "Drug": [
+        "investigational product"
+      ],
+      "Temporal": [
+        "within 3 months prior to this trial"
+      ],
+      "Reference_point": [
+        "this trial"
+      ]
     }
   }
 }

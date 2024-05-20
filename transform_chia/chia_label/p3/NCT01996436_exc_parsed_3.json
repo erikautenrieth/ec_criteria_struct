@@ -1,67 +1,63 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Inability to obtain consent from patient or patients kin",
-      "Informed_consent": [
-        "Inability to obtain consent from patient or patients kin"
-      ]
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Inability to obtain consent from patient or patients kin",
+              "Informed_consent": [
+                "Inability to obtain consent from patient or patients kin"
+              ]
+            },
+            "right": {
+              "raw_text": "Pregnant women",
+              "Pregnancy_considerations": [
+                "Pregnant women"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "less than 18 years of age",
+              "Person": [
+                "age"
+              ],
+              "Value": [
+                "less than 18 years"
+              ]
+            },
+            "right": {
+              "raw_text": "of more than 80 years of age",
+              "Person": [
+                "age"
+              ],
+              "Value": [
+                "more than 80 years"
+              ]
+            }
+          }
+        }
+      }
     },
     "right": {
       "AND": {
         "left": {
-          "raw_text": "Pregnant women",
-          "Pregnancy_considerations": [
-            "Pregnant women"
+          "raw_text": "Hunt Hess Grade",
+          "Measurement": [
+            "Hunt Hess Grade"
           ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "less than 18 years of age",
-                  "Person": [
-                    "age"
-                  ],
-                  "Value": [
-                    "less than 18 years"
-                  ]
-                },
-                "right": {
-                  "raw_text": "of more than 80 years of age",
-                  "Person": [
-                    "age"
-                  ],
-                  "Value": [
-                    "more than 80 years"
-                  ]
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Hunt Hess Grade",
-                      "Measurement": [
-                        "Hunt Hess Grade"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "5 SAH",
-                      "Value": [
-                        "5"
-                      ],
-                      "Condition": [
-                        "SAH"
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
+          "raw_text": "5 SAH",
+          "Value": [
+            "5"
+          ],
+          "Condition": [
+            "SAH"
+          ]
         }
       }
     }

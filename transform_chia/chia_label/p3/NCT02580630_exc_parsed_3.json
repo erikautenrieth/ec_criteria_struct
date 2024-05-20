@@ -1,44 +1,79 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Earlier operations in the foot and leg, that is judged to complicate training",
-      "Non-query-able": [
-        "Earlier operations in the foot and leg, that is judged to complicate training"
-      ],
-      "Temporal": [
-        "Earlier"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "known arthritis.",
-          "Condition": [
-            "arthritis"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "known diabetes",
-              "Condition": [
-                "diabetes"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "Leg ulcerations",
-                      "Condition": [
-                        "Leg ulcerations"
-                      ]
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "Earlier operations in the foot and leg, that is judged to complicate training",
+                                      "Non-query-able": [
+                                        "Earlier operations in the foot and leg, that is judged to complicate training"
+                                      ],
+                                      "Temporal": [
+                                        "Earlier"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "known arthritis.",
+                                      "Condition": [
+                                        "arthritis"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "raw_text": "known diabetes",
+                                  "Condition": [
+                                    "diabetes"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "Leg ulcerations",
+                                  "Condition": [
+                                    "Leg ulcerations"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or infections in the foot.",
+                                  "Condition": [
+                                    "infections in the foot"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "Judged unable to comply with the training protocol.",
+                          "Post-eligibility": [
+                            "Judged unable to comply with the training protocol."
+                          ]
+                        }
+                      }
                     },
                     "right": {
-                      "raw_text": "or infections in the foot.",
-                      "Condition": [
-                        "infections in the foot"
+                      "raw_text": "Daily use of pain killers",
+                      "Drug": [
+                        "pain killers"
+                      ],
+                      "Multiplier": [
+                        "Daily"
                       ]
                     }
                   }
@@ -46,126 +81,87 @@
                 "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "Judged unable to comply with the training protocol.",
-                      "Post-eligibility": [
-                        "Judged unable to comply with the training protocol."
+                      "raw_text": "Glucocorticosteroid",
+                      "Drug": [
+                        "Glucocorticosteroid"
                       ]
                     },
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "Daily use of pain killers",
-                          "Drug": [
-                            "pain killers"
-                          ],
-                          "Multiplier": [
-                            "Daily"
+                          "raw_text": "injection",
+                          "Procedure": [
+                            "injection"
                           ]
                         },
                         "right": {
-                          "AND": {
-                            "left": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "Glucocorticosteroid",
-                                  "Drug": [
-                                    "Glucocorticosteroid"
-                                  ]
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "injection",
-                                      "Procedure": [
-                                        "injection"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "to the diseased achilles tendon within the last 6 months.",
-                                      "Condition": [
-                                        "diseased achilles tendon"
-                                      ],
-                                      "Temporal": [
-                                        "within the last 6 months"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "Earlier allergic reactions to glucocorticosteroid",
-                                      "Condition": [
-                                        "allergic reactions"
-                                      ],
-                                      "Drug": [
-                                        "glucocorticosteroid"
-                                      ],
-                                      "Temporal": [
-                                        "Earlier"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "or local anesthetic.",
-                                      "Drug": [
-                                        "local anesthetic"
-                                      ]
-                                    }
-                                  }
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "Pregnancy",
-                                          "Condition": [
-                                            "Pregnancy"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": "or planning to become pregnant",
-                                          "Mood": [
-                                            "planning to become"
-                                          ],
-                                          "Condition": [
-                                            "pregnant"
-                                          ]
-                                        }
-                                      }
-                                    },
-                                    "right": {
-                                      "AND": {
-                                        "left": {
-                                          "raw_text": "BMI above 30.",
-                                          "Measurement": [
-                                            "BMI"
-                                          ],
-                                          "Value": [
-                                            "above 30"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
+                          "raw_text": "to the diseased achilles tendon within the last 6 months.",
+                          "Condition": [
+                            "diseased achilles tendon"
+                          ],
+                          "Temporal": [
+                            "within the last 6 months"
+                          ]
                         }
                       }
                     }
                   }
                 }
               }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Earlier allergic reactions to glucocorticosteroid",
+                  "Condition": [
+                    "allergic reactions"
+                  ],
+                  "Drug": [
+                    "glucocorticosteroid"
+                  ],
+                  "Temporal": [
+                    "Earlier"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or local anesthetic.",
+                  "Drug": [
+                    "local anesthetic"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnancy",
+              "Condition": [
+                "Pregnancy"
+              ]
+            },
+            "right": {
+              "raw_text": "or planning to become pregnant",
+              "Mood": [
+                "planning to become"
+              ],
+              "Condition": [
+                "pregnant"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "BMI above 30.",
+      "Measurement": [
+        "BMI"
+      ],
+      "Value": [
+        "above 30"
+      ]
     }
   }
 }

@@ -1,28 +1,32 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Dementia.",
-      "Condition": [
-        "Dementia"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Gastroscopy planned at the same time.",
-          "Procedure": [
-            "Gastroscopy"
-          ],
-          "Mood": [
-            "planned"
-          ],
-          "Temporal": [
-            "at the same time"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Dementia.",
+                  "Condition": [
+                    "Dementia"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Gastroscopy planned at the same time.",
+                  "Procedure": [
+                    "Gastroscopy"
+                  ],
+                  "Mood": [
+                    "planned"
+                  ],
+                  "Temporal": [
+                    "at the same time"
+                  ]
+                }
+              }
+            },
+            "right": {
               "AND": {
                 "left": {
                   "raw_text": "Allergies",
@@ -37,30 +41,22 @@
                   ]
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "All cases were a 'full stomach' is suspected (gastric banding)",
-                  "Non-representable": [
-                    "All cases were a 'full stomach' is suspected (gastric banding)"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Pregnancy",
-                      "Condition": [
-                        "Pregnancy"
-                      ]
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "All cases were a 'full stomach' is suspected (gastric banding)",
+          "Non-representable": [
+            "All cases were a 'full stomach' is suspected (gastric banding)"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Pregnancy",
+      "Condition": [
+        "Pregnancy"
+      ]
     }
   }
 }

@@ -1,33 +1,82 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Upper urinary tract deterioration",
-      "Condition": [
-        "Upper urinary tract deterioration"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Uncontrolled diabetes mellitus",
-          "Condition": [
-            "diabetes mellitus"
-          ],
-          "Qualifier": [
-            "Uncontrolled"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "Evident local"
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "Upper urinary tract deterioration",
+                                      "Condition": [
+                                        "Upper urinary tract deterioration"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "Uncontrolled diabetes mellitus",
+                                      "Condition": [
+                                        "diabetes mellitus"
+                                      ],
+                                      "Qualifier": [
+                                        "Uncontrolled"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "Evident local"
+                                    },
+                                    "right": {
+                                      "raw_text": "or pelvic recurrence",
+                                      "Condition": [
+                                        "pelvic recurrence"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "Adjuvant chemotherapy",
+                              "Procedure": [
+                                "Adjuvant chemotherapy"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "Chronic retention",
+                          "Condition": [
+                            "Chronic retention"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Pouch stones",
+                      "Condition": [
+                        "Pouch stones"
+                      ]
+                    }
+                  }
                 },
                 "right": {
-                  "raw_text": "or pelvic recurrence",
+                  "raw_text": "Urethral stricture or urethro-ileal maldirection",
                   "Condition": [
-                    "pelvic recurrence"
+                    "Urethral stricture",
+                    "urethro-ileal maldirection"
                   ]
                 }
               }
@@ -35,94 +84,41 @@
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Adjuvant chemotherapy",
-                  "Procedure": [
-                    "Adjuvant chemotherapy"
+                  "raw_text": "Sensitivity",
+                  "Condition": [
+                    "Sensitivity"
                   ]
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Chronic retention",
-                      "Condition": [
-                        "Chronic retention"
-                      ]
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Pouch stones",
-                          "Condition": [
-                            "Pouch stones"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Urethral stricture or urethro-ileal maldirection",
-                              "Condition": [
-                                "Urethral stricture",
-                                "urethro-ileal maldirection"
-                              ]
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Sensitivity",
-                                      "Condition": [
-                                        "Sensitivity"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "to Mebeverine",
-                                      "Drug": [
-                                        "Mebeverine"
-                                      ]
-                                    }
-                                  }
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Untreated chronic constipation",
-                                      "Qualifier": [
-                                        "Untreated"
-                                      ],
-                                      "Condition": [
-                                        "chronic constipation"
-                                      ]
-                                    },
-                                    "right": {
-                                      "AND": {
-                                        "left": {
-                                          "raw_text": "Active symptomatic urinary infection",
-                                          "Qualifier": [
-                                            "symptomatic",
-                                            "Active"
-                                          ],
-                                          "Condition": [
-                                            "urinary infection"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "to Mebeverine",
+                  "Drug": [
+                    "Mebeverine"
+                  ]
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "Untreated chronic constipation",
+          "Qualifier": [
+            "Untreated"
+          ],
+          "Condition": [
+            "chronic constipation"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Active symptomatic urinary infection",
+      "Qualifier": [
+        "symptomatic",
+        "Active"
+      ],
+      "Condition": [
+        "urinary infection"
+      ]
     }
   }
 }

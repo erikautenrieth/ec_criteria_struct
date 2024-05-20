@@ -3,58 +3,19 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "contra-indications",
-          "Condition": [
-            "contra-indications"
-          ]
-        },
-        "right": {
-          "raw_text": "for regular dental treatment",
-          "Procedure": [
-            "regular dental treatment"
-          ]
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
           "AND": {
             "left": {
-              "raw_text": "medical history that contraindicates",
-              "Observation": [
-                "medical history"
-              ],
-              "Condition": [
-                "contraindicates"
-              ]
-            },
-            "right": {
-              "raw_text": "the use of epinephrine",
-              "Drug": [
-                "epinephrine"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "participant taken an opioid",
-                  "Drug": [
-                    "opioid"
+                  "raw_text": "contra-indications",
+                  "Condition": [
+                    "contra-indications"
                   ]
                 },
                 "right": {
-                  "raw_text": "or an opioid like analgesic within 24 hours",
-                  "Drug": [
-                    "opioid",
-                    "opioid like analgesic"
-                  ],
-                  "Temporal": [
-                    "within 24 hours"
+                  "raw_text": "for regular dental treatment",
+                  "Procedure": [
+                    "regular dental treatment"
                   ]
                 }
               }
@@ -62,16 +23,51 @@
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "pregnant",
+                  "raw_text": "medical history that contraindicates",
+                  "Observation": [
+                    "medical history"
+                  ],
                   "Condition": [
-                    "pregnant"
+                    "contraindicates"
+                  ]
+                },
+                "right": {
+                  "raw_text": "the use of epinephrine",
+                  "Drug": [
+                    "epinephrine"
                   ]
                 }
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "participant taken an opioid",
+              "Drug": [
+                "opioid"
+              ]
+            },
+            "right": {
+              "raw_text": "or an opioid like analgesic within 24 hours",
+              "Drug": [
+                "opioid",
+                "opioid like analgesic"
+              ],
+              "Temporal": [
+                "within 24 hours"
+              ]
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "pregnant",
+      "Condition": [
+        "pregnant"
+      ]
     }
   }
 }

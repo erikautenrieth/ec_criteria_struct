@@ -1,11 +1,11 @@
 {
   "AND": {
     "left": {
-      "raw_text": "patient's refusal"
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "patient's refusal"
+        },
+        "right": {
           "AND": {
             "left": {
               "raw_text": "contraindications"
@@ -14,20 +14,16 @@
               "raw_text": "to dexmedetomidine"
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "diseases"
         },
         "right": {
-          "AND": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "diseases"
-                },
-                "right": {
-                  "raw_text": "/drugs that influence on autonomic nervous system activity"
-                }
-              }
-            }
-          }
+          "raw_text": "/drugs that influence on autonomic nervous system activity"
         }
       }
     }

@@ -1,17 +1,17 @@
 {
   "AND": {
     "left": {
-      "raw_text": "age less than 18 years",
-      "Person": [
-        "age"
-      ],
-      "Value": [
-        "less than 18 years"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "age less than 18 years",
+          "Person": [
+            "age"
+          ],
+          "Value": [
+            "less than 18 years"
+          ]
+        },
+        "right": {
           "AND": {
             "left": {
               "raw_text": "allergy",
@@ -26,34 +26,30 @@
               ]
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "substance misuse",
+          "Condition": [
+            "substance misuse"
+          ]
         },
         "right": {
           "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "substance misuse",
-                  "Condition": [
-                    "substance misuse"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "other contraindication",
-                      "Condition": [
-                        "contraindication"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "to used study drugs no informed consent",
-                      "Drug": [
-                        "study drugs"
-                      ]
-                    }
-                  }
-                }
-              }
+              "raw_text": "other contraindication",
+              "Condition": [
+                "contraindication"
+              ]
+            },
+            "right": {
+              "raw_text": "to used study drugs no informed consent",
+              "Drug": [
+                "study drugs"
+              ]
             }
           }
         }

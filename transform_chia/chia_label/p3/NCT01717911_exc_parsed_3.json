@@ -3,63 +3,71 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Previous treated",
-          "Temporal": [
-            "Previous"
-          ],
-          "Procedure": [
-            "treated"
-          ]
-        },
-        "right": {
-          "raw_text": "with anti-diabetic medication",
-          "Drug": [
-            "anti-diabetic medication"
-          ]
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Pregnant",
-              "Condition": [
-                "Pregnant"
-              ]
-            },
-            "right": {
-              "raw_text": "or nursing women.",
-              "Condition": [
-                "nursing"
-              ],
-              "Person": [
-                "women"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Impaired liver function (ALT > 120 U/L)",
-              "Condition": [
-                "Impaired liver function"
-              ],
-              "Measurement": [
-                "ALT"
-              ],
-              "Value": [
-                "> 120 U/L"
-              ],
-              "Scope": [
-                "ALT > 120 U/L"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Previous treated",
+                              "Temporal": [
+                                "Previous"
+                              ],
+                              "Procedure": [
+                                "treated"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "with anti-diabetic medication",
+                              "Drug": [
+                                "anti-diabetic medication"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Pregnant",
+                              "Condition": [
+                                "Pregnant"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or nursing women.",
+                              "Condition": [
+                                "nursing"
+                              ],
+                              "Person": [
+                                "women"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Impaired liver function (ALT > 120 U/L)",
+                      "Condition": [
+                        "Impaired liver function"
+                      ],
+                      "Measurement": [
+                        "ALT"
+                      ],
+                      "Value": [
+                        "> 120 U/L"
+                      ],
+                      "Scope": [
+                        "ALT > 120 U/L"
+                      ]
+                    }
+                  }
+                },
+                "right": {
                   "AND": {
                     "left": {
                       "raw_text": "Impaired renal function",
@@ -94,58 +102,46 @@
                       }
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Recently suffered from MI",
+                  "Condition": [
+                    "MI"
+                  ],
+                  "Temporal": [
+                    "Recently"
+                  ]
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Recently suffered from MI",
-                          "Condition": [
-                            "MI"
-                          ],
-                          "Temporal": [
-                            "Recently"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or CVA.",
-                          "Condition": [
-                            "CVA"
-                          ]
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Patients are acute intercurrent illness.",
-                          "Condition": [
-                            "acute intercurrent illness"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "2-hour C-peptide level < 1.8 ng/mL.",
-                              "Measurement": [
-                                "2-hour C-peptide level"
-                              ],
-                              "Value": [
-                                "< 1.8 ng/mL"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "or CVA.",
+                  "Condition": [
+                    "CVA"
+                  ]
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "Patients are acute intercurrent illness.",
+          "Condition": [
+            "acute intercurrent illness"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "2-hour C-peptide level < 1.8 ng/mL.",
+      "Measurement": [
+        "2-hour C-peptide level"
+      ],
+      "Value": [
+        "< 1.8 ng/mL"
+      ]
     }
   }
 }

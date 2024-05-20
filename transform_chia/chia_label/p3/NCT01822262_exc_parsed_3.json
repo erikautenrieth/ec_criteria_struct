@@ -1,61 +1,65 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Gallbladder's wall",
-          "Measurement": [
-            "Gallbladder's wall"
-          ]
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": ">3mm, atrophied gallbladder",
-              "Value": [
-                ">3mm"
-              ],
-              "Condition": [
-                "atrophied gallbladder"
-              ]
-            },
-            "right": {
-              "raw_text": ",gallstone obstruct the Hartmann's pouch.",
-              "Condition": [
-                "gallstone obstruct"
-              ],
-              "Qualifier": [
-                "Hartmann's pouch"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Abdominal ultrasound",
-              "Procedure": [
-                "Abdominal ultrasound"
-              ]
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Gallbladder's wall",
+                      "Measurement": [
+                        "Gallbladder's wall"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ">3mm, atrophied gallbladder",
+                          "Value": [
+                            ">3mm"
+                          ],
+                          "Condition": [
+                            "atrophied gallbladder"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": ",gallstone obstruct the Hartmann's pouch.",
+                          "Condition": [
+                            "gallstone obstruct"
+                          ],
+                          "Qualifier": [
+                            "Hartmann's pouch"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Abdominal ultrasound",
+                      "Procedure": [
+                        "Abdominal ultrasound"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "display the contractibility of gallbladder is poor.",
+                      "Measurement": [
+                        "contractibility of gallbladder"
+                      ],
+                      "Value": [
+                        "poor"
+                      ]
+                    }
+                  }
+                }
+              }
             },
             "right": {
-              "raw_text": "display the contractibility of gallbladder is poor.",
-              "Measurement": [
-                "contractibility of gallbladder"
-              ],
-              "Value": [
-                "poor"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
               "OR": {
                 "left": {
                   "raw_text": "The aged patients with bad heart",
@@ -67,71 +71,63 @@
                   "raw_text": "and lung function."
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Patients who has acute cholecystitis",
+              "Condition": [
+                "acute cholecystitis"
+              ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
+                  "raw_text": ",pancreatitis",
+                  "Condition": [
+                    "pancreatitis"
+                  ]
+                },
+                "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "Patients who has acute cholecystitis",
+                      "raw_text": ",pancreaticobiliary diseases",
                       "Condition": [
-                        "acute cholecystitis"
+                        "pancreaticobiliary diseases"
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ",pancreatitis",
-                          "Condition": [
-                            "pancreatitis"
-                          ]
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ",pancreaticobiliary diseases",
-                              "Condition": [
-                                "pancreaticobiliary diseases"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": ", especially choledocholithiasis.",
-                              "Condition": [
-                                "choledocholithiasis"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Pregnant",
-                          "Condition": [
-                            "Pregnant"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or lactational women.",
-                          "Condition": [
-                            "lactational"
-                          ],
-                          "Person": [
-                            "women"
-                          ]
-                        }
-                      }
+                      "raw_text": ", especially choledocholithiasis.",
+                      "Condition": [
+                        "choledocholithiasis"
+                      ]
                     }
                   }
                 }
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Pregnant",
+          "Condition": [
+            "Pregnant"
+          ]
+        },
+        "right": {
+          "raw_text": "or lactational women.",
+          "Condition": [
+            "lactational"
+          ],
+          "Person": [
+            "women"
+          ]
         }
       }
     }

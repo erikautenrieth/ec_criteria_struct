@@ -1,10 +1,11 @@
+import json
 import re
+
 
 class Node:
     def __init__(self, operator=None, criteria=None):
         self.operator = operator
         self.criteria = criteria
-        self.conditions = []
         self.left = None
         self.right = None
 
@@ -17,9 +18,12 @@ class Node:
                 children["right"] = self.right.to_dict()
             return {self.operator: children}
         else:
-            return {"raw_text": self.criteria}
+            return {"raw_text": self.criteria if self.criteria is not None else "empty set"}
 
 def parse_text(text):
+    if not text:
+        return Node(criteria="empty set")
+
     pattern = r'\[AND\]|\[OR\]|\[NOT\]'
     matches = list(re.finditer(pattern, text))
     if matches:
@@ -29,24 +33,34 @@ def parse_text(text):
         after = text[first_match.end():].strip()
         node = Node(operator=operator)
         if operator == 'NOT':
-            node.left = parse_text(after)  # NOT hat nur ein Argument
+            node.left = parse_text(after)
+            node.criteria = text  # Speichern des gesamten Textes im Knoten
         else:
-            node.left = parse_text(before)
-            node.right = parse_text(after)
-
+            node.left = parse_text(before) if before else Node(criteria="empty set")
+            node.right = parse_text(after) if after else Node(criteria="empty set")
         return node
     else:
         return Node(criteria=text)
 
 def build_tree(data):
-    root = Node(operator='AND')
-    last_node = root
-    for key, value in data.items():
-        if last_node.left is None:
-            last_node.left = parse_text(value)
-        else:
-            new_node = Node(operator='AND')
-            last_node.right = new_node
-            last_node = new_node
-            last_node.left = parse_text(value)
+    if not data:
+        return Node(criteria="empty set")
+
+    keys = list(data.keys())
+    if not keys:
+        return Node(criteria="empty set")
+
+    nodes = [parse_text(data[key]) for key in keys]
+
+    if len(nodes) == 1:
+        return nodes[0]
+
+    root = nodes[0]
+    for i in range(1, len(nodes)):
+        new_node = nodes[i]
+        temp = Node(operator='AND')
+        temp.left = root
+        temp.right = new_node
+        root = temp
+
     return root

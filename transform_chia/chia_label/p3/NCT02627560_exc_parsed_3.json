@@ -1,24 +1,24 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "pregnant",
-          "Condition": [
-            "pregnant"
-          ]
-        },
-        "right": {
-          "raw_text": "or breastfeeding",
-          "Observation": [
-            "breastfeeding"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
+          "OR": {
+            "left": {
+              "raw_text": "pregnant",
+              "Condition": [
+                "pregnant"
+              ]
+            },
+            "right": {
+              "raw_text": "or breastfeeding",
+              "Observation": [
+                "breastfeeding"
+              ]
+            }
+          }
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "known thromboembolic disease",
@@ -46,25 +46,21 @@
               }
             }
           }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "known allergy to tranexamic acid/Cyklokapron\u00ae",
-              "Condition": [
-                "allergy"
-              ],
-              "Drug": [
-                "tranexamic acid",
-                "Cyklokapron"
-              ],
-              "Scope": [
-                "tranexamic acid/Cyklokapron"
-              ]
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "known allergy to tranexamic acid/Cyklokapron\u00ae",
+      "Condition": [
+        "allergy"
+      ],
+      "Drug": [
+        "tranexamic acid",
+        "Cyklokapron"
+      ],
+      "Scope": [
+        "tranexamic acid/Cyklokapron"
+      ]
     }
   }
 }

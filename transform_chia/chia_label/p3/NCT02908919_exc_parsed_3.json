@@ -1,70 +1,36 @@
 {
   "AND": {
     "left": {
-      "raw_text": "ileus",
-      "Condition": [
-        "ileus"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "known",
-              "Mood": [
-                "known"
-              ]
-            },
-            "right": {
-              "raw_text": "or suspected bowel obstruction",
-              "Mood": [
-                "suspected"
-              ],
-              "Condition": [
-                "bowel obstruction"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "active bowel inflammation",
-              "Temporal": [
-                "active"
-              ],
-              "Condition": [
-                "bowel inflammation"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "pregnancy",
-                  "Condition": [
-                    "pregnancy"
-                  ]
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": "any presence of serious medical conditions ( esp. cardiac",
+                          "raw_text": "ileus",
                           "Condition": [
-                            "serious medical conditions"
+                            "ileus"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", renal"
+                              "raw_text": "known",
+                              "Mood": [
+                                "known"
+                              ]
                             },
                             "right": {
-                              "raw_text": ", liver diseases)",
+                              "raw_text": "or suspected bowel obstruction",
+                              "Mood": [
+                                "suspected"
+                              ],
                               "Condition": [
-                                "liver diseases"
+                                "bowel obstruction"
                               ]
                             }
                           }
@@ -72,45 +38,75 @@
                       }
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "history of prior colonic",
-                              "Observation": [
-                                "history of"
-                              ],
-                              "Temporal": [
-                                "prior"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "or rectal surgery",
-                              "Procedure": [
-                                "rectal surgery"
-                              ]
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "inability to obtain valid data from",
-                              "Non-query-able": [
-                                "inability to obtain valid data from"
-                              ]
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "active bowel inflammation",
+                      "Temporal": [
+                        "active"
+                      ],
+                      "Condition": [
+                        "bowel inflammation"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "pregnancy",
+                  "Condition": [
+                    "pregnancy"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "any presence of serious medical conditions ( esp. cardiac",
+                  "Condition": [
+                    "serious medical conditions"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", renal"
+                    },
+                    "right": {
+                      "raw_text": ", liver diseases)",
+                      "Condition": [
+                        "liver diseases"
+                      ]
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "history of prior colonic",
+              "Observation": [
+                "history of"
+              ],
+              "Temporal": [
+                "prior"
+              ]
+            },
+            "right": {
+              "raw_text": "or rectal surgery",
+              "Procedure": [
+                "rectal surgery"
+              ]
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "inability to obtain valid data from",
+      "Non-query-able": [
+        "inability to obtain valid data from"
+      ]
     }
   }
 }

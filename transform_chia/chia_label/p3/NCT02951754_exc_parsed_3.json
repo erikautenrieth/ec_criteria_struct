@@ -3,33 +3,37 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Contraindication",
-          "Condition": [
-            "Contraindication"
-          ]
-        },
-        "right": {
-          "raw_text": "for IR-MPH use",
-          "Drug": [
-            "IR-MPH"
-          ]
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Current stimulant treatment",
-          "Temporal": [
-            "Current"
-          ],
-          "Procedure": [
-            "stimulant treatment"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Contraindication",
+                      "Condition": [
+                        "Contraindication"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "for IR-MPH use",
+                      "Drug": [
+                        "IR-MPH"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Current stimulant treatment",
+                  "Temporal": [
+                    "Current"
+                  ],
+                  "Procedure": [
+                    "stimulant treatment"
+                  ]
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Evidence of a clinically significant neurological disease that might affect cognition (e.g., delirium",
@@ -85,49 +89,41 @@
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Current",
+              "Temporal": [
+                "Current"
+              ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Current",
-                      "Temporal": [
-                        "Current"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "or past history of psychosis",
-                      "Temporal": [
-                        "past"
-                      ],
-                      "Observation": [
-                        "history"
-                      ],
-                      "Condition": [
-                        "psychosis"
-                      ]
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Estimated intelligence quotient score lower than 70",
-                      "Measurement": [
-                        "Estimated intelligence quotient score"
-                      ],
-                      "Value": [
-                        "lower than 70"
-                      ]
-                    }
-                  }
-                }
-              }
+              "raw_text": "or past history of psychosis",
+              "Temporal": [
+                "past"
+              ],
+              "Observation": [
+                "history"
+              ],
+              "Condition": [
+                "psychosis"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Estimated intelligence quotient score lower than 70",
+      "Measurement": [
+        "Estimated intelligence quotient score"
+      ],
+      "Value": [
+        "lower than 70"
+      ]
     }
   }
 }

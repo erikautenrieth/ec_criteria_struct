@@ -1,16 +1,20 @@
 {
   "AND": {
     "left": {
-      "raw_text": "aged less than 20 years"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "history of gastric resection surgery"
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "aged less than 20 years"
+                },
+                "right": {
+                  "raw_text": "history of gastric resection surgery"
+                }
+              }
+            },
+            "right": {
               "AND": {
                 "left": {
                   "raw_text": "history of allergy"
@@ -19,41 +23,33 @@
                   "raw_text": "to study drugs"
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "pregnancy"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "pregnancy"
-                    },
-                    "right": {
-                      "raw_text": "or lactating women"
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "severe underlying illness, such as end stage renal disease"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", decompensated liver cirrhosis"
-                            },
-                            "right": {
-                              "raw_text": ", or non-curative malignancy"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "or lactating women"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "severe underlying illness, such as end stage renal disease"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", decompensated liver cirrhosis"
+            },
+            "right": {
+              "raw_text": ", or non-curative malignancy"
             }
           }
         }

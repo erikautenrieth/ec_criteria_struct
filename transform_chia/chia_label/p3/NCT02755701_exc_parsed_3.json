@@ -1,73 +1,178 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Child-Pugh score > 12",
-      "Measurement": [
-        "Child-Pugh score"
-      ],
-      "Value": [
-        "> 12"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Having been diagnosed as HCC within the past 5 years",
-          "Condition": [
-            "HCC"
-          ],
-          "Temporal": [
-            "past 5 years"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Serum creatinine > 1.5mg/dl",
-              "Measurement": [
-                "Serum creatinine"
-              ],
-              "Value": [
-                "> 1.5mg/dl"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Serum bilirubin > 5.0mg/dl",
-                  "Measurement": [
-                    "Serum bilirubin"
-                  ],
-                  "Value": [
-                    "> 5.0mg/d"
-                  ]
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": "Presence of such complications as SBP",
-                          "Condition": [
-                            "complications",
-                            "SBP"
-                          ]
-                        },
-                        "right": {
                           "AND": {
                             "left": {
-                              "raw_text": ", or hepatic encephalopathy",
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "AND": {
+                                        "left": {
+                                          "AND": {
+                                            "left": {
+                                              "AND": {
+                                                "left": {
+                                                  "AND": {
+                                                    "left": {
+                                                      "raw_text": "Child-Pugh score > 12",
+                                                      "Measurement": [
+                                                        "Child-Pugh score"
+                                                      ],
+                                                      "Value": [
+                                                        "> 12"
+                                                      ]
+                                                    },
+                                                    "right": {
+                                                      "raw_text": "Having been diagnosed as HCC within the past 5 years",
+                                                      "Condition": [
+                                                        "HCC"
+                                                      ],
+                                                      "Temporal": [
+                                                        "past 5 years"
+                                                      ]
+                                                    }
+                                                  }
+                                                },
+                                                "right": {
+                                                  "raw_text": "Serum creatinine > 1.5mg/dl",
+                                                  "Measurement": [
+                                                    "Serum creatinine"
+                                                  ],
+                                                  "Value": [
+                                                    "> 1.5mg/dl"
+                                                  ]
+                                                }
+                                              }
+                                            },
+                                            "right": {
+                                              "raw_text": "Serum bilirubin > 5.0mg/dl",
+                                              "Measurement": [
+                                                "Serum bilirubin"
+                                              ],
+                                              "Value": [
+                                                "> 5.0mg/d"
+                                              ]
+                                            }
+                                          }
+                                        },
+                                        "right": {
+                                          "OR": {
+                                            "left": {
+                                              "raw_text": "Presence of such complications as SBP",
+                                              "Condition": [
+                                                "complications",
+                                                "SBP"
+                                              ]
+                                            },
+                                            "right": {
+                                              "AND": {
+                                                "left": {
+                                                  "raw_text": ", or hepatic encephalopathy",
+                                                  "Condition": [
+                                                    "hepatic encephalopathy"
+                                                  ]
+                                                },
+                                                "right": {
+                                                  "raw_text": "(West Haven grade = 3)",
+                                                  "Measurement": [
+                                                    "West Haven grade"
+                                                  ],
+                                                  "Value": [
+                                                    "= 3"
+                                                  ]
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "right": {
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "Patients who experienced organ failure",
+                                          "Condition": [
+                                            "organ failure"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "by acute exacerbation of liver cirrhosis within the past 1 month",
+                                          "Condition": [
+                                            "acute exacerbation of liver cirrhosis"
+                                          ],
+                                          "Temporal": [
+                                            "past 1 month"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "Presence of serious cardiac",
+                                      "Qualifier": [
+                                        "serious"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "or respiratory disease",
+                                      "Condition": [
+                                        "respiratory disease"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "Contraindicated to either diuretics",
+                                  "Condition": [
+                                    "Contraindicated"
+                                  ],
+                                  "Drug": [
+                                    "diuretics"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or BCAA",
+                                  "Drug": [
+                                    "BCAA"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Having commenced anti-viral treatment against hepatitis C",
+                              "Procedure": [
+                                "anti-viral treatment"
+                              ],
                               "Condition": [
-                                "hepatic encephalopathy"
+                                "hepatitis C"
                               ]
                             },
                             "right": {
-                              "raw_text": "(West Haven grade = 3)",
-                              "Measurement": [
-                                "West Haven grade"
-                              ],
-                              "Value": [
-                                "= 3"
+                              "raw_text": ", B within the past 1 month",
+                              "Temporal": [
+                                "past 1 month"
                               ]
                             }
                           }
@@ -75,154 +180,45 @@
                       }
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Patients who experienced organ failure",
-                              "Condition": [
-                                "organ failure"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "by acute exacerbation of liver cirrhosis within the past 1 month",
-                              "Condition": [
-                                "acute exacerbation of liver cirrhosis"
-                              ],
-                              "Temporal": [
-                                "past 1 month"
-                              ]
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Presence of serious cardiac",
-                                  "Qualifier": [
-                                    "serious"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": "or respiratory disease",
-                                  "Condition": [
-                                    "respiratory disease"
-                                  ]
-                                }
-                              }
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "Contraindicated to either diuretics",
-                                      "Condition": [
-                                        "Contraindicated"
-                                      ],
-                                      "Drug": [
-                                        "diuretics"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "or BCAA",
-                                      "Drug": [
-                                        "BCAA"
-                                      ]
-                                    }
-                                  }
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "Having commenced anti-viral treatment against hepatitis C",
-                                          "Procedure": [
-                                            "anti-viral treatment"
-                                          ],
-                                          "Condition": [
-                                            "hepatitis C"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": ", B within the past 1 month",
-                                          "Temporal": [
-                                            "past 1 month"
-                                          ]
-                                        }
-                                      }
-                                    },
-                                    "right": {
-                                      "AND": {
-                                        "left": {
-                                          "raw_text": "Pregnant or lactating women",
-                                          "Pregnancy_considerations": [
-                                            "Pregnant or lactating women"
-                                          ]
-                                        },
-                                        "right": {
-                                          "AND": {
-                                            "left": {
-                                              "raw_text": "Chronic alcohol taker",
-                                              "Qualifier": [
-                                                "Chronic"
-                                              ],
-                                              "Person": [
-                                                "alcohol taker"
-                                              ]
-                                            },
-                                            "right": {
-                                              "AND": {
-                                                "left": {
-                                                  "raw_text": "Woman patients who do not agree to the contraception from baseline to 12 month",
-                                                  "Pregnancy_considerations": [
-                                                    "Woman patients who do not agree to the contraception from baseline to 12 month"
-                                                  ]
-                                                },
-                                                "right": {
-                                                  "AND": {
-                                                    "left": {
-                                                      "raw_text": "Unsuitable patients judged by investigator",
-                                                      "Non-query-able": [
-                                                        "Unsuitable patients judged by investigator"
-                                                      ]
-                                                    },
-                                                    "right": {
-                                                      "AND": {
-                                                        "left": {
-                                                          "raw_text": "Patients participating in another clinical trial within 1 month",
-                                                          "Competing_trial": [
-                                                            "Patients participating in another clinical trial within 1 month"
-                                                          ]
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "Pregnant or lactating women",
+                      "Pregnancy_considerations": [
+                        "Pregnant or lactating women"
+                      ]
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "Chronic alcohol taker",
+                  "Qualifier": [
+                    "Chronic"
+                  ],
+                  "Person": [
+                    "alcohol taker"
+                  ]
                 }
               }
+            },
+            "right": {
+              "raw_text": "Woman patients who do not agree to the contraception from baseline to 12 month",
+              "Pregnancy_considerations": [
+                "Woman patients who do not agree to the contraception from baseline to 12 month"
+              ]
             }
           }
+        },
+        "right": {
+          "raw_text": "Unsuitable patients judged by investigator",
+          "Non-query-able": [
+            "Unsuitable patients judged by investigator"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Patients participating in another clinical trial within 1 month",
+      "Competing_trial": [
+        "Patients participating in another clinical trial within 1 month"
+      ]
     }
   }
 }

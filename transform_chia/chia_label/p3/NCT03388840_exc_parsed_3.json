@@ -1,105 +1,101 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Patients with Non-androgenetic causes of hair loss.",
-      "Condition": [
-        "Non-androgenetic causes of hair loss"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Female patients with androgenetic alopecia.",
-          "Person": [
-            "Female"
-          ],
-          "Condition": [
-            "androgenetic alopecia"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Patients who received anti-hair loss treatment within the past six months.",
-              "Procedure": [
-                "anti-hair loss treatment"
-              ],
-              "Temporal": [
-                "within the past six months"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "Patients with history of bleeding disorders",
+                      "raw_text": "Patients with Non-androgenetic causes of hair loss.",
                       "Condition": [
-                        "bleeding disorders"
-                      ],
-                      "Observation": [
-                        "history"
+                        "Non-androgenetic causes of hair loss"
                       ]
                     },
                     "right": {
-                      "raw_text": "or on anticoagulant therapy.",
-                      "Procedure": [
-                        "anticoagulant therapy"
+                      "raw_text": "Female patients with androgenetic alopecia.",
+                      "Person": [
+                        "Female"
+                      ],
+                      "Condition": [
+                        "androgenetic alopecia"
                       ]
                     }
                   }
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Patients with history of chronic liver disease",
-                          "Condition": [
-                            "chronic liver disease"
-                          ],
-                          "Observation": [
-                            "history"
-                          ]
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", cancer",
-                              "Condition": [
-                                "cancer"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "or connective tissue disorders.",
-                              "Condition": [
-                                "connective tissue disorders"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Patients with current scalp infection.",
-                          "Temporal": [
-                            "current"
-                          ],
-                          "Condition": [
-                            "scalp infection"
-                          ]
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "Patients who received anti-hair loss treatment within the past six months.",
+                  "Procedure": [
+                    "anti-hair loss treatment"
+                  ],
+                  "Temporal": [
+                    "within the past six months"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Patients with history of bleeding disorders",
+                  "Condition": [
+                    "bleeding disorders"
+                  ],
+                  "Observation": [
+                    "history"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or on anticoagulant therapy.",
+                  "Procedure": [
+                    "anticoagulant therapy"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Patients with history of chronic liver disease",
+              "Condition": [
+                "chronic liver disease"
+              ],
+              "Observation": [
+                "history"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", cancer",
+                  "Condition": [
+                    "cancer"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or connective tissue disorders.",
+                  "Condition": [
+                    "connective tissue disorders"
+                  ]
                 }
               }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Patients with current scalp infection.",
+      "Temporal": [
+        "current"
+      ],
+      "Condition": [
+        "scalp infection"
+      ]
     }
   }
 }

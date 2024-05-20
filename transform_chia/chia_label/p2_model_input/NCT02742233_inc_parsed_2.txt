@@ -1,32 +1,32 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Diagnosis of diabetes mellitus according to World Health Organization criteria ( treatment"
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": "with insulin"
+              "raw_text": "Diagnosis of diabetes mellitus according to World Health Organization criteria ( treatment"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "or an oral hypoglycemic agent, twice random glucose measurements"
+                  "raw_text": "with insulin"
                 },
                 "right": {
-                  "raw_text": "major than 200 mg/dl, or a fasting glucose major than 140 mg/dl)"
+                  "OR": {
+                    "left": {
+                      "raw_text": "or an oral hypoglycemic agent, twice random glucose measurements"
+                    },
+                    "right": {
+                      "raw_text": "major than 200 mg/dl, or a fasting glucose major than 140 mg/dl)"
+                    }
+                  }
                 }
               }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "Ulcer"
@@ -42,15 +42,11 @@
               }
             }
           }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "The subject agrees to comply with study protocol requirements and all follow up visit requirements."
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "The subject agrees to comply with study protocol requirements and all follow up visit requirements."
     }
   }
 }

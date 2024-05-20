@@ -1,40 +1,52 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Has previously received Dapsone therapy."
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "The subject or any of their healthcare providers is aware of the subjects HLA type."
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Has been diagnosed with Glucose-6-phosphate dehydrogenase deficiency"
-                },
-                "right": {
-                  "raw_text": "or methemoglobin reductase deficiency"
-                }
-              }
-            },
-            "right": {
               "AND": {
                 "left": {
                   "AND": {
                     "left": {
-                      "raw_text": "Satisfies any contraindications"
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "Has previously received Dapsone therapy."
+                                },
+                                "right": {
+                                  "raw_text": "The subject or any of their healthcare providers is aware of the subjects HLA type."
+                                }
+                              }
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "Has been diagnosed with Glucose-6-phosphate dehydrogenase deficiency"
+                                },
+                                "right": {
+                                  "raw_text": "or methemoglobin reductase deficiency"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Satisfies any contraindications"
+                            },
+                            "right": {
+                              "raw_text": "or restrictions to Dapsone therapy as listed in the product labels."
+                            }
+                          }
+                        }
+                      }
                     },
                     "right": {
-                      "raw_text": "or restrictions to Dapsone therapy as listed in the product labels."
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
                       "OR": {
                         "left": {
                           "raw_text": "Current severe illness, including heart"
@@ -71,42 +83,26 @@
                           }
                         }
                       }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Any laboratory abnormality at Screening which, in the opinion of the Investigator, should preclude the subject's participation in the study [alanine aminotransferase (ALT), glutamic oxaloacetic transaminase(ALT), et al)."
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Pregnant women or women who are breastfeeding."
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "Subject is, in the opinion of the Investigator, unable to complete the 6 week Observation period and the EPT assessments as required."
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "A positive result for HLA-B*1301 in those subjects randomised to the genetic screening arm."
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "Any laboratory abnormality at Screening which, in the opinion of the Investigator, should preclude the subject's participation in the study [alanine aminotransferase (ALT), glutamic oxaloacetic transaminase(ALT), et al)."
                 }
               }
+            },
+            "right": {
+              "raw_text": "Pregnant women or women who are breastfeeding."
             }
           }
+        },
+        "right": {
+          "raw_text": "Subject is, in the opinion of the Investigator, unable to complete the 6 week Observation period and the EPT assessments as required."
         }
       }
+    },
+    "right": {
+      "raw_text": "A positive result for HLA-B*1301 in those subjects randomised to the genetic screening arm."
     }
   }
 }

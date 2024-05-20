@@ -1,105 +1,113 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "The patient has a known hypersensitivity",
-          "Condition": [
-            "hypersensitivity"
-          ]
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "or contraindication to any of the following medications: Heparin",
-              "Condition": [
-                "contraindication"
-              ],
-              "Drug": [
-                "Heparin"
-              ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": ", Aspirin",
-                  "Drug": [
-                    "Aspirin"
-                  ]
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": ", Clopidogrel",
-                      "Drug": [
-                        "Clopidogrel"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": ", Cilostazol",
-                      "Drug": [
-                        "Cilostazol"
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Uncontrolled hypertension",
-          "Qualifier": [
-            "Uncontrolled"
-          ],
-          "Condition": [
-            "hypertension"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "History of bleeding diathesis",
-                  "Condition": [
-                    "bleeding diathesis"
-                  ],
-                  "Observation": [
-                    "History"
-                  ]
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "or known coagulopathy",
-                      "Condition": [
-                        "coagulopathy"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "(including heparin-induced thrombocytopenia), or refuses blood transfusions.",
-                      "Condition": [
-                        "heparin-induced thrombocytopenia"
-                      ],
-                      "Observation": [
-                        "refuses blood transfusions"
-                      ],
-                      "Procedure": [
-                        "blood transfusions"
-                      ]
-                    }
-                  }
-                }
-              }
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "The patient has a known hypersensitivity",
+                              "Condition": [
+                                "hypersensitivity"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or contraindication to any of the following medications: Heparin",
+                                  "Condition": [
+                                    "contraindication"
+                                  ],
+                                  "Drug": [
+                                    "Heparin"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": ", Aspirin",
+                                      "Drug": [
+                                        "Aspirin"
+                                      ]
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": ", Clopidogrel",
+                                          "Drug": [
+                                            "Clopidogrel"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": ", Cilostazol",
+                                          "Drug": [
+                                            "Cilostazol"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "Uncontrolled hypertension",
+                          "Qualifier": [
+                            "Uncontrolled"
+                          ],
+                          "Condition": [
+                            "hypertension"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "History of bleeding diathesis",
+                          "Condition": [
+                            "bleeding diathesis"
+                          ],
+                          "Observation": [
+                            "History"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "or known coagulopathy",
+                              "Condition": [
+                                "coagulopathy"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "(including heparin-induced thrombocytopenia), or refuses blood transfusions.",
+                              "Condition": [
+                                "heparin-induced thrombocytopenia"
+                              ],
+                              "Observation": [
+                                "refuses blood transfusions"
+                              ],
+                              "Procedure": [
+                                "blood transfusions"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Baseline hemogram with Hb",
@@ -124,87 +132,42 @@
                       ]
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Patients already taking warfarin",
+                  "Drug": [
+                    "warfarin"
+                  ]
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "OR": {
+                      "raw_text": ", cilostazol",
+                      "Drug": [
+                        "cilostazol"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
                         "left": {
-                          "raw_text": "Patients already taking warfarin",
-                          "Drug": [
-                            "warfarin"
-                          ]
-                        },
-                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", cilostazol",
+                              "raw_text": "except aspirin",
                               "Drug": [
-                                "cilostazol"
+                                "aspirin"
+                              ],
+                              "Negation": [
+                                "except"
                               ]
                             },
                             "right": {
-                              "NOT": {
-                                "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "except aspirin",
-                                      "Drug": [
-                                        "aspirin"
-                                      ],
-                                      "Negation": [
-                                        "except"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "and clopidogrel",
-                                      "Drug": [
-                                        "clopidogrel"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Gastrointestinal"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "or genitourinary bleeding",
-                                  "Condition": [
-                                    "genitourinary bleeding"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": "within the prior 3 months, or major surgery within 2 months.",
-                                  "Temporal": [
-                                    "within the prior 3 months",
-                                    "within 2 months"
-                                  ],
-                                  "Procedure": [
-                                    "major surgery"
-                                  ]
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Pregnancy",
-                              "Condition": [
-                                "Pregnancy"
+                              "raw_text": "and clopidogrel",
+                              "Drug": [
+                                "clopidogrel"
                               ]
                             }
                           }
@@ -216,8 +179,41 @@
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Gastrointestinal"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or genitourinary bleeding",
+                  "Condition": [
+                    "genitourinary bleeding"
+                  ]
+                },
+                "right": {
+                  "raw_text": "within the prior 3 months, or major surgery within 2 months.",
+                  "Temporal": [
+                    "within the prior 3 months",
+                    "within 2 months"
+                  ],
+                  "Procedure": [
+                    "major surgery"
+                  ]
+                }
+              }
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Pregnancy",
+      "Condition": [
+        "Pregnancy"
+      ]
     }
   }
 }

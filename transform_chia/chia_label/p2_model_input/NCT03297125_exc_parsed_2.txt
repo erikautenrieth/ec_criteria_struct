@@ -1,58 +1,58 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Optune compliance < 75%; they would be excluded from the final analyses."
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "History of craniectomy"
+              "raw_text": "Optune compliance < 75%; they would be excluded from the final analyses."
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "or significant skull defect (contraindication"
+                  "raw_text": "History of craniectomy"
                 },
                 "right": {
-                  "raw_text": "to Optune)."
+                  "AND": {
+                    "left": {
+                      "raw_text": "or significant skull defect (contraindication"
+                    },
+                    "right": {
+                      "raw_text": "to Optune)."
+                    }
+                  }
                 }
               }
             }
           }
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
+              "raw_text": "Active implantable medical device (i.e. DBS"
+            },
+            "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Active implantable medical device (i.e. DBS"
+                  "raw_text": ", spinal cord stimulator"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", spinal cord stimulator"
+                      "raw_text": ", pacemaker"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", pacemaker"
+                          "raw_text": ", defibrillator"
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", defibrillator"
+                              "raw_text": ", vagus nerve stimulator"
                             },
                             "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": ", vagus nerve stimulator"
-                                },
-                                "right": {
-                                  "raw_text": ", programmable shunt)."
-                                }
-                              }
+                              "raw_text": ", programmable shunt)."
                             }
                           }
                         }
@@ -61,17 +61,13 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Karnofsky Performance Status (KPS) < 60."
-                }
-              }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Karnofsky Performance Status (KPS) < 60."
     }
   }
 }

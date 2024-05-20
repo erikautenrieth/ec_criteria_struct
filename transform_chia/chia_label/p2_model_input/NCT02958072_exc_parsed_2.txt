@@ -1,45 +1,61 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Hemoglobin concentration under 6.5 mmol/l screening"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "HBA1c more than 108 mmol/l"
-        },
-        "right": {
           "AND": {
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Non-compliant"
-                },
-                "right": {
-                  "raw_text": "with blood-letting"
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Clinically infected ulcer"
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Patient planned"
-                        },
-                        "right": {
-                          "raw_text": "for or has had a revascularization procedure in the affected leg within the last 8 weeks"
-                        }
-                      }
-                    },
-                    "right": {
                       "AND": {
                         "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "Hemoglobin concentration under 6.5 mmol/l screening"
+                                        },
+                                        "right": {
+                                          "raw_text": "HBA1c more than 108 mmol/l"
+                                        }
+                                      }
+                                    },
+                                    "right": {
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "Non-compliant"
+                                        },
+                                        "right": {
+                                          "raw_text": "with blood-letting"
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "raw_text": "Clinically infected ulcer"
+                                }
+                              }
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "Patient planned"
+                                },
+                                "right": {
+                                  "raw_text": "for or has had a revascularization procedure in the affected leg within the last 8 weeks"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
                           "AND": {
                             "left": {
                               "raw_text": "The ulcer"
@@ -55,76 +71,47 @@
                               }
                             }
                           }
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "History of deep venous insufficiency"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", chronic venous leg ulcer"
+                            },
+                            "right": {
+                              "raw_text": "or stasis dermatitis"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Breast-feeding"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "women"
                         },
                         "right": {
                           "AND": {
                             "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "History of deep venous insufficiency"
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", chronic venous leg ulcer"
-                                    },
-                                    "right": {
-                                      "raw_text": "or stasis dermatitis"
-                                    }
-                                  }
-                                }
-                              }
+                              "raw_text": "or fertile"
                             },
                             "right": {
-                              "AND": {
+                              "NOT": {
                                 "left": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Breast-feeding"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "women"
-                                        },
-                                        "right": {
-                                          "AND": {
-                                            "left": {
-                                              "raw_text": "or fertile"
-                                            },
-                                            "right": {
-                                              "NOT": {
-                                                "left": {
-                                                  "raw_text": "not agreeing to use an effective method of contraception"
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Participation in another clinical ulcer-healing study within the last 4 weeks"
-                                    },
-                                    "right": {
-                                      "AND": {
-                                        "left": {
-                                          "raw_text": "Patient has previously been randomized in this study"
-                                        },
-                                        "right": {
-                                          "AND": {
-                                            "left": {
-                                              "raw_text": "Judgement by the investigator that the patient is not able to participate in the study"
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
+                                  "raw_text": "not agreeing to use an effective method of contraception"
                                 }
                               }
                             }
@@ -135,10 +122,19 @@
                   }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Participation in another clinical ulcer-healing study within the last 4 weeks"
             }
           }
+        },
+        "right": {
+          "raw_text": "Patient has previously been randomized in this study"
         }
       }
+    },
+    "right": {
+      "raw_text": "Judgement by the investigator that the patient is not able to participate in the study"
     }
   }
 }

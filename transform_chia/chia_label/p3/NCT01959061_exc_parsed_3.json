@@ -1,74 +1,70 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Pregnant",
-          "Condition": [
-            "Pregnant"
-          ]
-        },
-        "right": {
-          "raw_text": "or lactating women",
-          "Condition": [
-            "lactating"
-          ],
-          "Person": [
-            "women"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Patients with severe organ",
-              "Qualifier": [
-                "severe"
-              ]
-            },
-            "right": {
-              "raw_text": "dysfunction or failure"
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "With severe cardiovascular disease",
-                  "Qualifier": [
-                    "severe"
-                  ],
+                  "raw_text": "Pregnant",
                   "Condition": [
-                    "cardiovascular disease"
+                    "Pregnant"
                   ]
                 },
                 "right": {
-                  "raw_text": ", or mental"
+                  "raw_text": "or lactating women",
+                  "Condition": [
+                    "lactating"
+                  ],
+                  "Person": [
+                    "women"
+                  ]
                 }
               }
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "Extraliver metastases",
-                  "Condition": [
-                    "Extraliver metastases",
-                    "metastases"
-                  ],
+                  "raw_text": "Patients with severe organ",
                   "Qualifier": [
-                    "Extraliver"
+                    "severe"
                   ]
+                },
+                "right": {
+                  "raw_text": "dysfunction or failure"
                 }
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "With severe cardiovascular disease",
+              "Qualifier": [
+                "severe"
+              ],
+              "Condition": [
+                "cardiovascular disease"
+              ]
+            },
+            "right": {
+              "raw_text": ", or mental"
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Extraliver metastases",
+      "Condition": [
+        "Extraliver metastases",
+        "metastases"
+      ],
+      "Qualifier": [
+        "Extraliver"
+      ]
     }
   }
 }

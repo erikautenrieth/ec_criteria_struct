@@ -1,43 +1,51 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Patient over 18 years weighing between 65 and 85 Kg"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Referred for STEMI"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "within 6 hours from beginning of chest pain or stable coronary artery disease requiring a loading dose of Prasugrel"
-                },
-                "right": {
-                  "raw_text": "or Ticagrelor according to the international recommendations."
-                }
-              }
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "NOT": {
+              "AND": {
                 "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "No previous treatment with Clopidogrel"
+                      "raw_text": "Patient over 18 years weighing between 65 and 85 Kg"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", Prasugrel"
+                          "raw_text": "Referred for STEMI"
                         },
                         "right": {
-                          "raw_text": "or Ticagrelor."
+                          "OR": {
+                            "left": {
+                              "raw_text": "within 6 hours from beginning of chest pain or stable coronary artery disease requiring a loading dose of Prasugrel"
+                            },
+                            "right": {
+                              "raw_text": "or Ticagrelor according to the international recommendations."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "No previous treatment with Clopidogrel"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", Prasugrel"
+                            },
+                            "right": {
+                              "raw_text": "or Ticagrelor."
+                            }
+                          }
                         }
                       }
                     }
@@ -46,29 +54,17 @@
               }
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Patient fasting for at least 6 hours."
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Affiliate or receiving a social security system."
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Written informed consent."
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "Patient fasting for at least 6 hours."
             }
           }
+        },
+        "right": {
+          "raw_text": "Affiliate or receiving a social security system."
         }
       }
+    },
+    "right": {
+      "raw_text": "Written informed consent."
     }
   }
 }

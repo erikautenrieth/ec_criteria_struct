@@ -1,44 +1,56 @@
 {
   "AND": {
     "left": {
-      "raw_text": "ASA> 3;",
-      "Measurement": [
-        "ASA"
-      ],
-      "Value": [
-        "> 3"
-      ],
-      "Drug": [
-        "ASA"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Coagulopathy;",
-          "Condition": [
-            "Coagulopathy"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Renal disease,",
-              "Condition": [
-                "Renal disease"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Liver disease,",
-                  "Condition": [
-                    "Liver disease"
-                  ]
-                },
-                "right": {
                   "AND": {
                     "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "ASA> 3;",
+                                  "Measurement": [
+                                    "ASA"
+                                  ],
+                                  "Value": [
+                                    "> 3"
+                                  ],
+                                  "Drug": [
+                                    "ASA"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "Coagulopathy;",
+                                  "Condition": [
+                                    "Coagulopathy"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "Renal disease,",
+                              "Condition": [
+                                "Renal disease"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "Liver disease,",
+                          "Condition": [
+                            "Liver disease"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
                       "raw_text": "History of recent gastro-intestinal bleeding",
                       "Condition": [
                         "gastro-intestinal bleeding"
@@ -46,98 +58,76 @@
                       "Temporal": [
                         "recent"
                       ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Pregnancy.",
+                  "Condition": [
+                    "Pregnancy"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Diagnosis of chronic pain",
+                  "Condition": [
+                    "chronic pain"
+                  ]
+                },
+                "right": {
+                  "raw_text": "currently taking opioid pain medication or with a history of drug abuse.",
+                  "Drug": [
+                    "opioid pain medication"
+                  ],
+                  "Observation": [
+                    "history of"
+                  ],
+                  "Condition": [
+                    "drug abuse"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Patients with a self-described allergy to ASA",
+              "Measurement": [
+                "ASA"
+              ],
+              "Condition": [
+                "allergy"
+              ],
+              "Drug": [
+                "ASA"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", acetaminophen",
+                  "Drug": [
+                    "acetaminophen"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", NSAIDS",
+                      "Drug": [
+                        "NSAIDS"
+                      ]
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Pregnancy.",
-                          "Condition": [
-                            "Pregnancy"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Diagnosis of chronic pain",
-                                  "Condition": [
-                                    "chronic pain"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": "currently taking opioid pain medication or with a history of drug abuse.",
-                                  "Drug": [
-                                    "opioid pain medication"
-                                  ],
-                                  "Observation": [
-                                    "history of"
-                                  ],
-                                  "Condition": [
-                                    "drug abuse"
-                                  ]
-                                }
-                              }
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "Patients with a self-described allergy to ASA",
-                                      "Measurement": [
-                                        "ASA"
-                                      ],
-                                      "Condition": [
-                                        "allergy"
-                                      ],
-                                      "Drug": [
-                                        "ASA"
-                                      ]
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": ", acetaminophen",
-                                          "Drug": [
-                                            "acetaminophen"
-                                          ]
-                                        },
-                                        "right": {
-                                          "OR": {
-                                            "left": {
-                                              "raw_text": ", NSAIDS",
-                                              "Drug": [
-                                                "NSAIDS"
-                                              ]
-                                            },
-                                            "right": {
-                                              "raw_text": "and codeine.",
-                                              "Drug": [
-                                                "codeine"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "All patients receiving a brachial plexus block for anesthesia and/or analgesia",
-                                      "Procedure": [
-                                        "brachial plexus block"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "and codeine.",
+                      "Drug": [
+                        "codeine"
+                      ]
                     }
                   }
                 }
@@ -146,6 +136,12 @@
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "All patients receiving a brachial plexus block for anesthesia and/or analgesia",
+      "Procedure": [
+        "brachial plexus block"
+      ]
     }
   }
 }

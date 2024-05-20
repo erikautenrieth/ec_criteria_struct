@@ -1,61 +1,29 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Acute coronary syndrome within 1 month"
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Heart failure"
-            },
-            "right": {
-              "raw_text": "NYHA III to IV"
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Contraindication"
-                },
-                "right": {
-                  "raw_text": "to Aspirin"
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "On anticoagulant therapy"
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "Emergent surgery"
-                    },
-                    "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "Cardiac surgery"
-                        },
-                        "right": {
                           "AND": {
                             "left": {
-                              "OR": {
+                              "AND": {
                                 "left": {
-                                  "raw_text": "High bleeding risk surgeries, e.g., Intra-cranial surgery"
+                                  "raw_text": "Acute coronary syndrome within 1 month"
                                 },
                                 "right": {
-                                  "OR": {
+                                  "AND": {
                                     "left": {
-                                      "raw_text": ", Intra-spinal surgery"
+                                      "raw_text": "Heart failure"
                                     },
                                     "right": {
-                                      "raw_text": ", Retinal surgery"
+                                      "raw_text": "NYHA III to IV"
                                     }
                                   }
                                 }
@@ -64,35 +32,63 @@
                             "right": {
                               "AND": {
                                 "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "Pregnancy"
-                                    },
-                                    "right": {
-                                      "raw_text": "or breast-feeding"
-                                    }
-                                  }
+                                  "raw_text": "Contraindication"
                                 },
                                 "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Life expectancy less than 1year"
-                                    }
-                                  }
+                                  "raw_text": "to Aspirin"
                                 }
                               }
                             }
                           }
+                        },
+                        "right": {
+                          "raw_text": "On anticoagulant therapy"
                         }
                       }
+                    },
+                    "right": {
+                      "raw_text": "Emergent surgery"
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Cardiac surgery"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "High bleeding risk surgeries, e.g., Intra-cranial surgery"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", Intra-spinal surgery"
+                    },
+                    "right": {
+                      "raw_text": ", Retinal surgery"
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnancy"
+            },
+            "right": {
+              "raw_text": "or breast-feeding"
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Life expectancy less than 1year"
     }
   }
 }

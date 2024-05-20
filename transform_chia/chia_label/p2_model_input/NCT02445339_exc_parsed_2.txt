@@ -1,40 +1,52 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Active opioid dependence"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Acute"
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "or chronic pain"
-                },
-                "right": {
-                  "raw_text": "requiring opioid treatment"
-                }
-              }
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Acute liver injury (liver aminotransferase concentrations >5 times the upper limit of normal)"
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Health condition considered unsafe for inclusion (at discretion of PI and/or attending physician)"
-                },
-                "right": {
                   "AND": {
                     "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "Active opioid dependence"
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "Acute"
+                                    },
+                                    "right": {
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "or chronic pain"
+                                        },
+                                        "right": {
+                                          "raw_text": "requiring opioid treatment"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "Acute liver injury (liver aminotransferase concentrations >5 times the upper limit of normal)"
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "Health condition considered unsafe for inclusion (at discretion of PI and/or attending physician)"
+                        }
+                      }
+                    },
+                    "right": {
                       "NOT": {
                         "left": {
                           "OR": {
@@ -47,73 +59,23 @@
                           }
                         }
                       }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Currently prescribed pharmacotherapy"
                     },
                     "right": {
-                      "AND": {
+                      "NOT": {
                         "left": {
                           "AND": {
                             "left": {
-                              "raw_text": "Currently prescribed pharmacotherapy"
+                              "raw_text": "not including treatment"
                             },
                             "right": {
-                              "NOT": {
-                                "left": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "not including treatment"
-                                    },
-                                    "right": {
-                                      "raw_text": "of acute alcohol withdrawal syndrome)"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Previous significant adverse reaction to naltrexone"
-                                },
-                                "right": {
-                                  "raw_text": "or diluent"
-                                }
-                              }
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "Pregnant"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": ", nursing"
-                                        },
-                                        "right": {
-                                          "NOT": {
-                                            "left": {
-                                              "raw_text": "not using effective methods of birth control"
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Prisoners (as defined by Office of Human Research Protection) at the time of enrollment ARE NOT ELIGIBLE for study entry. However, subjects who become prisoners after being enrolled will be included and not be withdrawn from the study. Patients on parole or probation are eligible for enrollment."
-                                    }
-                                  }
-                                }
-                              }
+                              "raw_text": "of acute alcohol withdrawal syndrome)"
                             }
                           }
                         }
@@ -122,10 +84,44 @@
                   }
                 }
               }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Previous significant adverse reaction to naltrexone"
+                },
+                "right": {
+                  "raw_text": "or diluent"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnant"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", nursing"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not using effective methods of birth control"
+                    }
+                  }
+                }
+              }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Prisoners (as defined by Office of Human Research Protection) at the time of enrollment ARE NOT ELIGIBLE for study entry. However, subjects who become prisoners after being enrolled will be included and not be withdrawn from the study. Patients on parole or probation are eligible for enrollment."
     }
   }
 }

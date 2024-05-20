@@ -1,23 +1,27 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Abdominal and complex cervical cerclage (e.g. bulging bag)"
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Contraindication"
+              "AND": {
+                "left": {
+                  "raw_text": "Abdominal and complex cervical cerclage (e.g. bulging bag)"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Contraindication"
+                    },
+                    "right": {
+                      "raw_text": "to neuraxial anesthesia"
+                    }
+                  }
+                }
+              }
             },
             "right": {
-              "raw_text": "to neuraxial anesthesia"
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
               "OR": {
                 "left": {
                   "raw_text": "Known hypersensitivity to chloroprocaine"
@@ -33,24 +37,16 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Pseudocholinesterase deficiency"
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Concomitant use with ergot-type oxytocic drugs"
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Pseudocholinesterase deficiency"
         }
       }
+    },
+    "right": {
+      "raw_text": "Concomitant use with ergot-type oxytocic drugs"
     }
   }
 }

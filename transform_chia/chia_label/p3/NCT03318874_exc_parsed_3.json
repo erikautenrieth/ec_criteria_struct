@@ -1,102 +1,98 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Glaucoma,",
-      "Condition": [
-        "Glaucoma"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Ocular allergy",
-          "Condition": [
-            "Ocular allergy"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Autoimmune disease",
-              "Condition": [
-                "Autoimmune disease"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Contact lens-wear during study",
-                  "Observation": [
-                    "Contact lens-wear"
-                  ],
-                  "Temporal": [
-                    "during study"
-                  ]
-                },
-                "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "Current punctal plugging",
-                      "Temporal": [
-                        "Current"
-                      ],
-                      "Condition": [
-                        "punctal plugging"
-                      ]
-                    },
-                    "right": {
                       "AND": {
                         "left": {
-                          "OR": {
+                          "AND": {
                             "left": {
-                              "raw_text": "Pregnant",
+                              "raw_text": "Glaucoma,",
                               "Condition": [
-                                "Pregnant"
+                                "Glaucoma"
                               ]
                             },
                             "right": {
-                              "raw_text": "/lactating",
+                              "raw_text": "Ocular allergy",
                               "Condition": [
-                                "lactating"
+                                "Ocular allergy"
                               ]
                             }
                           }
                         },
                         "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Candidate for topical anti-inflammatory",
-                              "Mood": [
-                                "Candidate for"
-                              ],
-                              "Drug": [
-                                "topical anti-inflammatory"
-                              ]
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "Cicatricial meibomian gland dysfunction",
-                                  "Qualifier": [
-                                    "Cicatricial"
-                                  ],
-                                  "Condition": [
-                                    "meibomian gland dysfunction"
-                                  ]
-                                }
-                              }
-                            }
-                          }
+                          "raw_text": "Autoimmune disease",
+                          "Condition": [
+                            "Autoimmune disease"
+                          ]
                         }
                       }
+                    },
+                    "right": {
+                      "raw_text": "Contact lens-wear during study",
+                      "Observation": [
+                        "Contact lens-wear"
+                      ],
+                      "Temporal": [
+                        "during study"
+                      ]
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "Current punctal plugging",
+                  "Temporal": [
+                    "Current"
+                  ],
+                  "Condition": [
+                    "punctal plugging"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Pregnant",
+                  "Condition": [
+                    "Pregnant"
+                  ]
+                },
+                "right": {
+                  "raw_text": "/lactating",
+                  "Condition": [
+                    "lactating"
+                  ]
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "Candidate for topical anti-inflammatory",
+          "Mood": [
+            "Candidate for"
+          ],
+          "Drug": [
+            "topical anti-inflammatory"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Cicatricial meibomian gland dysfunction",
+      "Qualifier": [
+        "Cicatricial"
+      ],
+      "Condition": [
+        "meibomian gland dysfunction"
+      ]
     }
   }
 }

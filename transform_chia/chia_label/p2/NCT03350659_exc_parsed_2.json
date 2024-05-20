@@ -1,23 +1,27 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Drug-induced hypotension, if necessary, evaluate patient after discontinuing the causative drug for one month"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Heart failure"
-            },
-            "right": {
-              "raw_text": "or Chronic renal failure"
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Drug-induced hypotension, if necessary, evaluate patient after discontinuing the causative drug for one month"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Heart failure"
+                    },
+                    "right": {
+                      "raw_text": "or Chronic renal failure"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Severe supine hypertension (Systolic Blood Pressure"
@@ -26,31 +30,23 @@
                   "raw_text": ">180 or Diastolic Blood Pressure>110mmHg)"
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnant"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Pregnant"
-                    },
-                    "right": {
-                      "raw_text": "women, breast-feeding"
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Unable to perform questionnaire"
-                    }
-                  }
-                }
-              }
+              "raw_text": "women, breast-feeding"
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Unable to perform questionnaire"
     }
   }
 }

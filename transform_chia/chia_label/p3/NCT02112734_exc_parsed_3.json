@@ -1,20 +1,20 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Infants who have already received postnatal vitamin D supplementation",
-      "Person": [
-        "Infants"
-      ],
-      "Procedure": [
-        "postnatal vitamin D supplementation"
-      ],
-      "Drug": [
-        "vitamin D"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "Infants who have already received postnatal vitamin D supplementation",
+          "Person": [
+            "Infants"
+          ],
+          "Procedure": [
+            "postnatal vitamin D supplementation"
+          ],
+          "Drug": [
+            "vitamin D"
+          ]
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "prematurity",
@@ -35,40 +35,36 @@
               ]
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "poor health due to a current",
+          "Condition": [
+            "poor health"
+          ],
+          "Temporal": [
+            "current"
+          ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "poor health due to a current",
-                  "Condition": [
-                    "poor health"
-                  ],
-                  "Temporal": [
-                    "current"
-                  ]
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "or past significant disease state",
-                      "Temporal": [
-                        "past"
-                      ],
-                      "Condition": [
-                        "significant disease state"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "or congenital abnormality.",
-                      "Condition": [
-                        "congenital abnormality"
-                      ]
-                    }
-                  }
-                }
-              }
+              "raw_text": "or past significant disease state",
+              "Temporal": [
+                "past"
+              ],
+              "Condition": [
+                "significant disease state"
+              ]
+            },
+            "right": {
+              "raw_text": "or congenital abnormality.",
+              "Condition": [
+                "congenital abnormality"
+              ]
             }
           }
         }

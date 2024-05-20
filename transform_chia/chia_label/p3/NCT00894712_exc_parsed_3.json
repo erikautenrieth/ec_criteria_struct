@@ -1,47 +1,51 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Visible skin pathology",
-          "Condition": [
-            "skin pathology"
-          ]
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": ", excessive freckles",
-              "Condition": [
-                "freckles"
-              ],
-              "Qualifier": [
-                "excessive"
-              ]
-            },
-            "right": {
-              "raw_text": ", or skin blemishes in the test area.",
-              "Condition": [
-                "skin blemishes"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "History of skin disease or hypersensitivity and repeated contact allergies.",
-          "Condition": [
-            "skin disease",
-            "hypersensitivity",
-            "contact allergies"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Visible skin pathology",
+                      "Condition": [
+                        "skin pathology"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", excessive freckles",
+                          "Condition": [
+                            "freckles"
+                          ],
+                          "Qualifier": [
+                            "excessive"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": ", or skin blemishes in the test area.",
+                          "Condition": [
+                            "skin blemishes"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "History of skin disease or hypersensitivity and repeated contact allergies.",
+                  "Condition": [
+                    "skin disease",
+                    "hypersensitivity",
+                    "contact allergies"
+                  ]
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Sarcoma",
@@ -59,36 +63,28 @@
                   ]
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Metastatic disease to the breast.",
-                  "Condition": [
-                    "Metastatic disease"
-                  ],
-                  "Qualifier": [
-                    "to the breast"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Current tobacco use.",
-                      "Observation": [
-                        "tobacco use"
-                      ],
-                      "Temporal": [
-                        "Current"
-                      ]
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Metastatic disease to the breast.",
+          "Condition": [
+            "Metastatic disease"
+          ],
+          "Qualifier": [
+            "to the breast"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Current tobacco use.",
+      "Observation": [
+        "tobacco use"
+      ],
+      "Temporal": [
+        "Current"
+      ]
     }
   }
 }

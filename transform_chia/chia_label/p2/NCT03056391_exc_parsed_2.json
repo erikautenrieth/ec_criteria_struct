@@ -1,49 +1,45 @@
 {
   "AND": {
     "left": {
-      "raw_text": "1. Patient or relatives unable or unwilling to give informed consent"
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "2. Contraindication"
+              "raw_text": "1. Patient or relatives unable or unwilling to give informed consent"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "or allergy to paracetamol"
+                  "raw_text": "2. Contraindication"
                 },
                 "right": {
-                  "raw_text": "or artesunate therapy"
+                  "OR": {
+                    "left": {
+                      "raw_text": "or allergy to paracetamol"
+                    },
+                    "right": {
+                      "raw_text": "or artesunate therapy"
+                    }
+                  }
                 }
               }
             }
           }
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "3. Known cirrhosis"
-                },
-                "right": {
-                  "raw_text": ", or >6 standard alcoholic drinks/day"
-                }
-              }
+              "raw_text": "3. Known cirrhosis"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "4. Pregnancy"
-                }
-              }
+              "raw_text": ", or >6 standard alcoholic drinks/day"
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "4. Pregnancy"
     }
   }
 }

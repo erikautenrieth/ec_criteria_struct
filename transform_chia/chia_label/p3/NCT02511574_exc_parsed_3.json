@@ -1,53 +1,49 @@
 {
   "AND": {
     "left": {
-      "NOT": {
+      "AND": {
         "left": {
-          "raw_text": "no confirmation of the gestational age",
-          "Negation": [
-            "no"
-          ],
-          "Measurement": [
-            "gestational age"
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "no confirmation of the gestational age",
+                  "Negation": [
+                    "no"
+                  ],
+                  "Measurement": [
+                    "gestational age"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "ruptured membranes",
+              "Condition": [
+                "ruptured membranes"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "painful regular uterine contractions",
+          "Condition": [
+            "painful regular uterine contractions"
           ]
         }
       }
     },
     "right": {
-      "AND": {
-        "left": {
-          "raw_text": "ruptured membranes",
-          "Condition": [
-            "ruptured membranes"
-          ]
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "painful regular uterine contractions",
-              "Condition": [
-                "painful regular uterine contractions"
-              ]
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "major fetal abnormalities",
-                  "Negation": [
-                    "no"
-                  ],
-                  "Qualifier": [
-                    "major"
-                  ],
-                  "Condition": [
-                    "fetal abnormalities"
-                  ]
-                }
-              }
-            }
-          }
-        }
-      }
+      "raw_text": "major fetal abnormalities",
+      "Negation": [
+        "no"
+      ],
+      "Qualifier": [
+        "major"
+      ],
+      "Condition": [
+        "fetal abnormalities"
+      ]
     }
   }
 }

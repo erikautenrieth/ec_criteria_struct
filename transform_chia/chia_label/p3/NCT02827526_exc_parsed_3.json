@@ -1,117 +1,113 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Preoperative renal failure (defined as a serum creatinine > 2.0 mg/dL.)",
-      "Temporal": [
-        "Preoperative"
-      ],
-      "Condition": [
-        "renal failure"
-      ],
-      "Measurement": [
-        "serum creatinine"
-      ],
-      "Value": [
-        "> 2.0 mg/dL"
-      ],
-      "Scope": [
-        "serum creatinine > 2.0 mg/dL"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "American Society of Anesthesiologists Physical Status IV or V",
-          "Measurement": [
-            "American Society of Anesthesiologists Physical Status"
-          ],
-          "Value": [
-            "IV or V"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Pulmonary disease necessitating home oxygen therapy",
-              "Condition": [
-                "Pulmonary disease"
-              ],
-              "Procedure": [
-                "home oxygen therapy"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Preoperative renal failure (defined as a serum creatinine > 2.0 mg/dL.)",
+                          "Temporal": [
+                            "Preoperative"
+                          ],
+                          "Condition": [
+                            "renal failure"
+                          ],
+                          "Measurement": [
+                            "serum creatinine"
+                          ],
+                          "Value": [
+                            "> 2.0 mg/dL"
+                          ],
+                          "Scope": [
+                            "serum creatinine > 2.0 mg/dL"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "American Society of Anesthesiologists Physical Status IV or V",
+                          "Measurement": [
+                            "American Society of Anesthesiologists Physical Status"
+                          ],
+                          "Value": [
+                            "IV or V"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Pulmonary disease necessitating home oxygen therapy",
+                      "Condition": [
+                        "Pulmonary disease"
+                      ],
+                      "Procedure": [
+                        "home oxygen therapy"
+                      ]
+                    }
+                  }
+                },
+                "right": {
                   "raw_text": "Allergy to methadone, hydromorphone, or ketamine",
                   "Drug": [
                     "methadone",
                     "hydromorphone",
                     "ketamine"
                   ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Preoperative recent history of opioid",
-                          "Temporal": [
-                            "Preoperative",
-                            "recent"
-                          ],
-                          "Observation": [
-                            "history"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or alcohol abuse",
-                          "Condition": [
-                            "alcohol abuse"
-                          ]
-                        }
-                      }
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "Significant liver disease",
-                          "Qualifier": [
-                            "Significant"
-                          ],
-                          "Condition": [
-                            "liver disease"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Inability to"
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "use"
-                                    },
-                                    "right": {
-                                      "raw_text": "a PCA device or speak the English language",
-                                      "Device": [
-                                        "PCA device"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
                 }
               }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Preoperative recent history of opioid",
+                  "Temporal": [
+                    "Preoperative",
+                    "recent"
+                  ],
+                  "Observation": [
+                    "history"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or alcohol abuse",
+                  "Condition": [
+                    "alcohol abuse"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Significant liver disease",
+          "Qualifier": [
+            "Significant"
+          ],
+          "Condition": [
+            "liver disease"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Inability to"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "use"
+            },
+            "right": {
+              "raw_text": "a PCA device or speak the English language",
+              "Device": [
+                "PCA device"
+              ]
             }
           }
         }

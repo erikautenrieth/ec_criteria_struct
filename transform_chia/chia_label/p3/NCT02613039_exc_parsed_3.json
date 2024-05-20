@@ -1,48 +1,52 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Participation in another clinical trial.",
-      "Non-query-able": [
-        "Participation in another clinical trial."
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Known",
-              "Mood": [
-                "Known"
-              ]
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "or suspected (or history of) malignancy",
-                  "Mood": [
-                    "suspected"
-                  ],
-                  "Condition": [
-                    "malignancy"
-                  ],
-                  "Observation": [
-                    "history of"
+                  "raw_text": "Participation in another clinical trial.",
+                  "Non-query-able": [
+                    "Participation in another clinical trial."
                   ]
                 },
                 "right": {
-                  "raw_text": "or chronic illness.",
-                  "Condition": [
-                    "chronic illness"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "Known",
+                      "Mood": [
+                        "Known"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or suspected (or history of) malignancy",
+                          "Mood": [
+                            "suspected"
+                          ],
+                          "Condition": [
+                            "malignancy"
+                          ],
+                          "Observation": [
+                            "history of"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or chronic illness.",
+                          "Condition": [
+                            "chronic illness"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Serious organic"
@@ -97,30 +101,22 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Conditions that may affect the compliance to the study.",
-                  "Post-eligibility": [
-                    "Conditions that may affect the compliance to the study."
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Contraindications to therapy with the study drug or hypersensitivity to the study drug (active ingredient or excipients of the formulation).",
-                      "Post-eligibility": [
-                        "Contraindications to therapy with the study drug or hypersensitivity to the study drug (active ingredient or excipients of the formulation)."
-                      ]
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Conditions that may affect the compliance to the study.",
+          "Post-eligibility": [
+            "Conditions that may affect the compliance to the study."
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Contraindications to therapy with the study drug or hypersensitivity to the study drug (active ingredient or excipients of the formulation).",
+      "Post-eligibility": [
+        "Contraindications to therapy with the study drug or hypersensitivity to the study drug (active ingredient or excipients of the formulation)."
+      ]
     }
   }
 }

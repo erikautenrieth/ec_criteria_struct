@@ -1,20 +1,20 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Medical history of chronic psychiatric disease",
-      "Observation": [
-        "history"
-      ],
-      "Condition": [
-        "chronic psychiatric disease"
-      ],
-      "Qualifier": [
-        "chronic"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "Medical history of chronic psychiatric disease",
+          "Observation": [
+            "history"
+          ],
+          "Condition": [
+            "chronic psychiatric disease"
+          ],
+          "Qualifier": [
+            "chronic"
+          ]
+        },
+        "right": {
           "OR": {
             "left": {
               "raw_text": "Medical conditions associated with female sexual dysfunction; cardiovascular disease",
@@ -109,77 +109,73 @@
               }
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Medications associated with female sexual dysfunction; Antidepressants",
+          "Condition": [
+            "female sexual dysfunction"
+          ],
+          "Qualifier": [
+            "associated with female sexual dysfunction"
+          ],
+          "Drug": [
+            "Medications",
+            "Antidepressants"
+          ],
+          "Scope": [
+            "Medications associated with female sexual dysfunction"
+          ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
+              "raw_text": "opiates",
+              "Drug": [
+                "opiates"
+              ]
+            },
+            "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Medications associated with female sexual dysfunction; Antidepressants",
-                  "Condition": [
-                    "female sexual dysfunction"
-                  ],
-                  "Qualifier": [
-                    "associated with female sexual dysfunction"
-                  ],
+                  "raw_text": ", beta blockers",
                   "Drug": [
-                    "Medications",
-                    "Antidepressants"
-                  ],
-                  "Scope": [
-                    "Medications associated with female sexual dysfunction"
+                    "beta blockers"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "opiates",
+                      "raw_text": ", Antiepileptics",
                       "Drug": [
-                        "opiates"
+                        "Antiepileptics"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", beta blockers",
+                          "raw_text": "( gabapentin",
                           "Drug": [
-                            "beta blockers"
+                            "gabapentin"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", Antiepileptics",
+                              "raw_text": ", topiramate",
                               "Drug": [
-                                "Antiepileptics"
+                                "topiramate"
                               ]
                             },
                             "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "( gabapentin",
-                                  "Drug": [
-                                    "gabapentin"
-                                  ]
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", topiramate",
-                                      "Drug": [
-                                        "topiramate"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": ",phenytoin) benzodiazepines",
-                                      "Drug": [
-                                        "phenytoin",
-                                        "benzodiazepines"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
+                              "raw_text": ",phenytoin) benzodiazepines",
+                              "Drug": [
+                                "phenytoin",
+                                "benzodiazepines"
+                              ]
                             }
                           }
                         }

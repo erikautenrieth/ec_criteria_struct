@@ -1,50 +1,62 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Metastatic tumor",
-      "Condition": [
-        "tumor"
-      ],
-      "Qualifier": [
-        "Metastatic"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "Locally unresectable tumor",
-          "Condition": [
-            "tumor"
-          ],
-          "Qualifier": [
-            "Locally unresectable"
-          ]
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Previous gastric resection",
-              "Temporal": [
-                "Previous"
-              ],
-              "Procedure": [
-                "gastric resection"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "ASA IV-V",
-                  "Measurement": [
-                    "ASA"
-                  ],
-                  "Value": [
-                    "IV-V"
-                  ]
-                },
-                "right": {
                   "AND": {
                     "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "Metastatic tumor",
+                                  "Condition": [
+                                    "tumor"
+                                  ],
+                                  "Qualifier": [
+                                    "Metastatic"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "Locally unresectable tumor",
+                                  "Condition": [
+                                    "tumor"
+                                  ],
+                                  "Qualifier": [
+                                    "Locally unresectable"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "Previous gastric resection",
+                              "Temporal": [
+                                "Previous"
+                              ],
+                              "Procedure": [
+                                "gastric resection"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "ASA IV-V",
+                          "Measurement": [
+                            "ASA"
+                          ],
+                          "Value": [
+                            "IV-V"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
                       "raw_text": "Age under 18 years",
                       "Person": [
                         "Age"
@@ -52,71 +64,55 @@
                       "Value": [
                         "under 18 years"
                       ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Preoperative complete parenteral",
+                      "Temporal": [
+                        "Preoperative"
+                      ]
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Preoperative complete parenteral",
-                              "Temporal": [
-                                "Preoperative"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "or enteral feeding"
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Immunosuppressive therapy before operation",
-                              "Procedure": [
-                                "Immunosuppressive therapy",
-                                "operation"
-                              ],
-                              "Temporal": [
-                                "before operation"
-                              ],
-                              "Reference_point": [
-                                "operation"
-                              ]
-                            },
-                            "right": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "Severe malnutrition",
-                                  "Qualifier": [
-                                    "Severe"
-                                  ],
-                                  "Condition": [
-                                    "malnutrition"
-                                  ]
-                                },
-                                "right": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Lack of the patient's consent for the trial participation, feeding tube insertion or epidural analgesia",
-                                      "Informed_consent": [
-                                        "Lack of the patient's consent for the trial participation, feeding tube insertion or epidural analgesia"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "or enteral feeding"
                     }
                   }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Immunosuppressive therapy before operation",
+              "Procedure": [
+                "Immunosuppressive therapy",
+                "operation"
+              ],
+              "Temporal": [
+                "before operation"
+              ],
+              "Reference_point": [
+                "operation"
+              ]
             }
           }
+        },
+        "right": {
+          "raw_text": "Severe malnutrition",
+          "Qualifier": [
+            "Severe"
+          ],
+          "Condition": [
+            "malnutrition"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Lack of the patient's consent for the trial participation, feeding tube insertion or epidural analgesia",
+      "Informed_consent": [
+        "Lack of the patient's consent for the trial participation, feeding tube insertion or epidural analgesia"
+      ]
     }
   }
 }

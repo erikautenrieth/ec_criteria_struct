@@ -1,25 +1,21 @@
 {
-  "AND": {
+  "OR": {
     "left": {
-      "OR": {
+      "raw_text": "Patients who were pregnant",
+      "Condition": [
+        "pregnant"
+      ]
+    },
+    "right": {
+      "NOT": {
         "left": {
-          "raw_text": "Patients who were pregnant",
-          "Condition": [
-            "pregnant"
+          "raw_text": "not able to give written informed consent were excluded.",
+          "Observation": [
+            "able to give written informed consent"
+          ],
+          "Negation": [
+            "not"
           ]
-        },
-        "right": {
-          "NOT": {
-            "left": {
-              "raw_text": "not able to give written informed consent were excluded.",
-              "Observation": [
-                "able to give written informed consent"
-              ],
-              "Negation": [
-                "not"
-              ]
-            }
-          }
         }
       }
     }

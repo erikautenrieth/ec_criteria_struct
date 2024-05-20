@@ -3,28 +3,28 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "History of intolerance",
-          "Condition": [
-            "intolerance"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "History of intolerance",
+              "Condition": [
+                "intolerance"
+              ]
+            },
+            "right": {
+              "raw_text": "to LMWHs during HD",
+              "Drug": [
+                "LMWHs"
+              ],
+              "Procedure": [
+                "HD"
+              ],
+              "Temporal": [
+                "during HD"
+              ]
+            }
+          }
         },
         "right": {
-          "raw_text": "to LMWHs during HD",
-          "Drug": [
-            "LMWHs"
-          ],
-          "Procedure": [
-            "HD"
-          ],
-          "Temporal": [
-            "during HD"
-          ]
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
           "OR": {
             "left": {
               "raw_text": "Receiving warfarin",
@@ -42,18 +42,14 @@
               ]
             }
           }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "Pregnant patients",
-              "Condition": [
-                "Pregnant"
-              ]
-            }
-          }
         }
       }
+    },
+    "right": {
+      "raw_text": "Pregnant patients",
+      "Condition": [
+        "Pregnant"
+      ]
     }
   }
 }

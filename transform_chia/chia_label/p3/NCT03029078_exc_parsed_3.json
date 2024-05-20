@@ -1,86 +1,82 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Pregnant",
-          "Condition": [
-            "Pregnant"
-          ]
-        },
-        "right": {
-          "raw_text": "woman or breastfeeding",
-          "Person": [
-            "woman"
-          ],
-          "Observation": [
-            "breastfeeding"
-          ]
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "immunosuppression including AIDS",
-              "Condition": [
-                "immunosuppression",
-                "AIDS"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "Pregnant",
+                  "Condition": [
+                    "Pregnant"
+                  ]
+                },
+                "right": {
+                  "raw_text": "woman or breastfeeding",
+                  "Person": [
+                    "woman"
+                  ],
+                  "Observation": [
+                    "breastfeeding"
+                  ]
+                }
+              }
             },
             "right": {
-              "raw_text": ", corticosteroids over 60mg/day",
-              "Drug": [
-                "corticosteroids"
-              ],
-              "Multiplier": [
-                "over 60mg/day"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "immunosuppression including AIDS",
+                  "Condition": [
+                    "immunosuppression",
+                    "AIDS"
+                  ]
+                },
+                "right": {
+                  "raw_text": ", corticosteroids over 60mg/day",
+                  "Drug": [
+                    "corticosteroids"
+                  ],
+                  "Multiplier": [
+                    "over 60mg/day"
+                  ]
+                }
+              }
             }
           }
         },
         "right": {
           "AND": {
             "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "ongoing antibiotic",
-                  "Drug": [
-                    "antibiotic"
-                  ]
-                },
-                "right": {
-                  "raw_text": "treatment at the day of inclusion",
-                  "Procedure": [
-                    "treatment"
-                  ],
-                  "Temporal": [
-                    "at the day of inclusion"
-                  ],
-                  "Reference_point": [
-                    "day of inclusion"
-                  ]
-                }
-              }
+              "raw_text": "ongoing antibiotic",
+              "Drug": [
+                "antibiotic"
+              ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "impossibility to obtain a signed consent form.",
-                  "Observation": [
-                    "signed consent form"
-                  ],
-                  "Condition": [
-                    "impossibility to obtain"
-                  ]
-                }
-              }
+              "raw_text": "treatment at the day of inclusion",
+              "Procedure": [
+                "treatment"
+              ],
+              "Temporal": [
+                "at the day of inclusion"
+              ],
+              "Reference_point": [
+                "day of inclusion"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "impossibility to obtain a signed consent form.",
+      "Observation": [
+        "signed consent form"
+      ],
+      "Condition": [
+        "impossibility to obtain"
+      ]
     }
   }
 }

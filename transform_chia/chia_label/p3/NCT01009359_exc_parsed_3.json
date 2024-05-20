@@ -1,53 +1,62 @@
 {
-  "AND": {
+  "OR": {
     "left": {
+      "raw_text": "Current unstable medical condition (e.g. unstable angina",
+      "Condition": [
+        "unstable medical condition",
+        "unstable angina"
+      ],
+      "Qualifier": [
+        "unstable"
+      ],
+      "Temporal": [
+        "Current"
+      ]
+    },
+    "right": {
       "OR": {
         "left": {
-          "raw_text": "Current unstable medical condition (e.g. unstable angina",
+          "raw_text": ", myocardial infarction",
           "Condition": [
-            "unstable medical condition",
-            "unstable angina"
-          ],
-          "Qualifier": [
-            "unstable"
-          ],
-          "Temporal": [
-            "Current"
+            "myocardial infarction"
           ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": ", myocardial infarction",
-              "Condition": [
-                "myocardial infarction"
+              "raw_text": "or coronary revascularization",
+              "Procedure": [
+                "coronary revascularization"
               ]
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "or coronary revascularization",
-                  "Procedure": [
-                    "coronary revascularization"
+                  "raw_text": "in the preceding 12 months, cardiac failure",
+                  "Temporal": [
+                    "in the preceding 12 months"
+                  ],
+                  "Condition": [
+                    "cardiac failure"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "in the preceding 12 months, cardiac failure",
-                      "Temporal": [
-                        "in the preceding 12 months"
-                      ],
+                      "raw_text": ", chronic renal failure",
                       "Condition": [
-                        "cardiac failure"
+                        "chronic renal failure"
+                      ],
+                      "Qualifier": [
+                        "chronic"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", chronic renal failure",
+                          "raw_text": ", chronic hepatic disease",
                           "Condition": [
-                            "chronic renal failure"
+                            "chronic hepatic disease"
                           ],
                           "Qualifier": [
                             "chronic"
@@ -56,59 +65,46 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", chronic hepatic disease",
+                              "raw_text": ", severe pulmonary disease",
                               "Condition": [
-                                "chronic hepatic disease"
+                                "pulmonary disease"
                               ],
                               "Qualifier": [
-                                "chronic"
+                                "severe"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": ", severe pulmonary disease",
+                                  "raw_text": ", blood disorders",
                                   "Condition": [
-                                    "pulmonary disease"
-                                  ],
-                                  "Qualifier": [
-                                    "severe"
+                                    "blood disorders"
                                   ]
                                 },
                                 "right": {
-                                  "OR": {
+                                  "NOT": {
                                     "left": {
-                                      "raw_text": ", blood disorders",
-                                      "Condition": [
-                                        "blood disorders"
-                                      ]
-                                    },
-                                    "right": {
-                                      "NOT": {
+                                      "OR": {
                                         "left": {
-                                          "OR": {
-                                            "left": {
-                                              "raw_text": "poorly controlled diabetes",
-                                              "Condition": [
-                                                "diabetes"
-                                              ],
-                                              "Qualifier": [
-                                                "controlled"
-                                              ],
-                                              "Negation": [
-                                                "poorly"
-                                              ]
-                                            },
-                                            "right": {
-                                              "raw_text": ", chronic infection)",
-                                              "Condition": [
-                                                "chronic infection"
-                                              ],
-                                              "Qualifier": [
-                                                "chronic"
-                                              ]
-                                            }
-                                          }
+                                          "raw_text": "poorly controlled diabetes",
+                                          "Condition": [
+                                            "diabetes"
+                                          ],
+                                          "Qualifier": [
+                                            "controlled"
+                                          ],
+                                          "Negation": [
+                                            "poorly"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": ", chronic infection)",
+                                          "Condition": [
+                                            "chronic infection"
+                                          ],
+                                          "Qualifier": [
+                                            "chronic"
+                                          ]
                                         }
                                       }
                                     }

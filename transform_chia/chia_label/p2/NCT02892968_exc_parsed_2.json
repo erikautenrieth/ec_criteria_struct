@@ -1,21 +1,29 @@
 {
   "AND": {
     "left": {
-      "raw_text": "ED physicians who work casually (less than 0.25 Full Time Equivalent)"
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "ED Physicians who are routinely using U/S guided RA for hip fracture patients, or decline participation in the trial."
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "Patients' age less than 65 years;"
-            },
-            "right": {
               "AND": {
                 "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "ED physicians who work casually (less than 0.25 Full Time Equivalent)"
+                        },
+                        "right": {
+                          "raw_text": "ED Physicians who are routinely using U/S guided RA for hip fracture patients, or decline participation in the trial."
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Patients' age less than 65 years;"
+                    }
+                  }
+                },
+                "right": {
                   "OR": {
                     "left": {
                       "raw_text": "Patients who are delirious"
@@ -24,70 +32,58 @@
                       "raw_text": "on initial assessment by ED physician or severe dementia"
                     }
                   }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Patients with communication problems (critically ill"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Patients with communication problems (critically ill"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", unconscious"
-                            },
-                            "right": {
-                              "raw_text": ", language barrier despite use of secure telephone-based translation service)"
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": ", unconscious"
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Patients with allergies"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "to narcotics or local anesthetic; or anticoagulant use (e.g. warfarin"
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": ", dabigatran"
-                                    },
-                                    "right": {
-                                      "raw_text": ", rivaroxaban)."
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "NOT": {
-                                "left": {
-                                  "raw_text": "not requiring surgery (e.g. greater trochanter avulsion) will also be excluded."
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": ", language barrier despite use of secure telephone-based translation service)"
                     }
                   }
                 }
               }
             }
           }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Patients with allergies"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "to narcotics or local anesthetic; or anticoagulant use (e.g. warfarin"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", dabigatran"
+                    },
+                    "right": {
+                      "raw_text": ", rivaroxaban)."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "not requiring surgery (e.g. greater trochanter avulsion) will also be excluded."
         }
       }
     }

@@ -1,35 +1,39 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Age < 45 or > 55 years.",
-      "Person": [
-        "Age"
-      ],
-      "Value": [
-        "< 45 or > 55 years"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Blood disorders",
-              "Condition": [
-                "Blood disorders"
-              ]
-            },
-            "right": {
-              "raw_text": "or coagulopathy.",
-              "Condition": [
-                "coagulopathy"
-              ]
-            }
-          }
-        },
-        "right": {
           "AND": {
             "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Age < 45 or > 55 years.",
+                  "Person": [
+                    "Age"
+                  ],
+                  "Value": [
+                    "< 45 or > 55 years"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Blood disorders",
+                      "Condition": [
+                        "Blood disorders"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or coagulopathy.",
+                      "Condition": [
+                        "coagulopathy"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "Diagnosed",
@@ -88,34 +92,26 @@
                   }
                 }
               }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Use intrauterine contraceptive device.",
-                  "Device": [
-                    "intrauterine contraceptive device"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Pregnancy related conditions.",
-                      "Condition": [
-                        "Pregnancy",
-                        "conditions"
-                      ],
-                      "Qualifier": [
-                        "Pregnancy related"
-                      ]
-                    }
-                  }
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "Use intrauterine contraceptive device.",
+          "Device": [
+            "intrauterine contraceptive device"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "Pregnancy related conditions.",
+      "Condition": [
+        "Pregnancy",
+        "conditions"
+      ],
+      "Qualifier": [
+        "Pregnancy related"
+      ]
     }
   }
 }
