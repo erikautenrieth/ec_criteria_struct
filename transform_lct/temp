@@ -1,0 +1,63 @@
+digraph {
+	0 [label=AND color=lightblue fillcolor=lightblue fontcolor=black style=filled]
+	1 [label=AND color=lightblue fillcolor=lightblue fontcolor=black style=filled]
+	0 -> 1
+	2 [label=AND color=lightblue fillcolor=lightblue fontcolor=black style=filled]
+	1 -> 2
+	3 [label="18 years of age or older" shape=box]
+	2 -> 3
+	4 [label="diagnosis of idiopathic Parkinson's Disease, mild to moderate (Hoehn and Yahr score less than or equal to 3)" shape=box]
+	2 -> 4
+	6 [label=AND color=lightblue fillcolor=lightblue fontcolor=black style=filled]
+	1 -> 6
+	7 [label="speaks English" shape=box]
+	6 -> 7
+	8 [label="able to ambulate without requiring an assistive device" shape=box]
+	6 -> 8
+	11 [label=OR color=lightgreen fillcolor=lightgreen fontcolor=black style=filled]
+	0 -> 11
+	12 [label=OR color=lightgreen fillcolor=lightgreen fontcolor=black style=filled]
+	11 -> 12
+	13 [label=OR color=lightgreen fillcolor=lightgreen fontcolor=black style=filled]
+	12 -> 13
+	14 [label=OR color=lightgreen fillcolor=lightgreen fontcolor=black style=filled]
+	13 -> 14
+	15 [label=OR color=lightgreen fillcolor=lightgreen fontcolor=black style=filled]
+	14 -> 15
+	16 [label=OR color=lightgreen fillcolor=lightgreen fontcolor=black style=filled]
+	15 -> 16
+	17 [label=AND color=lightblue fillcolor=lightblue fontcolor=black style=filled]
+	16 -> 17
+	18 [label="neurological disease diagnosis other than PD" shape=box]
+	17 -> 18
+	19 [label="uncontrolled cardiovascular," shape=box]
+	17 -> 19
+	21 [label="pulmonary," shape=box]
+	16 -> 21
+	23 [label="neurological," shape=box]
+	15 -> 23
+	25 [label="or metabolic disease which may impact the ability to exercise" shape=box]
+	14 -> 25
+	27 [label=AND color=lightblue fillcolor=lightblue fontcolor=black style=filled]
+	13 -> 27
+	28 [label="or in which exercise is contraindicated" shape=box]
+	27 -> 28
+	29 [label="any medications, such as beta-blockers, that may alter HR" shape=box]
+	27 -> 29
+	32 [label=AND color=lightblue fillcolor=lightblue fontcolor=black style=filled]
+	12 -> 32
+	33 [label="or metabolic data" shape=box]
+	32 -> 33
+	34 [label=cognitive shape=box]
+	32 -> 34
+	37 [label=AND color=lightblue fillcolor=lightblue fontcolor=black style=filled]
+	11 -> 37
+	38 [label="or psychiatric impairment precluding informed consent or ability to following instructions" shape=box]
+	37 -> 38
+	39 [label=AND color=lightblue fillcolor=lightblue fontcolor=black style=filled]
+	37 -> 39
+	40 [label="mini-Mental State Examination score <24" shape=box]
+	39 -> 40
+	41 [label=pregnancy shape=box]
+	39 -> 41
+}
