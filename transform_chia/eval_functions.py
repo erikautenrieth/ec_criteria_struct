@@ -62,8 +62,13 @@ def extract_raw_texts(data):
     traverse(data)
     return raw_texts
 
-def extract_words(raw_texts):
+def clean_text(text):
+    # Entferne alle Sonderzeichen und Zahlen, behalte nur Buchstaben und Leerzeichen
+    return re.sub(r'[^a-zA-Z\s]', '', text)
+
+def extract_words(text_set):
     words = set()
-    for text in raw_texts:
-        words.update(text.split())
+    for text in text_set:
+        clean_words = clean_text(text).split()
+        words.update(clean_words)
     return words
