@@ -16,8 +16,8 @@ output_path = f"{transform_chia}/model_output/{model_name}_{n_shot}_shot/output/
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
-anfang = 0 
-ende = 300
+anfang = n_shot 
+ende = 300 + n_shot
 study_files = os.listdir(study_path)[anfang:ende]  
 
 
