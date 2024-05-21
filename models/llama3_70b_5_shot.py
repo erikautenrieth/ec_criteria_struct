@@ -5,10 +5,10 @@ transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 
 # Model
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct_prompt"
 
 # N Shots
-n_shot = 7 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
@@ -16,7 +16,7 @@ output_path = f"{transform_chia}/model_output/{model_name}_{n_shot}_shot/output/
 os.makedirs(output_path, exist_ok=True)
 # Load Prediction Files
 anfang = n_shot 
-ende = 307
+ende = 305
 study_files = os.listdir(study_path)[anfang:ende]  
 
 

@@ -6,7 +6,7 @@ transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 
 # Model
 model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
-model_name = "Llama-3-8B-Instruct"
+model_name = "Llama-3-8B-Instruct_temp"
 # N Shots
 n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
 temp = 1
