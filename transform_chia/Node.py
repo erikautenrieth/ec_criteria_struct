@@ -22,7 +22,7 @@ class Node:
 
 def parse_text(text):
     if not text:
-        return Node(criteria="empty set")
+        return None
 
     pattern = r'\[AND\]|\[OR\]|\[NOT\]'
     matches = list(re.finditer(pattern, text))
@@ -34,11 +34,18 @@ def parse_text(text):
         node = Node(operator=operator)
         if operator == 'NOT':
             if before:
-                node.criteria = before  # Speichern des Textes vor dem NOT Operator
-            node.left = parse_text(after) if after else Node(criteria="empty set")
+                before_node = Node(criteria=before)
+                not_node = Node(operator='NOT')
+                not_node.left = parse_text(after) if after else None
+                combined_node = Node(operator='AND')
+                combined_node.left = before_node
+                combined_node.right = not_node
+                return combined_node
+            else:
+                node.left = parse_text(after) if after else None
         else:
-            node.left = parse_text(before) if before else Node(criteria="empty set")
-            node.right = parse_text(after) if after else Node(criteria="empty set")
+            node.left = parse_text(before) if before else None
+            node.right = parse_text(after) if after else None
         return node
     else:
         return Node(criteria=text)
@@ -51,7 +58,7 @@ def build_tree(data):
     if not keys:
         return Node(criteria="empty set")
 
-    nodes = [parse_text(data[key]) for key in keys]
+    nodes = [parse_text(data[key]) for key in keys if parse_text(data[key])]
 
     if len(nodes) == 1:
         return nodes[0]

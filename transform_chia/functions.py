@@ -108,7 +108,7 @@ def remove_last_elements(data):
 
 
 
-def criteria_to_json(text, output_file:str, type):
+def save_criteria_to_json(text, output_file:str, type):
     sentences = text.strip().split('\n')
     sentences = [sentence.strip() for sentence in sentences if sentence.strip()]
     data = {f"{type}{i+1}": sentence for i, sentence in enumerate(sentences)}
