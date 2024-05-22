@@ -11,7 +11,8 @@ def find_folders_with_output(directory):
     folders_with_output = []
     for root, dirs, files in os.walk(directory):
         if 'output' in dirs:
-            folders_with_output.append(root.split('\\')[1])
+            print(root)
+            folders_with_output.append(root.split('\\')[1]) # Linux: /
             dirs.remove('output')
     return folders_with_output
 
