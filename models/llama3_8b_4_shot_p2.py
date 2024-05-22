@@ -1,7 +1,8 @@
 import os
 import transformers
 from helper_functions import *
-# Path
+
+batch_path = "batch1"
 transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 
 # Model
@@ -12,7 +13,7 @@ n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
-output_path = f"{transform_chia}/model_output/{model_name}_{n_shot}_shot/output/"
+output_path = f"{transform_chia}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
