@@ -1,71 +1,96 @@
 {
-  "OR": {
+  "AND": {
     "left": {
-      "AND": {
+      "OR": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "For subjects in Cohort A:"
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "previous therapy for more than 48 hours"
+                  "raw_text": "For subjects in Cohort A: previous therapy"
                 },
                 "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "with any parenteral antibiotic"
+                      "raw_text": "for more than 48 hours"
                     },
                     "right": {
-                      "raw_text": "with activity against S. aureus"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "right": {
-            "raw_text": "within 72 hours of positive blood culture results."
-          }
-        }
-      },
-      "right": {
-        "OR": {
-          "left": {
-            "AND": {
-              "left": {
-                "raw_text": "For subjects in Cohort B:"
-              },
-              "right": {
-                "AND": {
-                  "left": {
-                    "raw_text": "previous therapy for more than 48 hours"
-                  },
-                  "right": {
-                    "AND": {
-                      "left": {
-                        "raw_text": "with any parenteral antibiotic"
-                      },
-                      "right": {
-                        "raw_text": "with activity against MRSA"
+                      "AND": {
+                        "left": {
+                          "raw_text": "with any parenteral antibiotic"
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "with activity against S. aureus"
+                            },
+                            "right": {
+                              "raw_text": "within 72 hours of positive blood culture results."
+                            }
+                          }
+                        }
                       }
                     }
                   }
                 }
+              },
+              "right": {
+                "raw_text": "1."
               }
             },
             "right": {
-              "NOT": {
+              "OR": {
                 "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "vancomycin"
+                      "AND": {
+                        "left": {
+                          "raw_text": "For subjects in Cohort B: previous therapy"
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "for more than 48 hours"
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "with any parenteral antibiotic"
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "with activity against MRSA"
+                                    },
+                                    "right": {
+                                      "NOT": {
+                                        "left": {
+                                          "OR": {
+                                            "left": {
+                                              "raw_text": "except vancomycin"
+                                            },
+                                            "right": {
+                                              "raw_text": "and/or daptomycin"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
                     },
                     "right": {
-                      "raw_text": "and/or daptomycin"
+                      "raw_text": "within 72 hours of positive blood culture results confirming persistence."
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "2."
                 }
               }
             }
@@ -74,17 +99,46 @@
       }
     },
     "right": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Previous episode of S. aureus bacteremia within 3 months."
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": "Known left-sided endocarditis"
+              "raw_text": "3."
             },
             "right": {
-              "raw_text": "or prosthetic heart valve."
+              "OR": {
+                "left": {
+                  "raw_text": "4."
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "5."
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "6."
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "7."
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "8."
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }

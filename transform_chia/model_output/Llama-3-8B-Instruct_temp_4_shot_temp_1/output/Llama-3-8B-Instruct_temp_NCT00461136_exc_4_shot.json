@@ -1,38 +1,38 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "Severe Hypertension Grade 3 WHO classification"
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Mean Sitting Diastolic Blood Pressure (MSDBP)"
+                  "raw_text": "Severe Hypertension Grade 3 WHO classification"
                 },
                 "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "110 mmHg"
+                      "raw_text": "(Mean Sitting Diastolic Blood Pressure (MSDBP)"
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "and/or"
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Mean Sitting Systolic Blood Pressure"
-                            },
-                            "right": {
-                              "raw_text": "MSSBP 180 mmHg"
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "110 mmHg"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "and/or"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Mean Sitting Systolic Blood Pressure MSSBP"
+                    },
+                    "right": {
+                      "raw_text": "180 mmHg"
                     }
                   }
                 }
@@ -43,10 +43,24 @@
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Acetylsalicyclic acid (ASA) treatment >1g/day"
+              "AND": {
+                "left": {
+                  "raw_text": "Acetylsalicyclic acid (ASA) treatment"
+                },
+                "right": {
+                  "raw_text": ">1g/day"
+                }
+              }
             },
             "right": {
-              "raw_text": "or regular use of Non steroidal anti-inflammatory drug (NSAIDs)"
+              "OR": {
+                "left": {
+                  "raw_text": "or"
+                },
+                "right": {
+                  "raw_text": "regular use of Non steroidal anti-inflammatory drug (NSAIDs)"
+                }
+              }
             }
           }
         }
@@ -55,43 +69,50 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "Kidney disease not caused by diabetes or hypertension"
-        },
-        "right": {
           "OR": {
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Serum potassium"
+                  "raw_text": "Kidney disease"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "< 3.5"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "or > 5.1"
-                        },
-                        "right": {
-                          "raw_text": "mEq/L"
-                        }
-                      }
-                    }
+                  "raw_text": "not caused by diabetes or hypertension"
+                }
+              }
+            }
+          },
+          "right": {
+            "OR": {
+              "left": {
+                "AND": {
+                  "left": {
+                    "raw_text": "Serum potassium"
+                  },
+                  "right": {
+                    "raw_text": "< 3.5"
+                  }
+                }
+              },
+              "right": {
+                "OR": {
+                  "left": {
+                    "raw_text": "or"
+                  },
+                  "right": {
+                    "raw_text": "> 5.1 mEq/L"
                   }
                 }
               }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "GFR"
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "GFR < 40 ml/min/1.73m2"
-                },
-                "right": {
-                  "raw_text": "as measured by the MDRD formula"
-                }
-              }
+              "raw_text": "< 40 ml/min/1.73m2"
             }
           }
         }

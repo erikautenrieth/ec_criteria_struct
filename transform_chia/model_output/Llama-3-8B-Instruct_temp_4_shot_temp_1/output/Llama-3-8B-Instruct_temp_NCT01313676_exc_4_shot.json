@@ -1,78 +1,87 @@
+Here is the JSON format for the given criteria:
+
+```
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Pregnancy: Women who are pregnant or lactating."
+          "OR": {
+            "left": {
+              "raw_text": "Pregnancy: Women who are pregnant or lactating."
+            },
+            "right": {
+              "raw_text": "Asthma: Subjects with a current diagnosis of asthma."
+            }
+          }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Asthma: Subjects with a current diagnosis of asthma"
+              "raw_text": "alpha 1-antitrypsin deficiency: Subjects with known alpha-1 antitrypsin deficiency as the underlying cause of COPD."
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "(Subjects with a prior history of asthma are eligible if they also have a current diagnosis of COPD)"
+                  "raw_text": "Other respiratory disorders: Subjects with active tuberculosis, lung cancer, bronchiectasis, sarcoidosis, pulmonary fibrosis, pulmonary hypertension, interstitial lung diseases or other active pulmonary diseases."
                 },
                 "right": {
-                  "raw_text": ""
+                  "OR": {
+                    "left": {
+                      "raw_text": "Lung resection or transplantation: Subjects with lung volume reduction surgery within the 12 months prior to Screening or having had a lung transplant."
+                    },
+                    "right": {
+                      "raw_text": "A moderate/severe COPD exacerbation that has not resolved at least 14 days prior to Visit 1 and at least 30 days following the last dose of oral corticosteroids (if applicable)."
+                    }
+                  }
                 }
               }
             }
           }
         }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "OR": {
-            "left": {
-              "raw_text": "alpha 1-antitrypsin deficiency: Subjects with known alpha-1 antitrypsin deficiency as the underlying cause of COPD"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "Other respiratory disorders: Subjects with active tuberculosis"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "lung cancer"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "bronchiectasis"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "sarcoidosis"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "pulmonary fibrosis"
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "pulmonary hypertension"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "Interstitial lung diseases"
-                                        },
-                                        "right": {
-                                          "OR": {
-                                            "left": {
-                                              "raw_text": "or other active pulmonary diseases"
-                                            }
-                                          }
-                                        }
+      },
+      "right": {
+        "OR": {
+          "left": {
+            "raw_text": "Current severe heart failure (New York Heart Association class IV)."
+          },
+          "right": {
+            "OR": {
+              "left": {
+                "raw_text": "Other diseases/abnormalities: Any life-threatening condition with life expectancy <3 years, other than vascular disease or COPD, that might prevent the subject from completing the study."
+              },
+              "right": {
+                "OR": {
+                  "left": {
+                    "raw_text": "End stage chronic renal disease: Subjects will be excluded if on renal replacement therapy (hemodialysis or peritoneal)."
+                  },
+                  "right": {
+                    "OR": {
+                      "left": {
+                        "raw_text": "Drug/food allergy: Subjects with a history of hypersensitivity to any of the study medications (e.g. beta-agonists, corticosteroid) or components of the inhalation powder (e.g. lactose, magnesium stearate)."
+                      },
+                      "right": {
+                        "OR": {
+                          "left": {
+                            "raw_text": "Drug/alcohol abuse: Subjects with a known or suspected history of alcohol or drug abuse within the last 2 years."
+                          },
+                          "right": {
+                            "OR": {
+                              "left": {
+                                "raw_text": "Oxygen therapy: Subjects receiving treatment with long-term oxygen therapy (LTOT) or nocturnal oxygen therapy required for greater than 12 hours a day."
+                              },
+                              "right": {
+                                "OR": {
+                                  "left": {
+                                    "raw_text": "Questionable validity of consent: Subjects with a history of psychiatric disease, intellectual deficiency, poor motivation or other conditions that will limit the validity of informed consent to participate in the study or the potential compliance to study procedures."
+                                  },
+                                  "right": {
+                                    "OR": {
+                                      "left": {
+                                        "raw_text": "Affiliation with investigator site: Study investigators, sub-investigators, study coordinators, employees of a participating investigator or immediate family members of the aforementioned are excluded from participating in this study."
+                                      },
+                                      "right": {
+                                        "raw_text": "Additional medication: Use of the following medications within the following time intervals prior to Visit 1 or during the study (unless otherwise specified):"
                                       }
                                     }
                                   }
@@ -88,43 +97,10 @@
               }
             }
           }
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "Lung resection or transplantation: Subjects with lung volume reduction surgery within the 12 months prior to Screening or having had a lung transplant"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "A moderate/severe COPD exacerbation that has not resolved at least 14 days prior to Visit 1 and at least 30 days following the last dose of oral corticosteroids (if applicable)"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Current severe heart failure (New York Heart Association class IV)"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Subjects will also be excluded if they have a known ejection fraction of <30%"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "or if they have an implantable cardioverter defibrillator (ICD)"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
       }
     }
   }
 }
+```
+Please note that the JSON format may not be exactly as you expected, as it is a complex and nested structure.

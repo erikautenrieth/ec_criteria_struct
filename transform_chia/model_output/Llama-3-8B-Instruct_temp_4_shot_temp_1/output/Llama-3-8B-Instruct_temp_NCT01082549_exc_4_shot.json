@@ -3,26 +3,26 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "1. Prior treatment with gemcitabine"
+          "raw_text": "Prior treatment with gemcitabine"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "carboplatin (except in the adjuvant setting)"
+              "raw_text": "carboplatin"
             },
             "right": {
-              "raw_text": ", or Iniparib."
+              "raw_text": "(except in the adjuvant setting), or Iniparib."
             }
           }
         }
       }
     },
     "right": {
-      "OR": {
+      "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "2. Past or current history of neoplasm"
+              "raw_text": "Past or current history of neoplasm"
             },
             "right": {
               "NOT": {
@@ -32,29 +32,78 @@
                       "raw_text": "other than the entry diagnosis"
                     },
                     "right": {
-                      "NOT": {
+                      "OR": {
                         "left": {
+                          "raw_text": "with the exception of treated non-melanoma skin cancer"
+                        },
+                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "with the exception of treated non-melanoma skin cancer"
+                              "raw_text": "or carcinoma in-situ of any primary site"
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "or carcinoma in-situ of any primary site"
+                                  "raw_text": "or invasive cancers treated definitively"
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "with treatment ending >5 years previously"
+                                    },
+                                    "right": {
+                                      "raw_text": "and no evidence of recurrences."
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "A history of cardiac disease"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Malignant hypertension"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Unstable angina"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Congestive heart failure"
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "Myocardial infarction within the previous 6 months"
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": ", or invasive cancers treated definitively"
+                                      "raw_text": "Symptomatic, unstable or uncontrolled, cardiac arrhythmias"
                                     },
                                     "right": {
-                                      "AND": {
+                                      "NOT": {
                                         "left": {
-                                          "raw_text": "with treatment ending >5 years previously"
-                                        },
-                                        "right": {
-                                          "raw_text": "and no evidence of recurrences."
+                                          "raw_text": "Patients who have stable, rate-controlled atrial fibrillation are eligible for study enrollment."
                                         }
                                       }
                                     }
@@ -76,3 +125,5 @@
     }
   }
 }
+
+Please note that this is a simplified version of the criteria, as the original text contains many conditions and exclusions that cannot be fully represented in a JSON format.

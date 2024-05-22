@@ -6,25 +6,7 @@
           "raw_text": "Other tumor type than adenocarcinoma"
         },
         "right": {
-          "NOT": {
-            "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Central nervous system"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "metastases"
-                    },
-                    "right": {
-                      "raw_text": "or prior radiation for CNS metastases"
-                    }
-                  }
-                }
-              }
-            }
-          }
+          "raw_text": "Central nervous system (CNS) metastases"
         }
       }
     },
@@ -33,54 +15,169 @@
         "left": {
           "OR": {
             "left": {
-              "raw_text": "Gastric outlet obstruction"
+              "raw_text": "or prior radiation for CNS metastases"
             },
             "right": {
-              "raw_text": "or intestinal obstruction"
+              "raw_text": "Gastric outlet obstruction"
             }
           }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Evidence of gastrointestinal bleeding"
+              "raw_text": "or intestinal obstruction"
             },
             "right": {
-              "raw_text": "The patient has bony lesions as the sole evaluable disease."
+              "raw_text": "Evidence of gastrointestinal bleeding"
             }
           }
         }
       }
     }
   },
-  "OR": {
+  "AND": {
     "left": {
-      "NOT": {
+      "OR": {
+        "left": {
+          "raw_text": "The patient has bony lesions as the sole evaluable disease."
+        },
+        "right": {
+          "raw_text": "Past or concurrent history of neoplasm"
+        }
+      }
+    },
+    "right": {
+      "AND": {
         "left": {
           "OR": {
             "left": {
-              "raw_text": "Past or concurrent history of neoplasm"
+              "raw_text": "other than stomach cancer"
             },
             "right": {
-              "NOT": {
+              "OR": {
                 "left": {
-                  "AND": {
+                  "raw_text": "except for curatively treated non-melanoma skin cancer"
+                },
+                "right": {
+                  "raw_text": "or in situ carcinoma of the cervix uteri"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Pregnant or lactating women"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "women of childbearing potential not employing adequate contraception"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Other serious illness or medical conditions"
+        },
+        "right": {
+          "raw_text": "Unstable cardiac disease"
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "despite treatment"
+            },
+            "right": {
+              "raw_text": "myocardial infarction within 6 months prior to study entry"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "History of significant neurologic or psychiatric disorders"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "including dementia"
+                },
+                "right": {
+                  "raw_text": "or seizures"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Active uncontrolled infection"
+        },
+        "right": {
+          "raw_text": "Other serious underlying medical conditions"
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Concomitant administration of any other experimental drug"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "under investigation"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "concomitant chemotherapy"
+                },
+                "right": {
+                  "OR": {
                     "left": {
-                      "raw_text": "other than stomach cancer"
+                      "raw_text": "hormonal therapy"
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "except for curatively treated non-melanoma skin cancer"
-                        },
-                        "right": {
-                          "raw_text": "or in situ carcinoma of the cervix uteri"
-                        }
-                      }
+                      "raw_text": "or immunotherapy"
                     }
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Concomitant drug medication"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "The following drugs cause drug interaction with S-1"
             }
           }
         }
@@ -91,52 +188,23 @@
         "left": {
           "OR": {
             "left": {
-              "raw_text": "Pregnant or lactating women"
+              "raw_text": "i. Warfarin, phenprocoumon: increase bleeding tendency"
             },
             "right": {
-              "raw_text": "women of childbearing potential not employing adequate contraception"
+              "raw_text": "ii. Increase blood concentration of phenytoin"
             }
           }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Other serious illness or medical conditions"
+              "raw_text": "iii. sorivudine: inhibit DPD -> increase toxicity according to fluoropyrimidine"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Unstable cardiac disease despite treatment"
-                    },
-                    "right": {
-                      "raw_text": "myocardial infarction within 6 months prior to study entry"
-                    }
-                  }
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "History of significant neurologic or psychiatric disorders"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "including dementia"
-                        },
-                        "right": {
-                          "raw_text": "or seizures"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "iv. allopurinol : decrease activity of S-1"
             }
           }
         }
       }
     }
   }
-}

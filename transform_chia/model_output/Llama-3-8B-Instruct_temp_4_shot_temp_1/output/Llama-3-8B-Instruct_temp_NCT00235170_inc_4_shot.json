@@ -1,23 +1,60 @@
 {
-  "OR": {
-    "left": {
+  "OR": [
+    {
       "AND": {
         "left": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "Patients with stable (Canadian Cardiovascular Society 1, 2, 3 or 4) or unstable (Braunwald class IB, IC, IIB, IIC, IIIB, IIIC) angina pectoris and ischemia, or patients with atypical chest pain or even those who are asymptomatic provided they have documented myocardial ischaemia (e.g. treadmill exercise test, radionuclide scintigraphy, stress echocardiography, Holter tape);"
+              "raw_text": "Patients with stable"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or unstable angina pectoris"
+                },
+                "right": {
+                  "raw_text": "and ischemia"
+                }
+              }
+            }
+          },
+          "right": {
+            "OR": {
+              "left": {
+                "raw_text": "or atypical chest pain"
+              },
+              "right": {
+                "OR": {
+                  "left": {
+                    "raw_text": "or even those who are asymptomatic"
+                  },
+                  "right": {
+                    "raw_text": "provided they have documented myocardial ischaemia"
+                  }
+                }
+              }
             }
           }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Patients who are eligible for coronary revascularization (angioplasty or CABG);"
+              "raw_text": "e.g. treadmill exercise test"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "At least 2 lesions (located in different vessels and in different territories) potentially amenable to stent implantation;"
+                  "raw_text": ", radionuclide scintigraphy"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", stress echocardiography"
+                    },
+                    "right": {
+                      "raw_text": ", Holter tape"
+                    }
+                  }
                 }
               }
             }
@@ -25,21 +62,146 @@
         }
       }
     },
-    "right": {
-      "OR": {
+    {
+      "AND": {
         "left": {
-          "raw_text": "de novo native vessels;"
+          "raw_text": "Patients who are eligible for coronary revascularization"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Multivessel disease with at least one significant stenosis in LAD and with treatment of the lesion in another major epicardial coronary artery. A two-vessel disease or a three-vessel disease may be viewed as a combination of a side branch and a main epicardial vessel provided they supply different territories; left anterior descending, left circumflex and right coronary artery;"
+              "raw_text": "angioplasty"
+            },
+            "right": {
+              "raw_text": "or CABG"
             }
           }
         }
       }
+    },
+    {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "At least 2 lesions"
+            },
+            "right": {
+              "raw_text": "potentially amenable to stent implantation"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "located in different vessels"
+            },
+            "right": {
+              "raw_text": "and in different territories"
+            }
+          }
+        }
+      }
+    },
+    {
+      "AND": {
+        "left": {
+          "raw_text": "de novo native vessels"
+        }
+      }
+    },
+    {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Multivessel disease"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "with at least one significant stenosis"
+                },
+                "right": {
+                  "raw_text": "in LAD"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "with treatment of the lesion"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "in another major epicardial coronary artery"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Total occluded vessels"
+            },
+            "right": {
+              "raw_text": "One total occluded major epicardial vessel"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or side branch"
+            },
+            "right": {
+              "raw_text": "can be included"
+            }
+          }
+        }
+      }
+    },
+    {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "significant stenosis has been defined"
+            },
+            "right": {
+              "raw_text": "as a stenosis of more than 50% in luminal diameter"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "in luminal diameter"
+            },
+            "right": {
+              "raw_text": "in at least one view"
+            }
+          }
+        }
+      }
+    },
+    {
+      "AND": {
+        "left": {
+          "raw_text": "Left ventricular ejection fraction"
+        },
+        "right": {
+          "raw_text": "should be at least 30%."
+        }
+      }
     }
-  }
+  ]
 }
-
-Note: Criteria 6-8 are not included in this JSON output as they do not use logical operators (AND, OR) to combine conditions. Instead, they provide separate conditions that must be met.

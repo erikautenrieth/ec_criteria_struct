@@ -12,24 +12,10 @@
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Age"
+              "raw_text": "Age between 18"
             },
             "right": {
-              "BETWEEN": {
-                "left": {
-                  "raw_text": "18"
-                },
-                "right": {
-                  "raw_text": "70"
-                }
-              }
-            }
-          }
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "Esophageal varices with high bleeding risk: more than F2 and red color sign"
+              "raw_text": "and 70 years"
             }
           }
         }
@@ -38,17 +24,30 @@
   },
   "AND": {
     "left": {
-      "NOT": {
+      "OR": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "No previous history of upper gastrointestinal bleeding"
-            }
-          }
+          "raw_text": "Esophageal varices with high bleeding risk: more than F2 and red color sign"
         }
       }
     },
     "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "No previous history of upper gastrointestinal bleeding"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
       "NOT": {
         "left": {
           "OR": {
@@ -71,8 +70,10 @@
           }
         }
       }
-    },
-    "right": {
+    }
+  },
+  "AND": {
+    "left": {
       "raw_text": "Child-Pugh score <12"
     }
   }

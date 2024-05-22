@@ -1,7 +1,21 @@
 {
   "OR": {
     "left": {
-      "raw_text": "HCV, HIV, HDV coinfection."
+      "AND": {
+        "left": {
+          "raw_text": "HCV"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "HIV"
+            },
+            "right": {
+              "raw_text": "HDV"
+            }
+          }
+        }
+      }
     },
     "right": {
       "OR": {
@@ -14,20 +28,16 @@
               "raw_text": "malignancy"
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "or decompensated liver cirrhosis"
-                },
-                "right": {
-                  "raw_text": "(CTP score = 7)."
-                }
-              }
+              "raw_text": "or decompensated liver cirrhosis"
             }
           }
         }
       }
     }
-  },
+  }
+}
+
+{
   "OR": {
     "left": {
       "raw_text": "Uremia patients"
@@ -38,7 +48,7 @@
           "raw_text": "or"
         },
         "right": {
-          "raw_text": "Creatinine = 2 mg/dl."
+          "raw_text": "Creatinine = 2 mg/dl"
         }
       }
     }

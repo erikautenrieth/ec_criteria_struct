@@ -8,15 +8,7 @@
               "raw_text": "histologically proven prostate adenocarcinoma"
             },
             "right": {
-              "NOT": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "within more than 1 year of enrollment"
-                    }
-                  }
-                }
-              }
+              "raw_text": "within 1 year of enrollment"
             }
           }
         },
@@ -25,185 +17,70 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Low risk:"
+                  "raw_text": "Low risk: Gleason <or=6"
                 },
                 "right": {
                   "AND": {
                     "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Gleason"
-                        },
-                        "right": {
-                          "raw_text": "<or=6"
-                        }
-                      }
+                      "raw_text": "and PSA <or=10"
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "PSA"
-                        },
-                        "right": {
-                          "raw_text": "<or=10"
-                        }
-                      }
-                    },
-                    "right": {
-                      "raw_text": "and"
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Clinical Stage"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "T1b-T2a"
-                        },
-                        "right": {
-                          "raw_text": "or"
-                        }
-                      }
-                    },
-                    "right": {
-                      "raw_text": "Nx"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "N0"
-                        },
-                        "right": {
-                          "raw_text": ", Mx"
-                        }
-                      }
+                      "raw_text": "and Clinical Stage T1b-T2a,Nx or N0, Mx or M0"
                     }
                   }
                 }
               }
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "Intermediate risk:"
-                },
-                "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "Gleason"
-                            },
-                            "right": {
-                              "raw_text": "<or=6"
-                            }
-                          }
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "PSA"
-                            },
-                            "right": {
-                              "raw_text": "<or=10"
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "Intermediate risk:Gleason <or=6"
                     },
                     "right": {
-                      "raw_text": "and"
+                      "AND": {
+                        "left": {
+                          "raw_text": "and PSA<or=10"
+                        },
+                        "right": {
+                          "raw_text": "and Clinical Stage T2b"
+                        }
+                      }
                     }
                   }
                 },
                 "right": {
                   "AND": {
                     "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Clinical Stage"
-                        },
-                        "right": {
-                          "raw_text": "T2b"
-                        }
-                      }
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Gleason"
-                        },
-                        "right": {
-                          "raw_text": "=7"
-                        }
-                      }
+                      "raw_text": "OR Gleason=7"
                     },
                     "right": {
                       "AND": {
                         "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "PSA"
-                            },
-                            "right": {
-                              "raw_text": "<or=10"
-                            }
-                          }
+                          "raw_text": "and PSA<or=10"
                         },
                         "right": {
-                          "raw_text": "and"
+                          "raw_text": "and Clinical Stage T1b-T2b"
                         }
                       }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "OR Gleason <or=6"
                     },
                     "right": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "AND": {
-                            "left": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Gleason"
-                                },
-                                "right": {
-                                  "raw_text": "<or=6"
-                                }
-                              }
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "PSA"
-                                },
-                                "right": {
-                                  "raw_text": "> 10"
-                                }
-                              }
-                            }
-                          }
+                          "raw_text": "and PSA > 10 and < or =20"
                         },
                         "right": {
-                          "raw_text": "and"
+                          "raw_text": "and Clinical Stage T1b- T2b, Nx or N0, Mx or M0"
                         }
                       }
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "PSA"
-                        },
-                        "right": {
-                          "raw_text": "<or=20"
-                        }
-                      }
-                    },
-                    "right": {
-                      "raw_text": "and"
                     }
                   }
                 }
@@ -216,20 +93,17 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "ECOG Performance Status"
+          "raw_text": "ECOG Performance Status 0-1"
         },
         "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "0"
+              "raw_text": "No prior prostate radiation"
             },
             "right": {
-              "raw_text": "or"
+              "raw_text": "or other definitive therapy"
             }
           }
-        },
-        "right": {
-          "raw_text": "1"
         }
       }
     }

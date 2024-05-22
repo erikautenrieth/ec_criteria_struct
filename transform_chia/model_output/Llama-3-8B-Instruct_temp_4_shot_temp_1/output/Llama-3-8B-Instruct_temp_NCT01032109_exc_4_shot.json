@@ -1,47 +1,44 @@
 {
   "AND": {
     "left": {
-      "NOT": {
+      "OR": {
         "left": {
-          "AND": {
+          "raw_text": "choroidal neovascularization caused by other eye diseases"
+        },
+        "right": {
+          "OR": {
             "left": {
-              "raw_text": "choroidal neovascularization"
+              "raw_text": "ocular surgery within the past 3 mouths"
             },
             "right": {
-              "raw_text": "caused by age-related macular degeneration"
+              "OR": {
+                "left": {
+                  "raw_text": "history of uveitis"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "intraocular pressure higher than 25 mmHg"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", or glaucoma"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
       }
     },
     "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "ocular surgery within the past 3 months"
-            },
-            "right": {
-              "raw_text": "or intraocular surgery planned"
-            }
-          }
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "history of uveitis"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "intraocular pressure higher than 25 mmHg"
-                },
-                "right": {
-                  "raw_text": ", or glaucoma"
-                }
-              }
-            }
-          }
+          "raw_text": "history of systemic or ocular thromboembolic events"
         }
       }
     }

@@ -8,32 +8,32 @@
         "left": {
           "AND": {
             "left": {
-              "AND": {
+              "raw_text": "Patient with primary pulmonary hypertension"
+            },
+            "right": {
+              "OR": {
                 "left": {
-                  "raw_text": "Patient with primary pulmonary hypertension"
+                  "raw_text": "i.e. Idiopathic Pulmonary Arterial Hypertension"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "i.e. Idiopathic Pulmonary Arterial Hypertension"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "or Familial Pulmonary Arterial Hypertension"
-                        }
-                      }
+                      "raw_text": "or Familial Pulmonary Arterial Hypertension"
                     }
                   }
                 }
-              },
-              "right": {
-                "raw_text": "and classified as NYHA functional class III"
               }
             }
           },
           "right": {
-            "raw_text": "(NYHA = New York Heart Association)"
+            "AND": {
+              "left": {
+                "raw_text": "and classified as NYHA functional class III"
+              },
+              "right": {
+                "raw_text": "(NYHA = New York Heart Association)"
+              }
+            }
           }
         }
       }
@@ -54,9 +54,16 @@
             }
           },
           "right": {
-            "AND": {
+            "NOT": {
               "left": {
-                "raw_text": "within 6 weeks of date of study inclusion"
+                "AND": {
+                  "left": {
+                    "raw_text": "within 6 weeks of date of study inclusion"
+                  },
+                  "right": {
+                    "raw_text": "(unless otherwise advised by Bayer Schering Pharma)"
+                  }
+                }
               }
             }
           }

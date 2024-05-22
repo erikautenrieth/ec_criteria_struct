@@ -1,17 +1,31 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Diagnosis of brainstem glioma"
+      "NOT": {
+        "left": {
+          "raw_text": "Diagnosis of brainstem glioma"
+        }
+      }
     },
     "right": {
-      "OR": {
+      "NOT": {
         "left": {
-          "raw_text": "Concurrent administration of any other anti-tumor therapy"
+          "OR": {
+            "left": {
+              "raw_text": "Concurrent administration of any other anti-tumor therapy"
+            }
+          }
         }
       }
     }
   },
-  "right": {
-    "raw_text": "Pre-existing uncontrolled diarrhea"
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "Pre-existing uncontrolled diarrhea"
+        }
+      }
+    }
   }
 }

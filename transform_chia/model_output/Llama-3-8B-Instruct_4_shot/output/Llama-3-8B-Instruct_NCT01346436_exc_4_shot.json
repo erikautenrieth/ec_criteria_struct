@@ -1,17 +1,14 @@
 {
-  "OR": {
+  "AND": {
     "left": {
-      "raw_text": "Age <18 years old"
-    },
-    "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "raw_text": "Patient unable to"
+          "raw_text": "Age <18 years old"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "communicate"
+              "raw_text": "Patient unable to communicate"
             },
             "right": {
               "raw_text": "or to understand the study"
@@ -19,16 +16,21 @@
           }
         }
       }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Patient refusing to participate"
+        },
+        "right": {
+          "raw_text": "to the study"
+        }
+      }
     }
   },
-  "right": {
-    "OR": {
-      "left": {
-        "raw_text": "Patient refusing to participate to the study"
-      },
-      "right": {
-        "raw_text": "contraindication to laparoscopy"
-      }
+  "OR": {
+    "left": {
+      "raw_text": "contraindication to laparoscopy"
     }
   }
 }

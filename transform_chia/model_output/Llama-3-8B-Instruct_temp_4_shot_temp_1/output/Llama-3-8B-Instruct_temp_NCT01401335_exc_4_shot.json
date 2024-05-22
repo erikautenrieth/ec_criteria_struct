@@ -1,19 +1,46 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Age less than 15"
-        },
-        "right": {
-          "raw_text": "or greater than 25"
+      "NOT": {
+        "AND": {
+          "left": {
+            "AND": {
+              "left": {
+                "AND": {
+                  "left": {
+                    "raw_text": "Age"
+                  },
+                  "right": {
+                    "NOT": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "15"
+                        },
+                        "right": {
+                          "raw_text": "or"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "right": {
+                "AND": {
+                  "left": {
+                    "raw_text": "25"
+                  },
+                  "right": {
+                    "raw_text": "and"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
     "right": {
-      "NOT": {
-        "raw_text": "and not participating in the day care center"
-      }
+      "raw_text": "not participating in the day care center"
     }
   }
 }

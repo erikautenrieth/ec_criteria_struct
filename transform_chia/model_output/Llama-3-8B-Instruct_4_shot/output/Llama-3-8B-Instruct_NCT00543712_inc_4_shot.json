@@ -7,27 +7,20 @@
             "left": {
               "AND": {
                 "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Ability to understand"
-                    },
-                    "right": {
-                      "raw_text": "and willingness to sign a written informed consent document"
-                    }
-                  }
+                  "raw_text": "Ability to understand"
                 },
                 "right": {
-                  "raw_text": "Age ≥ 18 years"
+                  "raw_text": "and willingness to sign a written informed consent document"
                 }
               }
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "Histologic diagnosis of chondrosarcoma"
+                  "raw_text": "Age ≥ 18 years"
                 },
                 "right": {
-                  "raw_text": ", verifiable after enrollment"
+                  "raw_text": "and"
                 }
               }
             }
@@ -36,63 +29,87 @@
         "right": {
           "AND": {
             "left": {
-              "raw_text": "Measurable disease"
+              "raw_text": "Histologic diagnosis of chondrosarcoma"
             },
             "right": {
+              "raw_text": ", verifiable after enrollment"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Previously treated or incurable disease"
+                  "raw_text": "Measurable disease"
                 },
                 "right": {
-                  "raw_text": "without options for standard of care therapy"
+                  "raw_text": "and"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Previously treated"
+                },
+                "right": {
+                  "raw_text": "or incurable disease without options for standard of care therapy"
                 }
               }
             }
           }
-        }
-      },
-      "right": {
-        "AND": {
-          "left": {
-            "OR": {
-              "left": {
-                "raw_text": "ECOG performance status of 0"
-              },
-              "right": {
-                "OR": {
-                  "left": {
-                    "raw_text": ",1"
-                  },
-                  "right": {
-                    "raw_text": ", or 2"
-                  }
-                }
-              }
-            }
-          },
-          "right": {
-            "AND": {
-              "left": {
-                "raw_text": "Life expectancy of > 3 months"
-              },
-              "right": {
-                "AND": {
-                  "left": {
-                    "raw_text": "For patients of reproductive potential"
-                  },
-                  "right": {
-                    "OR": {
-                      "left": {
-                        "raw_text": "males"
-                      },
-                      "right": {
-                        "raw_text": "and females"
-                      }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "ECOG performance status of 0"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "1"
+                    },
+                    "right": {
+                      "raw_text": " or 2"
                     }
                   }
                 }
               }
+            },
+            "right": {
+              "raw_text": "and"
             }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "AND": {
+          "left": {
+            "raw_text": "Life expectancy of > 3 months"
+          },
+          "right": {
+            "raw_text": "and"
+          }
+        }
+      },
+      "right": {
+        "OR": {
+          "left": {
+            "raw_text": "For patients of reproductive potential (males and females), use of reliable means for contraception"
+          },
+          "right": {
+            "raw_text": "(e.g., contraceptive pill, intrauterine device [IUD], physical barrier) throughout the trial and for 1 year following their final exposure to study treatment"
           }
         }
       }

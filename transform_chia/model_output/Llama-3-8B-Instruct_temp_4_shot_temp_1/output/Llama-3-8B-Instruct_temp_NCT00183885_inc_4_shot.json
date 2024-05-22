@@ -11,37 +11,37 @@
                     "left": {
                       "AND": {
                         "left": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Unresectable"
-                            },
-                            "right": {
-                              "raw_text": ", histologically confirmed hepatocellular carcinoma"
-                            }
-                          }
+                          "raw_text": "Unresectable"
                         },
                         "right": {
-                          "raw_text": "with evident disease limited to liver."
+                          "raw_text": ", histologically confirmed hepatocellular carcinoma"
                         }
                       }
                     },
                     "right": {
-                      "raw_text": "Tissue from tumor must be available."
+                      "raw_text": "with evident disease limited to liver."
                     }
                   }
                 },
                 "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "This may be paraffin embedded tissue from previous biopsy/resection"
+                      "raw_text": "Tissue from tumor must be available"
                     },
                     "right": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": "or if it is not available"
+                          "raw_text": "This may be paraffin embedded tissue"
                         },
                         "right": {
-                          "raw_text": ", a repeat biopsy must be performed."
+                          "OR": {
+                            "left": {
+                              "raw_text": "from previous biopsy/resection"
+                            },
+                            "right": {
+                              "raw_text": "or if it is not available, a repeat biopsy must be performed."
+                            }
+                          }
                         }
                       }
                     }
@@ -50,7 +50,7 @@
               }
             },
             "right": {
-              "OR": {
+              "AND": {
                 "left": {
                   "raw_text": "The requirement for biopsy may be waived if alpha-fetoprotein is greater than 500 ng/mL"
                 },
@@ -64,10 +64,10 @@
         "right": {
           "AND": {
             "left": {
-              "raw_text": "Patients must agree to have a 20 cc blood sample drawn in addition to routine labs with each cycle of chemotherapy."
+              "raw_text": "Patients must agree to have a 20 cc blood sample drawn"
             },
             "right": {
-              "raw_text": "Patients must have measurable disease."
+              "raw_text": "in addition to routine labs with each cycle of chemotherapy."
             }
           }
         }
@@ -78,20 +78,73 @@
         "left": {
           "AND": {
             "left": {
-              "raw_text": "If prior radiation therapy was administered"
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Patients must have measurable disease"
+                    },
+                    "right": {
+                      "raw_text": "If prior radiation therapy was administered, measurable disease must be outside the radiation field."
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Patients must have a Zubrod performance status of 0-2"
+                    },
+                    "right": {
+                      "raw_text": "Patients must have a predicted life expectancy of at least 12 weeks."
+                    }
+                  }
+                }
+              }
             },
             "right": {
-              "raw_text": ", measurable disease must be outside the radiation field."
+              "AND": {
+                "left": {
+                  "raw_text": "Patients must have a pre-treatment granulocyte count (i.e., segmented neutrophils + bands) of greater than or equal to 1,500/mm3"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "a hemoglobin level of greater than or equal to 9 gm/dl"
+                    },
+                    "right": {
+                      "raw_text": "and platelet count greater than or equal to 50,000/mm3."
+                    }
+                  }
+                }
+              }
             }
           }
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "Patients must have a Zubrod performance status of 0-2."
-            },
-            "right": {
-              "raw_text": "Patients must have a predicted life expectancy of at least 12 weeks."
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Patients must have adequate renal function as documented by a calculated creatinine clearance ≥ 60"
+                    },
+                    "right": {
+                      "raw_text": "Patients must have adequate hepatic function as documented by a serum bilirubin less than or equal to 2x the institutional upper limit of normal"
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "regardless of whether patients have liver involvement secondary to tumor"
+                    },
+                    "right": {
+                      "raw_text": "Patients may not have ascites or the ascites must be responsive to diuretics."
+                    }
+                  }
+                }
+              }
             }
           }
         }

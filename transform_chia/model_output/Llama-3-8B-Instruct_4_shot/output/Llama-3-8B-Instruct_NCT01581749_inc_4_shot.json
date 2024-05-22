@@ -19,34 +19,30 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "raw_text": "Low risk:"
-                    },
-                    "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "Gleason <or=6"
+                          "raw_text": "Low risk:"
                         },
                         "right": {
                           "AND": {
                             "left": {
-                              "raw_text": "PSA <or=10"
+                              "raw_text": "Gleason <or=6"
                             },
                             "right": {
-                              "AND": {
-                                "left": {
-                                  "raw_text": "Clinical Stage T1b-T2a,Nx or N0, Mx or M0"
-                                }
-                              }
+                              "raw_text": " & PSA <or=10"
                             }
                           }
                         }
                       }
+                    },
+                    "right": {
+                      "raw_text": " & Clinical Stage T1b-T2a,Nx or N0, Mx or M0"
                     }
                   }
                 }
               },
               "right": {
-                "OR": {
+                "AND": {
                   "left": {
                     "AND": {
                       "left": {
@@ -60,68 +56,15 @@
                                 "raw_text": "Gleason <or=6"
                               },
                               "right": {
-                                "AND": {
-                                  "left": {
-                                    "raw_text": "PSA<or=10"
-                                  },
-                                  "right": {
-                                    "raw_text": "Clinical Stage T2b"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "right": {
-                        "OR": {
-                          "left": {
-                            "AND": {
-                              "left": {
-                                "raw_text": "Gleason=7"
-                              },
-                              "right": {
-                                "AND": {
-                                  "left": {
-                                    "raw_text": "PSA<or=10"
-                                  },
-                                  "right": {
-                                    "raw_text": "Clinical Stage T1b-T2b"
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          "right": {
-                            "OR": {
-                              "left": {
-                                "AND": {
-                                  "left": {
-                                    "raw_text": "Gleason <or=6"
-                                  },
-                                  "right": {
-                                    "AND": {
-                                      "left": {
-                                        "raw_text": "PSA > 10"
-                                      },
-                                      "right": {
-                                        "AND": {
-                                          "left": {
-                                            "raw_text": "< or =20"
-                                          },
-                                          "right": {
-                                            "raw_text": "Clinical Stage T1b- T2b, Nx or NO, Mx or M0"
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
+                                "raw_text": " & PSA<or=10"
                               }
                             }
                           }
                         }
                       }
+                    },
+                    "right": {
+                      "raw_text": " & Clinical Stage T2b"
                     }
                   }
                 }
@@ -137,16 +80,12 @@
           "raw_text": "ECOG Performance Status 0-1"
         },
         "right": {
-          "NOT": {
+          "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "prior prostate radiation"
-                },
-                "right": {
-                  "raw_text": "or other definitive therapy"
-                }
-              }
+              "raw_text": "No prior prostate radiation"
+            },
+            "right": {
+              "raw_text": " or other definitive therapy"
             }
           }
         }

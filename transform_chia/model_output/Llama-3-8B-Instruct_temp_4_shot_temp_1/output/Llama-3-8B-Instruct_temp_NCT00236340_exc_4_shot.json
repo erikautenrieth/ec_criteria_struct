@@ -1,34 +1,35 @@
 {
-  "OR": {
+  "AND": {
     "left": {
-      "raw_text": "Multiple pregnancy (more than 3 fetuses)"
-    },
-    "right": {
       "OR": {
         "left": {
-          "raw_text": "Maternal history of placental abruptio"
+          "raw_text": "Multiple pregnancy (more than 3 fetuses)"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Fetus with IUGR"
+              "raw_text": "Maternal history of placental abruptio"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Pregnancy complicated with pre-eclampsia"
+                  "raw_text": "Fetus with IUGR"
                 },
                 "right": {
-                  "raw_text": "or"
+                  "OR": {
+                    "left": {
+                      "raw_text": "Pregnancy complicated with pre-eclampsia"
+                    },
+                    "right": {
+                      "raw_text": "Unability to give informed consent"
+                    }
+                  }
                 }
               }
             }
           }
         }
       }
-    },
-    "right": {
-      "raw_text": "Unability to give informed consent"
     }
   }
 }

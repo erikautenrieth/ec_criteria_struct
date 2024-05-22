@@ -1,42 +1,50 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Known other respiratory disorders"
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "or signs for other respiratory disorders (e.g. asthma"
-            },
-            "right": {
               "OR": {
                 "left": {
-                  "raw_text": ", lung cancer"
+                  "raw_text": "Known other respiratory disorders"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": ", sarcoidosis"
+                      "raw_text": "or signs for other respiratory disorders (e.g. asthma"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": ", tuberculosis"
+                          "raw_text": ", lung cancer"
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": ", lung fibrosis"
+                              "raw_text": ", sarcoidosis"
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": ", cystic fibrosis"
+                                  "raw_text": ", tuberculosis"
                                 },
                                 "right": {
-                                  "raw_text": ", bronchoectasis)"
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": ", lung fibrosis"
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": ", cystic fibrosis"
+                                        },
+                                        "right": {
+                                          "raw_text": ", bronchoectasis)"
+                                        }
+                                      }
+                                    }
+                                  }
                                 }
                               }
                             }
@@ -47,23 +55,87 @@
                   }
                 }
               }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Known history of significant inflammatory disease"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "other than COPD (e.g. rheumatoid arthritis"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "and systemic lupus erythematosus)"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Known to be severely alpha-1-antitrypsin deficient"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "(PI SZ or ZZ)"
+                }
+              }
             }
           }
         }
       }
     },
     "right": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Known history of significant inflammatory disease"
+          "OR": {
+            "left": {
+              "raw_text": "Having undergone lung surgery"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or subjects scheduled for surgery."
+                }
+              }
+            }
+          }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": ", other than COPD (e.g. rheumatoid arthritis"
+              "raw_text": "Concurrent medication from Visit 1"
             },
             "right": {
-              "raw_text": "and systemic lupus erythematosus)."
+              "OR": {
+                "left": {
+                  "raw_text": "and for the duration of the study with any of the prohibited medications: monoamine oxidase inhibitors"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "and tricyclic antidepressants"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", and ritonavir (a highly potent cytochrome P450 3A4 inhibitor)."
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }

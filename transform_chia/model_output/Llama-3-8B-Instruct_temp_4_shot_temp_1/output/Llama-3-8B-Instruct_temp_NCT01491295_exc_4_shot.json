@@ -1,41 +1,55 @@
 {
   "OR": {
     "left": {
-      "raw_text": "HCV, HIV, HDV coinfection."
-    }
-  },
-  "OR": {
-    "left": {
+      "raw_text": "HCV, HIV, HDV coinfection"
+    },
+    "right": {
       "AND": {
         "left": {
-          "raw_text": "Uncontrolled"
-        },
-        "right": {
-          "raw_text": "HCC"
-        }
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "malignancy"
+              "raw_text": "Uncontrolled HCC"
             },
             "right": {
-              "raw_text": "or decompensated liver cirrhosis"
+              "raw_text": "or"
+            }
+          },
+          "right": {
+            "AND": {
+              "left": {
+                "raw_text": "malignancy"
+              },
+              "right": {
+                "OR": {
+                  "left": {
+                    "raw_text": "or"
+                  },
+                  "right": {
+                    "raw_text": "decompensated liver cirrhosis"
+                  }
+                }
+              }
             }
           }
         }
       }
-    },
-    "right": {
-      "raw_text": "(CTP score = 7)."
     }
   },
-  "OR": {
-    "left": {
-      "raw_text": "Uremia patients"
-    },
-    "right": {
-      "raw_text": "or Creatinine = 2 mg/dl."
+  "right": {
+    "OR": {
+      "left": {
+        "raw_text": "Uremia patients"
+      },
+      "right": {
+        "OR": {
+          "left": {
+            "raw_text": "or"
+          },
+          "right": {
+            "raw_text": "Creatinine = 2 mg/dl"
+          }
+        }
+      }
     }
   }
 }

@@ -1,49 +1,69 @@
 {
   "AND": {
     "left": {
-      "AND": {
+      "OR": {
         "left": {
-          "raw_text": "Subjects aged 12-65."
+          "raw_text": "Subjects aged 12"
+        },
+        "right": {
+          "raw_text": "-65."
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Confirmed idiopathic pulmonary hypertension"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Confirmed idiopathic pulmonary hypertension"
+              "raw_text": ", connective tissue disease associated pulmonary hypertension"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "connective tissue disease associated pulmonary hypertension"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "congenital heart disease(with Eisenmenger syndrome) associated pulmonary hypertension."
-                    }
-                  }
+                  "raw_text": ", congenital heart disease(with Eisenmenger syndrome) associated pulmonary hypertension."
                 }
               }
             }
           }
         }
-      },
-      "right": {
-        "AND": {
-          "left": {
-            "raw_text": "Baseline 6-minutes walking distance 150m-550m."
-          },
-          "right": {
-            "AND": {
-              "left": {
-                "raw_text": "WHO pulmonary hypertension function II-III"
-              },
-              "right": {
-                "raw_text": "with non-responder to calcium channel blockers."
-              }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Baseline 6-minutes walking distance"
+        },
+        "right": {
+          "raw_text": "150m-550m."
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "WHO pulmonary hypertension function"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "II"
+            },
+            "right": {
+              "raw_text": "-III"
             }
           }
         }
       }
+    }
+  },
+  "AND": {
+    "left": {
+      "raw_text": "with non-responder to calcium channel blockers."
     },
     "right": {
       "raw_text": "Documented written informed consent."

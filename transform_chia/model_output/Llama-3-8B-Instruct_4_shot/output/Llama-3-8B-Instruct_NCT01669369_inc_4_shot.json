@@ -3,50 +3,55 @@
     "left": {
       "AND": {
         "left": {
-          "AND": {
-            "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "histologically diagnosed primary classical osteosarcoma"
-                },
-                "right": {
-                  "raw_text": "in extremities"
-                }
-              }
-            },
-            "right": {
-              "raw_text": "staging IIB"
-            }
-          }
+          "raw_text": "histologically diagnosed primary classical osteosarcoma"
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "MRI showing no skip lesion"
-            }
-          }
+          "raw_text": "in extremities"
         }
       }
     },
     "right": {
       "AND": {
         "left": {
-          "raw_text": "receive standard neo-adjuvant chemotherapy"
+          "raw_text": "staging IIB"
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "and"
+              "raw_text": "MRI showing"
             },
             "right": {
-              "raw_text": "adjuvant chemotherapy"
+              "NOT": {
+                "left": {
+                  "raw_text": "skip lesion"
+                }
+              }
             }
           }
         }
       }
     }
   },
-  "right": {
-    "raw_text": "and standard surgical treatment"
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "receive"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "standard neo-adjuvant chemotherapy"
+            },
+            "right": {
+              "raw_text": ", adjuvant chemotherapy"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "and standard surgical treatment"
+    }
   }
 }

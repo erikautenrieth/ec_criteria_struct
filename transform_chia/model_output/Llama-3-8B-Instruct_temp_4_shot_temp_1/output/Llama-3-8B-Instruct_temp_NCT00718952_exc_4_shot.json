@@ -1,52 +1,69 @@
 {
   "AND": {
     "left": {
+      "NOT": {
+        "raw_text": "The other types of pulmonary hypertension."
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Subjects who refuse"
+            },
+            "right": {
+              "raw_text": "to subscribe written informed consents"
+            }
+          },
+          "right": {
+            "raw_text": "or can't cooperate with the trial well."
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
       "AND": {
         "left": {
           "AND": {
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "The other types of pulmonary hypertension"
+                  "raw_text": "Subjects with serious"
                 },
                 "right": {
-                  "raw_text": "."
+                  "raw_text": "acute or chronic disease"
+                }
+              },
+              "right": {
+                "OR": {
+                  "left": {
+                    "raw_text": "involved liver"
+                  },
+                  "right": {
+                    "OR": {
+                      "left": {
+                        "raw_text": "kidney"
+                      },
+                      "right": {
+                        "raw_text": ", and brain"
+                      }
+                    }
+                  }
                 }
               }
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "Subjects who refuse to subscribe written informed consents"
-                },
-                "right": {
-                  "raw_text": "or can't cooperate with the trial well."
-                }
-              }
-            }
-          }
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "Subjects with serious acute or chronic disease involved liver, kidney, and brain"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "or have to use potent CYP3A4-inhibitor"
-                },
-                "right": {
-                  "raw_text": "or nitrate to treat the underlying diseases."
-                }
-              }
+              "raw_text": "or have to use potent CYP3A4-inhibitor or nitrate to treat the underlying diseases."
             }
           }
         }
       }
     },
     "right": {
-      "OR": {
+      "AND": {
         "left": {
           "raw_text": "Subjects who are currently treated with sildenafil for PAH"
         },
@@ -61,6 +78,11 @@
           }
         }
       }
+    }
+  },
+  "AND": {
+    "left": {
+      "raw_text": "Other contraindications in package insert."
     }
   }
 }

@@ -7,15 +7,34 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "HIV-1 infected"
-                },
-                "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "males"
+                      "AND": {
+                        "left": {
+                          "raw_text": "HIV-1 infected males"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "or females"
+                            }
+                          }
+                        }
+                      }
                     },
                     "right": {
-                      "raw_text": "or females"
+                      "AND": {
+                        "left": {
+                          "raw_text": "over 18 years of age"
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "signed informed consent"
                     }
                   }
                 }
@@ -24,10 +43,21 @@
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "over 18 years of age"
+                  "raw_text": "currently receiving a stable antiretroviral regimen comprising of:"
                 },
                 "right": {
-                  "raw_text": "and"
+                  "AND": {
+                    "left": {
+                      "raw_text": "two or more licensed NRTIs"
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "one licensed NNRTI or boosted protease inhibitor"
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -36,97 +66,21 @@
         "right": {
           "AND": {
             "left": {
-              "raw_text": "signed informed consent"
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "currently receiving a stable antiretroviral regimen"
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "comprising of"
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "two or more licensed NRTIs"
-                            },
-                            "right": {
-                              "raw_text": "and"
-                            }
-                          }
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "one licensed NNRTI"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "or boosted protease inhibitor"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
+              "raw_text": "no previous protease inhibitor resistance documented on HIV-1 genotypic resistance testing"
             }
           }
         }
       }
     },
     "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "no previous protease inhibitor resistance documented on HIV-1 genotypic resistance testing"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "failure of current antiretroviral regimen due to"
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "toxicity"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "intolerance"
-                        },
-                        "right": {
-                          "raw_text": "or virological failure"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
+          "raw_text": "failure of current antiretroviral regimen due to: toxicity, intolerance or virological failure if receiving an NNRTI containing regimen at screening"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "willing to modify antiretroviral therapy, in accordance with the randomisation assignment"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "no previous exposure to etravirine"
-                }
-              }
+              "raw_text": "toxicity or intolerance if receiving a boosted-protease inhibitor regimen at screening (with plasma HIV RNA < 400 copies/mL at screening)"
             }
           }
         }

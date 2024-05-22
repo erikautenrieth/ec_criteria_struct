@@ -4,25 +4,14 @@
       "raw_text": "patient refusal"
     },
     "right": {
-      "OR": {
+      "AND": {
         "left": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "age"
+              "raw_text": "age less than 40"
             },
             "right": {
-              "NOT": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "less than 40"
-                    },
-                    "right": {
-                      "raw_text": "or over 80 years"
-                    }
-                  }
-                }
-              }
+              "raw_text": "or over 80 years"
             }
           }
         }
@@ -37,30 +26,15 @@
       "OR": {
         "left": {
           "raw_text": "emergency surgery"
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Left ventricular ejection fraction"
-                },
-                "right": {
-                  "NOT": {
-                    "left": {
-                      "raw_text": "less than 50 per cent"
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
       }
     }
   },
   "OR": {
     "left": {
+      "raw_text": "Left ventricular ejection fraction less than 50 per cent"
+    },
+    "right": {
       "raw_text": "calculated creatinine clearance less than 60 mL per minute"
     }
   }

@@ -1,53 +1,41 @@
 {
-  "AND": {
+  "OR": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "previous brain surgery"
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "cognitive impairment"
-            },
-            "right": {
-              "raw_text": "(< 120 points on the Mattis Dementia Rating Scale)"
-            }
-          }
-        }
-      }
+      "raw_text": "previous brain surgery"
     },
     "right": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "moderate-to-severe depression"
+          "raw_text": "cognitive impairment"
         },
         "right": {
-          "raw_text": " (> 25 points on the Beck Depression Inventory)"
+          "raw_text": "(< 120 points on the Mattis Dementia Rating Scale)"
         }
       }
     }
   },
-  "AND": {
+  "OR": {
     "left": {
-      "raw_text": "marked brain atrophy as detected by magnetic resonance imaging"
+      "raw_text": "moderate-to-severe depression"
     },
     "right": {
-      "OR": {
-        "left": {
-          "raw_text": "other medical"
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "or psychiatric coexisting disorders"
-            },
-            "right": {
-              "raw_text": "that could increase the surgical risk or interfere with completion of the trial"
-            }
-          }
-        }
-      }
+      "raw_text": " (> 25 points on the Beck Depression Inventory)"
+    }
+  },
+  "OR": {
+    "left": {
+      "raw_text": "marked brain atrophy"
+    },
+    "right": {
+      "raw_text": "as detected by magnetic resonance imaging"
+    }
+  },
+  "OR": {
+    "left": {
+      "raw_text": "other medical or psychiatric coexisting disorders"
+    },
+    "right": {
+      "raw_text": "that could increase the surgical risk or interfere with completion of the trial"
     }
   }
 }

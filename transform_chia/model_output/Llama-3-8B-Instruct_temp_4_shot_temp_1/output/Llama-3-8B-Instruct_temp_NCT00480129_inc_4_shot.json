@@ -5,26 +5,29 @@
         "left": {
           "AND": {
             "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Clinical diagnosis of allergic rhinitis"
-                },
-                "right": {
-                  "raw_text": "based on sneeze attacks"
-                }
-              }
+              "raw_text": "Clinical diagnosis of allergic rhinitis"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "runny/blocked/itchy nose"
-                },
-                "right": {
-                  "raw_text": "in the absence of a common cold during the previous 12 months."
+              "raw_text": "based on sneeze attacks"
+            }
+          },
+          "right": {
+            "AND": {
+              "left": {
+                "raw_text": "runny/blocked/itchy nose"
+              },
+              "right": {
+                "NOT": {
+                  "left": {
+                    "raw_text": "in the presence of a common cold"
+                  }
                 }
               }
             }
           }
+        },
+        "right": {
+          "raw_text": "during the previous 12 months."
         }
       }
     },
@@ -36,10 +39,17 @@
         "right": {
           "OR": {
             "left": {
-              "raw_text": "or blood radio-allergosorbent test (RAST)"
+              "raw_text": "to grass"
             },
             "right": {
-              "raw_text": "to grass and/or ragweed pollen"
+              "OR": {
+                "left": {
+                  "raw_text": "and/or"
+                },
+                "right": {
+                  "raw_text": "ragweed pollen"
+                }
+              }
             }
           }
         }

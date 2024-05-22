@@ -4,7 +4,7 @@
       "raw_text": "diabetes"
     },
     "right": {
-      "OR": {
+      "AND": {
         "left": {
           "raw_text": "ischemic heart disease"
         },
@@ -35,7 +35,14 @@
   },
   "OR": {
     "left": {
-      "raw_text": "creatinine level of 1,5 mg/dL or more"
+      "AND": {
+        "left": {
+          "raw_text": "creatinine level"
+        },
+        "right": {
+          "raw_text": "of 1,5 mg/dL or more"
+        }
+      }
     },
     "right": {
       "OR": {
@@ -45,7 +52,10 @@
         "right": {
           "OR": {
             "left": {
-              "raw_text": "or musculoskeletal disorders that would prevent them to follow the test diets or exercise interventions"
+              "raw_text": "or musculoskeletal disorders"
+            },
+            "right": {
+              "raw_text": "that would prevent them to follow the test diets or exercise interventions"
             }
           }
         }
@@ -54,15 +64,48 @@
   },
   "OR": {
     "left": {
-      "raw_text": "liver dysfunction with a factor of at least 3 above the upper limit of normal in AST and ALT levels"
+      "AND": {
+        "left": {
+          "raw_text": "liver dysfunction"
+        },
+        "right": {
+          "raw_text": "with a factor of at least 3 above the upper limit of normal"
+        }
+      }
     },
     "right": {
       "OR": {
         "left": {
-          "raw_text": "thyroid dysfunction, with serum TSH out of normal limits"
+          "raw_text": "in AST and ALT levels"
+        }
+      }
+    }
+  },
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "thyroid dysfunction"
         },
         "right": {
-          "raw_text": "or use of immunosuppressive drugs, corticosteroids or anorexigen"
+          "raw_text": "with serum TSH out of normal limits"
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "use of immunosuppressive drugs"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or corticosteroids"
+            },
+            "right": {
+              "raw_text": "or anorexigen"
+            }
+          }
         }
       }
     }

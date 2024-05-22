@@ -7,19 +7,16 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "All renal"
+                  "raw_text": "All renal (only) male and female recipients"
                 },
                 "right": {
-                  "raw_text": "male and female recipients"
-                }
-              },
-              "right": {
-                "AND": {
-                  "left": {
-                    "raw_text": "aged = 60"
-                  },
-                  "right": {
-                    "raw_text": "years"
+                  "AND": {
+                    "left": {
+                      "raw_text": "aged = 60"
+                    },
+                    "right": {
+                      "raw_text": "years"
+                    }
                   }
                 }
               }
@@ -30,23 +27,33 @@
                   "raw_text": "undergoing kidney transplantation"
                 },
                 "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
                       "raw_text": "from a living"
                     },
                     "right": {
-                      "raw_text": "or deceased donor"
+                      "OR": {
+                        "left": {
+                          "raw_text": "or deceased donor"
+                        },
+                        "right": {
+                          "raw_text": ", including Expanded Criteria Donors (ECD)"
+                        }
+                      }
                     }
                   }
                 }
               }
             }
-          },
-          "right": {
-            "OR": {
-              "left": {
-                "raw_text": "including Expanded Criteria Donors (ECD)"
-              }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Panel Reactive Antibody (PRA)"
+            },
+            "right": {
+              "raw_text": " < 30%"
             }
           }
         }
@@ -55,17 +62,26 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "Panel Reactive Antibody (PRA)"
+          "raw_text": "Patients who consented to participate in the study"
         },
         "right": {
-          "raw_text": "< 30%."
+          "AND": {
+            "left": {
+              "raw_text": "by signing the informed consent form"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "before the transplant surgery"
+                },
+                "right": {
+                  "raw_text": "to the 1st post-operative day)"
+                }
+              }
+            }
+          }
         }
       }
-    }
-  },
-  "AND": {
-    "left": {
-      "raw_text": "Patients who consented to participate in the study by signing the informed consent form before the transplant surgery to the 1st post-operative day)."
     }
   }
 }

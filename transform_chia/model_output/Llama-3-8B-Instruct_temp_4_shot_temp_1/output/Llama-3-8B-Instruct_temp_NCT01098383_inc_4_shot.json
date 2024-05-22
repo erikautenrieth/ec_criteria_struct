@@ -3,42 +3,38 @@
     "left": {
       "AND": {
         "left": {
-          "AND": {
-            "left": {
-              "raw_text": "A formal diagnosis of Autism"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "or Pervasive Developmental Disorder not otherwise specified (PDD-NOS)"
-                },
-                "right": {
-                  "raw_text": ", given by a child neurologist."
-                }
-              }
-            }
-          }
+          "raw_text": "A formal diagnosis of Autism"
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "Age: "
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "10-18"
-                },
-                "right": {
-                  "raw_text": " years."
-                }
-              }
+              "raw_text": "or Pervasive Developmental Disorder not otherwise specified (PDD-NOS)"
             }
           }
+        }
+      },
+      "right": {
+        "given by": {
+          "raw_text": "a child neurologist."
         }
       }
     },
     "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Age: "
+        },
+        "right": {
+          "range": {
+            "min": 10,
+            "max": 18
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
       "raw_text": "A signed parental consent form."
     }
   }

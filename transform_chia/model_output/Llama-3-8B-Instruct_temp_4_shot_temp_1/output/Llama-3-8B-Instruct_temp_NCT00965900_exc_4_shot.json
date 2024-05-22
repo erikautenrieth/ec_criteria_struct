@@ -1,19 +1,12 @@
 {
-  "OR": {
+  "AND": {
     "left": {
-      "AND": {
+      "OR": {
         "left": {
-          "raw_text": "Patients with systolic blood pressure"
+          "raw_text": "Patients with systolic blood pressure <100 mmHg"
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "<100 mmHg"
-            },
-            "right": {
-              "raw_text": "or basal heart rate <60/min"
-            }
-          }
+          "raw_text": "or basal heart rate <60/min"
         }
       }
     },
@@ -35,61 +28,58 @@
       }
     }
   },
-  "OR": {
+  "AND": {
     "left": {
       "OR": {
         "left": {
-          "raw_text": "Severe coagulation disorder: prothrombin time"
+          "raw_text": "Severe coagulation disorder: prothrombin time <40% (or INR >1.7)"
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "<40%"
-            },
-            "right": {
-              "raw_text": "or platelet count <30,000/mm3"
-            }
-          }
+          "raw_text": "or platelet count <30,000/mm3"
         }
       }
     },
     "right": {
       "OR": {
         "left": {
-          "raw_text": "Medium or large sized gastric"
-        },
-        "right": {
-          "raw_text": "or duodenal varices"
-        }
-      }
-    }
-  },
-  "OR": {
-    "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Coexisting malignancy"
+          "raw_text": "Medium or large sized gastric or duodenal varices"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Severe cardiovascular disorder"
+              "raw_text": "Coexisting malignancy"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "renal failure"
+                  "raw_text": "Severe cardiovascular disorder"
                 },
                 "right": {
-                  "raw_text": ", peritonitis"
+                  "OR": {
+                    "left": {
+                      "raw_text": "renal failure"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "peritonitis"
+                        },
+                        "right": {
+                          "raw_text": "or sepsis"
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
           }
         }
       }
-    },
-    "right": {
+    }
+  },
+  "AND": {
+    "left": {
       "OR": {
         "left": {
           "raw_text": "Severe erosive esophagitis"
@@ -100,15 +90,13 @@
               "raw_text": "severe esophageal stricture"
             },
             "right": {
-              "raw_text": ", active gastric"
+              "raw_text": "or active gastric or duodenal ulcer"
             }
           }
         }
       }
-    }
-  },
-  "OR": {
-    "left": {
+    },
+    "right": {
       "OR": {
         "left": {
           "raw_text": "Contraindication to beta-blocker"
@@ -119,14 +107,11 @@
               "raw_text": "Pregnancy"
             },
             "right": {
-              "raw_text": "or"
+              "raw_text": "or Refusal to give consent to participate in the trial"
             }
           }
         }
       }
-    },
-    "right": {
-      "raw_text": "Refusal to give consent to participate in the trial"
     }
   }
 }

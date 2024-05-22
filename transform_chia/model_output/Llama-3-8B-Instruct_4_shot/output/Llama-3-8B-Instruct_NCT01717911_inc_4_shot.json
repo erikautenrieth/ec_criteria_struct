@@ -1,11 +1,7 @@
 {
-  "AND": {
+  "OR": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Recently diagnosed type 2 diabetic patients"
-        }
-      }
+      "raw_text": "Recently diagnosed type 2 diabetic patients."
     },
     "right": {
       "AND": {
@@ -15,7 +11,7 @@
               "raw_text": "Fasting plasma glucose"
             },
             "right": {
-              "BETWEEN": {
+              "between": {
                 "left": {
                   "raw_text": "200-300 mg/dl"
                 }
@@ -29,7 +25,7 @@
               "raw_text": "A1C level"
             },
             "right": {
-              "BETWEEN": {
+              "between": {
                 "left": {
                   "raw_text": "7% and 10%"
                 }
@@ -40,27 +36,30 @@
       }
     }
   },
-  "AND": {
+  "OR": {
     "left": {
       "AND": {
         "left": {
+          "raw_text": "Those who"
+        },
+        "right": {
           "AND": {
             "left": {
-              "raw_text": "Those who age"
+              "raw_text": "age"
             },
             "right": {
-              "BETWEEN": {
+              "between": {
                 "left": {
-                  "raw_text": "30 and 80 years old"
+                  "raw_text": "30 and 80"
                 }
               }
             }
           }
-        },
-        "right": {
-          "raw_text": "and can inject insulin by themselves"
         }
       }
+    },
+    "right": {
+      "raw_text": "can inject insulin by themselves."
     }
   }
 }

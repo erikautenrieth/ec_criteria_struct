@@ -1,69 +1,75 @@
 {
   "AND": {
     "left": {
-      "AND": {
+      "NOT": {
         "left": {
-          "AND": {
+          "OR": {
             "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Known or suspected allergy to trial product(s)"
-                },
-                "right": {
-                  "raw_text": "or related products"
-                }
-              }
+              "raw_text": "Known or suspected allergy to trial product(s)"
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "Subjects who are unlikely to comply"
-                },
-                "right": {
-                  "raw_text": "with protocol requirements, e.g. uncooperative attitude, inability to return for the final visit"
-                }
-              }
+              "raw_text": "or related products"
             }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Subjects who are unlikely to comply with protocol requirements"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Subjects who previously enrolled in this study"
+              "raw_text": "e.g. uncooperative attitude"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Females of childbearing potential"
+                  "raw_text": "inability to return for the final visit"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Subjects who previously enrolled in this study"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Females of childbearing potential who are"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "pregnant"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "breast-feeding"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "raw_text": "who are"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "pregnant"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "breast-feeding"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "intend to become pregnant"
-                                },
-                                "right": {
-                                  "raw_text": "or"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "or intend to become pregnant"
                     }
                   }
                 }
@@ -72,9 +78,18 @@
           }
         }
       }
-    },
-    "right": {
-      "raw_text": "The receipt of any investigational product within 3 months prior to this trial"
+    }
+  }
+}
+
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "The receipt of any investigational product within 3 months prior to this trial"
+        }
+      }
     }
   }
 }

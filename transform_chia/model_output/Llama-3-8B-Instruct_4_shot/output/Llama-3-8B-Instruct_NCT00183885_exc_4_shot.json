@@ -1,42 +1,38 @@
 {
   "AND": {
     "left": {
-      "AND": {
+      "OR": {
+        "left": {
+          "raw_text": "Patients who have received prior chemotherapy for unresectable disease"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Patients with any active"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or uncontrolled infection"
+                },
+                "right": {
+                  "raw_text": ", including known HIV infection."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
         "left": {
           "AND": {
             "left": {
-              "AND": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Patients who have received prior chemotherapy"
-                    },
-                    "right": {
-                      "raw_text": "for unresectable disease"
-                    }
-                  }
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Patients with any active or uncontrolled infection"
-                    },
-                    "right": {
-                      "raw_text": ", including known HIV infection."
-                    }
-                  }
-                }
-              }
+              "raw_text": "Patients with psychiatric disorders"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Patients with psychiatric disorders"
-                },
-                "right": {
-                  "raw_text": "that would interfere with consent or follow-up."
-                }
-              }
+              "raw_text": "that would interfere with consent or follow-up."
             }
           }
         },
@@ -58,15 +54,15 @@
           }
         }
       }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Patients with any other severe concurrent disease"
-        },
-        "right": {
-          "raw_text": ", which in the judgment of the investigator, would make the patient inappropriate for entry into this study."
-        }
+    }
+  },
+  "right": {
+    "OR": {
+      "left": {
+        "raw_text": "Patients with any other severe concurrent disease"
+      },
+      "right": {
+        "raw_text": ", which in the judgment of the investigator, would make the patient inappropriate for entry into this study."
       }
     }
   }

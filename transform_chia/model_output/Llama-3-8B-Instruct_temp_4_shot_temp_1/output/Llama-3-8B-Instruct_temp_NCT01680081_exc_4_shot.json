@@ -1,26 +1,75 @@
 {
-  "OR": {
+  "AND": {
     "left": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "Known allergy to iodinated contrast media"
+                  "OR": {
+                    "left": {
+                      "raw_text": "Contraindication of CT"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Known allergy to iodinated contrast media"
+                        },
+                        "right": {
+                          "raw_text": "or history of contrast-induced nephropathy"
+                        }
+                      }
+                    }
+                  }
                 },
                 "right": {
-                  "raw_text": "or history of contrast-induced nephropathy"
+                  "OR": {
+                    "left": {
+                      "raw_text": "Decreased renal function"
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "elevated serum creatinine"
+                        },
+                        "right": {
+                          "raw_text": " (>1.5mg/dl)"
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "Decreased renal function: elevated serum creatinine"
+                  "raw_text": "Contraindication to beta-blockers"
                 },
                 "right": {
-                  "raw_text": " (>1.5mg/dl)"
+                  "OR": {
+                    "left": {
+                      "raw_text": "Severe arrhythmia"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "arterial fibrillation"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "or uncontrolled tachyarrhythmia"
+                            },
+                            "right": {
+                              "raw_text": ", or advanced atrioventricular block"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -29,20 +78,20 @@
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Contraindication to beta-blockers"
+              "raw_text": "Contraindication of MRI"
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "Severe arrhythmia: arterial fibrillation"
+                  "raw_text": "Claustrophobia"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "or uncontrolled tachyarrhythmia"
+                      "raw_text": "Metallic hazards"
                     },
                     "right": {
-                      "raw_text": ", or advanced atrioventricular block (second or third degree heart block)"
+                      "raw_text": "Pacemaker implant"
                     }
                   }
                 }
@@ -55,28 +104,7 @@
     "right": {
       "OR": {
         "left": {
-          "AND": {
-            "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Claustrophobia"
-                },
-                "right": {
-                  "raw_text": "Metallic hazards"
-                }
-              }
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "Pacemaker implant"
-                },
-                "right": {
-                  "raw_text": "eGFR<30 ml/min"
-                }
-              }
-            }
-          }
+          "raw_text": "eGFR<30 ml/min"
         },
         "right": {
           "OR": {
@@ -86,12 +114,19 @@
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Limited life expectancy due to cancer"
+                  "raw_text": "Limited life expectancy"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "or end-stage renal or liver disease"
+                      "raw_text": "due to cancer"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or end-stage renal or liver disease"
+                        }
+                      }
                     }
                   }
                 }

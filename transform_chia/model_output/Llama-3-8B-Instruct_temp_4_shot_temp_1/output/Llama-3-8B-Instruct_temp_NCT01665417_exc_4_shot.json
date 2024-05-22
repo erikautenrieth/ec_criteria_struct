@@ -1,38 +1,46 @@
 {
   "AND": {
     "left": {
-      "AND": {
+      "NOT": {
         "left": {
-          "AND": {
+          "OR": {
             "left": {
               "raw_text": "Prior chemotherapy"
             },
             "right": {
-              "raw_text": "Prior treatment with gefitinib"
-            }
-          },
-          "right": {
-            "OR": {
-              "left": {
-                "raw_text": ", erlotinib"
-              },
-              "right": {
-                "raw_text": ", or other drugs that target EGFR"
+              "OR": {
+                "left": {
+                  "raw_text": "Prior treatment with gefitinib"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", erlotinib"
+                    },
+                    "right": {
+                      "raw_text": ", or other drugs that target EGFR"
+                    }
+                  }
+                }
               }
             }
           }
         }
-      },
-      "right": {
-        "AND": {
-          "left": {
-            "raw_text": "Patients must not be receiving any other investigational agents"
-          },
-          "right": {
-            "OR": {
-              "left": {
-                "raw_text": "Any evidence of interstitial lung disease"
-              }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "Patients must not be receiving any other investigational agents"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Any evidence of interstitial lung disease"
             }
           }
         }

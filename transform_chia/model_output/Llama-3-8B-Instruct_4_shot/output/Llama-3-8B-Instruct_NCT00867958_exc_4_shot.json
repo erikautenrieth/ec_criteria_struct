@@ -1,7 +1,7 @@
 {
-  "AND": {
+  "OR": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
           "raw_text": "Patient has an allergy to nickel."
         }
@@ -52,7 +52,7 @@
                                               "raw_text": ", carcinomatosis"
                                             },
                                             "right": {
-                                              "raw_text": ", or extensively spread inflammatory bowel disease."
+                                              "raw_text": " or extensively spread inflammatory bowel disease."
                                             }
                                           }
                                         }
@@ -77,7 +77,14 @@
     "right": {
       "OR": {
         "left": {
-          "raw_text": "Patient is participating in another clinical trial which may affect this study's outcomes."
+          "AND": {
+            "left": {
+              "raw_text": "Patient is participating in another clinical trial"
+            },
+            "right": {
+              "raw_text": "which may affect this study's outcomes."
+            }
+          }
         }
       }
     }
