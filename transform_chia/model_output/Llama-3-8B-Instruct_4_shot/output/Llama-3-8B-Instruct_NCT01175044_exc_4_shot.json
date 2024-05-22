@@ -5,76 +5,66 @@
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Inability to provide informed consent"
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "or to comply with study assessments"
+                  "raw_text": "Inability to provide informed consent"
                 },
                 "right": {
-                  "raw_text": "(e.g. due to cognitive impairment or geographic distance)."
+                  "OR": {
+                    "left": {
+                      "raw_text": "or to comply with study assessments"
+                    },
+                    "right": {
+                      "raw_text": "(e.g. due to cognitive impairment or geographic distance)."
+                    }
+                  }
                 }
               }
+            },
+            "right": {
+              "raw_text": "Age = 17."
             }
           }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Age = 17."
+              "raw_text": "Allergy to povidone iodine."
             },
             "right": {
-              "raw_text": "Allergy to povidone iodine."
+              "OR": {
+                "left": {
+                  "raw_text": "Any condition requiring antibiotics"
+                },
+                "right": {
+                  "raw_text": "14 days prior to arriving for surgery."
+                }
+              }
             }
           }
         }
       }
     },
     "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Any condition requiring antibiotics"
-            },
-            "right": {
-              "raw_text": "14 days prior to arriving for surgery."
-            }
-          }
+          "raw_text": "Patients with chronic immunosuppression"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Patients with chronic immunosuppression"
+              "raw_text": "(such as HIV/AIDS)."
             },
             "right": {
-              "raw_text": "(such as HIV/AIDS)."
+              "OR": {
+                "left": {
+                  "raw_text": "Unable to adhere to follow up schedule"
+                },
+                "right": {
+                  "raw_text": "and treatment."
+                }
+              }
             }
-          }
-        }
-      }
-    }
-  },
-  "right": {
-    "AND": {
-      "left": {
-        "OR": {
-          "left": {
-            "raw_text": "Unable to adhere to follow up schedule"
-          },
-          "right": {
-            "raw_text": "and treatment."
-          }
-        }
-      },
-      "right": {
-        "OR": {
-          "left": {
-            "raw_text": "Patients scheduled to undergo revision total knee arthroplasty"
-          },
-          "right": {
-            "raw_text": "for infectious reasons."
           }
         }
       }

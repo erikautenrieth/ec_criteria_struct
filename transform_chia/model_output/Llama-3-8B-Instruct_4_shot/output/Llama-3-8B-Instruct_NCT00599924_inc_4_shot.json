@@ -1,28 +1,52 @@
 {
   "AND": {
     "left": {
+      "raw_text": "Advanced solid tumor malignancy"
+    },
+    "right": {
       "AND": {
         "left": {
-          "raw_text": "Advanced solid tumor malignancy"
+          "raw_text": "during expansion at the maximum tolerated dose"
         },
         "right": {
           "NOT": {
             "left": {
               "OR": {
                 "left": {
-                  "raw_text": "during expansion at the maximum tolerated dose"
+                  "raw_text": "entry will be limited to patients with"
                 },
                 "right": {
-                  "raw_text": ", entry will be limited to patients with adenocarcinoma of the colon"
+                  "OR": {
+                    "left": {
+                      "raw_text": "adenocarcinoma of the colon"
+                    },
+                    "right": {
+                      "raw_text": "or rectum"
+                    }
+                  }
                 }
               }
             }
           }
         }
       }
-    },
-    "right": {
-      "raw_text": "Eastern Cooperative Oncology Group (ECOG) 0 or 1"
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "raw_text": "Eastern Cooperative Oncology Group (ECOG)"
+      },
+      "right": {
+        "OR": {
+          "left": {
+            "raw_text": "0"
+          },
+          "right": {
+            "raw_text": "or 1"
+          }
+        }
+      }
     }
   }
 }

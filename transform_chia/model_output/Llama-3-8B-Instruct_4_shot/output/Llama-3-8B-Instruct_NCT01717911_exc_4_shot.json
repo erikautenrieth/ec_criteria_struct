@@ -20,22 +20,43 @@
     "right": {
       "AND": {
         "left": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Impaired liver function (ALT > 120 U/L)"
+              "AND": {
+                "left": {
+                  "raw_text": "Impaired liver function"
+                },
+                "right": {
+                  "raw_text": "(ALT > 120 U/L)"
+                }
+              }
             },
             "right": {
-              "raw_text": "or"
+              "AND": {
+                "left": {
+                  "raw_text": "Impaired renal function"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Serum creatinine >1.5 mg/dL"
+                    },
+                    "right": {
+                      "raw_text": "in male"
+                    }
+                  }
+                }
+              }
             }
           }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Impaired renal function (Serum creatinine >1.5 mg/dL in male, >1.4 mg/dL in female )"
+              "raw_text": "Recently suffered from MI"
             },
             "right": {
-              "raw_text": "or"
+              "raw_text": "or CVA."
             }
           }
         }
@@ -43,23 +64,13 @@
     }
   },
   "right": {
-    "OR": {
+    "AND": {
       "left": {
-        "raw_text": "Recently suffered from MI or CVA"
+        "raw_text": "Patients are acute intercurrent illness"
       },
       "right": {
-        "OR": {
-          "left": {
-            "raw_text": "Patients are acute intercurrent illness"
-          },
-          "right": {
-            "raw_text": "or"
-          }
-        }
+        "raw_text": "2-hour C-peptide level < 1.8 ng/mL."
       }
     }
-  },
-  "right": {
-    "raw_text": "2-hour C-peptide level < 1.8 ng/mL."
   }
 }

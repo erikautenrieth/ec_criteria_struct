@@ -15,7 +15,14 @@
         "left": {
           "AND": {
             "left": {
-              "raw_text": "A male or female"
+              "OR": {
+                "left": {
+                  "raw_text": "A male"
+                },
+                "right": {
+                  "raw_text": "or female"
+                }
+              }
             },
             "right": {
               "raw_text": "aged 61 years or above at the time of the first vaccination."
@@ -33,16 +40,12 @@
     }
   },
   "right": {
-    "AND": {
+    "OR": {
       "left": {
         "raw_text": "Healthy subjects"
       },
       "right": {
-        "OR": {
-          "left": {
-            "raw_text": "or subjects with well controlled underlying disease."
-          }
-        }
+        "raw_text": "or subjects with well controlled underlying disease."
       }
     }
   }

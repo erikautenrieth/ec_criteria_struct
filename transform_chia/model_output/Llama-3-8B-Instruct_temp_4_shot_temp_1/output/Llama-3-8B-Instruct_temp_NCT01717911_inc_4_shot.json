@@ -12,74 +12,39 @@
         "left": {
           "AND": {
             "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Fasting plasma glucose"
-                },
-                "right": {
-                  "BETWEEN": {
-                    "left": {
-                      "raw_text": "200-300"
-                    },
-                    "right": {
-                      "raw_text": "mg/dl"
-                    }
-                  }
-                }
-              }
+              "raw_text": "Fasting plasma glucose"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "A1C level"
-                },
-                "right": {
-                  "BETWEEN": {
-                    "left": {
-                      "raw_text": "7%"
-                    },
-                    "right": {
-                      "raw_text": "10%"
-                    }
-                  }
-                }
-              }
+              "raw_text": "between 200-300 mg/dl"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "A1C level between 7%"
+            },
+            "right": {
+              "raw_text": "and 10%."
             }
           }
         }
       }
     }
   },
-  "right": {
-    "AND": {
-      "left": {
-        "AND": {
-          "left": {
-            "AND": {
-              "left": {
-                "AND": {
-                  "left": {
-                    "raw_text": "Those who age"
-                  },
-                  "right": {
-                    "BETWEEN": {
-                      "left": {
-                        "raw_text": "30"
-                      },
-                      "right": {
-                        "raw_text": "80"
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "right": {
-              "raw_text": "and can inject insulin by themselves."
-            }
-          }
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Those who age"
+        },
+        "right": {
+          "raw_text": "between 30 and 80 years old"
         }
       }
+    },
+    "right": {
+      "raw_text": "and can inject insulin by themselves."
     }
   }
 }

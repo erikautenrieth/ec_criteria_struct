@@ -5,61 +5,61 @@
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Known or suspected allergy"
+              "AND": {
+                "left": {
+                  "raw_text": "Known or suspected allergy"
+                },
+                "right": {
+                  "raw_text": "to trial product(s) or related products."
+                }
+              }
             },
             "right": {
-              "raw_text": "to trial product(s) or related products"
+              "OR": {
+                "left": {
+                  "raw_text": "Subjects who are unlikely to comply"
+                },
+                "right": {
+                  "raw_text": "with protocol requirements, e.g. uncooperative attitude, inability to return for the final visit."
+                }
+              }
             }
           }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Subjects who are unlikely to comply"
+              "raw_text": "Subjects who previously enrolled"
             },
             "right": {
-              "raw_text": "with protocol requirements, e.g. uncooperative attitude, inability to return for the final visit"
+              "raw_text": "in this study."
             }
           }
         }
       }
     },
     "right": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Subjects who previously enrolled in this study"
+          "raw_text": "Females of childbearing potential"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "Females of childbearing potential"
+              "raw_text": "who are pregnant"
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "who are"
+                  "raw_text": "or breast-feeding"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "pregnant"
+                      "raw_text": "or intend to become pregnant"
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "breast-feeding"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "or intend to become pregnant"
-                            },
-                            "right": {
-                              "raw_text": "or are not using adequate contraceptive methods"
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "or are not using adequate contraceptive methods."
                     }
                   }
                 }
@@ -69,5 +69,8 @@
         }
       }
     }
+  },
+  "right": {
+    "raw_text": "The receipt of any investigational product within 3 months prior to this trial."
   }
 }

@@ -3,86 +3,23 @@
     "left": {
       "AND": {
         "left": {
-          "AND": {
+          "OR": {
             "left": {
-              "AND": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "female"
-                    },
-                    "right": {
-                      "raw_text": "or male"
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "of"
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "50"
-                        },
-                        "right": {
-                          "TO": {
-                            "left": {
-                              "raw_text": "85"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "right": {
-                "AND": {
-                  "left": {
-                    "raw_text": "with"
-                  },
-                  "right": {
-                    "raw_text": "a care giver"
-                  }
-                }
-              }
-            }
-          },
-          "right": {
-            "AND": {
-              "left": {
-                "raw_text": "Mini Mental Status (MMS) test"
-              },
-              "right": {
-                "raw_text": "between"
-              }
+              "raw_text": "female"
+            },
+            "right": {
+              "raw_text": "or male"
             }
           }
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "16"
+              "raw_text": "of 50 to 85 years old"
             },
             "right": {
-              "TO": {
-                "left": {
-                  "raw_text": "26"
-                }
-              }
+              "raw_text": "with a care giver"
             }
-          }
-        }
-      },
-      "right": {
-        "AND": {
-          "left": {
-            "raw_text": "Clinical Dementia Rating (CDR) test"
-          },
-          "right": {
-            "raw_text": "inferior or equal to 1"
           }
         }
       }
@@ -90,28 +27,39 @@
     "right": {
       "AND": {
         "left": {
-          "AND": {
-            "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "National Institute of Neurological and Communicative Disorders and Stroke / Alzheimer's Disease and Related Disorders Association (NINCDS/ADRDA) test"
-                },
-                "right": {
-                  "raw_text": "positive for an Alzheimer's disease"
-                }
-              }
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Diagnostic and Statistical Manual of Mental Disorders, 4th Edition (DSM IV) test"
-                },
-                "right": {
-                  "raw_text": "positive for dementia"
-                }
-              }
-            }
+          "raw_text": "Mini Mental Status (MMS) test"
+        },
+        "right": {
+          "between": {
+            "start": 16,
+            "end": 26
           }
+        }
+      },
+      "AND": {
+        "left": {
+          "raw_text": "Clinical Dementia Rating (CDR) test"
+        },
+        "right": {
+          "lessThanOrEqualTo": {
+            "value": 1
+          }
+        }
+      },
+      "AND": {
+        "left": {
+          "raw_text": "National Institute of Neurological and Communicative Disorders and Stroke / Alzheimer's Disease and Related Disorders Association (NINCDS/ADRDA) test"
+        },
+        "right": {
+          "raw_text": "positive for an Alzheimer's disease"
+        }
+      },
+      "AND": {
+        "left": {
+          "raw_text": "Diagnostic and Statistical Manual of Mental Disorders, 4th Edition (DSM IV) test"
+        },
+        "right": {
+          "raw_text": "positive for dementia"
         }
       }
     }

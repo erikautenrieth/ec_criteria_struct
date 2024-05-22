@@ -3,42 +3,24 @@
     "left": {
       "AND": {
         "left": {
-          "AND": {
+          "OR": {
             "left": {
               "raw_text": "Liver cirrhosis"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Age between"
-                    },
-                    "right": {
-                      "raw_text": "18 and 70 years"
-                    }
-                  }
-                }
-              }
             }
           }
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "Esophageal varices with high bleeding risk: more than F2 and red color sign"
+              "raw_text": "Age between"
             },
             "right": {
-              "NOT": {
+              "AND": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "No previous history of upper gastrointestinal bleeding"
-                    },
-                    "right": {
-                      "raw_text": "or"
-                    }
-                  }
+                  "raw_text": "18"
+                },
+                "right": {
+                  "raw_text": "and 70 years"
                 }
               }
             }
@@ -49,28 +31,29 @@
     "right": {
       "AND": {
         "left": {
-          "NOT": {
+          "OR": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Do not take beta-blocker"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": ", ACE inhibitor"
-                    },
-                    "right": {
-                      "raw_text": ", or nitrate"
-                    }
+              "raw_text": "Esophageal varices with high bleeding risk: more than F2 and red color sign"
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "raw_text": "No previous history of upper gastrointestinal bleeding"
+              }
+            },
+            "right": {
+              "NOT": {
+                "OR": {
+                  "left": {
+                    "raw_text": "No previous history of endoscopic, radiologic, or surgical therapy for varices or ascites"
                   }
                 }
               }
             }
           }
-        },
-        "right": {
-          "raw_text": "Child-Pugh score <12"
         }
       }
     }

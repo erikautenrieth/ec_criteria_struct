@@ -43,15 +43,36 @@
         "right": {
           "AND": {
             "left": {
-              "raw_text": "Patients without functional impairment of organs:"
+              "raw_text": "Patients without functional impairment of organs"
             },
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "liver function: total bilirubin, AST, ALT, alfa-GT and alkaline phosphatase"
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "liver function: total bilirubin"
+                        },
+                        "right": {
+                          "raw_text": ", AST, ALT, alfa-GT"
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "and alkaline phosphatase less than 3 times the upper limit of normal"
+                    }
+                  }
                 },
                 "right": {
-                  "raw_text": "less than 3 times the upper limit of normal"
+                  "AND": {
+                    "left": {
+                      "raw_text": "laboratory renal function: serum creatinine"
+                    },
+                    "right": {
+                      "raw_text": "< 2 mg/dL or clearance creatinine > 30 ml/min"
+                    }
+                  }
                 }
               }
             }
@@ -62,15 +83,15 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "laboratory renal function: serum creatinine < 2 mg/dL"
+          "raw_text": "cardiac function (Appendix B) normal"
         },
         "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "or clearance creatinine > 30 ml/min"
+              "raw_text": "ventricular EF > 50%"
             },
             "right": {
-              "raw_text": "(except renal function attributable to LAL)"
+              "raw_text": ", absence of severe chronic respiratory disease."
             }
           }
         }

@@ -11,15 +11,21 @@
                     "left": {
                       "AND": {
                         "left": {
-                          "raw_text": "Histopathological verification of glioblastoma multiforme (GBM: WHO grade IV)"
-                        },
-                        "right": {
-                          "OR": {
+                          "AND": {
                             "left": {
-                              "raw_text": "in remission (Group A)"
+                              "AND": {
+                                "left": {
+                                  "raw_text": "Histopathological verification of glioblastoma multiforme"
+                                },
+                                "right": {
+                                  "raw_text": "(GBM: WHO grade IV) in remission (Group A)"
+                                }
+                              }
                             },
-                            "right": {
-                              "raw_text": "or with active disease (Group B)"
+                            "OR": {
+                              "left": {
+                                "raw_text": "or with active disease (Group B)."
+                              }
                             }
                           }
                         }
@@ -40,10 +46,10 @@
                 "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "Life expectancy 6 weeks or greater"
+                      "raw_text": "Life expectancy"
                     },
                     "right": {
-                      "raw_text": "Karnofsky/Lansky score 50 or greater"
+                      "raw_text": "6 weeks or greater"
                     }
                   }
                 }
@@ -52,31 +58,10 @@
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Patient or parent/guardian capable of providing informed consent"
+                  "raw_text": "Karnofsky/Lansky score"
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "Bilirubin less than 1.5x upper limit of normal"
-                    },
-                    "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "AST less than 3x upper limit of normal"
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "serum creatinine less than 1.5x normal"
-                            },
-                            "right": {
-                              "raw_text": "and Hgb 8.0 g/dL or greater"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "raw_text": "50 or greater"
                 }
               }
             }
@@ -85,10 +70,10 @@
         "right": {
           "AND": {
             "left": {
-              "raw_text": "Pulse oximetry of 90% or greater on room air"
+              "raw_text": "Patient or parent/guardian"
             },
             "right": {
-              "raw_text": "Sexually active patients must be willing to utilize one of the more effective birth control methods for 6 months after the CTL infusion. The male partner should use a condom."
+              "raw_text": "capable of providing informed consent"
             }
           }
         }
@@ -97,10 +82,24 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "Patients should have been off other investigational antineoplastic therapy for one month prior to entry in this study."
+          "raw_text": "Bilirubin less than 1.5x upper limit of normal"
         },
         "right": {
-          "raw_text": "Informed consent explained to, understood by and signed by patient/guardian. Patient/guardian given copy of informed consent."
+          "AND": {
+            "left": {
+              "raw_text": "AST less than 3x upper limit of normal"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "serum creatinine less than 1.5x normal"
+                },
+                "right": {
+                  "raw_text": "and Hgb 8.0 g/dL or greater"
+                }
+              }
+            }
+          }
         }
       }
     }

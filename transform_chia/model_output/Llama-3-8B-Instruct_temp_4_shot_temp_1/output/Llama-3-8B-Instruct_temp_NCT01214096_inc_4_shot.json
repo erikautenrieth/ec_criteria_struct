@@ -1,12 +1,117 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Age: 18-75 years old"
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Age"
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "18-75 years old"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "no limitation in gender"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             },
             "right": {
-              "NOT": {
-                "raw_text": "no limitation in gender"
+              "OR": {
+                "left": {
+                  "raw_text": "2. Left ventricular ejection fraction (LVEF) ≤ 40%"
+                },
+                "right": {
+                  "raw_text": "(ECHO);"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "3. Patients with chronic heart failure"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "(NYHA class II"
+                },
+                "right": {
+                  "raw_text": "or III);"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "4. In the past one month, the clinical condition"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "(including history"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "clinical symptoms"
+                },
+                "right": {
+                  "raw_text": "and signs) was relatively stable;"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "5. Patients on standard treatment"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "of chronic heart failure at the target dose"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or maximum tolerance dose for over 1 month"
+                },
+                "right": {
+                  "raw_text": ", or unchanged dose in last 1 month;"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "6. Understand and sign the informed consent form;"
+    }
+  }
+}

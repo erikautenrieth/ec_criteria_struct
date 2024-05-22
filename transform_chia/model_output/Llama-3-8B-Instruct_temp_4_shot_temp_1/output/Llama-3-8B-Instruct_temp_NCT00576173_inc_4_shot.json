@@ -3,54 +3,61 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "Patients with a histologically, radiologically or haematologically confirmed malignancy"
-        },
-        "right": {
-          "raw_text": "whose pain is judged by the investigator to be caused by the malignancy"
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Patients must have been on a stable daily dose of weak opioids or strong opioids"
-        },
-       assistant
-
-Here is the JSON representation of the eligibility criteria:
-
-```
-{
-  "AND": {
-    "left": {
-      "AND": {
-        "left": {
-          "raw_text": "Patients with a histologically, radiologically or haematologically confirmed malignancy"
-        },
-        "right": {
-          "raw_text": "whose pain is judged by the investigator to be caused by the malignancy"
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "Patients must have been on a stable daily dose of weak opioids or strong opioids"
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Patients with a histologically"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", radiologically"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or haematologically confirmed malignancy"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "whose pain is judged by the investigator to be caused by the malignancy"
+            }
+          }
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "for at least 72 hours prior to the start the study"
+              "raw_text": "Patients must have been on a stable daily dose"
             },
             "right": {
-              "raw_text": "and must remain at the same dosage for the duration of the study"
+              "AND": {
+                "left": {
+                  "raw_text": "of weak opioids or strong opioids"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "for at least 72 hours prior to the start"
+                    },
+                    "right": {
+                      "raw_text": "the study and must remain at the same dosage"
+                    }
+                  }
+                }
+              }
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "Patients must have a VAS (Visual analog scale) >=40mm"
     }
   }
 }
-```
-
-Let me know if you have any further requests!

@@ -1,147 +1,150 @@
 {
-  "OR": {
-    "left": {
-      "raw_text": "1. Patients over the age of 85 years except at the discretion of the Investigator and with agreement of the Sponsor."
-    },
-    "right": {
-      "OR": {
+  "OR": [
+    {
+      "AND": {
         "left": {
-          "raw_text": "2. Diagnosis of acute promyelocytic leukemia"
+          "raw_text": "Patients over the age of 85 years"
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "3. Diagnosis of chronic myelogenous leukemia (CML) in blast crisis"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "4. AML in relapse or refractory after 3 or more previous lines of chemotherapy (and/or HSCT) treatment"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "5. AML or antecedent MDS secondary to prior chemotherapy"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "6. Persistent clinically significant non-hematological toxicity that is Grade >1 by NCI CTCAE v4 from prior chemotherapy"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "7. Patients who have had HSCT and are within 100 days of transplant and/or are still taking immunosuppressive drugs and/or have clinically significant graft-versus-host disease requiring treatment and/or have >Grade 1 persistent non hematological toxicity related to the transplant"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "8. Clinically active central nervous system (CNS) leukemia"
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "Patients with CNS leukemia, which is controlled, but who are still receiving IT therapy at study entry may be considered eligible and continue receive IT therapy at the discretion of the Investigator and with agreement of the Sponsor."
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "9. Patients who have previously received AC220"
-                                        },
-                                        "right": {
-                                          "OR": {
-                                            "left": {
-                                              "raw_text": "10. Disseminated intravascular coagulation (DIC) (diagnosis by laboratory or clinical assessment)"
-                                            },
-                                            "right": {
-                                              "OR": {
-                                                "left": {
-                                                  "raw_text": "11. Major surgery within 4 weeks prior to enrollment in the study"
-                                                },
-                                                "right": {
-                                                  "OR": {
-                                                    "left": {
-                                                      "raw_text": "12. Radiation therapy within 4 weeks prior to, or concurrent with study"
-                                                    },
-                                                    "right": {
-                                                      "OR": {
-                                                        "left": {
-                                                          "raw_text": "13. Use of concomitant drugs that prolong QT/QTc interval and/or are CYP3A4 inhibitors are prohibited with the exception of antibiotics, antifungals, and other antimicrobials that are used as standard of care to prevent or treat infections and other such drugs that are considered absolutely essential for the care of the patient."
-                                                        },
-                                                        "right": {
-                                                          "OR": {
-                                                            "left": {
-                                                              "raw_text": "14. Uncontrolled or significant cardiovascular disease"
-                                                            },
-                                                            "right": {
-                                                              "OR": {
-                                                                "left": {
-                                                                  "raw_text": "15. Women who are pregnant, lactating, or unwilling to use contraception if of childbearing potential"
-                                                                },
-                                                                "right": {
-                                                                  "OR": {
-                                                                    "left": {
-                                                                      "raw_text": "16. Men who are unwilling to use contraception if their partners are of childbearing potential"
-                                                                    },
-                                                                    "right": {
-                                                                      "OR": {
-                                                                        "left": {
-                                                                          "raw_text": "17. Active, uncontrolled infection"
-                                                                        },
-                                                                        "right": {
-                                                                          "OR": {
-                                                                            "left": {
-                                                                              "raw_text": "18. Human immunodeficiency virus positivity"
-                                                                            },
-                                                                            "right": {
-                                                                              "OR": {
-                                                                                "left": {
-                                                                                  "raw_text": "19. Active hepatitis B or C or other active liver disease"
-                                                                                },
-                                                                                "right": {
-                                                                                  "OR": {
-                                                                                    "left": {
-                                                                                      "raw_text": "20. History of cancer, except Stage 1 cervix or nonmelanotic skin cancer, with the possible exception of patients in complete remission"
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
+          "NOT": {
+            "OR": [
+              {
+                "raw_text": "except at the discretion of the Investigator"
+              },
+              {
+                "raw_text": "and with agreement of the Sponsor."
               }
-            }
+            ]
           }
         }
       }
+    },
+    {
+      "raw_text": "Diagnosis of acute promyelocytic leukemia"
+    },
+    {
+      "raw_text": "Diagnosis of chronic myelogenous leukemia (CML) in blast crisis"
+    },
+    {
+      "AND": {
+        "left": {
+          "raw_text": "AML in relapse or refractory"
+        },
+        "right": {
+          "raw_text": "after 3 or more previous lines of chemotherapy (and/or HSCT) treatment"
+        }
+      }
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "AML or antecedent MDS secondary to prior chemotherapy"
+        },
+        {
+          "raw_text": "Persistent clinically significant non-hematological toxicity that is Grade >1 by NCI CTCAE v4 from prior chemotherapy"
+        }
+      ]
+    },
+    {
+      "AND": {
+        "left": {
+          "raw_text": "Patients who have had HSCT"
+        },
+        "right": {
+          "OR": [
+            {
+              "raw_text": "and are within 100 days of transplant"
+            },
+            {
+              "raw_text": "and/or are still taking immunosuppressive drugs"
+            },
+            {
+              "raw_text": "and/or have clinically significant graft-versus-host disease requiring treatment"
+            },
+            {
+              "raw_text": "and/or have >Grade 1 persistent non hematological toxicity related to the transplant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "raw_text": "Clinically active central nervous system (CNS) leukemia"
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "Patients who have previously received AC220"
+        },
+        {
+          "raw_text": "Disseminated intravascular coagulation (DIC) (diagnosis by laboratory or clinical assessment)"
+        }
+      ]
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "Major surgery within 4 weeks prior to enrollment in the study"
+        },
+        {
+          "raw_text": "Radiation therapy within 4 weeks prior to, or concurrent with study"
+        }
+      ]
+    },
+    {
+      "NOT": {
+        "OR": [
+          {
+            "raw_text": "Use of concomitant drugs that prolong QT/QTc interval and/or are CYP3A4 inhibitors are prohibited with the exception of"
+          },
+          {
+            "raw_text": "antibiotics, antifungals, and other antimicrobials that are used as standard of care to prevent or treat infections"
+          },
+          {
+            "raw_text": "and other such drugs that are considered absolutely essential for the care of the patient."
+          }
+        ]
+      }
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "Uncontrolled or significant cardiovascular disease"
+        },
+        {
+          "raw_text": "Women who are pregnant, lactating, or unwilling to use contraception if of childbearing potential"
+        }
+      ]
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "Men who are unwilling to use contraception if their partners are of childbearing potential"
+        },
+        {
+          "raw_text": "Active, uncontrolled infection"
+        }
+      ]
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "Human immunodeficiency virus positivity"
+        },
+        {
+          "raw_text": "Active hepatitis B or C or other active liver disease"
+        }
+      ]
+    },
+    {
+      "OR": [
+        {
+          "raw_text": "History of cancer, except Stage 1 cervix or nonmelanotic skin cancer"
+        },
+        {
+          "raw_text": "with the possible exception of patients in complete remission"
+        }
+      ]
     }
-  }
+  ]
 }

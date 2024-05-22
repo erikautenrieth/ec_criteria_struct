@@ -13,30 +13,42 @@
                         "left": {
                           "AND": {
                             "left": {
-                              "raw_text": "men and women"
-                            },
-                            "right": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "30-55 years"
-                                },
-                                "right": {
                                   "AND": {
                                     "left": {
-                                      "raw_text": "with BMI"
-                                    },
-                                    "right": {
                                       "AND": {
                                         "left": {
-                                          "raw_text": "30-40"
+                                          "raw_text": "men and women"
                                         },
                                         "right": {
                                           "AND": {
                                             "left": {
-                                              "raw_text": "and waist"
+                                              "raw_text": "30-55 years"
                                             },
                                             "right": {
-                                              "raw_text": "95 cm or more"
+                                              "AND": {
+                                                "left": {
+                                                  "raw_text": "with BMI"
+                                                },
+                                                "right": {
+                                                  "AND": {
+                                                    "left": {
+                                                      "raw_text": "30-40"
+                                                    },
+                                                    "right": {
+                                                      "AND": {
+                                                        "left": {
+                                                          "raw_text": "and waist"
+                                                        },
+                                                        "right": {
+                                                          "raw_text": "95 cm or more"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
                                             }
                                           }
                                         }
@@ -55,42 +67,56 @@
               }
             }
           }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "normal OGTT"
-            },
-            "right": {
-              "raw_text": "normal treadmill stress test"
-            }
-          }
         }
       }
     },
     "right": {
-      "OR": {
+      "AND": {
         "left": {
           "OR": {
             "left": {
-              "raw_text": "1. low serum levels of HDL cholesterol (<40 mg⁄dL for men or < 50 mg ⁄dL for women)"
+              "raw_text": "normal OGTT"
             },
             "right": {
-              "OR": {
+              "raw_text": "and"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "normal treadmill stress test"
+            },
+            "right": {
+              "AND": {
                 "left": {
-                  "raw_text": "2. hypertriglyceridemia (triglyceride levels of 150 mg⁄dL or greater)"
+                  "OR": {
+                    "left": {
+                      "raw_text": "low serum levels of HDL cholesterol"
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "<40 mg⁄dL for men"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "or < 50 mg ⁄dL for women"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "3. impaired glucose homeostasis (fasting plasma glucose concentration of 110 mg⁄dL or greater or glucose of 140 mg⁄dL or greater after OGTT"
+                      "raw_text": "hypertriglyceridemia"
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "4. hypertension (systolic blood pressure ≥ 140 or diastolic blood pressure ≥90 mmHg or treatment with antihypertensive drugs)"
-                        }
-                      }
+                      "raw_text": "(triglyceride levels of 150 mg⁄dL or greater)"
                     }
                   }
                 }

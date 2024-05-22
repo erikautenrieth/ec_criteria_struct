@@ -1,59 +1,17 @@
 {
   "AND": {
     "left": {
-      "AND": {
+      "OR": {
         "left": {
-          "AND": {
-            "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Malignancy and other significant medical conditions"
-                },
-                "right": {
-                  "raw_text": "that will impact follow up within this program."
-                }
-              }
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "Those less than 18 years of age."
-                },
-                "right": {
-                  "raw_text": "Concomitant interstitial lung disease"
-                }
-              }
-            }
-          }
+          "raw_text": "Malignancy"
         },
         "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "sarcoidosis"
+              "raw_text": "and other significant medical conditions"
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "other significant lung disease"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Those who have had a transplant."
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "Significant travel with work."
-                        },
-                        "right": {
-                          "raw_text": "Unable to make appointments (every three to six months over 2 years)."
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "that will impact follow up within this program."
             }
           }
         }
@@ -62,10 +20,53 @@
     "right": {
       "OR": {
         "left": {
-          "raw_text": "Those residing in another country"
+          "AND": {
+            "left": {
+              "raw_text": "Those less than"
+            },
+            "right": {
+              "raw_text": "18 years of age."
+            }
+          }
         },
         "right": {
-          "raw_text": "or planned absence for more than one month."
+          "AND": {
+            "left": {
+              "raw_text": "Concomitant interstitial lung disease"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", sarcoidosis"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", other significant lung disease."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "OR": {
+      "left": {
+        "AND": {
+          "left": {
+            "raw_text": "Those who have had a transplant."
+          }
+        }
+      },
+      "right": {
+        "AND": {
+          "left": {
+            "raw_text": "Significant travel with work."
+          }
         }
       }
     }

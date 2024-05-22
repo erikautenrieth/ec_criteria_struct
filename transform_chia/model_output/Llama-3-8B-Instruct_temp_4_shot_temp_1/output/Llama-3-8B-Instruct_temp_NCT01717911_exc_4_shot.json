@@ -7,9 +7,13 @@
             "left": {
               "AND": {
                 "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "Previous treated with anti-diabetic medication"
+                      "AND": {
+                        "left": {
+                          "raw_text": "Previous treated with anti-diabetic medication"
+                        }
+                      }
                     }
                   }
                 }
@@ -30,31 +34,10 @@
         "right": {
           "AND": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Impaired liver function"
-                },
-                "right": {
-                  "raw_text": "(ALT > 120 U/L)"
-                }
-              }
+              "raw_text": "Impaired liver function"
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "Impaired renal function"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Serum creatinine >1.5 mg/dL"
-                    },
-                    "right": {
-                      "raw_text": "in male,"
-                    }
-                  }
-                }
-              }
+              "raw_text": "(ALT > 120 U/L)"
             }
           }
         }
@@ -63,23 +46,63 @@
     "right": {
       "AND": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "Recently suffered from MI"
-            },
-            "right": {
-              "raw_text": "or CVA."
-            }
-          }
+          "raw_text": "Impaired renal function"
         },
         "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Patients are acute intercurrent illness"
+              "raw_text": "Serum creatinine"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ">1.5 mg/dL"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "in male"
+                    },
+                    "right": {
+                      "raw_text": ", >1.4 mg/dL"
+                    }
+                  }
+                }
+              }
             }
           }
         }
       }
+    }
+  },
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Recently suffered from MI"
+        },
+        "right": {
+          "raw_text": "or CVA."
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients are"
+        },
+        "right": {
+          "raw_text": "acute intercurrent illness."
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "raw_text": "2-hour C-peptide level"
+    },
+    "right": {
+      "raw_text": "< 1.8 ng/mL."
     }
   }
 }

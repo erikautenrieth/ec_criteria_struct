@@ -1,10 +1,35 @@
 {
   "AND": {
     "left": {
-      "raw_text": "Allergy to any of proposed medications"
+      "OR": {
+        "left": {
+          "raw_text": "Allergy to any of proposed medications"
+        }
+      }
     },
     "right": {
-      "raw_text": "Patients with any active infection including HBV, HCV and HIV."
+      "AND": {
+        "left": {
+          "raw_text": "Patients with any active infection"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "including HBV"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", HCV"
+                },
+                "right": {
+                  "raw_text": ", and HIV."
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

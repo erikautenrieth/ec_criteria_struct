@@ -14,6 +14,9 @@
       "OR": {
         "left": {
           "raw_text": "Have participated in any other studies involving investigational products within 30 days prior to entry into this study."
+        },
+        "right": {
+          "raw_text": "Are undergoing an acute withdrawal syndrome from drugs or alcohol."
         }
       }
     }
@@ -21,16 +24,6 @@
   "AND": {
     "left": {
       "AND": {
-        "left": {
-          "raw_text": "Are undergoing an acute withdrawal syndrome from drugs"
-        },
-        "right": {
-          "raw_text": "or alcohol."
-        }
-      }
-    },
-    "right": {
-      "OR": {
         "left": {
           "AND": {
             "left": {
@@ -44,40 +37,46 @@
                             "left": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "Have an Axis I diagnosis"
+                                  "raw_text": "Have an Axis I diagnosis of"
                                 },
                                 "right": {
-                                  "raw_text": "of Schizophrenia"
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "Schizophrenia"
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "Schizoaffective Disorder"
+                                        },
+                                        "right": {
+                                          "raw_text": "Schizophreniform Disorder"
+                                        }
+                                      }
+                                    }
+                                  }
                                 }
                               }
                             },
                             "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Schizoaffective Disorder"
-                                },
-                                "right": {
-                                  "raw_text": "Schizophreniform Disorder"
-                                }
-                              }
+                              "raw_text": "or Bipolar I Disorder"
                             }
                           }
                         },
                         "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "or Bipolar I Disorder"
-                            }
-                          }
+                          "raw_text": "as diagnosed by the Structured Clinical Interview for DSM-IV Axis I Disorders (SCID-I), and pertinent subsequent for ruling out exclusionary diagnoses."
                         }
                       }
-                    },
-                    "right": {
-                      "raw_text": "as diagnosed by the Structured Clinical Interview for DSM-IV Axis I Disorders (SCID-I), and pertinent subsequent for ruling out exclusionary diagnoses."
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "Have an unstable medical disorder as determined by physical examination or laboratory testing."
                 }
               }
+            },
+            "right": {
+              "raw_text": "The primary investigator will be responsible for making this judgment based on the above."
             }
           }
         }
@@ -85,22 +84,6 @@
     },
     "right": {
       "OR": {
-        "left": {
-          "AND": {
-            "left": {
-              "raw_text": "Have an unstable medical disorder"
-            },
-            "right": {
-              "raw_text": "as determined by physical examination or laboratory testing."
-            }
-          }
-        }
-      }
-    }
-  },
-  "AND": {
-    "left": {
-      "AND": {
         "left": {
           "raw_text": "Had an unsatisfactory response to a previous adequate trial of quetiapine"
         },
@@ -108,22 +91,19 @@
           "raw_text": "as judged by a study investigator."
         }
       }
-    },
-    "right": {
-      "OR": {
-        "left": {
-          "raw_text": "Patients cannot begin psychotherapy during the study period, but may continue if started prior to the study."
-        }
-      }
     }
   },
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Patients who are currently receiving quetiapine therapy may not undergo a washout period and then restart quetiapine in the study."
-        }
-      }
+      "raw_text": "Patients cannot begin psychotherapy during the study period,"
+    },
+    "right": {
+      "raw_text": "but may continue if started prior to the study."
+    }
+  },
+  "AND": {
+    "left": {
+      "raw_text": "Patients who are currently receiving quetiapine therapy may not undergo a washout period and then restart quetiapine in the study."
     }
   }
 }

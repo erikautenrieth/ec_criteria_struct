@@ -1,31 +1,46 @@
 {
-  "OR": {
+  "AND": {
     "left": {
-      "raw_text": "Ongoing allergen immunotherapy"
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Ongoing allergen immunotherapy"
+            }
+          }
+        }
+      }
     },
     "right": {
-      "OR": {
+      "NOT": {
         "left": {
-          "raw_text": "upper respiratory tract infection"
-        },
-        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "upper respiratory tract infection"
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
           "OR": {
             "left": {
               "raw_text": "Pregnancy"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "Clinical history of lactose-intolerance"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "or allergies to cow-milk"
-                    }
-                  }
-                }
-              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Clinical history of lactose-intolerance or allergies to cow-milk"
             }
           }
         }

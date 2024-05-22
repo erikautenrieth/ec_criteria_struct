@@ -3,41 +3,70 @@
     "left": {
       "OR": {
         "left": {
-          "raw_text": "male patients"
+          "raw_text": "male"
         },
         "right": {
-          "raw_text": "over the age of 18 years."
+          "raw_text": "and female"
         }
       }
     },
     "right": {
       "AND": {
         "left": {
-          "raw_text": "written informed consent"
+          "raw_text": "patients over the age of"
         },
         "right": {
-          "AND": {
+          "raw_text": "18 years."
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "raw_text": "written informed consent"
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "(approved by the Institutional Review Board"
+        },
+        "right": {
+          "OR": {
             "left": {
-              "raw_text": "(approved by the Institutional Review Board"
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "[IRB]"
-                },
-                "right": {
-                  "raw_text": "/Independent Ethics Committee [IEC])"
-                }
-              }
+              "raw_text": "[IRB]/Independent Ethics Committee [IEC])"
             }
           }
         }
       }
     }
   },
-  "OR": {
+  "AND": {
     "left": {
-      "raw_text": "patient with mild to severe carotid artery disease"
+      "raw_text": "obtained prior to any study specific procedures."
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "patient with"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "mild"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "to severe"
+                },
+                "right": {
+                  "raw_text": "carotid artery disease"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

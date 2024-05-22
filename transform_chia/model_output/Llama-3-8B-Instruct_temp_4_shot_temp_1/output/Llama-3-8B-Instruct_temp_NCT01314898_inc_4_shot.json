@@ -1,41 +1,42 @@
 {
   "AND": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "Male"
-        },
-        "right": {
-          "raw_text": "and/or female healthy volunteers"
-        }
-      }
-    },
-    "right": {
       "AND": {
         "left": {
           "AND": {
             "left": {
-              "raw_text": "age"
-            },
-            "right": {
-              "NOT": {
+              "AND": {
                 "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "less than"
-                    },
-                    "right": {
-                      "raw_text": "18"
-                    }
-                  }
+                  "raw_text": "Male"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "greater than"
+                      "raw_text": "and/or female"
                     },
                     "right": {
-                      "raw_text": "55"
+                      "raw_text": "healthy volunteers"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "age"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "18"
+                    },
+                    "right": {
+                      "TO": {
+                        "left": {
+                          "raw_text": "55"
+                        }
+                      }
                     }
                   }
                 }
@@ -46,54 +47,108 @@
         "right": {
           "AND": {
             "left": {
-              "raw_text": "Females must be of non-childbearing potential."
+              "raw_text": "Females"
+            },
+            "right": {
+              "raw_text": "must be of non-childbearing potential."
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Body Mass Index"
+                },
+                "right": {
+                  "raw_text": "of 17.5"
+                }
+              }
+            },
+            "right": {
+              "TO": {
+                "left": {
+                  "raw_text": "30.5 kg/m2"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "and"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "a total body weight"
+                },
+                "right": {
+                  "raw_text": ">50 kg"
+                }
+              }
             }
           }
         }
       }
     }
   },
-  "AND": {
-    "left": {
-      "AND": {
-        "left": {
-          "AND": {
-            "left": {
-              "raw_text": "Body Mass Index (BMI)"
-            },
-            "right": {
-              "NOT": {
-                "left": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "less than"
-                    },
-                    "right": {
-                      "raw_text": "17.5"
-                    }
-                  }
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "greater than"
-                    },
-                    "right": {
-                      "raw_text": "30.5"
+  "right": {
+    "AND": {
+      "left": {
+        "raw_text": "Subjects who are willing"
+      },
+      "right": {
+        "AND": {
+          "left": {
+            "raw_text": "and able"
+          },
+          "right": {
+            "AND": {
+              "left": {
+                "raw_text": "to comply with"
+              },
+              "right": {
+                "AND": {
+                  "left": {
+                    "raw_text": "scheduled visits"
+                  },
+                  "right": {
+                    "AND": {
+                      "left": {
+                        "raw_text": "treatment plan"
+                      },
+                      "right": {
+                        "AND": {
+                          "left": {
+                            "raw_text": "laboratory tests"
+                          },
+                          "right": {
+                            "AND": {
+                              "left": {
+                                "raw_text": "diet restrictions"
+                              },
+                              "right": {
+                                "raw_text": "and"
+                              }
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
               }
             }
           }
-        },
-        "right": {
-          "raw_text": "kg/m2; and a total body weight >50 kg (110 lbs)."
         }
       }
-    },
-    "right": {
-      "raw_text": "Subjects who are willing and able to comply with scheduled visits, treatment plan, laboratory tests, diet restrictions and other trial procedures."
     }
   }
 }

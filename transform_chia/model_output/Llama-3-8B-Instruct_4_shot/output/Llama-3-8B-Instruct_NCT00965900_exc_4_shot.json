@@ -3,82 +3,15 @@
     "left": {
       "AND": {
         "left": {
-          "AND": {
-            "left": {
-              "AND": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "AND": {
-                            "left": {
-                              "AND": {
-                                "left": {
-                                  "AND": {
-                                    "left": {
-                                      "raw_text": "Patients with systolic blood pressure"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "<100 mmHg"
-                                        },
-                                        "right": {
-                                          "raw_text": "or basal heart rate <60/min"
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "right": {
-                                  "raw_text": "Portal vein thrombosis"
-                                }
-                              }
-                            },
-                            "right": {
-                              "raw_text": "Uncontrolled ascites or hepatic encephalopathy"
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "right": {
-                      "raw_text": "Severe coagulation disorder: prothrombin time <40% (or INR >1.7) or platelet count <30,000/mm3"
-                    }
-                  }
-                },
-                "right": {
-                  "raw_text": "Medium or large sized gastric or duodenal varices"
-                }
-              }
-            },
-            "right": {
-              "raw_text": "Coexisting malignancy"
-            }
-          }
+          "raw_text": "Patients with systolic blood pressure"
         },
         "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Severe cardiovascular disorder"
+              "raw_text": "<100 mmHg"
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": ", renal failure"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": ", peritonitis"
-                    },
-                    "right": {
-                      "raw_text": ", sepsis"
-                    }
-                  }
-                }
-              }
+              "raw_text": "or basal heart rate"
             }
           }
         }
@@ -87,34 +20,124 @@
     "right": {
       "OR": {
         "left": {
-          "raw_text": "Severe erosive esophagitis"
+          "raw_text": "Portal vein thrombosis"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": ", severe esophageal stricture"
+              "raw_text": "Uncontrolled ascites"
             },
             "right": {
-              "raw_text": ", active gastric or duodenal ulcer"
+              "raw_text": "or hepatic encephalopathy"
             }
           }
         }
       }
     }
   },
-  "right": {
-    "OR": {
-      "left": {
-        "raw_text": "Contraindication to beta-blocker"
-      },
-      "right": {
-        "OR": {
-          "left": {
-            "raw_text": "Pregnancy"
-          },
-          "right": {
-            "raw_text": "Refusal to give consent to participate in the trial"
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Severe coagulation disorder:"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "prothrombin time <40%"
+            },
+            "right": {
+              "raw_text": "or platelet count <30,000/mm3"
+            }
           }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Medium or large sized gastric"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or duodenal varices"
+            }
+          }
+        }
+      }
+    }
+  },
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Coexisting malignancy"
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Severe cardiovascular disorder"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "renal failure"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "peritonitis"
+                },
+                "right": {
+                  "raw_text": ", sepsis"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Severe erosive esophagitis"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "severe esophageal stricture"
+            },
+            "right": {
+              "raw_text": ", active gastric"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "or duodenal ulcer"
+        }
+      }
+    }
+  },
+  "OR": {
+    "left": {
+      "raw_text": "Contraindication to beta-blocker"
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Pregnancy"
+        },
+        "right": {
+          "raw_text": "or Refusal to give consent to participate in the trial"
         }
       }
     }

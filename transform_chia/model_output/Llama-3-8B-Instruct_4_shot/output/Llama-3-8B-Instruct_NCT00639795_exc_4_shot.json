@@ -1,80 +1,86 @@
 {
   "AND": {
     "left": {
-      "AND": {
+      "OR": {
         "left": {
-          "AND": {
+          "raw_text": "Age less than 18"
+        },
+        "right": {
+          "OR": {
             "left": {
-              "raw_text": "Age less than 18"
+              "raw_text": "Clinical or laboratory evidence of systemic infection"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Clinical or laboratory evidence of systemic infection"
+                  "raw_text": "Current pregnancy as assessed by preoperative urine HCG test"
                 },
                 "right": {
-                  "raw_text": "Current pregnancy as assessed by preoperative urine HCG test"
+                  "OR": {
+                    "left": {
+                      "raw_text": "Serious, uncontrolled, non-malignant illness"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Malignant illness requiring systemic chemotherapy in the last 6 months"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Documented allergy to oxycodone"
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", morphine sulfate"
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "or acetaminophen"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
           }
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "OR": {
-                "left": {
-                  "raw_text": "Serious, uncontrolled, non-malignant illness"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "Malignant illness requiring systemic chemotherapy in the last 6 months"
-                    },
-                    "right": {
-                      "raw_text": "Documented allergy to oxycodone, morphine sulfate or acetaminophen"
-                    }
-                  }
-                }
-              }
+              "raw_text": "Contraindication to peripheral nerve blockade or general anesthesia including: 1. patient refusal"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Contraindication to peripheral nerve blockade or general anesthesia including:"
+                  "raw_text": "2. active infection at site of planned block"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
+                      "raw_text": "3. documented allergy to any local or general anesthetic medications"
+                    },
+                    "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "1. patient refusal"
+                          "raw_text": "4. significant coagulopathy"
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "2. active infection at site of planned block"
+                              "raw_text": "(prothrombin time >15 seconds, INR>1.5"
                             },
                             "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "3. documented allergy to any local or general anesthetic medications"
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "4. significant coagulopathy (prothrombin time >15 seconds, INR>1.5"
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "5. pre-existing neuropathy and medical conditions or deformities which would compromise block or anesthetic safety"
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
+                              "raw_text": ")"
                             }
                           }
                         }
@@ -124,7 +130,11 @@
                                   "raw_text": "Patients with active infections requiring antibiotics within one month of registration"
                                 },
                                 "right": {
-                                  "raw_text": "Participation in other clinical trials that may interfere with this study"
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "Participation in other clinical trials that may interfere with this study"
+                                    }
+                                  }
                                 }
                               }
                             }

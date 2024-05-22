@@ -13,46 +13,64 @@
                         "left": {
                           "AND": {
                             "left": {
-                              "raw_text": "Pathologically proven unresectable adenocarcinoma"
-                            },
-                            "right": {
-                              "raw_text": "of stomach"
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "With uni-dimensionally measurable disease"
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "Pathologically proven"
+                                    },
+                                    "right": {
+                                      "raw_text": "unresectable adenocarcinoma of stomach"
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "With uni-dimensionally measurable disease"
+                                    },
+                                    "right": {
+                                      "raw_text": "(at least longest diameter 2 cm on conventional CT scan, x-ray or physical examination, or 1cm on spiral CT scan)"
+                                    }
+                                  }
+                                }
+                              }
                             },
                             "right": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "(at least longest diameter 2 cm on conventional CT scan"
+                                  "raw_text": "Age"
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "x-ray or physical examination"
+                                      "raw_text": "18"
                                     },
                                     "right": {
-                                      "raw_text": ", or 1cm on spiral CT scan)"
+                                      "raw_text": "to 70 years old"
                                     }
                                   }
                                 }
                               }
                             }
                           }
+                        },
+                        "right": {
+                          "raw_text": "Estimated life expectancy of more than 3 months"
                         }
                       }
                     },
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "Age 18"
+                          "raw_text": "ECOG performance status of 2"
                         },
                         "right": {
-                          "raw_text": "to 70 years old"
+                          "OR": {
+                            "left": {
+                              "raw_text": "or lower"
+                            }
+                          }
                         }
                       }
                     }
@@ -61,10 +79,24 @@
                 "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "Estimated life expectancy"
+                      "raw_text": "Adequate bone marrow function"
                     },
                     "right": {
-                      "raw_text": "of more than 3 months"
+                      "OR": {
+                        "left": {
+                          "raw_text": "absolute neutrophil count [ANC] ≥1,500/µL"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "hemoglobin ≥9.0 g/dL"
+                            },
+                            "right": {
+                              "raw_text": "and platelets ≥100,000/µL"
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -73,17 +105,10 @@
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "ECOG performance status"
+                  "raw_text": "Adequate kidney function"
                 },
                 "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "of 2"
-                    },
-                    "right": {
-                      "raw_text": "or lower"
-                    }
-                  }
+                  "raw_text": "(serum creatinine < 1.5 mg/dL)"
                 }
               }
             }
@@ -92,78 +117,23 @@
         "right": {
           "AND": {
             "left": {
-              "AND": {
+              "raw_text": "Adequate liver function"
+            },
+            "right": {
+              "OR": {
                 "left": {
-                  "raw_text": "Adequate bone marrow function"
+                  "raw_text": "serum total bilirubin < 2 times the upper normal limit (UNL)"
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
-                      "raw_text": "(absolute neutrophil count [ANC] ≥1,500/µL"
+                      "raw_text": "serum transaminases levels <3 times"
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
-                          "raw_text": ", hemoglobin ≥9.0 g/dL"
-                        },
-                        "right": {
-                          "raw_text": ", and platelets ≥100,000/µL)"
+                          "raw_text": "<5 times for patients with liver metastasis"
                         }
-                      }
-                    }
-                  }
-                }
-              },
-              "right": {
-                "AND": {
-                  "left": {
-                    "raw_text": "Adequate kidney function"
-                  },
-                  "right": {
-                    "raw_text": "(serum creatinine < 1.5 mg/dL)"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "right": {
-        "AND": {
-          "left": {
-            "AND": {
-              "left": {
-                "raw_text": "Adequate liver function"
-              },
-              "right": {
-                "AND": {
-                  "left": {
-                    "raw_text": "(serum total bilirubin < 2 times the upper normal limit"
-                  },
-                  "right": {
-                    "raw_text": "(UNL); serum transaminases levels <3 times [<5 times for patients with liver metastasis] UNL)"
-                  }
-                }
-              }
-            }
-          },
-          "right": {
-            "AND": {
-              "left": {
-                "raw_text": "No prior chemotherapy"
-              },
-              "right": {
-                "AND": {
-                  "left": {
-                    "raw_text": "but prior adjuvant chemotherapy"
-                  },
-                  "right": {
-                    "OR": {
-                      "left": {
-                        "raw_text": "finished at least 6 months before enrollment"
-                      },
-                      "right": {
-                        "raw_text": "was allowed."
                       }
                     }
                   }
@@ -175,12 +145,19 @@
       }
     },
     "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "raw_text": "No prior radiation therapy"
+          "raw_text": "No prior chemotherapy but prior adjuvant chemotherapy finished at least 6 months before enrollment was allowed"
         },
         "right": {
-          "raw_text": "for at least 4 weeks before enrollment in the study"
+          "AND": {
+            "left": {
+              "raw_text": "No prior radiation therapy"
+            },
+            "right": {
+              "raw_text": "for at least 4 weeks before enrollment in the study"
+            }
+          }
         }
       }
     }

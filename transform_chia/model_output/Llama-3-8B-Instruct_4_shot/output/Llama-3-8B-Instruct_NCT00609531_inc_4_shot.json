@@ -5,24 +5,10 @@
         "left": {
           "AND": {
             "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "Ambulatory status"
-                },
-                "right": {
-                  "raw_text": "(outpatient) at time of consent"
-                }
-              }
+              "raw_text": "Ambulatory status (outpatient)"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "Age"
-                },
-                "right": {
-                  "raw_text": "10-55 years"
-                }
-              }
+              "raw_text": "at time of consent"
             }
           }
         },
@@ -31,20 +17,21 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "Clinical diagnosis"
+                  "raw_text": "Age"
                 },
                 "right": {
-                  "raw_text": "of Autism Spectrum Disorder"
+                  "OR": {
+                    "left": {
+                      "raw_text": "10-55 years"
+                    }
+                  }
                 }
               }
             },
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "IQ"
-                },
-                "right": {
-                  "raw_text": "greater than or equal to 70"
+                  "raw_text": "Clinical diagnosis of Autism Spectrum Disorder"
                 }
               }
             }
@@ -57,26 +44,30 @@
         "left": {
           "AND": {
             "left": {
-              "raw_text": "Score"
+              "raw_text": "IQ"
             },
             "right": {
-              "raw_text": "greater than 8"
+              "raw_text": "greater than or equal to 70"
             }
-          },
-          "right": {
-            "raw_text": "on Children's Yale-Brown Obsessive Compulsive Scale"
           }
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "Free of psychoactive medication"
+              "raw_text": "Score"
             },
             "right": {
-              "raw_text": "for at least: one month for fluoxetine; two weeks for other SSRIs and neuroleptics; and five days for stimulants prior to MRI scanning [excepting stable doses (greater than three months duration) of anticonvulsant medication for seizure disorder]"
+              "raw_text": "greater than 8 on Children's Yale-Brown Obsessive Compulsive Scale"
             }
           }
         }
+      }
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "raw_text": "Free of psychoactive medication for at least: one month for fluoxetine; two weeks for other SSRIs and neuroleptics; and five days for stimulants prior to MRI scanning [excepting stable doses (greater than three months duration) of anticonvulsant medication for seizure disorder]"
       }
     }
   }

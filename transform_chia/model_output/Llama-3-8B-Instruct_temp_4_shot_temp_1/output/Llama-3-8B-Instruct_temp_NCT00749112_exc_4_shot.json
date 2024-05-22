@@ -1,20 +1,49 @@
 {
-  "OR": {
+  "AND": {
     "left": {
-      "raw_text": "Current viral or bacterial infection."
-    },
-    "right": {
-      "OR": {
+      "NOT": {
         "left": {
-          "raw_text": "Positive serology for HIV"
-        },
-        "right": {
           "OR": {
             "left": {
-              "raw_text": ", HCV"
+              "raw_text": "Current viral"
             },
             "right": {
-              "raw_text": ", or HBV."
+              "OR": {
+                "left": {
+                  "raw_text": "or bacterial"
+                },
+                "right": {
+                  "raw_text": "infection."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Positive serology"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "for HIV"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", HCV"
+                    },
+                    "right": {
+                      "raw_text": ", or HBV."
+                    }
+                  }
+                }
+              }
             }
           }
         }

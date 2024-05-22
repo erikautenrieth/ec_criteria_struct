@@ -1,19 +1,41 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "1. Subject is at least 18 years old."
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "2. Subject requires single- or multi-vessel percutaneous coronary intervention (PCI) of de novo or restenotic target lesion"
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "(including in-stent restenotic lesions)."
+                  "raw_text": "Subject is at least 18 years old."
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Subject requires single- or multi-vessel percutaneous coronary intervention (PCI)"
+                    },
+                    "right": {
+                      "raw_text": "of de novo or restenotic target lesion (including in-stent restenotic lesions)."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Subject's lesion(s) is (are) amenable to stent treatment with currently available FDA-approved bare metal or drug eluting stents."
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Subject is an acceptable candidate for elective, urgent or emergency coronary artery bypass graft (CABG)."
                 }
               }
             }
@@ -26,19 +48,47 @@
         "left": {
           "AND": {
             "left": {
-              "raw_text": "3. Subject's lesion(s) is (are) amenable to stent treatment with currently available FDA-approved bare metal or drug eluting stents."
-            }
-          },
-          "right": {
-            "OR": {
-              "left": {
-                "raw_text": "4. Subject is an acceptable candidate for elective, urgent or emergency coronary artery bypass graft (CABG)."
-              },
-              "right": {
-                "AND": {
-                  "left": {
-                    "raw_text": "5. Subject has clinical evidence of ischemic heart disease in terms of a positive functional study, or documented symptoms."
+              "AND": {
+                "left": {
+                  "raw_text": "Subject has clinical evidence of ischemic heart disease in terms of a positive functional study, or documented symptoms."
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Documented stable angina pectoris [Canadian Cardiovascular Society Classification (CCS) 1, 2, 3, or 4],"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "unstable angina pectoris with documented ischemia (Braunwald Class IB-C, IIB-C, or IIIB-C),"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "non-ST segment elevation myocardial infarction,"
+                        },
+                        "right": {
+                          "raw_text": "or documented silent ischemia."
+                        }
+                      }
+                    }
                   }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Subject is willing and able to undergo percutaneous intervention at SOS hospital, if randomized to SOS study arm."
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Subject and the treating physician agree that the subject will comply with all follow-up evaluations."
                 }
               }
             }

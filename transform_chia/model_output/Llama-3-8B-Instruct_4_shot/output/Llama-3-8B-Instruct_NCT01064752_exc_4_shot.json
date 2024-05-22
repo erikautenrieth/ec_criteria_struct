@@ -8,10 +8,10 @@
         "right": {
           "OR": {
             "left": {
-              "raw_text": "or history of adverse reaction to minocycline"
+              "raw_text": "or history of adverse reaction"
             },
             "right": {
-              "raw_text": "or another tetracycline."
+              "raw_text": "to minocycline or another tetracycline."
             }
           }
         }
@@ -20,32 +20,46 @@
     "right": {
       "OR": {
         "left": {
-          "raw_text": "Enhanced risk from lumbar puncture, including documented or suspected cerebral mass lesion"
+          "AND": {
+            "left": {
+              "raw_text": "Enhanced risk from lumbar puncture"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "including documented"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or suspected cerebral mass lesion"
+                    },
+                    "right": {
+                      "raw_text": "predisposing to brain herniation"
+                    }
+                  }
+                }
+              }
+            }
+          }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "predisposing to brain herniation"
-            },
-            "right": {
-              "raw_text": "or bleeding diathesis."
+              "AND": {
+                "left": {
+                  "raw_text": "Pregnancy"
+                },
+                "right": {
+                  "raw_text": "or expectation of pregnancy during the study."
+                }
+              }
             }
           }
         }
       }
     }
-  }
-}
-
-{
-  "OR": {
-    "left": {
-      "raw_text": "Pregnancy or expectation of pregnancy during the study."
-    }
-  }
-}
-
-{
+  },
   "OR": {
     "left": {
       "AND": {
@@ -56,34 +70,36 @@
           "raw_text": "or active neurological disease that might confound evaluation."
         }
       }
-    }
-  }
-}
-
-{
-  "OR": {
-    "left": {
-      "raw_text": "ADC Stage > 1."
-    }
-  }
-}
-
-{
-  "OR": {
-    "left": {
-      "AND": {
+    },
+    "right": {
+      "OR": {
         "left": {
-          "raw_text": "Hemoglobin"
+          "AND": {
+            "left": {
+              "raw_text": "ADC Stage"
+            },
+            "right": {
+              "raw_text": "> 1."
+            }
+          }
         },
         "right": {
-          "raw_text": "< 10 Gms/dL."
+          "OR": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Hemoglobin"
+                },
+                "right": {
+                  "raw_text": "< 10 Gms/dL."
+                }
+              }
+            }
+          }
         }
       }
     }
-  }
-}
-
-{
+  },
   "OR": {
     "left": {
       "AND": {
@@ -93,15 +109,12 @@
         "right": {
           "raw_text": "or creatine"
         }
-      },
-      "right": {
-        "raw_text": "above the normal limits."
       }
+    },
+    "right": {
+      "raw_text": "above the normal limits."
     }
-  }
-}
-
-{
+  },
   "OR": {
     "left": {
       "raw_text": "Taking other drugs known to reduce the metabolism of minocycline and thus increase the probability of toxicity."

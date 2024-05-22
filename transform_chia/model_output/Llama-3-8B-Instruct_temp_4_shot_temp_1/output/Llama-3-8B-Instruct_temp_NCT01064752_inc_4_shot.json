@@ -7,7 +7,7 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "1. HIV infection"
+                  "raw_text": "HIV infection"
                 },
                 "right": {
                   "AND": {
@@ -20,15 +20,15 @@
                           "raw_text": "and CSF HIV RNA concentrations"
                         },
                         "right": {
-                          "raw_text": "using Roche Amplicor assay"
+                          "raw_text": "(using Roche Amplicor assay)"
                         }
                       }
                     }
                   }
-                },
-                "right": {
-                  "raw_text": "> 1,000 copies/ mL"
                 }
+              },
+              "right": {
+                "raw_text": "> 1,000 copies/ mL"
               }
             },
             "right": {
@@ -41,31 +41,41 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "2. Off antiretroviral therapy (ART)"
+                  "raw_text": "Off antiretroviral therapy"
                 },
                 "right": {
-                  "raw_text": "for > 6 weeks before the study"
+                  "raw_text": "(ART)"
                 }
               },
               "right": {
-                "raw_text": "and no plans to begin treatment for the study duration."
+                "raw_text": "for > 6 weeks before the study"
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "and no plans to begin treatment"
+                },
+                "right": {
+                  "raw_text": "for the study duration."
+                }
               }
             }
           }
         }
       },
       "right": {
-        "AND": {
+        "OR": {
           "left": {
-            "raw_text": "3. Predicted adherence to the medication."
+            "raw_text": "Predicted adherence to the medication"
           },
           "right": {
-            "AND": {
+            "OR": {
               "left": {
-                "raw_text": "4. Capable of providing informed consent."
+                "raw_text": "Capable of providing informed consent"
               },
               "right": {
-                "raw_text": "5. > 18 years old."
+                "raw_text": "and"
               }
             }
           }
@@ -75,10 +85,24 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "6. CD4 cell counts"
+          "raw_text": "> 18 years old"
         },
         "right": {
-          "raw_text": "> 150 cells/μL"
+          "OR": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "CD4 cell counts"
+                },
+                "right": {
+                  "raw_text": ">150 cells/μL"
+                }
+              },
+              "right": {
+                "raw_text": "(though likely most, if not all, will be >250 cells/μL)"
+              }
+            }
+          }
         }
       }
     }

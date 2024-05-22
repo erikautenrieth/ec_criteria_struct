@@ -1,22 +1,103 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "The patient has a known hypersensitivity or contraindication to any of the following medications: Heparin"
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "Aspirin"
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "The patient has a known hypersensitivity"
+                        },
+                        "right": {
+                          "raw_text": "or contraindication to any of the following medications:"
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Heparin"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Aspirin"
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "Clopidogrel"
+                                },
+                                "right": {
+                                  "raw_text": "Cilostazol"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Uncontrolled hypertension"
+                    }
+                  }
+                }
+              }
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "Clopidogrel"
+                  "raw_text": "History of bleeding diathesis"
                 },
                 "right": {
-                  "raw_text": "Cilostazol"
+                  "OR": {
+                    "left": {
+                      "raw_text": "or known coagulopathy"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "including heparin-induced thrombocytopenia"
+                        },
+                        "right": {
+                          "raw_text": ", or refuses blood transfusions."
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Baseline hemogram with Hb"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "<10g/dL"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or PLT count"
+                    },
+                    "right": {
+                      "raw_text": "<100,000/μL"
+                    }
+                  }
                 }
               }
             }
@@ -27,71 +108,35 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "Uncontrolled hypertension"
+          "raw_text": "Patients already taking"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "History of bleeding diathesis or known coagulopathy"
+              "raw_text": "warfarin"
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "or refuses blood transfusions."
+                  "raw_text": "cilostazol"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or any other type of anti-platelet agents"
+                    },
+                    "right": {
+                      "except": {
+                        "raw_text": "aspirin and clopidogrel"
+                      }
+                    }
+                  }
                 }
               }
             }
           }
         }
       }
-    }
-  },
-  "right": {
-    "AND": {
-      "left": {
-        "OR": {
-          "left": {
-            "raw_text": "Baseline hemogram with Hb<10g/dL"
-          },
-          "right": {
-            "raw_text": "or PLT count<100,000/μL"
-          }
-        }
-      },
-      "right": {
-        "OR": {
-          "left": {
-            "raw_text": "Patients already taking warfarin"
-          },
-          "right": {
-            "OR": {
-              "left": {
-                "raw_text": "cilostazol"
-              },
-              "right": {
-                "raw_text": "or any other type of anti-platelet agents except aspirin and clopidogrel"
-              }
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "OR": {
-        "left": {
-          "raw_text": "Gastrointestinal or genitourinary bleeding within the prior 3 months"
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "or major surgery within 2 months."
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "raw_text": "Pregnancy"
     }
   }
 }

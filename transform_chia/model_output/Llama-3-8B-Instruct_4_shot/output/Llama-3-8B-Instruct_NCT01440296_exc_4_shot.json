@@ -1,10 +1,28 @@
 {
-  "OR": {
+  "AND": {
     "left": {
-      "raw_text": "any condition that would contra-indicate Magnetic Resonance Imaging"
+      "raw_text": "any condition"
     },
     "right": {
-      "raw_text": "or administration of contrast agent"
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "that would contra-indicate"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Magnetic Resonance Imaging"
+                },
+                "right": {
+                  "raw_text": "or administration of contrast agent"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

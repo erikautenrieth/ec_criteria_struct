@@ -1,49 +1,74 @@
 {
   "OR": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "Atrial fibrillation"
-        },
-        "right": {
-          "raw_text": "or Subject underwent cardiac pacemaker treatment"
-        }
-      }
-    },
-    "right": {
-      "OR": {
-        "left": {
-          "raw_text": "or Subject underwent metal graft treatment"
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "or Claustrophobia"
+              "OR": {
+                "left": {
+                  "raw_text": "Atrial fibrillation"
+                },
+                "right": {
+                  "raw_text": ";"
+                }
+              }
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "or Acute myocardial infarction"
+                  "raw_text": "Subject underwent cardiac pacemaker treatment"
+                },
+                "right": {
+                  "raw_text": ";"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Subject underwent metal graft treatment"
+            },
+            "right": {
+              "raw_text": ";"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Claustrophobia"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Acute myocardial infarction"
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "or cardiac ischemia indicated by 6-minute walk test"
+                      "raw_text": "cardiac ischemia indicated by 6-minute walk test"
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "or hypertrophic cardiomyopathy"
+                          "raw_text": "hypertrophic cardiomyopathy"
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "or constrictive pericarditis"
+                              "raw_text": "constrictive pericarditis"
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "or significant valve disease"
+                                  "raw_text": "significant valve disease"
                                 },
                                 "right": {
                                   "OR": {
@@ -51,7 +76,7 @@
                                       "raw_text": "or congenital heart disease"
                                     },
                                     "right": {
-                                      "raw_text": "or severe pulmonary hypertension"
+                                      "raw_text": ", severe pulmonary hypertension"
                                     }
                                   }
                                 }
@@ -61,6 +86,23 @@
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "right": {
+            "OR": {
+              "left": {
+                "raw_text": "Ischemic heart failure without the revascularization or undergone the revascularization within last 6 months"
+              },
+              "right": {
+                "OR": {
+                  "left": {
+                    "raw_text": "Subject underwent cardiac surgery or cerebrovascular events within the previous six months"
+                  },
+                  "right": {
+                    "raw_text": ";"
                   }
                 }
               }

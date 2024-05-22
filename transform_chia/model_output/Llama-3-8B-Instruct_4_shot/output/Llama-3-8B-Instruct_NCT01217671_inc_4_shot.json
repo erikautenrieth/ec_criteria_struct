@@ -17,47 +17,40 @@
                                 "left": {
                                   "AND": {
                                     "left": {
-                                      "raw_text": "Diagnosis of emphysema confirmed by CT scan"
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "Diagnosis of emphysema confirmed by CT scan"
+                                        },
+                                        "right": {
+                                          "OR": {
+                                            "left": {
+                                              "raw_text": "If a report of past CT scan is not available at site documenting then a CT scan is to be performed at screening"
+                                            }
+                                          }
+                                        }
+                                      }
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "If a report of past CT scan is not available at site documenting then a CT scan is to be performed at screening"
+                                          "raw_text": "Male"
+                                        },
+                                        "right": {
+                                          "raw_text": "or female patients at least 18 years of age."
                                         }
                                       }
                                     }
                                   }
                                 },
                                 "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "Male"
-                                    },
-                                    "right": {
-                                      "raw_text": "or female patients at least 18 years of age."
-                                    }
-                                  }
+                                  "raw_text": "Able and willing to sign an informed consent."
                                 }
                               }
                             },
                             "right": {
                               "AND": {
                                 "left": {
-                                  "raw_text": "Able and willing to sign an informed consent."
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "Patient with record of congenital AAT deficiency"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "of phenotype PiZZ (homozygote)"
+                                  "raw_text": "Patient with record of congenital AAT deficiency of phenotype PiZZ"
                                 },
                                 "right": {
                                   "OR": {
@@ -72,7 +65,7 @@
                                         "right": {
                                           "OR": {
                                             "left": {
-                                              "raw_text": "For patients receiving IV AAT augmentation therapy the serum AAT level threshold does not apply."
+                                              "raw_text": "For patients receiving IV AAT augmentation therapy the serum AAT level threshold does not apply"
                                             }
                                           }
                                         }
@@ -83,16 +76,37 @@
                               }
                             }
                           }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "FEV1/SVC <70% of predicted value post bronchodilator"
+                            },
+                            "right": {
+                              "raw_text": "and FEV1 < 80% of predicted value post-bronchodilator"
+                            }
+                          }
                         }
                       }
                     },
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "FEV1/SVC <70% of predicted value post bronchodilator"
+                          "raw_text": "History of at least two moderate or severe exacerbations"
                         },
                         "right": {
-                          "raw_text": "and FEV1 < 80% of predicted value post-bronchodilator"
+                          "OR": {
+                            "left": {
+                              "raw_text": "that required change in treatment (antibiotics, systemic steroids, hospitalization) in the last 18 months prior to date of screening"
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "with at least one of these occurring within the last 12 months prior to screening"
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -101,24 +115,10 @@
                 "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "History of at least two moderate or severe exacerbations"
+                      "raw_text": "Ability to comply with completion of electronic diary"
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "that required change in treatment (antibiotics, systemic steroids, hospitalization)"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "in the last 18 months prior to date of screening"
-                            },
-                            "right": {
-                              "raw_text": ", with at least one of these occurring within the last 12 months prior to screening."
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "and Ability to self-administer inhaled AAT."
                     }
                   }
                 }
@@ -127,10 +127,17 @@
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "Ability to comply with completion of electronic diary."
+                  "raw_text": "No significant abnormalities in serum hematology"
                 },
                 "right": {
-                  "raw_text": "Ability to self-administer inhaled AAT."
+                  "OR": {
+                    "left": {
+                      "raw_text": "serum chemistry and serum inflammatory / immunogenic markers according to the Principal Investigator's judgment"
+                    },
+                    "right": {
+                      "raw_text": ", taking into considerations the potential effects of the AAT deficiency."
+                    }
+                  }
                 }
               }
             }
@@ -139,17 +146,10 @@
         "right": {
           "AND": {
             "left": {
-              "raw_text": "No significant abnormalities in serum hematology"
+              "raw_text": "No significant abnormalities in urinalysis"
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "serum chemistry and serum inflammatory / immunogenic markers"
-                },
-                "right": {
-                  "raw_text": "according to the Principal Investigator's judgment, taking into considerations the potential effects of the AAT deficiency."
-                }
-              }
+              "raw_text": "according to the Principal Investigator's judgment, taking into considerations the potential effects of the AAT deficiency."
             }
           }
         }
@@ -158,10 +158,10 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "No significant abnormalities in urinalysis"
+          "raw_text": "No significant abnormalities in ECG"
         },
         "right": {
-          "raw_text": "according to the Principal Investigator's judgment, taking into considerations the potential effects of the AAT deficiency."
+          "raw_text": "per investigator judgment."
         }
       }
     }

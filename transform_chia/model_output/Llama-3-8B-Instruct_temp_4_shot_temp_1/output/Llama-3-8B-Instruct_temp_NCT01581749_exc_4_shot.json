@@ -7,26 +7,22 @@
             "left": {
               "AND": {
                 "left": {
-                  "AND": {
-                    "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "implanted hardware"
-                        },
-                        "right": {
-                          "raw_text": "or other material"
-                        }
-                      }
-                    },
-                    "right": {
-                      "raw_text": "that would prohibit treatment planning or delivery"
-                    }
-                  }
+                  "raw_text": "implanted hardware or other material"
+                },
+                "right": {
+                  "raw_text": "that would prohibit treatment planning or delivery"
                 }
               }
             },
             "right": {
-              "raw_text": "chemotherapy for a malignancy within the previous 5 years"
+              "OR": {
+                "left": {
+                  "raw_text": "chemotherapy for a malignancy"
+                },
+                "right": {
+                  "raw_text": "within the previous 5 years"
+                }
+              }
             }
           }
         },
@@ -36,21 +32,17 @@
               "raw_text": "history of an invasive malignancy"
             },
             "right": {
-              "NOT": {
+              "AND": {
                 "left": {
+                  "raw_text": "(other than this prostate cancer"
+                },
+                "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "other than this prostate cancer"
+                      "raw_text": ", or basal"
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": ", or basal"
-                        },
-                        "right": {
-                          "raw_text": "or squamous skin cancers"
-                        }
-                      }
+                      "raw_text": "or squamous skin cancers)"
                     }
                   }
                 }

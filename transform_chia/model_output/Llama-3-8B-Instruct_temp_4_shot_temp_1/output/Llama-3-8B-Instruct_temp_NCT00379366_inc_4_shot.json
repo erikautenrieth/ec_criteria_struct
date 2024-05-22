@@ -1,41 +1,42 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "over 18 years"
-        },
-        "right": {
           "AND": {
             "left": {
-              "raw_text": "successful angioplasty"
-            },
-            "right": {
+              "raw_text": "over 18 years"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
               "AND": {
                 "left": {
-                  "raw_text": "residual stenosis < 30%"
+                  "raw_text": "successful angioplasty"
                 },
                 "right": {
-                  "AND": {
+                  "raw_text": "(residual stenosis < 30%) on a significant stenosis"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "on the venous-prosthesis anastomosis"
+                },
+                "right": {
+                  "OR": {
                     "left": {
-                      "raw_text": "on a significant stenosis"
+                      "raw_text": "or on the venous segment"
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "maximal systolic speed 3 times > from basal maximal systolic speed"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "or"
-                            },
-                            "right": {
-                              "raw_text": "stenosis > 70%"
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "5 cm after the anastomosis"
                     }
                   }
                 }
@@ -44,16 +45,20 @@
           }
         }
       }
-    },
-    "right": {
-      "OR": {
-        "left": {
-          "raw_text": "social security affiliation"
-        },
-        "right": {
-          "raw_text": "signed informed consent"
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "AND": {
+          "left": {
+            "raw_text": "social security affiliation"
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "signed informed consent"
     }
   }
 }

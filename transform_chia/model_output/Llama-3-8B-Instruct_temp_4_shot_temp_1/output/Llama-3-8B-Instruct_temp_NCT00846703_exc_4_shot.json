@@ -1,71 +1,56 @@
 {
   "AND": {
     "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "Down syndrome"
+        }
+      }
+    },
+    "right": {
       "AND": {
         "left": {
-          "raw_text": "No Down syndrome"
+          "NOT": {
+            "left": {
+              "raw_text": "other major disease that prohibits study treatment"
+            }
+          }
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "No other major disease"
-            },
-            "right": {
               "NOT": {
                 "left": {
-                  "raw_text": "that prohibits study treatment"
+                  "raw_text": "requiring significant therapy modification owing to study therapy associated complications"
                 }
               }
-            }
-          }
-        }
-      },
-      "right": {
-        "AND": {
-          "left": {
-            "raw_text": "Not requiring significant therapy modification"
-          },
-          "right": {
-            "NOT": {
-              "left": {
-                "raw_text": "owing to study therapy associated complications"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "No complications"
-        },
-        "right": {
-          "NOT": {
-            "left": {
-              "raw_text": "due to other interventions"
-            }
-          }
-        }
-      }
-    }
-  },
-  "AND": {
-    "left": {
-      "raw_text": "No one with missing data"
-    },
-    "right": {
-      "NOT": {
-        "left": {
-          "OR": {
-            "left": {
-              "raw_text": "that are needed for the differential diagnosis"
             },
             "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": ", or for selection of the proper therapy arm"
+                  "NOT": {
+                    "left": {
+                      "raw_text": "complications due to other interventions"
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "missing data that are needed for the differential diagnosis"
+                            },
+                            "right": {
+                              "raw_text": ", or for selection of the proper therapy arm"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }

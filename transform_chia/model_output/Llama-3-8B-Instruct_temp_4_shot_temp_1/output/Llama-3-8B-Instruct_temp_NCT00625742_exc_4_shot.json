@@ -1,52 +1,61 @@
 {
   "OR": {
     "left": {
-      "raw_text": "1. Have dementia or delirium (as determined by the palliative care specialist) at study entry."
+      "AND": {
+        "left": {
+          "raw_text": "1. Have dementia"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or delirium"
+            },
+            "right": {
+              "raw_text": "(as determined by the palliative care specialist)"
+            }
+          }
+        }
+      }
     },
     "right": {
       "OR": {
         "left": {
           "raw_text": "2. Are pregnant"
+        }
+      }
+    }
+  }
+}
+
+{
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "3. Have been taking corticosteroids"
+        },
+        "right": {
+          "raw_text": "for longer than 48 hours."
+        }
+      }
+    }
+  }
+}
+
+{
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "4. Have pulmonary edema"
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "3. Have been taking corticosteroids for longer than 48 hours"
+              "raw_text": "ascites"
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "4. Have pulmonary edema, ascites or pitting edema on clinical examination"
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "5. Are unable to walk"
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "6. Have a history of serious adverse gastrointestinal events (i.e., bleeding or perforation)"
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": ", history of a coagulopathy"
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "or current anti-coagulant use"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "or pitting edema"
             }
           }
         }
@@ -55,4 +64,80 @@
   }
 }
 
-Note: The JSON output is not a strict representation of the logical operators, but rather a simplified representation of the conditions.
+{
+  "OR": {
+    "left": {
+      "raw_text": "5. Are unable to walk"
+    }
+  }
+}
+
+{
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "6. Have a history of serious adverse gastrointestinal events"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "i.e., bleeding"
+            },
+            "right": {
+              "raw_text": "or perforation"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "history of a coagulopathy"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or current anti-coagulant use"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "7. Have an ALT/AST>"
+        },
+        "right": {
+          "raw_text": "3x upper limit of normal."
+        }
+      }
+    }
+  }
+}
+
+{
+  "OR": {
+    "left": {
+      "raw_text": "8. Patients on methotrexate"
+    }
+  }
+}
+
+{
+  "OR": {
+    "left": {
+      "raw_text": "9. Patients taking melatonin receptor agonists"
+    },
+    "right": {
+      "raw_text": "(such as Rozerem [ramelteon])"
+    }
+  }
+}
