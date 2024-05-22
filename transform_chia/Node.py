@@ -33,8 +33,9 @@ def parse_text(text):
         after = text[first_match.end():].strip()
         node = Node(operator=operator)
         if operator == 'NOT':
-            node.left = parse_text(after)
-            node.criteria = text  # Speichern des gesamten Textes im Knoten
+            if before:
+                node.criteria = before  # Speichern des Textes vor dem NOT Operator
+            node.left = parse_text(after) if after else Node(criteria="empty set")
         else:
             node.left = parse_text(before) if before else Node(criteria="empty set")
             node.right = parse_text(after) if after else Node(criteria="empty set")
