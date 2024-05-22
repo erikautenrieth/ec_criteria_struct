@@ -5,7 +5,9 @@ Each "AND" and "OR" node should have two branches: "left" and "right". These bra
 For example, an "AND" node could have one criterion on the left and another on the right.
 A "NOT" node can only have one child node, representing the negated criterion.
 Ensure that the same logical operator ("AND", "OR", "NOT") does not appear on the same level of the tree structure to maintain the integrity of the logical relationships.
-The model generates JSON files from the textual criteria, organizing them into the described logical structure.
+Each AND and OR node has two child nodes (left and right). 
+A NOT node has one child node (left). raw_text nodes are leaf nodes with no children.
+Generates JSON files from the textual criteria and organizing them into the described logical structure.
 Setting the brackets {}, [] and commas , correctly in the JSON is extremely important.
 Any double quotes within the raw textual criteria are escaped with a backslash (\").
 The entire text of the eligibility criteria must be included and separated by the logical operators, without omitting any words or information.
