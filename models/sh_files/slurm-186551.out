@@ -1,0 +1,35 @@
+2024-05-23 10:59:27.464557: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-05-23 10:59:29.080139: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+Das File: /work/eauten2s/ec_criteria_struct/transform_chia/chia_label/prompts/model_desc_p2.txt wurde erfolgreich geladen.
+Hier fängt die Pipeline an
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:16<00:48, 16.02s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:32<00:32, 16.03s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:48<00:16, 16.25s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:52<00:00, 11.34s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:52<00:00, 13.10s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Setting `pad_token_id` to `eos_token_id`:128009 for open-end generation.
+File: NCT00094861_inc 
+
+Das File: /work/eauten2s/ec_criteria_struct/transform_chia/input/half_clinical_trials/NCT00094861_inc.txt wurde erfolgreich geladen.
+Traceback (most recent call last):
+  File "/work/eauten2s/ec_criteria_struct/models/llama3_8b_5_shot_temp.py", line 81, in <module>
+    outputs = pipeline(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/pipelines/text_generation.py", line 240, in __call__
+    return super().__call__(text_inputs, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/pipelines/base.py", line 1242, in __call__
+    return self.run_single(inputs, preprocess_params, forward_params, postprocess_params)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/pipelines/base.py", line 1249, in run_single
+    model_outputs = self.forward(model_inputs, **forward_params)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/pipelines/base.py", line 1149, in forward
+    model_outputs = self._forward(model_inputs, **forward_params)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/pipelines/text_generation.py", line 327, in _forward
+    generated_sequence = self.model.generate(input_ids=input_ids, attention_mask=attention_mask, **generate_kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/generation/utils.py", line 1611, in generate
+    logits_warper = self._get_logits_warper(generation_config)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/generation/utils.py", line 736, in _get_logits_warper
+    warpers.append(TemperatureLogitsWarper(generation_config.temperature))
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/generation/logits_process.py", line 284, in __init__
+    raise ValueError(except_msg)
+ValueError: `temperature` (=8) has to be a strictly positive float, otherwise your next token scores will be invalid.
