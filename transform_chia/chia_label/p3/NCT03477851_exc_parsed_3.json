@@ -1,0 +1,75 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "No consent",
+              "Observation": [
+                "consent"
+              ],
+              "Negation": [
+                "No"
+              ],
+              "Informed_consent": [
+                "No consent"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Spinal anesthesia",
+              "Procedure": [
+                "Spinal anesthesia"
+              ]
+            },
+            "right": {
+              "raw_text": "or sciatic nerve block contraindicated",
+              "Procedure": [
+                "sciatic nerve block"
+              ],
+              "Condition": [
+                "contraindicated"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Known intolerance",
+          "Condition": [
+            "intolerance"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "to tramadol or other contraindications",
+              "Drug": [
+                "tramadol"
+              ],
+              "Condition": [
+                "contraindications"
+              ],
+              "Qualifier": [
+                "other"
+              ]
+            },
+            "right": {
+              "raw_text": "for the drug",
+              "Drug": [
+                "the drug"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

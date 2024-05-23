@@ -1,0 +1,180 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Patient has provided signed informed consent",
+                              "Observation": [
+                                "signed informed consent"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "Patient is aged greater than or equal to 40 and less than or equal to 89 years of age",
+                              "Value": [
+                                "greater than or equal to 40",
+                                "less than or equal to 89 years"
+                              ],
+                              "Person": [
+                                "aged"
+                              ],
+                              "Scope": [
+                                "greater than or equal to 40 and less than or equal to 89 years"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Patient has a prostate size",
+                              "Measurement": [
+                                "prostate size"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "between 90g and 200g, as determined by MRI",
+                              "Value": [
+                                "between 90g and 200g"
+                              ],
+                              "Procedure": [
+                                "MRI"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "Patient has experienced lower urinary tract symptoms (LUTS) for at least 6 months prior to study enrollment",
+                      "Condition": [
+                        "lower urinary tract symptoms (LUTS)"
+                      ],
+                      "Temporal": [
+                        "at least 6 months prior to study enrollment"
+                      ],
+                      "Reference_point": [
+                        "study enrollment"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Patient has an IPSS score of at least 13 at baseline",
+                  "Measurement": [
+                    "IPSS score"
+                  ],
+                  "Value": [
+                    "at least 13"
+                  ],
+                  "Temporal": [
+                    "at baseline",
+                    "baseline"
+                  ],
+                  "Reference_point": [
+                    "baseline"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Patient is either: refractory to medical treatment",
+                  "Condition": [
+                    "refractory to medical treatment"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", contraindicated to medical treatment",
+                      "Condition": [
+                        "contraindicated to medical treatment"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": ", OR refuses medical treatment",
+                      "Condition": [
+                        "refuses medical treatment"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Patient either: refuses surgical treatment",
+              "Condition": [
+                "refuses surgical treatment"
+              ]
+            },
+            "right": {
+              "raw_text": "OR is contraindicated for surgical treatment",
+              "Condition": [
+                "contraindicated for surgical treatment"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Patient meets ONE of the following criteria: baseline PSA",
+          "Reference_point": [
+            "baseline"
+          ],
+          "Measurement": [
+            "PSA"
+          ],
+          "Temporal": [
+            "baseline"
+          ]
+        },
+        "right": {
+          "raw_text": "< 4.0ng/mL (no prostate biopsy required) OR baseline PSA >/= 4 ng/mL AND a negative prostate biopsy (minimum 12 core biopsy) within the prior 12 months",
+          "Reference_point": [
+            "baseline"
+          ],
+          "Measurement": [
+            "PSA",
+            "prostate biopsy"
+          ],
+          "Temporal": [
+            "baseline",
+            "within the prior 12 months"
+          ],
+          "Value": [
+            "< 4.0ng/mL",
+            ">/= 4 ng/mL",
+            "negative"
+          ],
+          "Multiplier": [
+            "minimum 12"
+          ],
+          "Procedure": [
+            "core biopsy"
+          ],
+          "Scope": [
+            "baseline PSA >/= 4 ng/mL AND a negative prostate biops"
+          ]
+        }
+      }
+    }
+  }
+}

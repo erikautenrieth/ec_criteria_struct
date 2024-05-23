@@ -1,0 +1,123 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Good general health",
+                      "Condition": [
+                        "Good general health"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "Older than the age of legal consent (i.e. 18 years old)",
+                      "Value": [
+                        "Older than the age of legal consent",
+                        "18 years old"
+                      ],
+                      "Person": [
+                        "age"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Sonographic",
+                      "Procedure": [
+                        "Sonographic"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "diagnosis of ovarian endometrioma with diameter at least 4cm on 2 separate scans at least 6 weeks apart",
+                      "Condition": [
+                        "ovarian endometrioma"
+                      ],
+                      "Qualifier": [
+                        "diameter at least 4cm"
+                      ],
+                      "Multiplier": [
+                        "2 separate scans"
+                      ],
+                      "Temporal": [
+                        "at least 6 weeks apart"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "No contraindication to use of progesterone",
+                      "Negation": [
+                        "No"
+                      ],
+                      "Condition": [
+                        "contraindication"
+                      ],
+                      "Drug": [
+                        "progesterone"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or combined oral contraceptive pills",
+                      "Drug": [
+                        "combined oral contraceptive pills"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Not attempting to conceive either at the time of study entry",
+                  "Negation": [
+                    "No",
+                    "Not"
+                  ],
+                  "Mood": [
+                    "attempting"
+                  ],
+                  "Procedure": [
+                    "conceive"
+                  ],
+                  "Temporal": [
+                    "at the time of study entry"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or for at least 2 years after surgery",
+                  "Temporal": [
+                    "for at least 2 years after surgery"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "Willing and able to participate after the study has been explained",
+      "Non-query-able": [
+        "Willing and able to participate after the study has been explained"
+      ]
+    }
+  }
+}

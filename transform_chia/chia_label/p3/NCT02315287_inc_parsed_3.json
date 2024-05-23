@@ -1,0 +1,65 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "HbA1c > 13.0 %",
+          "Measurement": [
+            "HbA1c"
+          ],
+          "Value": [
+            "> 13.0 %"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "No treatment with insulin",
+                  "Negation": [
+                    "No"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Drug": [
+                    "insulin"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or oral agents for 6 months",
+                  "Drug": [
+                    "oral agents"
+                  ],
+                  "Temporal": [
+                    "for 6 months"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "20 =",
+          "Value": [
+            "20 ="
+          ]
+        },
+        "right": {
+          "raw_text": "Age < 80 years",
+          "Person": [
+            "Age"
+          ],
+          "Value": [
+            "< 80 years"
+          ]
+        }
+      }
+    }
+  }
+}
