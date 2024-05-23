@@ -9,11 +9,11 @@ transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 model_name = "Llama-3-8B-Instruct"
 # N Shots
-n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
-
+n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
+temp = 0.1
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
-output_path = f"{transform_chia}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
+output_path = f"{transform_chia}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_temp_{temp.split(".")[1]}/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
@@ -83,7 +83,7 @@ for file in study_files:
             max_new_tokens=2000,# 500 (LLama3), 256 (BIoLLama)
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.5,# 0.6 deterministich - kreativ
+            temperature=temp,# 0.6 deterministich - kreativ
             top_p=0.9,
     )
 
