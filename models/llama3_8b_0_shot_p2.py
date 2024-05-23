@@ -2,6 +2,8 @@ import os
 import transformers
 from helper_functions import *
 # Path
+
+batch_path = "batch1"
 transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 
 # Model
@@ -10,7 +12,7 @@ model_name = "Llama-3-8B-Instruct"
 
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
-output_path = f"{transform_chia}/model_output/{model_name}_0_shot/output/"
+output_path = f"{transform_chia}/evaluate/{batch_path}/model_output/{model_name}_0_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
@@ -25,7 +27,7 @@ model_desc_0_shot = read_text_file(f"{transform_chia}/chia_label/prompts/model_d
 command = "bring the following study in JSON format with logical operators. Only return JSON:"
 
 
-print("Hier fängt die Pipeline an")
+print(f"Hier fängt die Pipeline an. {model_name}")
 pipeline = transformers.pipeline(
             "text-generation",
             model=model_id,
