@@ -11,9 +11,10 @@ model_name = "Llama-3-8B-Instruct"
 # N Shots
 n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 temp = 0.1
+temp_str = str(temp).split(".")[1]
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
-output_path = f"{transform_chia}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_temp_{temp.split(".")[1]}/output/"
+output_path = f"{transform_chia}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_temp_{temp_str}/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
