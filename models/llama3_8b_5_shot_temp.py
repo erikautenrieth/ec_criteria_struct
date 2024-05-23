@@ -29,7 +29,7 @@ model_desc = read_text_file(f"{transform_chia}/chia_label/prompts/model_desc_p2.
 
 # Load n-shot Data
 study_folder = f"{transform_chia}/input/half_clinical_trials/" 
-label_folder = f'{transform_chia}/chia_label/p2_model_input' 
+label_folder = f'{transform_chia}/chia_label/p2' 
 study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, n_shot)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
