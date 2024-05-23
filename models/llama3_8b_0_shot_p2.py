@@ -24,7 +24,7 @@ study_files = os.listdir(study_path)[anfang:ende]
 # Load Model Description
 model_desc_0_shot = read_text_file(f"{transform_chia}/chia_label/prompts/model_desc_0_shot.txt")
 
-command = "bring the following study in JSON format with logical operators. Only return JSON:"
+command = "bring the following study in JSON format with logical operators. Only return JSON! :"
 
 
 print(f"Hier fängt die Pipeline an. {model_name}")

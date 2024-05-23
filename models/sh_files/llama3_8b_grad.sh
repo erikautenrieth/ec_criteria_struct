@@ -10,6 +10,7 @@
 #SBATCH --job-name=llama3_8b_grad_25_shot
 
 module load cuda
+cd ..
 python llama3_8b_grad_10_shot_p2.py
 
 
