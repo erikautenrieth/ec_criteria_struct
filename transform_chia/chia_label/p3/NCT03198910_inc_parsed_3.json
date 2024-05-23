@@ -1,0 +1,66 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients with pulmonary arterial hypertension (PAH)",
+          "Condition": [
+            "pulmonary arterial hypertension (PAH)",
+            "PAH"
+          ]
+        },
+        "right": {
+          "raw_text": "Patients with chronic thromboembolic pulmonary hypertension (CTEPH)",
+          "Condition": [
+            "chronic thromboembolic pulmonary hypertension (CTEPH)",
+            "CTEPH"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "All prevalent patients (diagnosed >12 month ago) with PAH",
+          "Temporal": [
+            ">12 month ago"
+          ],
+          "Condition": [
+            "PAH"
+          ],
+          "Context_Error": [
+            "prevalent"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or distal CTEPH who had a consultation at the PH centre",
+              "Condition": [
+                "CTEPH"
+              ],
+              "Qualifier": [
+                "distal"
+              ],
+              "Non-query-able": [
+                "consultation at the PH centre"
+              ],
+              "Visit": [
+                "consultation at the PH centre"
+              ]
+            },
+            "right": {
+              "raw_text": "in Zurich between November 2015 and November 2016)",
+              "Visit": [
+                "Zurich"
+              ],
+              "Temporal": [
+                "between November 2015 and November 2016"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

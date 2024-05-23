@@ -1,0 +1,59 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Aged over 18",
+              "Person": [
+                "Aged"
+              ],
+              "Value": [
+                "over 18"
+              ]
+            },
+            "right": {
+              "raw_text": "Primary symptom of chest pain",
+              "Condition": [
+                "chest pain"
+              ],
+              "Qualifier": [
+                "Primary symptom"
+              ]
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "No contraindication",
+                  "Condition": [
+                    "contraindication"
+                  ],
+                  "Negation": [
+                    "No"
+                  ]
+                },
+                "right": {
+                  "raw_text": "to CTA",
+                  "Procedure": [
+                    "CTA"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "Willing and able to provide written informed consent",
+      "Informed_consent": [
+        "Willing and able to provide written informed consent"
+      ]
+    }
+  }
+}

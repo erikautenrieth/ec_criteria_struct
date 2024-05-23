@@ -1,0 +1,99 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Pregnant women",
+              "Condition": [
+                "Pregnant"
+              ],
+              "Person": [
+                "women"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Claustrophobic",
+                  "Condition": [
+                    "Claustrophobic"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "patient"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "unable to undergo the examination",
+                          "Negation": [
+                            "unable"
+                          ],
+                          "Procedure": [
+                            "examination"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Breastfeeding women unwilling to temporarily stop breastfeeding",
+          "Person": [
+            "women"
+          ],
+          "Non-representable": [
+            "Breastfeeding women unwilling to temporarily stop breastfeeding"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Patient with contra-indication to: dipyridamole",
+          "Condition": [
+            "contra-indication"
+          ],
+          "Drug": [
+            "dipyridamole"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": ", aminophylline",
+              "Drug": [
+                "aminophylline"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", dobutamine",
+                  "Drug": [
+                    "dobutamine"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or exercise stress test (depending on the method of cardiovascular stress test chosen)",
+                  "Procedure": [
+                    "exercise stress test"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

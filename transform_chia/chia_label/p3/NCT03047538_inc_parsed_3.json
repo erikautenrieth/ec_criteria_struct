@@ -1,0 +1,93 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "a very high cardiovascular risk",
+              "Condition": [
+                "cardiovascular risk"
+              ],
+              "Qualifier": [
+                "very high",
+                "high"
+              ]
+            },
+            "right": {
+              "raw_text": "and LDL-cholesterol> 1.8 mmol / l",
+              "Measurement": [
+                "LDL-cholesterol"
+              ],
+              "Value": [
+                "> 1.8 mmol / l"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "a high cardiovascular risk",
+              "Condition": [
+                "cardiovascular risk"
+              ],
+              "Qualifier": [
+                "high"
+              ]
+            },
+            "right": {
+              "raw_text": "and LDL-cholesterol> 2.5 mmol / l",
+              "Measurement": [
+                "LDL-cholesterol"
+              ],
+              "Value": [
+                "> 2.5 mmol / l"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Patient with a high",
+          "Qualifier": [
+            "high"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or very high cardiovascular risk",
+              "Condition": [
+                "cardiovascular risk"
+              ],
+              "Qualifier": [
+                "very high",
+                "high"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "treated by lipidlowering therapy",
+                  "Procedure": [
+                    "lipidlowering therapy"
+                  ]
+                },
+                "right": {
+                  "raw_text": "with statin",
+                  "Drug": [
+                    "stati"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

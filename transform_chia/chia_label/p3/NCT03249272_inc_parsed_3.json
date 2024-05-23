@@ -1,0 +1,180 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Men or women aged 18 years or older",
+              "Person": [
+                "Men",
+                "women",
+                "aged"
+              ],
+              "Value": [
+                "18 years or older"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Patients presenting for CMR with the clinical diagnosis of hypertrophic cardiomyopathy",
+                  "Condition": [
+                    "hypertrophic cardiomyopathy"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "based on left ventricular wall thickness of at least =15 mm in the",
+                      "Measurement": [
+                        "left ventricular wall thickness"
+                      ],
+                      "Value": [
+                        "at least =15 mm"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "absence of any other cardiac",
+                              "Negation": [
+                                "absence"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or systemic cause of hypertrophy",
+                              "Condition": [
+                                "systemic cause of hypertrophy"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Patients presenting for CMR with the clinical diagnosis of idiopathic dilated cardiomyopathy",
+              "Condition": [
+                "idiopathic dilated cardiomyopathy"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "based upon left ventricular ejection fraction",
+                  "Measurement": [
+                    "left ventricular ejection fraction"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "=40%, LV end-diastolic diameter",
+                      "Value": [
+                        "=40%"
+                      ],
+                      "Measurement": [
+                        "LV end-diastolic diameter"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "=55 mm or left ventricular end-systolic diameter =45 mm, and the",
+                          "Value": [
+                            "=55 mm",
+                            "=45 mm"
+                          ],
+                          "Measurement": [
+                            "left ventricular end-systolic diameter"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "absence of coronary stenoses",
+                                  "Negation": [
+                                    "absence"
+                                  ],
+                                  "Condition": [
+                                    "coronary stenoses"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "on angiography.",
+                                  "Procedure": [
+                                    "angiography"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients presenting for CMR evaluation of chest pain",
+          "Condition": [
+            "chest pain"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "but"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "without evidence of obstructive coronary artery disease either by coronary angiography",
+                      "Procedure": [
+                        "angiography",
+                        "coronary angiography"
+                      ],
+                      "Negation": [
+                        "without"
+                      ],
+                      "Condition": [
+                        "obstructive coronary artery disease"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or stress testing.",
+                      "Procedure": [
+                        "stress testing"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
