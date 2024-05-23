@@ -1,0 +1,162 @@
+{
+  "AND":{
+    "left":{
+      "AND":{
+        "left":{
+          "AND":{
+            "left":{
+              "AND":{
+                "left":{
+                  "AND":{
+                    "left":{
+                      "AND":{
+                        "left":{
+                          "AND":{
+                            "left":{
+                              "AND":{
+                                "left":{
+                                  "AND":{
+                                    "left":{
+                                      "raw_text":"Patient has previously received or is receiving an organ transplant"
+                                    },
+                                    "right":{
+                                      "NOT":{
+                                        "left":{
+                                          "raw_text":"other than a liver."
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "right":{
+                                  "raw_text":"Patient currently requires dialysis"
+                                }
+                              }
+                            },
+                            "right":{
+                              "OR":{
+                                "left":{
+                                  "raw_text":"Recipient"
+                                },
+                                "right":{
+                                  "AND":{
+                                    "left":{
+                                      "raw_text":"or donor"
+                                    },
+                                    "right":{
+                                      "raw_text":"is known to be seropositive for human immunodeficiency virus (HIV)"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right":{
+                          "AND":{
+                            "left":{
+                              "raw_text":"Patient has received a liver transplant from a"
+                            },
+                            "right":{
+                              "NOT":{
+                                "left":{
+                                  "raw_text":"non-heart beating donor"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right":{
+                      "AND":{
+                        "left":{
+                          "raw_text":"Patient who is HCV negative has received an HCV"
+                        },
+                        "right":{
+                          "OR":{
+                            "left":{
+                              "raw_text":"positive (HCV RNA"
+                            },
+                            "right":{
+                              "raw_text":"by PCR or HCV antibody) donor liver"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right":{
+                  "AND":{
+                    "left":{
+                      "raw_text":"Patient who is HbsAg negative has received an HbsAg positive (HBV DNA"
+                    },
+                    "right":{
+                      "OR":{
+                        "left":{
+                          "raw_text":"by PCR"
+                        },
+                        "right":{
+                          "raw_text":"or HBV antibody) donor liver"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right":{
+              "raw_text":"Patient has received a liver transplant from a decrease donor > 70 years of age"
+            }
+          }
+        },
+        "right":{
+          "OR":{
+            "left":{
+              "raw_text":"Patient has a current malignancy"
+            },
+            "right":{
+              "AND":{
+                "left":{
+                  "raw_text":"or a history of malignancy (within the past 5 years),"
+                },
+                "right":{
+                  "NOT":{
+                    "left":{
+                      "AND":{
+                        "left":{
+                          "raw_text":"except hepatocellular carcinoma"
+                        },
+                        "right":{
+                          "OR":{
+                            "left":{
+                              "raw_text":"within UCSF Criteria and basal"
+                            },
+                            "right":{
+                              "raw_text":"or non-metastatic squamous cell carcinoma of skin that has been treated successfully."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right":{
+      "AND":{
+        "left":{
+          "raw_text":"Patient is hemodynamically unstable"
+        },
+        "right":{
+          "raw_text":"on POD 15"
+        }
+      }
+    }
+  }
+}
