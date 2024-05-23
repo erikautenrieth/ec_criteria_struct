@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --time=3:00:00          # Time limit hrs:min:sec
 
-#SBATCH --job-name=llama3_8b_inst_5_shot_temp_1
+#SBATCH --job-name=log/llama3_8b_inst_5_shot_temp_1
 
 module load cuda
 cd ..
