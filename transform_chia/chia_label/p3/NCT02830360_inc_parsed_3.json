@@ -1,0 +1,131 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Prior Myocardial Infarction and",
+                      "Condition": [
+                        "Myocardial Infarction"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Sustained monomorphic VT",
+                          "Condition": [
+                            "monomorphic VT",
+                            "VT"
+                          ],
+                          "Qualifier": [
+                            "Sustained"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "documented on 12-lead ECG",
+                              "Procedure": [
+                                "12-lead ECG"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or rhythm strip terminated by pharmacologic means",
+                                  "Procedure": [
+                                    "rhythm strip",
+                                    "pharmacologic means"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or DC cardioversion",
+                                  "Procedure": [
+                                    "DC cardioversion"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "=3 episodes of VT",
+                      "Multiplier": [
+                        "3 episodes"
+                      ],
+                      "Condition": [
+                        "VT"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "treated with antitachycardia pacing (ATP), at least one of which was symptomatic",
+                      "Procedure": [
+                        "antitachycardia pacing",
+                        "ATP"
+                      ],
+                      "Multiplier": [
+                        "at least one"
+                      ],
+                      "Qualifier": [
+                        "symptomatic"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "= 5 episodes of VT",
+                  "Condition": [
+                    "VT"
+                  ],
+                  "Multiplier": [
+                    "5 episodes"
+                  ]
+                },
+                "right": {
+                  "raw_text": "treated with antitachycardia pacing (ATP) regardless of symptoms",
+                  "Procedure": [
+                    "antitachycardia pacing",
+                    "ATP"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "=1 appropriate ICD shocks,",
+          "Multiplier": [
+            "=1"
+          ],
+          "Procedure": [
+            "ICD shocks"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "=3 VT episodes within 24 hours",
+      "Condition": [
+        "VT"
+      ],
+      "Temporal": [
+        "within 24 hours"
+      ]
+    }
+  }
+}

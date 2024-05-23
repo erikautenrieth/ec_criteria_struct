@@ -1,0 +1,130 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Subject's age is between =12 and 16 years, inclusive",
+                      "Person": [
+                        "age"
+                      ],
+                      "Value": [
+                        "between =12 and 16 years"
+                      ],
+                      "Context_Error": [
+                        "="
+                      ],
+                      "Grammar_Error": [
+                        "inclusive"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Subject is scheduled for a procedure that requires general",
+                          "Procedure": [
+                            "procedure"
+                          ],
+                          "Observation": [
+                            "scheduled for a procedure"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or neuraxial anesthesia",
+                          "Procedure": [
+                            "neuraxial anesthesia"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Subjects must have normal",
+                      "Value": [
+                        "normal"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or clinically acceptable physical exam",
+                      "Procedure": [
+                        "physical exam"
+                      ],
+                      "Value": [
+                        "clinically acceptable"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "Subjects with controlled diabetes prior to entry must have a mean systolic/diastolic office blood pressure =128/78 mmHg (sitting, after 5 minutes of rest)",
+              "Context_Error": [
+                "="
+              ],
+              "Condition": [
+                "diabetes"
+              ],
+              "Qualifier": [
+                "controlled",
+                "sitting"
+              ],
+              "Temporal": [
+                "prior to entry",
+                "after 5 minutes of rest"
+              ],
+              "Reference_point": [
+                "entry",
+                "rest"
+              ],
+              "Value": [
+                "78 mmHg"
+              ],
+              "Scope": [
+                "mean systolic/diastolic office blood pressure =128/78 mmHg (sitting"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Females must have a urine"
+            },
+            "right": {
+              "raw_text": "or serum pregnancy test (Human Chorionic Gonadotropin) that is negative at Screening and Day 1",
+              "Measurement": [
+                "serum pregnancy test",
+                "Human Chorionic Gonadotropin"
+              ],
+              "Value": [
+                "negative"
+              ],
+              "Temporal": [
+                "at Screening",
+                "Day 1"
+              ],
+              "Scope": [
+                "at Screening and Day 1"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "Subject's parent or legal guardian gives informed consent and subject gives assent.",
+      "Post-eligibility": [
+        "Subject's parent or legal guardian gives informed consent and subject gives assent."
+      ]
+    }
+  }
+}

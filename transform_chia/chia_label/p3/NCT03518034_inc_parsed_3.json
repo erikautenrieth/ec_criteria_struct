@@ -1,0 +1,67 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Men between 45 and 80 years age",
+      "Person": [
+        "Men",
+        "age"
+      ],
+      "Value": [
+        "between 45 and 80 years"
+      ]
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Participants with low serum testosterone concentrations (< 300 ng/dL) who exhibit at least one sign",
+          "Measurement": [
+            "serum testosterone concentrations"
+          ],
+          "Value": [
+            "low",
+            "< 300 ng/dL"
+          ],
+          "Multiplier": [
+            "at least one"
+          ],
+          "Condition": [
+            "sign"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or symptom",
+              "Condition": [
+                "symptom"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "of hypogonadism and have evidence of cardiovascular (CV) disease",
+                  "Condition": [
+                    "hypogonadism",
+                    "cardiovascular (CV) disease"
+                  ],
+                  "Mood": [
+                    "evidence of"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or are at an increased risk for CV disease.",
+                  "Mood": [
+                    "increased risk"
+                  ],
+                  "Condition": [
+                    "CV disease"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

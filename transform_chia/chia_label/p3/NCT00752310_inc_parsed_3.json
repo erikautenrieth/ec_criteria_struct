@@ -1,0 +1,154 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Non-smoking",
+                  "Condition": [
+                    "smoking"
+                  ],
+                  "Negation": [
+                    "Non"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", or smoking no more than 10 cigarettes",
+                      "Condition": [
+                        "smoking"
+                      ],
+                      "Observation": [
+                        "cigarettes"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ", or 2 cigars",
+                          "Observation": [
+                            "cigars"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": ", or 2 pipes per day for at least 3 months prior to selection",
+                          "Observation": [
+                            "pipes"
+                          ],
+                          "Temporal": [
+                            "for at least 3 months prior to selection"
+                          ],
+                          "Reference_point": [
+                            "selection"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Normal weight",
+              "Condition": [
+                "Normal weight"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "as defined by a Body Mass Index (BMI",
+                  "Measurement": [
+                    "Body Mass Index",
+                    "BMI"
+                  ]
+                },
+                "right": {
+                  "raw_text": ", weight in kg divided by the square of height in meters) of 18.0 to 30.0 kg/m2, extremes included",
+                  "Measurement": [
+                    "weight in kg divided by the square of height in meters"
+                  ],
+                  "Value": [
+                    "18.0 to 30.0 kg/m2, extremes included"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Able to comply with protocol requirements. Healthy",
+          "Observation": [
+            "Able to comply with protocol requirements"
+          ],
+          "Condition": [
+            "Healthy"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "on the basis of a medical evaluation",
+              "Procedure": [
+                "medical evaluation"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "that reveals the"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "absence of any clinically relevant abnormality and includes a physical examination, medical history, electrocardiogram (ECG), vital signs, and the results of blood biochemistry, blood coagulation, and hematology tests and a urinalysis carried out at screening.",
+                      "Negation": [
+                        "absence"
+                      ],
+                      "Qualifier": [
+                        "clinically relevant"
+                      ],
+                      "Condition": [
+                        "abnormality"
+                      ],
+                      "Procedure": [
+                        "physical examination",
+                        "medical history",
+                        "electrocardiogram",
+                        "vital signs",
+                        "ECG",
+                        "hematology tests",
+                        "urinalysis"
+                      ],
+                      "Temporal": [
+                        "at screening"
+                      ],
+                      "Reference_point": [
+                        "screening"
+                      ],
+                      "Scope": [
+                        "physical examination, medical history, electrocardiogram (ECG), vital signs, and the results of blood biochemistry, blood coagulation, and hematology tests and a urinalysis"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
