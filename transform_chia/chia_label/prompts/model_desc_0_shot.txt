@@ -21,3 +21,94 @@ For every opening brace in JSON { there must also be a closing brace }.
 Any double quotes within the raw textual criteria are escaped with a backslash (\").
 The elegibility criteria must be fully adopted and structured without any information being omitted.
 Only return the JSON Object.
+
+Here is an exemplary JSON structure in which the eligibility criteria must be entered into the raw_text fields. Note that the text must be fully preserved.
+Also, keep in mind that this is just an example and the structures need to be dynamically constructed depending on the operators:
+
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ""
+                                },
+                                "right": {
+                                  "raw_text": ""
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": ""
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ""
+                            },
+                            "right": {
+                              "raw_text": ""
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": ""
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ""
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ""
+                                },
+                                "right": {
+                                  "raw_text": ""
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": ""
+                }
+              }
+            },
+            "right": {
+              "raw_text": ""
+            }
+          }
+        },
+        "right": {
+          "raw_text": ""
+        }
+      }
+    },
+    "right": {
+      "raw_text": ""
+    }
+  }
+}
