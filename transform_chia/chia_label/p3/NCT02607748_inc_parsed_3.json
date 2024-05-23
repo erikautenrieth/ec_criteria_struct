@@ -1,0 +1,113 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Acute Coronary Syndrome group: 40 patients with type 1 myocardial infarction within 21 days prior to the imaging visit and invasive coronary angiography with angiographic evidence of at least a 50% stenosis in one or more coronary arteries. Only patients undergoing PCI will be included in the study.",
+                  "Condition": [
+                    "Acute Coronary Syndrome",
+                    "myocardial infarction"
+                  ],
+                  "Non-query-able": [
+                    "Acute Coronary Syndrome group: 40 patients with type 1 myocardial infarction within 21 days prior to the imaging visit and invasive coronary angiography with angiographic evidence of at least a 50% stenosis in one or more coronary arteries. Only patients undergoing PCI will be included in the study"
+                  ],
+                  "Negation": [
+                    "no"
+                  ],
+                  "Procedure": [
+                    "PCI"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Stable Ischemic Heart Disease group: 40 patients who have undergone invasive coronary angiography within 21 days prior to the imaging visit, with history of typical angina prior to the angiogram, but no prior myocardial infarction or coronary revascularization.",
+                  "Non-query-able": [
+                    "Stable Ischemic Heart Disease group: 40 patients who have undergone invasive coronary angiography within 21 days prior to the imaging visit, with history of typical angina prior to the angiogram, but no prior myocardial infarction or coronary revascularization"
+                  ],
+                  "Negation": [
+                    "no"
+                  ],
+                  "Condition": [
+                    "myocardial infarction"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "have"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "no prior CAD associated event (no prior myocardial infarction",
+                          "Negation": [
+                            "no"
+                          ],
+                          "Condition": [
+                            "CAD",
+                            "myocardial infarction"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", acute coronary syndrome",
+                              "Condition": [
+                                "acute coronary syndrome"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": ", coronary angiogram",
+                                  "Procedure": [
+                                    "coronary angiogram"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": ", or PCI),",
+                                  "Procedure": [
+                                    "PCI"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "have CAC between 10 to <1000, and",
+          "Measurement": [
+            "CAC"
+          ],
+          "Value": [
+            "between 10 to <1000"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "match to patients in the ACS group by gender, age by decile, and CAC category (using CAC categories of 10 to <100, 100 to <400, 400 to <1000).",
+      "Measurement": [
+        "CAC"
+      ],
+      "Non-query-able": [
+        "match to patients in the ACS group by gender, age by decile, and CAC category (using CAC categories of 10 to <100, 100 to <400, 400 to <1000)"
+      ]
+    }
+  }
+}

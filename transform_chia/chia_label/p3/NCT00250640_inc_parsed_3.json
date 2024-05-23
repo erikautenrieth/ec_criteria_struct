@@ -1,0 +1,91 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "The treating physician has chosen Ventavis as a suitable long-term treatment for the patient",
+          "Drug": [
+            "Ventavis"
+          ],
+          "Multiplier": [
+            "long-term"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Patient with primary pulmonary hypertension",
+              "Condition": [
+                "primary pulmonary hypertension"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "(i.e. Idiopathic Pulmonary Arterial Hypertension",
+                  "Condition": [
+                    "Idiopathic Pulmonary Arterial Hypertension"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or Familial Pulmonary Arterial Hypertension) and classified as NYHA functional class III (NYHA = New York Heart Association)",
+                  "Condition": [
+                    "Familial Pulmonary Arterial Hypertension"
+                  ],
+                  "Measurement": [
+                    "NYHA functional class"
+                  ],
+                  "Value": [
+                    "III"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "No prior treatment with Ventavis",
+              "Drug": [
+                "Ventavis"
+              ],
+              "Procedure": [
+                "treatment with Ventavis"
+              ],
+              "Negation": [
+                "No"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or other active treatments for primary pulmonary hypertension",
+                  "Condition": [
+                    "primary pulmonary hypertension"
+                  ],
+                  "Procedure": [
+                    "treatments"
+                  ],
+                  "Qualifier": [
+                    "for primary pulmonary hypertension"
+                  ]
+                },
+                "right": {
+                  "raw_text": "within 6 weeks of date of study inclusion (unless otherwise advised by Bayer Schering Pharma)",
+                  "Temporal": [
+                    "within 6 weeks of date of study inclusion"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

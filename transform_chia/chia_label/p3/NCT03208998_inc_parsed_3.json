@@ -1,0 +1,88 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "HBsAg"
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "and HBeAg positive",
+          "Condition": [
+            "HBeAg positive"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "for more than 6 months, HBV DNA detectable",
+              "Temporal": [
+                "for more than 6 months"
+              ],
+              "Condition": [
+                "HBV DNA detectable"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "with ALT level abnormal lasted for three months and at least time190 IU/L or liver puncture biopsy",
+                  "Measurement": [
+                    "ALT level"
+                  ],
+                  "Value": [
+                    "abnormal",
+                    "190 IU/L"
+                  ],
+                  "Temporal": [
+                    "lasted for three months",
+                    "at least time"
+                  ],
+                  "Procedure": [
+                    "liver puncture biopsy"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "demonstrated apparent inflammation",
+                      "Condition": [
+                        "inflammation"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": ","
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "never treated before enrolled.",
+                              "Negation": [
+                                "never"
+                              ],
+                              "Procedure": [
+                                "treated",
+                                "enrolled"
+                              ],
+                              "Temporal": [
+                                "before enrolled"
+                              ],
+                              "Reference_point": [
+                                "enrolled"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
