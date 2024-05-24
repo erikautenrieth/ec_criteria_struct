@@ -9,7 +9,7 @@ transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 # N Shots
-n_shot = 25 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 15 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
@@ -17,8 +17,8 @@ output_path = f"{transform_chia}/evaluate/{batch_path}/model_output/{model_name}
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
-anfang = 0 
-ende = 300
+anfang = n_shot 
+ende = 300 + n_shot
 study_files = os.listdir(study_path)[anfang:ende]  
 
 
@@ -81,7 +81,7 @@ for file in study_files:
             max_new_tokens=2000,# 500 (LLama3), 256 (BIoLLama)
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.5,# 0.6 deterministich - kreativ
+            temperature=0.3,# 0.6 deterministich - kreativ
             top_p=0.9,
     )
 
