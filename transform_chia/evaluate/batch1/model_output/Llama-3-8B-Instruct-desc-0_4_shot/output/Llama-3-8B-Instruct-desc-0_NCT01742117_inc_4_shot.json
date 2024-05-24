@@ -1,0 +1,72 @@
+{
+  "AND":{
+    "left":{
+      "AND":{
+        "left":{
+          "AND":{
+            "left":{
+              "AND":{
+                "left":{
+                  "raw_text":"Patient >18 years of age"
+                }
+              }
+            },
+            "right":{
+              "AND":{
+                "left":{
+                  "raw_text":"Patient presents with acute coronary syndrome"
+                },
+                "right":{
+                  "OR":{
+                    "left":{
+                      "raw_text":"or stable coronary artery disease (CAD)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right":{
+          "AND":{
+            "left":{
+              "raw_text":"Patient is eligible for PCI"
+            },
+            "right":{
+              "AND":{
+                "left":{
+                  "raw_text":"Patient is willing and able to provide informed written consent"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right":{
+      "NOT":{
+        "left":{
+          "OR":{
+            "left":{
+              "raw_text":"Patient not able to receive 12 months of dual anti-platelet therapy"
+            },
+            "right":{
+              "OR":{
+                "left":{
+                  "raw_text":"Failure of index PCI"
+                },
+                "right":{
+                  "OR":{
+                    "left":{
+                      "raw_text":"Patient or physician refusal to enroll in the study"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

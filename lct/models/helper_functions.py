@@ -156,17 +156,16 @@ def read_matching_txt_files(study_folder, label_folder, max_files):
 
     study_files = [f for f in os.listdir(study_folder) if f.endswith('.txt')][:max_files]
     label_files = [f for f in os.listdir(label_folder) if f.endswith('.txt')][:max_files]
+
     for filename in study_files:
-        nct_number, inc_exc = extract_nct_number(filename)
-        if nct_number:
-            study_filenames.append(f"{nct_number}_{inc_exc}_study")
-            filepath = os.path.join(study_folder, filename)
-            study_contents.append(read_file_content(filepath))
-    for filename in label_files:
-        nct_number, inc_exc = extract_nct_number(filename)
-        if nct_number:
-            label_filenames.append(f"{nct_number}_{inc_exc}_label")
-            filepath = os.path.join(label_folder, filename)
-            label_contents.append(read_file_content(filepath))
+        if filename in label_files:
+            study_filenames.append(f"{filename}_study")
+            label_filenames.append(f"{filename}_label")
+            
+            study_filepath = os.path.join(study_folder, filename)
+            label_filepath = os.path.join(label_folder, filename)
+            
+            study_contents.append(read_file_content(study_filepath))
+            label_contents.append(read_file_content(label_filepath))
 
     return study_filenames, study_contents, label_filenames, label_contents
