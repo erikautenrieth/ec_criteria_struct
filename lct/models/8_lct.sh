@@ -12,7 +12,6 @@ SCRIPT_NAME="llama3_8b_4_shot_lct"
 #SBATCH --job-name=${SCRIPT_NAME}
 
 module load cuda
-cd ..
 python ${SCRIPT_NAME}.py
 
 
