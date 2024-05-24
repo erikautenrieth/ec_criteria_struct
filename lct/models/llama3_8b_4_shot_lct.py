@@ -19,7 +19,7 @@ os.makedirs(output_path, exist_ok=True)
 # Load Prediction Files
 anfang = n_shot 
 ende = 300 + n_shot
-study_files = os.listdir(study_path)[anfang:ende]  
+study_files = os.listdir(study_path)#[anfang:ende]
 
 
 # Load Model Description
