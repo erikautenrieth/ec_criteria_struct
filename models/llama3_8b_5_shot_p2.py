@@ -7,9 +7,9 @@ transform_chia ="/work/eauten2s/ec_criteria_struct/transform_chia"
 
 # Model
 model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
-model_name = "Llama-3-8B-Instruct"
+model_name = "Llama-3-8B-Instruct-desc-0"
 # N Shots
-n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_chia}/input/half_clinical_trials/"
@@ -21,9 +21,9 @@ anfang = n_shot
 ende = 300 + n_shot
 study_files = os.listdir(study_path)[anfang:ende]  
 
-
+## Achtung hier 0-shot Promtpt aktuell
 # Load Model Description
-model_desc = read_text_file(f"{transform_chia}/chia_label/prompts/model_desc_p2.txt")
+model_desc = read_text_file(f"{transform_chia}/chia_label/prompts/model_desc_0_shot.txt")
 
 
 # Load n-shot Data
