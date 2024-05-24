@@ -12,7 +12,7 @@ model_name = "Llama-3-8B-Instruct"
 n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
-study_path = f"{transform_lct}/input/lct_txt"
+study_path = f"{transform_lct}/input/lct_txt/"
 output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 

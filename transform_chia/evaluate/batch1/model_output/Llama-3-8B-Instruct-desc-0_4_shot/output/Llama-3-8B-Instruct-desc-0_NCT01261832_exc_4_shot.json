@@ -1,0 +1,144 @@
+{
+  "AND":{
+    "left":{
+      "OR":{
+        "left":{
+          "AND":{
+            "left":{
+              "raw_text":"The patient has a known hypersensitivity"
+            },
+            "right":{
+              "OR":{
+                "left":{
+                  "raw_text":"or contraindication to any of the following medications:"
+                },
+                "right":{
+                  "OR":{
+                    "left":{
+                      "raw_text":"Heparin"
+                    },
+                    "right":{
+                      "OR":{
+                        "left":{
+                          "raw_text":"Aspirin"
+                        },
+                        "right":{
+                          "OR":{
+                            "left":{
+                              "raw_text":"Clopidogrel"
+                            },
+                            "right":{
+                              "raw_text":"or Cilostazol"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right":{
+          "OR":{
+            "left":{
+              "raw_text":"Uncontrolled hypertension"
+            },
+            "right":{
+              "OR":{
+                "left":{
+                  "raw_text":"History of bleeding diathesis"
+                },
+                "right":{
+                  "OR":{
+                    "left":{
+                      "raw_text":"or known coagulopathy"
+                    },
+                    "right":{
+                      "OR":{
+                        "left":{
+                          "raw_text":"(including heparin-induced thrombocytopenia)"
+                        },
+                        "right":{
+                          "raw_text}:"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right":{
+      "OR":{
+        "left":{
+          "AND":{
+            "left":{
+              "raw_text":"Baseline hemogram with"
+            },
+            "right":{
+              "AND":{
+                "left":{
+                  "raw_text":"Hb<10g/dL"
+                },
+                "right":{
+                  "OR":{
+                    "left":{
+                      "raw_text":"or PLT count<100,000/μL"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right":{
+          "OR":{
+            "left":{
+              "raw_text":"Patients already taking"
+            },
+            "right":{
+              "OR":{
+                "left":{
+                  "raw_text":"warfarin"
+                },
+                "right":{
+                  "OR":{
+                    "left":{
+                      "raw_text":"cilostazol"
+                    },
+                    "right":{
+                      "OR":{
+                        "left":{
+                          "raw_text":"or any other type of anti-platelet agents"
+                        },
+                        "right":{
+                          "EXCEPT":{
+                            "left":{
+                              "OR":{
+                                "left":{
+                                  "raw_text":"aspirin"
+                                },
+                                "right":{
+                                  "raw_text":"and clopidogrel"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
