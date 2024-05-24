@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --partition=gpu4          # GPU partition
 #SBATCH --nodes=1                # number of nodes
-#SBATCH --mem=160G                # memory per node in MB (different units with suffix K|M|G|T)
+#SBATCH --mem=260G                # memory per node in MB (different units with suffix K|M|G|T)
 #SBATCH --gres=gpu:4 
-#SBATCH --time=3:00:00          # Time limit hrs:min:sec
+#SBATCH --time=25:00:00          # Time limit hrs:min:sec
 
 SCRIPT_NAME="llama3_8b_4_shot_lct"
 
