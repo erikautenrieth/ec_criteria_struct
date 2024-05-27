@@ -9,10 +9,11 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 model_name = "Llama-3-8B-Instruct"
 
-
+temp=0.9
+temp_str=str(temp).split(".")[1]
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_temp_9/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_tmp_{temp_str}/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
@@ -64,7 +65,7 @@ for file in study_files:
             max_new_tokens=2000,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.9,# 0.6 deterministich - kreativ
+            temperature=temp,# 0.6 deterministich - kreativ
             top_p=0.9,
     )
 
