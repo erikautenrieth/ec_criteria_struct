@@ -34,7 +34,7 @@ studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
 
-command = "Insert the logical operators [AND], [OR], and [NOT] into the following eligibility criteria and return the text in full:"
+command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:"
 
 messages.append({"role": "system", "content": f"{model_desc}"})
 
