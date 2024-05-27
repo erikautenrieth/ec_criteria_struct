@@ -13,7 +13,7 @@ n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_1_temp/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
@@ -92,7 +92,7 @@ for file in study_files:
             max_new_tokens=2000,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.1,# 0.6 deterministich - kreativ
+            temperature=0.5,# 0.6 deterministich - kreativ
             top_p=0.9,
     )
 
