@@ -148,7 +148,28 @@ def read_file_content(filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
         return file.read()
 
-def read_matching_txt_files(study_folder, label_folder, max_files):
+
+def read_matching_txt_files(study_folder, label_folder, shot_list):
+    study_filenames = []
+    label_filenames = []
+    study_contents = []
+    label_contents = []
+
+    for filename in shot_list:
+        study_filepath = os.path.join(study_folder, filename)
+        label_filepath = os.path.join(label_folder, filename)
+
+        if os.path.isfile(study_filepath) and os.path.isfile(label_filepath):
+            study_filenames.append(f"{filename}_study")
+            label_filenames.append(f"{filename}_label")
+
+            study_contents.append(read_file_content(study_filepath))
+            label_contents.append(read_file_content(label_filepath))
+
+    return study_filenames, study_contents, label_filenames, label_contents
+
+
+def read_matching_txt_files_old(study_folder, label_folder, max_files):
     study_filenames = []
     label_filenames = []
     study_contents = []
