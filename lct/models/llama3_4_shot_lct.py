@@ -9,11 +9,11 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 # N Shots
-n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_1_temp/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
@@ -26,10 +26,19 @@ study_files = os.listdir(study_path)#[anfang:ende]
 model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt1.txt")
 
 
+shot_list = [
+    "NCT03865433.txt",
+    "NCT03860324.txt",
+    "NCT03860233.txt",
+    "NCT03923231.txt",
+    "NCT03930121.txt"
+]
+
+
 # Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, n_shot)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
@@ -83,7 +92,7 @@ for file in study_files:
             max_new_tokens=2000,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.5,# 0.6 deterministich - kreativ
+            temperature=0.1,# 0.6 deterministich - kreativ
             top_p=0.9,
     )
 
