@@ -6,8 +6,8 @@ batch_path = "eval_p1"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 # Model
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
+model_name = "Llama-3-8B-Instruct"
 # N Shots
 n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
@@ -23,7 +23,7 @@ study_files = os.listdir(study_path)#[anfang:ende]
 
 
 # Load Model Description
-model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt1.txt")
+model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt2.txt")
 
 
 shot_list = [
