@@ -96,11 +96,11 @@ for file in study_files:
 
     outputs = pipeline(
             prompt,
-            max_new_tokens=2000,
+            max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.5,# 0.6 deterministich - kreativ
-            top_p=0.9,
+            temperature=0.6,# 0.6 deterministich - kreativ
+            top_p=0.95,
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
