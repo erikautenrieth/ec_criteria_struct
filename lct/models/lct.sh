@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --time=25:00:00          # Time limit hrs:min:sec
 
-SCRIPT_NAME="llama3_8b_4_shot_lct"
+SCRIPT_NAME="llama3_4_shot_lct"
 
 #SBATCH --output=log/${SCRIPT_NAME}.%j.out   # Standard output and error log
 #SBATCH --error=log/${SCRIPT_NAME}.%j.err    # Error log
