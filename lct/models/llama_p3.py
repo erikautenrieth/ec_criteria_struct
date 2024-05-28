@@ -71,13 +71,6 @@ for file in study_files:
                 add_generation_prompt=True
     )
 
-    # Checke die Tokens
-    max_length = pipeline.model.config.max_length
-    prompt_length = len(pipeline.tokenizer(prompt)['input_ids'])
-    max_new_tokens = max_length - prompt_length
-    max_new_tokens = max(0, max_new_tokens)
-    print(max_new_tokens)
-
     terminators = [
             pipeline.tokenizer.eos_token_id,
             pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
