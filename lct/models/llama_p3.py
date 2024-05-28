@@ -93,4 +93,4 @@ for file in study_files:
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
-    save_json(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
+    save_json(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.json")
