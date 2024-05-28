@@ -2,12 +2,12 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1"
+batch_path = "eval_p1_2"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 # Model
-model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
-model_name = "Llama-3-8B-Instruct"
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
 # N Shots
 n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
