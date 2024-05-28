@@ -86,15 +86,11 @@ for file in study_files:
     max_new_tokens = max(0, max_new_tokens)
     print(max_new_tokens)
 
-    terminators = [
-        pipeline.tokenizer.eos_token_id,
-        pipeline.tokenizer.convert_tokens_to_ids("")
-    ]
 
     outputs = pipeline(
         prompt,
         max_new_tokens=2048,
-        eos_token_id=terminators,
+        eos_token_id=pipeline.tokenizer.eos_token_id,
         do_sample=True,
         temperature=0.6,  # 0.6 deterministich - kreativ
         top_p=0.95,
