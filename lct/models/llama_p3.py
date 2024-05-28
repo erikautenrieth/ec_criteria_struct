@@ -12,7 +12,7 @@ model_name = "Llama-3-70B-Instruct"
 n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
-study_path = f"{transform_lct}/input/lct_txt/"
+study_path = f"{transform_lct}/input/lct_txt_half/"
 output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
@@ -56,7 +56,6 @@ first_call = True
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
-    
     test_file = read_text_file(study_path+file)
 
     if first_call:
@@ -64,7 +63,6 @@ for file in study_files:
         first_call = False
     else:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"}
-
 
     prompt = pipeline.tokenizer.apply_chat_template(
                 messages, 
@@ -84,18 +82,14 @@ for file in study_files:
             pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
     ]
 
-
     outputs = pipeline(
             prompt,
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.6,# 0.6 deterministich - kreativ
+            temperature=0.6,
             top_p=0.95,
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
-   
-    #print(f"\n {model_name} Output: \n  {gen_output} \n")
-    
-    save_txt(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
+    save_json(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
