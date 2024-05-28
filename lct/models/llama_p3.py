@@ -6,11 +6,13 @@ batch_path = "eval_p3"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 # Model
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
 
+model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
+model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 # N Shots
-n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt_half/"

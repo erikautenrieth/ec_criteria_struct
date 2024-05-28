@@ -21,10 +21,4 @@ export NCCL_DEBUG=INFO  # Enable NCCL debugging info
 # Ensure TMPDIR is writable
 export TMPDIR=/tmp
 
-srun --wait=600 --verbose --immediate=30 --kill-on-bad-exit=1 --export=ALL python -m torch.distributed.launch \
-    --nproc_per_node=4 \
-    --nnodes=$SLURM_NNODES \
-    --node_rank=$SLURM_PROCID \
-    --master_addr=$MASTER_ADDR \
-    --master_port=$MASTER_PORT \
-    falcon_test.py
+python falcon_test.py
