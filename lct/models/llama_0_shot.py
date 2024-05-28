@@ -9,7 +9,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-temp=0.6
+temp=0.1
 temp_str=str(temp).split(".")[1]
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
@@ -53,6 +53,12 @@ for file in study_files:
                 tokenize=False, 
                 add_generation_prompt=True
     )
+    # Checke die Tokens
+    max_length = pipeline.model.config.max_length
+    prompt_length = len(pipeline.tokenizer(prompt)['input_ids'])
+    max_new_tokens = max_length - prompt_length
+    max_new_tokens = max(0, max_new_tokens)
+    print(max_new_tokens)
 
     terminators = [
             pipeline.tokenizer.eos_token_id,
