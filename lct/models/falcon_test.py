@@ -10,7 +10,7 @@ transform_lct = "/work/eauten2s/ec_criteria_struct/lct"
 model_id = "tiiuae/falcon-180b"  # Verwende das angegebene Modell
 model_name = "Falcon-180B"
 # N Shots
-n_shot = 3  # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 1  # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
@@ -78,14 +78,6 @@ for file in study_files:
         tokenize=False, 
         add_generation_prompt=True
     )
-
-    # Checke die Tokens
-    max_length = pipeline.model.config.max_length
-    prompt_length = len(pipeline.tokenizer(prompt)['input_ids'])
-    max_new_tokens = max_length - prompt_length
-    max_new_tokens = max(0, max_new_tokens)
-    print(max_new_tokens)
-
 
     outputs = pipeline(
         prompt,
