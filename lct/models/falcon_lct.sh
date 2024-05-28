@@ -3,7 +3,7 @@
 #SBATCH --nodes=3                # number of nodes
 #SBATCH --ntasks-per-node=4      # number of tasks per node
 #SBATCH --gres=gpu:4             # request 4 GPUs per node
-#SBATCH --mem=650G               # total memory for job 450
+#SBATCH --mem=450G               # total memory for job 450
 #SBATCH --time=15:00:00           # Time limit hrs:min:sec
 #SBATCH --output=log/falcon.%j.out   # Standard output and error log
 #SBATCH --error=log/falcon.%j.err    # Error log
@@ -12,4 +12,19 @@
 module load cuda
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
-python falcon_test.py
+# Set environment variables for distributed training
+export MASTER_ADDR=$(scontrol show hostname $SLURM_NODELIST | head -n 1)
+export MASTER_PORT=12345
+export WORLD_SIZE=$(($SLURM_NNODES * $SLURM_NTASKS_PER_NODE))
+export NCCL_DEBUG=INFO  # Enable NCCL debugging info
+
+# Ensure TMPDIR is writable
+export TMPDIR=/tmp
+
+srun --wait=600 --verbose --immediate=30 --kill-on-bad-exit=1 --export=ALL python -m torch.distributed.launch \
+    --nproc_per_node=4 \
+    --nnodes=$SLURM_NNODES \
+    --node_rank=$SLURM_PROCID \
+    --master_addr=$MASTER_ADDR \
+    --master_port=$MASTER_PORT \
+    falcon_test.py

@@ -10,7 +10,7 @@ transform_lct = "/work/eauten2s/ec_criteria_struct/lct"
 model_id = "tiiuae/falcon-180b"  # Verwende das angegebene Modell
 model_name = "Falcon-180B"
 # N Shots
-n_shot = 5  # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 3  # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
@@ -18,9 +18,9 @@ output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
-anfang = n_shot
-ende = 300 + n_shot
-study_files = os.listdir(study_path)#[anfang:ende]
+anfang = 0
+ende = 300 
+study_files = os.listdir(study_path)[anfang:ende]
 
 # Load Model Description
 model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt2.txt")

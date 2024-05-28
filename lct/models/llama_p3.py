@@ -10,7 +10,7 @@ model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
 # N Shots
-n_shot = 3 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 4 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt_half/"
@@ -20,7 +20,7 @@ os.makedirs(output_path, exist_ok=True)
 # Load Prediction Files
 anfang = 0
 ende = 300
-study_files = os.listdir(study_path)[anfang:ende]
+study_files = os.listdir(study_path)#[anfang:ende]
 
 
 # Load Model Description
