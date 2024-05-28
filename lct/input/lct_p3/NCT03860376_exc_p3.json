@@ -1,0 +1,77 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Subjects who do"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "not have malignant tissue available",
+                      "Condition": [
+                        "malignant tissue"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and accessible"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- The amount of excised malignant tissue is",
+              "Condition": [
+                "malignant tissue"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "not sufficient for the ex vivo drug testing"
+                    },
+                    "right": {
+                      "raw_text": "and/or genetic profiling."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients with newly diagnosed tumors",
+          "Condition": [
+            "tumors",
+            "tumor"
+          ]
+        },
+        "right": {
+          "raw_text": "and tumors that have high (>90%) cure rate with safe standard therapy.",
+          "Condition": [
+            "tumors",
+            "tumor"
+          ],
+          "Observation": [
+            "cure rate"
+          ]
+        }
+      }
+    }
+  }
+}

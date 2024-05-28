@@ -1,0 +1,111 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- modified Rankin scale > 4 at the time of enrollment (severe disability)",
+                          "Observation": [
+                            "modified Rankin scale"
+                          ],
+                          "Condition": [
+                            "disability"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- life expectancy",
+                              "Observation": [
+                                "life expectancy"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "< 1 year or terminal illness,",
+                              "Condition": [
+                                "terminal illness"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- eGFR < 30 at time of discharge",
+                      "Observation": [
+                        "eGFR"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- pregnancy",
+                  "Condition": [
+                    "pregnancy"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- symptomatic flow limiting carotid stenosis",
+                  "Condition": [
+                    "carotid stenosis",
+                    "symptomatic flow"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "without plan for intervention"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- urine toxicology",
+              "Observation": [
+                "urine toxicology"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "positive for cocaine",
+                  "Drug": [
+                    "cocaine"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or methamphetamine or recent use",
+                  "Drug": [
+                    "methamphetamine"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- long-term BP goal ≥ 130/80 mmHg according to clinical team",
+      "Observation": [
+        "BP"
+      ]
+    }
+  }
+}
