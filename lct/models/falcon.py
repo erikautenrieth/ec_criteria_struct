@@ -9,7 +9,7 @@ pipeline = transformers.pipeline(
     "text-generation",
     model=model,
     tokenizer=tokenizer,
-    torch_dtype=torch.bfloat16,
+    torch_dtype=torch.float16, # torch.bfloat16
     trust_remote_code=True,
     device_map="auto",
 )
