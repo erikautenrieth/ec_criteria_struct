@@ -1,0 +1,50 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Resident of the Republic of Marshall Islands"
+            },
+            "right": {
+              "raw_text": "- Aged 18 - 75 years"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- HbA1c",
+              "Observation": [
+                "HbA1c"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "≥ 8.0% or diagnosed with T2D",
+                  "Condition": [
+                    "T2D"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and taking diabetes medication",
+                  "Condition": [
+                    "diabetes"
+                  ],
+                  "Drug": [
+                    "medication"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Medical clearance to participate from Diabetes Wellness Center (DWC) physicians."
+    }
+  }
+}

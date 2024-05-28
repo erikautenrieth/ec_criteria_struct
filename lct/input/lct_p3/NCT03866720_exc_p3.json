@@ -1,0 +1,107 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Any reported condition",
+                      "Condition": [
+                        "condition"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or behaviour deemed either to pose undue personal risk",
+                          "Condition": [
+                            "behaviour"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "to the participant or introduce bias"
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Any diagnosed metabolic disease (e.g. type 1",
+                      "Condition": [
+                        "metabolic disease"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or type 2 diabetes)",
+                      "Condition": [
+                        "diabetes"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Any reported use of substances which may pose undue personal risk",
+                  "Drug": [
+                    "substances"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "to the participants or introduce bias into the experiment (e.g. smoking/",
+                      "Observation": [
+                        "smoking"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "substance abuse)",
+                      "Condition": [
+                        "substance abuse"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Lifestyle"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not conforming to standard sleep-wake cycle (e.g. shift worker)",
+                  "Condition": [
+                    "sleep-wake cycle"
+                  ],
+                  "Observation": [
+                    "shift worker"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Any reported recent (<6 months) change in body mass (± 3%)",
+      "Observation": [
+        "body mass"
+      ]
+    }
+  }
+}

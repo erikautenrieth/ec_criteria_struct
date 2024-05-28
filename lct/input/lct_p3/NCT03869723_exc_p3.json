@@ -1,0 +1,62 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patient"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "without post-operative scan evaluation"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patient with a chirurgical contraindication"
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnant",
+              "Condition": [
+                "Pregnant"
+              ]
+            },
+            "right": {
+              "raw_text": "or nursing woman",
+              "Condition": [
+                "nursing"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Adult requiring protection (guardianship,",
+          "Observation": [
+            "requiring protection",
+            "guardianship"
+          ]
+        },
+        "right": {
+          "raw_text": "supervision)",
+          "Observation": [
+            "supervision"
+          ]
+        }
+      }
+    }
+  }
+}

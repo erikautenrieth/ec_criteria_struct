@@ -5,6 +5,10 @@ import psutil
 import torch
 import re
 
+def read_json(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return data
 def read_text_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -167,6 +171,36 @@ def read_matching_txt_files(study_folder, label_folder, shot_list):
             label_contents.append(read_file_content(label_filepath))
 
     return study_filenames, study_contents, label_filenames, label_contents
+
+def read_matching_p3_files(study_folder, n_shot):
+    study_filenames = []
+    study_contents = []
+    label_filenames = []
+    label_contents = []
+
+    loaded_files = 0
+    for file_name in os.listdir(study_folder):
+        if file_name.endswith(".txt"):
+            study_filenames.append(file_name)
+            study_file_path = os.path.join(study_folder, file_name)
+            with open(study_file_path, 'r', encoding='utf-8') as file:
+                study_contents.append(file.read())
+
+            label_file_name = file_name.replace(".txt", "_p3.json")
+            label_file_path = os.path.join(study_folder, label_file_name)
+            if os.path.exists(label_file_path):
+                label_filenames.append(label_file_name)
+                with open(label_file_path, 'r', encoding='utf-8') as file:
+                    label_contents.append(file.read())
+            else:
+                label_filenames.append(None)
+                label_contents.append(None)
+            loaded_files += 1
+            if loaded_files == n_shot * 2:
+                break
+
+    return study_filenames, study_contents, label_filenames, label_contents
+
 
 
 def read_matching_txt_files_old(study_folder, label_folder, max_files):

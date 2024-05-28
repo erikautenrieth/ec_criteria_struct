@@ -1,0 +1,62 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Phenylketonuric patient diagnosed in neonatal screening",
+          "Condition": [
+            "Phenylketonuric"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patient with Phenylalaninemia",
+              "Observation": [
+                "Phenylalaninemia"
+              ]
+            },
+            "right": {
+              "raw_text": "≥ 900μmol / L on blotter made during the screening period (or average blotting results ≥900 μmol / L if several blots made during the screening period)",
+              "Observation": [
+                "blotting results",
+                "blots"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Untreated patient:"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not taking any amino acid supplement for his PKU, regardless of diet",
+                      "Condition": [
+                        "PKU"
+                      ],
+                      "Drug": [
+                        "amino acid supplement"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
