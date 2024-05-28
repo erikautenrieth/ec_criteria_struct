@@ -8,6 +8,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 # Model
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
+
 # N Shots
 n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
@@ -29,7 +30,7 @@ model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt_p3.txt")
 
 # Load n-shot Data
 n_shot_folder = f"{transform_lct}/input/n_shot_files_p3"
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(n_shot_folder, n_shot)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_p3_files(n_shot_folder, n_shot)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
