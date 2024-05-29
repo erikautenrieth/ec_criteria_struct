@@ -1,0 +1,118 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- intention to quit smoking in the next 30 days",
+                          "Observation": [
+                            "intention",
+                            "quit",
+                            "smoking",
+                            "days"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- currently using pharmacotherapy for smoking cessation",
+                          "Drug": [
+                            "pharmacotherapy"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- currently using electronic cigarettes more than 2 days/week",
+                              "Drug": [
+                                "electronic cigarettes"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "or",
+                                  "Observation": [
+                                    "or"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "unstable medical or psychiatric condition (defined as hospitalization)",
+                      "Observation": [
+                        "unstable medical or psychiatric condition",
+                        "hospitalization"
+                      ]
+                    }
+                  }
+                }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- medical contraindications to nicotine (unstable angina, uncontrolled hypertension, or recent cardiovascular event, including hospitalization)",
+                  "Condition": [
+                    "medical contraindications",
+                    "nicotine",
+                    "angina",
+                    "hypertension",
+                    "cardiovascular event",
+                    "hospitalization"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "psychotic symptoms",
+                      "Condition": [
+                        "psychotic symptoms"
+                      ]
+                    }
+                  }
+                }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "substance use disorder other than nicotine dependence",
+              "Condition": [
+                "substance use disorder",
+                "nicotine dependence"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "past-month suicidal ideation or past-year suicide attempt",
+          "Condition": [
+            "suicidal ideation",
+            "suicide attempt"
+          ]
+        }
+      }
+    }
+  }
+}

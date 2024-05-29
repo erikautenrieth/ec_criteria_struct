@@ -1,0 +1,86 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- age 55-80",
+                  "Observation": [
+                    "age"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- smoked at least 30 pack-years in lifetime",
+                  "Observation": [
+                    "smoking"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- if former smoker, quit smoking within the last 15 years",
+              "Observation": [
+                "smoking"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- English speaker",
+              "Observation": [
+                "language"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- no prior history of lung cancer",
+                      "Condition": [
+                        "lung cancer"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- did not have a lung cancer screening test within the last year",
+                      "Observation": [
+                        "lung cancer screening"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- PCP does not object to patient's participation",
+          "Observation": [
+            "PCP"
+          ]
+        },
+        "right": {
+          "raw_text": "- have a scheduled visit at University of California, San Francisco (UCSF) internal medicine clinics.",
+          "Observation": [
+            "visit",
+            "UCSF",
+            "internal medicine clinics"
+          ]
+        }
+      }
+    }
+  }
+}

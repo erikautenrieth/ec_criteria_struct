@@ -1,0 +1,93 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Age ≥18 years",
+          "Observation": [
+            "Age"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "systemic diseases",
+                  "Condition": [
+                    "systemic diseases"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or pregnancy.",
+                  "Condition": [
+                    "pregnancy"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Self-reported smoking ≤ 10 cigarettes/day.",
+          "Observation": [
+            "smoking"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Full-mouth plaque score (FMPS) and full-mouth bleeding score (FMBS) ≤ 10%",
+              "Observation": [
+                "Full-mouth plaque score",
+                "Full-mouth bleeding score",
+                "FMPS",
+                "FMBS"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Presence of single RT1 buccal gingival recessions ≥ 2 mm of depth located in the anterior area of the upper jaw",
+                  "Condition": [
+                    "RT1 buccal gingival recessions"
+                  ],
+                  "Observation": [
+                    "depth",
+                    "anterior area",
+                    "upper jaw"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Presence of NCCL associated with recession",
+                      "Condition": [
+                        "NCCL"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "- No history of mucogingival or periodontal surgery at experimental sites.",
+                          "Condition": [
+                            "mucogingival surgery",
+                            "periodontal surgery"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
