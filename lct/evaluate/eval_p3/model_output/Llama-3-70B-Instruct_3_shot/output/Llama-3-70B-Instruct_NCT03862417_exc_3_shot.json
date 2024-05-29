@@ -1,0 +1,45 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "- Curves over 50° are surgical candidates, and will be excluded.",
+          "Condition": [
+            "curves",
+            "surgical candidates"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Patients who have had cortisone or anesthetic injections within the last 3 months",
+              "Drug": [
+                "cortisone",
+                "anesthetic"
+              ],
+              "Condition": [
+                "injections"
+              ]
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- surgery or presenting contra-indications to exercises",
+              "Condition": [
+                "surgery",
+                "contra-indications",
+                "exercises"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

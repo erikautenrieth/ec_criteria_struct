@@ -1,0 +1,72 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Resides in a nursing home or dementia special care unit, or cannot control diet",
+          "Condition": [
+            "nursing home",
+            "dementia special care unit"
+          ],
+          "Observation": [
+            "diet"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- A potentially confounding serious medical risk including insulin-requiring diabetes",
+              "Condition": [
+                "diabetes"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "cancer requiring chemotherapy or radiation within the past 5 years",
+                  "Condition": [
+                    "cancer"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or a recent cardiac event (i.e. heart attack, angioplasty, etc.)",
+                  "Condition": [
+                    "cardiac event",
+                    "heart attack",
+                    "angioplasty"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Participating in another clinical trial",
+          "Condition": [
+            "clinical trial"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or using an investigational drug or therapy within 30 days of the Screening Visit",
+              "Drug": [
+                "investigational drug"
+              ]
+            },
+            "right": {
+              "raw_text": "- A history of renal stones",
+              "Condition": [
+                "renal stones"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
