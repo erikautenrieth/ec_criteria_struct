@@ -3,13 +3,11 @@ import transformers
 import torch
 import os
 
-os.environ['MASTER_ADDR'] = os.environ['SLURM_LAUNCH_NODE_IPADDR']
+master_addr = os.environ.get('SLURM_LAUNCH_NODE_IPADDR', os.environ.get('SLURM_SRUN_COMM_HOST', 'localhost'))
+os.environ['MASTER_ADDR'] = master_addr
 os.environ['MASTER_PORT'] = '12355'
 os.environ['WORLD_SIZE'] = os.environ['SLURM_NTASKS']
 os.environ['RANK'] = os.environ['SLURM_PROCID']
-torch.distributed.init_process_group(backend='nccl', init_method='env://')
-local_rank = int(os.environ['SLURM_LOCALID'])
-world_size = int(os.environ['WORLD_SIZE'])
 
 model = "tiiuae/falcon-180b"
 
