@@ -3,39 +3,30 @@ The operators should align with the respective conditions and clearly indicate w
 The operators AND, OR, NOT should not be at the end of sentences; they must always relate to two elements within a sentence.
 Take eligibility criteria from clinical studies and return the text in full.
 Insert [AND], [OR], and [NOT] operators at appropriate positions where the criteria can be logically separated.
+An AND, OR, NOT must not come before a line segment (\n).
 It is important that the text is returned in full and all operators are found and inserted in the correct places.
 Given a text containing eligibility criteria from clinical studies, please perform the following steps:
 Identify the logical connections within each eligibility criterion.
 Insert the following logical operators at the appropriate positions where the criteria can be logically separated:
-Insert [AND] to represent a logical conjunction
-AND:
-And serves as a conjuctive between two Event or Entity annotations.
+Insert [AND] to represent a logical conjunction. And serves as a conjuctive between two Event or Entity annotations.
 Trigger: A span such as and or with.
 Examples: Example of 'And' between criteria 1 (postmenopausal) and criteria 2 (hormone replacement therapy).
 Example of 'And' with the trigger 'with' between stroke and first-ever aphasic symptoms.
-Exceptions
-When And is used in an Equality Comparison (i.e., between two numeric values) it should not be annotated. Example:
-Insert [OR] to represent a logical disjunction
-OR:
+Exceptions: When And is used in an Equality Comparison (i.e., between two numeric values) it should not be annotated.
+Insert [OR] to represent a logical disjunction. Or serves as a disjunctive between two Event or Entity annotations.
 There are two general varieties of comma-separated Events that appear in clinical trials criteria documents: (1) example lists, and (2) implicit Or lists.
-How best to handle these?
 If a single category followed by examples - use Example Of for each, linking to the initial anchor Event.
 If multiple criteria, implicitly or'd - only use Or between criteria if the span between is "or" or "and/or". In other words, only annotate if "or" is explicit.
 Why not annotate commas as Or? For one, it gets messy and unreadable quite quickly. Also, the patterns of implicit Or's are consistent enough that generally their logical normalization can be handled in post-processing.
 Example-Of example: Anchor span 'brain disease', followed by examples. Each example 'Condition' is linked to 'brain disease' by 'Example-of' annotations.
 Implicit Or example: Implicitly Or'd criteria. 'cognitive disorders', 'psychotic disorders', and 'bipolar disorder' have commas separating them, but are not annotated. Only the 'Or' between 'bipolar disorder' and 'substance abuse' is annotated, because it is explicit.
 Insert [NOT] to represent a logical negation, a [NOT] can often be placed before words like: "no","not", "unable", "none"
-NOT:
 NOT indicates that a given event is an exclusion, rather than inclusion criteria.
 Trigger: A phrase such as not, doesn't, or abstain from.
 Note: if the word "except" is used, annotate instead as an Exception.
 Examples: Example of 'Negation' as an exclusion of patients with rheumatoid arthritis.
-Arguments
-Negates - One or more Events which are negated.
-Temporality - An optional Eq-Comparison during which the negated event must occur.
 Ensure that the original text is returned in its entirety, with all the logical operators inserted correctly.
 Return the modified text, maintaining the original structure and formatting.
-An AND, OR, NOT must not come before a line segment (\n).
 The eligibility criteria sentences must be taken exactly as they are; only the operators can be inserted, and no letters may be deleted.
 Please apply these steps to the given eligibility criteria text and provide the result, ensuring that the full text is returned with the logical operators inserted in the appropriate places.
 Return only the eligibility criteria with the inserted operators; do not include any additional information.
