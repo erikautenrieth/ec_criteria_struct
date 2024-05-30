@@ -13,8 +13,9 @@
 module load cuda
 
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
 export TMPDIR=/tmp/$SLURM_JOB_ID
 mkdir -p $TMPDIR
 
-python falcon.py
+srun python -u falcon.py
 
