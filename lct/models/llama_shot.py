@@ -8,6 +8,10 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 # Model
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
+
+#model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
+#model_name = "Llama-3-8B-Instruct-Gradient-1048k"
+
 # N Shots
 n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
@@ -33,6 +37,20 @@ shot_list = [
     "NCT03923231.txt",
     "NCT03930121.txt"
 ]
+
+large_list = [
+    "NCT03865433.txt",
+    "NCT03860324.txt",
+    "NCT03860233.txt",
+    "NCT03923231.txt",
+    "NCT03930121.txt",
+    "NCT03860142.txt",
+    "NCT03860376.txt",
+    "NCT03861819.txt",
+    "NCT03865134.txt",
+    "NCT03920891.txt",
+]
+
 
 
 # Load n-shot Data
@@ -80,13 +98,6 @@ for file in study_files:
                 tokenize=False, 
                 add_generation_prompt=True
     )
-
-    # Checke die Tokens
-    max_length = pipeline.model.config.max_length
-    prompt_length = len(pipeline.tokenizer(prompt)['input_ids'])
-    max_new_tokens = max_length - prompt_length
-    max_new_tokens = max(0, max_new_tokens)
-    print(max_new_tokens)
 
     terminators = [
             pipeline.tokenizer.eos_token_id,
