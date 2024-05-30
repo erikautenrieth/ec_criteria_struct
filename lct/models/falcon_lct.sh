@@ -3,7 +3,7 @@
 #SBATCH --nodes=3                # number of nodes
 #SBATCH --ntasks-per-node=4      # number of tasks per node
 #SBATCH --gres=gpu:4            # request 4 GPUs per node
-#SBATCH --mem=450G               # total memory for job 450
+#SBATCH --mem=450G               # total memory for job               450
 #SBATCH --time=15:00:00           # Time limit hrs:min:sec
 #SBATCH --output=log/falcon.%j.out   # Standard output and error log
 #SBATCH --error=log/falcon.%j.err    # Error log
