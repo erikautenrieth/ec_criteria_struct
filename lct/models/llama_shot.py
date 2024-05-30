@@ -6,18 +6,20 @@ batch_path = "eval_p1_3"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 # Model
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
-
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 
+# model_id = "aaditya/OpenBioLLM-Llama3-70B"
+model_id = "aaditya/OpenBioLLM-Llama3-8B"
+model_name = "OpenBioLLM-Llama3-8B"
 # N Shots
 n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_0/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_2_temp_1/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
@@ -27,7 +29,7 @@ study_files = os.listdir(study_path)[anfang:ende]
 
 ## Achtung gebe hier die Prompt an
 # Load Model Description 
-model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt0.txt")
+model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt2.txt")
 
 
 shot_list = [
@@ -110,8 +112,8 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.6,# 0.6 deterministich - kreativ
-            top_p=0.95,
+            temperature=0.1,# 0.6 deterministich - kreativ
+            top_p=0.9,
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
