@@ -5,7 +5,7 @@ import torch.multiprocessing as mp
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 def setup(rank, world_size):
-    os.environ['MASTER_ADDR'] = os.getenv('SLURM_SUBMIT_DIR')
+    os.environ['MASTER_ADDR'] = '127.0.0.1'  # Lokale IP-Adresse für den Master-Knoten
     os.environ['MASTER_PORT'] = '12355'
     dist.init_process_group("nccl", rank=rank, world_size=world_size)
 
@@ -19,9 +19,9 @@ def run(rank, world_size):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(model_name)
 
-    device = torch.device(f'cuda:{rank}')
+    device = torch.device(f'cuda:{rank % torch.cuda.device_count()}')
     model.to(device)
-    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[rank])
+    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[rank % torch.cuda.device_count()])
 
     prompt = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:"
     text = """Inclusion criteria:
