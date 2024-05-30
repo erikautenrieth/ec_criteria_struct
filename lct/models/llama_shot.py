@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_2"
+batch_path = "eval_p1_3"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 # Model
@@ -17,9 +17,9 @@ output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
-anfang = n_shot 
-ende = 300 + n_shot
-study_files = os.listdir(study_path)#[anfang:ende]
+anfang = 0
+ende = 100
+study_files = os.listdir(study_path)[anfang:ende]
 
 
 # Load Model Description
