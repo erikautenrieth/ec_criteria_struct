@@ -15,5 +15,4 @@ module load cuda
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 python falcon.py
-# Starte das Skript mit torch.distributed.launch
-##srun python -m torch.distributed.launch --nproc_per_node=4 --nnodes=3 --node_rank=$SLURM_PROCID --master_addr=$SLURM_LAUNCH_NODE_IPADDR --master_port=12355 falcon_test.py
+

@@ -1,8 +1,27 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import transformers
 import torch
+import os
+
+os.environ['MASTER_ADDR'] = os.environ['SLURM_LAUNCH_NODE_IPADDR']
+os.environ['MASTER_PORT'] = '12355'
+os.environ['WORLD_SIZE'] = os.environ['SLURM_NTASKS']
+os.environ['RANK'] = os.environ['SLURM_PROCID']
+torch.distributed.init_process_group(backend='nccl', init_method='env://')
+local_rank = int(os.environ['SLURM_LOCALID'])
+world_size = int(os.environ['WORLD_SIZE'])
 
 model = "tiiuae/falcon-180b"
+
+tokenizer = AutoTokenizer.from_pretrained(model)
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    torch_dtype=torch.bfloat16, # torch.bfloat16
+    trust_remote_code=True,
+    device_map="auto",
+)
 
 
 prompt = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:"
@@ -21,15 +40,7 @@ Exclusion criteria:
   5. Subject has received anti-myeloma treatment (radiotherapy is excluded) within 4 weeks or 5 PK half-lives of the treatment, whichever longer, before the first study agent administration."""
 
 
-tokenizer = AutoTokenizer.from_pretrained(model)
-pipeline = transformers.pipeline(
-    "text-generation",
-    model=model,
-    tokenizer=tokenizer,
-    torch_dtype=torch.bfloat16, # torch.bfloat16
-    trust_remote_code=True,
-    device_map="auto",
-)
+
 sequences = pipeline(
    prompt+text,
     max_length=2000,
@@ -38,5 +49,10 @@ sequences = pipeline(
     num_return_sequences=1,
     eos_token_id=tokenizer.eos_token_id,
 )
+
+
+
+
+
 for seq in sequences:
     print(f"Result: {seq['generated_text']}")
