@@ -3,11 +3,7 @@ import transformers
 import torch
 import os
 
-master_addr = os.environ.get('SLURM_LAUNCH_NODE_IPADDR', os.environ.get('SLURM_SRUN_COMM_HOST', 'localhost'))
-os.environ['MASTER_ADDR'] = master_addr
-os.environ['MASTER_PORT'] = '12355'
-os.environ['WORLD_SIZE'] = os.environ['SLURM_NTASKS']
-os.environ['RANK'] = os.environ['SLURM_PROCID']
+os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
 model = "tiiuae/falcon-180b"
 
