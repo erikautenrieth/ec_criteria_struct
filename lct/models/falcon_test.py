@@ -1,7 +1,17 @@
 import os
-import transformers
 import torch
+import transformers
 from helper_functions import read_text_file, read_matching_txt_files, save_txt
+
+# Setze die Umgebungsvariablen basierend auf Slurm-Umgebungsvariablen
+os.environ['RANK'] = str(os.environ['SLURM_PROCID'])
+os.environ['WORLD_SIZE'] = str(os.environ['SLURM_NTASKS'])
+os.environ['LOCAL_RANK'] = str(os.environ['SLURM_LOCALID'])
+
+# Verwende torch.distributed für Multi-GPU-Unterstützung
+torch.distributed.init_process_group(backend='nccl')
+local_rank = int(os.environ['LOCAL_RANK'])
+world_size = int(os.environ['WORLD_SIZE'])
 
 batch_path = "eval_p1_2"
 transform_lct = "/work/eauten2s/ec_criteria_struct/lct"
@@ -50,11 +60,6 @@ for i in range(n_shot):
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 print("Hier fängt die Pipeline an")
-
-# Verwende torch.distributed für Multi-GPU-Unterstützung
-torch.distributed.init_process_group(backend='nccl')
-local_rank = torch.distributed.get_rank()
-world_size = torch.distributed.get_world_size()
 
 # Teile die study_files auf die verfügbaren GPUs auf
 study_files_per_gpu = len(study_files) // world_size

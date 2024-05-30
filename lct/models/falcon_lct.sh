@@ -1,15 +1,19 @@
 #!/bin/bash
+
 #SBATCH --partition=gpu4         # GPU partition
 #SBATCH --nodes=3                # number of nodes
 #SBATCH --ntasks-per-node=4      # number of tasks per node
-#SBATCH --gres=gpu:4            # request 4 GPUs per node
-#SBATCH --mem=450G               # total memory for job               450
-#SBATCH --time=15:00:00           # Time limit hrs:min:sec
+#SBATCH --gres=gpu:4             # request 4 GPUs per node
+#SBATCH --mem=450G               # total memory for job
+#SBATCH --time=05:00:00          # Time limit hrs:min:sec
 #SBATCH --output=log/falcon.%j.out   # Standard output and error log
 #SBATCH --error=log/falcon.%j.err    # Error log
 #SBATCH --job-name=falcon
 
 module load cuda
+
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
-python falcon_test.py
+python falcon.py
+# Starte das Skript mit torch.distributed.launch
+##srun python -m torch.distributed.launch --nproc_per_node=4 --nnodes=3 --node_rank=$SLURM_PROCID --master_addr=$SLURM_LAUNCH_NODE_IPADDR --master_port=12355 falcon_test.py
