@@ -6,8 +6,8 @@ batch_path = "eval_p1_3"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 # Model
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
 
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
@@ -15,6 +15,9 @@ model_name = "Llama-3-70B-Instruct"
 # model_id = "aaditya/OpenBioLLM-Llama3-70B"
 #model_id = "aaditya/OpenBioLLM-Llama3-8B"
 #model_name = "OpenBioLLM-Llama3-8B"
+model_id = "aaditya/OpenBioLLM-Llama3-70B"
+model_name = "OpenBioLLM-Llama3-70B"
+
 # N Shots
 n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
@@ -22,11 +25,11 @@ n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
 
 ## Achtung gebe hier die Prompt an
 # Load Model Description 
-model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt0_1.txt")
+model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt2.txt")
 
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_01_temp_6/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_2_temp_6/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
