@@ -6,16 +6,17 @@ batch_path = "eval_p3"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 # Model
-#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-#model_name = "Llama-3-70B-Instruct"
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
 
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 
-model_id = "aaditya/OpenBioLLM-Llama3-70B"
-model_name = "OpenBioLLM-Llama3-70B"
+#model_id = "aaditya/OpenBioLLM-Llama3-70B"
+#model_name = "OpenBioLLM-Llama3-70B"
+
 # N Shots
-n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 3 # liefert genau die Anzahl Beispiele (study, label)
 
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt_half/"
@@ -30,7 +31,6 @@ study_files = os.listdir(study_path)#[anfang:ende]
 
 # Load Model Description
 model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt_p3.txt")
-
 
 
 # Load n-shot Data
