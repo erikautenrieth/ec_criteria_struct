@@ -9,18 +9,18 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-temp=0.6
-temp_str=str(temp).split(".")[1]
+temp = 0.6
+n_prompt = 1
+
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_prompt_2/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_prompt_{n_prompt}/output/"
 os.makedirs(output_path, exist_ok=True)
 
-# Load Prediction Files
 study_files = os.listdir(study_path)[:100]
 
-# Load Model Description
-model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt2.txt")
+
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 messages = []
 
 command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:"
@@ -65,12 +65,11 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=temp,# 0.6 deterministich - kreativ
+            temperature=temp,
             top_p=0.95,
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
-   
-    #print(f"\n {model_name} Output: \n  {gen_output} \n")
+
     
     save_txt(gen_output, f"{output_path}{model_name}_{file_name}_0_shot.txt")
