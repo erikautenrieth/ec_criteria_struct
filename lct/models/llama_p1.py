@@ -3,12 +3,12 @@ import transformers
 from helper_functions import *
 
 batch_path = "eval_p1"
+n_prompt = 2
 n_shot = 5
-n_prompt = 1
-
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
+
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 # model_id = "aaditya/OpenBioLLM-Llama3-70B"
