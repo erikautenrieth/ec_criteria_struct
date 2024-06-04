@@ -1,0 +1,30 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Children who are TB contacts",
+      "Condition": [
+        "TB contacts"
+      ]
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "without symptoms",
+              "Observation": [
+                "symptoms"
+              ]
+            },
+            "right": {
+              "raw_text": "or signs of active TB",
+              "Condition": [
+                "active TB"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

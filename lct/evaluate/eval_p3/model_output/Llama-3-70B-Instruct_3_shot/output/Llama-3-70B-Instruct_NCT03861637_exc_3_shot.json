@@ -1,0 +1,131 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Acute or chronic bleeding, or erythrocyte transfusion, within the preceding 8 weeks.",
+                  "Condition": [
+                    "bleeding",
+                    "erythrocyte transfusion"
+                  ],
+                  "Observation": [
+                    "Hb level"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "change in Hb level ≥ 2 g/dL during screening phase,"
+                    },
+                    "right": {
+                      "raw_text": "Hemolytic anemia.",
+                      "Condition": [
+                        "Hemolytic anemia"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Recent infection",
+                  "Condition": [
+                    "infection"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or rejection.",
+                  "Condition": [
+                    "rejection"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Diastolic blood pressure >100mmHg",
+              "Observation": [
+                "blood pressure"
+              ]
+            },
+            "right": {
+              "raw_text": "or discontinuation of ESA due to hypertension in the 6 months prior to study.",
+              "Condition": [
+                "hypertension"
+              ],
+              "Drug": [
+                "ESA"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Vitamin B12 or folic acid deficiency.",
+          "Condition": [
+            "Vitamin B12 deficiency",
+            "folic acid deficiency"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Uncontrolled or secondary hyperparathyroidism.",
+              "Condition": [
+                "hyperparathyroidism"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Acute or chronic systemic inflammatory disease",
+                  "Condition": [
+                    "inflammatory disease"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and/or C-reactive protein (CRP) >30 mg/L.",
+                  "Observation": [
+                    "C-reactive protein",
+                    "CRP"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "OR": {
+      "left": {
+        "raw_text": "- Hemodialysis due to failure of a kidney transplant.",
+        "Condition": [
+          "kidney transplant"
+        ],
+        "Procedure": [
+          "Hemodialysis"
+        ]
+      },
+      "right": {
+        "raw_text": "and malignancy.",
+        "Condition": [
+          "malignancy"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Birthweight ≥ 1500 g and/or gestation age ≥ 32 weeks",
+              "Observation": [
+                "Birthweight",
+                "gestation age"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Lack of informed consent of the parents",
+                  "Condition": [
+                    "informed consent"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Congenital heart defect, other than PDA and/or patent foramen ovale (PFO)",
+                  "Condition": [
+                    "congenital heart defect",
+                    "PDA",
+                    "patent foramen ovale",
+                    "PFO"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- The presence of a clinically apparent hemorrhagic syndrome",
+                  "Condition": [
+                    "hemorrhagic syndrome"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Any intraventricular hemorrhage (IVH) in the first 48 hours or IVH grade 3-4",
+                      "Condition": [
+                        "intraventricular hemorrhage",
+                        "IVH"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- A platelet count of < 50,000/mm3",
+                          "Observation": [
+                            "platelet count"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- A serum creatinine concentration of > 110 μmol/L",
+                              "Observation": [
+                                "serum creatinine concentration"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- Oliguria <1 ml/kg/h",
+                                  "Observation": [
+                                    "Oliguria"
+                                  ]
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "- Suspected/apparent NEC",
+                                      "Condition": [
+                                        "NEC"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "- Suspected/apparent lung hypoplasia",
+                                      "Condition": [
+                                        "lung hypoplasia"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
