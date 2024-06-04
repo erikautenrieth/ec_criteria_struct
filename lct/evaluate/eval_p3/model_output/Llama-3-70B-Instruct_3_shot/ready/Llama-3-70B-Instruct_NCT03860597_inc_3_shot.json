@@ -1,0 +1,60 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- diagnosis of schizophrenia",
+          "Condition": [
+            "schizophrenia"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "OR schizoaffective-depressed",
+              "Condition": [
+                "schizoaffective-depressed"
+              ]
+            },
+            "right": {
+              "raw_text": "OR healthy subjects",
+              "Condition": [
+                "healthy subjects"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- ages 18-50 for all subjects",
+          "Observation": [
+            "ages"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- double barrier contraception for all subjects",
+              "Observation": [
+                "contraception"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- not pregnant for all subjects",
+                  "Condition": [
+                    "pregnant"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- All patient have another dermatological disease",
+      "Condition": [
+        "dermatological disease"
+      ]
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": ""
+        }
+      }
+    }
+  }
+}
+
+Note: Since there is only one eligibility criterion, the JSON format is relatively simple. The "AND" operator is used to combine the single criterion with a "NOT" operator that has an empty left operand, effectively making the entire expression equivalent to the single criterion.
