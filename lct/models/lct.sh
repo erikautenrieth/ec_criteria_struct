@@ -10,6 +10,6 @@
 #SBATCH --job-name=llama_shot
 
 module load cuda
-python llama_shot.py
+python llama_0_shot.py
 
 

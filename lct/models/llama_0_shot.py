@@ -9,15 +9,15 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-temp=0.1
+temp=0.6
 temp_str=str(temp).split(".")[1]
 # Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_tmp_{temp_str}/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_prompt_2/output/"
 os.makedirs(output_path, exist_ok=True)
 
 # Load Prediction Files
-study_files = os.listdir(study_path)
+study_files = os.listdir(study_path)[:100]
 
 # Load Model Description
 model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt2.txt")
@@ -53,12 +53,6 @@ for file in study_files:
                 tokenize=False, 
                 add_generation_prompt=True
     )
-    # Checke die Tokens
-    max_length = pipeline.model.config.max_length
-    prompt_length = len(pipeline.tokenizer(prompt)['input_ids'])
-    max_new_tokens = max_length - prompt_length
-    max_new_tokens = max(0, max_new_tokens)
-    print(max_new_tokens)
 
     terminators = [
             pipeline.tokenizer.eos_token_id,
