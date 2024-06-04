@@ -1,0 +1,55 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Teeth that are previously restored or have caries",
+          "Condition": [
+            "caries"
+          ],
+          "Observation": [
+            "Teeth"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Patients who have orthodontic treatment",
+              "Condition": [
+                "orthodontic treatment"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Patients who are not cooperative for the dental procedure",
+              "Condition": [
+                "cooperative"
+              ]
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Teeth that have dental flourosis or enamel malformation according to the specific syndromes",
+              "Condition": [
+                "dental flourosis",
+                "enamel malformation"
+              ],
+              "Observation": [
+                "Teeth"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
