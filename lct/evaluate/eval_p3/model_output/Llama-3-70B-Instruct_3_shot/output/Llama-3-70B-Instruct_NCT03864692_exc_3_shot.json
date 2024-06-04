@@ -1,0 +1,74 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- gestational age < 36 weeks",
+                  "Observation": [
+                    "gestational age"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- emergency cases"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- placenta previa",
+                  "Condition": [
+                    "placenta previa"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- pre-eclampsia",
+                  "Condition": [
+                    "pre-eclampsia"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- BMI>40",
+              "Observation": [
+                "BMI"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Reynauld disease",
+                  "Condition": [
+                    "Reynauld disease"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- patient refusal"
+                    },
+                    "right": {
+                      "raw_text": "- cardiovascular disease",
+                      "Condition": [
+                        "cardiovascular disease"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

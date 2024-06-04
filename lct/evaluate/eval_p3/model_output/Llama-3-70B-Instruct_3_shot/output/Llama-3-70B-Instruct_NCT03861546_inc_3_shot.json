@@ -1,0 +1,75 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "1. age > 18 years;",
+      "Observation": [
+        "age"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "2. confirmed diagnosis of prediabetes or T2D",
+          "Condition": [
+            "prediabetes",
+            "T2D"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "(documented A1c of ≥ 5.7%",
+              "Observation": [
+                "A1c"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "2-hour post-load glucose of >140,",
+                  "Observation": [
+                    "post-load glucose"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or FBG of >100).",
+                  "Observation": [
+                    "FBG"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "raw_text": "3. a family member or peer willing to participate and attend all sessions as a social influencer;",
+        "Observation": [
+          "family member",
+          "peer",
+          "social influencer"
+        ]
+      },
+      "right": {
+        "AND": {
+          "left": {
+            "raw_text": "4. proficiency in English of at least one member of each dyad,",
+            "Observation": [
+              "proficiency in English"
+            ]
+          },
+          "right": {
+            "raw_text": "5. willingness to provide written consent.",
+            "Observation": [
+              "willingness to provide written consent"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

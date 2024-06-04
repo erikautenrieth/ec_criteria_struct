@@ -1,0 +1,128 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "No headache during the pervious 3 months;",
+                      "Condition": [
+                        "headache"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Taking any prophylactic medication during the previous one month;",
+                      "Drug": [
+                        "prophylactic medication"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Secondary headache or any systematic cause",
+                  "Condition": [
+                    "headache",
+                    "systematic cause"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Having serious conditions of the heart, liver, kidney or other organs;",
+              "Condition": [
+                "heart conditions",
+                "liver conditions",
+                "kidney conditions",
+                "other organ conditions"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "In pregnancy or lactation, or planning to be pregnant in 6 months;",
+              "Condition": [
+                "pregnancy",
+                "lactation"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Drug and Substance abuse",
+                  "Condition": [
+                    "Drug abuse",
+                    "Substance abuse"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Diagnosed psychiatric condition",
+                      "Condition": [
+                        "psychiatric condition"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Taking any other complementary and alternative medicines",
+                          "Drug": [
+                            "complementary and alternative medicines"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Practicing yoga of any kind in last three months",
+                          "Observation": [
+                            "yoga"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

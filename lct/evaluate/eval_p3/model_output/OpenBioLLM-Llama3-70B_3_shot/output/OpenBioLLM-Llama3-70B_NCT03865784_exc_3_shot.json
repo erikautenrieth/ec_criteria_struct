@@ -1,0 +1,48 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Federated boxers with lumbar injury with medical diagnosis",
+          "Condition": [
+            "lumbar injury"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Who are or have been treated by pharmacological",
+              "Drug": [
+                "pharmacological"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or physiotherapy in the last 6 months",
+                  "Treatment": [
+                    "physiotherapy"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Presenting allergies or alterations of the skin",
+                  "Condition": [
+                    "allergies",
+                    "alterations of the skin"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- Not sign the informed consent document."
+        }
+      }
+    }
+  }
+}

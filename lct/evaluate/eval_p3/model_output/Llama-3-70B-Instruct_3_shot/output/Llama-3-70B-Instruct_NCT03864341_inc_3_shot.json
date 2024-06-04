@@ -1,0 +1,47 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Be a patient in the Bellevue Hospital Center ED.",
+      "Observation": [
+        "Bellevue Hospital Center ED"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Be ≥18 years old.",
+          "Observation": [
+            "age"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Screen positive for homelessness risk using a homelessness risk screening tool (HRST).",
+              "Condition": [
+                "homelessness risk"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Screen positive for unhealthy alcohol or drug use.",
+                  "Condition": [
+                    "unhealthy alcohol use",
+                    "unhealthy drug use"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Able to provide consent.",
+                  "Observation": [
+                    "consent"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
