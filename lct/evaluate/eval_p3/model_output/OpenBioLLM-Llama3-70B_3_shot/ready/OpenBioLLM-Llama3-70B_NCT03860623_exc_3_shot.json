@@ -1,0 +1,112 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Acute illness in the preceding 6 weeks",
+                  "Condition": [
+                    "acute illness"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Taking regular medication",
+                      "Drug": [
+                        "regular medication"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- History of deep vein thrombosis or clotting disorders",
+                      "Condition": [
+                        "deep vein thrombosis",
+                        "clotting disorders"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Hypertension",
+                  "Condition": [
+                    "hypertension"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Diabetes",
+                  "Condition": [
+                    "diabetes"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Any clinically significant findings at screening",
+              "Observation": [
+                "clinically significant findings"
+              ]
+            },
+            "right": {
+              "raw_text": "- History of substance abuse",
+              "Condition": [
+                "substance abuse"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Demonstrating factors precluding safe MRI",
+          "Observation": [
+            "safe MRI"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- History of gastrointestinal motility disorders (e.g. gastroesophageal reflux disease -irritable bowel syndrome, gastroparesis, sphincter of Oddi dysfunction, etc.)",
+              "Condition": [
+                "gastrointestinal motility disorders",
+                "gastroesophageal reflux disease",
+                "irritable bowel syndrome",
+                "gastroparesis",
+                "sphincter of Oddi dysfunction"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Previous thoracic or abdominal surgery.",
+                  "Procedure": [
+                    "thoracic surgery",
+                    "abdominal surgery"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Those who report having ≤3 bowel movements/week or >2/day.",
+                  "Observation": [
+                    "bowel movements"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
