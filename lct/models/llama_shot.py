@@ -5,40 +5,32 @@ from helper_functions import *
 batch_path = "eval_p1_3"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
-# Model
-#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-#model_name = "Llama-3-70B-Instruct"
-
+# Models
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
-
 # model_id = "aaditya/OpenBioLLM-Llama3-70B"
 #model_id = "aaditya/OpenBioLLM-Llama3-8B"
 #model_name = "OpenBioLLM-Llama3-8B"
-model_id = "aaditya/OpenBioLLM-Llama3-70B"
-model_name = "OpenBioLLM-Llama3-70B"
+#model_id = "aaditya/OpenBioLLM-Llama3-70B"
+#model_name = "OpenBioLLM-Llama3-70B"
 
 # N Shots
-n_shot = 5 # liefert genau die Anzahl Beispiele (study, label)
+n_shot = 5
+n_prompt = 1
 
 
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 
-## Achtung gebe hier die Prompt an
-# Load Model Description 
-model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt2.txt")
-
-# Input/ Output
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_2_temp_6/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_{n_prompt}/output/"
 os.makedirs(output_path, exist_ok=True)
 
-# Load Prediction Files
+# Load Files to Predict
 anfang = 0
 ende = 100
 study_files = os.listdir(study_path)[anfang:ende]
-
-
-
 
 shot_list = [
     "NCT03865433.txt",
@@ -61,8 +53,6 @@ large_list = [
     "NCT03920891.txt",
 ]
 
-
-
 # Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
@@ -80,7 +70,6 @@ for i in range(n_shot):
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
-print("Hier fängt die Pipeline an")
 pipeline = transformers.pipeline(
             "text-generation",
             model=model_id,
@@ -114,18 +103,15 @@ for file in study_files:
             pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
     ]
 
-
     outputs = pipeline(
             prompt,
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.6,# 0.6 deterministich - kreativ
+            temperature=0.6,
             top_p=0.9,
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
-   
-    #print(f"\n {model_name} Output: \n  {gen_output} \n")
-    
+
     save_txt(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
