@@ -3,9 +3,10 @@ import transformers
 from helper_functions import *
 
 batch_path = "eval_p3"
-transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
-# Model
+n_shot = 3
+struct_prompt = 1
+
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
@@ -15,22 +16,19 @@ model_name = "Llama-3-70B-Instruct"
 #model_id = "aaditya/OpenBioLLM-Llama3-70B"
 #model_name = "OpenBioLLM-Llama3-70B"
 
-# N Shots
-n_shot = 3 # liefert genau die Anzahl Beispiele (study, label)
 
-# Input/ Output
+
+transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt_half/"
 output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
-# Load Prediction Files
-anfang = 0
-ende = 300
-study_files = os.listdir(study_path)#[anfang:ende]
+
+study_files = os.listdir(study_path)[:300]
 
 
 # Load Model Description
-model_desc = read_text_file(f"{transform_lct}/input/prompt/prompt_p3.txt")
+model_desc = read_text_file(f"{transform_lct}/input/prompt/entity_struct_p{struct_prompt}.txt")
 
 
 # Load n-shot Data
