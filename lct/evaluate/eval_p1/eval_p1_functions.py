@@ -48,3 +48,44 @@ def plot_metrics(all_metrics):
                 ax.text(k + j * bar_width, v + 1, f'{v:.1f}%', ha='center', fontsize=10)
 
     plt.show()
+
+
+
+def plot_count_comparison(all_metrics):
+    operators = ['AND', 'OR', 'NOT']
+    count_metrics = ['total_label', 'total_model']
+    fig, ax = plt.subplots(figsize=(12, 8))
+    x = np.arange(len(operators))
+
+    label_counts = [all_metrics[next(iter(all_metrics))][op]['total_label'] for op in operators]
+    bar_width = 0.16
+    opacity = 0.8
+
+    colors = sns.color_palette("husl", len(all_metrics) + 1)
+
+    ax.bar(x, label_counts, bar_width, alpha=opacity, color=colors[0], label='Label Count')
+    for i, model in enumerate(all_metrics.keys()):
+        count_values = [all_metrics[model][op]['total_model'] for op in operators]
+        model_name = model.replace('Instruct', '').replace('_', ' ')
+        ax.bar(x + (i + 1) * bar_width, count_values, bar_width, alpha=opacity, color=colors[i + 1], label=model_name)
+
+        for j, v in enumerate(count_values):
+            label_count = label_counts[j]
+            diff_percent = ((v - label_count) / label_count) * 100
+            color = 'darkgreen' if diff_percent >= 0 else 'red'
+            ax.text(x[j] + (i + 1) * bar_width, v / 2, f'{diff_percent:+.0f}%', ha='center', va='center', fontsize=10, color=color, fontweight='bold')
+            ax.text(x[j] + (i + 1) * bar_width, v + 100, str(v), ha='center', fontsize=11)
+
+    for i, v in enumerate(label_counts):
+        ax.text(x[i], v + 100, str(v), ha='center', fontsize=10)
+
+    ax.set_xticks(x + bar_width * len(all_metrics) / 2)
+    ax.set_xticklabels([f'{op}' for op in operators], fontsize=12)
+    ax.set_xlabel('Operators', fontsize=12)
+    ax.set_ylabel('Anzahl', fontsize=12)
+    ax.set_title('Count Comparison: Labels vs Models per Operator', fontsize=16, pad=30)
+    ax.legend(fontsize=11)
+    ax.grid(True)
+
+    plt.tight_layout()
+    plt.show()
