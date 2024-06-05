@@ -1,6 +1,7 @@
 import os
 import torch
 import transformers
+from transformers import GPT2Tokenizer, GPT2Model
 from helper_functions import *
 
 batch_path = "eval_p1"
@@ -20,15 +21,9 @@ study_files = os.listdir(study_path)[:100]
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:"
 
-print("Hier fängt die Pipeline an")
-pipeline = transformers.pipeline(
-    "text-generation",
-    model=model_id,
-    device_map="auto",
-)
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2-xl')
+model = GPT2Model.from_pretrained('gpt2-xl')
 
-# Adding pad_token
-pipeline.tokenizer.pad_token = pipeline.tokenizer.eos_token
 
 for file in study_files:
     file_name = file.split(".")[0]
@@ -41,25 +36,9 @@ for file in study_files:
         {"role": "user", "content": f"{command} {test_file}"},
     ]
 
-    # Convert messages to a single string as input for the tokenizer
     prompt = " ".join([msg["content"] for msg in messages])
 
-    # Tokenize the prompt
-    tokenized_input = pipeline.tokenizer(
-        prompt, 
-        return_tensors='pt', 
-        padding=True, 
-        truncation=True
-    )
-
-    outputs = pipeline(
-        tokenized_input.input_ids,
-        max_new_tokens=2048,
-        do_sample=True,
-        temperature=temp,
-        top_p=0.95,
-    )
-
-    gen_output = outputs[0]["generated_text"][len(pipeline.tokenizer.decode(tokenized_input.input_ids[0])):]
+    encoded_input = tokenizer(prompt, return_tensors='pt')
+    output = model(**encoded_input)
     
-    save_txt(gen_output, f"{output_path}{model_name}_{file_name}_0_shot.txt")
+    save_txt(output, f"{output_path}{model_name}_{file_name}_0_shot.txt")
