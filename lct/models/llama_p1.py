@@ -3,7 +3,7 @@ import transformers
 from helper_functions import *
 
 batch_path = "eval_p1"
-n_prompt = 2
+n_prompt = 4
 n_shot = 5
 
 temp_str = ""
@@ -37,6 +37,7 @@ shot_list = [
     "NCT03930121.txt"
 ]
 
+one_shot_list = ["NCT03865433.txt"]
 
 # Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
