@@ -27,6 +27,9 @@ pipeline = transformers.pipeline(
     device_map="auto",
 )
 
+# Adding pad_token
+pipeline.tokenizer.pad_token = pipeline.tokenizer.eos_token
+
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
@@ -50,7 +53,7 @@ for file in study_files:
     )
 
     outputs = pipeline(
-        input_ids=tokenized_input.input_ids,
+        tokenized_input.input_ids,
         max_new_tokens=2048,
         do_sample=True,
         temperature=temp,
