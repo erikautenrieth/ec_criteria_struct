@@ -8,7 +8,7 @@ model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
 temp = 0.6
-n_prompt = 2
+n_prompt = 5
 
 temp_str = f"_temp_{str(temp).split('.')[1]}"
 
