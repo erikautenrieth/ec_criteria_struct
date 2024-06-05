@@ -4,11 +4,14 @@ from helper_functions import *
 
 batch_path = "eval_p1"
 
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
+
 temp = 0.6
-n_prompt = 6
+n_prompt = 4
 
 temp_str = f"_temp_{str(temp).split('.')[1]}"
 
@@ -23,7 +26,10 @@ study_files = os.listdir(study_path)[:100]
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 messages = []
 
-command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:"
+cot = "Let's think through this carefully, step by step."
+
+command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" 
+
 
 
 print("Hier fängt die Pipeline an")
