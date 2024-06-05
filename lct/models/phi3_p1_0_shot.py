@@ -9,7 +9,7 @@ batch_path = "eval_p1"
 model_id =  "microsoft/Phi-3-mini-128k-instruct"
 model_name = "Phi-3"
 
-n_prompt = 1
+n_prompt = 2
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
