@@ -9,7 +9,7 @@ batch_path = "eval_p1"
 model_id =  "microsoft/Phi-3-mini-128k-instruct"
 model_name = "Phi-3"
 
-n_prompt = 2
+n_prompt = 1
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
@@ -22,7 +22,7 @@ study_files = os.listdir(study_path)[:100]
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 messages = []
 
-command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:"
+command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything, the operators must be in [] brackets:"
 
 
 model = AutoModelForCausalLM.from_pretrained(
@@ -55,7 +55,7 @@ for file in study_files:
     generation_args = {
     "max_new_tokens": 2000,
     "return_full_text": False,
-    "temperature": 0.7,
+    "temperature": 0.6,
     "do_sample": False,
     }
     output = pipe(messages, **generation_args)
