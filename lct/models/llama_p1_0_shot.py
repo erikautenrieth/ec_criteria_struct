@@ -8,12 +8,13 @@ model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
 temp = 0.6
-n_prompt = 3
+n_prompt = 2
 
+temp_str = f"_temp_{str(temp).split('.')[1]}"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_prompt_{n_prompt}_temp_1/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_prompt_{n_prompt}{temp_str}/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)[:100]
