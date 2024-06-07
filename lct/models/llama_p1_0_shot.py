@@ -10,10 +10,12 @@ model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
 
-temp = 0.6
+
 n_prompt = 8
 
-temp_str = f"_temp_{str(temp).split('.')[1]}"
+#temp = 0.6
+#temp_str = f"_temp_{str(temp).split('.')[1]}"
+temp_str = ""
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
@@ -71,7 +73,7 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=temp,
+            temperature=0.6,
             top_p=0.95,
     )
 
