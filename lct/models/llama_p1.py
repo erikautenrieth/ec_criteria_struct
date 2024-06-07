@@ -8,8 +8,11 @@ n_shot = 5
 
 temp_str = ""
 cot_true = ""
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
+model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
+model_name = "Llama-3-70B-DPO-v0.2"
+
 
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
