@@ -6,14 +6,15 @@ batch_path = "eval_p1_n_shot"
 n_prompt = 7
 n_shot = 5
 
-temp_str = ""
-cot_true = ""
-#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-#model_name = "Llama-3-70B-Instruct"
-model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
-model_name = "Llama-3-70B-DPO-v0.2"
 
+temp_str = "" # temp_str = f"_temp_{str(temp).split('.')[1]}"   temp = 0.6
+cot_true = "" # "_cot"
+random_shot =""  # "_random"
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
 
+#model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
+#model_name = "Llama-3-70B-DPO-v0.2"
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 # model_id = "aaditya/OpenBioLLM-Llama3-70B"
@@ -27,7 +28,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}{random_shot}_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
 os.makedirs(output_path, exist_ok=True)
 
 
@@ -45,6 +46,10 @@ shot_list = [
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
 study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
+
+## Random n-shot Data
+#study_filenames, study_contents, label_filenames, label_contents = read_random_matching_txt_files(study_folder, label_folder, n_shot)
+
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []

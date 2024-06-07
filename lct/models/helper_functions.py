@@ -175,6 +175,32 @@ def read_matching_txt_files(study_folder, label_folder, shot_list):
 
     return study_filenames, study_contents, label_filenames, label_contents
 
+def read_random_matching_txt_files(study_folder, label_folder, n):
+    study_filenames = []
+    label_filenames = []
+    study_contents = []
+    label_contents = []
+
+    # Get all the filenames in the study folder
+    all_filenames = [f for f in os.listdir(study_folder) if f.endswith('.txt')]
+
+    # Randomly select n filenames
+    selected_filenames = random.sample(all_filenames, n)
+
+    for filename in selected_filenames:
+        study_filepath = os.path.join(study_folder, filename)
+        label_filepath = os.path.join(label_folder, filename)
+
+        if os.path.isfile(study_filepath) and os.path.isfile(label_filepath):
+            study_filenames.append(f"{filename}_study")
+            label_filenames.append(f"{filename}_label")
+
+            study_contents.append(read_file_content(study_filepath))
+            label_contents.append(read_file_content(label_filepath))
+
+    return study_filenames, study_contents, label_filenames, label_contents
+
+
 def read_matching_p3_files(study_folder, n_shot):
     study_filenames = []
     study_contents = []
