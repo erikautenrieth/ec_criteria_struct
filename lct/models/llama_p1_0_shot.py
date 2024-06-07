@@ -11,12 +11,12 @@ model_name = "Llama-3-70B-Instruct"
 
 
 
-n_prompt = 9
+n_prompt = 10
 
 #temp = 0.6
 #temp_str = f"_temp_{str(temp).split('.')[1]}"
 temp_str = ""
-cot_true = "" #"_cot"
+cot_true = "_cot" #"_cot"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
@@ -31,7 +31,7 @@ messages = []
 
 cot = "Let's think through this carefully, step by step."
 
-command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything."# + cot
+command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything." + cot
 
 
 
