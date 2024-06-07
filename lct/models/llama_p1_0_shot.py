@@ -11,7 +11,7 @@ model_name = "Llama-3-70B-Instruct"
 
 
 temp = 0.6
-n_prompt = 4
+n_prompt = 8
 
 temp_str = f"_temp_{str(temp).split('.')[1]}"
 
@@ -28,7 +28,7 @@ messages = []
 
 cot = "Let's think through this carefully, step by step."
 
-command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" 
+command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
 
 
 
