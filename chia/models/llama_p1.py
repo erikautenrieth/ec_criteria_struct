@@ -3,7 +3,7 @@ import transformers
 from helper_functions import *
 
 batch_path = "eval_p1"
-n_prompt = 9
+n_prompt = 8
 n_shot = 4
 
 

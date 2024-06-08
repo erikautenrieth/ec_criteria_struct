@@ -50,9 +50,10 @@ for file in study_files:
     file_name = file.split(".")[0]
     test_file = read_text_file(study_path+file)
 
+    command = command_for_input.replace("<criteria>\n{$CRITERIA_TEXT}\n</criteria>", test_file)
     messages = [
-    {"role": "system", "content": f"{model_desc}"},
-    {"role": "user", "content": f"{command_for_input.replace("<criteria>\n{$CRITERIA_TEXT}\n</criteria>", test_file)}"},
+    {"role": "system", "content": model_desc},
+    {"role": "user", "content": command },
     ]
 
     prompt = pipeline.tokenizer.apply_chat_template(
