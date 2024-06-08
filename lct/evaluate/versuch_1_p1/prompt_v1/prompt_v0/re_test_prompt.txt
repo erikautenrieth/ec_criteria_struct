@@ -1,0 +1,54 @@
+# https://github.com/zjunlp/DeepKE/tree/main/example/llm/LLMICL
+
+task="rte"
+language="de"
+engine="gpt-3.5-turbo"
+text_input="2006 nahm Fraser an der in Tianjin, China, ausgetragenen Frauen-Wasserball-Weltmeisterschaft teil und half der 
+Nationalmannschaft, den Titel zu gewinnen. 2008 vertrat Fraser Australien bei den Olympischen Spielen in Peking im Frauen-Wasserball 
+und gewann die Bronzemedaille."
+instruction="Verwende natürliche Sprache, um Tripel zu extrahieren. Aus dem folgenden Satz sollen mögliche Entitäten und Beziehungen extrahiert werden. 
+Die Entitätstypen sind {'Beruf','Zeit','Mensch','Organisation','Geografische Region','Ereignis'}, und die 
+Beziehungstypen sind {'Sport','Umfasst administrative Region','Teilnehmen','Land','Diplomatische Beziehung','Gewinnen','Austragungsort',
+                     'Gehören zu','Auszeichnung'}. 
+Du kannst zuerst die Entitäten identifizieren und dann die Beziehungen zwischen den Entitäten bestimmen. 
+Antworte im Format (Kopfentität, Beziehung, Schwanzentität)."
+
+[[Fraser, Auszeichnung, Bronzemedaille],
+ [Frauen-Wasserball-Weltmeisterschaft, Austragungsort, Tianjin],
+ [Fraser, Gehören zu, Nationalmannschaft],
+ [Fraser, Land, Australien],
+ [Fraser, Teilnehmen, Olympische Spiele in Peking im Frauen-Wasserball],
+ [China, Umfasst administrative Region, Tianjin],
+ [China, Diplomatische Beziehung, Australien],
+ [Olympische Spiele in Peking im Frauen-Wasserball, Austragungsort, Peking],
+ [Frauen-Wasserball-Weltmeisterschaft, Sport, Wasserball],
+ [Nationalmannschaft, Gewinnen, Titel]]
+
+
+
+## Data Augmentation
+
+'''
+One sample in relation extraction datasets consists of a relation, a context, a pair of head and tail entities in the context and 
+their entity types. 
+
+The head entity has the relation with the tail entity and entities are pre-categorized as the following types: URL, LOCATION, 
+IDEOLOGY, CRIMINAL CHARGE, TITLE, STATE OR PROVINCE, DATE, PERSON, NUMBER, CITY, DURATION, CAUSE OF DEATH, COUNTRY, NATIONALITY, 
+RELIGION, ORGANIZATION, MISCELLANEOUS. 
+
+Here are some samples for relation 'org:founded_by':
+
+Relation: org:founded_by. Context: Talansky is also the US contact for the New Jerusalem Foundation , an organization founded by 
+Olmert while he was Jerusalem 's mayor . Head Entity: New Jerusalem Foundation. Head Type: ORGANIZATION. Tail Entity: Olmert. 
+Tail Type: PERSON.
+
+Relation: org:founded_by. Context: Sharpton has said he will not endorse any candidate until hearing more about their views on 
+civil rights and other issues at his National Action Network convention next week in New York City . Head Entity: National 
+Action Network. Head Type: ORGANIZATION. Tail Entity: his. Tail Type: PERSON.
+
+Relation: org:founded_by. Context: `` We believe that we can best serve our clients by offering a single multistrategy hedge 
+fund platform , '' wrote John Havens , who was a founder of Old Lane with Pandit and is president of the alternative investment group.
+ Head Entity: Old Lane. Head Type: ORGANIZATION. Tail Entity: John Havens. Tail Type: PERSON.
+
+Generate more samples for the relation 'org:founded_by'.
+'''
