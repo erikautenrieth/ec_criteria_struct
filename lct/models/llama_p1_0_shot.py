@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1"
+batch_path = "test" # "eval_p1"
 
 #model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 #model_name = "Llama-3-70B-Instruct"
@@ -26,7 +26,7 @@ os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)[:100]
 
 
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") # p{n_prompt}
 messages = []
 
 cot = "Let's think through this carefully, step by step."
