@@ -3,18 +3,19 @@ import transformers
 from helper_functions import *
 
 batch_path = "eval_p1_n_shot"
-n_prompt = 9
+n_prompt = 6
 n_shot = 5
 
 
 temp_str = "" # temp_str = f"_temp_{str(temp).split('.')[1]}"   temp = 0.6
 cot_true = "" # "_cot"
 random_shot =""  # "_random"
-#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-#model_name = "Llama-3-70B-Instruct"
 
-model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
-model_name = "Llama-3-70B-DPO-v0.2"
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
+
+#model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
+#model_name = "Llama-3-70B-DPO-v0.2"
 
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
