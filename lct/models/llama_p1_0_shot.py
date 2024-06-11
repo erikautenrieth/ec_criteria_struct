@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "test" # "eval_p1"
+batch_path = "eval_p1" # "eval_p1"
 
 #model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 #model_name = "Llama-3-70B-Instruct"
@@ -11,7 +11,7 @@ model_name = "Llama-3-70B-Instruct"
 
 
 
-n_prompt = 6
+n_prompt = 7
 
 #temp = 0.6
 #temp_str = f"_temp_{str(temp).split('.')[1]}"
