@@ -1,6 +1,7 @@
 import anthropic
 from helper_functions import *
 import os
+## Kosten 100 Files: ca. 3€
 
 batch_path = "eval_p1_n_shot"
 n_prompt = 6
