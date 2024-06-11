@@ -16,7 +16,7 @@ study_path = f"{transform_lct}/input/lct_txt/"
 output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[:12]
+study_files = os.listdir(study_path)[60:100]
 
 shot_list = [
     "NCT03865433.txt",
