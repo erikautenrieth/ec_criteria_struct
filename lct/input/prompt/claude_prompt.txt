@@ -1,0 +1,123 @@
+Your task is to edit this text to incorporate the logical operators [AND], [OR], and [NOT] according
+to the following rules:
+
+[OR]:
+- [OR] serves as a disjunctive between a combination of Event or Entity annotations.
+- Only annotate [OR] between criteria explicitly separated by "or", "and/or".
+- Annotate [OR] after commas ",".
+- Example: Patients with delirium [OR] or depression.
+- Example: Boys [OR] and girls.
+- Exception: If examples or instances of an Event follow in parentheses, [OR] should not be annotated.
+
+[AND]:
+- Trigger: A span such as and or with.
+- Use [AND] to indicate a conjunction between two events or entities.
+- Include [AND] before words like "and" or "with" when they connect related conditions or
+requirements that must all be satisfied.
+- Example: Postmenopausal [AND] and preferabley on hormone replacement therapy.
+- Example: Stroke [AND] with first-ever aphasic symptoms.
+- Exception: When [AND] is used in an Equality Comparison (i.e., between two numeric values) it should not be annotated.
+
+[NOT]:
+- Always write a [NOT] before words like "no", "not", "unable", "none", "inadequate", "unqualified", "Inability", "doesn't".
+- Example: But [NOT] not of rheumatoid arthritis;
+
+Additional Guidelines:
+- Ensure that [AND], [OR], or [NOT] do not appear at the beginning of a line or immediately after a
+line break.
+- Aim for clarity and only add operators where necessary to convey the logic of the criteria.
+- Insert the operators [AND] [OR] [NOT] additionally into the text before words like and or not but do not delete the original words.
+
+Please carefully read through the given criteria text, then output only an edited version with the
+logical operators incorporated, enclosed in <EDITED_CRITERIA> tags. Do not include any other
+explanations or output.
+
+
+<example>
+Inclusion Criteria:
+ 1. are aged 13-17, years [AND] and a high school student-athlete who attends school where an athletic trainer can supervise the exercise protocol;
+ 2. have sustained a concussion within 2-7 days of clinic presentation and diagnosed by a study physician;
+ 3. demonstrate symptom exacerbation during a graded treadmill exercise test and cannot complete the test;
+ 4. are currently participating in a school or club sport;
+ 5. are English speaking and capable of giving assent
+Exclusion Criteria:
+ 1. have a reported history of neurological condition [OR] or disorder including but not limited to brain surgery, [OR] special education, [OR] seizure disorder, [OR] speech pathology, [OR] previous diagnosis of Post-Concussion Syndrome (PCS),
+ 2. are [NOT] unwilling to exercise,
+ 3. have focal neurologic deficit that would represent risk for walking/ [OR] running on treadmill,
+ 4. exhibit an [NOT] inability to exercise due to injury, known heart disease, [OR] or increased cardiac risk,
+ 5. have experienced more than 3 previous concussions,
+ 6. have suffered a substantial comorbidity (eg,cervical injury),
+ 7. currently taking β-blockers, [OR] calcium channel blockers, [OR] or prophylactic headache medications [OR] (e.g., amitriptyline, [OR] topiramate), or
+ 8. have a resting blood pressure of > 140/90.
+ 9. If the potential participant or parent/guardian is [NOT] unable to fully understand the study [OR] protocol or study risks due to injury [OR] or developmental delay, the potential participant will be [NOT] excluded from the study.
+</example> 
+
+<example>
+Inclusion Criteria:
+ - Surgical plan for total hip replacement
+ - Signing of consent form to participate in the study
+Exclusion Criteria:
+ - Patient refusal
+ - BMI > 40 kg/m2
+ - Surgical plan for revision of hip replacement
+ - Patient [NOT] unable to quantify pain level
+ - Chronic kidney disease [AND] with a Glomerular Filtration Rate < 50ml/min
+ - Previously medicated with opioids
+ - Patient [NOT] unable to perform the surgery with spinal block
+ - Allergy to local anesthetics
+ - Infection in the site of the Erector Spinae Plane [OR] or Fascia Iliaca block
+ - Allergy [OR] or contraindication to the use of morphine
+</example> 
+
+<example>
+Inclusion Criteria:
+ - Men [OR] or women 18 years of age or older.
+Exclusion Criteria:
+ - subjects [NOT] not willing to [OR] or otherwise [NOT] unable to use CPAP for treatment of OSA.
+ - Presence of other sleep disorders
+ - Pregnant [OR] or breastfeeding women
+ - Women [AND] of child-bearing age (WOCBA) [NOT] not willing [OR] or [NOT] unable to use an accepted method to [NOT] avoid pregnancy for the entire duration of the study
+ - Prisoners [OR] or subjects who are involuntarily incarcerated
+ - Subjects who are compulsorily detain [OR] or treatment of either a psychiatric [OR] or physical (i.e. infectious disease) illness
+ - Patients unable to give consent because of a language barrier, or other reason.
+</example> 
+
+<example>
+Inclusion Criteria:
+ 1. Evidence of a personally signed and dated informed consent document indicating that the participant (or a legal representative) has been informed of all pertinent aspects of the study.
+ 2. In a child aged [OR] ≥7 years (South Africa) or aged ≥8 years (Uganda), evidence of assent to participate
+ 3. Participants who are willing [AND] and able to comply with scheduled visits, laboratory tests, [AND] and other study procedures.
+ 4. HIV-infected, receiving ATV-based ART treatment [OR] OR HIV-infected receiving second-line ART [AND] with concurrent rifamycin-based TB treatment
+ 5. Participant is within one of the target populations:
+ 1. Pregnant (>20 weeks)
+ 2. Body mass index >30 [OR] or <18.5 Kg/m2
+ 3. Child [OR] or adolescent aged <18 years
+Exclusion Criteria:
+ 1. Medical, [OR] psychiatric [OR] or obstetric condition that might affect participation in the stuy based on investigator judgement
+ 2. Dissent from a minor
+ 3. For pregnant women [AND] in Uganda, [AND] where the husband is reasonably involved, paternal objection
+</example> 
+
+<example>
+Inclusion Criteria:
+ - left-hemisphere cortical [OR] or subcortical stroke [AND] with first-ever aphasic symptoms
+ - at least 6 months post-onset of stroke;
+ - aphasia, as determined by the Aachen Aphasia Test (AAT);
+ - 13 moderate- [OR] to-severe word finding difficulties (maximum of 60% correct items on a computerized naming task at baseline);
+ - at least 1 correct reaction on the first part of the AAT subscale Token Test (ensuring basic comprehension skills);
+ - at least 1 point on the communicative task of the AAT subscale Spontaneous Speech (ensuring basic communication abilities);
+ - German as first language;
+ - intact left-hemisphere "hand knob" [NOT] without right prefrontal lesions for placement of tDCS electrodes, as confirmed by magnetic resonance imaging [OR] or computer tomography scans.
+Exclusion Criteria:
+ - contraindications for tDCS (e.g., cardiac pacemaker, history of seizures, [OR] implanted metal inside the head);
+ - more than one clinically apparent stroke [AND] with aphasic symptoms;
+ - other severe neurological diseases (e.g., epilepsy, [OR] brain tumor, [AND] and subdural hematoma);
+ - history of severe alcohol [OR] or drug abuse;
+ - current severe depression;
+ - current psychosis [OR] or other relevant psychiatric condition;
+ - very severe apraxia of speech, as revealed by Hierarchical Word Lists;
+ - severe non-verbal cognitive deficits, as indicated by the Corsi Block-Tapping Task;
+ - severe uncontrolled medical problems;
+ - severely impaired vision [OR] or hearing that prevents patients from engaging in intensive SLT;
+ - changes in centrally active drugs within 2 weeks prior to study inclusion.
+</example> 
