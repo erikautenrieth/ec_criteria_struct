@@ -4,7 +4,7 @@ import os
 
 batch_path = "eval_p1_n_shot"
 n_prompt = 6
-n_shot = 5
+n_shot = 0
 temp_str = "" # temp_str = f"_temp_{str(temp).split('.')[1]}"   temp = 0.6
 cot_true = "" # "_cot"
 model_name = "Claude-3-Opus"
@@ -16,7 +16,7 @@ study_path = f"{transform_lct}/input/lct_txt/"
 output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[:3]
+study_files = os.listdir(study_path)[:12]
 
 shot_list = [
     "NCT03865433.txt",
@@ -40,8 +40,7 @@ command = "Insert the logical operators [AND], [OR], [NOT] into the following el
 
 
 client = anthropic.Anthropic(
-    # defaults to os.environ.get("ANTHROPIC_API_KEY")
-    api_key="my_api_key",
+    api_key=os.environ.get("ANTHROPIC_API_KEY"),
 )
 
 for file in study_files:
@@ -66,7 +65,7 @@ for file in study_files:
             }
         ]
     )
-    print(message.content)
-    save_txt(message.content, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
+    print(message.content[0].text)
+    save_txt(message.content[0].text, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
 
 
