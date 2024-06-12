@@ -1,0 +1,144 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Charlson comorbidity scale adjusted to age <4."
+                            },
+                            "right": {
+                              "raw_text": "- Prior ERCP."
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Previous episodes of cholangitis, pancreatitis",
+                          "Condition": [
+                            "cholangitis",
+                            "pancreatitis",
+                            "lithiasic cholecystitis"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "or lithiasic cholecystitis."
+                              "Condition": [
+                                "lithiasic cholecystitis"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Hepatobiliary surgery or previous superior digestive tract.",
+                  "Condition": [
+                    "Hepatobiliary surgery",
+                    "superior digestive tract"
+                  ]
+                },
+                "right": {
+                  "raw_text": "intervention"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Ascitis."
+              "Condition": [
+                "Ascites"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "inability to tolerate sedation of endoscopy, perforation of the digestive tract",
+                      "Condition": [
+                        "sedation",
+                        "perforation"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or other contraindication to endoscopy."
+                          "Condition": [
+                            "contraindication"
+                          ]
+                        }
+                      }
+                    }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Coagulopathy with INR (international normalized ratio) > 1.5 not correctable or thrombocytopenia <50000 / mm3 not correctable."
+          "Condition": [
+            "coagulopathy",
+            "INR",
+            "thrombocytopenia"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Other diagnoses at admission (acute cholecystitis, acute pancreatitis, biliopancreatic neoplasia)."
+              "Condition": [
+                "cholecystitis",
+                "pancreatitis",
+                "neoplasia"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Hemodynamic instability."
+                  "Condition": [
+                    "instability"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Urgent procedure performed after hours"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

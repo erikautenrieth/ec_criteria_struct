@@ -1,0 +1,83 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Age <30 years old",
+                          "Condition": [
+                            "Age"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Screening mammography with only calcifications abnormalities",
+                      "Observation": [
+                        "calcifications",
+                        "mammography",
+                        "abnormalities"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Male patients",
+                  "Condition": [
+                    "Male"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Pregnant or lactating patients",
+                      "Condition": [
+                        "Pregnancy",
+                        "Lactation"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patients with any allergy to iodinated contrast",
+                  "Condition": [
+                    "Allergy"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "raw_text": "- Patients with eGFR < 45",
+      "Observation": [
+        "eGFR"
+      ]
+    }
+  },
+  "right": {
+    "raw_text": "- Patients that may be treated with radioactive iodine",
+    "Drug": [
+      "radioactive iodine"
+    ]
+  }
+}

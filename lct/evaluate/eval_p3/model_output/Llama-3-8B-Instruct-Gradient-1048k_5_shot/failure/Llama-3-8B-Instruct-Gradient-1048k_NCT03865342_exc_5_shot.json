@@ -1,0 +1,128 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- Recent weight loss (by patient report, >5 lbs in the 6 months preceding enrollment visit)",
+                                  "Observation": [
+                                    "weight loss"
+                                  ]
+                                }
+                              },
+                              "right": {
+                                "raw_text": "- previous diagnosis of type 1 or type 2 diabetes",
+                                "Condition": [
+                                  "type 1 diabetes",
+                                  "type 2 diabetes"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "serious or persistent mental illnesses",
+                              "Condition": [
+                                "mental illnesses",
+                                "serious mental illnesses"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- more than 72 hours of hospitalization in the last 30 days",
+                      "Observation": [
+                        "hospitalization"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Enrollment in a structured weight-loss program currently or within the 1 month preceding study enrollment",
+                      "Observation": [
+                        "weight loss program"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or without enrollment in a structured weight-loss program"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Pregnant",
+                  "Condition": [
+                    "pregnancy"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Currently nursing",
+                      "Condition": [
+                        "nursing"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or",
+                          "right": {
+                            "raw_text": "Currently nursing",
+                            "Condition": [
+                              "nursing"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Have given birth within the past 3 months",
+              "Condition": [
+                "birth"
+              ]
+            },
+            "right": {
+              "OR": {
+                "raw_text": "or",
+                "right": {
+                  "raw_text": "- Has been discouraged by a physician to enroll in a DPP program",
+                  "Condition": [
+                    "DPP program"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
