@@ -1,0 +1,159 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- Patients suffering from ST-segment elevation myocardial infarction (STEMI)",
+                                  "Condition": [
+                                    "STEMI"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "- Patients need for immediate cardiac catheterization",
+                                  "Observation": [
+                                    "cardiac catheterization"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Elevated liver enzymes (Aspartate aminotransferase (AST) and Alanine aminotransferase (ALT) three times the upper limit of normal).",
+                          "Observation": [
+                            "liver enzymes",
+                            "AST",
+                            "ALT"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Active infection.",
+                      "Condition": [
+                        "infection"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Any contraindication to carvedilol, or atorvastatin.",
+                      "Drug": [
+                        "carvedilol",
+                        "atorvastatin"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or",
+                      "Observation": [
+                        "contraindication"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patients on regular use of vitamins, minerals.",
+                  "Drug": [
+                    "vitamins",
+                    "minerals"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Using medication with antioxidant properties e.g., beta-carotene, vitamin E, vitamin C, selenium, theophylline or N-acetyl cysteine 7 days prior to CC.",
+                      "Drug": [
+                        "beta-carotene",
+                        "vitamin E",
+                        "vitamin C",
+                        "selenium",
+                        "theophylline",
+                        "N-acetyl cysteine"
+                      ]
+                    }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Hemodynamically unstable patients (defined as abnormal or unstable blood pressure, especially hypotension (blood pressure less than 90/60 mm Hg).",
+              "Observation": [
+                "blood pressure",
+                "hypotension"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Patients who required dialysis.",
+                  "Condition": [
+                    "dialysis"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Pregnancy.",
+                      "Condition": [
+                        "pregnancy"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Using of carvedilol in the past three months.",
+          "Drug": [
+            "carvedilol"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Using a nephrotoxic agent in the past 48 hours or exposure to a contrast agent in the past 7 days prior to cardiac catheterization.",
+              "Drug": [
+                "nephrotoxic agent",
+                "contrast agent"
+              ]
+            },
+            "right": {
+              "raw_text": "or",
+              "Observation": [
+                "nephrotoxic agent",
+                "contrast agent"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

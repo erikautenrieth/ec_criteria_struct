@@ -1,0 +1,73 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Female,",
+                  "Condition": [
+                    "female"
+                  ]
+                },
+                "right": {
+                  "raw_text": "older than 35 years."
+                  "Condition": [
+                    "years",
+                    "age"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Already have mammography,",
+                  "Condition": [
+                    "mammography"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or other standard exams (ultrasound, MRI, etc).",
+                      "Condition": [
+                        "ultrasound",
+                        "MRI",
+                        "exams"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Could participate this trial within 2 weeks after mammography.",
+              "Observation": [
+                "mammography",
+                "trial"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Have the ability of consent inform."
+                  "Condition": [
+                    "ability",
+                    "inform"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
