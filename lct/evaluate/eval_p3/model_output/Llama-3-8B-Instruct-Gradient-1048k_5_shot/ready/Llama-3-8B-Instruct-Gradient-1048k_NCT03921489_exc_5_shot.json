@@ -1,0 +1,55 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patient <18 years of age",
+              "Condition": [
+                "age"
+              ]
+            }
+          },
+          "right": {
+            "raw_text": "- Presence of osteomyelitis",
+            "Condition": [
+              "osteomyelitis"
+            ]
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "of poor surgical candidates due to comorbidities",
+              "Condition": [
+                "comorbidities"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "such as diabetics with an HbA1c of >8%",
+                  "Condition": [
+                    "diabetes",
+                    "HbA1c"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Patient with previous foot and ankle surgeries that may interfere with future outcomes",
+          "Observation": [
+            "surgeries"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+E1	Condition:T1 Name:T2
+E3	Condition:T3 Name:T4
+E4	Age:T6 Numeric-Filter:E6
+E2	Family-Member:T9 Has:E5
+E5	Eq-Comparison:T10 Value:T11
+E6	Eq-Comparison:T13 Operator:T14 Value:T7 Value2:T8 Temporal-Unit:T5
+E8	Observation:T16 Name:T17
+E9	Condition:T19 Name:T20
+E11	Family-Member:T22 Has:E12
+E12	Eq-Comparison:T23 Value:T24
+E13	Observation:T25 Name:T26
+E14	Observation:T27 Name:T28
+E16	Assertion:T30 Asserted:E13 Asserted2:E14
+E18	Family-Member:T32 Has:E24
+E19	Modifier:T33 Modifies:T37
+E20	Procedure:T34 Name:T35
+E21	Procedure:T36 Name:T37
+E23	Assertion:T39 Asserted:E21
+E24	Negation:T40 Negates:E23
+E25	Condition:T42 Name:T43
+E27	Study:T45 
+T1	Condition 366 375	depressed
+T2	Condition-Name 366 375	depressed
+T3	Condition 160 167	anxiety
+T4	Condition-Name 160 167	anxiety
+T5	Eq-Temporal-Unit 93 98	years
+T6	Age 102 105	age
+T7	Eq-Value 83 85	14
+T8	Eq-Value 90 92	18
+T9	Family-Member 29 36	parents
+T10	Eq-Comparison 25 28	two
+T11	Eq-Value 25 28	two
+T12	Life-Stage-And-Gender 57 67	adolescent
+T13	Eq-Comparison 75 98	between 14 and 18 years
+T14	Eq-Operator 75 82	between
+T16	Observation 111 127	marital distress
+T17	Observation-Name 111 127	marital distress
+T18	Life-Stage-And-Gender 133 138	youth
+T19	Condition 150 156	stress
+T20	Condition-Name 150 156	stress
+T22	Family-Member 197 204	parents
+T23	Eq-Comparison 193 196	two
+T24	Eq-Value 193 196	two
+T25	Observation 240 253	legal divorce
+T26	Observation-Name 240 253	legal divorce
+T27	Observation 257 267	separation
+T28	Observation-Name 257 267	separation
+T30	Assertion 231 239	pursuing
+T32	Family-Member 273 280	parents
+T33	Modifier 308 315	marital
+T34	Procedure 326 333	support
+T35	Procedure-Name 326 333	support
+T36	Procedure 316 325	education
+T37	Procedure-Name 316 325	education
+T39	Assertion 289 299	willing to
+T40	Negation 285 288	not
+T41	Life-Stage-And-Gender 339 350	adolescents
+T42	Condition 386 403	suicidal ideation
+T43	Condition-Name 386 403	suicidal ideation
+T45	Study 407 415	baseline
+A1	Eq-Temporal-Unit-Value T5 year
+A2	Family-Member-Type E2 parent
+A3	Life-Stage-And-Gender-Type T12 child
+A4	Eq-Operator-Value T14 BETWEEN
+A5	Life-Stage-And-Gender-Type T18 child
+A6	Family-Member-Type E11 parent
+A7	Assertion-Type-Value E16 intention
+A8	Family-Member-Type E18 parent
+A9	Assertion-Type-Value E23 hypothetical
+A10	Life-Stage-And-Gender-Type T41 child
+R1	And Arg1:T12 Arg2:E4
+R2	Or Arg1:E9 Arg2:E3
+R3	Or Arg1:E13 Arg2:E14
+R4	And Arg1:E11 Arg2:E16
+R5	Or Arg1:E21 Arg2:E20
+R6	Or Arg1:E1 Arg2:E25
+R7	During Arg1:E25 Arg2:E27

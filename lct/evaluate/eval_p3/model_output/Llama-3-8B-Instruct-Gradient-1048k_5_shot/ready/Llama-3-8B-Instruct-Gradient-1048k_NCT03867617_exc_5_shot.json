@@ -1,0 +1,104 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Patient is EBV (epstein barr virus)-negative on serology.",
+                          "Condition": [
+                            "EBV",
+                            "epstein barr virus"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Patient is HIV-positive or suffering from chronic viral hepatitis.",
+                          "Condition": [
+                            "HIV",
+                            "hepatitis"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patient is CMV (cytomegalo virus)-negative and receiving a kidney from a CMV-positive donor.",
+                      "Condition": [
+                        "CMV",
+                        "cytomegalo virus"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "Positive T-cell lymphocytotoxic cross match.",
+                      "Observation": [
+                        "cross match",
+                        "lymphocytotoxic"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patient with prior kidney transplant or non-renal solid organ transplant.",
+                  "Condition": [
+                    "transplant"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patient has a known contraindication to any of the protocol-specified treatments.",
+                      "Drug": [
+                        "treatments"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patient had been diagnosed with a malignancy within 5 years prior to study entry, excluding non-metastatic basal or squamous cell carcinoma of the skin.",
+              "Condition": [
+                "malignancy",
+                "basal cell carcinoma",
+                "squamous cell carcinoma"
+              ]
+            },
+            "right": {
+              "raw_text": "- Female patients who are breast-feeding.",
+              "Condition": [
+                "breast-feeding"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Female patients with a positive pregnancy test.",
+      "Condition": [
+        "pregnancy test"
+      ]
+    }
+  }
+}
