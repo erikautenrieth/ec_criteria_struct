@@ -1,0 +1,37 @@
+E1	Condition:T1 Name:T2 Severity:T12
+E3	Eq-Comparison:T7 Temporal-Period:T8
+E5	Modifier:T11 Modifies:T2
+E7	Study:T14 
+E8	Procedure:T6 
+E9	Drug:T15 Name:T16
+E10	Drug:T17 Name:T4
+E11	Contraindication:T18 Contraindicates:E10
+E12	Procedure:T19 Temporality:E3
+E13	Drug:T20 Name:T21
+T1	Condition 98 114	plaque psoriasis
+T2	Condition-Name 98 114	plaque psoriasis
+T3	Life-Stage-And-Gender 25 33	Children
+T7	Eq-Comparison 506 511	prior
+T8	Eq-Temporal-Period 506 511	prior
+T9	Life-Stage-And-Gender 38 49	adolescents
+T11	Modifier 73 90	pediatric chronic
+T12	Severity 91 97	severe
+T14	Study 151 156	study
+T6	Procedure 169 178	treatment
+T15	Drug 158 168	adalimumab
+T16	Drug-Name 158 168	adalimumab
+T17	Drug 432 442	adalimumab
+T4	Drug-Name 432 442	adalimumab
+T18	Contraindication 412 428	contraindication
+T19	Procedure 512 521	treatment
+T20	Drug 527 537	adalimumab
+T21	Drug-Name 527 537	adalimumab
+A1	Life-Stage-And-Gender-Type T3 child
+A3	Eq-Temporal-Period-Value T8 past
+A4	Life-Stage-And-Gender-Type T9 child
+A5	Severity-Value T12 severe
+R1	Using Arg1:E8 Arg2:E9
+R2	Using Arg1:E12 Arg2:E13
+R3	Before Arg1:E7 Arg2:E8
+R4	Or Arg1:T3 Arg2:T9
+R5	And Arg1:T9 Arg2:E1

@@ -1,0 +1,75 @@
+E1	Age:T1 Numeric-Filter:E2
+E2	Eq-Comparison:T2 Operator:T23 Value:T24 Temporal-Unit:T25
+E3	Negation:T3 Negates:E4
+E4	Observation:T4 Name:T26 Duration:E5
+E5	Eq-Comparison:T5 Operator:T27 Value:T28 Temporal-Unit:T29
+E6	Negation:T6 Negates:E7 Negates2:E8 Negates3:E9 Negates4:E13
+E7	Condition:T7 Name:T31 Severity:T30
+E8	Condition:T8 Name:T32
+E9	Condition:T9 Name:T33
+E11	Modifier:T11 Modifies:E13
+E13	Condition:T13 Name:T34
+E14	Negation:T14 Negates:E17
+E15	Modifier:T15 Modifies:T35
+E17	Condition:T17 Name:T35
+E18	Study:T18 
+E20	Study:T20 
+E21	Negation:T21 Negates:E28
+E22	Eq-Comparison:T22 Value:T36 Operator:T37
+E23	Modifier:T38 Modifies:E13
+E25	Modifier:T40 Modifies:T35
+E26	Negation:T41 Negates:E18
+E28	Procedure:T43 Name:T44 Minimum-Count:E22
+T1	Age 25 28	age
+T2	Eq-Comparison 29 50	greater than 60 years
+T3	Negation 60 63	not
+T4	Observation 75 92	physical exercise
+T5	Eq-Comparison 106 123	at least one year
+T6	Negation 133 136	not
+T7	Condition 152 174	cardiovascular disease
+T8	Condition 176 190	kidney disease
+T9	Condition 192 205	liver disease
+T11	Modifier 209 227	limiting cognitive
+T13	Condition 245 252	disease
+T14	Negation 268 271	not
+T15	Modifier 280 286	visual
+T17	Condition 299 308	inability
+T18	Study 365 376	evaluations
+T20	Study 398 410	intervention
+T21	Negation 430 437	absence
+T22	Eq-Comparison 441 453	five or more
+T23	Eq-Operator 29 41	greater than
+T24	Eq-Value 42 44	60
+T25	Eq-Temporal-Unit 45 50	years
+T26	Observation-Name 75 92	physical exercise
+T27	Eq-Operator 106 114	at least
+T28	Eq-Value 115 118	one
+T29	Eq-Temporal-Unit 119 123	year
+T30	Severity 145 151	severe
+T31	Condition-Name 152 174	cardiovascular disease
+T32	Condition-Name 176 190	kidney disease
+T33	Condition-Name 192 205	liver disease
+T34	Condition-Name 245 252	disease
+T35	Condition-Name 299 308	inability
+T36	Eq-Value 441 445	five
+T37	Eq-Operator 446 453	or more
+T38	Modifier 231 244	neuromuscular
+T40	Modifier 290 298	auditory
+T41	Negation 335 342	failing
+T43	Procedure 454 480	Capoeira training sessions
+T44	Procedure-Name 454 480	Capoeira training sessions
+A2	Eq-Operator-Value T23 GT
+A3	Eq-Temporal-Unit-Value T25 year
+A4	Observation-Type-Value E4 social-habit
+A5	Eq-Operator-Value T27 GTEQ
+A6	Eq-Temporal-Unit-Value T29 year
+A7	Severity-Value T30 severe
+A8	Eq-Operator-Value T37 GTEQ
+R1	Or Arg1:E9 Arg2:E13
+R2	Or Arg1:E11 Arg2:E23
+R3	Or Arg1:E15 Arg2:E25
+R4	During Arg1:E18 Arg2:E20
+R5	And Arg1:E6 Arg2:E14
+R6	And Arg1:E26 Arg2:E21
+R7	Or Arg1:E7 Arg2:E8
+R8	Or Arg1:E8 Arg2:E9

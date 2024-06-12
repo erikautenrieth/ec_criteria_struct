@@ -1,0 +1,50 @@
+E1	Eq-Comparison:T1 Operator:T13 Temporal-Unit:T14 Value:T19
+E2	Age:T2 Numeric-Filter:E1
+E4	Eq-Comparison:T4 Temporal-Period:T15
+E5	Procedure:T5 Name:T16 Temporality:E4
+E6	Procedure:T6 Name:T17
+E7	Study:T7 
+E9	Study:T9 
+E10	Negation:T10 Negates:T18
+E11	Negation:T11 Negates:T22
+E14	Negation:T27 Negates:T24
+T1	Eq-Comparison 41 50	≥18 years
+T2	Age 54 57	age
+T4	Eq-Comparison 67 77	undergoing
+T5	Procedure 78 106	esophago-gastro duodenoscopy
+T6	Procedure 108 111	EGD
+T7	Study 169 174	study
+T9	Study 186 191	study
+T10	Negation 242 248	cannot
+T11	Negation 278 284	cannot
+T12	Life-Stage-And-Gender 25 30	adult
+T13	Eq-Operator 41 42	≥
+T14	Eq-Temporal-Unit 45 50	years
+T15	Eq-Temporal-Period 67 77	undergoing
+T16	Procedure-Name 78 106	esophago-gastro duodenoscopy
+T17	Procedure-Name 108 111	EGD
+T18	Language 255 262	English
+T19	Eq-Value 42 44	18
+T21	Location 266 272	Canada
+T22	Language 291 299	Japanese
+T23	Location 303 308	Japan
+T24	Language 327 334	Persian
+T25	Location 338 342	Iran
+T27	Negation 314 320	cannot
+A2	Life-Stage-And-Gender-Type T12 adult
+A3	Eq-Operator-Value T13 GTEQ
+A4	Eq-Temporal-Unit-Value T14 year
+A5	Eq-Temporal-Period-Value T15 present
+A6	Location-Value T21 residence
+A7	Location-Value T23 residence
+A8	Location-Value T25 residence
+R1	Equivalent-To Arg1:E2 Arg2:T12
+R2	Example-Of Arg1:E6 Arg2:E5
+R3	If-Then Arg1:T18 Arg2:T21
+R4	If-Then Arg1:T22 Arg2:T23
+R5	If-Then Arg1:T24 Arg2:T25
+R6	And Arg1:E2 Arg2:E5
+R7	During Arg1:E7 Arg2:E9
+R8	And Arg1:E6 Arg2:E7
+R9	Or Arg1:T23 Arg2:E14
+R10	And Arg1:T21 Arg2:E11
