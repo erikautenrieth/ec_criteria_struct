@@ -1,0 +1,89 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Prior history of pelvic radiation therapy",
+                          "Condition": [
+                            "pelvic radiation therapy"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Major medical or psychiatric illness",
+                      "Condition": [
+                        "medical illness",
+                        "psychiatric illness"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Which, in the investigator's opinion, would prevent completion of treatment",
+                  "Condition": [
+                    "treatment"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- And would interfere with follow up.",
+              "Condition": [
+                "follow up"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Implanted device or apparatus",
+              "Condition": [
+                "device",
+                "apparatus"
+              ]
+            },
+            "right": {
+              "raw_text": "which obstruct visibility of the implanted sources on fluoroscopy",
+              "Observation": [
+                "sources",
+                "fluoroscopy"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Metallic implants, claustrophobia",
+          "Condition": [
+            "metals",
+            "claustrophobia"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "not amenable to medication, or known contraindications to undergoing MR scanning",
+              "Condition": [
+                "medication",
+                "contraindications"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
