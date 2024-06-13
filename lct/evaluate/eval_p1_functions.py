@@ -89,3 +89,44 @@ def plot_count_comparison(all_metrics):
 
     plt.tight_layout()
     plt.show()
+
+def plot_avg_metrics(all_metrics):
+    metrics_to_plot = ['precision', 'recall', 'f1']
+    model_names = []
+    avg_precisions = []
+    avg_recalls = []
+    avg_f1_scores = []
+
+    for model, metrics in all_metrics.items():
+        model_names.append(model)
+        avg_precisions.append(metrics['average']['precision'])
+        avg_recalls.append(metrics['average']['recall'])
+        avg_f1_scores.append(metrics['average']['f1'])
+
+    x = np.arange(len(model_names))
+    bar_width = 0.2
+    opacity = 0.8
+
+    plt.figure(figsize=(12, 8))
+
+    plt.bar(x, avg_precisions, bar_width, alpha=opacity, label='Precision')
+    plt.bar(x + bar_width, avg_recalls, bar_width, alpha=opacity, label='Recall')
+    plt.bar(x + 2 * bar_width, avg_f1_scores, bar_width, alpha=opacity, label='F1 Score')
+
+    plt.xlabel('Models', fontsize=12)
+    plt.ylabel('Score (%)', fontsize=12)
+    plt.title('Metriken für die Relationsextraktion der Operatoren', fontsize=16, pad=20)
+    plt.xticks(x + bar_width, model_names, rotation=45, ha='right', fontsize=12)
+    plt.ylim(0, 100)
+    plt.legend(fontsize=12)
+    plt.grid(True)
+
+    for i, v in enumerate(avg_precisions):
+        plt.text(i, v + 1, f'{v:.1f}%', ha='center', fontsize=10)
+    for i, v in enumerate(avg_recalls):
+        plt.text(i + bar_width, v + 1, f'{v:.1f}%', ha='center', fontsize=10)
+    for i, v in enumerate(avg_f1_scores):
+        plt.text(i + 2 * bar_width, v + 1, f'{v:.1f}%', ha='center', fontsize=10)
+
+    plt.tight_layout()
+    plt.show()
