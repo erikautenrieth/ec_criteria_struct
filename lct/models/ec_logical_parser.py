@@ -17,21 +17,48 @@ study_files = os.listdir(study_path)[0:100]
 
 
 def apply_logical_operators(criteria_text):
-    # Define regex patterns for the logical operators
     or_patterns = [
-        r'(\bor\b|\band / or\b|\band/or\b|\/)',
-        r',\s'
+        r'(?<=,\s)or\b',  # "or" after a comma
+        r'\band / or\b',
+        r'\band/or\b',
+        r'\bor\b'
     ]
     and_patterns = [
-        r'(\bwith\b|\bwho\b|\bin addition\b|\bplus\b|\band\b|\bbut\b|\bthat\b|\bdespite\b|\bhaving\b)'
+        r'\bwith\b',
+        r'\bwho\b',
+        r'\bin addition\b',
+        r'\bplus\b',
+        r'\band\b',
+        r'\bbut\b',
+        r'\bthat\b',
+        r'\bdespite\b',
+        r'\bhaving\b'
     ]
     not_patterns = [
-        r'(\bno\b|\bnot\b|\bnone\b|\bdon\'t\b|\bfree\b|\bprevent\b|\bInability\b|\black\b|\bimpossible\b|\boff\b|\bwithout\b|\bunable\b|\bnaive\b|\bexcluded\b|\babsence\b)'
+        r'\bno\b',
+        r'\bnot\b',
+        r'\bnone\b',
+        r'\bdon\'t\b',
+        r'\bfree\b',
+        r'\bprevent\b',
+        r'\bInability\b',
+        r'\black\b',
+        r'\bimpossible\b',
+        r'\boff\b',
+        r'\bwithout\b',
+        r'\bunable\b',
+        r'\bnaive\b',
+        r'\bexcluded\b',
+        r'\babsence\b'
     ]
 
-    # Apply OR patterns
+    # Apply OR patterns before "or"
     for pattern in or_patterns:
         criteria_text = re.sub(pattern, r' [OR] \g<0>', criteria_text)
+    
+    # Apply OR pattern after comma and after slash
+    criteria_text = re.sub(r',\s(?!or\b)', r', [OR] ', criteria_text)
+    criteria_text = re.sub(r'\/', r'/ [OR] ', criteria_text)
 
     # Apply AND patterns
     for pattern in and_patterns:
@@ -41,16 +68,10 @@ def apply_logical_operators(criteria_text):
     for pattern in not_patterns:
         criteria_text = re.sub(pattern, r' [NOT] \g<0>', criteria_text)
 
-    # Clean up any misplaced operators at the start of lines
-    criteria_text = re.sub(r'\n\s*\[AND\]', '', criteria_text)
-    criteria_text = re.sub(r'\n\s*\[OR\]', '', criteria_text)
-    criteria_text = re.sub(r'\n\s*\[NOT\]', '', criteria_text)
-
     return criteria_text.strip()
 
 def parse_criteria_file(file_content):
     return apply_logical_operators(file_content)
-
 
 
 for file in study_files:
