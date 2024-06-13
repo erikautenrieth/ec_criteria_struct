@@ -55,7 +55,7 @@ for file in study_files:
 
     messages = [
     {"role": "system", "content": f"{model_desc}"},
-    {"role": "user", "content": f"{command}"},
+    {"role": "user", "content": f"{command }:\n {test_file}"}, # + "\n" + cot
     ]
 
 
