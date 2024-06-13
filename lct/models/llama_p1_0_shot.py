@@ -11,7 +11,7 @@ model_name = "Llama-3-70B-Instruct"
 
 
 
-n_prompt = 1
+n_prompt = 2
 
 #temp = 0.6
 #temp_str = f"_temp_{str(temp).split('.')[1]}"
