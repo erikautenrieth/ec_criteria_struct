@@ -59,5 +59,5 @@ for file in study_files:
 
     output = parse_criteria_file(test_file)
     print(output)
-    #save_txt(output, f"{output_path}{model_name}_{file_name}.txt")
+    save_txt(output, f"{output_path}{model_name}_{file_name}.txt")
 #%%
