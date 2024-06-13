@@ -11,12 +11,12 @@ model_name = "Llama-3-70B-Instruct"
 
 
 
-n_prompt = 2
+n_prompt = 3
 
 #temp = 0.6
 #temp_str = f"_temp_{str(temp).split('.')[1]}"
 temp_str = ""
-cot_true = "" #"_cot"
+cot_true = ""#"two_model_des" #"_cot"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
