@@ -10,12 +10,6 @@ struct_prompt = 1
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-#model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
-#model_name = "Llama-3-8B-Instruct-Gradient-1048k"
-
-#model_id = "aaditya/OpenBioLLM-Llama3-70B"
-#model_name = "OpenBioLLM-Llama3-70B"
-
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
@@ -24,7 +18,7 @@ output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_
 os.makedirs(output_path, exist_ok=True)
 
 
-study_files = os.listdir(study_path)[:300]
+study_files = os.listdir(study_path)#[:300]
 
 
 # Load Model Description

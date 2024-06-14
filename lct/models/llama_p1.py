@@ -2,8 +2,8 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_n_shot"
-n_prompt = 6
+batch_path = "eval_p1"
+n_prompt = 1
 n_shot = 5
 
 
@@ -57,9 +57,9 @@ labels = dict(zip(label_filenames, label_contents))
 messages = []
 
 cot = "Let's think through this carefully, step by step."
+#command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
 
-command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
-
+command = read_text_file(f"{transform_lct}/input/prompt/command.txt")
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 for i in range(n_shot):
