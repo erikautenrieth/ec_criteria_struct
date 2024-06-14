@@ -175,6 +175,10 @@ def read_matching_txt_files(study_folder, label_folder, shot_list):
 
     return study_filenames, study_contents, label_filenames, label_contents
 
+
+
+
+
 def read_random_matching_txt_files(study_folder, label_folder, n):
     study_filenames = []
     label_filenames = []

@@ -4,15 +4,19 @@ from helper_functions import *
 
 batch_path = "eval_p1"
 n_prompt = 1
-n_shot = 5
+n_shot = 10
 
 
 temp_str = "" # temp_str = f"_temp_{str(temp).split('.')[1]}"   temp = 0.6
 cot_true = "" # "_cot"
 random_shot =""  # "_random"
 
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
+
+model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
+model_name = "Llama-3-70B-Instruct-Gradient"
+
 
 #model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
 #model_name = "Llama-3-70B-DPO-v0.2"
@@ -44,10 +48,25 @@ shot_list = [
     "NCT03930121.txt"
 ]
 
+additional_files = [
+    "NCT03865433.txt",
+    "NCT03860324.txt",
+    "NCT03860233.txt",
+    "NCT03923231.txt",
+    "NCT03930121.txt",
+    "NCT03863717.txt",
+    "NCT03863925.txt",
+    "NCT03863951.txt",
+    "NCT03865134.txt",
+    "NCT03868267.txt",
+    "NCT03929640.txt",
+    "NCT03861845.txt"
+]
+
 # Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, additional_files)
 
 ## Random n-shot Data
 #study_filenames, study_contents, label_filenames, label_contents = read_random_matching_txt_files(study_folder, label_folder, n_shot)
