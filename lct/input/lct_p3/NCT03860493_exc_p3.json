@@ -1,0 +1,53 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. Known allergies to iodides",
+          "Drug": [
+            "iodides"
+          ]
+        },
+        "right": {
+          "raw_text": "2. Known history of coagulopathy",
+          "Condition": [
+            "coagulopathy"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "3. Women"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "who are pregnant",
+              "Condition": [
+                "pregnant"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or breastfeeding,",
+                  "Condition": [
+                    "breastfeeding"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or for whom possibility of pregnancy was not ruled out",
+                  "Condition": [
+                    "pregnancy"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

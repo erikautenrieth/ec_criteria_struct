@@ -1,0 +1,60 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patients aged ≥18,"
+                },
+                "right": {
+                  "raw_text": "and <80 years"
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- ER-visit patients"
+                },
+                "right": {
+                  "raw_text": "with acute abdominal pain",
+                  "Observation": [
+                    "pain"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- NRS ≥ 6",
+          "Observation": [
+            "NRS"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Unresponsive to gastrointestinal motility drug,",
+          "Drug": [
+            "gastrointestinal motility drug"
+          ],
+          "Condition": [
+            "Unresponsive"
+          ]
+        },
+        "right": {
+          "raw_text": "antacid",
+          "Drug": [
+            "antacid"
+          ]
+        }
+      }
+    }
+  }
+}
