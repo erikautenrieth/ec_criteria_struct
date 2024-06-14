@@ -91,14 +91,22 @@ def plot_count_comparison(all_metrics):
     plt.show()
 
 def plot_avg_metrics(all_metrics):
+    sota_metrics = {
+        'SciBERT': {
+            'average': {'precision': 71.16, 'recall': 81.39, 'f1': 75.89}
+        },
+        'R-BERT + SciBERT': {
+            'average': {'precision': 72.23, 'recall': 78.23, 'f1': 75.0}
+        }
+    }
+
     metrics_to_plot = ['precision', 'recall', 'f1']
-    model_names = []
-    avg_precisions = []
-    avg_recalls = []
-    avg_f1_scores = []
+    model_names = ['SciBERT'] + list(all_metrics.keys())
+    avg_precisions = [sota_metrics['SciBERT']['average']['precision']]
+    avg_recalls = [sota_metrics['SciBERT']['average']['recall']]
+    avg_f1_scores = [sota_metrics['SciBERT']['average']['f1']]
 
     for model, metrics in all_metrics.items():
-        model_names.append(model)
         avg_precisions.append(metrics['average']['precision'])
         avg_recalls.append(metrics['average']['recall'])
         avg_f1_scores.append(metrics['average']['f1'])
