@@ -1,0 +1,74 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- An adult PWID",
+          "Condition": [
+            "PWID"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Self report of any high risk behaviors for HIV (past-month receptive syringe sharing,",
+              "Condition": [
+                "HIV",
+                "syringe sharing"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "transactional sex, condomless sex with an HIV-infected",
+                  "Condition": [
+                    "HIV",
+                    "transactional sex"
+                  ],
+                  "Observation": [
+                    "sex"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or unknown status partner)"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Clinically eligible for PrEP (confirmed HIV-",
+          "Condition": [
+            "HIV"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "uninfected status, adequate renal function [estimated creatinine clearance ≥60 ml/min],",
+                  "Observation": [
+                    "renal function",
+                    "estimated creatinine clearance"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and documented hepatitis B virus [HBV] status)",
+                  "Condition": [
+                    "hepatitis B virus",
+                    "HBV"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Medical conditions that",
+                  "Condition": [
+                    "conditions"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "prohibit physical activity (assessed by Health History Questionnaire)",
+                      "Observation": [
+                        "physical activity",
+                        "Health History Questionnaire"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Pregnant women",
+                  "Condition": [
+                    "Pregnant"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or women expecting/"
+                    },
+                    "right": {
+                      "raw_text": "trying to become pregnant",
+                      "Condition": [
+                        "pregnant"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- BMI greater than or equal to 35 kg/m^2",
+          "Observation": [
+            "BMI"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Current smoker (assessed by Health History Questionnaire)",
+      "Observation": [
+        "smoker",
+        "Health History Questionnaire"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "no food allergies"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "no medications that affect behavior/",
+                  "Drug": [
+                    "medications"
+                  ],
+                  "Condition": [
+                    "behavior"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "learning/",
+                      "Condition": [
+                        "learning"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "appetite",
+                      "Condition": [
+                        "appetite"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

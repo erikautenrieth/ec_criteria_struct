@@ -1,0 +1,68 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- minors"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- pregnancy",
+                      "Condition": [
+                        "pregnancy"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or beast feeding",
+                      "Condition": [
+                        "beast feeding"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- patient deprived of liberty by administrative",
+                  "Observation": [
+                    "deprived of liberty"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or judicial decision or placed under judicial protection (guardianship or supervision)",
+                  "Observation": [
+                    "judicial protection"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- obstruction to participate"
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "non covered by national health insurance"
+            }
+          }
+        }
+      }
+    }
+  }
+}
