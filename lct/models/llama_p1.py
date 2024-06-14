@@ -3,8 +3,8 @@ import transformers
 from helper_functions import *
 
 batch_path = "eval_p1"
-n_prompt = 1
-n_shot = 10
+n_prompt = 4
+n_shot = 15
 
 
 temp_str = "" # temp_str = f"_temp_{str(temp).split('.')[1]}"   temp = 0.6
@@ -60,7 +60,10 @@ additional_files = [
     "NCT03865134.txt",
     "NCT03868267.txt",
     "NCT03929640.txt",
-    "NCT03861845.txt"
+    "NCT03861845.txt",
+    "NCT03921827.txt",
+    "NCT03924479.txt",
+    "NCT03924102.txt"
 ]
 
 # Load n-shot Data
