@@ -27,7 +27,7 @@ study_files = os.listdir(study_path)[:100]
 
 
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") # p{n_prompt}
-command = read_text_file(f"{transform_lct}/input/prompt/p3.txt") 
+command = read_text_file(f"{transform_lct}/input/prompt/command.txt")
 
 messages = []
 
