@@ -7,8 +7,11 @@ batch_path = "eval_p3"
 n_shot = 3
 struct_prompt = 1
 
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
+
+model_id =  "vsevolodl/Llama-3-70B-Instruct-Gradient-1048k-GGUF"
+model_name = "Llama-3-70B-Instruct-Gradient"
 
 
 
