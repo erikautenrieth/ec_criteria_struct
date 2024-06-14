@@ -92,7 +92,7 @@ def plot_count_comparison(all_metrics):
 
 def plot_avg_metrics(all_metrics):
     sota_metrics = {
-        'SciBERT': {
+        'SciBERT (SOTA)': {
             'average': {'precision': 71.16, 'recall': 81.39, 'f1': 75.89}
         },
         'R-BERT + SciBERT': {
