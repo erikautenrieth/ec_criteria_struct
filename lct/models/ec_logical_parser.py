@@ -4,7 +4,7 @@ import re
 
 
 batch_path = "eval_p1"
-model_name = "ec_parser"
+model_name = " naive_greedy_match"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
