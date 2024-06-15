@@ -9,7 +9,7 @@ n_shot = 5
 
 
 temp_str = "" # temp_str = f"_temp_{str(temp).split('.')[1]}"   temp = 0.6
-cot_true = "" # "_cot"
+cot_true = "_p5" # "_cot"
 random_shot =""  # "_random"
 
 model_id =  "Qwen/Qwen2-72B-Instruct"
@@ -19,7 +19,7 @@ model_name = "Qwen2-72B"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 # Achtung hier ist Agent gerade plaziert
-model_desc = read_text_file(f"{transform_lct}/input/prompt/agent.txt") #  p{n_prompt}
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") #  p{n_prompt}
 
 study_path = f"{transform_lct}/input/lct_txt/"
 output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}{random_shot}_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
@@ -69,7 +69,7 @@ messages = []
 cot = "Let's think through this carefully, step by step:"
 #command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
 
-command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/p5.txt")
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 for i in range(n_shot):
