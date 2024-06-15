@@ -1,5 +1,6 @@
 import os
-import transformers
+from transformers import AutoModelForCausalLM, AutoTokenizer
+device = "cuda" # the device to load the model onto
 from helper_functions import *
 
 batch_path = "eval_p1"
@@ -11,23 +12,9 @@ temp_str = "" # temp_str = f"_temp_{str(temp).split('.')[1]}"   temp = 0.6
 cot_true = "" # "_cot"
 random_shot =""  # "_random"
 
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+model_id =  "Qwen/Qwen2-72B-Instruct"
+model_name = "Qwen2-72B"
 
-#model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
-#model_name = "Llama-3-70B-Instruct-Gradient"
-
-
-#model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
-#model_name = "Llama-3-70B-DPO-v0.2"
-
-#model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
-#model_name = "Llama-3-8B-Instruct-Gradient-1048k"
-# model_id = "aaditya/OpenBioLLM-Llama3-70B"
-#model_id = "aaditya/OpenBioLLM-Llama3-8B"
-#model_name = "OpenBioLLM-Llama3-8B"
-#model_id = "aaditya/OpenBioLLM-Llama3-70B"
-#model_name = "OpenBioLLM-Llama3-70B"
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
@@ -90,13 +77,13 @@ for i in range(n_shot):
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
-pipeline = transformers.pipeline(
-            "text-generation",
-            model=model_id,
-            model_kwargs={"torch_dtype": torch.bfloat16},
-            device_map="auto", 
-        )
+model = AutoModelForCausalLM.from_pretrained(
+    "Qwen/Qwen2-72B-Instruct",
+    torch_dtype="auto",
+    device_map="auto"
+)
 
+tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2-72B-Instruct")
 first_call = True
 
 for file in study_files:
@@ -112,26 +99,23 @@ for file in study_files:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"} # {cot} 
 
 
-    prompt = pipeline.tokenizer.apply_chat_template(
-                messages, 
-                tokenize=False, 
-                add_generation_prompt=True
+    text = tokenizer.apply_chat_template(
+    messages,
+    tokenize=False,
+    add_generation_prompt=True
     )
 
-    terminators = [
-            pipeline.tokenizer.eos_token_id,
-            pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
+    model_inputs = tokenizer([text], return_tensors="pt").to(device)
+
+    generated_ids = model.generate(
+        model_inputs.input_ids,
+        max_new_tokens=2048,
+    )
+    generated_ids = [
+        output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
     ]
 
-    outputs = pipeline(
-            prompt,
-            max_new_tokens=2048,
-            eos_token_id=terminators,
-            do_sample=True,
-            temperature=0.6,
-            top_p=0.9,
-    )
+    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
-    gen_output = outputs[0]["generated_text"][len(prompt):]
 
-    save_txt(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
+    save_txt(response, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
