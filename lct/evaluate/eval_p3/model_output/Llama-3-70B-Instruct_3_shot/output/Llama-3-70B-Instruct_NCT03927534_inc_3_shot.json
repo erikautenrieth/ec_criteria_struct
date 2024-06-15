@@ -1,0 +1,77 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Age between 45-75 years",
+          "Observation": [
+            "Age"
+          ]
+        },
+        "right": {
+          "raw_text": "- Have overweight or obesity condition based in BMI (Body Mass Index). Individuals with BMI of 25 or more.",
+          "Condition": [
+            "overweight",
+            "obesity"
+          ],
+          "Observation": [
+            "BMI",
+            "Body Mass Index"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Have two of these three risk:",
+          "Condition": [
+            "risk"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "sedentary lifestyle,",
+              "Condition": [
+                "sedentary lifestyle"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "poor diet",
+                  "Condition": [
+                    "poor diet"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and binge episodes.",
+                  "Condition": [
+                    "binge episodes"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "raw_text": "- Ability to understand oral and written Spanish.",
+        "Observation": [
+          "language"
+        ]
+      },
+      "right": {
+        "raw_text": "- Willingness to participate in the study and signing informed consent.",
+        "Observation": [
+          "informed consent"
+        ]
+      }
+    }
+  }
+}
