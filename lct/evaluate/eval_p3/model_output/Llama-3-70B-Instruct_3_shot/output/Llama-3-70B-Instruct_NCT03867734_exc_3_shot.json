@@ -1,0 +1,106 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Age less than 16 years",
+                  "Condition": [
+                    "Age"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Receipt of antibiotics in ≤30 days",
+                      "Drug": [
+                        "antibiotics"
+                      ],
+                      "Observation": [
+                        "days"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Known allergy to aztreonam",
+                      "Drug": [
+                        "aztreonam"
+                      ],
+                      "Condition": [
+                        "allergy"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- History of renal disease (including diagnosis of solitary kidney, chronic renal insufficiency, renal cell carcinoma etc.)",
+                  "Condition": [
+                    "renal disease",
+                    "solitary kidney",
+                    "chronic renal insufficiency",
+                    "renal cell carcinoma"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Concurrent infection with syphilis",
+                      "Condition": [
+                        "syphilis"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or chlamydia",
+                      "Condition": [
+                        "chlamydia"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnancy",
+              "Condition": [
+                "Pregnancy"
+              ]
+            },
+            "right": {
+              "raw_text": "and/or nursing",
+              "Condition": [
+                "nursing"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Unable to return for a follow-up visit 4-7 days (+/- 1 day).",
+          "Observation": [
+            "follow-up visit",
+            "days"
+          ]
+        },
+        "right": {
+          "raw_text": "- Study team's discretion",
+          "Observation": [
+            "Study team's discretion"
+          ]
+        }
+      }
+    }
+  }
+}

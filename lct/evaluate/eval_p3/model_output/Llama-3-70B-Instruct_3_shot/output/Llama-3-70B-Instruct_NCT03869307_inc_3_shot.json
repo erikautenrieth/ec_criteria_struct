@@ -1,0 +1,107 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Men and women aged 18 - 65",
+      "Condition": [
+        "age"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Generalized HSD (G-HSD) defined with Beighton score cut-off ≥ 5 for women up to the age of 50 years and ≥ 4 for those above 50 years and all men",
+          "Condition": [
+            "Generalized HSD",
+            "G-HSD",
+            "Beighton score"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or Historical HSD (H-HSD) if the Beighton score was 1 point below the age and sex-specific cut-off",
+              "Condition": [
+                "Historical HSD",
+                "H-HSD",
+                "Beighton score"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "AND the five-part questionnaire (5PQ) was positive (= at least two positive items)",
+                  "Observation": [
+                    "five-part questionnaire",
+                    "5PQ"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Present with one or more secondary symptomatic musculoskeletal manifestations",
+                  "Condition": [
+                    "musculoskeletal manifestations"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "OR": {
+      "left": {
+        "raw_text": "defined as either 1. musculoskeletal pain in minimum one shoulder for at least three months",
+        "Condition": [
+          "musculoskeletal pain",
+          "shoulder"
+        ]
+      },
+      "right": {
+        "OR": {
+          "left": {
+            "raw_text": "and/or 2. recurrent joint dislocations or joint instability without a reported history of trauma",
+            "Condition": [
+              "joint dislocations",
+              "joint instability",
+              "trauma"
+            ]
+          },
+          "right": {
+            "OR": {
+              "left": {
+                "raw_text": "defined as either a) minimum three atraumatic dislocations in same shoulder",
+                "Condition": [
+                  "atraumatic dislocations",
+                  "shoulder"
+                ]
+              },
+              "right": {
+                "OR": {
+                  "left": {
+                    "raw_text": "b) minimum two atraumatic dislocations in two different joints (minimum one in the shoulder) occurring at different times",
+                    "Condition": [
+                      "atraumatic dislocations",
+                      "joints",
+                      "shoulder"
+                    ]
+                  },
+                  "right": {
+                    "raw_text": "or c) medical confirmation of joint instability in minimum two joints (minimum one in the shoulder) not related to trauma.",
+                    "Condition": [
+                      "joint instability",
+                      "joints",
+                      "shoulder",
+                      "trauma"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}

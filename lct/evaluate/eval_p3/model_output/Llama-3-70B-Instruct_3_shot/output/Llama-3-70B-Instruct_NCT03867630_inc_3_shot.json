@@ -1,0 +1,51 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- 20 to 80 years old",
+      "Observation": [
+        "age"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients with a herniated disc, spinal stenosis",
+          "Condition": [
+            "herniated disc",
+            "spinal stenosis"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients with chronic low back pain and lower extremity pain",
+              "Condition": [
+                "chronic low back pain",
+                "lower extremity pain"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "who did not respond to lumbar epidural steroid injections",
+                  "Procedure": [
+                    "lumbar epidural steroid injections"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "raw_text": "- Patients who are performed percutaneous epidural neuroplasty with wire type catheter.",
+    "Procedure": [
+      "percutaneous epidural neuroplasty"
+    ],
+    "Device": [
+      "wire type catheter"
+    ]
+  }
+}

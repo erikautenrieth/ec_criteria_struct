@@ -1,0 +1,71 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Flank pain, that is pain originating from tissues lateral to the paraspinal muscles.",
+              "Condition": [
+                "Flank pain"
+              ],
+              "Observation": [
+                "pain"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Not available for follow-up"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnant",
+              "Condition": [
+                "Pregnancy"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Chronic pain syndrome",
+                  "Condition": [
+                    "Chronic pain syndrome"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Allergic to or intolerant of investigational medications",
+                      "Drug": [
+                        "investigational medications"
+                      ],
+                      "Condition": [
+                        "Allergic",
+                        "intolerant"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Contra-indications to investigational medications",
+                      "Drug": [
+                        "investigational medications"
+                      ],
+                      "Condition": [
+                        "Contra-indications"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

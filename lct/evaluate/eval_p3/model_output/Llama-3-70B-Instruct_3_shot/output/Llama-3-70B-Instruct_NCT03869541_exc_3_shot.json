@@ -1,0 +1,51 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Any patient who is expected to die imminently, as per clinical opinion.",
+              "Condition": [
+                "death"
+              ]
+            },
+            "right": {
+              "raw_text": "- Any patient where mobilization is contraindicated by the nature of their existing injuries.",
+              "Condition": [
+                "mobilization"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Where it is clear from the medical records that participants are prisoners or offenders on probation.",
+              "Condition": [
+                "prisoners",
+                "offenders"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patients with neuromuscular disease or acute brain injury or spinal cord injury.",
+              "Condition": [
+                "neuromuscular disease",
+                "brain injury",
+                "spinal cord injury"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- If the patient and/or their consultee is unable to speak English.",
+      "Condition": [
+        "language"
+      ]
+    }
+  }
+}
+
+Note: The last two criteria are not exclusion criteria, but rather criteria for clinician participants in a survey, so they are not included in the JSON format.

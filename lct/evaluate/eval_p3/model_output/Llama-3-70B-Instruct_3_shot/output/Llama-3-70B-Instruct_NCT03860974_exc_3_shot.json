@@ -1,0 +1,111 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- morbid obesity as defined by a body mass index > 40",
+                  "Condition": [
+                    "morbid obesity"
+                  ],
+                  "Observation": [
+                    "body mass index",
+                    "BMI"
+                  ]
+                },
+                "right": {
+                  "raw_text": "(BMI=weight in kg / [height in meters]2)"
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- renal insufficiency",
+              "Condition": [
+                "renal insufficiency"
+              ],
+              "Observation": [
+                "creatinine"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- chronic opioid use",
+              "Condition": [
+                "chronic opioid use"
+              ],
+              "Drug": [
+                "opioid"
+              ],
+              "Observation": [
+                "opioid use"
+              ]
+            },
+            "right": {
+              "raw_text": "(daily use within the 2 weeks prior to surgery and duration of use > 4 weeks)"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- history of opioid abuse",
+              "Condition": [
+                "opioid abuse"
+              ],
+              "Drug": [
+                "opioid"
+              ]
+            },
+            "right": {
+              "raw_text": "- any comorbidity which results in moderate or severe functional limitation",
+              "Condition": [
+                "comorbidity",
+                "functional limitation"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- inability to communicate with the investigators or hospital staff"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- pregnancy",
+                  "Condition": [
+                    "pregnancy"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- planned regional analgesic with perineural catheter placement"
+                    },
+                    "right": {
+                      "raw_text": "- incarceration",
+                      "Condition": [
+                        "incarceration"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- previous surgery of neck and head",
+              "Condition": [
+                "surgery",
+                "neck",
+                "head"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Body Mass Index > 39,99",
+                  "Observation": [
+                    "Body Mass Index"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- politrauma patients",
+              "Condition": [
+                "politrauma"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- pregnancy",
+              "Condition": [
+                "pregnancy"
+              ]
+            },
+            "right": {
+              "raw_text": "- neck and head infections",
+              "Condition": [
+                "infections",
+                "neck",
+                "head"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

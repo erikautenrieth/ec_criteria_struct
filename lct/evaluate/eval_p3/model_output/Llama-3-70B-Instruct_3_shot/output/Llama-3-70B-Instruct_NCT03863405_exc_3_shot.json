@@ -1,0 +1,168 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Known hypersensitivity to metformin.",
+                  "Drug": [
+                    "metformin"
+                  ],
+                  "Condition": [
+                    "hypersensitivity"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Patients who have a prior diagnosis with diabetes mellitus.",
+                      "Condition": [
+                        "diabetes mellitus"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Patients receive metformin for any other indications.",
+                  "Drug": [
+                    "metformin"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Patients with congestive heart failure.",
+              "Condition": [
+                "congestive heart failure"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Patients with a history of myocardial infarction.",
+              "Condition": [
+                "myocardial infarction"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Patients with severe anemia.",
+                  "Condition": [
+                    "anemia"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Patients with active infections or other inflammatory diseases.",
+                      "Condition": [
+                        "infections",
+                        "inflammatory diseases"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "- Patients receiving biological therapy.",
+                          "Drug": [
+                            "biological therapy"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "- Pregnancy or lactation.",
+                              "Condition": [
+                                "Pregnancy",
+                                "lactation"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "- Patients with impaired liver functions.",
+                                  "Condition": [
+                                    "impaired liver functions"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "NOT": {
+                                    "left": {
+                                      "raw_text": "- Patients with impaired kidney functions (serum creatinine concentrations ≥1.5 and ≥1.4 mg/dL in males and females respectively).",
+                                      "Condition": [
+                                        "impaired kidney functions"
+                                      ],
+                                      "Observation": [
+                                        "serum creatinine concentrations"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "NOT": {
+                                    "left": {
+                                      "raw_text": "- Patients with malignancies.",
+                                      "Condition": [
+                                        "malignancies"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

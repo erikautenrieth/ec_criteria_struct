@@ -1,0 +1,59 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- CF diagnosis",
+                  "Condition": [
+                    "CF"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Men or women with osteoporosis",
+                  "Condition": [
+                    "osteoporosis"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Less than 18 years of age",
+              "Observation": [
+                "age"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Unwilling to return annually for study visits for up to 5 years"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Unwilling and/or medically unable to take denosumab",
+                      "Drug": [
+                        "denosumab"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- allergy to bupivacaine",
+          "Condition": [
+            "allergy"
+          ],
+          "Drug": [
+            "bupivacaine"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- pre-operative opioid usage within the last six months",
+              "Condition": [
+                "opioid usage"
+              ],
+              "Observation": [
+                "opioid"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- patients allergic to Percocet",
+                  "Condition": [
+                    "allergy"
+                  ],
+                  "Drug": [
+                    "Percocet"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or acetaminophen",
+                      "Drug": [
+                        "acetaminophen"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- patients taking tricyclic antidepressants",
+                          "Condition": [
+                            "tricyclic antidepressants"
+                          ],
+                          "Drug": [
+                            "tricyclic antidepressants"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "(interaction with bupivacaine)",
+                          "Condition": [
+                            "interaction"
+                          ],
+                          "Drug": [
+                            "bupivacaine"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- vulnerable populations (prisoners or pregnant women)",
+      "Condition": [
+        "vulnerable populations",
+        "prisoners",
+        "pregnant women"
+      ]
+    }
+  }
+}
