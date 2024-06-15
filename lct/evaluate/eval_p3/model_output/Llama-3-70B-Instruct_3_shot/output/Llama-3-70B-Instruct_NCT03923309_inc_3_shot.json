@@ -1,0 +1,35 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- biopsy proven rectal cancer (anal verge ≤ 10cm)",
+      "Condition": [
+        "rectal cancer"
+      ],
+      "Observation": [
+        "biopsy",
+        "anal verge"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- neoadjuvant radiotherapy or chemoradiotherapy",
+          "Treatment": [
+            "neoadjuvant radiotherapy",
+            "chemoradiotherapy"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- radical surgery after neoadjuvant therapy",
+              "Treatment": [
+                "radical surgery"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
