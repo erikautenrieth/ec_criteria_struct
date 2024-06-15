@@ -18,7 +18,8 @@ model_name = "Qwen2-72B"
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-# Achtung hier ist Agent gerade plaziert
+
+
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") #  p{n_prompt}
 
 study_path = f"{transform_lct}/input/lct_txt/"
