@@ -1,0 +1,69 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "1. Patients who are undergoing revision surgical procedure",
+              "Condition": [
+                "revision surgical procedure"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "2. Patients who have taken opioid pain medications in the past 3 months prior to surgical procedure",
+                  "Drug": [
+                    "opioid pain medications"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "3. Patients who have allergies to any of the medications or components of medications investigated in the study",
+                  "Condition": [
+                    "allergies"
+                  ],
+                  "Drug": [
+                    "medications"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "4. Patients currently incarcerated",
+                      "Condition": [
+                        "incarcerated"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "5. Patients who cannot read and speak English",
+                      "Condition": [
+                        "cannot read and speak English"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
