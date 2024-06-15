@@ -1,0 +1,40 @@
+{
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Diabetes group: 1) Age between 30-70 years of old",
+          "Observation": [
+            "Age"
+          ]
+        },
+        "right": {
+          "raw_text": "2) type 2 diabetes.",
+          "Condition": [
+            "type 2 diabetes"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Healthy control group: 1) Age between 30-70 years of old",
+          "Observation": [
+            "Age"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "2) without diabetes",
+              "Condition": [
+                "diabetes"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

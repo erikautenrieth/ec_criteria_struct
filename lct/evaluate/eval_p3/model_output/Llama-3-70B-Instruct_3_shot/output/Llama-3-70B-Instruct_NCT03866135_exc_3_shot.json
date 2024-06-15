@@ -1,0 +1,92 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients previously diagnosed with OP",
+                  "Condition": [
+                    "OP"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients previously treated with OP",
+                      "Condition": [
+                        "OP"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Patients with bone fractures previously associated with OP",
+                      "Condition": [
+                        "bone fractures",
+                        "OP"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Those using drugs that affect bone metabolism",
+                  "Drug": [
+                    "drugs that affect bone metabolism"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- metabolic bone diseases (Paget's disease, osteomalacia, hyperparathyroidism)",
+                      "Condition": [
+                        "Paget's disease",
+                        "osteomalacia",
+                        "hyperparathyroidism"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Diabetes mellitus",
+                      "Condition": [
+                        "Diabetes mellitus"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Hypothyroidism, hyperthyroidism",
+              "Condition": [
+                "Hypothyroidism",
+                "hyperthyroidism"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patients with kidney, liver and intestinal diseases",
+              "Condition": [
+                "kidney diseases",
+                "liver diseases",
+                "intestinal diseases"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Those using corticosteroids",
+      "Drug": [
+        "corticosteroids"
+      ]
+    }
+  }
+}

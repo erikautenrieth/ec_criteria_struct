@@ -1,0 +1,144 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Charlson comorbidity scale adjusted to age <4.",
+                          "Observation": [
+                            "Charlson comorbidity scale"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "- Prior ERCP.",
+                          "Procedure": [
+                            "ERCP"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Previous episodes of cholangitis,",
+                          "Condition": [
+                            "cholangitis"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "pancreatitis",
+                              "Condition": [
+                                "pancreatitis"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or lithiasic cholecystitis.",
+                              "Condition": [
+                                "lithiasic cholecystitis"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Hepatobiliary surgery or previous superior digestive tract.",
+                  "Procedure": [
+                    "Hepatobiliary surgery",
+                    "superior digestive tract"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Ascitis.",
+                  "Condition": [
+                    "Ascitis"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Inability to tolerate sedation of endoscopy, perforation of the digestive tract or other contraindication to endoscopy.",
+                  "Procedure": [
+                    "endoscopy"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Coagulopathy with INR (international normalized ratio) > 1.5 not correctable",
+              "Condition": [
+                "Coagulopathy"
+              ],
+              "Observation": [
+                "INR"
+              ]
+            },
+            "right": {
+              "raw_text": "or thrombocytopenia <50000 / mm3 not correctable.",
+              "Condition": [
+                "thrombocytopenia"
+              ],
+              "Observation": [
+                "thrombocytopenia"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Other diagnoses at admission (acute cholecystitis, acute pancreatitis, biliopancreatic neoplasia).",
+          "Condition": [
+            "acute cholecystitis",
+            "acute pancreatitis",
+            "biliopancreatic neoplasia"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Hemodynamic instability.",
+              "Condition": [
+                "Hemodynamic instability"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Urgent procedure performed after hours"
+                },
+                "right": {
+                  "raw_text": "- No availability of expert material / endoscopist in drainage.",
+                  "Procedure": [
+                    "endoscopist"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+Note: I've assumed that "ECOG" stands for "Eastern Cooperative Oncology Group" and "ERCP" stands for "Endoscopic Retrograde Cholangiopancreatography". If these assumptions are incorrect, please let me know and I'll correct the JSON output accordingly.

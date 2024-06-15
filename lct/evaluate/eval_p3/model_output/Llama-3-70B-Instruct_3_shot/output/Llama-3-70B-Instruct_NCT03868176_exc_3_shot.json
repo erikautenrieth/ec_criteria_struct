@@ -1,0 +1,67 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "- Testicular cancer without germ cell component.",
+          "Condition": [
+            "Testicular cancer",
+            "germ cell component"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Prior history of other malignancy except for:",
+              "Condition": [
+                "malignancy"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "cutaneous cancers excluding melanoma",
+              "Condition": [
+                "cutaneous cancers",
+                "melanoma"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "superficial bladder tumor",
+                  "Condition": [
+                    "bladder tumor"
+                  ]
+                },
+                "right": {
+                  "raw_text": "localized prostate cancer with undetectable PSA.",
+                  "Condition": [
+                    "prostate cancer",
+                    "PSA"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "NOT": {
+      "left": {
+        "raw_text": "- Cognitive condition that would preclude patient's understanding and completion of study procedures.",
+        "Condition": [
+          "Cognitive condition"
+        ]
+      }
+    }
+  }
+}

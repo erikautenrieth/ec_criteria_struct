@@ -1,0 +1,57 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Children who are 6-12 years old，in Chongqing",
+          "Observation": [
+            "age"
+          ],
+          "Location": [
+            "Chongqing"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- After birth, three injections of Hep B were inoculated in time according to the procedure of 0, 1 and 6 months（The vaccination certificate record）",
+              "Vaccine": [
+                "Hep B"
+              ],
+              "Observation": [
+                "vaccination certificate record"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- No HBV booster vaccine given since primary HBV immunization",
+                  "Vaccine": [
+                    "HBV booster vaccine"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Children or guardian knew and agreed to accept the study",
+          "Observation": [
+            "informed consent"
+          ]
+        },
+        "right": {
+          "raw_text": "- Follow - up study and blood collection after vaccination can be accepted",
+          "Observation": [
+            "follow-up study",
+            "blood collection"
+          ]
+        }
+      }
+    }
+  }
+}

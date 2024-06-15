@@ -1,0 +1,36 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Less than 18 years old",
+      "Condition": [
+        "age"
+      ]
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Tracheostomy tube",
+          "Observation": [
+            "Tracheostomy tube"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Extracorporeal membrane oxygenation",
+              "Observation": [
+                "Extracorporeal membrane oxygenation"
+              ]
+            },
+            "right": {
+              "raw_text": "- Transfer from outside hospital with more than 24 hours of mechanical ventilation",
+              "Observation": [
+                "mechanical ventilation"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

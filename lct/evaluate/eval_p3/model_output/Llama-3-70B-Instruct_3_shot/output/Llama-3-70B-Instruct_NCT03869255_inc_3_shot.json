@@ -1,0 +1,54 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- the selection criteria for blood donation",
+      "Condition": [
+        "blood donation"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- age ≥ 18 years old",
+          "Observation": [
+            "age"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- No refusal of the person",
+                  "Condition": [
+                    "refusal"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- hospitalization in one of the services participating in the study",
+                  "Condition": [
+                    "hospitalization"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- no refusal of the person",
+                      "Condition": [
+                        "refusal"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

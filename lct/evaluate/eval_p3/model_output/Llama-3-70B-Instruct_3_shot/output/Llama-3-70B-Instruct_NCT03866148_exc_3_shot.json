@@ -1,0 +1,53 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients with a diagnosis of atrial fibrillation (AF), atrial flutter and/or ventricular tachycardia (VT)",
+          "Condition": [
+            "atrial fibrillation",
+            "atrial flutter",
+            "ventricular tachycardia"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Patients with an ILR already in-situ or an established indication for ILR",
+              "Device": [
+                "ILR"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Patients with a palliative diagnosis i.e. life expectancy less than 3 years",
+              "Condition": [
+                "palliative diagnosis"
+              ],
+              "Observation": [
+                "life expectancy"
+              ]
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Patients who lack capacity",
+              "Condition": [
+                "lack capacity"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

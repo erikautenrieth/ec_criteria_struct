@@ -1,0 +1,72 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Inability to provide informed consent.",
+              "Condition": [
+                "inability to provide informed consent"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- The participant is not suffering from Parkinson's disease",
+                  "Condition": [
+                    "Parkinson's disease"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "or the individual is not a family member of a participant with LRRK2 parkinsonism",
+                  "Condition": [
+                    "LRRK2 parkinsonism"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "or is not a member of a high risk population.",
+                  "Condition": [
+                    "high risk population"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- The participant is younger than 18 years old.",
+          "Observation": [
+            "age"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Previously enrolled in the study."
+            },
+            "right": {
+              "raw_text": "- Participant in custody."
+            }
+          }
+        }
+      }
+    }
+  }
+}

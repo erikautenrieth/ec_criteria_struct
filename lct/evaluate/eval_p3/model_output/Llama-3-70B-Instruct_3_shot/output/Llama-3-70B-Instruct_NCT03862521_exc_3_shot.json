@@ -1,0 +1,57 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- On low or very low carbohydrate diet",
+      "Diet": [
+        "low carbohydrate diet",
+        "very low carbohydrate diet"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- History of endocrine or metabolic disorder that could affect counter-regulation",
+          "Condition": [
+            "endocrine disorder",
+            "metabolic disorder"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "well-controlled hypothyroidism is acceptable if on stable dose of l-thyroxine for ≥3 months",
+              "Condition": [
+                "hypothyroidism"
+              ],
+              "Drug": [
+                "l-thyroxine"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "raw_text": "- History of metabolic disorder affection lipid metabolism",
+        "Condition": [
+          "metabolic disorder"
+        ],
+        "Observation": [
+          "lipid metabolism"
+        ]
+      },
+      "right": {
+        "raw_text": "- Severe hypoglycemic event in past 3 months",
+        "Condition": [
+          "hypoglycemic event"
+        ],
+        "Observation": [
+          "hypoglycemic"
+        ]
+      }
+    }
+  }
+}
