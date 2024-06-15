@@ -1,0 +1,117 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. All patients that older than 18",
+          "Condition": [
+            "older than 18"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "treated for localized adenocarcinoma of the prostate",
+              "Condition": [
+                "adenocarcinoma",
+                "prostate cancer"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "between 2000 and 2017",
+                  "Observation": [
+                    "2000",
+                    "2017"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "with either radical prostatectomy",
+                      "Procedure": [
+                        "radical prostatectomy"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or radiotherapy",
+                      "Procedure": [
+                        "radiotherapy"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "2. All treated patients had a rising post-treatment PSA",
+          "Observation": [
+            "PSA"
+          ]
+        },
+        "right": {
+          "raw_text": "with at least one post-treatment free PSA blood test.",
+          "Observation": [
+            "free PSA blood test"
+          ]
+        }
+      }
+    }
+  }
+}
+
+{
+  "AND": {
+    "left": {
+      "raw_text": "For the biobank validation cohort:",
+      "Observation": [
+        "biobank validation cohort"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "1. All patients treated with radical prostatectomy",
+          "Procedure": [
+            "radical prostatectomy"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "for localized prostate cancer",
+              "Condition": [
+                "prostate cancer"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "between 2000 and 2017",
+                  "Observation": [
+                    "2000",
+                    "2017"
+                  ]
+                },
+                "right": {
+                  "raw_text": "who had biobank samples taken when developing biochemical recurrence.",
+                  "Observation": [
+                    "biobank samples",
+                    "biochemical recurrence"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -79,13 +79,7 @@ for file in study_files:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"} # {cot} 
 
 
-    text = tokenizer.apply_chat_template(
-    messages,
-    tokenize=False,
-    add_generation_prompt=True
-    )
-
-    input_ids = tokenizer(text, return_tensors="pt").input_ids.to("cuda")
+    input_ids = tokenizer(messages, return_tensors="pt").input_ids.to("cuda")
 
     outputs = model.generate(input_ids)
 
