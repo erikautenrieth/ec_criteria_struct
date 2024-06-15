@@ -1,0 +1,115 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- the carer has face-to-face contact with the person with YOD less than twice a week;",
+                  "Condition": [
+                    "YOD"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "the person with YOD the carer is caring for has a FTD or AD diagnosis",
+                      "Condition": [
+                        "FTD",
+                        "AD",
+                        "YOD"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "the diagnosis is 12 months or less",
+                  "Condition": [
+                    "diagnosis"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- the carer does not have a working computer",
+              "Observation": [
+                "computer"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "and internet access at home",
+                  "Observation": [
+                    "internet access"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or is not confident to use them",
+                  "Observation": [
+                    "computer",
+                    "internet access"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- the carer is not available for the approximately eight week intervention duration",
+          "Observation": [
+            "intervention duration"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- the carer is not fluent in German",
+              "Observation": [
+                "German"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- the carer has a significant health problem or disability",
+                  "Condition": [
+                    "health problem",
+                    "disability"
+                  ]
+                },
+                "right": {
+                  "raw_text": "which precludes him/her from participating in the study",
+                  "Condition": [
+                    "health problem",
+                    "disability"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "raw_text": "- no signed informed consent",
+    "Observation": [
+      "informed consent"
+    ]
+  }
+}
