@@ -1,0 +1,60 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- all consecutive patients",
+      "Condition": [
+        "patients"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "from SERD",
+          "Condition": [
+            "SERD"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "of 18 yrs or older",
+              "Observation": [
+                "age"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "either naive",
+                  "Condition": [
+                    "naive"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or previously treated",
+                  "Condition": [
+                    "previously treated"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "raw_text": "including HBsAg positive",
+      "Condition": [
+        "HBsAg positive"
+      ]
+    },
+    "right": {
+      "raw_text": "and HIV positive.",
+      "Condition": [
+        "HIV positive"
+      ]
+    }
+  }
+}
