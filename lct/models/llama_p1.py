@@ -3,19 +3,19 @@ import transformers
 from helper_functions import *
 
 batch_path = "eval_p1"
-n_prompt = 4
-n_shot = 15
+n_prompt = 1
+n_shot = 5
 
 
 temp_str = "" # temp_str = f"_temp_{str(temp).split('.')[1]}"   temp = 0.6
 cot_true = "" # "_cot"
 random_shot =""  # "_random"
 
-#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-#model_name = "Llama-3-70B-Instruct"
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
 
-model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
-model_name = "Llama-3-70B-Instruct-Gradient"
+#model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
+#model_name = "Llama-3-70B-Instruct-Gradient"
 
 
 #model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
@@ -31,7 +31,8 @@ model_name = "Llama-3-70B-Instruct-Gradient"
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
+# Achtung hier ist Agent gerade plaziert
+model_desc = read_text_file(f"{transform_lct}/input/prompt/agent.txt") #  p{n_prompt}
 
 study_path = f"{transform_lct}/input/lct_txt/"
 output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}{random_shot}_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
@@ -69,7 +70,7 @@ additional_files = [
 # Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, additional_files)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
 
 ## Random n-shot Data
 #study_filenames, study_contents, label_filenames, label_contents = read_random_matching_txt_files(study_folder, label_folder, n_shot)
@@ -78,10 +79,10 @@ studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
 
-cot = "Let's think through this carefully, step by step."
+cot = "Let's think through this carefully, step by step:"
 #command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
 
-command = read_text_file(f"{transform_lct}/input/prompt/command.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 for i in range(n_shot):
@@ -108,7 +109,7 @@ for file in study_files:
         messages.append({"role": "user", "content": f"{command} {test_file}"})
         first_call = False
     else:
-        messages[-1] = {"role": "user", "content": f"{command} {test_file}"}
+        messages[-1] = {"role": "user", "content": f"{command} {test_file}"} # {cot} 
 
 
     prompt = pipeline.tokenizer.apply_chat_template(

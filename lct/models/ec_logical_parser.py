@@ -4,7 +4,7 @@ import re
 
 
 batch_path = "eval_p1"
-model_name = " naive_greedy_match"
+model_name = " Naive greedy match"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
@@ -80,5 +80,5 @@ for file in study_files:
 
     output = parse_criteria_file(test_file)
     print(output)
-    save_txt(output, f"{output_path}{model_name}_{file_name}.txt")
+    save_txt(output, f"{output_path}{file_name}.txt")
 #%%
