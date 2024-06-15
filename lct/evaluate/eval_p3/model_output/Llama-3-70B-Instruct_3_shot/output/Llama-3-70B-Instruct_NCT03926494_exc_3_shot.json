@@ -1,0 +1,30 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Pregnant woman;",
+      "Condition": [
+        "Pregnancy"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient present clinical signes of stroke",
+          "Condition": [
+            "stroke"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "and without CO detection.",
+              "Observation": [
+                "CO detection"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
