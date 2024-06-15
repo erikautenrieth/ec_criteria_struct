@@ -1,0 +1,49 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. The patient is enrolled in any clinical trial of an investigational product.",
+          "Condition": [
+            "clinical trial",
+            "investigational product"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Patients who are enrolled in non-interventional studies (NISs) (e.g. registries) are eligible for inclusion.",
+              "Condition": [
+                "non-interventional studies",
+                "NISs",
+                "registries"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "2. The patient has received ceftazidime-avibactam in a compassionate care program setting.",
+          "Drug": [
+            "ceftazidime-avibactam"
+          ],
+          "Condition": [
+            "compassionate care program"
+          ]
+        },
+        "right": {
+          "raw_text": "3. The patient was exposed to ceftazidime-avibactam before use for the index infection.",
+          "Drug": [
+            "ceftazidime-avibactam"
+          ],
+          "Condition": [
+            "index infection"
+          ]
+        }
+      }
+    }
+  }
+}
