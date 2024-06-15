@@ -1,0 +1,84 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Unstable medical condition as indicated by history, physical exam, and/or laboratory findings",
+              "Condition": [
+                "unstable medical condition"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Presence of non-CVD conditions likely to be fatal within 12 months",
+                  "Condition": [
+                    "non-CVD conditions",
+                    "fatal"
+                  ]
+                },
+                "right": {
+                  "raw_text": "(e.g., metastatic cancer)",
+                  "Condition": [
+                    "metastatic cancer"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Severe cognitive impairment:",
+              "Condition": [
+                "severe cognitive impairment"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Short Blessed screening with a score of 13 or greater",
+                  "Observation": [
+                    "Short Blessed screening"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or cannot consent (as indicated by medical record)",
+                  "Condition": [
+                    "cannot consent"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Long-term care resident at admission with no plans to return to independent living",
+          "Condition": [
+            "long-term care resident"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- anticipates inability to return for required reassessments at 3, 6 and 12 months"
+            },
+            "right": {
+              "raw_text": "- long-term care residents at admission with no plans to return to independent living.",
+              "Condition": [
+                "long-term care residents"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -101,10 +101,10 @@ def plot_avg_metrics(all_metrics):
     }
 
     metrics_to_plot = ['precision', 'recall', 'f1']
-    model_names = ['SciBERT'] + list(all_metrics.keys())
-    avg_precisions = [sota_metrics['SciBERT']['average']['precision']]
-    avg_recalls = [sota_metrics['SciBERT']['average']['recall']]
-    avg_f1_scores = [sota_metrics['SciBERT']['average']['f1']]
+    model_names = ['SciBERT (SOTA)'] + list(all_metrics.keys())
+    avg_precisions = [sota_metrics['SciBERT (SOTA)']['average']['precision']]
+    avg_recalls = [sota_metrics['SciBERT (SOTA)']['average']['recall']]
+    avg_f1_scores = [sota_metrics['SciBERT (SOTA)']['average']['f1']]
 
     for model, metrics in all_metrics.items():
         avg_precisions.append(metrics['average']['precision'])
