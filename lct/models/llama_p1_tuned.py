@@ -12,37 +12,12 @@ temp_str =  "_and_p5" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0
 cot_true = "" # "_cot"
 random_shot =""  # "_random"
 
-#model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
-#model_name = "Llama-3-8B-Instruct"
 model_id = "llama3_8b_lora_model"
 model_name = "Llama-3-8B-Tuned_LORA"
 
-#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-#model_name = "Llama-3-70B-Instruct"
-
-#model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
-#model_name = "Llama-3-70B-Instruct-Gradient"
-
-
-#model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
-#model_name = "Llama-3-70B-DPO-v0.2"
-
-#model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
-#model_name = "Llama-3-8B-Instruct-Gradient-1048k"
-
-#model_id = "aaditya/OpenBioLLM-Llama3-70B"
-#model_id = "aaditya/OpenBioLLM-Llama3-8B"
-#model_name = "OpenBioLLM-Llama3-8B"
-
-#model_id = "aaditya/OpenBioLLM-Llama3-70B"
-#model_name = "OpenBioLLM-Llama3-70B"
-
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-
-
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") #  p{n_prompt} agent
-
 study_path = f"{transform_lct}/input/lct_txt/"
 output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}{random_shot}_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
 os.makedirs(output_path, exist_ok=True)
@@ -58,39 +33,17 @@ shot_list = [
     "NCT03930121.txt"
 ]
 
-additional_files = [
-    "NCT03865433.txt",
-    "NCT03860324.txt",
-    "NCT03860233.txt",
-    "NCT03923231.txt",
-    "NCT03930121.txt",
-    "NCT03863717.txt",
-    "NCT03863925.txt",
-    "NCT03863951.txt",
-    "NCT03865134.txt",
-    "NCT03868267.txt",
-    "NCT03929640.txt",
-    "NCT03861845.txt",
-    "NCT03921827.txt",
-    "NCT03924479.txt",
-    "NCT03924102.txt"
-]
 
-# Load n-shot Data
+
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
 study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
-
-## Random n-shot Data
-#study_filenames, study_contents, label_filenames, label_contents = read_random_matching_txt_files(study_folder, label_folder, n_shot)
-
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
 
 cot = "Let's think through this carefully, step by step:"
 #command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
-
 command = read_text_file(f"{transform_lct}/input/prompt/p5.txt")
 messages.append({"role": "system", "content": f"{model_desc}"})
 #command = f"{command} {cot}"
@@ -98,6 +51,7 @@ messages.append({"role": "system", "content": f"{model_desc}"})
 for i in range(n_shot):
     messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
+
 
 from unsloth import FastLanguageModel
 model, tokenizer = FastLanguageModel.from_pretrained(
