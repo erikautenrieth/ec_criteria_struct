@@ -72,13 +72,22 @@ def formatting_prompts_func(examples):
 pass
 
 # Taushce hier die Daten
-from datasets import load_dataset
-dataset = load_dataset("yahma/alpaca-cleaned", split = "train")
-dataset = dataset.map(formatting_prompts_func, batched = True,)
+#from datasets import load_dataset
+#dataset = load_dataset("yahma/alpaca-cleaned", split = "train")
+#dataset = dataset.map(formatting_prompts_func, batched = True,)
+
+
+import os
+from datasets import load_from_disk
+dataset_path = 'dataset/lct_dataset_v2'
+dataset = load_from_disk(dataset_path)
+dataset = dataset['train']
+dataset = dataset.map(formatting_prompts_func, batched=True)
 
 
 
 
+# num_train_epochs=1 for a full run
 trainer = SFTTrainer(
     model = model,
     tokenizer = tokenizer,
@@ -104,9 +113,26 @@ trainer = SFTTrainer(
     ),
 )
 
+#@title Show current memory stats
+gpu_stats = torch.cuda.get_device_properties(0)
+start_gpu_memory = round(torch.cuda.max_memory_reserved() / 1024 / 1024 / 1024, 3)
+max_memory = round(gpu_stats.total_memory / 1024 / 1024 / 1024, 3)
+print(f"GPU = {gpu_stats.name}. Max memory = {max_memory} GB.")
+print(f"{start_gpu_memory} GB of memory reserved.")
+
 
 trainer_stats = trainer.train()
 
+used_memory = round(torch.cuda.max_memory_reserved() / 1024 / 1024 / 1024, 3)
+used_memory_for_lora = round(used_memory - start_gpu_memory, 3)
+used_percentage = round(used_memory         /max_memory*100, 3)
+lora_percentage = round(used_memory_for_lora/max_memory*100, 3)
+print(f"{trainer_stats.metrics['train_runtime']} seconds used for training.")
+print(f"{round(trainer_stats.metrics['train_runtime']/60, 2)} minutes used for training.")
+print(f"Peak reserved memory = {used_memory} GB.")
+print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
+print(f"Peak reserved memory % of max memory = {used_percentage} %.")
+print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
 model.save_pretrained("lora_model") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
