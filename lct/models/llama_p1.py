@@ -2,20 +2,21 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1"
+batch_path = "eval_p1_temp"
 n_prompt = 1
 n_shot = 5
 
+temp = 0.6
 
-temp_str = "" # temp_str = f"_temp_{str(temp).split('.')[1]}"   temp = 0.6
-cot_true = "_p5" # "_cot"
+temp_str =  temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
+cot_true = "" # "_cot"
 random_shot =""  # "_random"
 
-model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
-model_name = "Llama-3-8B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
+#model_name = "Llama-3-8B-Instruct"
 
-#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-#model_name = "Llama-3-70B-Instruct"
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
 
 #model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-70B-Instruct-Gradient"
@@ -36,7 +37,8 @@ model_name = "Llama-3-8B-Instruct"
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-# Achtung hier ist Agent gerade plaziert
+
+
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") #  p{n_prompt} agent
 
 study_path = f"{transform_lct}/input/lct_txt/"
@@ -44,7 +46,7 @@ output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_
 os.makedirs(output_path, exist_ok=True)
 
 
-study_files = os.listdir(study_path)[:100]
+study_files = os.listdir(study_path)[:50]
 
 shot_list = [
     "NCT03865433.txt",
@@ -133,7 +135,7 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.6,
+            temperature=temp,
             top_p=0.9,
     )
 

@@ -1,0 +1,78 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "1. Admitted from the emergency department to inpatient or observation status at one of: Carolinas Medical Center, Carolinas Medical Center - Mercy, or Atrium Health Northeast;",
+              "Observation": [
+                "emergency department",
+                "inpatient",
+                "observation status",
+                "Carolinas Medical Center",
+                "Carolinas Medical Center - Mercy",
+                "Atrium Health Northeast"
+              ]
+            },
+            "right": {
+              "raw_text": "2. ≥18 years of age upon admission;",
+              "Observation": [
+                "age"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "3. oral/parenteral antibiotic or bacterial culture order within 24 hours of emergency department presentation and",
+              "Observation": [
+                "antibiotic",
+                "bacterial culture",
+                "emergency department"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "1. culture drawn first, antibiotics ordered within 48 hours",
+                  "Observation": [
+                    "culture",
+                    "antibiotics"
+                  ]
+                },
+                "right": {
+                  "raw_text": "2. antibiotics ordered first, culture ordered within 48 hours",
+                  "Observation": [
+                    "antibiotics",
+                    "culture"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "4. deemed as high-risk for 30-day readmission (i.e., ≥ 20%) or 30-day mortality (i.e., ≥ 10%) using risk-scoring models",
+          "Observation": [
+            "readmission",
+            "mortality",
+            "risk-scoring models"
+          ]
+        },
+        "right": {
+          "raw_text": "5. not discharged at the time of patient list generation",
+          "Observation": [
+            "discharged",
+            "patient list generation"
+          ]
+        }
+      }
+    }
+  }
+}

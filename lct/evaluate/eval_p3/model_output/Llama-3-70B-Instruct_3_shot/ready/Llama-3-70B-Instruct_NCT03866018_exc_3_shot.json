@@ -1,0 +1,126 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- < 60 years",
+                  "Observation": [
+                    "age"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Medical indications: Recent or unstable cardiovascular events:",
+                      "Condition": [
+                        "cardiovascular events"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "ECG changes, unstable angina, uncontrolled arrhythmia, 3rd degree BAV, acute heart failure.",
+                  "Condition": [
+                    "ECG changes",
+                    "unstable angina",
+                    "uncontrolled arrhythmia",
+                    "BAV",
+                    "acute heart failure"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- MMSE score < 4",
+              "Observation": [
+                "MMSE score"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Subject already engaged in appropriate physical activity",
+              "Observation": [
+                "physical activity"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Subject with a perceptual disorder (AMD, deafness...)",
+                  "Condition": [
+                    "perceptual disorder",
+                    "AMD",
+                    "deafness"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Subject with a motor disability",
+                      "Condition": [
+                        "motor disability"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "- Subject under guardianship, curatorship or safeguard of justice",
+                          "Condition": [
+                            "guardianship",
+                            "curatorship",
+                            "safeguard of justice"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "- Persons deprived of their liberty (administrative or judicial)",
+                          "Condition": [
+                            "liberty"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

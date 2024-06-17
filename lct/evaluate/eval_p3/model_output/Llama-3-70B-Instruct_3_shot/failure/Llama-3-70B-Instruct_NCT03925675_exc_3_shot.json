@@ -1,0 +1,116 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "1. Patient diagnosis with glioma",
+              "Condition": [
+                "glioma"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "but before surgery, external beam radiation"
+                },
+                "right": {
+                  "raw_text": "and /or chemotherapy with temozolamide.",
+                  "Drug": [
+                    "temozolamide"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "2. Women who were pregnant,",
+                  "Condition": [
+                    "pregnant"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "breast feeding,",
+                      "Condition": [
+                        "breast feeding"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or possibly pregnant.",
+                      "Condition": [
+                        "pregnant"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "3. Patients with hepatic",
+              "Condition": [
+                "hepatic dysfunction"
+              ]
+            },
+            "right": {
+              "raw_text": "or renal dysfunction.",
+              "Condition": [
+                "renal dysfunction"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "NOT": {
+      "left": {
+        "OR": {
+          "left": {
+            "raw_text": "4. Patients with MRI contraindications (i.e. pacemakers,",
+            "Condition": [
+              "MRI contraindications",
+              "pacemakers"
+            ]
+          },
+          "right": {
+            "raw_text": "non-MR compatible devices).",
+            "Condition": [
+              "non-MR compatible devices"
+            ]
+          }
+        }
+      }
+    }
+  }
+},
+"right": {
+  "NOT": {
+    "left": {
+      "raw_text": "5. Patients with a history of drug hypersensitivity to 18F-Fluciclovine.",
+      "Condition": [
+        "drug hypersensitivity"
+      ],
+      "Drug": [
+        "18F-Fluciclovine"
+      ]
+    }
+  }
+}
+}

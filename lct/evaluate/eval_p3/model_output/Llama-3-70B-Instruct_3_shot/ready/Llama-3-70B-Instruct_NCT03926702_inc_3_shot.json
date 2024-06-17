@@ -1,0 +1,69 @@
+{
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Healthy Volunteers: Subjects must be aged 50 and over.",
+          "Observation": [
+            "age"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "These individuals will all be of good general medical health",
+              "Condition": [
+                "good general medical health"
+              ]
+            },
+            "right": {
+              "raw_text": "with no neurological diseases and capable of providing informed consent.",
+              "Condition": [
+                "neurological diseases"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients: Subjects must be aged 50 and over.",
+          "Observation": [
+            "age"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Patients will meet diagnostic criteria at UCSF for Alzheimer's disease (AD)",
+              "Condition": [
+                "Alzheimer's disease",
+                "AD"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "mild cognitive impairment (MCI)",
+                  "Condition": [
+                    "mild cognitive impairment",
+                    "MCI"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or progressive supranuclear palsy (PSP).",
+                  "Condition": [
+                    "progressive supranuclear palsy",
+                    "PSP"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

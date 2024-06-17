@@ -1,0 +1,89 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Type 1 or Type 2 Diabetes diagnosis or fasting plasma glucose ≥126 mg/dL",
+                  "Condition": [
+                    "Diabetes"
+                  ],
+                  "Observation": [
+                    "fasting plasma glucose"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Active coronary artery disease",
+                      "Condition": [
+                        "coronary artery disease"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Participation in structured exercise (>2 times per week for 30 minutes or longer)",
+                      "Observation": [
+                        "structured exercise"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Smoking",
+                  "Observation": [
+                    "smoking"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Medications known to affect adipose tissue metabolism (e.g., beta blockers, corticosteroids)",
+                  "Drug": [
+                    "beta blockers",
+                    "corticosteroids"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Renal insufficiency (serum creatinine > 1.5mg/dl)",
+              "Condition": [
+                "renal insufficiency"
+              ],
+              "Observation": [
+                "serum creatinine"
+              ]
+            },
+            "right": {
+              "raw_text": "- Chronic active liver disease (Bilirubin > 17mmol/L, AST > 144 IU/L, or ALT>165IU/L)",
+              "Condition": [
+                "liver disease"
+              ],
+              "Observation": [
+                "Bilirubin",
+                "AST",
+                "ALT"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Pregnancy or breastfeeding.",
+      "Condition": [
+        "Pregnancy",
+        "breastfeeding"
+      ]
+    }
+  }
+}

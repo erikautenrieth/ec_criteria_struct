@@ -1,0 +1,87 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. Female",
+                  "Condition": [
+                    "Female"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "2. Not currently pregnant or nursing",
+                      "Condition": [
+                        "pregnant",
+                        "nursing"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "3. Aged 21-45",
+                  "Observation": [
+                    "age"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "4. Not be diagnosed as sub fertile",
+                      "Condition": [
+                        "sub fertile",
+                        "infertility"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "5. Not have used any form of hormonal birth control in the past 2 months",
+                  "Drug": [
+                    "hormonal birth control"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "6. Currently trying to conceive",
+                  "Condition": [
+                    "trying to conceive"
+                  ]
+                },
+                "right": {
+                  "raw_text": " (ideal but not required)"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "7. Currently reside in the US",
+      "Condition": [
+        "US resident"
+      ]
+    }
+  }
+}

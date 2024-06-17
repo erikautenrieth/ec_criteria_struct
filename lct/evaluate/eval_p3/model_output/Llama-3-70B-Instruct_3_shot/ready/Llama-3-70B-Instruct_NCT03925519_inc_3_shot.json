@@ -1,0 +1,74 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- patients with type 2 diabetes for more than 5 years.",
+          "Condition": [
+            "type 2 diabetes"
+          ]
+        },
+        "right": {
+          "raw_text": "- Patients who were diagnosed according to the criteria of the American diabetes association.",
+          "Condition": [
+            "diabetes"
+          ],
+          "Observation": [
+            "American diabetes association"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Not receiving any drugs affecting the data obtained",
+              "Drug": [
+                "drugs"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- had Normal daily diets",
+              "Observation": [
+                "daily diets"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Not participating in any other exercise programs",
+                      "Observation": [
+                        "exercise programs"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Without any musculoskeletal disorders affecting an exercise program",
+                      "Condition": [
+                        "musculoskeletal disorders"
+                      ],
+                      "Observation": [
+                        "exercise program"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

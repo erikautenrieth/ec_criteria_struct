@@ -1,0 +1,81 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- ICD electrode malfunction of ICD readings outside reference range",
+              "Condition": [
+                "ICD electrode malfunction"
+              ],
+              "Observation": [
+                "ICD readings"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Lack of evidence of a myocardial scar",
+                  "Condition": [
+                    "myocardial scar"
+                  ],
+                  "Observation": [
+                    "Computer tomography",
+                    "magnetic resonance tomography",
+                    "electrophysiological measurement"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- No possible induction of symptomatic monomorphic ventricular tachycardia",
+              "Condition": [
+                "symptomatic monomorphic ventricular tachycardia"
+              ],
+              "Observation": [
+                "antitachycardic pacing",
+                "shock"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Contraindication to radiosurgery",
+          "Condition": [
+            "contraindication to radiosurgery"
+          ],
+          "Observation": [
+            "left ventricular assist device",
+            "LVAD"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Inability to consent"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or missing"
+                },
+                "right": {
+                  "raw_text": "or withdrawn consent"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

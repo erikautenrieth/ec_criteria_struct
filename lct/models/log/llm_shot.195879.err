@@ -1,13 +1,0 @@
-slurmstepd: error: TMPDIR [/tmp/slurm.195879.] is not writeable
-slurmstepd: error: Setting TMPDIR to /tmp
-You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
-Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
-Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:05,  1.39s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:02<00:03,  1.33s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:04<00:02,  1.35s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:05<00:01,  1.47s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:06<00:00,  1.36s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:06<00:00,  1.37s/it]
-Traceback (most recent call last):
-  File "/work/eauten2s/ec_criteria_struct/lct/models/flan_t5.py", line 82, in <module>
-    input_ids = tokenizer(messages, return_tensors="pt").input_ids.to("cuda")
-  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/tokenization_utils_base.py", line 2883, in __call__
-    encodings = self._call_one(text=text, text_pair=text_pair, **all_kwargs)
-  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/tokenization_utils_base.py", line 2941, in _call_one
-    raise ValueError(
-ValueError: text input must be of type `str` (single example), `List[str]` (batch or single pretokenized example) or `List[List[str]]` (batch of pretokenized examples).

@@ -1,0 +1,53 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- patients who will not want to participate to the study",
+              "Condition": [
+                "participate"
+              ]
+            },
+            "right": {
+              "raw_text": "- revision surgeries",
+              "Condition": [
+                "revision surgeries"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- if the patient is taking antidepressants during the last 6 months",
+              "Drug": [
+                "antidepressants"
+              ],
+              "Condition": [
+                "anxiety"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- if the patient has a history of a disease that can affect anxiety levels",
+                  "Condition": [
+                    "anxiety"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- if patient wants to be excluded from the study",
+                  "Condition": [
+                    "excluded"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

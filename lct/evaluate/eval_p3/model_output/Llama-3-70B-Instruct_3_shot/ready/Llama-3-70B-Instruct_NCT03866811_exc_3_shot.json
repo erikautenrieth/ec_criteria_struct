@@ -1,0 +1,96 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- currently using any effective form of contraception",
+                      "Condition": [
+                        "contraception"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "- do not own a mobile phone with texting",
+                          "Observation": [
+                            "mobile phone"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- are pregnant",
+                      "Condition": [
+                        "Pregnancy"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- are too ill for participation per the attending physician",
+                  "Condition": [
+                    "illness"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- are cognitively impaired",
+              "Condition": [
+                "cognitive impairment"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- do not live locally",
+          "Observation": [
+            "residency"
+          ]
+        }
+      }
+    }
+  },
+  "right": {
+    "NOT": {
+      "left": {
+        "raw_text": "- do not speak English",
+        "Observation": [
+          "language"
+        ]
+      }
+    }
+  },
+  "right": {
+    "NOT": {
+      "left": {
+        "raw_text": "- want to \"become pregnant in the next year\"",
+        "Condition": [
+          "Pregnancy"
+        ]
+      }
+    }
+  }
+}
