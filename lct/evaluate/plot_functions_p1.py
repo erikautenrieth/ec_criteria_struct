@@ -8,6 +8,7 @@ import seaborn as sns
 
 from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
 
+## Evaluation
 
 def plot_metrics(all_metrics):
     operators = ['AND', 'OR', 'NOT']
