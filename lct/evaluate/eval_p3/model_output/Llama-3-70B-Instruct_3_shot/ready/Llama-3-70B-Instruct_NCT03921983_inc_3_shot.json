@@ -1,0 +1,62 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- COPD diagnostic",
+      "Condition": [
+        "COPD"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Both sex",
+          "Demographic": [
+            "sex"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- 18 <Age <80 years old",
+              "Demographic": [
+                "Age"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- LTOT- group : PaO2 ≥ 65 mmHg and SaO2≥ 92%",
+                  "Observation": [
+                    "PaO2",
+                    "SaO2"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- LTOT+ group: long term oxygenotherapy prescribed for more than 3 months, with daily use between 12 and 15 hours.",
+                  "Treatment": [
+                    "long term oxygenotherapy"
+                  ],
+                  "Observation": [
+                    "daily use"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "raw_text": "Patients in both groups will be matched for age (± 5 years), sex and physical activity estimated by GPAQ questionnaire (± 15% Mets.min/week).",
+    "Demographic": [
+      "age",
+      "sex"
+    ],
+    "Observation": [
+      "physical activity",
+      "GPAQ questionnaire",
+      "Mets.min/week"
+    ]
+  }
+}

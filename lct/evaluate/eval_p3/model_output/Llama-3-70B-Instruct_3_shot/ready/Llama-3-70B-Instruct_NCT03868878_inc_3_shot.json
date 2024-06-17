@@ -1,0 +1,49 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- age greater than 60 years;",
+      "Observation": [
+        "age"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- is not engaged in physical exercise programs for at least one year;",
+          "Observation": [
+            "physical exercise"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "do not present severe cardiovascular disease, kidney disease, liver disease or limiting cognitive or neuromuscular disease and;",
+                  "Condition": [
+                    "cardiovascular disease",
+                    "kidney disease",
+                    "liver disease",
+                    "cognitive disease",
+                    "neuromuscular disease"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "does not present visual or auditory inability.",
+                  "Condition": [
+                    "visual inability",
+                    "auditory inability"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

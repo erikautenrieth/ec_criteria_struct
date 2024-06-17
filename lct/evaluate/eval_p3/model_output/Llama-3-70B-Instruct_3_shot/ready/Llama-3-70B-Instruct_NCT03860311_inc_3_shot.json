@@ -1,0 +1,42 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Age 8yr-18yrs",
+      "Observation": [
+        "Age"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Female",
+          "Demographic": [
+            "Female"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Likely to have order placed for transabdominal pelvic ultrasound/ovarian ultrasound",
+              "Procedure": [
+                "transabdominal pelvic ultrasound",
+                "ovarian ultrasound"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- No history of pelvic or bladder reconstructive surgery",
+                  "Procedure": [
+                    "pelvic reconstructive surgery",
+                    "bladder reconstructive surgery"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

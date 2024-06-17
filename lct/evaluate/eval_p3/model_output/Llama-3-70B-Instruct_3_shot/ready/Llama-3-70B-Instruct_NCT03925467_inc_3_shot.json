@@ -1,0 +1,61 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Any gender aged 50 years or above;",
+      "Demographic": [
+        "gender",
+        "age"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Have less than 30 mins of morning stiffness;",
+          "Observation": [
+            "morning stiffness"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Crepitus on active motion;",
+              "Observation": [
+                "Crepitus"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Bony tenderness;",
+                  "Observation": [
+                    "Bony tenderness"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Bony enlargement;",
+                      "Observation": [
+                        "Bony enlargement"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "- No palpable warmth.",
+                          "Observation": [
+                            "palpable warmth"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

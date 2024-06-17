@@ -1,0 +1,59 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients undergoing emergency surgery",
+              "Condition": [
+                "emergency surgery"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Endoscopic procedures",
+                  "Procedure": [
+                    "Endoscopic procedures"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients under 18 years of age",
+              "Age": [
+                "under 18 years"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Patients with previous bariatric surgery who undergo revision surgery",
+                  "Condition": [
+                    "previous bariatric surgery",
+                    "revision surgery"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- Patients who refuse to participate",
+          "Condition": [
+            "refuse to participate"
+          ]
+        }
+      }
+    }
+  }
+}

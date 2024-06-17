@@ -1,0 +1,46 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Patients less than 18 years of age",
+      "Condition": [
+        "age"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Adults who lack the capacity to consent",
+          "Condition": [
+            "consent"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Pregnant women",
+              "Condition": [
+                "Pregnancy"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Prisoners",
+                  "Condition": [
+                    "prisoners"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Non-English speakers.",
+                  "Condition": [
+                    "language"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

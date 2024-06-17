@@ -1,0 +1,56 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- glomerular filtration rate less than 30 ml / min / 1.73m",
+      "Observation": [
+        "glomerular filtration rate"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Without replacement therapy (dialysis or hemodialysis)",
+              "Observation": [
+                "replacement therapy",
+                "dialysis",
+                "hemodialysis"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Volume overload",
+                  "Observation": [
+                    "Volume overload"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- At least 100 ml per day of residual diuresis",
+                  "Observation": [
+                    "residual diuresis"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Use of a loop diuretic for at least one month",
+                  "Drug": [
+                    "loop diuretic"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Age ≥18 years",
+          "Observation": [
+            "Age"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Subject is diagnosed with type 2 diabetes",
+              "Condition": [
+                "type 2 diabetes"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Subject showed response to GLP-1RA treatment",
+                  "Drug": [
+                    "GLP-1RA"
+                  ],
+                  "Observation": [
+                    "response"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Ability to sign informed consent",
+                  "Observation": [
+                    "informed consent"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Subject showed no response to GLP-1RA treatment",
+              "Drug": [
+                "GLP-1RA"
+              ],
+              "Observation": [
+                "response"
+              ]
+            },
+            "right": {
+              "raw_text": "- Ability to sign informed consent",
+              "Observation": [
+                "informed consent"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

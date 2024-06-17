@@ -1,19 +1,0 @@
-slurmstepd: error: TMPDIR [/tmp/slurm.195880.] is not writeable
-slurmstepd: error: Setting TMPDIR to /tmp
-You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
-Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
-Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:05,  1.39s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:02<00:03,  1.33s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:04<00:02,  1.35s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:05<00:01,  1.48s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:06<00:00,  1.37s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:06<00:00,  1.38s/it]
-Token indices sequence length is longer than the specified maximum sequence length for this model (765 > 512). Running this sequence through the model will result in indexing errors
-2024-06-15 15:46:20.397993: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-06-15 15:46:21.579604: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
-  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
-/home/eauten2s/.local/lib/python3.9/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.
-  warnings.warn(
-Traceback (most recent call last):
-  File "/work/eauten2s/ec_criteria_struct/lct/models/flan_t5.py", line 78, in <module>
-    save_txt(outputs, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
-  File "/work/eauten2s/ec_criteria_struct/lct/models/helper_functions.py", line 67, in save_txt
-    f.write(data)
-TypeError: write() argument must be str, not Tensor

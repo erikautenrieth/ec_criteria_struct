@@ -1,0 +1,53 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- age above 18 years",
+      "Observation": [
+        "age"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- lack of a clinical or radiological finding of mastoiditis in the patient's file",
+              "Condition": [
+                "mastoiditis"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Lack of documentation of CSVT in an imaging study, either CT or MRI.",
+                  "Condition": [
+                    "CSVT"
+                  ],
+                  "Observation": [
+                    "imaging study",
+                    "CT",
+                    "MRI"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- previous unprovoked venous thromboembolism event.",
+                  "Condition": [
+                    "venous thromboembolism"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

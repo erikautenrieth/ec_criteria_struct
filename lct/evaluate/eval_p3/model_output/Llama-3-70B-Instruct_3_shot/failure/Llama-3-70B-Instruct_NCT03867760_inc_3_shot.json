@@ -1,0 +1,74 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- self-reporting moderate or higher pain on average during the last week (> 3 on a 0-10 pain intensity numeric scale)",
+              "Observation": [
+                "pain"
+              ]
+            },
+            "right": {
+              "raw_text": "- self-reporting experiencing pain at least half of the days in the past 4 weeks",
+              "Observation": [
+                "pain"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- self-reporting chronic pain related to cancer or its treatment",
+              "Condition": [
+                "cancer"
+              ],
+              "Observation": [
+                "pain"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- completed active cancer treatment other than maintenance therapy",
+                  "Condition": [
+                    "cancer"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- being > 18 years of age",
+                      "Observation": [
+                        "age"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- functional fluency in English",
+                          "Observation": [
+                            "English"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "- mentally and physically able to participate and complete surveys",
+                          "Observation": [
+                            "mental ability",
+                            "physical ability"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

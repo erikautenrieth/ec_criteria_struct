@@ -1,0 +1,87 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Adult patient (> 18 years old)",
+          "Observation": [
+            "age"
+          ]
+        },
+        "right": {
+          "raw_text": "- Obtaining consent to participate in the study",
+          "Observation": [
+            "consent"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients whose clinical presentation meets at least one of the following criteria:",
+          "Condition": [
+            "nephropathy"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Undetermined nephropathy despite renal biopsy",
+              "Condition": [
+                "nephropathy",
+                "renal biopsy"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Nephroangiosclerosis as the predominant lesion",
+                  "Condition": [
+                    "Nephroangiosclerosis"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Chronic tubulointerstitial nephropathy",
+                      "Condition": [
+                        "tubulointerstitial nephropathy"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Glomerulosclerosis",
+                          "Condition": [
+                            "Glomerulosclerosis"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- Segmental and focal hyalinosis",
+                              "Condition": [
+                                "hyalinosis"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- Optically normal kidney or seat of minimal lesions",
+                              "Condition": [
+                                "kidney disease"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
