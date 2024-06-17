@@ -1,5 +1,5 @@
-#!pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
-#!pip install --no-deps xformers "trl<0.9.0" peft accelerate bitsandbytes
+#pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
+#pip install --no-deps xformers "trl<0.9.0" peft accelerate bitsandbytes
 from unsloth import FastLanguageModel
 from trl import SFTTrainer
 from transformers import TrainingArguments
@@ -42,6 +42,9 @@ model = FastLanguageModel.get_peft_model(
     use_rslora = False,  # We support rank stabilized LoRA
     loftq_config = None, # And LoftQ
 )
+
+
+## 80/20 Training 904 Dokumente Training, 202 Test Set [Random]
 
 ## Dataset muss in der selben Struktur sein
 alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
