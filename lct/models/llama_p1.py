@@ -2,15 +2,15 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_temp"
+batch_path = "eval_p1_prompt"
 n_prompt = 1
 n_shot = 5
 
 temp = 0.6
 
-temp_str =  temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
+temp_str =  "" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
 cot_true = "" # "_cot"
-random_shot =""  # "_random"
+random_shot ="_and_p5"  # "_random"
 
 #model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 #model_name = "Llama-3-8B-Instruct"
