@@ -135,33 +135,50 @@ def plot_entitys(metrics):
 
     plt.show()
 
+
+
 def plot_metrics(model_name, metrics, categories):
-    fig, ax = plt.subplots(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(10, 7))
 
     x = np.arange(len(categories))
-    width = 0.25
+    width = 0.2  # Adjusted width to fit both sets of bars
 
+    # Extracting metrics
     precision_scores = [metrics[category]['precision'] * 100 for category in categories]
     recall_scores = [metrics[category]['recall'] * 100 for category in categories]
     f1_scores = [metrics[category]['f1'] * 100 for category in categories]
+    scibert_metrics = {
+        'Condition': {'precision': 78.4, 'recall': 83.3, 'f1': 80.8},
+        'Drug': {'precision': 73.4, 'recall': 80.9, 'f1': 77.0},
+        'Observation': {'precision': 72.1, 'recall': 77.6, 'f1': 74.7}
+    }
+    scibert_precision_scores = [scibert_metrics[category]['precision'] for category in categories]
+    scibert_recall_scores = [scibert_metrics[category]['recall'] for category in categories]
+    scibert_f1_scores = [scibert_metrics[category]['f1'] for category in categories]
 
-    ax.bar(x - width, precision_scores, width, label='Precision')
-    ax.bar(x, recall_scores, width, label='Recall')
-    ax.bar(x + width, f1_scores, width, label='F1-Score')
+    # Plotting the provided model's metrics
+    ax.bar(x - 1.5 * width, precision_scores, width, label=f'{model_name} Precision')
+    ax.bar(x - 0.5 * width, recall_scores, width, label=f'{model_name} Recall')
+    ax.bar(x + 0.5 * width, f1_scores, width, label=f'{model_name} F1-Score')
 
-    scores = zip(precision_scores, recall_scores, f1_scores)
-    for i, (p, r, f1) in enumerate(scores):
-        ax.text(i - width, p + 1, f'{p:.1f}%', ha='center', fontsize=10)
-        ax.text(i, r + 1, f'{r:.1f}%', ha='center', fontsize=10)
-        ax.text(i + width, f1 + 1, f'{f1:.1f}%', ha='center', fontsize=10)
+    # Plotting the SciBERT metrics
+    ax.bar(x + 1.5 * width, scibert_precision_scores, width, label='SciBERT Precision', color='gray', alpha=0.6)
+    ax.bar(x + 2.5 * width, scibert_recall_scores, width, label='SciBERT Recall', color='gray', alpha=0.6)
+    ax.bar(x + 3.5 * width, scibert_f1_scores, width, label='SciBERT F1-Score', color='gray', alpha=0.6)
 
-        ax.text(i - width, p/2, 'P', ha='center', va='center', fontsize=12, color='white')
-        ax.text(i, r/2, 'R', ha='center', va='center', fontsize=12, color='white')
-        ax.text(i + width, f1/2, 'F1', ha='center', va='center', fontsize=12, color='white')
+    # Adding text labels
+    for i in range(len(categories)):
+        ax.text(i - 1.5 * width, precision_scores[i] + 1, f'{precision_scores[i]:.1f}%', ha='center', fontsize=10)
+        ax.text(i - 0.5 * width, recall_scores[i] + 1, f'{recall_scores[i]:.1f}%', ha='center', fontsize=10)
+        ax.text(i + 0.5 * width, f1_scores[i] + 1, f'{f1_scores[i]:.1f}%', ha='center', fontsize=10)
+
+        ax.text(i + 1.5 * width, scibert_precision_scores[i] + 1, f'{scibert_precision_scores[i]:.1f}%', ha='center', fontsize=10)
+        ax.text(i + 2.5 * width, scibert_recall_scores[i] + 1, f'{scibert_recall_scores[i]:.1f}%', ha='center', fontsize=10)
+        ax.text(i + 3.5 * width, scibert_f1_scores[i] + 1, f'{scibert_f1_scores[i]:.1f}%', ha='center', fontsize=10)
 
     ax.set_xlabel('Category')
     ax.set_ylabel('Score (%)')
-    ax.set_title(f'P3: {model_name}')
+    ax.set_title(f'{model_name} vs SciBERT Metrics by Category')
     ax.set_xticks(x)
     ax.set_xticklabels(categories)
     ax.legend()
