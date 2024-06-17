@@ -22,11 +22,11 @@ fourbit_models = [
 ] # More models at https://huggingface.co/unsloth
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = "unsloth/llama-3-8b-Instruct-bnb-4bit",
+    model_name = "meta-llama/Meta-Llama-3-8B-Instruct", #"unsloth/llama-3-8b-Instruct-bnb-4bit",   # meta-llama/Meta-Llama-3-8B-Instruct
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
-    # token = "hf_...", # use one if using gated models like meta-llama/Llama-2-7b-hf
+    token = "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"# token = "hf_...", # use one if using gated models like meta-llama/Llama-2-7b-hf
 )
 model = FastLanguageModel.get_peft_model(
     model,
@@ -71,12 +71,17 @@ def formatting_prompts_func(examples):
     return { "text" : texts, }
 pass
 
-# Taushce hier die Daten
-from datasets import load_dataset
-dataset = load_dataset("yahma/alpaca-cleaned", split = "train")
-dataset = dataset.map(formatting_prompts_func, batched = True,)
+# # Taushce hier die Daten
+# from datasets import load_dataset
+# dataset = load_dataset("yahma/alpaca-cleaned", split = "train")
+# dataset = dataset.map(formatting_prompts_func, batched = True,)
 
-
+import os
+from datasets import load_from_disk
+dataset_path = 'dataset/lct_dataset_v2'
+dataset = load_from_disk(dataset_path)
+dataset = dataset['train']
+dataset = dataset.map(formatting_prompts_func, batched=True)
 
 
 trainer = SFTTrainer(
@@ -108,5 +113,5 @@ trainer = SFTTrainer(
 trainer_stats = trainer.train()
 
 
-model.save_pretrained("lora_model") # Local saving
+model.save_pretrained("llama3_8b_lora_model") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving

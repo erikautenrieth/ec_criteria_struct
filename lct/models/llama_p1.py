@@ -3,14 +3,14 @@ import transformers
 from helper_functions import *
 
 batch_path = "eval_p1_prompt"
-n_prompt = 1
+n_prompt = 9
 n_shot = 5
 
 temp = 0.6
 
-temp_str =  "" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
+temp_str =  "_and_p5" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
 cot_true = "" # "_cot"
-random_shot ="_and_p5"  # "_random"
+random_shot =""  # "_random"
 
 #model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 #model_name = "Llama-3-8B-Instruct"
@@ -91,6 +91,7 @@ cot = "Let's think through this carefully, step by step:"
 
 command = read_text_file(f"{transform_lct}/input/prompt/p5.txt")
 messages.append({"role": "system", "content": f"{model_desc}"})
+#command = f"{command} {cot}"
 
 for i in range(n_shot):
     messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
