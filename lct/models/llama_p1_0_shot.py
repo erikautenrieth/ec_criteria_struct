@@ -10,11 +10,11 @@ model_name = "Llama-3-70B-Instruct"
 
 
 
-n_prompt = 3
+n_prompt = 8
 
 #temp = 0.6
 #temp_str = f"_temp_{str(temp).split('.')[1]}"
-temp_str = "_p1" # temp_1
+temp_str = "" # temp_1
 cot_true = ""  #"_cot"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
@@ -32,8 +32,8 @@ model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") # p
 messages = []
 
 cot = "Let's think through this carefully, step by step."
-command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
-#command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
+#command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
 
 
 
