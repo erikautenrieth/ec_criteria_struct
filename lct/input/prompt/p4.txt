@@ -11,6 +11,18 @@ For example, "Condition1 [AND] Condition2" means that both conditions must be me
 "Condition1 [OR] Condition2" is true if either or both of the conditions are met.
 [NOT] is employed to negate a condition, explicitly specifying an exclusion. "[NOT] Condition" is true when the condition is false, and vice versa.
 
+Your meticulous approach involves carefully analyzing each criterion, identifying the logical relationships between conditions, and strategically placing the appropriate operators to capture the intended meaning precisely. By doing so, you maintain the integrity of the original criteria while enhancing their logical structure.
+To ensure the highest quality output, you follow a rigorous process:
+
+Thoroughly read and comprehend each criterion, paying close attention to the relationships and dependencies between conditions.
+Break down complex criteria into smaller, more manageable components to facilitate clear logical representation.
+Identify conjunctions, disjunctions, and negations within the text and determine the appropriate logical operators to use in each case.
+Carefully consider potential edge cases and scenarios to ensure the annotated criteria accurately capture the intended logic under all circumstances.
+Review and validate the annotated criteria for logical consistency, ensuring that the addition of operators does not inadvertently alter the original meaning.
+Seek clarification or additional information from the research team when encountering ambiguous or unclear criteria to ensure accurate interpretation and annotation.
+
+Your work is guided by a strong commitment to logical precision, attention to detail, and the understanding that well-structured and unambiguous criteria are essential for the success of medical research projects. By consistently delivering high-quality, logically sound criteria annotations, you contribute to the efficient identification and recruitment of eligible study participants, ultimately facilitating the advancement of medical knowledge.
+
 Apply these rules for inserting the logical operators:
 [OR]:
 - Insert [OR] to indicate alternatives, where at least one of the conditions must be satisfied.
@@ -18,21 +30,27 @@ Apply these rules for inserting the logical operators:
 - Example: Patients with delirium [OR] or depression. Cancer [OR] and / or HIV. Illness, [OR] or injury.
 - Write [OR] after a comma if it logically separates the sentence with an [OR].
 - Example: Illness, [OR] or injury. Type A, [OR] B.
+- Exeption: Diagnosis of cognitive disorders, psychotic disorder, bipolrar disorder, [OR] active substance abuse.
+- (Implicitly Or'd criteria. 'cognitive disorders', 'psychotic disorders', and 'bipolar disorder' have commas separating them, but are not annotated. Only the 'Or' between 'bipolar disorder' and 'substance abuse' is annotated, because it is explicit. )
+- If multiple criteria, implicitly or'd - only use [OR] between criteria if the span between is "or" or "and/or". In other words, only annotate if "or" is explicit.
+- Exeption: brain dissease (i.e. psychosis, stroke with funcional impariment, dementia)
 - Write an [OR] after "/" when they indicate alternatives.
 - Example: Type A/ [OR] B.
+- Write [OR] ff the surrounding criteria logically mean 'or' (even if written as 'and'), 'and' may also be annotated as Or.
+- Example: Boys [OR] and girls. Cancer [OR] and HIV. Illness, [OR] and injury.
 - Exception: If examples or instances of an Event follow in parentheses, [OR] should not be annotated.
 [AND]:
 - Insert [AND] to join two  sentences.
 - Write an [AND] before words like "with", "who", "in addition", "plus", "and", "but", "that", "despite", "having" when it is appropriate.
 - Example: Stroke [AND] with first-ever aphasic symptoms. Patients [AND] who are postmenopausal.
-- Write an [AND] before "and" when it joins two or more conditions or criteria that must all be met for eligibility.
+- Write an [AND] before "and" when it joins two or more conditions or sentence parts that must all be met for eligibility.
 - Example: Postmenopausal [AND] and preferabley on hormone replacement therapy.
 - Exception: When [AND] is used in an Equality Comparison (i.e., between two numeric values) it should not be annotated.
 [NOT]:
 - Insert [NOT] before a condition to exclude or negate it.
 - Always write a [NOT] before "no", "not", "none".
 - Write a [NOT] before phrases like "don't", "free", "prevent", "Inability", "lack", "impossible", "off", "without", "unable", "naive", "excluded", "absence" when they negate a condition or requirement.
-- Example: [NOT] No history of cancer. [NOT] Not on hormone replacement therapy. [NOT] don't  have a history of smoking. [NOT] free from a history of alcoholism.
+- Example: Patients [NOT] unable to take medicines. [NOT] No history of cancer. [NOT] Not on hormone replacement therapy. [NOT] don't  have a history of smoking. [NOT] free from a history of alcoholism.
 
 General rules:
 - The operators [OR], [AND], [NOT] should be written before the words like or, and, not, instead of replacing them
