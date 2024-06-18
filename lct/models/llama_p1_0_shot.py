@@ -10,12 +10,12 @@ model_name = "Llama-3-70B-Instruct"
 
 
 
-n_prompt = 3
+n_prompt = 6
 
 #temp = 0.6
 #temp_str = f"_temp_{str(temp).split('.')[1]}"
 temp_str = "_p6" # temp_1
-cot_true = ""  #"_cot"
+cot_true = "_cot"  #"_cot"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
@@ -55,7 +55,7 @@ for file in study_files:
 
     messages = [
     {"role": "system", "content": f"{model_desc}"},
-    {"role": "user", "content": f"{command} {test_file}"}, # + "\n" + cot
+    {"role": "user", "content": f"{command} {cot} {test_file}"}, # + "\n" + cot
     ]
 
 
