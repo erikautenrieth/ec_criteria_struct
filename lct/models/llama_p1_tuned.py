@@ -28,7 +28,7 @@ output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_
 os.makedirs(output_path, exist_ok=True)
 
 
-study_files = os.listdir(study_path)[:5]
+study_files = os.listdir(study_path)[:50]
 
 shot_list = [
     "NCT03865433.txt",
@@ -94,8 +94,10 @@ for file in study_files:
     ], return_tensors = "pt").to("cuda")
 
     outputs = model.generate(**inputs, max_new_tokens = 2048, use_cache = True)
-    tokenizer.batch_decode(outputs)
+    decoded_outputs = tokenizer.batch_decode(outputs)
+    response = decoded_outputs[0].split("### Response:")[1].strip()
+    response = response.replace("<|eot_id|>", "")
+    print("Output:", decoded_outputs)
 
-    print("Output:", outputs)
-
-    save_txt(outputs, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
+    print("Response:", response)
+    save_txt(response, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
