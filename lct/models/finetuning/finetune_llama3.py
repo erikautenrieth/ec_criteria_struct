@@ -22,7 +22,7 @@ fourbit_models = [
 ] # More models at https://huggingface.co/unsloth
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = "meta-llama/Meta-Llama-3-8B-Instruct", #"unsloth/llama-3-8b-Instruct-bnb-4bit",   # meta-llama/Meta-Llama-3-8B-Instruct
+    model_name = "meta-llama/Meta-Llama-3-70B-Instruct", #"unsloth/llama-3-8b-Instruct-bnb-4bit",   # meta-llama/Meta-Llama-3-8B-Instruct
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
@@ -166,5 +166,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_8b_lora_model_ep10") # Local saving
+model.save_pretrained("llama3_70b_lora_ep10") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
