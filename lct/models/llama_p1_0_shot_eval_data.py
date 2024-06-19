@@ -2,39 +2,21 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_0_shot"
+batch_path = "eval_p1_finetuned_testset"
 
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-
-n_prompt = 3
-
-#top = 0.98
-#top_str = f"_top_{str(top)}"
-#temp = 0.5
-#temp_str = f"_temp_{str(temp).split('.')[1]}"
-#temp_str = "" # temp_1
-cot_true = ""  #"_cot"
-
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_prompt_{n_prompt}{cot_true}/output/"
+study_path = f"{transform_lct}/input/dataset/test/input/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_p1_p6_/output/"
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[:50]
-
-
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") # p{n_prompt}
-
-
+study_files = os.listdir(study_path)
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p1.txt") 
 
 messages = []
-
-cot = "Let's think through this carefully, step by step."
-#command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
-#command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 
 
@@ -56,9 +38,8 @@ for file in study_files:
 
     messages = [
     {"role": "system", "content": f"{model_desc}"},
-    {"role": "user", "content": f"{command} {test_file}"}, # + "\n" + cot
+    {"role": "user", "content": f"{command} {test_file}"}, 
     ]
-
 
     prompt = pipeline.tokenizer.apply_chat_template(
                 messages, 
@@ -83,5 +64,4 @@ for file in study_files:
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
 
-    
     save_txt(gen_output, f"{output_path}{model_name}_{file_name}_0_shot.txt")
