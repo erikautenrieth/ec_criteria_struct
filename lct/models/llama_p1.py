@@ -6,7 +6,7 @@ batch_path = "eval_p1_finetuned"
 n_prompt = 1
 n_shot = 5
 
-temp = 0.6
+temp = 0.5
 
 temp_str =  "" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
 cot_true = "" # "_cot"

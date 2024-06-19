@@ -2,24 +2,24 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_0_shot_temp" 
+batch_path = "eval_p1_0_shot_top"
 
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-
-
+top = 0.95
+top_str = f"_top_{str(top)}"
 n_prompt = 3
 
-temp = 0.6
-temp_str = f"_temp_{str(temp).split('.')[1]}"
+#temp = 0.5
+#temp_str = f"_temp_{str(temp).split('.')[1]}"
 #temp_str = "" # temp_1
 cot_true = ""  #"_cot"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_prompt_{n_prompt}{top_str}{cot_true}/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)[:50]
@@ -76,8 +76,8 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=temp,
-            top_p=0.95,
+            temperature=0.5,
+            top_p=top,
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
