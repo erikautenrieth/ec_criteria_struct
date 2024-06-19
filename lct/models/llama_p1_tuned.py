@@ -11,20 +11,14 @@ batch_path = "eval_p1_finetuned"
 n_prompt = 1
 n_shot = 0
 
-temp = 0.6
 
-temp_str =  "" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
-cot_true = "" # "_cot"
-random_shot =""  # "_random"
-
-model_id = "llama3_8b_lora_model"
-model_name = "Llama-3-8B-Tuned_LORA"
+model_name = "llama3_8b_lora_model_ep10"
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") #  p{n_prompt} agent
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}{random_shot}_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_{n_prompt}/output/"
 os.makedirs(output_path, exist_ok=True)
 
 
@@ -48,14 +42,9 @@ labels = dict(zip(label_filenames, label_contents))
 
 
 
-cot = "Let's think through this carefully, step by step:"
-#command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
-#command = f"{command} {cot}"
-
-
 from unsloth import FastLanguageModel
 model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name = "llama3_8b_lora_model", # YOUR MODEL YOU USED FOR TRAINING
+        model_name = model_name, # YOUR MODEL YOU USED FOR TRAINING
         max_seq_length = 2048,
         dtype = None,
         load_in_4bit = True,
