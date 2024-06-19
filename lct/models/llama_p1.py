@@ -2,21 +2,18 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_finetuned"
-n_prompt = 1
+batch_path = "eval_p1_n_shot"
+n_prompt = 3
 n_shot = 5
 
-temp = 0.5
-
-temp_str =  "" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
 cot_true = "" # "_cot"
-random_shot =""  # "_random"
 
-model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
-model_name = "Llama-3-8B-Instruct"
 
-#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-#model_name = "Llama-3-70B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
+#model_name = "Llama-3-8B-Instruct"
+
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
 
 #model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-70B-Instruct-Gradient"
@@ -28,7 +25,8 @@ model_name = "Llama-3-8B-Instruct"
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 
-#model_id = "aaditya/OpenBioLLM-Llama3-70B"
+
+
 #model_id = "aaditya/OpenBioLLM-Llama3-8B"
 #model_name = "OpenBioLLM-Llama3-8B"
 
@@ -39,10 +37,10 @@ model_name = "Llama-3-8B-Instruct"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") #  p{n_prompt} agent
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
 
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}{random_shot}_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"  #_prompt_{n_prompt}{temp_str}{cot_true}
 os.makedirs(output_path, exist_ok=True)
 
 
@@ -56,6 +54,7 @@ shot_list = [
     "NCT03930121.txt"
 ]
 
+# 15 -shot
 additional_files = [
     "NCT03865433.txt",
     "NCT03860324.txt",
@@ -136,8 +135,8 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=temp,
-            top_p=0.9,
+            temperature=0.5,
+            top_p=0.95,
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
