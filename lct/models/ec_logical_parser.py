@@ -3,12 +3,13 @@ import os
 import re
 
 
-batch_path = "eval_p1"
+batch_path = "eval_p1_finetuned_testset"
 model_name = " Naive greedy match"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
-study_path = f"{transform_lct}/input/lct_txt/"
+#study_path = f"{transform_lct}/input/lct_txt/"
+study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}/output/"
 os.makedirs(output_path, exist_ok=True)
 
