@@ -2,13 +2,14 @@ import os
 import transformers
 from helper_functions import *
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
-batch_path = "eval_p1_prompt"
+
+batch_path = "eval_p1_finetuned"
 n_prompt = 1
-n_shot = 5
+n_shot = 0
 
 temp = 0.6
 
-temp_str =  "_and_p5" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
+temp_str =  "" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
 cot_true = "" # "_cot"
 random_shot =""  # "_random"
 
@@ -23,7 +24,7 @@ output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_
 os.makedirs(output_path, exist_ok=True)
 
 
-study_files = os.listdir(study_path)[:50]
+study_files = os.listdir(study_path)[:5]
 
 shot_list = [
     "NCT03865433.txt",
@@ -40,17 +41,12 @@ label_folder = f'{transform_lct}/input/lct_p1'
 study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
-messages = []
+
+
 
 cot = "Let's think through this carefully, step by step:"
 #command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
-command = read_text_file(f"{transform_lct}/input/prompt/p5.txt")
-messages.append({"role": "system", "content": f"{model_desc}"})
 #command = f"{command} {cot}"
-
-for i in range(n_shot):
-    messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
-    messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
 from unsloth import FastLanguageModel
@@ -62,13 +58,19 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     )
 FastLanguageModel.for_inference(model) # Enable native 2x faster inference
 
-pipeline = transformers.pipeline(
-            "text-generation",
-            model=model,
-            tokenizer=tokenizer,
-            model_kwargs={"torch_dtype": torch.bfloat16},
-            device_map="auto", 
-        )
+
+alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+{}
+
+### Input:
+{}
+
+### Response:
+{}"""
+
+command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
 
 first_call = True
 
@@ -78,33 +80,18 @@ for file in study_files:
     
     test_file = read_text_file(study_path+file)
 
-    if first_call:
-        messages.append({"role": "user", "content": f"{command} {test_file}"})
-        first_call = False
-    else:
-        messages[-1] = {"role": "user", "content": f"{command} {test_file}"} # {cot} 
+    inputs = tokenizer(
+    [
+        alpaca_prompt.format(
+            f"{command}", # instruction
+            f"{test_file}", # input
+            "", # output - leave this blank for generation!
+        )
+    ], return_tensors = "pt").to("cuda")
 
+    outputs = model.generate(**inputs, max_new_tokens = 2048, use_cache = True)
+    tokenizer.batch_decode(outputs)
 
-    prompt = pipeline.tokenizer.apply_chat_template(
-                messages, 
-                tokenize=False, 
-                add_generation_prompt=True
-    )
+    print("Output:", outputs)
 
-    terminators = [
-            pipeline.tokenizer.eos_token_id,
-            pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
-    ]
-
-    outputs = pipeline(
-            prompt,
-            max_new_tokens=2048,
-            eos_token_id=terminators,
-            do_sample=True,
-            temperature=temp,
-            top_p=0.9,
-    )
-
-    gen_output = outputs[0]["generated_text"][len(prompt):]
-
-    save_txt(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
+    save_txt(outputs, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")

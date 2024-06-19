@@ -12,6 +12,6 @@
 module load cuda
 python llama_p1_0_shot.py
 # llama_p1_0_shot.py # phi3_p1_0_shot.py  # gpt2_0_shot_p1.py # phi3_p1_0_shot.py  llama_p1.py
-# llama_p1_0_shot_replace.py llama_autocriteria.py qwen_p1.py
+# llama_p1_0_shot_replace.py llama_autocriteria.py qwen_p1.py  llama_p1_tuned.py
 
 

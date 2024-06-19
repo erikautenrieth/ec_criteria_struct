@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_0_shot" 
+batch_path = "eval_p1_0_shot_temp" 
 
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
@@ -10,11 +10,11 @@ model_name = "Llama-3-70B-Instruct"
 
 
 
-n_prompt = 8
+n_prompt = 3
 
-#temp = 0.6
-#temp_str = f"_temp_{str(temp).split('.')[1]}"
-temp_str = "" # temp_1
+temp = 0.4
+temp_str = f"_temp_{str(temp).split('.')[1]}"
+#temp_str = "" # temp_1
 cot_true = ""  #"_cot"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
@@ -33,8 +33,8 @@ messages = []
 
 cot = "Let's think through this carefully, step by step."
 #command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
-command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
-
+#command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
+command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 
 
 print("Hier fängt die Pipeline an")
@@ -76,7 +76,7 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.6,
+            temperature=temp,
             top_p=0.95,
     )
 
