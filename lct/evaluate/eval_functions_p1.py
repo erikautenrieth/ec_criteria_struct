@@ -37,9 +37,9 @@ def compare_operators(label_text, model_text, operator):
 
     label_words = label_words_dict.get(operator, [])
     model_words = model_words_dict.get(operator, [])
-    print("label_words_dict",label_words)
-    print("model_words_dict",model_words)
-    print([word for word in label_words if word in model_words])
+    #print("label_words_dict",label_words)
+    #print("model_words_dict",model_words)
+    #print([word for word in label_words if word in model_words])
 
     tp = sum(1 for word in label_words if word in model_words)
     fp = sum(1 for word in model_words if word not in label_words)
@@ -73,19 +73,25 @@ def compare_texts(raw_text, model_text):
     # Calculate missing words and their counts
     missing_words = raw_word_count - model_word_count
 
+    zuviel_words = model_word_count - raw_word_count
+
     total_words = sum(raw_word_count.values())
     missing_word_count = sum(missing_words.values())
     missing_percentage = (missing_word_count / total_words) * 100
+    zuviel_words_pct = (sum(zuviel_words.values()) / total_words) * 100
 
-    return missing_words, missing_percentage
+    return missing_words, missing_percentage, zuviel_words, zuviel_words_pct
 
-def evaluate_models(label_folder, model_folder,model_name, raw_lct_text_folder, output_folder="excel_eval"):
+def evaluate_models(label_folder, model_folder, model_name, raw_lct_text_folder, output_folder="excel_eval"):
     operators = ['AND', 'OR', 'NOT']
     metrics = {op: {'tp': 0, 'fp': 0, 'fn': 0, 'label_count': 0, 'model_count': 0, 'correct_count': 0, 'correct_ncts': set(), 'low_tp_ncts': set()} for op in operators}
     processed_label_files = 0
     total_missing_words = Counter()
+    total_zuviel_words = Counter()
     total_missing_pct = 0.0
+    total_zuviel_pct = 0.0
     model_results = []
+
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
@@ -102,16 +108,14 @@ def evaluate_models(label_folder, model_folder,model_name, raw_lct_text_folder, 
                     processed_label_files += 1
                     label_text = read_file(label_file_path)
                     model_text = read_file(model_file_path)
-
                     raw_lct_text = read_file(raw_lct_text_path)
-                    model_raw_text = clean_criteria_text(model_text)
-                    missing_words, missing_percentage = compare_texts(raw_lct_text, model_raw_text)
-                    total_missing_pct += missing_percentage
-                    total_missing_words.update(missing_words)
 
-                    # Ausgabe der Ergebnisse
-                    #print("Missing Words:", missing_words)
-                    #print("Missing Percentage: {:.2f}%".format(missing_percentage))
+                    model_raw_text = clean_criteria_text(model_text)
+                    missing_words, missing_percentage, zuviel_words, zuviel_words_pct = compare_texts(raw_lct_text, model_raw_text)
+                    total_missing_pct += missing_percentage
+                    total_zuviel_pct += zuviel_words_pct
+                    total_missing_words.update(missing_words)
+                    total_zuviel_words.update(zuviel_words)
 
                     model_data = {'nct_number': nct_number}
 
@@ -152,21 +156,22 @@ def evaluate_models(label_folder, model_folder,model_name, raw_lct_text_folder, 
             'low_tp_ncts': list(metrics[op]['low_tp_ncts'])  # Konvertiere das Set zurück in eine Liste für die Ausgabe
         }
 
-    # Durchschnittliche fehlende Wörter pro Modell berechnen
     average_missing_percentage = total_missing_pct / processed_label_files if processed_label_files > 0 else 0
-    results['average_missing_percentage'] = average_missing_percentage
+    average_zuviel_percentage = total_zuviel_pct / processed_label_files if processed_label_files > 0 else 0
 
-    # Berechne die durchschnittliche Performance über alle Operatoren
+    results['average_missing_percentage'] = average_missing_percentage
+    results['average_zuviel_percentage'] = average_zuviel_percentage
+    results['total_missing_words'] = total_missing_words
+    results['total_zuviel_words'] = total_zuviel_words
+
     avg_metrics = {'precision': 0, 'recall': 0, 'f1': 0, 'accuracy': 0}
     for metric in avg_metrics.keys():
         avg_metrics[metric] = sum(results[op][metric] for op in operators) / len(operators)
 
     results['average'] = avg_metrics
 
-    # Evaluierungsergebnisse in eine Excel-Datei schreiben
-    df_results = pd.DataFrame(model_results)
-    excel_path = os.path.join(output_folder, f'{model_name}_evaluation_results.xlsx')
-    #with pd.ExcelWriter(excel_path) as writer:
-    #    df_results.to_excel(writer, sheet_name='Model Results', index=False)
+    #df_results = pd.DataFrame(model_results)
+    #excel_path = os.path.join(output_folder, f'{model_name}_evaluation_results.xlsx')
+    #df_results.to_excel(excel_path, index=False)
 
     return results
