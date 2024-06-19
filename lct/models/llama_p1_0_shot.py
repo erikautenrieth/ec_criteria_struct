@@ -8,7 +8,7 @@ batch_path = "eval_p1_0_shot_top"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-top = 0.95
+top = 0.70
 top_str = f"_top_{str(top)}"
 n_prompt = 3
 

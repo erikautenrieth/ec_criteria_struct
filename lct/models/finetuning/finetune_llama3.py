@@ -93,10 +93,11 @@ trainer = SFTTrainer(
     dataset_num_proc = 2,
     packing = False, # Can make training 5x faster for short sequences.
     args = TrainingArguments(
-        per_device_train_batch_size = 2,
+        per_device_train_batch_size = 4,
         gradient_accumulation_steps = 4,
         warmup_steps = 5,
-        max_steps = 60,
+        #max_steps = None, #60,
+        num_train_epochs=1, 
         learning_rate = 2e-4,
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
@@ -133,5 +134,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_8b_lora_model") # Local saving
+model.save_pretrained("llama3_8b_lora_model_ep1") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving

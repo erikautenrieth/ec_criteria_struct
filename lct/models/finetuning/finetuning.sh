@@ -3,7 +3,7 @@
 #SBATCH --nodes=1                # number of nodes
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
-#SBATCH --time=10:00:00          # Time limit hrs:min:sec
+#SBATCH --time=30:00:00          # Time limit hrs:min:sec
 
 #SBATCH --output=llm_tune.%j.out   # Standard output and error log
 #SBATCH --error=llm_tune.%j.err    # Error log
