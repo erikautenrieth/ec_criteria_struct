@@ -2,21 +2,21 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_prompt"
-n_prompt = 9
+batch_path = "eval_p1_finetuned"
+n_prompt = 1
 n_shot = 5
 
 temp = 0.6
 
-temp_str =  "_and_p5" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
+temp_str =  "" #temp_str = f"_temp_{str(temp).split('.')[1]}"  # temp = 0.6
 cot_true = "" # "_cot"
 random_shot =""  # "_random"
 
-#model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
-#model_name = "Llama-3-8B-Instruct"
+model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
+model_name = "Llama-3-8B-Instruct"
 
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
 
 #model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-70B-Instruct-Gradient"
@@ -89,7 +89,7 @@ messages = []
 cot = "Let's think through this carefully, step by step:"
 #command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
 
-command = read_text_file(f"{transform_lct}/input/prompt/p5.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 messages.append({"role": "system", "content": f"{model_desc}"})
 #command = f"{command} {cot}"
 
