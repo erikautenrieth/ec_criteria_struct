@@ -12,7 +12,7 @@ model_name = "Llama-3-70B-Instruct"
 
 n_prompt = 3
 
-temp = 0.4
+temp = 0.6
 temp_str = f"_temp_{str(temp).split('.')[1]}"
 #temp_str = "" # temp_1
 cot_true = ""  #"_cot"
