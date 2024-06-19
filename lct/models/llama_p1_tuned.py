@@ -1,7 +1,11 @@
 import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
+import os
 import transformers
 from helper_functions import *
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
+
 
 batch_path = "eval_p1_finetuned"
 n_prompt = 1
