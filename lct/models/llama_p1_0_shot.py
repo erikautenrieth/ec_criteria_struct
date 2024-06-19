@@ -2,16 +2,17 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_0_shot_top"
+batch_path = "eval_p1_0_shot"
 
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-top = 0.70
-top_str = f"_top_{str(top)}"
+
 n_prompt = 3
 
+#top = 0.98
+#top_str = f"_top_{str(top)}"
 #temp = 0.5
 #temp_str = f"_temp_{str(temp).split('.')[1]}"
 #temp_str = "" # temp_1
@@ -77,7 +78,7 @@ for file in study_files:
             eos_token_id=terminators,
             do_sample=True,
             temperature=0.5,
-            top_p=top,
+            top_p=0.95,
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
