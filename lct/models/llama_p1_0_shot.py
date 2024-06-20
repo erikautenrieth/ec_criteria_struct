@@ -2,21 +2,21 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_0_shot"
+batch_path = "eval_p1_0_shot_true"
 
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
 
-n_prompt = 3
+n_prompt = 1
 
 #top = 0.98
 #top_str = f"_top_{str(top)}"
 #temp = 0.5
 #temp_str = f"_temp_{str(temp).split('.')[1]}"
 #temp_str = "" # temp_1
-cot_true = ""  #"_cot"
+cot_true = "_p1_cot"  #"_cot"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
@@ -35,7 +35,7 @@ messages = []
 cot = "Let's think through this carefully, step by step."
 #command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 #command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
-command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
 
 
 print("Hier fängt die Pipeline an")
@@ -56,7 +56,7 @@ for file in study_files:
 
     messages = [
     {"role": "system", "content": f"{model_desc}"},
-    {"role": "user", "content": f"{command} {test_file}"}, # + "\n" + cot
+    {"role": "user", "content": f"{command}{cot}{test_file}"}, # + "\n" + cot
     ]
 
 
