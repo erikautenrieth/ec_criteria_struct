@@ -12,7 +12,7 @@ n_prompt = 1
 
 model_id = "llama3_70b_lora_ep5"
 model_name = "Llama3_70b_Fine-Tuned_ep5"
-
+  
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_prompt_{n_prompt}/output/"
