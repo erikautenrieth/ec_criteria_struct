@@ -12,8 +12,12 @@ cot_true = "" # "_cot"
 #model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 #model_name = "Llama-3-8B-Instruct"
 
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
+
+model_id =  "NousResearch/Hermes-2-Theta-Llama-3-70B"
+model_name = "Llama-3-70B-Hermes2"
+
 
 #model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-70B-Instruct-Gradient"

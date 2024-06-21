@@ -84,31 +84,31 @@ dataset = dataset['train']
 dataset = dataset.map(formatting_prompts_func, batched=True)
 
 
-trainer_normal = SFTTrainer(
-    model = model,
-    tokenizer = tokenizer,
-    train_dataset = dataset,
-    dataset_text_field = "text",
-    max_seq_length = max_seq_length,
-    dataset_num_proc = 2,
-    packing = False, # Can make training 5x faster for short sequences.
-    args = TrainingArguments(
-        per_device_train_batch_size = 4,
-        gradient_accumulation_steps = 4,
-        warmup_steps = 5,
-        #max_steps = None, #60,
-        num_train_epochs=1, 
-        learning_rate = 2e-4,
-        fp16 = not torch.cuda.is_bf16_supported(),
-        bf16 = torch.cuda.is_bf16_supported(),
-        logging_steps = 1,
-        optim = "adamw_8bit",
-        weight_decay = 0.01,
-        lr_scheduler_type = "linear",
-        seed = 3407,
-        output_dir = "outputs",
-    ),
-)
+#trainer_normal = SFTTrainer(
+#    model = model,
+#    tokenizer = tokenizer,
+#    train_dataset = dataset,
+#    dataset_text_field = "text",
+#    max_seq_length = max_seq_length,
+#    dataset_num_proc = 2,
+#    packing = False, # Can make training 5x faster for short sequences.
+#    args = TrainingArguments(
+#        per_device_train_batch_size = 4,
+#        gradient_accumulation_steps = 4,
+#        warmup_steps = 5,
+#        #max_steps = None, #60,
+#        num_train_epochs=1, 
+#        learning_rate = 2e-4,
+#        fp16 = not torch.cuda.is_bf16_supported(),
+#        bf16 = torch.cuda.is_bf16_supported(),
+#        logging_steps = 1,
+#        optim = "adamw_8bit",
+#        weight_decay = 0.01,
+#        lr_scheduler_type = "linear",
+#        seed = 3407,
+#        output_dir = "outputs",
+#    ),
+#)
 
 
 trainer = SFTTrainer(
@@ -117,21 +117,20 @@ trainer = SFTTrainer(
     train_dataset = dataset,
     dataset_text_field = "text",
     max_seq_length = max_seq_length,
-    dataset_num_proc = 2,
+    dataset_num_proc = 4,
     packing = False, # Can make training 5x faster for short sequences.
     args = TrainingArguments(
-        per_device_train_batch_size = 4,
-        gradient_accumulation_steps = 4,
-        warmup_steps = 5,
-        #max_steps = None, #60,
-        num_train_epochs=10, 
-        learning_rate = 2e-4,
+        per_device_train_batch_size = 16,
+        gradient_accumulation_steps = 2,
+        warmup_steps = 100,
+        num_train_epochs=15, 
+        learning_rate = 5e-5,
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
-        logging_steps = 1,
-        optim = "adamw_8bit",
+        logging_steps = 10,
+        optim = "adamw_torch_fused",
         weight_decay = 0.01,
-        lr_scheduler_type = "linear",
+        lr_scheduler_type = "cosine",
         seed = 3407,
         output_dir = "outputs",
     ),
@@ -166,5 +165,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_lora_ep10") # Local saving
+model.save_pretrained("llama3_70b_lora_ep5") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
