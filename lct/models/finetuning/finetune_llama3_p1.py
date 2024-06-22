@@ -30,7 +30,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 )
 model = FastLanguageModel.get_peft_model(
     model,
-    r = 64, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+    r = 128, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 16,
@@ -84,33 +84,32 @@ dataset = dataset['train']
 dataset = dataset.map(formatting_prompts_func, batched=True)
 
 
-#trainer_normal = SFTTrainer(
-#    model = model,
-#    tokenizer = tokenizer,
-#    train_dataset = dataset,
-#    dataset_text_field = "text",
-#    max_seq_length = max_seq_length,
-#    dataset_num_proc = 2,
-#    packing = False, # Can make training 5x faster for short sequences.
-#    args = TrainingArguments(
-#        per_device_train_batch_size = 4,
-#        gradient_accumulation_steps = 4,
-#        warmup_steps = 5,
-#        #max_steps = None, #60,
-#        num_train_epochs=1, 
-#        learning_rate = 2e-4,
-#        fp16 = not torch.cuda.is_bf16_supported(),
-#        bf16 = torch.cuda.is_bf16_supported(),
-#        logging_steps = 1,
-#        optim = "adamw_8bit",
-#        weight_decay = 0.01,
-#        lr_scheduler_type = "linear",
-#        seed = 3407,
-#        output_dir = "outputs",
-#    ),
-#)
+trainer = SFTTrainer(
+   model = model,
+   tokenizer = tokenizer,
+   train_dataset = dataset,
+    dataset_text_field = "text",
+    max_seq_length = max_seq_length,
+    dataset_num_proc = 2,
+    packing = False, # Can make training 5x faster for short sequences.
+    args = TrainingArguments(
+        per_device_train_batch_size = 4,
+        gradient_accumulation_steps = 4,
+        #max_steps = None, #60,
+        num_train_epochs=15, 
+        learning_rate = 2e-4,
+        fp16 = not torch.cuda.is_bf16_supported(),
+        bf16 = torch.cuda.is_bf16_supported(),
+        logging_steps = 10,
+        optim = "adamw_8bit",
+        weight_decay = 0.01,
+        lr_scheduler_type = "linear",
+        seed = 3407,
+        output_dir = "outputs",
+    ),
+)
 
-
+""" 
 trainer = SFTTrainer(
     model = model,
     tokenizer = tokenizer,
@@ -135,7 +134,7 @@ trainer = SFTTrainer(
         output_dir = "outputs",
     ),
 )
-
+ """
 
 
 #@title Show current memory stats
@@ -162,5 +161,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_lora_ep15_r64") # Local saving
+model.save_pretrained("llama3_70b_lora_ep15_r128") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
