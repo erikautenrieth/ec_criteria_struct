@@ -1,0 +1,54 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Current smoker"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Diagnosed with any other respiratory disease besides asthma",
+              "Condition": [
+                "disease",
+                "asthma"
+              ]
+            },
+            "right": {
+              "raw_text": "-",
+              "Condition": [
+                "respiratory disease"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Receiving OMM from a licensed physician,",
+          "Observation": [
+            "OMM"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "chiropractic treatment,",
+              "Observation": [
+                "chiropractic treatment"
+              ]
+            },
+            "right": {
+              "raw_text": "or massage therapy for 30 days prior to and during the study",
+              "Observation": [
+                "massage therapy"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
