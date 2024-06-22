@@ -30,7 +30,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 )
 model = FastLanguageModel.get_peft_model(
     model,
-    r = 16, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+    r = 64, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 16,
@@ -120,9 +120,9 @@ trainer = SFTTrainer(
     dataset_num_proc = 4,
     packing = False, # Can make training 5x faster for short sequences.
     args = TrainingArguments(
-        per_device_train_batch_size = 16,
-        gradient_accumulation_steps = 2,
-        warmup_steps = 100,
+        per_device_train_batch_size = 4,
+        gradient_accumulation_steps = 4,
+        warmup_steps = 50,
         num_train_epochs=15, 
         learning_rate = 5e-5,
         fp16 = not torch.cuda.is_bf16_supported(),
@@ -135,9 +135,6 @@ trainer = SFTTrainer(
         output_dir = "outputs",
     ),
 )
-
-
-
 
 
 
@@ -165,5 +162,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_lora_ep5") # Local saving
+model.save_pretrained("llama3_70b_lora_ep15_r64") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving

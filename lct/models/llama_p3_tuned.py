@@ -10,7 +10,7 @@ batch_path = "eval_p3"
 n_prompt = 1
 
 
-model_id = "tuned_models/llama3_70b_finetuned_p3_5"
+model_id = "tuned_models/llama3_70b_lora_ep5_p3"
 model_name = "Llama3_70b_Fine-Tuned_p3_ep5"
   
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
@@ -65,6 +65,6 @@ for file in study_files:
     print("Output:", decoded_outputs)
 
     print("Response:", response)
-    
-    save_txt(response, f"{output_path}{model_name}_{file_name}.txt")
+
+    #save_txt(response, f"{output_path}{model_name}_{file_name}.txt")
     save_json(response, f"{output_path}{model_name}_{file_name}.json")

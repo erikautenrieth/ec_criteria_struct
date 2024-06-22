@@ -81,7 +81,7 @@ trainer = SFTTrainer(
         per_device_train_batch_size = 16,
         gradient_accumulation_steps = 2,
         warmup_steps = 100,
-        num_train_epochs=5, 
+        num_train_epochs=10, 
         learning_rate = 5e-5,
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
@@ -117,7 +117,7 @@ print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
 
-ep = "5"
+ep = "ep10"
 new_model_name = f"llama3_70b_finetuned_p3_{ep}"
 
 

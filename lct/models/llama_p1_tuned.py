@@ -10,8 +10,8 @@ batch_path = "eval_p1_finetuned_testset"
 n_prompt = 1
 #model_name = "llama3_8b_lora_model_ep10"
 
-model_id = "tuned_models/llama3_70b_lora_ep5"
-model_name = "Llama3_70b_Fine-Tuned_ep5"
+model_id = "tuned_models/llama3_70b_lora_ep15_r64"
+model_name = "Llama3_70b_Lora_ep15_r64"
   
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
