@@ -99,7 +99,7 @@ def evaluate_models(label_folder, model_folder, model_name, raw_lct_text_folder,
         if model_file.endswith('.txt'):
             nct_number = extract_nct_number(model_file)
             if nct_number:
-                print(nct_number)
+                #print(nct_number)
                 label_file_path = os.path.join(label_folder, f'{nct_number}.txt')
                 model_file_path = os.path.join(model_folder, model_file)
                 raw_lct_text_path = os.path.join(raw_lct_text_folder, f'{nct_number}.txt')
