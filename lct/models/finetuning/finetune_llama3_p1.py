@@ -105,7 +105,11 @@ trainer = SFTTrainer(
         weight_decay = 0.01,
         lr_scheduler_type = "linear",
         seed = 3407,
-        output_dir = "outputs",
+        output_dir = "outputs", 
+        logging_strategy="epoch",
+        evaluation_strategy="epoch",
+        save_strategy="epoch",
+        load_best_model_at_end=True,
     ),
 )
 

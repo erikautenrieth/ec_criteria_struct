@@ -1,0 +1,56 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Hysterectomy in a context of gynecologic cancer",
+          "Condition": [
+            "cancer"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Hysterectomy"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not carried out using laparoscopy"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Fimbriated end missing"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or damaged"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "impossible for pathologist to analyze"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

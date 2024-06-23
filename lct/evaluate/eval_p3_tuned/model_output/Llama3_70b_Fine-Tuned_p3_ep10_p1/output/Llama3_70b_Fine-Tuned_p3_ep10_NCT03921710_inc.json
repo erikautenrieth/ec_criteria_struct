@@ -1,0 +1,62 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- < 38 years"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- PCOS patients",
+              "Condition": [
+                "PCOS"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "with polycystic ovarian morphology: at least 25 follicles (2-9 mm) throughout the whole ovary",
+                  "Observation": [
+                    "follicles",
+                    "polycystic ovarian morphology"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and/or increased ovarian volume (>10ml) (it is sufficient that 1 ovary fits these criteria)",
+                  "Observation": [
+                    "ovarian volume"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "No major uterine"
+                },
+                "right": {
+                  "raw_text": "or ovarian abnormalities",
+                  "Condition": [
+                    "abnormalities"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

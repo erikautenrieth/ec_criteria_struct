@@ -10,11 +10,11 @@ model_name = "Llama-3-70B-Instruct"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_p1_p6_/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_p1/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p1.txt") 
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p6.txt") 
 
 messages = []
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
