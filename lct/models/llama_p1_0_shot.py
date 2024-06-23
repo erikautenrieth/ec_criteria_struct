@@ -9,14 +9,14 @@ model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
 
-n_prompt = 7
+n_prompt = 1
 
 #top = 0.98
 #top_str = f"_top_{str(top)}"
 #temp = 0.5
 #temp_str = f"_temp_{str(temp).split('.')[1]}"
 #temp_str = "" # temp_1
-cot_true = "_cot_agent"  #"_cot"
+cot_true = "_6"  #"_cot"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
@@ -56,7 +56,7 @@ for file in study_files:
 
     messages = [
     {"role": "system", "content": f"{model_desc}"},
-    {"role": "user", "content": f"{command}{cot}{test_file}"}, # + "\n" + cot
+    {"role": "user", "content": f"{command}{test_file}"}, # + "\n" + cot
     ]
 
 
