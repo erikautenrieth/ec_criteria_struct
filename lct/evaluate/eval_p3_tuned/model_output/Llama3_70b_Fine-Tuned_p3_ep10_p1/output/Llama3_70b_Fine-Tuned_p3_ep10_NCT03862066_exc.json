@@ -1,0 +1,82 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- prior immunotherapy"
+                },
+                "right": {
+                  "raw_text": "or treatment with another anti PD-1 agent besides nivolumab",
+                  "Drug": [
+                    "anti PD-1 agent",
+                    "nivolumab"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- prior chemotherapy including cetuximab",
+                  "Drug": [
+                    "cetuximab"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or radiation therapy"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- concomitant malignancies except cutaneous squamous cell carcinoma",
+              "Condition": [
+                "malignancies",
+                "cutaneous squamous cell carcinoma"
+              ]
+            },
+            "right": {
+              "raw_text": "or basal cell carcinoma",
+              "Condition": [
+                "basal cell carcinoma"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- unresectable primary tumor",
+          "Condition": [
+            "tumor"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or regional disease",
+              "Condition": [
+                "disease"
+              ]
+            },
+            "right": {
+              "raw_text": "or distant metastases",
+              "Condition": [
+                "metastases"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
