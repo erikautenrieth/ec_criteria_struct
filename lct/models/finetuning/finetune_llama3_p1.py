@@ -78,7 +78,7 @@ pass
 
 import os
 from datasets import load_from_disk
-dataset_path = 'dataset/lct_dataset_v2'
+dataset_path = 'dataset/dataset_p1_prompt6'
 dataset = load_from_disk(dataset_path)
 dataset = dataset['train']
 dataset = dataset.map(formatting_prompts_func, batched=True)
@@ -96,7 +96,7 @@ trainer = SFTTrainer(
         per_device_train_batch_size = 4,
         gradient_accumulation_steps = 4,
         #max_steps = None, #60,
-        num_train_epochs=15, 
+        num_train_epochs=10,
         learning_rate = 2e-4,
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
@@ -161,5 +161,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_lora_ep15_r128") # Local saving
+model.save_pretrained("llama3_70b_Lora_ep10_r16_prompt6") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving

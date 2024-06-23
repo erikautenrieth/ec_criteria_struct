@@ -85,7 +85,7 @@ def plot_file_counts(model_name):
     ax.set_title('Anzahl der Dateien in den Verzeichnissen', pad=20)
     ax.set_xticks(x)
     ax.set_xticklabels(categories)
-    ax.legend(['Output', 'Ready', 'Failure'], loc='upper right')
+    #ax.legend(['Output', 'Ready', 'Failure'], loc='upper right')
     ax.grid(True, linestyle='--', alpha=0.7)
 
     for i, (bar, count) in enumerate(zip(bars, counts)):
@@ -100,11 +100,12 @@ def plot_file_counts(model_name):
                     textcoords="offset points",
                     ha='center', va='bottom')
 
-
+    plt.tight_layout()
+    plt.savefig(f'pics/file_counts_{model_name}.png')
     plt.show()
 
 
-def plot_entitys(metrics):
+def plot_entitys(metrics, model_name):
     categories = list(metrics.keys())
     total_label_entities = [metrics[cat]['total_label_entities'] for cat in categories]
     total_model_entities = [metrics[cat]['total_model_entities'] for cat in categories]
@@ -113,8 +114,8 @@ def plot_entitys(metrics):
     width = 0.35
 
     fig, ax = plt.subplots(figsize=(10, 6))
-    rects1 = ax.bar(x - width/2, total_label_entities, width, label='Gesamte Label-Entitäten', color='darkblue')
-    rects2 = ax.bar(x + width/2, total_model_entities, width, label='Gesamte Modell-Entitäten', color='lightcoral')
+    rects1 = ax.bar(x - width/2, total_label_entities, width, label='Gesamte Label Entitäten', color='darkblue')
+    rects2 = ax.bar(x + width/2, total_model_entities, width, label='Gesamte Modell Entitäten', color='lightcoral')
 
     ax.set_xlabel('Kategorien', labelpad=15)
     ax.set_ylabel('Anzahl der Entitäten', labelpad=15)
@@ -132,7 +133,8 @@ def plot_entitys(metrics):
 
     autolabel(rects1)
     autolabel(rects2)
-
+    plt.tight_layout()
+    plt.savefig(f'pics/entitys_{model_name}.png')
     plt.show()
 
 
