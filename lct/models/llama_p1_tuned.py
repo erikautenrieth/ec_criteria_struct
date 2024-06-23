@@ -7,11 +7,11 @@ from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
 
 batch_path = "eval_p1_finetuned_testset"
-n_prompt = 1
+n_prompt = 6
 #model_name = "llama3_8b_lora_model_ep10"
 
-model_id = "tuned_models/llama3_70b_lora_ep15_r128"
-model_name = "Llama3_70b_Lora_ep15_r128"
+model_id = "tuned_models/llama3_70b_Lora_ep10_r16_prompt6"
+model_name = "Llama3_70b_Lora_ep10_prompt6"
   
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
@@ -39,7 +39,7 @@ alpaca_prompt = """Below is an instruction that describes a task, paired with an
 ### Response:
 {}"""
 
-command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 
 first_call = True
 

@@ -1,0 +1,58 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "1. OHCA: Every patient who suffered a cardiac arrest that occurred in any location",
+              "Condition": [
+                "cardiac arrest"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "other than a hospital,"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "and was attended"
+                        },
+                        "right": {
+                          "raw_text": "and/or treated by an EMS."
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "2. IHCA: Every patient who suffered a cardiac arrest",
+              "Condition": [
+                "cardiac arrest"
+              ]
+            },
+            "right": {
+              "raw_text": "in hospital."
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "3. the representative population-based survey: Every patient who suffered a cardiac arrest in the selected cities or suburbs.",
+      "Condition": [
+        "cardiac arrest"
+      ]
+    }
+  }
+}
