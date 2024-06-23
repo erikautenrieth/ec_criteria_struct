@@ -6,12 +6,12 @@ from helper_functions import *
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
 
-batch_path = "eval_p3"
+batch_path = "eval_p3_tuned"
 n_prompt = 1
 
 
-model_id = "tuned_models/llama3_70b_lora_ep5_p3"
-model_name = "Llama3_70b_Fine-Tuned_p3_ep5"
+model_id = "tuned_models/llama3_70b_finetuned_p3_ep10"
+model_name = "Llama3_70b_Fine-Tuned_p3_ep10"
   
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset_p3/test/input/"

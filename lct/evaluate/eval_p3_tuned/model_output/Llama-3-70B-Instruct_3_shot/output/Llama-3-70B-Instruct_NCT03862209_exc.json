@@ -1,0 +1,42 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "Exclusion criteria at the patient level includes patients who do not consent to their data being collected",
+          "Condition": [
+            "consent"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "who are part of the intervention or control conditions",
+              "Condition": [
+                "intervention",
+                "control conditions"
+              ]
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "those who are under the age of 18 at the start of the study.",
+              "Condition": [
+                "age"
+              ],
+              "Observation": [
+                "age"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

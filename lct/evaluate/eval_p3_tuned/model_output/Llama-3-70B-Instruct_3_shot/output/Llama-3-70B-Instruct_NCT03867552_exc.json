@@ -1,0 +1,75 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Women < 18 years old",
+              "Condition": [
+                "Women"
+              ],
+              "Observation": [
+                "age"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Males",
+                  "Condition": [
+                    "Males"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnancy",
+              "Condition": [
+                "Pregnancy"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Conditions associated with chronic pain, such as peripheral neuropathy,",
+                  "Condition": [
+                    "peripheral neuropathy",
+                    "chronic pain"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "pathology of the vertebral column",
+                      "Condition": [
+                        "pathology of the vertebral column"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and osteo-articular disease.",
+                      "Condition": [
+                        "osteo-articular disease"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Conditions causing acute pain e.g. abdominal trauma",
+      "Condition": [
+        "acute pain",
+        "abdominal trauma"
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "has a psychiatric condition or symptoms",
+          "Condition": [
+            "psychiatric condition",
+            "symptoms"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "a history of seizure condition within the last year",
+              "Condition": [
+                "seizure condition"
+              ]
+            }
+          }
+        }
+      },
+      "right": {
+        "AND": {
+          "left": {
+            "NOT": {
+              "left": {
+                "raw_text": "a significant brain injury or skull defect",
+                "Condition": [
+                  "brain injury",
+                  "skull defect"
+                ]
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "a history of brain cancer.",
+              "Condition": [
+                "brain cancer"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}

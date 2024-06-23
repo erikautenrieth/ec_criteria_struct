@@ -10,8 +10,8 @@ batch_path = "eval_p1_finetuned_testset"
 n_prompt = 1
 #model_name = "llama3_8b_lora_model_ep10"
 
-model_id = "tuned_models/llama3_70b_lora_ep15_r64"
-model_name = "Llama3_70b_Lora_ep15_r64"
+model_id = "tuned_models/llama3_70b_lora_ep15_r128"
+model_name = "Llama3_70b_Lora_ep15_r128"
   
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
@@ -20,7 +20,7 @@ os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name = model_id, # YOUR MODEL YOU USED FOR TRAINING
+        model_name = model_id,
         max_seq_length = 2048,
         dtype = None,
         load_in_4bit = True,
