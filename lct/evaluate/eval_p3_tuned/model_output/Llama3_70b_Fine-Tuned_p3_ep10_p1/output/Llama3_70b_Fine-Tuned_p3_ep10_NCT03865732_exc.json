@@ -1,0 +1,110 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Previous exposure to ganaxolone",
+                  "Drug": [
+                    "ganaxolone"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- > 8 consecutive weeks of seizure freedom during the 12 weeks prior to screening",
+                  "Condition": [
+                    "seizure freedom"
+                  ],
+                  "Observation": [
+                    "seizure"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Concurrent use of strong inducers"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or inhibitors of CYP3A4/5/7 is",
+                      "Drug": [
+                        "inhibitors"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "not permitted"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Use of tetrahydrocannabinol (",
+              "Drug": [
+                "tetrahydrocannabinol"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "THC",
+                      "Drug": [
+                        "THC"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "non-approved cannabidiol (CBD) is prohibited during the double-blind phase",
+                              "Drug": [
+                                "cannabidiol",
+                                "CBD"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Exposure to any other investigational drug within 30 days",
+          "Drug": [
+            "drug"
+          ]
+        },
+        "right": {
+          "raw_text": "or fewer than 5 half-lives prior to screening"
+        }
+      }
+    }
+  }
+}
