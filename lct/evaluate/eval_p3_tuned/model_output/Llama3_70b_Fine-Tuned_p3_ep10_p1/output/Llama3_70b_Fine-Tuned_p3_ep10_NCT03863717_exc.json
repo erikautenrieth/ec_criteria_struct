@@ -1,0 +1,102 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Age < 18 years old"
+                },
+                "right": {
+                  "raw_text": "- Unstable cardiac disease",
+                  "Condition": [
+                    "cardiac disease"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Musculoskeletal"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "and neurological diseases that could affect exercise performance",
+                      "Condition": [
+                        "diseases"
+                      ],
+                      "Observation": [
+                        "exercise performance"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "preclude exercise",
+                              "Observation": [
+                                "exercise"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients of COPD",
+              "Condition": [
+                "COPD"
+              ]
+            },
+            "right": {
+              "raw_text": "final stage or other serious disease final stage",
+              "Condition": [
+                "disease"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Significant cognitive"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or psychiatric impairment that would",
+              "Condition": [
+                "impairment"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "lead to an inability to follow simple commands in a group setting"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
