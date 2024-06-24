@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_finetuned_testset"
+batch_path = "eval_p1_finetuned_testset_prompt1_llama3_70b"
 
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
@@ -10,14 +10,16 @@ model_name = "Llama-3-70B-Instruct"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_p1/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/0_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p6.txt") 
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
 
 messages = []
-command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+
+#command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
 
 
 print("Hier fängt die Pipeline an")
