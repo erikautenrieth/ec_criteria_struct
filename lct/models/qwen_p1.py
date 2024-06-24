@@ -4,21 +4,21 @@ device = "cuda" # the device to load the model onto
 from helper_functions import *
 
 batch_path = "eval_p1_n_shot"
-n_prompt = 3
-n_shot = 5
+n_prompt = 1
+n_shot = 15
 
 model_id =  "Qwen/Qwen2-72B-Instruct"
 model_name = "Qwen2-72B"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") #  p{n_prompt}
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}_p6.txt") #  p{n_prompt}
 
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}{random_shot}_shot/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
 
-study_files = os.listdir(study_path)[:100]
+study_files = os.listdir(study_path)[:50]
 
 shot_list = [
     "NCT03865433.txt",
@@ -49,7 +49,7 @@ additional_files = [
 # Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, additional_files)
 
 ## Random n-shot Data
 #study_filenames, study_contents, label_filenames, label_contents = read_random_matching_txt_files(study_folder, label_folder, n_shot)
