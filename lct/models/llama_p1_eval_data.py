@@ -2,8 +2,8 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_finetuned_testset"
-n_prompt = 6
+batch_path = "eval_p1_finetuned_testset_prompt1_llama3_70b"
+n_prompt = 1
 n_shot = 5
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
@@ -13,7 +13,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_p6/output/"  
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{n_shot}_shot/output/"  
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 
@@ -35,7 +35,9 @@ studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
 
-command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+#command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
+
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 

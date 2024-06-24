@@ -18,8 +18,8 @@ model_desc = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
 
 messages = []
 
-#command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
-command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
+command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
+#command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
 
 
 print("Hier fängt die Pipeline an")
