@@ -12,8 +12,8 @@ cot_true = "" # "_cot"
 #model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 #model_name = "Llama-3-8B-Instruct"
 
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
 
 #model_id =  "NousResearch/Hermes-2-Theta-Llama-3-70B"
 #model_name = "Llama-3-70B-Hermes2"
@@ -27,21 +27,21 @@ model_name = "Llama-3-70B-Instruct"
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 
-#model_id = "aaditya/OpenBioLLM-Llama3-8B"
-#model_name = "OpenBioLLM-Llama3-8B"
+model_id = "aaditya/OpenBioLLM-Llama3-8B"
+model_name = "OpenBioLLM-Llama3-8B"
 
 #model_id = "aaditya/OpenBioLLM-Llama3-70B"
 #model_name = "OpenBioLLM-Llama3-70B"
 
-temp = 1.0
+
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
 
 study_path = f"{transform_lct}/input/lct_txt/"
-#output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"  #_prompt_{n_prompt}{temp_str}{cot_true}
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/Temperatur {str(temp)}/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"  #_prompt_{n_prompt}{temp_str}{cot_true}
+#output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/Temperatur {str(temp)}/output/"
 
 os.makedirs(output_path, exist_ok=True)
 
