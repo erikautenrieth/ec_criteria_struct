@@ -2,8 +2,8 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_5_shot_temperatur"
-#batch_path = "eval_p1_n_shot_modelle_prompt6"
+#batch_path = "eval_p1_5_shot_temperatur"
+batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur9"
 n_prompt = 6
 n_shot = 5
 
@@ -137,7 +137,7 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=temp,
+            temperature=0.9,
             top_p=0.95,
     )
 
