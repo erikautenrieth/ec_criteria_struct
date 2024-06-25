@@ -31,7 +31,7 @@ cot_true = "" # "_cot"
 #model_name = "OpenBioLLM-Llama3-8B"
 
 model_id = "aaditya/OpenBioLLM-Llama3-70B"
-model_name = "OpenBioLLM-Llama3-70B"
+#model_name = "OpenBioLLM-Llama3-70B"
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
