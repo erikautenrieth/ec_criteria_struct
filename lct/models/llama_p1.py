@@ -8,7 +8,6 @@ n_shot = 5
 
 cot_true = "" # "_cot"
 
-
 #model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 #model_name = "Llama-3-8B-Instruct"
 
@@ -18,10 +17,8 @@ model_name = "Llama-3-70B-Instruct"
 #model_id =  "NousResearch/Hermes-2-Theta-Llama-3-70B"
 #model_name = "Llama-3-70B-Hermes2"
 
-
 #model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-70B-Instruct-Gradient"
-
 
 #model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
 #model_name = "Llama-3-70B-DPO-v0.2"
@@ -29,15 +26,13 @@ model_name = "Llama-3-70B-Instruct"
 #model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
 #model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 
-
-
 #model_id = "aaditya/OpenBioLLM-Llama3-8B"
 #model_name = "OpenBioLLM-Llama3-8B"
 
 #model_id = "aaditya/OpenBioLLM-Llama3-70B"
 #model_name = "OpenBioLLM-Llama3-70B"
 
-temp = 0.8
+
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 
@@ -141,7 +136,7 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=temp,
+            temperature=0.5,
             top_p=0.95,
     )
 
