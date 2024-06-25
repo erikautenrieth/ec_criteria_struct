@@ -58,7 +58,7 @@ for file in study_files:
         )
     ], return_tensors = "pt").to("cuda")
 
-    outputs = model.generate(**inputs, max_new_tokens=2048, use_cache = True)
+    outputs = model.generate(**inputs, max_new_tokens=2048, use_cache=True, ) #  temperature=0.5
     decoded_outputs = tokenizer.batch_decode(outputs)
     response = decoded_outputs[0].split("### Response:")[1].strip()
     response = response.replace("<|eot_id|>", "")
