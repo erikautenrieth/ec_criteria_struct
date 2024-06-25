@@ -3,7 +3,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 device = "cuda" # the device to load the model onto
 from helper_functions import *
 
-batch_path = "eval_p1_n_shot"
+batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur9"#"eval_p1_n_shot"
 n_prompt = 1
 n_shot = 15
 
