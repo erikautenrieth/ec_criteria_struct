@@ -13,7 +13,7 @@ n_prompt = 6
 
 #top = 0.98
 #top_str = f"_top_{str(top)}"
-temp = 0.9
+temp = 0.8
 temp_str = f"_temp_{str(temp).split('.')[1]}"
 temp_str = "" # temp_1
 cot_true = ""  #"_cot"

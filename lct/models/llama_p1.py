@@ -2,8 +2,8 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_n_shot"
-n_prompt = 3
+batch_path = "eval_p1_n_shot_llama3_70b_prompt6"
+n_prompt = 6
 n_shot = 5
 
 cot_true = "" # "_cot"
@@ -12,11 +12,11 @@ cot_true = "" # "_cot"
 #model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 #model_name = "Llama-3-8B-Instruct"
 
-#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-#model_name = "Llama-3-70B-Instruct"
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
 
-model_id =  "NousResearch/Hermes-2-Theta-Llama-3-70B"
-model_name = "Llama-3-70B-Hermes2"
+#model_id =  "NousResearch/Hermes-2-Theta-Llama-3-70B"
+#model_name = "Llama-3-70B-Hermes2"
 
 
 #model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
@@ -44,7 +44,9 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
 
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"  #_prompt_{n_prompt}{temp_str}{cot_true}
+#output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"  #_prompt_{n_prompt}{temp_str}{cot_true}
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{n_shot}_shot/output/"
+
 os.makedirs(output_path, exist_ok=True)
 
 

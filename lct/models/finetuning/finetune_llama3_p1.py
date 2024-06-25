@@ -77,17 +77,26 @@ pass
 # dataset = dataset.map(formatting_prompts_func, batched = True,)
 
 import os
-from datasets import load_from_disk
+from datasets import load_from_disk, DatasetDict
 dataset_path = 'dataset/dataset_p1_prompt6'
 dataset = load_from_disk(dataset_path)
 dataset = dataset['train']
+train_test_split = dataset['train'].train_test_split(test_size=0.1, seed=42)
+dataset = DatasetDict({
+    'train': train_test_split['train'],
+    'eval': train_test_split['test'] 
+})
+
 dataset = dataset.map(formatting_prompts_func, batched=True)
 
 
+
+
 trainer = SFTTrainer(
-   model = model,
-   tokenizer = tokenizer,
-   train_dataset = dataset,
+    model = model,
+    tokenizer = tokenizer,
+    train_dataset=dataset['train'],
+    eval_dataset=dataset['eval'],
     dataset_text_field = "text",
     max_seq_length = max_seq_length,
     dataset_num_proc = 2,
