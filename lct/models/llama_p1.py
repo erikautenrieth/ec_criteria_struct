@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_n_shot_llama3_70b_prompt6"
+batch_path = "eval_p1_n_shot_test_llama3_70b_prompt6"
 n_prompt = 6
 n_shot = 5
 
