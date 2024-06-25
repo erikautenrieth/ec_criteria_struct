@@ -3,7 +3,7 @@ import transformers
 from helper_functions import *
 
 #batch_path = "eval_p1_5_shot_temperatur"
-batch_path = "eval_p1_5_shot_reproduzierbar"
+batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur5"
 n_prompt = 6
 n_shot = 5
 
@@ -12,8 +12,8 @@ cot_true = "" # "_cot"
 #model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 #model_name = "Llama-3-8B-Instruct"
 
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
+#model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+#model_name = "Llama-3-70B-Instruct"
 
 #model_id =  "NousResearch/Hermes-2-Theta-Llama-3-70B"
 #model_name = "Llama-3-70B-Hermes2"
@@ -30,8 +30,8 @@ model_name = "Llama-3-70B-Instruct"
 #model_id = "aaditya/OpenBioLLM-Llama3-8B"
 #model_name = "OpenBioLLM-Llama3-8B"
 
-#model_id = "aaditya/OpenBioLLM-Llama3-70B"
-#model_name = "OpenBioLLM-Llama3-70B"
+model_id = "aaditya/OpenBioLLM-Llama3-70B"
+model_name = "OpenBioLLM-Llama3-70B"
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
@@ -137,7 +137,7 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.9,
+            temperature=0.5,
             top_p=0.95,
     )
 
