@@ -5,7 +5,7 @@ from helper_functions import *
 #batch_path = "eval_p1_5_shot_temperatur"
 batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur5"
 n_prompt = 6
-n_shot = 5
+n_shot = 15
 
 cot_true = "" # "_cot"
 
@@ -24,13 +24,13 @@ cot_true = "" # "_cot"
 #model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
 #model_name = "Llama-3-70B-DPO-v0.2"
 
-#model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
-#model_name = "Llama-3-8B-Instruct-Gradient-1048k"
+model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
+model_name = "Llama-3-8B-Instruct-Gradient-1048k"
 
 #model_id = "aaditya/OpenBioLLM-Llama3-8B"
 #model_name = "OpenBioLLM-Llama3-8B"
 
-model_id = "aaditya/OpenBioLLM-Llama3-70B"
+#model_id = "aaditya/OpenBioLLM-Llama3-70B"
 #model_name = "OpenBioLLM-Llama3-70B"
 
 
