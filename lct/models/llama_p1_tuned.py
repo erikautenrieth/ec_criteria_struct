@@ -11,11 +11,11 @@ n_prompt = 6
 #model_name = "llama3_8b_lora_model_ep10"
 
 model_id = "tuned_models/llama3_70b_Lora_ep10_r16_prompt6"
-model_name = "Llama3_70b_Lora_ep10_prompt6"
+model_name = "Llama3_70b_Lora_temp0.9"
   
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_prompt_{n_prompt}/output/"
+output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}/output/"
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 
@@ -58,7 +58,7 @@ for file in study_files:
         )
     ], return_tensors = "pt").to("cuda")
 
-    outputs = model.generate(**inputs, max_new_tokens=2048, use_cache=True, ) #  temperature=0.5
+    outputs = model.generate(**inputs, max_new_tokens=2048, use_cache=True, temperature=0.9) #  temperature=0.5
     decoded_outputs = tokenizer.batch_decode(outputs)
     response = decoded_outputs[0].split("### Response:")[1].strip()
     response = response.replace("<|eot_id|>", "")
