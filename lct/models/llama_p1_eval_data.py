@@ -2,8 +2,9 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_finetuned_testset_prompt1_llama3_70b"
-n_prompt = 1
+
+batch_path = "eval_p1_finetuned_testset_prompt6_llama3_70b"#"eval_p1_finetuned_testset_prompt1_llama3_70b"
+n_prompt = 6
 n_shot = 5
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
@@ -35,8 +36,8 @@ studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
 
-#command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
-command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
+command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+#command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
 
 messages.append({"role": "system", "content": f"{model_desc}"})
 
@@ -84,7 +85,7 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.5,
+            temperature=0.9,
             top_p=0.95,
     )
 
