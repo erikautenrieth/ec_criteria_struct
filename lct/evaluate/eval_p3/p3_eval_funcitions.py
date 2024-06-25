@@ -23,9 +23,14 @@ def get_models(root_folder):
 def read_and_process_files(model_name):
     model_folder = f"model_output/{model_name}/output"
     ready_folder = f"model_output/{model_name}/ready"
-    failure_folder = f"model_output/{model_name}/failure"
-    os.makedirs(ready_folder, exist_ok=True)
-    os.makedirs(failure_folder, exist_ok=True)
+    failure_folder = f"model_output/{model_name}/structure_failure"
+    failure_folder2 = f"model_output/{model_name}/failure"
+    output_directory = os.path.join(model_name, "processed_output")
+
+    for folder in [ready_folder, failure_folder, failure_folder2, output_directory]:
+        os.makedirs(folder, exist_ok=True)
+
+    files_to_failure(directory_path=ready_folder, failure_directory=failure_folder2)
 
     def visit(node, category, entities):
         if isinstance(node, dict):
@@ -45,10 +50,26 @@ def read_and_process_files(model_name):
                     data = json.load(file)
                 entities = []
                 visit(data, 'category', entities)
-                shutil.copy(file_path, ready_folder)
-            except Exception as e:
+
+                try:
+                    output_text = json_to_text_failure(file_path)
+                    output_file_path = os.path.join(output_directory, os.path.splitext(filename)[0] + ".txt")
+                    with open(output_file_path, 'w', encoding="utf-8") as output_file:
+                        output_file.write(output_text)
+                    print(f"Successfully processed {filename}")
+                    shutil.copy(file_path, ready_folder)
+                except Exception as e:
+                    print(f"Failed to process file: {filename} - Error: {e}")
+                    shutil.copy(file_path, os.path.join(failure_folder2, filename))
+                    continue
+
+            except json.JSONDecodeError as je:
+                print(f"JSON syntax error in file: {filename} - Error: {je}")
                 shutil.copy(file_path, failure_folder)
-                #print(f"Error processing file {filename}: {e}")
+            except Exception as e:
+                print(f"Unexpected error reading file: {filename} - Error: {e}")
+                shutil.copy(file_path, failure_folder)
+
 
 
 ### Count failed files and plot
@@ -56,6 +77,7 @@ def count_files(model_name):
     model_folder = f"model_output/{model_name}/output"
     ready_folder = f"model_output/{model_name}/ready"
     failure_folder = f"model_output/{model_name}/failure"
+    struct_failure_folder = f"model_output/{model_name}/structure_failure"
 
     def count_files_in_folder(folder):
         if os.path.exists(folder):
@@ -65,27 +87,30 @@ def count_files(model_name):
     model_folder_count = count_files_in_folder(model_folder)
     ready_folder_count = count_files_in_folder(ready_folder)
     failure_folder_count = count_files_in_folder(failure_folder)
+    struct_failure_folder_count = count_files_in_folder(struct_failure_folder)
 
-    return model_folder_count, ready_folder_count, failure_folder_count
+    return model_folder_count, ready_folder_count, failure_folder_count, struct_failure_folder_count
 
 def plot_file_counts(model_name):
-    model_folder_count, ready_folder_count, failure_folder_count = count_files(model_name)
+    model_folder_count, ready_folder_count, failure_folder_count, struct_failure_folder_count = count_files(model_name)
     total_files = model_folder_count
 
-    categories = ['Output', 'Ready', 'Failure']
-    counts = [model_folder_count, ready_folder_count, failure_folder_count]
+    categories = ['Ausgabe', 'Korrekt', 'Parse Fehler', 'Struktur Fehler']
+    counts = [model_folder_count, ready_folder_count, failure_folder_count, struct_failure_folder_count]
 
     width = 0.35
     x = np.arange(len(categories))
 
-    fig, ax = plt.subplots(figsize=(10, 6))
-    bars = ax.bar(x, counts, width, color=['blue', 'green', 'red'])
-    ax.set_xlabel('Kategorien', labelpad=15)
-    ax.set_ylabel('Anzahl der Dateien', labelpad=15)
-    ax.set_title('Anzahl der Dateien in den Verzeichnissen', pad=20)
+    fig, ax = plt.subplots(figsize=(12, 6))
+    colors = ['#1f77b4', '#2ca02c', '#d62728', '#e377c2']  # Blau, Grün, Rot, Rosa
+    bars = ax.bar(x, counts, width, color=colors)
+
+    ax.set_xlabel('Kategorien', labelpad=15, fontsize=12)
+    ax.set_ylabel('Anzahl der Dateien', labelpad=15, fontsize=12)
+    ax.set_title(f'Ausgabe {model_name}', pad=20, fontsize=14)
     ax.set_xticks(x)
-    ax.set_xticklabels(categories)
-    #ax.legend(['Output', 'Ready', 'Failure'], loc='upper right')
+    ax.set_xticklabels(categories, fontsize=10)
+    #ax.legend(['Ausgabe', 'Korrekt', 'Parse Fehler', 'Struktur Fehler'], loc='upper right', fontsize=10)
     ax.grid(True, linestyle='--', alpha=0.7)
 
     for i, (bar, count) in enumerate(zip(bars, counts)):
@@ -93,15 +118,15 @@ def plot_file_counts(model_name):
         if i == 0:
             percentage = 100
         else:
-            percentage = (count / total_files) * 100 if total_files > 0 else 0
+            percentage = (count / total_files) * 100
         ax.annotate(f'{count} ({percentage:.1f}%)',
                     xy=(bar.get_x() + bar.get_width() / 2, height),
                     xytext=(0, 3),
                     textcoords="offset points",
-                    ha='center', va='bottom')
+                    ha='center', va='bottom', fontsize=9)
 
     plt.tight_layout()
-    plt.savefig(f'pics/file_counts_{model_name}.png')
+    plt.savefig(f'pics/file_counts_{model_name}.png', dpi=300, bbox_inches='tight')
     plt.show()
 
 
@@ -190,3 +215,48 @@ def plot_metrics(model_name, metrics, categories):
 
     plt.tight_layout()
     plt.show()
+
+
+
+### Diese Funktionen sind nur für die Failure Ausgabe
+def process_node_failure(node):
+    if 'raw_text' in node:
+        return node['raw_text'].strip()
+
+    if 'AND' in node:
+        left_text = process_node_failure(node['AND']['left'])
+        right_text = process_node_failure(node['AND']['right'])
+        return combine_texts_failure(left_text, right_text, '[AND]')
+
+    if 'OR' in node:
+        left_text = process_node_failure(node['OR']['left'])
+        right_text = process_node_failure(node['OR']['right'])
+        return combine_texts_failure(left_text, right_text, '[OR]')
+
+    if 'NOT' in node:
+        left_text = process_node_failure(node['NOT']['left'])
+        return f"[NOT] {left_text}"
+    return ""
+
+def combine_texts_failure(left_text, right_text, operator):
+    return f"{left_text} {operator} {right_text}"
+
+def json_to_text_failure(json_file_path):
+    with open(json_file_path, 'r', encoding="utf-8") as f:
+        data = json.load(f)
+    text = process_node_failure(data)
+    lines = [line.strip() for line in text.split('\n') if line.strip()]
+    return '\n'.join(lines)
+
+def files_to_failure(directory_path, failure_directory):
+    os.makedirs(failure_directory, exist_ok=True)
+
+    for filename in os.listdir(directory_path):
+        if filename.endswith("_exc.json") or filename.endswith("_inc.json"):
+            json_file_path = os.path.join(directory_path, filename)
+            try:
+                output_text = json_to_text_failure(json_file_path)
+            except Exception as e:
+                print(f"Failed to process file: {filename} - Error: {e}")
+                shutil.move(json_file_path, os.path.join(failure_directory, filename))
+                print(os.path.join(failure_directory, filename))
