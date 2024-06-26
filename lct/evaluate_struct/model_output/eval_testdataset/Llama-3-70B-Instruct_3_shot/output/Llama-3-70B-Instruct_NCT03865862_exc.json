@@ -1,0 +1,51 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Present a medical diagnosis of injury or illness",
+          "Condition": [
+            "injury",
+            "illness"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Have suffered a knee injury in the 6 months prior to the study",
+              "Condition": [
+                "knee injury"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Doing some pharmacological",
+                  "Drug": [
+                    "pharmacological"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or physiotherapy treatment external to the study",
+                  "Observation": [
+                    "physiotherapy treatment"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- Not signed the informed consent document.",
+          "Observation": [
+            "informed consent document"
+          ]
+        }
+      }
+    }
+  }
+}
