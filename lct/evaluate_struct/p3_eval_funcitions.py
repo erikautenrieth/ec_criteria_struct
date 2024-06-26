@@ -25,9 +25,8 @@ def read_and_process_files(model_name):
     ready_folder = f"model_output/{model_name}/ready"
     failure_folder = f"model_output/{model_name}/structure_failure"
     failure_folder2 = f"model_output/{model_name}/failure"
-    output_directory = os.path.join(model_name, "processed_output")
 
-    for folder in [ready_folder, failure_folder, failure_folder2, output_directory]:
+    for folder in [ready_folder, failure_folder, failure_folder2]:
         os.makedirs(folder, exist_ok=True)
 
     files_to_failure(directory_path=ready_folder, failure_directory=failure_folder2)
@@ -53,9 +52,6 @@ def read_and_process_files(model_name):
 
                 try:
                     output_text = json_to_text_failure(file_path)
-                    output_file_path = os.path.join(output_directory, os.path.splitext(filename)[0] + ".txt")
-                    with open(output_file_path, 'w', encoding="utf-8") as output_file:
-                        output_file.write(output_text)
                     print(f"Successfully processed {filename}")
                     shutil.copy(file_path, ready_folder)
                 except Exception as e:
