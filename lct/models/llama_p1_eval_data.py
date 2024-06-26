@@ -85,7 +85,7 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.9,
+            temperature=0.5,
             top_p=0.95,
     )
 

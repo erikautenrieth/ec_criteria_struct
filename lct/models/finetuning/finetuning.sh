@@ -3,10 +3,10 @@
 #SBATCH --nodes=1                # number of nodes
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
-#SBATCH --time=48:00:00          # Time limit hrs:min:sec
+#SBATCH --time=16:00:00          # Time limit hrs:min:sec
 
-#SBATCH --output=llm_tune_p3_10e_70B_prompt6.%j.out   # Standard output and error log
-#SBATCH --error=llm_tune_p3_10e_70B_prompt6.%j.err    # Error log
+#SBATCH --output=llm_tune_p3_20e_70B_prompt6.%j.out   # Standard output and error log
+#SBATCH --error=llm_tune_p3_20e_70B_prompt6.%j.err    # Error log
 #SBATCH --job-name=llm_tune
 
 module load cuda
