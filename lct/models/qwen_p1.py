@@ -1,6 +1,6 @@
 import os
 from transformers import AutoModelForCausalLM, AutoTokenizer
-device = "cuda" # the device to load the model onto
+device = "cuda" 
 from helper_functions import *
 
 batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur9"#"eval_p1_n_shot"
@@ -14,7 +14,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}_p6.txt") #  p{n_prompt}
 
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
 

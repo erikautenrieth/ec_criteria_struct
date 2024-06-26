@@ -1,0 +1,24 @@
+/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/__init__.py:37: UserWarning: Unsloth: 'CUDA_VISIBLE_DEVICES' is currently 0,1,2,3 
+Multiple CUDA devices detected but we require a single device.
+We will override CUDA_VISIBLE_DEVICES to first device: 0.
+  warnings.warn(
+/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+2024-06-26 12:40:25.388488: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-06-26 12:40:26.605285: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:01<00:06,  1.25s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:02<00:05,  1.26s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:03<00:03,  1.28s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:05<00:02,  1.30s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:06<00:01,  1.33s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:07<00:00,  1.19s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:07<00:00,  1.24s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Unsloth 2024.6 patched 80 layers with 80 QKV layers, 80 O layers and 80 MLP layers.
+Map:   0%|          | 0/723 [00:00<?, ? examples/s]Map: 100%|██████████| 723/723 [00:00<00:00, 20288.23 examples/s]
+Map:   0%|          | 0/81 [00:00<?, ? examples/s]Map: 100%|██████████| 81/81 [00:00<00:00, 9630.60 examples/s]
+/home/eauten2s/.local/lib/python3.9/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map (num_proc=2):   0%|          | 0/723 [00:00<?, ? examples/s]Map (num_proc=2):  50%|█████     | 362/723 [00:01<00:01, 341.68 examples/s]Map (num_proc=2): 100%|██████████| 723/723 [00:01<00:00, 583.78 examples/s]
+Map (num_proc=2):   0%|          | 0/81 [00:00<?, ? examples/s]Map (num_proc=2):  51%|█████     | 41/81 [00:00<00:00, 73.83 examples/s]Map (num_proc=2): 100%|██████████| 81/81 [00:00<00:00, 109.48 examples/s]
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 723 | Num Epochs = 20
+O^O/ \_/ \    Batch size per device = 4 | Gradient Accumulation steps = 4
+\        /    Total batch size = 16 | Total steps = 900
+ "-____-"     Number of trainable parameters = 1,656,750,080
+  0%|          | 0/900 [00:00<?, ?it/s]  0%|          | 1/900 [00:28<7:13:39, 28.94s/it]  0%|          | 2/900 [01:07<8:34:29, 34.38s/it]  0%|          | 3/900 [01:35<7:52:06, 31.58s/it]  0%|          | 4/900 [02:06<7:48:42, 31.39s/it]  1%|          | 5/900 [02:34<7:29:23, 30.13s/it]  1%|          | 6/900 [03:10<7:59:19, 32.17s/it]  1%|          | 7/900 [03:43<8:01:41, 32.36s/it]  1%|          | 8/900 [04:15<8:01:59, 32.42s/it]  1%|          | 9/900 [04:46<7:51:35, 31.76s/it]  1%|          | 10/900 [05:15<7:41:13, 31.09s/it]  1%|          | 11/900 [05:48<7:48:27, 31.62s/it]  1%|▏         | 12/900 [06:19<7:44:23, 31.38s/it]  1%|▏         | 13/900 [06:53<7:54:46, 32.12s/it]  2%|▏         | 14/900 [07:24<7:52:01, 31.97s/it]  2%|▏         | 15/900 [07:54<7:41:27, 31.28s/it]  2%|▏         | 16/900 [08:22<7:27:47, 30.39s/it]  2%|▏         | 17/900 [08:53<7:30:19, 30.60s/it]  2%|▏         | 18/900 [09:21<7:15:06, 29.60s/it]  2%|▏         | 19/900 [09:49<7:08:41, 29.20s/it]  2%|▏         | 20/900 [10:17<7:03:43, 28.89s/it]  2%|▏         | 21/900 [10:51<7:26:48, 30.50s/it]  2%|▏         | 22/900 [11:24<7:34:29, 31.06s/it]  3%|▎         | 23/900 [11:59<7:50:44, 32.21s/it]  3%|▎         | 24/900 [12:32<7:55:59, 32.60s/it]  3%|▎         | 25/900 [13:01<7:39:27, 31.51s/it]  3%|▎         | 26/900 [13:28<7:21:00, 30.28s/it]  3%|▎         | 27/900 [14:04<7:41:22, 31.71s/it]  3%|▎         | 28/900 [14:40<8:00:35, 33.07s/it]  3%|▎         | 29/900 [15:09<7:42:57, 31.89s/it]  3%|▎         | 30/900 [15:40<7:39:09, 31.67s/it]  3%|▎         | 31/900 [16:09<7:26:10, 30.81s/it]  4%|▎         | 32/900 [16:40<7:25:48, 30.82s/it]  4%|▎         | 33/900 [17:06<7:03:45, 29.33s/it]  4%|▍         | 34/900 [17:35<7:02:31, 29.27s/it]

@@ -14,7 +14,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{n_shot}_shot/output/"  
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{n_shot}_shot/output/"  
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 

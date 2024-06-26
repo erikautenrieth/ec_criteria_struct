@@ -20,8 +20,8 @@ cot_true = ""  #"_cot"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/lct_txt/"
-#output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_0_shot_prompt_{n_prompt}{cot_true}/output/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/Temperatur {str(temp)}/output/"
+#output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_prompt_{n_prompt}{cot_true}/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/Temperatur {str(temp)}/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)[:50]

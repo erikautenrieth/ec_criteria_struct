@@ -10,7 +10,7 @@ model_name = "Llama-3-70B-Instruct"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/0_shot_temp 0.2/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/0_shot_temp 0.2/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)

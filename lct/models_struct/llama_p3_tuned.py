@@ -6,7 +6,7 @@ from helper_functions import *
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
 
-batch_path = "eval_p3_tuned"
+batch_path = "eval_testdataset"
 n_prompt = 1
 
 
@@ -15,7 +15,7 @@ model_name = "Llama3_70b_Fine-Tuned_p3_ep10"
   
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset_p3/test/input/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_p{n_prompt}/output/"
+output_path = f"{transform_lct}/evaluate_struct/model_output/{batch_path}/{model_name}_p{n_prompt}/output/"
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 

@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p3_tuned"
+batch_path = "eval_testdataset"
 
 n_shot = 3
 struct_prompt = 1
@@ -10,19 +10,14 @@ struct_prompt = 1
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-#model_id =  "gradientai/Llama-3-70B-Instruct-Gradient-1048k"
-#model_name = "Llama-3-70B-Instruct-Gradient"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset_p3/test/input/"
-output_path = f"{transform_lct}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
+output_path = f"{transform_lct}/evaluate_struct/model_output/{batch_path}/{model_name}_{n_shot}_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
 
 study_files = os.listdir(study_path)
-
-
-# Load Model Description
 model_desc = read_text_file(f"{transform_lct}/input/prompt/entity_struct_p{struct_prompt}.txt")
 
 

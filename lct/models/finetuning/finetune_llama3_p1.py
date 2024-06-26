@@ -80,23 +80,18 @@ import os
 from datasets import load_from_disk, DatasetDict
 dataset_path = 'dataset/dataset_p1_prompt6'
 dataset = load_from_disk(dataset_path)
-dataset = dataset['train']
 train_test_split = dataset['train'].train_test_split(test_size=0.1, seed=42)
-dataset = DatasetDict({
-    'train': train_test_split['train'],
-    'eval': train_test_split['test'] 
-})
-
-dataset = dataset.map(formatting_prompts_func, batched=True)
-
-
+train = train_test_split['train'] # 723 Files
+test = train_test_split['test'] # 81 Files
+train = train.map(formatting_prompts_func, batched=True)
+test = test.map(formatting_prompts_func, batched=True)
 
 
 trainer = SFTTrainer(
     model = model,
     tokenizer = tokenizer,
-    train_dataset=dataset['train'],
-    eval_dataset=dataset['eval'],
+    train_dataset=train,
+    eval_dataset=test,
     dataset_text_field = "text",
     max_seq_length = max_seq_length,
     dataset_num_proc = 2,
@@ -174,5 +169,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_Lora_ep20_128_prompt6") # Local saving
+model.save_pretrained("llama3_70b_Lora_ep20_128_prompt6_evalset") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
