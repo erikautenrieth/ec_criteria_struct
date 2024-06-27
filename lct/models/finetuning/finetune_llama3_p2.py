@@ -63,7 +63,7 @@ pass
 
 
 
-dataset_path = 'dataset/dataset_p2'
+dataset_path = 'dataset/dataset_p2_prompt_2'
 dataset = load_from_disk(dataset_path)
 dataset = dataset['train']
 dataset = dataset.map(formatting_prompts_func, batched=True)
@@ -118,7 +118,7 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 ep = "ep10"
-new_model_name = f"llama3_70b_LoRA_struct_p2_prompt2{ep}"
+new_model_name = f"llama3_70b_LoRA_struct2_prompt2{ep}"
 
 
 model.save_pretrained(new_model_name) # Local saving
