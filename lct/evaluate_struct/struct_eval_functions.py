@@ -127,11 +127,11 @@ def get_models(root_folder):
                 valid_subfolders.append(subfolder_name)
     return valid_subfolders
 
-def read_and_process_files(model_name):
-    model_folder = f"model_output/{model_name}/output"
-    ready_folder = f"model_output/{model_name}/ready"
-    failure_folder = f"model_output/{model_name}/structure_failure"
-    failure_folder2 = f"model_output/{model_name}/failure"
+def read_and_process_files(model_path, model_name):
+    model_folder = f"{model_path}/{model_name}/output"
+    ready_folder = f"{model_path}/{model_name}/ready"
+    failure_folder = f"{model_path}/{model_name}/structure_failure"
+    failure_folder2 = f"{model_path}/{model_name}/failure"
 
     for folder in [ready_folder, failure_folder, failure_folder2]:
         os.makedirs(folder, exist_ok=True)
