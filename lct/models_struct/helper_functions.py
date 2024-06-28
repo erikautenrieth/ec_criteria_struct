@@ -234,7 +234,34 @@ def read_matching_p3_files(study_folder, n_shot):
 
     return study_filenames, study_contents, label_filenames, label_contents
 
+def read_matching_p2_files(study_folder, n_shot):
+    study_filenames = []
+    study_contents = []
+    label_filenames = []
+    label_contents = []
 
+    loaded_files = 0
+    for file_name in os.listdir(study_folder):
+        if file_name.endswith(".txt"):
+            study_filenames.append(file_name)
+            study_file_path = os.path.join(study_folder, file_name)
+            with open(study_file_path, 'r', encoding='utf-8') as file:
+                study_contents.append(file.read())
+
+            label_file_name = file_name.replace(".txt", "_p2.json")
+            label_file_path = os.path.join(study_folder, label_file_name)
+            if os.path.exists(label_file_path):
+                label_filenames.append(label_file_name)
+                with open(label_file_path, 'r', encoding='utf-8') as file:
+                    label_contents.append(file.read())
+            else:
+                label_filenames.append(None)
+                label_contents.append(None)
+            loaded_files += 1
+            if loaded_files == n_shot * 2:
+                break
+
+    return study_filenames, study_contents, label_filenames, label_contents
 
 def read_matching_txt_files_old(study_folder, label_folder, max_files):
     study_filenames = []

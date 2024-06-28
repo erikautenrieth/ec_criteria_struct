@@ -23,7 +23,7 @@ model_desc = read_text_file(f"{transform_lct}/input/prompt/entity_struct_p{struc
 
 # Load n-shot Data
 n_shot_folder = f"{transform_lct}/input/n_shot_files_p2"
-study_filenames, study_contents, label_filenames, label_contents = read_matching_p3_files(n_shot_folder, n_shot)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_p2_files(n_shot_folder, n_shot)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
