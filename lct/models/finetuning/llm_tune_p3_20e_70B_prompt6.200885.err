@@ -1,28 +1,0 @@
-/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/__init__.py:37: UserWarning: Unsloth: 'CUDA_VISIBLE_DEVICES' is currently 0,1,2,3 
-Multiple CUDA devices detected but we require a single device.
-We will override CUDA_VISIBLE_DEVICES to first device: 0.
-  warnings.warn(
-/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
-  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
-2024-06-27 17:17:25.268651: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2024-06-27 17:17:26.447235: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
-Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:01<00:06,  1.25s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:02<00:05,  1.29s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:03<00:03,  1.30s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:05<00:02,  1.33s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:06<00:01,  1.36s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:07<00:00,  1.21s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:07<00:00,  1.27s/it]
-Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
-Unsloth 2024.6 patched 80 layers with 80 QKV layers, 80 O layers and 80 MLP layers.
-Traceback (most recent call last):
-  File "/work/eauten2s/ec_criteria_struct/lct/models/finetuning/finetune_llama3_p2.py", line 67, in <module>
-    dataset = load_from_disk(dataset_path)
-  File "/home/eauten2s/.local/lib/python3.9/site-packages/datasets/load.py", line 2702, in load_from_disk
-    return DatasetDict.load_from_disk(dataset_path, keep_in_memory=keep_in_memory, storage_options=storage_options)
-  File "/home/eauten2s/.local/lib/python3.9/site-packages/datasets/dataset_dict.py", line 1378, in load_from_disk
-    dataset_dict[k] = Dataset.load_from_disk(
-  File "/home/eauten2s/.local/lib/python3.9/site-packages/datasets/arrow_dataset.py", line 1758, in load_from_disk
-    dataset_size = estimate_dataset_size(
-  File "/home/eauten2s/.local/lib/python3.9/site-packages/datasets/utils/file_utils.py", line 724, in estimate_dataset_size
-    return sum(path.stat().st_size for path in paths)
-  File "/home/eauten2s/.local/lib/python3.9/site-packages/datasets/utils/file_utils.py", line 724, in <genexpr>
-    return sum(path.stat().st_size for path in paths)
-  File "/usr/lib64/python3.9/pathlib.py", line 1232, in stat
-    return self._accessor.stat(self)
-FileNotFoundError: [Errno 2] No such file or directory: '/work/eauten2s/ec_criteria_struct/lct/models/finetuning/dataset/dataset_p2_prompt_2/train/data-00000-of-00001.arrow'
