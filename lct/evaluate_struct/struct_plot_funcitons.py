@@ -11,7 +11,6 @@ from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_sc
 def plot_metrics(all_metrics):
     operators = ['AND', 'OR', 'NOT']
     metrics_to_plot = ['precision', 'recall', 'f1']
-
     fig, axs = plt.subplots(len(operators), 1, figsize=(12, 24), gridspec_kw={'hspace': 1.2})
 
     for i, op in enumerate(operators):
