@@ -9,7 +9,7 @@ batch_path = "eval_p1_claude" #"eval_p1_finetuned_testset_prompt1_llama3_70b"
 n_prompt = 6
 n_shot = 5
 
-model_name = "GPT-3.5-turbo"
+model_name = "GPT-4o"
 
 
 client = OpenAI(
@@ -90,7 +90,7 @@ for file in study_files:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"} # {cot} 
 
     completion = client.chat.completions.create(
-    model="gpt-3.5-turbo",
+    model="gpt-4o",# "gpt-3.5-turbo",
     messages=messages,
     temperature=0.7,
     )
