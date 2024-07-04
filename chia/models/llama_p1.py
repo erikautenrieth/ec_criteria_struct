@@ -13,17 +13,6 @@ random_shot =""  # "_random"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-#model_id="MaziyarPanahi/Llama-3-70B-Instruct-DPO-v0.2"
-#model_name = "Llama-3-70B-DPO-v0.2"
-
-#model_id =  "gradientai/Llama-3-8B-Instruct-Gradient-1048k"
-#model_name = "Llama-3-8B-Instruct-Gradient-1048k"
-# model_id = "aaditya/OpenBioLLM-Llama3-70B"
-#model_id = "aaditya/OpenBioLLM-Llama3-8B"
-#model_name = "OpenBioLLM-Llama3-8B"
-#model_id = "aaditya/OpenBioLLM-Llama3-70B"
-#model_name = "OpenBioLLM-Llama3-70B"
-
 
 transform ="/work/eauten2s/ec_criteria_struct/chia"
 model_desc = read_text_file(f"{transform}/input/prompt/p{n_prompt}.txt")

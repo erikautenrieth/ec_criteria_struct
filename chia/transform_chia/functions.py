@@ -16,7 +16,9 @@ def save_json_to_txt(data, output_file):
     compact_data = json.dumps(data, separators=(',', ':'))
     with open(output_file, 'w') as f:
         f.write(compact_data)
-
+def save_json_to_txt_same_format(data, output_file):
+    with open(output_file, 'w') as f:
+        f.write(data)
 
 def parse_ann_file(file_path):
     entities = {}

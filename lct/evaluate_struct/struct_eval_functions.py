@@ -24,7 +24,7 @@ def extract_operators(text):
     operators = re.findall(r'\[(AND|OR|NOT)\]', text)
     return operators
 
-def find_operator_words(text, operators):
+def find_operator_words_function1(text, operators):
     words = {op: [] for op in operators}
     word_list = text.split()
     for i, word in enumerate(word_list):
@@ -34,7 +34,20 @@ def find_operator_words(text, operators):
                 prev_word = re.sub(r'[^\w]', '', word_list[i - 1])  # Entferne Satzzeichen
                 words[operator].append(prev_word)
     return words
-
+def find_operator_words(text, operators):
+    words = {op: [] for op in operators}
+    word_list = text.split()
+    for i, word in enumerate(word_list):
+        if word in ["[AND]", "[OR]", "[NOT]"]:
+            operator = word[1:-1]
+            if operator in operators:
+                j = i - 1
+                while j >= 0 and word_list[j] in ["[AND]", "[OR]", "[NOT]"]:
+                    j -= 1
+                if j >= 0:
+                    prev_word = re.sub(r'[^\w]', '', word_list[j])  # Remove punctuation
+                    words[operator].append(prev_word)
+    return words
 def compare_operators(label_text, model_text, operator):
     label_operators = extract_operators(label_text)
     model_operators = extract_operators(model_text)
@@ -46,8 +59,9 @@ def compare_operators(label_text, model_text, operator):
 
     label_words = label_words_dict.get(operator, [])
     model_words = model_words_dict.get(operator, [])
-    #print("label_words_dict",label_words)
-    #print("model_words_dict",model_words)
+    print(operator)
+    print("label_words_dict",label_words)
+    print("model_words_dict",model_words)
     #print([word for word in label_words if word in model_words])
 
     tp = sum(1 for word in label_words if word in model_words)
@@ -363,3 +377,44 @@ def files_to_failure(directory_path, failure_directory):
                 print(f"Failed to process file: {filename} - Error: {e}")
                 shutil.move(json_file_path, os.path.join(failure_directory, filename))
                 print(os.path.join(failure_directory, filename))
+
+
+def plot_operator_metrics(all_metrics):
+    operators = ['AND', 'OR', 'NOT']
+    metrics_to_plot = ['precision', 'recall', 'f1']
+
+    fig, axs = plt.subplots(len(operators), 1, figsize=(12, 24), gridspec_kw={'hspace': 1.2})
+
+    for i, op in enumerate(operators):
+        ax = axs[i]
+
+        model_names = []
+        metric_values = {metric: [] for metric in metrics_to_plot}
+
+        for model, model_metrics in all_metrics.items():
+            model_name = model.replace("Instruct_", "")
+            model_names.append(model_name)
+            for metric in metrics_to_plot:
+                metric_values[metric].append(model_metrics[op][metric])
+
+        x = np.arange(len(model_names))
+        bar_width = 0.2
+        opacity = 0.8
+
+        for j, metric in enumerate(metrics_to_plot):
+            ax.bar(x + j * bar_width, metric_values[metric], bar_width, alpha=opacity, label=metric.capitalize())
+
+        ax.set_xticks(x + bar_width * (len(metrics_to_plot) - 1) / 2)
+        ax.set_xticklabels(model_names, rotation=45, ha='right', fontsize=12)
+        ax.set_xlabel('Models', fontsize=12)
+        ax.set_ylabel('Score (%)', fontsize=12)
+        ax.set_ylim(0, 100)
+        ax.set_title(f'Evaluation: {op}', fontsize=16, pad=20)
+        ax.legend(fontsize=11)
+        ax.grid(True)
+
+        for j, metric in enumerate(metrics_to_plot):
+            for k, v in enumerate(metric_values[metric]):
+                ax.text(k + j * bar_width, v + 1, f'{v:.1f}%', ha='center', fontsize=10)
+
+    plt.show()
