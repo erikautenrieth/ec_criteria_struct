@@ -201,5 +201,5 @@ def plot_avg_metrics(all_metrics):
         plt.text(x[i * 4 + 2], avg_f1_scores[i] + y_offset, f'{avg_f1_scores[i]:.1f}%', ha='center', fontsize=12)
 
     plt.tight_layout()
-    plt.savefig('pics/average_metrics.png')
+    #plt.savefig('pics/average_metrics.png')
     plt.show()
