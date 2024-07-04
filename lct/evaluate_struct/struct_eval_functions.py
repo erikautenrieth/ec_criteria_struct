@@ -379,9 +379,17 @@ def files_to_failure(directory_path, failure_directory):
                 print(os.path.join(failure_directory, filename))
 
 
-def plot_operator_metrics(all_metrics):
+def plot_operator_metrics_old(all_metrics):
     operators = ['AND', 'OR', 'NOT']
     metrics_to_plot = ['precision', 'recall', 'f1']
+
+    sota_metrics = {
+        'SciBERT': {
+            'AND': {'precision': 54.1, 'recall': 60.0, 'f1': 56.9},
+            'NOT': {'precision': 74.3, 'recall': 91.0, 'f1': 81.8},
+            'OR': {'precision': 85.1, 'recall': 93.2, 'f1': 89.0}
+        }
+    }
 
     fig, axs = plt.subplots(len(operators), 1, figsize=(12, 24), gridspec_kw={'hspace': 1.2})
 
@@ -417,4 +425,58 @@ def plot_operator_metrics(all_metrics):
             for k, v in enumerate(metric_values[metric]):
                 ax.text(k + j * bar_width, v + 1, f'{v:.1f}%', ha='center', fontsize=10)
 
+    plt.show()
+
+
+
+def plot_operator_metrics(all_metrics):
+    operators = ['AND', 'OR', 'NOT']
+    metrics_to_plot = ['precision', 'recall', 'f1']
+
+    sota_metrics = {
+        'SciBERT': {
+            'AND': {'precision': 54.1, 'recall': 60.0, 'f1': 56.9},
+            'NOT': {'precision': 74.3, 'recall': 91.0, 'f1': 81.8},
+            'OR': {'precision': 85.1, 'recall': 93.2, 'f1': 89.0}
+        }
+    }
+
+    fig, axs = plt.subplots(len(operators), 1, figsize=(14, 24), gridspec_kw={'hspace': 1.2})
+
+    for i, op in enumerate(operators):
+        ax = axs[i]
+
+        model_names = ['SOTA'] + list(all_metrics.keys())
+        metric_values = {metric: [] for metric in metrics_to_plot}
+
+        # Add SOTA metrics
+        for metric in metrics_to_plot:
+            metric_values[metric].append(sota_metrics['SciBERT'][op][metric])
+
+        # Add other model metrics
+        for model, model_metrics in all_metrics.items():
+            for metric in metrics_to_plot:
+                metric_values[metric].append(model_metrics[op][metric])
+
+        x = np.arange(len(model_names))
+        bar_width = 0.2
+        opacity = 0.8
+
+        for j, metric in enumerate(metrics_to_plot):
+            ax.bar(x + j * bar_width, metric_values[metric], bar_width, alpha=opacity, label=metric.capitalize())
+
+        ax.set_xticks(x + bar_width * (len(metrics_to_plot) - 1) / 2)
+        ax.set_xticklabels(model_names, rotation=45, ha='right', fontsize=12)
+        ax.set_xlabel('Models', fontsize=12)
+        ax.set_ylabel('Score (%)', fontsize=12)
+        ax.set_ylim(0, 100)
+        ax.set_title(f'Evaluation: {op}', fontsize=16, pad=20)
+        ax.legend(fontsize=11)
+        ax.grid(True)
+
+        for j, metric in enumerate(metrics_to_plot):
+            for k, v in enumerate(metric_values[metric]):
+                ax.text(k + j * bar_width, v + 1, f'{v:.1f}%', ha='center', fontsize=10)
+
+    plt.tight_layout()
     plt.show()
