@@ -1,0 +1,111 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "1. Preoperative patients have received relevant treatment, such as radiotherapy and chemotherapy;",
+              "Procedure": [
+                "radiotherapy",
+                "chemotherapy",
+                "treatment",
+                "operative"
+              ],
+              "Procedure-Name": [
+                "radiotherapy",
+                "chemotherapy"
+              ],
+              "Eq-Comparison": [
+                "received"
+              ],
+              "Eq-Temporal-Period": [
+                "received"
+              ],
+              "Other": [
+                "other"
+              ]
+            },
+            "right": {
+              "raw_text": "2. The subject has other diseases, such as tumors in other parts;",
+              "Condition": [
+                "diseases",
+                "tumors"
+              ],
+              "Condition-Name": [
+                "tumors"
+              ],
+              "Other": [
+                "other"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "3. Patients do not meet the age;",
+          "Age": [
+            "age"
+          ],
+          "Negation": [
+            "no"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "4. There is"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "no guarantee that other eating habits (such as eating fresh fruits and vegetables, not eating preserved foods) and other factors (such as BMI,",
+                  "Observation": [
+                    "BMI"
+                  ],
+                  "Observation-Name": [
+                    "BMI"
+                  ],
+                  "Condition": [
+                    "factors"
+                  ],
+                  "Negation": [
+                    "no"
+                  ],
+                  "Other": [
+                    "other"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "smoking,",
+                      "Observation": [
+                        "smoking"
+                      ],
+                      "Observation-Name": [
+                        "smoking"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "drinking, etc.) are basically the same.",
+                      "Observation": [
+                        "drinking"
+                      ],
+                      "Observation-Name": [
+                        "drinking"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

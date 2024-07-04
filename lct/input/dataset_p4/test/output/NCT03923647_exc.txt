@@ -1,0 +1,79 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- patients with penetrating abdominal trauma",
+              "Observation": [
+                "trauma"
+              ],
+              "Observation-Name": [
+                "trauma"
+              ],
+              "Modifier": [
+                "penetrating abdominal"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- stable patients",
+                  "Stability": [
+                    "stable"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not in need for any intervention for conservative management",
+                      "Procedure": [
+                        "conservative management",
+                        "intervention"
+                      ],
+                      "Procedure-Name": [
+                        "conservative management",
+                        "intervention"
+                      ],
+                      "Assertion": [
+                        "need for"
+                      ],
+                      "Negation": [
+                        "not"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- patients with marked haemodynamic instability",
+          "Condition": [
+            "haemodynamic instability"
+          ],
+          "Condition-Name": [
+            "haemodynamic instability"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- polyt-traumatized Patients",
+      "Observation": [
+        "trauma"
+      ],
+      "Observation-Name": [
+        "trauma"
+      ],
+      "Condition": [
+        "polyt-traumatized"
+      ],
+      "Condition-Name": [
+        "polyt-traumatized"
+      ]
+    }
+  }
+}
