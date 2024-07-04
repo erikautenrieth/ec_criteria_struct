@@ -35,10 +35,6 @@ shot_list = [
 study_folder = f"{transform}/input/chia_text_half/"
 label_folder = f'{transform}/input/chia_p1'
 study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
-
-## Random n-shot Data
-#study_filenames, study_contents, label_filenames, label_contents = read_random_matching_txt_files(study_folder, label_folder, n_shot)
-
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
@@ -92,8 +88,8 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.6,
-            top_p=0.9,
+            temperature=0.5,
+            top_p=0.95,
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
