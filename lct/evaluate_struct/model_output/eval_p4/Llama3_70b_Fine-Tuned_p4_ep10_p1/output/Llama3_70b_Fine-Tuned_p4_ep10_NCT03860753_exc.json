@@ -1,0 +1,275 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Individuals will be excluded for exhibiting severe scores on the HAM-A,",
+                          "Condition": [
+                            "HAM-A"
+                          ],
+                          "Condition-Name": [
+                            "HAM-A"
+                          ],
+                          "Severity": [
+                            "severe"
+                          ],
+                          "Eq-Operator": [
+                            "-"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "PSS,",
+                              "Condition": [
+                                "PSS"
+                              ],
+                              "Condition-Name": [
+                                "PSS"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or post-traumatic (PTSD) checklist (PCL-5) at the discretion of the admitting physician",
+                              "Condition": [
+                                "PTSD",
+                                "PCL-5"
+                              ],
+                              "Condition-Name": [
+                                "PTSD",
+                                "PCL-5"
+                              ],
+                              "Eq-Operator": [
+                                "-"
+                              ],
+                              "Provider": [
+                                "admitting physician"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- physical dependence on alcohol Alcohol Use Disorders Inventory (AUDIT) score indicative of severe alcohol dependence (≥13 for women, ≥15 for men)",
+                      "Eq-Operator": [
+                        "≥",
+                        "-"
+                      ],
+                      "Eq-Value": [
+                        "13",
+                        "15",
+                        "5",
+                        "3"
+                      ],
+                      "Eq-Comparison": [
+                        "≥13",
+                        "≥15"
+                      ],
+                      "Condition": [
+                        "alcohol dependence",
+                        "alcohol",
+                        "Alcohol Use Disorders Inventory",
+                        "AUDIT"
+                      ],
+                      "Condition-Name": [
+                        "alcohol dependence",
+                        "alcohol",
+                        "Alcohol Use Disorders Inventory",
+                        "AUDIT"
+                      ],
+                      "Severity": [
+                        "severe"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "women",
+                        "men"
+                      ],
+                      "Modifier": [
+                        "physical"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- greater than mild substance use disorder on drugs other than alcohol, nicotine, and marijuana",
+                  "Condition": [
+                    "substance use disorder",
+                    "alcohol",
+                    "nicotine",
+                    "drugs",
+                    "marijuana"
+                  ],
+                  "Condition-Name": [
+                    "substance use disorder",
+                    "alcohol",
+                    "nicotine",
+                    "marijuana"
+                  ],
+                  "Eq-Operator": [
+                    "greater than",
+                    "-"
+                  ],
+                  "Severity": [
+                    "mild"
+                  ],
+                  "Other": [
+                    "other than"
+                  ],
+                  "Drug": [
+                    "drugs"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- contraindications for taking pioglitazone; medical conditions contraindicating pioglitazone pharmacotherapy or taking contraindicated medications",
+              "Eq-Operator": [
+                "-"
+              ],
+              "Drug": [
+                "pioglitazone",
+                "medications"
+              ],
+              "Drug-Name": [
+                "pioglitazone"
+              ],
+              "Contraindication": [
+                "contraindications",
+                "contraindicating"
+              ],
+              "Procedure": [
+                "pharmacotherapy"
+              ],
+              "Procedure-Name": [
+                "pharmacotherapy"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- be pregnant,",
+              "Condition": [
+                "pregnant"
+              ],
+              "Condition-Name": [
+                "pregnant"
+              ],
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "nursing,",
+                  "Condition": [
+                    "nursing"
+                  ],
+                  "Condition-Name": [
+                    "nursing"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or planning on becoming pregnant during the course of the study",
+                  "Condition": [
+                    "pregnant"
+                  ],
+                  "Condition-Name": [
+                    "pregnant"
+                  ],
+                  "Assertion": [
+                    "planning"
+                  ],
+                  "Study": [
+                    "study"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- have any other illness,",
+          "Eq-Operator": [
+            "-"
+          ],
+          "Condition": [
+            "illness"
+          ],
+          "Other": [
+            "other"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "condition,",
+              "Condition": [
+                "condition"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or use of medications, which in the opinion of the PI and/or admitting physician would",
+                  "Drug": [
+                    "medications"
+                  ],
+                  "Provider": [
+                    "admitting physician"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "preclude safe",
+                          "Condition": [
+                            "safe"
+                          ],
+                          "Condition-Name": [
+                            "safe"
+                          ],
+                          "Negation": [
+                            "preclude"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "and/or successful completion of the study",
+                          "Study": [
+                            "study"
+                          ],
+                          "Polarity": [
+                            "successful"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
