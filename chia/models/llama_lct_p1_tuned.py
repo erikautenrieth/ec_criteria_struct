@@ -9,18 +9,15 @@ from unsloth import FastLanguageModel
 batch_path = "eval_p1_finetuned" 
 n_prompt = 1
 
-model_id = "../../lct/models/tuned_models/llama3_70b_Lora_ep30_256_prompt6_evalset"   
-model_name = "Llama3_70b_Lora_ep30_prompt6"
-print(f"Modellpfad: {model_id}")
-print(f"Existiert: {os.path.exists(model_id)}")
-print(f"Inhalt des Verzeichnisses: {os.listdir(model_id)}")  
+model_id = "tuned_models/llama3_70b_Lora_ep10_r16_prompt6"    #"../../lct/models/tuned_models/llama3_70b_Lora_ep10_r16_prompt6"  
+model_name = "Llama3_70b_Lora_ep10_prompt6"
 transform ="/work/eauten2s/ec_criteria_struct/chia"
 model_desc = read_text_file(f"{transform}/input/prompt/lct_p2.txt")
 
 study_path = f"{transform}/input/chia_text_half/"
 output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_prompt_lct2/output/"
 os.makedirs(output_path, exist_ok=True)
-study_files = os.listdir(study_path)[3:100]
+study_files = os.listdir(study_path)[0:100]
 
 model, tokenizer = FastLanguageModel.from_pretrained(
         model_name = model_id,
@@ -28,8 +25,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
         dtype = None,
         load_in_4bit = True,
     )
-
-FastLanguageModel.for_inference(model)
+FastLanguageModel.for_inference(model) # Enable native 2x faster inference
 
 alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
 
@@ -59,7 +55,7 @@ for file in study_files:
         )
     ], return_tensors = "pt").to("cuda")
 
-    outputs = model.generate(**inputs, max_new_tokens=2048) #  temperature=0.5, use_cache=True
+    outputs = model.generate(**inputs, max_new_tokens=2048, use_cache=True) #  temperature=0.5, use_cache=True
     decoded_outputs = tokenizer.batch_decode(outputs)
     response = decoded_outputs[0].split("### Response:")[1].strip()
     response = response.replace("<|eot_id|>", "")
