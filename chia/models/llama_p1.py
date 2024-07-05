@@ -2,51 +2,56 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1"
-n_prompt = 8
-n_shot = 4
+batch_path = "eval_p1_finetuned" 
+n_prompt = 2
+n_shot = 5
 
-
-temp_str = "" # temp_str = f"_temp_{str(temp).split('.')[1]}"   temp = 0.6
-cot_true = "" # "_cot"
-random_shot =""  # "_random"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
 
 transform ="/work/eauten2s/ec_criteria_struct/chia"
-model_desc = read_text_file(f"{transform}/input/prompt/p{n_prompt}.txt")
+model_desc = read_text_file(f"{transform}/input/prompt/chia_p2.txt")
 
 study_path = f"{transform}/input/chia_text_half/"
-output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}{random_shot}_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
+output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_{n_prompt}/output/"
 os.makedirs(output_path, exist_ok=True)
 
 
 study_files = os.listdir(study_path)[:100]
 
-shot_list = [
+shot_list_first = [
     "NCT00050349_exc.txt",
     "NCT00050349_inc.txt",
     "NCT00061308_exc.txt",
     "NCT00061308_inc.txt",
 ]
 
+shot_list_best = [
+    "NCT01320579_exc.txt",
+    "NCT01320579_inc.txt",
+    "NCT01491763_exc.txt",
+    "NCT01669369_inc.txt",
+    "NCT01700790_exc.txt",
+    "NCT01700790_inc.txt",
+    "NCT01709981_exc.txt",
+    "NCT02056288_exc.txt",
+    "NCT02202369_exc.txt"
+]
+
+
 # Load n-shot Data
 study_folder = f"{transform}/input/chia_text_half/"
 label_folder = f'{transform}/input/chia_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list_best)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
 
-cot = "Let's think through this carefully, step by step."
-
-command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
-
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 for i in range(n_shot):
-    messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
+    messages.append({"role": "user", "content": f"{model_desc} {studies[study_filenames[i]]}"})
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
@@ -66,10 +71,10 @@ for file in study_files:
     test_file = read_text_file(study_path+file)
 
     if first_call:
-        messages.append({"role": "user", "content": f"{command} {test_file}"})
+        messages.append({"role": "user", "content": f"{model_desc} {test_file}"})
         first_call = False
     else:
-        messages[-1] = {"role": "user", "content": f"{command} {test_file}"}
+        messages[-1] = {"role": "user", "content": f"{model_desc} {test_file}"}
 
 
     prompt = pipeline.tokenizer.apply_chat_template(

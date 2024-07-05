@@ -8,12 +8,8 @@ batch_path = "eval_p1"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-
-
 n_prompt = 10
 
-#temp = 0.6
-#temp_str = f"_temp_{str(temp).split('.')[1]}"
 temp_str = ""
 cot_true = "" #"_cot"
 
@@ -73,7 +69,7 @@ for file in study_files:
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
-            temperature=0.6,
+            temperature=0.5,
             top_p=0.95,
     )
 
