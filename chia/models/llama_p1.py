@@ -96,7 +96,7 @@ for file in study_files:
             temperature=0.5,
             top_p=0.95,
     )
-
+ 
     gen_output = outputs[0]["generated_text"][len(prompt):]
 
     save_txt(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
