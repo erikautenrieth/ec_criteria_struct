@@ -1,0 +1,184 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Received nutrition care previously during current admission",
+                          "Eq-Comparison": [
+                            "Received previously",
+                            "current"
+                          ],
+                          "Procedure": [
+                            "nutrition care"
+                          ],
+                          "Encounter": [
+                            "admission"
+                          ],
+                          "Eq-Operator": [
+                            "-"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "Received previously",
+                            "current"
+                          ],
+                          "Procedure-Name": [
+                            "nutrition care"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "h"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "- Pregnant women",
+                          "Condition": [
+                            "Pregnant"
+                          ],
+                          "Life-Stage-And-Gender": [
+                            "women"
+                          ],
+                          "Eq-Operator": [
+                            "-"
+                          ],
+                          "Condition-Name": [
+                            "Pregnant"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Prisoners",
+                      "Observation": [
+                        "Prisoners"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Observation-Name": [
+                        "Prisoners"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Infants currently in the neonatal intensive care unit (NICU)",
+                      "Eq-Comparison": [
+                        "currently"
+                      ],
+                      "Encounter": [
+                        "neonatal intensive care unit",
+                        "NICU"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "Infants"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "currently"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "h"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "with a diagnosis of prematurity",
+                      "Condition": [
+                        "prematurity"
+                      ],
+                      "Condition-Name": [
+                        "prematurity"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Neonates of uncertain viability",
+                  "Life-Stage-And-Gender": [
+                    "Neonates"
+                  ],
+                  "Condition": [
+                    "uncertain viability"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Condition-Name": [
+                    "uncertain viability"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or non-viable neonates",
+                  "Life-Stage-And-Gender": [
+                    "neonates"
+                  ],
+                  "Condition": [
+                    "non-viable"
+                  ],
+                  "Condition-Name": [
+                    "non-viable"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patients receiving palliative/hospice care",
+          "Eq-Comparison": [
+            "receiving"
+          ],
+          "Procedure": [
+            "palliative/hospice care"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Eq-Temporal-Period": [
+            "receiving"
+          ],
+          "Procedure-Name": [
+            "palliative/hospice care"
+          ],
+          "Eq-Temporal-Unit": [
+            "h"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Patient admitted for long-term acute care (LTAC)",
+      "Encounter": [
+        "admitted"
+      ],
+      "Procedure": [
+        "long-term acute care",
+        "LTAC"
+      ],
+      "Eq-Operator": [
+        "-"
+      ],
+      "Procedure-Name": [
+        "long-term acute care",
+        "LTAC"
+      ],
+      "Eq-Temporal-Unit": [
+        "h"
+      ]
+    }
+  }
+}

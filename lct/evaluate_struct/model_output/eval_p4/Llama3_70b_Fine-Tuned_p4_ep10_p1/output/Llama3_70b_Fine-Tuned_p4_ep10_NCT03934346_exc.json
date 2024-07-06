@@ -1,0 +1,170 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Those reporting any chronic",
+                  "Acuteness": [
+                    "chronic"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or acute diseases,",
+                      "Acuteness": [
+                        "acute"
+                      ],
+                      "Condition": [
+                        "diseases"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "food allergies,",
+                          "Allergy": [
+                            "allergies"
+                          ],
+                          "Allergy-Name": [
+                            "food"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "smoking",
+                              "Observation": [
+                                "smoking"
+                              ],
+                              "Observation-Name": [
+                                "smoking"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or alcohol abuse",
+                              "Condition": [
+                                "alcohol abuse"
+                              ],
+                              "Condition-Name": [
+                                "alcohol abuse"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Use of illicit drugs;",
+                  "Drug": [
+                    "illicit drugs"
+                  ],
+                  "Drug-Name": [
+                    "illicit drugs"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "regular consumption of medications,",
+                      "Drug": [
+                        "medications"
+                      ],
+                      "Eq-Comparison": [
+                        "regular"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "regular"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "micronutrient supplements,",
+                          "Drug": [
+                            "micronutrient supplements"
+                          ],
+                          "Drug-Name": [
+                            "micronutrient supplements"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or both"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Vegetarians,",
+              "Condition": [
+                "Vegetarians"
+              ],
+              "Condition-Name": [
+                "Vegetarians"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or those"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "unable to eat meat, are also excluded since the foods for the study contain meat",
+                      "Negation": [
+                        "unable"
+                      ],
+                      "Condition": [
+                        "eat meat"
+                      ],
+                      "Condition-Name": [
+                        "eat meat"
+                      ],
+                      "Study": [
+                        "study"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Unable to refrain from taking medications during the study period",
+          "Negation": [
+            "Unable"
+          ],
+          "Drug": [
+            "medications"
+          ],
+          "Study": [
+            "study"
+          ]
+        }
+      }
+    }
+  }
+}

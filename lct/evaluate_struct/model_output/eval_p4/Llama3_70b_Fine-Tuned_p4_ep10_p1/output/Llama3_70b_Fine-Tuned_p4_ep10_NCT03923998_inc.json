@@ -1,0 +1,116 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. Histologically confirmed stage IVa squamous cell carcinoma of the oral cavity.",
+          "Eq-Unit": [
+            "stage"
+          ],
+          "Eq-Value": [
+            "IV"
+          ],
+          "Condition": [
+            "squamous cell carcinoma"
+          ],
+          "Condition-Name": [
+            "squamous cell carcinoma"
+          ],
+          "Modifier": [
+            "oral cavity"
+          ],
+          "Eq-Comparison": [
+            "stage IV"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "2. Surgically resectable oral squamous carcinoma",
+              "Condition": [
+                "squamous cell carcinoma",
+                "squamous carcinoma"
+              ],
+              "Condition-Name": [
+                "squamous cell carcinoma",
+                "squamous carcinoma"
+              ],
+              "Modifier": [
+                "oral"
+              ],
+              "Procedure": [
+                "Surgically resectable"
+              ],
+              "Procedure-Name": [
+                "Surgically resectable"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "with invasion of mandible",
+                  "Condition": [
+                    "invasion"
+                  ],
+                  "Condition-Name": [
+                    "invasion"
+                  ],
+                  "Modifier": [
+                    "mandible"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or maxilla.",
+                  "Modifier": [
+                    "maxilla"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "3. Newly diagnosed",
+          "Eq-Comparison": [
+            "Newly"
+          ],
+          "Eq-Temporal-Recency": [
+            "Newly"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or previously untreated squamous cell carcinoma",
+              "Condition": [
+                "squamous cell carcinoma"
+              ],
+              "Condition-Name": [
+                "squamous cell carcinoma"
+              ],
+              "Eq-Comparison": [
+                "previously"
+              ],
+              "Eq-Temporal-Period": [
+                "previously"
+              ],
+              "Procedure": [
+                "untreated"
+              ]
+            },
+            "right": {
+              "raw_text": "of the oral cavity.",
+              "Modifier": [
+                "oral cavity"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

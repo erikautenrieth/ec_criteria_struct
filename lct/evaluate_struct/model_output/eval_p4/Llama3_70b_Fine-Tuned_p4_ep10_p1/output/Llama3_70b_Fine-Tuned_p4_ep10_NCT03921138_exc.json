@@ -1,0 +1,92 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Hysterectomy in a context of gynecologic cancer",
+          "Procedure": [
+            "Hysterectomy"
+          ],
+          "Procedure-Name": [
+            "Hysterectomy"
+          ],
+          "Condition": [
+            "cancer"
+          ],
+          "Condition-Name": [
+            "cancer"
+          ],
+          "Modifier": [
+            "gynecologic"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "-"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Hysterectomy not carried out using laparoscopy",
+                  "Procedure": [
+                    "Hysterectomy",
+                    "laparoscopy"
+                  ],
+                  "Procedure-Name": [
+                    "Hysterectomy",
+                    "laparoscopy"
+                  ],
+                  "Negation": [
+                    "not"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Fimbriated end missing",
+          "Condition": [
+            "Fimbriated end"
+          ],
+          "Condition-Name": [
+            "Fimbriated end"
+          ],
+          "Modifier": [
+            "missing"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or damaged",
+              "Modifier": [
+                "damaged"
+              ]
+            },
+            "right": {
+              "raw_text": "or impossible for pathologist to analyze",
+              "Procedure": [
+                "analyze"
+              ],
+              "Procedure-Name": [
+                "analyze"
+              ],
+              "Negation": [
+                "impossible"
+              ],
+              "Provider": [
+                "pathologist"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

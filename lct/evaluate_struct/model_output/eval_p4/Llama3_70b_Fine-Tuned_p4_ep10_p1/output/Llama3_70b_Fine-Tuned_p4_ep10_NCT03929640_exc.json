@@ -1,0 +1,259 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- Major intra-operative",
+                              "Modifier": [
+                                "intra-operative"
+                              ],
+                              "Severity": [
+                                "Major"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or post-operative complication such that clinician recommends patient should",
+                                  "Modifier": [
+                                    "post-operative"
+                                  ],
+                                  "Condition": [
+                                    "complication"
+                                  ],
+                                  "Condition-Name": [
+                                    "complication"
+                                  ]
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "not receive non-steroidal anti-inflammatory drugs",
+                                      "Drug": [
+                                        "non-steroidal anti-inflammatory drugs"
+                                      ],
+                                      "Drug-Name": [
+                                        "non-steroidal anti-inflammatory drugs"
+                                      ],
+                                      "Negation": [
+                                        "not"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "or that patient requires acetaminophen to treat fever (ie suspected endometritis)",
+                                      "Drug": [
+                                        "acetaminophen"
+                                      ],
+                                      "Drug-Name": [
+                                        "acetaminophen"
+                                      ],
+                                      "Condition": [
+                                        "endometritis",
+                                        "fever"
+                                      ],
+                                      "Condition-Name": [
+                                        "endometritis",
+                                        "fever"
+                                      ],
+                                      "Assertion": [
+                                        "requires"
+                                      ],
+                                      "Negation": [
+                                        "not"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- Unplanned surgery (hysterectomy,",
+                              "Procedure": [
+                                "surgery",
+                                "hysterectomy"
+                              ],
+                              "Procedure-Name": [
+                                "surgery",
+                                "hysterectomy"
+                              ],
+                              "Modifier": [
+                                "Unplanned"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "bowel/",
+                                  "Modifier": [
+                                    "bowel"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "bladder repair)",
+                                  "Modifier": [
+                                    "bladder"
+                                  ],
+                                  "Procedure": [
+                                    "repair"
+                                  ],
+                                  "Procedure-Name": [
+                                    "repair"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Allergy",
+                          "Allergy": [
+                            "Allergy"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or contraindication to study medication",
+                          "Contraindication": [
+                            "contraindication"
+                          ],
+                          "Drug": [
+                            "medication"
+                          ],
+                          "Study": [
+                            "study"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "-"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Non-English speaking",
+                          "Language": [
+                            "English"
+                          ],
+                          "Negation": [
+                            "Non"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Inability to provide informed consent",
+              "Assertion": [
+                "Inability"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- History of opioid,",
+              "Eq-Comparison": [
+                "History"
+              ],
+              "Eq-Temporal-Period": [
+                "History"
+              ],
+              "Modifier": [
+                "opioid"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "other illicit substance,",
+                  "Modifier": [
+                    "illicit substance"
+                  ],
+                  "Other": [
+                    "other"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or alcohol use disorder either before",
+                      "Condition": [
+                        "use disorder"
+                      ],
+                      "Condition-Name": [
+                        "use disorder"
+                      ],
+                      "Modifier": [
+                        "alcohol"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or during pregnancy",
+                      "Condition": [
+                        "pregnancy"
+                      ],
+                      "Condition-Name": [
+                        "pregnancy"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Severe renal",
+          "Severity": [
+            "Severe"
+          ],
+          "Modifier": [
+            "renal"
+          ]
+        },
+        "right": {
+          "raw_text": "or hepatic impairment",
+          "Condition": [
+            "impairment"
+          ],
+          "Condition-Name": [
+            "impairment"
+          ],
+          "Modifier": [
+            "hepatic"
+          ]
+        }
+      }
+    }
+  }
+}

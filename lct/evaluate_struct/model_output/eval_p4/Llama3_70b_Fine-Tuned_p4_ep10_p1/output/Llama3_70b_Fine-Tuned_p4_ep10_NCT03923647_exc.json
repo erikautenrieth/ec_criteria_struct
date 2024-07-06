@@ -1,0 +1,80 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- patients with penetrating abdominal trauma",
+              "Observation": [
+                "trauma"
+              ],
+              "Modifier": [
+                "abdominal",
+                "penetrating"
+              ],
+              "Observation-Name": [
+                "trauma"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- stable patients",
+                  "Stability": [
+                    "stable"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not in need for any intervention for conservative management",
+                      "Procedure": [
+                        "intervention",
+                        "conservative management"
+                      ],
+                      "Negation": [
+                        "need"
+                      ],
+                      "Assertion": [
+                        "need"
+                      ],
+                      "Procedure-Name": [
+                        "intervention",
+                        "conservative management"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- patients with marked haemodynamic instability",
+          "Condition": [
+            "haemodynamic"
+          ],
+          "Stability": [
+            "instability"
+          ],
+          "Condition-Name": [
+            "haemodynamic"
+          ],
+          "Severity": [
+            "marked"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- polyt-traumatized Patients",
+      "Observation": [
+        "traumatized"
+      ],
+      "Observation-Name": [
+        "traumatized"
+      ]
+    }
+  }
+}
