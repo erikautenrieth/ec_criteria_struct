@@ -3,8 +3,8 @@ import os
 import re
 
 
-batch_path = "eval_p1_finetuned_testset"
-model_name = " Naive greedy match"
+batch_path = "eval_p1_finetuned_testset_prompt6_llama3_70b"
+model_name = " Naive greedy match (Prompt 2)"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
@@ -13,7 +13,7 @@ study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}/output/"
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[0:100]
+study_files = os.listdir(study_path)
 
 
 
@@ -82,4 +82,4 @@ for file in study_files:
     output = parse_criteria_file(test_file)
     print(output)
     save_txt(output, f"{output_path}{file_name}.txt")
-#%%
+
