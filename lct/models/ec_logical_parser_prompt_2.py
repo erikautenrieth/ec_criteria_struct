@@ -63,11 +63,14 @@ def apply_logical_operators(criteria_text):
 
     # Apply AND patterns
     for pattern in and_patterns:
-        criteria_text = re.sub(pattern, r' [AND] \g<0>', criteria_text)
+        criteria_text = re.sub(pattern, r'[AND] \g<0>', criteria_text)
 
     # Apply NOT patterns
     for pattern in not_patterns:
-        criteria_text = re.sub(pattern, r' [NOT] \g<0>', criteria_text)
+        criteria_text = re.sub(pattern, r'[NOT] \g<0>', criteria_text)
+
+
+    criteria_text = re.sub(r'\s*(\[OR\]\s*)+', ' [OR] ', criteria_text)
 
     return criteria_text.strip()
 
