@@ -4,7 +4,7 @@ from helper_functions import *
 
 batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur5"
 n_prompt = 6
-n_shot = 4
+n_shot = 3
 
 model_id =  "meta-llama/Llama-2-70b-chat-hf"
 model_name = "Llama-2-70B"
@@ -22,6 +22,8 @@ os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)[:50]
 
+
+## Nur 3- Shot möglich
 shot_list = [
     "NCT03865433.txt",
     "NCT03860324.txt",

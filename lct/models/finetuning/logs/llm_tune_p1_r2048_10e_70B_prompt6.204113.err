@@ -1,0 +1,48 @@
+/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/__init__.py:37: UserWarning: Unsloth: 'CUDA_VISIBLE_DEVICES' is currently 0,1,2,3 
+Multiple CUDA devices detected but we require a single device.
+We will override CUDA_VISIBLE_DEVICES to first device: 0.
+  warnings.warn(
+/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+2024-07-08 18:14:23.876994: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-08 18:14:25.449137: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:15<01:17, 15.52s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:31<01:03, 15.85s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:48<00:48, 16.14s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [01:04<00:32, 16.33s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [01:21<00:16, 16.45s/it]Loading checkpoint shards: 100%|██████████| 6/6 [01:32<00:00, 14.70s/it]Loading checkpoint shards: 100%|██████████| 6/6 [01:32<00:00, 15.45s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Traceback (most recent call last):
+  File "/work/eauten2s/ec_criteria_struct/lct/models/finetuning/finetune_llama3_p1.py", line 34, in <module>
+    model = FastLanguageModel.get_peft_model(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/llama.py", line 1661, in get_peft_model
+    model = _get_peft_model(model, lora_config)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/mapping.py", line 149, in get_peft_model
+    return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](model, peft_config, adapter_name=adapter_name)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/peft_model.py", line 1395, in __init__
+    super().__init__(model, peft_config, adapter_name)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/peft_model.py", line 138, in __init__
+    self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/lora/model.py", line 139, in __init__
+    super().__init__(model, config, adapter_name)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/tuners_utils.py", line 166, in __init__
+    self.inject_adapter(self.model, adapter_name)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/tuners_utils.py", line 372, in inject_adapter
+    self._create_and_replace(peft_config, adapter_name, target, target_name, parent, current_key=key)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/lora/model.py", line 223, in _create_and_replace
+    new_module = self._create_new_module(lora_config, adapter_name, target, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/lora/model.py", line 314, in _create_new_module
+    new_module = dispatcher(target, adapter_name, lora_config=lora_config, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/lora/bnb.py", line 506, in dispatch_bnb_4bit
+    new_module = Linear4bit(target, adapter_name, **fourbit_kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/lora/bnb.py", line 293, in __init__
+    self.update_layer(
+  File "<string>", line 35, in LoraLayer_update_layer
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1173, in to
+    return self._apply(convert)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 779, in _apply
+    module._apply(fn)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 804, in _apply
+    param_applied = fn(param)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1159, in convert
+    return t.to(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 224.00 MiB. GPU 

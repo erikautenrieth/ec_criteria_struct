@@ -80,7 +80,6 @@ trainer = SFTTrainer(
     args = TrainingArguments(
         per_device_train_batch_size = 4,
         gradient_accumulation_steps = 4,
-        #max_steps = None, #60,
         num_train_epochs=10,
         learning_rate = 2e-4,
         fp16 = not torch.cuda.is_bf16_supported(),

@@ -1,9 +1,12 @@
 #pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
 #pip install --no-deps xformers "trl<0.9.0" peft accelerate bitsandbytes
+import torch
+import os
 from unsloth import FastLanguageModel
 from trl import SFTTrainer
 from transformers import TrainingArguments
-import torch
+from datasets import load_from_disk, DatasetDict
+
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
 load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
@@ -22,22 +25,23 @@ fourbit_models = [
 ] # More models at https://huggingface.co/unsloth
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = "meta-llama/Meta-Llama-3-70B-Instruct", #"unsloth/llama-3-8b-Instruct-bnb-4bit",   # meta-llama/Meta-Llama-3-8B-Instruct
+    model_name = "meta-llama/Meta-Llama-3-70B-Instruct", 
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
-    token = "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"# token = "hf_...", # use one if using gated models like meta-llama/Llama-2-7b-hf
+    token = "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"
 )
+
+## 2048 _> 224.00 MiB. GPU 
 model = FastLanguageModel.get_peft_model(
     model,
-    r = 256, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+    r = 1024, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128,256, 512, 1024, 2048
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 32, # 16,
     lora_dropout = 0, # Supports any, but = 0 is optimized
     bias = "none",    # Supports any, but = "none" is optimized
-    # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
-    use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context
+    use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context  # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
     random_state = 3407,
     use_rslora = True,  # We support rank stabilized LoRA
     loftq_config = None, # And LoftQ
@@ -45,7 +49,6 @@ model = FastLanguageModel.get_peft_model(
 
 
 ## 80/20 Training 904 Dokumente Training, 202 Test Set [Random]
-
 ## Dataset muss in der selben Struktur sein
 alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
 
@@ -59,6 +62,7 @@ alpaca_prompt = """Below is an instruction that describes a task, paired with an
 {}"""
 
 EOS_TOKEN = tokenizer.eos_token # Must add EOS_TOKEN
+
 def formatting_prompts_func(examples):
     instructions = examples["instruction"]
     inputs       = examples["input"]
@@ -71,13 +75,7 @@ def formatting_prompts_func(examples):
     return { "text" : texts, }
 pass
 
-# # Taushce hier die Daten
-# from datasets import load_dataset
-# dataset = load_dataset("yahma/alpaca-cleaned", split = "train")
-# dataset = dataset.map(formatting_prompts_func, batched = True,)
 
-import os
-from datasets import load_from_disk, DatasetDict
 dataset_path = 'dataset/dataset_p1_prompt6'
 dataset = load_from_disk(dataset_path)
 train_test_split = dataset['train'].train_test_split(test_size=0.1, seed=42)
@@ -98,16 +96,15 @@ trainer = SFTTrainer(
     packing = False, # Can make training 5x faster for short sequences.
     args = TrainingArguments(
         per_device_train_batch_size = 2,
-        gradient_accumulation_steps = 8,
-        #max_steps = None, #60,
-        num_train_epochs=30,  # 10 (CHIA hat 20 genommen)
+        gradient_accumulation_steps = 4,
+        num_train_epochs=10,  # 10 (CHIA hat 20 genommen)
         learning_rate = 2e-4,
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
         logging_steps = 10,
-        optim = "adamw_8bit",
+        optim = "adamw_torch_fused", # "adamw_8bit",
         weight_decay = 0.01,
-        lr_scheduler_type = "cosine",
+        lr_scheduler_type = "cosine", #linear
         seed = 3407,
         output_dir = "outputs", 
         logging_strategy="steps",
@@ -116,15 +113,12 @@ trainer = SFTTrainer(
         eval_steps = 100,  # Evaluate every 100 steps
         save_steps = 100,  # Save every 100 steps
         load_best_model_at_end=True,
-        metric_for_best_model="eval_loss",  # Choose appropriate metric
+        metric_for_best_model="eval_loss",  
         greater_is_better=False,
     ),
 )
-        #output_dir = "outputs", 
-        #logging_strategy="epoch",
-        #evaluation_strategy="epoch",
-        #save_strategy="epoch",
-        #load_best_model_at_end=True,
+
+
 """ 
 trainer = SFTTrainer(
     model = model,
@@ -177,5 +171,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_Lora_ep30_256_prompt6_evalset") # Local saving
+model.save_pretrained("llama3_70b_Lora_ep10_1024_prompt6") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
