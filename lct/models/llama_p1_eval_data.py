@@ -3,7 +3,7 @@ import transformers
 from helper_functions import *
 
 
-batch_path = "eval_p1_finetuned_testset_prompt6_llama3_70b"#"eval_p1_finetuned_testset_prompt1_llama3_70b"
+batch_path = "eval_1_shot"
 n_prompt = 6
 n_shot = 5
 

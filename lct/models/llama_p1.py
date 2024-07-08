@@ -40,8 +40,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
 
 study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"  #_prompt_{n_prompt}{temp_str}{cot_true}
-#output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/Temperatur {str(temp)}/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 
 os.makedirs(output_path, exist_ok=True)
 
@@ -92,7 +91,6 @@ cot = "Let's think through this carefully, step by step:"
 
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 messages.append({"role": "system", "content": f"{model_desc}"})
-#command = f"{command} {cot}"
 
 for i in range(n_shot):
     messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
@@ -118,7 +116,7 @@ for file in study_files:
         messages.append({"role": "user", "content": f"{command} {test_file}"})
         first_call = False
     else:
-        messages[-1] = {"role": "user", "content": f"{command} {test_file}"} # {cot} 
+        messages[-1] = {"role": "user", "content": f"{command} {test_file}"} 
 
 
     prompt = pipeline.tokenizer.apply_chat_template(
