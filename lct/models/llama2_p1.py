@@ -4,7 +4,7 @@ from helper_functions import *
 
 batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur5"
 n_prompt = 6
-n_shot = 5
+n_shot = 4
 
 model_id =  "meta-llama/Llama-2-70b-chat-hf"
 model_name = "Llama-2-70B"
