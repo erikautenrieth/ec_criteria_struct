@@ -47,7 +47,7 @@ def plot_metrics(all_metrics):
         for j, metric in enumerate(metrics_to_plot):
             for k, v in enumerate(metric_values[metric]):
                 ax.text(k + j * bar_width, v + 1, f'{v:.1f}%', ha='center', fontsize=10)
-
+    plt.savefig('pics/all_operators.png')
     plt.show()
 
 

@@ -8,9 +8,13 @@ def read_file(file_path):
     with open(file_path, 'r', encoding="utf-8") as file:
         return file.read()
 
-def extract_nct_number(filename):
-    match = re.search(r'(NCT\d+)', filename)
-    return match.group(1) if match else None
+
+def extract_nct_number_and_suffix(filename):
+    match = re.search(r'(NCT\d+)_(inc|exc)', filename)
+    if match:
+        return match.group(1), match.group(2)
+    return None, None
+
 def extract_operators(text):
     operators = re.findall(r'\[(AND|OR|NOT)\]', text)
     return operators
@@ -41,8 +45,8 @@ def compare_operators(label_text, model_text, operator):
 
     label_words = label_words_dict.get(operator, [])
     model_words = model_words_dict.get(operator, [])
-    #print("label_words_dict",label_words)
-    #print("model_words_dict",model_words)
+    print("label_words_dict",label_words)
+    print("model_words_dict",model_words)
     #print([word for word in label_words if word in model_words])
 
     tp = sum(1 for word in label_words if word in model_words)
@@ -101,13 +105,12 @@ def evaluate_models(label_folder, model_folder, model_name, raw_lct_text_folder,
 
     for model_file in os.listdir(model_folder):
         if model_file.endswith('.txt'):
-            nct_number = extract_nct_number(model_file)
+            nct_number, suffix = extract_nct_number_and_suffix(model_file)
             if nct_number:
-                #print(nct_number)
-                label_file_path = os.path.join(label_folder, f'{nct_number}.txt')
+                print(nct_number)
+                label_file_path = os.path.join(label_folder, f'{nct_number}_{suffix}.txt')
                 model_file_path = os.path.join(model_folder, model_file)
-                raw_lct_text_path = os.path.join(raw_lct_text_folder, f'{nct_number}.txt')
-
+                raw_lct_text_path = os.path.join(raw_lct_text_folder, f'{nct_number}_{suffix}.txt')
                 if os.path.exists(label_file_path):
                     processed_label_files += 1
                     label_text = read_file(label_file_path)
