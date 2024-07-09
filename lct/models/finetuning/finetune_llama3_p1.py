@@ -99,17 +99,14 @@ trainer = SFTTrainer(
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
         logging_steps = 10,
-        evaluation_strategy="epoch",
+        save_strategy="epoch",
         optim = "adamw_8bit", # "adamw_8bit",adamw_torch_fused
-        #weight_decay = 0.01,
         max_grad_norm=0.3,                      # max gradient norm based on QLoRA paper
         warmup_ratio=0.03,
         lr_scheduler_type = "constant", #linear
         seed = 3407,
         output_dir = "outputs", 
         load_best_model_at_end=True,
-        metric_for_best_model="eval_loss",  
-        greater_is_better=False,
     ),
 )
 
