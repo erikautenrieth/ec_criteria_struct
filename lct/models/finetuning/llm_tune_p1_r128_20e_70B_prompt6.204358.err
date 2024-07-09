@@ -1,0 +1,39 @@
+/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/__init__.py:37: UserWarning: Unsloth: 'CUDA_VISIBLE_DEVICES' is currently 0,1,2,3 
+Multiple CUDA devices detected but we require a single device.
+We will override CUDA_VISIBLE_DEVICES to first device: 0.
+  warnings.warn(
+/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+2024-07-09 15:49:26.248128: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-09 15:49:27.312721: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:01<00:06,  1.28s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:02<00:05,  1.28s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:03<00:03,  1.31s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:05<00:02,  1.34s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:06<00:01,  1.37s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:07<00:00,  1.22s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:07<00:00,  1.28s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Unsloth: Dropout = 0 is supported for fast patching. You are using dropout = 0.05.
+Unsloth will patch all other layers, except LoRA matrices, causing a performance hit.
+Unsloth 2024.6 patched 80 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
+/home/eauten2s/.local/lib/python3.9/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map:   0%|          | 0/81 [00:00<?, ? examples/s]Map: 100%|██████████| 81/81 [00:00<00:00, 1098.51 examples/s]
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 723 | Num Epochs = 20
+O^O/ \_/ \    Batch size per device = 4 | Gradient Accumulation steps = 2
+\        /    Total batch size = 8 | Total steps = 1,800
+ "-____-"     Number of trainable parameters = 1,656,750,080
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+  0%|          | 0/1800 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+  0%|          | 1/1800 [00:15<7:44:07, 15.48s/it]  0%|          | 2/1800 [00:29<7:14:35, 14.50s/it]  0%|          | 3/1800 [00:47<8:01:48, 16.09s/it]  0%|          | 4/1800 [01:09<9:12:26, 18.46s/it]  0%|          | 5/1800 [01:24<8:31:51, 17.11s/it]  0%|          | 6/1800 [01:39<8:10:05, 16.39s/it]  0%|          | 7/1800 [01:55<8:09:31, 16.38s/it]  0%|          | 8/1800 [02:11<8:09:29, 16.39s/it]  0%|          | 9/1800 [02:27<8:06:31, 16.30s/it]  1%|          | 10/1800 [02:41<7:38:32, 15.37s/it]                                                     1%|          | 10/1800 [02:41<7:38:32, 15.37s/it]  1%|          | 11/1800 [02:58<7:51:41, 15.82s/it]  1%|          | 12/1800 [03:19<8:40:53, 17.48s/it]  1%|          | 13/1800 [03:39<9:07:31, 18.38s/it]  1%|          | 14/1800 [03:53<8:28:33, 17.08s/it]  1%|          | 15/1800 [04:11<8:35:44, 17.34s/it]  1%|          | 16/1800 [04:28<8:27:33, 17.07s/it]  1%|          | 17/1800 [04:45<8:26:16, 17.04s/it]  1%|          | 18/1800 [05:00<8:06:48, 16.39s/it]  1%|          | 19/1800 [05:17<8:17:39, 16.77s/it]  1%|          | 20/1800 [05:31<7:48:19, 15.79s/it]                                                     1%|          | 20/1800 [05:31<7:48:19, 15.79s/it]  1%|          | 21/1800 [05:50<8:20:27, 16.88s/it]  1%|          | 22/1800 [06:05<8:04:45, 16.36s/it]  1%|▏         | 23/1800 [06:21<8:01:56, 16.27s/it]  1%|▏         | 24/1800 [06:38<8:02:37, 16.31s/it]  1%|▏         | 25/1800 [06:55<8:09:26, 16.54s/it]  1%|▏         | 26/1800 [07:13<8:27:27, 17.16s/it]  2%|▏         | 27/1800 [07:32<8:41:26, 17.65s/it]  2%|▏         | 28/1800 [07:47<8:13:53, 16.72s/it]  2%|▏         | 29/1800 [08:03<8:10:08, 16.61s/it]  2%|▏         | 30/1800 [08:18<7:53:47, 16.06s/it]                                                     2%|▏         | 30/1800 [08:18<7:53:47, 16.06s/it]  2%|▏         | 31/1800 [08:33<7:43:23, 15.72s/it]  2%|▏         | 32/1800 [08:48<7:35:22, 15.45s/it]  2%|▏         | 33/1800 [09:04<7:41:06, 15.66s/it]  2%|▏         | 34/1800 [09:20<7:48:50, 15.93s/it]  2%|▏         | 35/1800 [09:36<7:42:37, 15.73s/it]  2%|▏         | 36/1800 [09:49<7:20:37, 14.99s/it]  2%|▏         | 37/1800 [10:04<7:23:18, 15.09s/it]  2%|▏         | 38/1800 [10:19<7:15:50, 14.84s/it]  2%|▏         | 39/1800 [10:35<7:31:30, 15.38s/it]  2%|▏         | 40/1800 [10:48<7:10:01, 14.66s/it]                                                     2%|▏         | 40/1800 [10:48<7:10:01, 14.66s/it]  2%|▏         | 41/1800 [11:07<7:43:48, 15.82s/it]  2%|▏         | 42/1800 [11:24<7:57:46, 16.31s/it]  2%|▏         | 43/1800 [11:40<7:57:20, 16.30s/it]  2%|▏         | 44/1800 [11:58<8:08:41, 16.70s/it]  2%|▎         | 45/1800 [12:15<8:13:43, 16.88s/it]  3%|▎         | 46/1800 [12:35<8:35:44, 17.64s/it]  3%|▎         | 47/1800 [12:52<8:35:31, 17.64s/it]  3%|▎         | 48/1800 [13:10<8:34:11, 17.61s/it]  3%|▎         | 49/1800 [13:26<8:22:23, 17.22s/it]  3%|▎         | 50/1800 [13:40<7:54:02, 16.25s/it]                                                     3%|▎         | 50/1800 [13:40<7:54:02, 16.25s/it]
