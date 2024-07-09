@@ -2,9 +2,9 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_5_shot_reproduzierbar"
+batch_path = "eval_p1_prompt_evalset"
 #batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur5"
-n_prompt = 6
+n_prompt = 1
 n_shot = 5
 
 cot_true = "" # "_cot"
@@ -39,13 +39,13 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
 
-study_path = f"{transform_lct}/input/lct_txt/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
+study_path = f"{transform_lct}/input/dataset/test/input/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_1/output/"
 
 os.makedirs(output_path, exist_ok=True)
 
 
-study_files = os.listdir(study_path)[:50]
+study_files = os.listdir(study_path)
 
 shot_list = [
     "NCT03865433.txt",
@@ -89,7 +89,7 @@ messages = []
 cot = "Let's think through this carefully, step by step:"
 #command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
 
-command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 for i in range(n_shot):
