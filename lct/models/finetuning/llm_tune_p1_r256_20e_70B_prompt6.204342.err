@@ -1,0 +1,110 @@
+/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/__init__.py:37: UserWarning: Unsloth: 'CUDA_VISIBLE_DEVICES' is currently 0,1,2,3 
+Multiple CUDA devices detected but we require a single device.
+We will override CUDA_VISIBLE_DEVICES to first device: 0.
+  warnings.warn(
+/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+2024-07-09 14:47:23.462116: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-09 14:47:24.607100: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:01<00:06,  1.27s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:02<00:05,  1.27s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:03<00:03,  1.29s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:05<00:02,  1.30s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:06<00:01,  1.31s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:07<00:00,  1.18s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:07<00:00,  1.24s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Unsloth: Dropout = 0 is supported for fast patching. You are using dropout = 0.05.
+Unsloth will patch all other layers, except LoRA matrices, causing a performance hit.
+Unsloth 2024.6 patched 80 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
+/home/eauten2s/.local/lib/python3.9/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map:   0%|          | 0/723 [00:00<?, ? examples/s]Map: 100%|██████████| 723/723 [00:00<00:00, 1258.61 examples/s]Map: 100%|██████████| 723/723 [00:00<00:00, 1229.23 examples/s]
+Map:   0%|          | 0/81 [00:00<?, ? examples/s]Map: 100%|██████████| 81/81 [00:00<00:00, 1160.36 examples/s]
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 723 | Num Epochs = 20
+O^O/ \_/ \    Batch size per device = 4 | Gradient Accumulation steps = 2
+\        /    Total batch size = 8 | Total steps = 1,800
+ "-____-"     Number of trainable parameters = 3,313,500,160
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+  0%|          | 0/1800 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+  0%|          | 1/1800 [00:16<8:09:04, 16.31s/it]  0%|          | 2/1800 [00:30<7:29:24, 15.00s/it]  0%|          | 3/1800 [00:48<8:13:44, 16.49s/it]  0%|          | 4/1800 [01:10<9:22:22, 18.79s/it]  0%|          | 5/1800 [01:25<8:41:03, 17.42s/it]  0%|          | 6/1800 [01:41<8:18:49, 16.68s/it]  0%|          | 7/1800 [01:57<8:17:56, 16.66s/it]  0%|          | 8/1800 [02:14<8:17:39, 16.66s/it]  0%|          | 9/1800 [02:30<8:14:09, 16.55s/it]  1%|          | 10/1800 [02:44<7:45:26, 15.60s/it]                                                     1%|          | 10/1800 [02:44<7:45:26, 15.60s/it]  1%|          | 11/1800 [03:01<7:58:20, 16.04s/it]  1%|          | 12/1800 [03:22<8:47:24, 17.70s/it]  1%|          | 13/1800 [03:43<9:13:45, 18.59s/it]  1%|          | 14/1800 [03:57<8:34:35, 17.29s/it]  1%|          | 15/1800 [04:15<8:41:53, 17.54s/it]  1%|          | 16/1800 [04:32<8:33:31, 17.27s/it]  1%|          | 17/1800 [04:49<8:31:59, 17.23s/it]  1%|          | 18/1800 [05:04<8:12:28, 16.58s/it]  1%|          | 19/1800 [05:22<8:23:20, 16.96s/it]  1%|          | 20/1800 [05:36<7:53:58, 15.98s/it]                                                     1%|          | 20/1800 [05:36<7:53:58, 15.98s/it]  1%|          | 21/1800 [05:55<8:26:12, 17.07s/it]  1%|          | 22/1800 [06:11<8:10:26, 16.55s/it]  1%|▏         | 23/1800 [06:27<8:07:38, 16.46s/it]  1%|▏         | 24/1800 [06:44<8:08:12, 16.49s/it]  1%|▏         | 25/1800 [07:01<8:14:46, 16.72s/it]  1%|▏         | 26/1800 [07:20<8:32:54, 17.35s/it]  2%|▏         | 27/1800 [07:39<8:46:57, 17.83s/it]  2%|▏         | 28/1800 [07:53<8:19:24, 16.91s/it]  2%|▏         | 29/1800 [08:10<8:15:53, 16.80s/it]  2%|▏         | 30/1800 [08:25<7:59:47, 16.26s/it]                                                     2%|▏         | 30/1800 [08:25<7:59:47, 16.26s/it]  2%|▏         | 31/1800 [08:40<7:49:33, 15.93s/it]  2%|▏         | 32/1800 [08:55<7:41:39, 15.67s/it]  2%|▏         | 33/1800 [09:11<7:47:40, 15.88s/it]  2%|▏         | 34/1800 [09:28<7:55:42, 16.16s/it]  2%|▏         | 35/1800 [09:44<7:49:32, 15.96s/it]  2%|▏         | 36/1800 [09:57<7:27:33, 15.22s/it]  2%|▏         | 37/1800 [10:13<7:30:17, 15.32s/it]  2%|▏         | 38/1800 [10:27<7:22:50, 15.08s/it]  2%|▏         | 39/1800 [10:44<7:38:13, 15.61s/it]  2%|▏         | 40/1800 [10:57<7:16:23, 14.88s/it]                                                     2%|▏         | 40/1800 [10:57<7:16:23, 14.88s/it]  2%|▏         | 41/1800 [11:16<7:50:15, 16.04s/it]  2%|▏         | 42/1800 [11:34<8:04:32, 16.54s/it]  2%|▏         | 43/1800 [11:50<8:04:31, 16.55s/it]  2%|▏         | 44/1800 [12:08<8:15:51, 16.94s/it]  2%|▎         | 45/1800 [12:26<8:20:55, 17.13s/it]  3%|▎         | 46/1800 [12:45<8:43:00, 17.89s/it]  3%|▎         | 47/1800 [13:03<8:43:00, 17.90s/it]  3%|▎         | 48/1800 [13:21<8:41:43, 17.87s/it]  3%|▎         | 49/1800 [13:38<8:30:01, 17.48s/it]  3%|▎         | 50/1800 [13:52<8:01:29, 16.51s/it]                                                     3%|▎         | 50/1800 [13:52<8:01:29, 16.51s/it]  3%|▎         | 51/1800 [14:06<7:35:08, 15.61s/it]  3%|▎         | 52/1800 [14:21<7:35:41, 15.64s/it]  3%|▎         | 53/1800 [14:41<8:09:08, 16.80s/it]  3%|▎         | 54/1800 [14:59<8:18:05, 17.12s/it]  3%|▎         | 55/1800 [15:19<8:42:32, 17.97s/it]  3%|▎         | 56/1800 [15:37<8:48:39, 18.19s/it]  3%|▎         | 57/1800 [15:52<8:20:42, 17.24s/it]  3%|▎         | 58/1800 [16:08<8:10:11, 16.88s/it]  3%|▎         | 59/1800 [16:23<7:54:01, 16.34s/it]  3%|▎         | 60/1800 [16:41<8:09:08, 16.87s/it]                                                     3%|▎         | 60/1800 [16:41<8:09:08, 16.87s/it]  3%|▎         | 61/1800 [16:59<8:16:03, 17.12s/it]  3%|▎         | 62/1800 [17:12<7:39:43, 15.87s/it]  4%|▎         | 63/1800 [17:30<7:59:17, 16.56s/it]  4%|▎         | 64/1800 [17:45<7:43:03, 16.00s/it]  4%|▎         | 65/1800 [17:59<7:26:02, 15.42s/it]  4%|▎         | 66/1800 [18:12<7:08:16, 14.82s/it]  4%|▎         | 67/1800 [18:30<7:28:00, 15.51s/it]  4%|▍         | 68/1800 [18:44<7:14:05, 15.04s/it]  4%|▍         | 69/1800 [19:01<7:34:23, 15.75s/it]  4%|▍         | 70/1800 [19:19<7:54:46, 16.47s/it]                                                     4%|▍         | 70/1800 [19:19<7:54:46, 16.47s/it]  4%|▍         | 71/1800 [19:37<8:11:08, 17.04s/it]  4%|▍         | 72/1800 [19:50<7:33:11, 15.74s/it]  4%|▍         | 73/1800 [20:07<7:41:57, 16.05s/it]  4%|▍         | 74/1800 [20:24<7:54:36, 16.50s/it]  4%|▍         | 75/1800 [20:40<7:43:44, 16.13s/it]  4%|▍         | 76/1800 [20:58<8:00:53, 16.74s/it]  4%|▍         | 77/1800 [21:12<7:39:26, 16.00s/it]  4%|▍         | 78/1800 [21:27<7:31:00, 15.71s/it]  4%|▍         | 79/1800 [21:42<7:22:03, 15.41s/it]  4%|▍         | 80/1800 [21:59<7:33:30, 15.82s/it]                                                     4%|▍         | 80/1800 [21:59<7:33:30, 15.82s/it]  4%|▍         | 81/1800 [22:13<7:20:10, 15.36s/it]  5%|▍         | 82/1800 [22:31<7:41:56, 16.13s/it]  5%|▍         | 83/1800 [22:48<7:47:16, 16.33s/it]  5%|▍         | 84/1800 [23:06<8:03:24, 16.90s/it]  5%|▍         | 85/1800 [23:23<8:07:29, 17.05s/it]  5%|▍         | 86/1800 [23:39<7:55:37, 16.65s/it]  5%|▍         | 87/1800 [23:55<7:45:55, 16.32s/it]  5%|▍         | 88/1800 [24:06<7:06:32, 14.95s/it]  5%|▍         | 89/1800 [24:21<7:07:41, 15.00s/it]  5%|▌         | 90/1800 [24:38<7:21:34, 15.49s/it]                                                     5%|▌         | 90/1800 [24:38<7:21:34, 15.49s/it]Traceback (most recent call last):
+  File "/work/eauten2s/ec_criteria_struct/lct/models/finetuning/finetune_llama3_p1.py", line 123, in <module>
+    trainer_stats = trainer.train()
+  File "<string>", line 123, in train
+  File "<string>", line 461, in _fast_inner_training_loop
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/trainer.py", line 2793, in _maybe_log_save_evaluate
+    metrics = self._evaluate(trial, ignore_keys_for_eval)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/trainer.py", line 2750, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/trainer.py", line 3641, in evaluate
+    output = eval_loop(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/trainer.py", line 3826, in evaluation_loop
+    losses, logits, labels = self.prediction_step(model, inputs, prediction_loss_only, ignore_keys=ignore_keys)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/trainer.py", line 4040, in prediction_step
+    loss, outputs = self.compute_loss(model, inputs, return_outputs=True)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/trainer.py", line 3338, in compute_loss
+    outputs = model(**inputs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/utils/operations.py", line 822, in forward
+    return model_forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/utils/operations.py", line 810, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/amp/autocast_mode.py", line 16, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/llama.py", line 892, in PeftModelForCausalLM_fast_forward
+    return self.base_model(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/tuners_utils.py", line 179, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/llama.py", line 820, in _CausalLM_fast_forward
+    outputs = self.model(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/llama.py", line 687, in LlamaModel_fast_forward
+    layer_outputs = decoder_layer(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/llama.py", line 455, in LlamaDecoderLayer_fast_forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 215, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/lora/bnb.py", line 474, in forward
+    output = lora_B(lora_A(dropout(x))) * scaling
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 414.00 MiB. GPU 
+  5%|▌         | 90/1800 [24:48<7:51:28, 16.54s/it]
