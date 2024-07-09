@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur5"
+batch_path = "eval_p1_models_prompt6_evaldata"
 n_prompt = 6
 n_shot = 3
 
@@ -14,13 +14,13 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
 
-study_path = f"{transform_lct}/input/lct_txt/"
+study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 
 os.makedirs(output_path, exist_ok=True)
 
 
-study_files = os.listdir(study_path)[:50]
+study_files = os.listdir(study_path)
 
 
 ## Nur 3- Shot möglich
@@ -41,7 +41,7 @@ study_filenames, study_contents, label_filenames, label_contents = read_matching
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
-command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/p6_llama2.txt")
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 for i in range(n_shot):
