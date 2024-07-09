@@ -7,22 +7,18 @@ from trl import SFTTrainer
 from transformers import TrainingArguments
 from datasets import load_from_disk, DatasetDict
 
+
+if torch.cuda.device_count() > 1:
+        print(f"Using {torch.cuda.device_count()} GPUs")
+
+
+
+
+
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
 load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
 
-# 4bit pre quantized models we support for 4x faster downloading + no OOMs.
-fourbit_models = [
-    "unsloth/mistral-7b-v0.3-bnb-4bit",      # New Mistral v3 2x faster!
-    "unsloth/mistral-7b-instruct-v0.3-bnb-4bit",
-    "unsloth/llama-3-8b-bnb-4bit",           # Llama-3 15 trillion tokens model 2x faster!
-    "unsloth/llama-3-8b-Instruct-bnb-4bit",
-    "unsloth/llama-3-70b-bnb-4bit",
-    "unsloth/Phi-3-mini-4k-instruct",        # Phi-3 2x faster!
-    "unsloth/Phi-3-medium-4k-instruct",
-    "unsloth/mistral-7b-bnb-4bit",
-    "unsloth/gemma-7b-bnb-4bit",             # Gemma 2.2x faster!
-] # More models at https://huggingface.co/unsloth
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = "meta-llama/Meta-Llama-3-70B-Instruct", 
@@ -35,7 +31,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 ## 2048 _> 224.00 MiB. GPU 
 model = FastLanguageModel.get_peft_model(
     model,
-    r = 1024, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128,256, 512, 1024, 2048
+    r = 128, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 32, # 16,
@@ -47,6 +43,8 @@ model = FastLanguageModel.get_peft_model(
     loftq_config = None, # And LoftQ
 )
 
+## Try to use 2 GPUs
+#model = torch.nn.DataParallel(model, device_ids=[0,1])
 
 ## 80/20 Training 904 Dokumente Training, 202 Test Set [Random]
 ## Dataset muss in der selben Struktur sein
@@ -171,5 +169,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_Lora_ep10_1024_prompt6") # Local saving
+model.save_pretrained("llama3_70b_Lora_ep10_128_prompt6") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving

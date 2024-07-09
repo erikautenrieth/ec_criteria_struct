@@ -77,10 +77,14 @@ for file in study_files:
                 add_generation_prompt=True
     )
 
+    input_ids = pipeline.tokenizer(prompt, return_tensors="pt").input_ids
+    max_length = 4096
+    max_new_tokens = min(2048, max_length - input_ids.shape[1])
+    print("Max Tokens:", max_new_tokens)
 
     outputs = pipeline(
             prompt,
-            max_new_tokens=2048,
+            max_new_tokens=max_new_tokens,
             eos_token_id=pipeline.tokenizer.eos_token_id,
             do_sample=True,
             temperature=0.5,

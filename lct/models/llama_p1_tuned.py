@@ -6,14 +6,14 @@ from helper_functions import *
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
 
-batch_path = "eval_p1_finetuned_testset_prompt6_llama3_70b" #"eval_p1_finetuned_testset_prompt1_llama3_70b" #"eval_p1_finetuned_testset"
-n_prompt = 1
-#model_name = "llama3_8b_lora_model_ep10"
-
-model_id = "tuned_models/llama3_70b_Lora_ep30_256_prompt6_evalset"     #llama3_70b_Lora_ep20_128_prompt6_evalset #llama3_70b_lora_ep10_prompt1
-model_name = "Llama3_70b_Lora_ep30_prompt6_evalset"
-  
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
+
+batch_path = "eval_p1_finetuned_testset_prompt6_llama3_70b" 
+model_id = "tuned_models/llama3_70b_Lora_ep10_128_prompt6"    
+model_name = "LoRA_Fine-Tuned_ep10_128"
+
+command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+
 study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}/output/"
 os.makedirs(output_path, exist_ok=True)
@@ -39,10 +39,6 @@ alpaca_prompt = """Below is an instruction that describes a task, paired with an
 ### Response:
 {}"""
 
-command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
-
-first_call = True
-
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
@@ -62,7 +58,4 @@ for file in study_files:
     decoded_outputs = tokenizer.batch_decode(outputs)
     response = decoded_outputs[0].split("### Response:")[1].strip()
     response = response.replace("<|eot_id|>", "")
-    print("Output:", decoded_outputs)
-
-    print("Response:", response)
     save_txt(response, f"{output_path}{model_name}_{file_name}.txt")
