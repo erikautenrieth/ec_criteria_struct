@@ -13,8 +13,6 @@ if torch.cuda.device_count() > 1:
 
 
 
-
-
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
 load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
@@ -31,11 +29,11 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 ## 2048 _> 224.00 MiB. GPU 
 model = FastLanguageModel.get_peft_model(
     model,
-    r = 128, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048
+    r = 256, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
-    lora_alpha = 32, # 16,
-    lora_dropout = 0, # Supports any, but = 0 is optimized
+    lora_alpha = 128, # 16,
+    lora_dropout=0.05,
     bias = "none",    # Supports any, but = "none" is optimized
     use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context  # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
     random_state = 3407,
@@ -90,59 +88,30 @@ trainer = SFTTrainer(
     eval_dataset=test,
     dataset_text_field = "text",
     max_seq_length = max_seq_length,
-    dataset_num_proc = 2,
+    #dataset_num_proc = 2,
     packing = False, # Can make training 5x faster for short sequences.
     args = TrainingArguments(
-        per_device_train_batch_size = 2,
-        gradient_accumulation_steps = 4,
-        num_train_epochs=10,  # 10 (CHIA hat 20 genommen)
+        per_device_train_batch_size = 4,
+        gradient_accumulation_steps = 2,
+        gradient_checkpointing=True,   
+        num_train_epochs=20,  # 10 (CHIA hat 20 genommen)
         learning_rate = 2e-4,
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
         logging_steps = 10,
-        optim = "adamw_torch_fused", # "adamw_8bit",
-        weight_decay = 0.01,
-        lr_scheduler_type = "cosine", #linear
+        evaluation_strategy="epoch",
+        optim = "adamw_8bit", # "adamw_8bit",adamw_torch_fused
+        #weight_decay = 0.01,
+        max_grad_norm=0.3,                      # max gradient norm based on QLoRA paper
+        warmup_ratio=0.03,
+        lr_scheduler_type = "constant", #linear
         seed = 3407,
         output_dir = "outputs", 
-        logging_strategy="steps",
-        evaluation_strategy="steps",
-        save_strategy="steps",
-        eval_steps = 100,  # Evaluate every 100 steps
-        save_steps = 100,  # Save every 100 steps
         load_best_model_at_end=True,
         metric_for_best_model="eval_loss",  
         greater_is_better=False,
     ),
 )
-
-
-""" 
-trainer = SFTTrainer(
-    model = model,
-    tokenizer = tokenizer,
-    train_dataset = dataset,
-    dataset_text_field = "text",
-    max_seq_length = max_seq_length,
-    dataset_num_proc = 4,
-    packing = False, # Can make training 5x faster for short sequences.
-    args = TrainingArguments(
-        per_device_train_batch_size = 4,
-        gradient_accumulation_steps = 4,
-        warmup_steps = 50,
-        num_train_epochs=15, 
-        learning_rate = 5e-5,
-        fp16 = not torch.cuda.is_bf16_supported(),
-        bf16 = torch.cuda.is_bf16_supported(),
-        logging_steps = 10,
-        optim = "adamw_torch_fused",
-        weight_decay = 0.01,
-        lr_scheduler_type = "cosine",
-        seed = 3407,
-        output_dir = "outputs",
-    ),
-)
- """
 
 
 #@title Show current memory stats
@@ -169,5 +138,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_Lora_ep10_128_prompt6") # Local saving
+model.save_pretrained("llama3_70b_Lora_ep20_256_prompt6") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
