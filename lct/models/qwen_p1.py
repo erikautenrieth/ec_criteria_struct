@@ -3,22 +3,21 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 device = "cuda" 
 from helper_functions import *
 
-batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur9"#"eval_p1_n_shot"
-n_prompt = 1
+batch_path = "eval_p1_models_prompt6_evaldata"
 n_shot = 15
 
 model_id =  "Qwen/Qwen2-72B-Instruct"
 model_name = "Qwen2-72B"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}_p6.txt") #  p{n_prompt}
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p6.txt") 
 
-study_path = f"{transform_lct}/input/lct_txt/"
+study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 os.makedirs(output_path, exist_ok=True)
 
 
-study_files = os.listdir(study_path)[:50]
+study_files = os.listdir(study_path)
 
 shot_list = [
     "NCT03865433.txt",
@@ -69,7 +68,8 @@ for i in range(n_shot):
 model = AutoModelForCausalLM.from_pretrained(
     "Qwen/Qwen2-72B-Instruct",
     torch_dtype="auto",
-    device_map="auto"
+    device_map="auto",
+    temperature=0.5,
 )
 
 tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2-72B-Instruct")
@@ -105,6 +105,5 @@ for file in study_files:
     ]
 
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-
 
     save_txt(response, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
