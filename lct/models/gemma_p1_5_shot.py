@@ -4,7 +4,7 @@ import torch
 from helper_functions import *
 import re
 
-batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur5"
+batch_path = "eval_p1_models_prompt6_evaldata"
 
 model_name = "Gemma-27b"
 model_id = "google/gemma-2-27b-it"
@@ -15,11 +15,11 @@ n_shot = 5
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-study_path = f"{transform_lct}/input/lct_txt/"
+study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/" 
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[:50]
+study_files = os.listdir(study_path)
 
 shot_list = [
     "NCT03865433.txt",
@@ -28,7 +28,6 @@ shot_list = [
     "NCT03923231.txt",
     "NCT03930121.txt"
 ]
-
 
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
@@ -46,8 +45,6 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype=dtype,
 )
 
-
-
 first_call = True
 
 for file in study_files:
@@ -55,9 +52,7 @@ for file in study_files:
     print("File:", file_name, "\n")
     
     test_file = read_text_file(study_path+file)
-
     messages = [{"role": "user", "content": f"{command}{test_file}"}]
-
 
     prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
 

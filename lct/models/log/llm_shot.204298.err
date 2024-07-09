@@ -1,0 +1,19 @@
+/home/eauten2s/.local/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/models/auto/configuration_auto.py", line 1128, in from_pretrained
+    config_class = CONFIG_MAPPING[config_dict["model_type"]]
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/models/auto/configuration_auto.py", line 825, in __getitem__
+    raise KeyError(key)
+KeyError: 'gemma2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/work/eauten2s/ec_criteria_struct/lct/models/gemma_p1_5_shot.py", line 42, in <module>
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/models/auto/auto_factory.py", line 521, in from_pretrained
+    config, kwargs = AutoConfig.from_pretrained(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/models/auto/configuration_auto.py", line 1130, in from_pretrained
+    raise ValueError(
+ValueError: The checkpoint you are trying to load has model type `gemma2` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.
