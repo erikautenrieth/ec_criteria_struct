@@ -6,11 +6,13 @@ from helper_functions import *
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
 
+# pip install transformers==4.38.0
+
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
-batch_path = "eval_p1_finetuned_testset_prompt6_llama3_70b" 
-model_id = "tuned_models/llama3_70b_Lora_ep10_128_prompt6"    
-model_name = "LoRA_Fine-Tuned_ep10_128"
+batch_path = "eval_p1_finetuned_prompt2" 
+model_id = "tuned_models/llama3_70b_Lora_ep20_128_prompt6_v1"      #llama3_70b_Lora_ep10_128_prompt6_v2
+model_name = "LoRA_Fine-Tuned_ep20_128_v1"
 
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 
