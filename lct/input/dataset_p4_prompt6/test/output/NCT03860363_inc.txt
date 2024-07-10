@@ -1,0 +1,75 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Adult (age ≥ 18)",
+          "Life-Stage-And-Gender": [
+            "Adult"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Comparison": [
+            "≥ 18"
+          ],
+          "Age": [
+            "age"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patient undergoing",
+              "Eq-Comparison": [
+                "undergoing"
+              ],
+              "Eq-Temporal-Period": [
+                "undergoing"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "non-emergent cardiac surgery",
+                  "Procedure": [
+                    "cardiac surgery",
+                    "surgery"
+                  ],
+                  "Procedure-Name": [
+                    "cardiac surgery",
+                    "surgery"
+                  ],
+                  "Modifier": [
+                    "emergent"
+                  ],
+                  "Negation": [
+                    "non"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Anticipated requirement for mediastinal chest tube drainage",
+      "Age": [
+        "age"
+      ],
+      "Procedure": [
+        "mediastinal chest tube drainage"
+      ],
+      "Procedure-Name": [
+        "mediastinal chest tube drainage"
+      ],
+      "Assertion": [
+        "Anticipated requirement"
+      ]
+    }
+  }
+}

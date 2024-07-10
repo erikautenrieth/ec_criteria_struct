@@ -14,17 +14,23 @@ def plot_metrics(all_metrics):
     operators = ['AND', 'OR', 'NOT']
     metrics_to_plot = ['precision', 'recall', 'f1']
 
-    fig, axs = plt.subplots(len(operators), 1, figsize=(12, 24), gridspec_kw={'hspace': 1.2})
+    # SOTA-Metriken
+    sota_metrics = {
+        'AND': {'precision': 54.1, 'recall': 60.0, 'f1': 56.9},
+        'OR': {'precision': 85.1, 'recall': 93.2, 'f1': 89.0},
+        'NOT': {'precision': 74.3, 'recall': 91.0, 'f1': 81.8}
+    }
+
+    fig, axs = plt.subplots(len(operators), 1, figsize=(15, 24), gridspec_kw={'hspace': 1.2})
 
     for i, op in enumerate(operators):
         ax = axs[i]
 
-        model_names = []
-        metric_values = {metric: [] for metric in metrics_to_plot}
+        model_names = ['SOTA'] + list(all_metrics.keys())
+        metric_values = {metric: [sota_metrics[op][metric]] for metric in metrics_to_plot}
 
         for model, model_metrics in all_metrics.items():
             model_name = model.replace("Instruct_", "")
-            model_names.append(model_name)
             for metric in metrics_to_plot:
                 metric_values[metric].append(model_metrics[op][metric])
 

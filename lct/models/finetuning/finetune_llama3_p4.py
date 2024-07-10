@@ -61,7 +61,7 @@ pass
 
 
 
-dataset_path = 'dataset/dataset_p4'
+dataset_path = 'dataset/dataset_p4_prompt6'
 dataset = load_from_disk(dataset_path)
 dataset = dataset['train']
 dataset = dataset.map(formatting_prompts_func, batched=True)
@@ -115,8 +115,8 @@ print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
 
-ep = "ep10"
-new_model_name = f"llama3_70b_finetuned_p4_{ep}"
+
+new_model_name = f"llama3_70b_finetuned_p4_10e_r128"
 
 
 model.save_pretrained(new_model_name) # Local saving
