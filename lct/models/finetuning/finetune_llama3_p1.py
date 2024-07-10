@@ -125,7 +125,7 @@ trainer = SFTTrainer(
             per_device_train_batch_size=4,
             gradient_accumulation_steps=4,
             per_device_eval_batch_size=8,
-            num_train_epochs=20,
+            num_train_epochs=30,
             warmup_ratio=.1,
             learning_rate = 2e-4,
             fp16 = not torch.cuda.is_bf16_supported(),
@@ -136,7 +136,7 @@ trainer = SFTTrainer(
             seed = 3407,
             output_dir = "outputs",
             logging_steps=10,
-            evaluation_strategy='steps',
+            evaluation_strategy='epoch',
             eval_steps=100,  
             eval_accumulation_steps=4,
             save_strategy='epoch',
@@ -171,5 +171,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_Lora_ep20_128_prompt6_v3") # Local saving
+model.save_pretrained("llama3_70b_Lora_ep30_128_prompt6_v3") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving

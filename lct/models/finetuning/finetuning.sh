@@ -5,8 +5,8 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --time=40:00:00          # Time limit hrs:min:sec
 
-#SBATCH --output=llm_tune_p1_r128_20e_70B_prompt6_v3.%j.out   # Standard output and error log
-#SBATCH --error=llm_tune_p1_r128_20e_70B_prompt6_v3.%j.err    # Error log
+#SBATCH --output=llm_tune_p1_r128_30e_70B_prompt6_v3.%j.out   # Standard output and error log
+#SBATCH --error=llm_tune_p1_r128_30e_70B_prompt6_v3.%j.err    # Error log
 #SBATCH --job-name=llm_tune
 
 module load cuda
