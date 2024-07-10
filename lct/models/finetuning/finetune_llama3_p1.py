@@ -81,7 +81,7 @@ train = train.map(formatting_prompts_func, batched=True)
 test = test.map(formatting_prompts_func, batched=True)
 
 
-trainer = SFTTrainer(
+"""trainer = SFTTrainer(
     model = model,
     tokenizer = tokenizer,
     train_dataset=train,
@@ -110,6 +110,40 @@ trainer = SFTTrainer(
         load_best_model_at_end=True,
     ),
 )
+"""
+
+trainer = SFTTrainer(
+        model = model,
+        tokenizer = tokenizer,
+        train_dataset = train,
+        eval_dataset = test,
+        dataset_text_field = "text",
+        max_seq_length = max_seq_length,
+        dataset_num_proc = 1,
+        packing = True, 
+        args = TrainingArguments(
+            per_device_train_batch_size=4,
+            gradient_accumulation_steps=4,
+            per_device_eval_batch_size=8,
+            num_train_epochs=10,
+            warmup_ratio=.1,
+            learning_rate = 2e-4,
+            bf16 = True,
+            optim = "adamw_8bit",
+            weight_decay = 0.01,
+            lr_scheduler_type = "cosine",
+            seed = 3407,
+            output_dir = "outputs",
+            logging_steps=10,
+            eval_strategy='steps',
+            eval_steps=.1,
+            eval_accumulation_steps=4,
+            save_strategy='epoch',
+            save_total_limit=3,
+        ),
+    )
+
+trainer.train()
 
 
 #@title Show current memory stats
@@ -136,5 +170,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_Lora_ep20_128_prompt6") # Local saving
+model.save_pretrained("llama3_70b_Lora_ep10_128_prompt6_v3") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
