@@ -86,7 +86,7 @@ def compare_texts(raw_text, model_text):
 
     return missing_words, missing_percentage, zuviel_words, zuviel_words_pct
 
-def evaluate_models(label_folder, model_folder, model_name, raw_lct_text_folder, output_folder="excel_eval"):
+def evaluate_models(label_folder, model_folder, model_name, raw_lct_text_folder):
     operators = ['AND', 'OR', 'NOT']
     metrics = {op: {'tp': 0, 'fp': 0, 'fn': 0, 'label_count': 0, 'model_count': 0, 'correct_count': 0, 'correct_ncts': set(), 'low_tp_ncts': set()} for op in operators}
     processed_label_files = 0
@@ -95,9 +95,6 @@ def evaluate_models(label_folder, model_folder, model_name, raw_lct_text_folder,
     total_missing_pct = 0.0
     total_zuviel_pct = 0.0
     model_results = []
-
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder)
 
     for model_file in os.listdir(model_folder):
         if model_file.endswith('.txt'):
@@ -175,7 +172,7 @@ def evaluate_models(label_folder, model_folder, model_name, raw_lct_text_folder,
     results['average'] = avg_metrics
 
     #df_results = pd.DataFrame(model_results)
-    #excel_path = os.path.join(output_folder, f'{model_name}_evaluation_results.xlsx')
+    #excel_path = os.path.join("excel_eval", f'{model_name}_evaluation_results.xlsx')
     #df_results.to_excel(excel_path, index=False)
 
     return results
