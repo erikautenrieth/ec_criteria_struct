@@ -1,0 +1,176 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Chronic obstructive pulmonary disorder (COPD).",
+                  "Condition": [
+                    "Chronic obstructive pulmonary disorder",
+                    "COPD",
+                    "disorder"
+                  ],
+                  "Condition-Name": [
+                    "Chronic obstructive pulmonary disorder",
+                    "COPD",
+                    "disorder"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Acuteness": [
+                    "Chronic"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Treatment with continuous positive airway pressure (CPAP) in the past three months.",
+                  "Procedure": [
+                    "continuous positive airway pressure",
+                    "CPAP",
+                    "Treatment"
+                  ],
+                  "Procedure-Name": [
+                    "continuous positive airway pressure",
+                    "CPAP"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Eq-Comparison": [
+                    "past three months"
+                  ],
+                  "Eq-Value": [
+                    "three"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "past"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Severe neurological,",
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Modifier": [
+                    "neurological"
+                  ],
+                  "Severity": [
+                    "Severe"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "cardiopulmonary,",
+                      "Modifier": [
+                        "cardiopulmonary"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "psychiatric,",
+                          "Modifier": [
+                            "psychiatric"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "or"
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "untreated thyroid disorder.",
+                                  "Condition": [
+                                    "disorder"
+                                  ],
+                                  "Condition-Name": [
+                                    "disorder"
+                                  ],
+                                  "Modifier": [
+                                    "thyroid"
+                                  ],
+                                  "Negation": [
+                                    "untreated"
+                                  ],
+                                  "Procedure": [
+                                    "untreated"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Chronic pain condition that was being treated with opioids.",
+          "Eq-Operator": [
+            "-"
+          ],
+          "Condition": [
+            "pain condition"
+          ],
+          "Condition-Name": [
+            "pain condition"
+          ],
+          "Drug-Name": [
+            "opioids"
+          ],
+          "Drug": [
+            "opioids"
+          ],
+          "Eq-Comparison": [
+            "being"
+          ],
+          "Eq-Temporal-Period": [
+            "being"
+          ],
+          "Acuteness": [
+            "Chronic"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Patients with a hematocrit lower than 35%.",
+      "Eq-Value": [
+        "35"
+      ],
+      "Eq-Operator": [
+        "-",
+        "lower than"
+      ],
+      "Observation": [
+        "hematocrit"
+      ],
+      "Observation-Name": [
+        "hematocrit"
+      ],
+      "Eq-Comparison": [
+        "lower than 35%"
+      ],
+      "Eq-Unit": [
+        "%"
+      ]
+    }
+  }
+}
