@@ -21,13 +21,13 @@ model = FastLanguageModel.get_peft_model(
     r = 128, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
-    lora_alpha = 16,
+    lora_alpha = 128,
     lora_dropout = 0, # Supports any, but = 0 is optimized
     bias = "none",    # Supports any, but = "none" is optimized
     # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
     use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context
     random_state = 3407,
-    use_rslora = False,  # We support rank stabilized LoRA
+    use_rslora = True,  # We support rank stabilized LoRA
     loftq_config = None, # And LoftQ
 )
 
@@ -63,34 +63,44 @@ pass
 
 dataset_path = 'dataset/dataset_p4_prompt6'
 dataset = load_from_disk(dataset_path)
-dataset = dataset['train']
-dataset = dataset.map(formatting_prompts_func, batched=True)
+train_test_split = dataset['train'].train_test_split(test_size=0.1, seed=42)
+train = train_test_split['train'] # 723 Files
+test = train_test_split['test'] # 81 Files
+train = train.map(formatting_prompts_func, batched=True)
+test = test.map(formatting_prompts_func, batched=True)
 
 
 trainer = SFTTrainer(
-   model = model,
-   tokenizer = tokenizer,
-   train_dataset = dataset,
-    dataset_text_field = "text",
-    max_seq_length = max_seq_length,
-    dataset_num_proc = 2,
-    packing = False, # Can make training 5x faster for short sequences.
-    args = TrainingArguments(
-        per_device_train_batch_size = 4,
-        gradient_accumulation_steps = 4,
-        #max_steps = None, #60,
-        num_train_epochs=10, 
-        learning_rate = 2e-4,
-        fp16 = not torch.cuda.is_bf16_supported(),
-        bf16 = torch.cuda.is_bf16_supported(),
-        logging_steps = 10,
-        optim = "adamw_8bit",
-        weight_decay = 0.01,
-        lr_scheduler_type = "linear",
-        seed = 3407,
-        output_dir = "outputs_p4",
-    ),
-)
+        model = model,
+        tokenizer = tokenizer,
+        train_dataset = train,
+        eval_dataset = test,
+        dataset_text_field = "text",
+        max_seq_length = max_seq_length,
+        dataset_num_proc = 1,
+        packing = True, 
+        args = TrainingArguments(
+            per_device_train_batch_size=4,
+            gradient_accumulation_steps=4,
+            per_device_eval_batch_size=8,
+            num_train_epochs=20,
+            warmup_ratio=.1,
+            learning_rate = 2e-4,
+            fp16 = not torch.cuda.is_bf16_supported(),
+            bf16 = torch.cuda.is_bf16_supported(),
+            optim = "adamw_8bit",
+            weight_decay = 0.01,
+            lr_scheduler_type = "cosine",
+            seed = 3407,
+            output_dir = "outputs_p4",
+            logging_steps=10,
+            evaluation_strategy='epoch',
+            eval_steps=100,  
+            eval_accumulation_steps=4,
+            save_strategy='epoch',
+            load_best_model_at_end=True,
+        ),
+    )
 
 
 #@title Show current memory stats
@@ -116,7 +126,7 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-new_model_name = f"llama3_70b_finetuned_p4_10e_r128"
+new_model_name = f"llama3_70b_finetuned_p4_20e_r128"
 
 
 model.save_pretrained(new_model_name) # Local saving
