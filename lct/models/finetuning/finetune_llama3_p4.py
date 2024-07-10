@@ -18,7 +18,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 )
 model = FastLanguageModel.get_peft_model(
     model,
-    r = 128, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+    r = 64, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 128,
@@ -126,7 +126,7 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-new_model_name = f"llama3_70b_finetuned_p4_20e_r128"
+new_model_name = f"llama3_70b_finetuned_p4_20e_r64"
 
 
 model.save_pretrained(new_model_name) # Local saving
