@@ -10,6 +10,8 @@
 #SBATCH --job-name=full_tune
 
 module load cuda
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+
 python finetune_all_gpus_p1.py
 
   

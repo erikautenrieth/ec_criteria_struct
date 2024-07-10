@@ -19,7 +19,7 @@ load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False
 
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = "meta-llama/Meta-Llama-3-70B-Instruct", 
+    model_name = "meta-llama/Meta-Llama-3-8B-Instruct", 
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
@@ -29,7 +29,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 ## 2048 _> 224.00 MiB. GPU 
 model = FastLanguageModel.get_peft_model(
     model,
-    r = 128, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048
+    r = 512, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 128, # 16,
@@ -125,7 +125,7 @@ trainer = SFTTrainer(
             per_device_train_batch_size=4,
             gradient_accumulation_steps=4,
             per_device_eval_batch_size=8,
-            num_train_epochs=30,
+            num_train_epochs=20,
             warmup_ratio=.1,
             learning_rate = 2e-4,
             fp16 = not torch.cuda.is_bf16_supported(),
@@ -134,7 +134,7 @@ trainer = SFTTrainer(
             weight_decay = 0.01,
             lr_scheduler_type = "cosine",
             seed = 3407,
-            output_dir = "outputs",
+            output_dir = "outputs_8b",
             logging_steps=10,
             evaluation_strategy='epoch',
             eval_steps=100,  
@@ -171,5 +171,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_70b_Lora_ep30_128_prompt6_v3") # Local saving
+model.save_pretrained("llama3_8b_Lora_ep20_512_prompt6_v1") # Local saving
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
