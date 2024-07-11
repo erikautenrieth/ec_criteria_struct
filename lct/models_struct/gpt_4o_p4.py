@@ -97,5 +97,5 @@ for file in study_files:
     gen_output = gen_output.content
     print(f"{num_tokens_from_messages(messages)} prompt tokens counted.")
     print(gen_output)
+    save_json(gen_output, f"{output_path}{model_name}_{file_name}.json")
 
-    save_txt(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
