@@ -34,41 +34,7 @@ def find_operator_words_function1(text, operators):
                 prev_word = re.sub(r'[^\w]', '', word_list[i - 1])  # Entferne Satzzeichen
                 words[operator].append(prev_word)
     return words
-def find_operator_words(text, operators):
-    words = {op: [] for op in operators}
-    word_list = text.split()
-    for i, word in enumerate(word_list):
-        if word in ["[AND]", "[OR]", "[NOT]"]:
-            operator = word[1:-1]
-            if operator in operators:
-                j = i - 1
-                while j >= 0 and word_list[j] in ["[AND]", "[OR]", "[NOT]"]:
-                    j -= 1
-                if j >= 0:
-                    prev_word = re.sub(r'[^\w]', '', word_list[j])  # Remove punctuation
-                    words[operator].append(prev_word)
-    return words
-def compare_operators(label_text, model_text, operator):
-    label_operators = extract_operators(label_text)
-    model_operators = extract_operators(model_text)
 
-    label_words_dict = find_operator_words(label_text, label_operators)
-    model_words_dict = find_operator_words(model_text, model_operators)
-
-
-
-    label_words = label_words_dict.get(operator, [])
-    model_words = model_words_dict.get(operator, [])
-    print(operator)
-    print("label_words_dict",label_words)
-    print("model_words_dict",model_words)
-    #print([word for word in label_words if word in model_words])
-
-    tp = sum(1 for word in label_words if word in model_words)
-    fp = sum(1 for word in model_words if word not in label_words)
-    fn = sum(1 for word in label_words if word not in model_words)
-
-    return tp, fp, fn, len(label_words), len(model_words)
 
 def calculate_metrics(tp, fp, fn):
     precision = tp / (tp + fp) if tp + fp > 0 else 0
