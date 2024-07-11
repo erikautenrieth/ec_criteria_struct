@@ -12,6 +12,10 @@ if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
 
+### Parameter
+r = 2048
+epoch = 10
+
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
@@ -29,7 +33,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 ## 2048 _> 224.00 MiB. GPU 
 model = FastLanguageModel.get_peft_model(
     model,
-    r = 2048, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048
+    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 256, # 16,
@@ -81,7 +85,7 @@ train = train.map(formatting_prompts_func, batched=True)
 test = test.map(formatting_prompts_func, batched=True)
 
 
-"""trainer = SFTTrainer(
+trainer = SFTTrainer(
         model = model,
         tokenizer = tokenizer,
         train_dataset = train,
@@ -94,14 +98,14 @@ test = test.map(formatting_prompts_func, batched=True)
             per_device_train_batch_size=4,
             gradient_accumulation_steps=4,
             per_device_eval_batch_size=8,
-            num_train_epochs=20,
+            num_train_epochs=epoch,
             warmup_ratio=.1,
             learning_rate = 2e-4,
             fp16 = not torch.cuda.is_bf16_supported(),
             bf16 = torch.cuda.is_bf16_supported(),
             optim = "adamw_8bit",
             weight_decay = 0.01,
-            lr_scheduler_type = "cosinus",
+            lr_scheduler_type = "cosine",
             seed = 3407,
             output_dir = "outputs_8b",
             logging_steps=10,
@@ -109,55 +113,14 @@ test = test.map(formatting_prompts_func, batched=True)
             eval_steps=100,  
             eval_accumulation_steps=4,
             save_strategy='epoch',
+            load_best_model_at_end = True,
+            metric_for_best_model = "eval_loss",  
+            greater_is_better = False,  
             load_best_model_at_end=True,
         ),
     )
-    ),
-)
-"""
-
-trainer = SFTTrainer(
-    model = model,
-    tokenizer = tokenizer,
-    train_dataset = train,
-    eval_dataset = test,
-    dataset_text_field = "text",
-    max_seq_length = max_seq_length,
-    dataset_num_proc = 4,  # Increased for faster data processing
-    packing = True,  # Keeps this for efficient training
-    args = TrainingArguments(
-        per_device_train_batch_size = 2,  # Reduced to allow for larger models/longer sequences
-        gradient_accumulation_steps = 8,  # Increased to simulate larger batch size
-        per_device_eval_batch_size = 4,  # Adjusted for consistency
-        num_train_epochs = 20,  # Increased for more training iterations
-        warmup_ratio = 0.1,  # Kept the same
-        learning_rate = 5e-5,  # Lowered for more stable training
-        fp16 = not torch.cuda.is_bf16_supported(),
-        bf16 = torch.cuda.is_bf16_supported(),
-        optim = "adamw_8bit",
-        weight_decay = 0.05,  # Increased for better regularization
-        lr_scheduler_type = "cosine",  # Changed to cosine for better convergence
-        seed = 42,  # Changed seed for reproducibility
-        output_dir = "outputs_8b_improved",
-        logging_steps = 50,  # Increased to reduce overhead
-        evaluation_strategy = 'steps',  # Changed to evaluate more frequently
-        eval_steps = 500,  # Evaluate every 500 steps
-        save_strategy = 'steps',  # Save more frequently
-        save_steps = 500,  # Save every 500 steps
-        save_total_limit = 3,  # Keep only the last 3 checkpoints to save space
-        load_best_model_at_end = True,
-        metric_for_best_model = "eval_loss",  # Use eval loss to determine best model
-        greater_is_better = False,  # Lower loss is better
-        group_by_length = True,  # Group similar length sequences for efficiency
-        gradient_checkpointing = True,  # Enable gradient checkpointing to save memory
-        max_grad_norm = 1.0,  # Clip gradients for stability
-    ),
-)
-
-trainer.train()
 
 
-#@title Show current memory stats
 gpu_stats = torch.cuda.get_device_properties(0)
 start_gpu_memory = round(torch.cuda.max_memory_reserved() / 1024 / 1024 / 1024, 3)
 max_memory = round(gpu_stats.total_memory / 1024 / 1024 / 1024, 3)
@@ -181,5 +144,10 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained("llama3_8b_Lora_ep20_2048_prompt6_v2") # Local saving
+model.save_pretrained(f"8b_prompt2_finetuned/llama3_8b_Lora_ep{epoch}_r{r}")
+
+
+
+
+
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
