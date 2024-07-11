@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_models_prompt6_evaldata"#"eval_p1_prompt_evalset"
+batch_path = "eval_p1_prompt_evalset"#"eval_p1_prompt_evalset"
 #batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur5"
 n_prompt = 6
 n_shot = 5
@@ -38,9 +38,12 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
+command = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
+
+
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_2_CoT/output/"
 
 os.makedirs(output_path, exist_ok=True)
 
@@ -89,11 +92,11 @@ messages = []
 cot = "Let's think through this carefully, step by step:"
 #command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
 
-command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 for i in range(n_shot):
-    messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
+    messages.append({"role": "user", "content": f"{command + cot} {studies[study_filenames[i]]}"})
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
@@ -113,10 +116,10 @@ for file in study_files:
     test_file = read_text_file(study_path+file)
 
     if first_call:
-        messages.append({"role": "user", "content": f"{command} {test_file}"})
+        messages.append({"role": "user", "content": f"{command + cot} {test_file}"})
         first_call = False
     else:
-        messages[-1] = {"role": "user", "content": f"{command} {test_file}"} 
+        messages[-1] = {"role": "user", "content": f"{command + cot} {test_file}"} 
 
 
     prompt = pipeline.tokenizer.apply_chat_template(
