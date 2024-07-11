@@ -1,0 +1,37 @@
+trainer = SFTTrainer(
+    model = model,
+    tokenizer = tokenizer,
+    train_dataset = train,
+    eval_dataset = test,
+    dataset_text_field = "text",
+    max_seq_length = max_seq_length,
+    dataset_num_proc = 4,  # Increased for faster data processing
+    packing = True,  # Keeps this for efficient training
+    args = TrainingArguments(
+        per_device_train_batch_size = 2,  # Reduced to allow for larger models/longer sequences
+        gradient_accumulation_steps = 8,  # Increased to simulate larger batch size
+        per_device_eval_batch_size = 4,  # Adjusted for consistency
+        num_train_epochs = 20,  # Increased for more training iterations
+        warmup_ratio = 0.1,  # Kept the same
+        learning_rate = 5e-5,  # Lowered for more stable training
+        fp16 = not torch.cuda.is_bf16_supported(),
+        bf16 = torch.cuda.is_bf16_supported(),
+        optim = "adamw_8bit",
+        weight_decay = 0.05,  # Increased for better regularization
+        lr_scheduler_type = "cosine",  # Changed to cosine for better convergence
+        seed = 42,  # Changed seed for reproducibility
+        output_dir = "outputs_8b_improved",
+        logging_steps = 50,  # Increased to reduce overhead
+        evaluation_strategy = 'steps',  # Changed to evaluate more frequently
+        eval_steps = 500,  # Evaluate every 500 steps
+        save_strategy = 'steps',  # Save more frequently
+        save_steps = 500,  # Save every 500 steps
+        save_total_limit = 3,  # Keep only the last 3 checkpoints to save space
+        load_best_model_at_end = True,
+        metric_for_best_model = "eval_loss",  # Use eval loss to determine best model
+        greater_is_better = False,  # Lower loss is better
+        group_by_length = True,  # Group similar length sequences for efficiency
+        gradient_checkpointing = True,  # Enable gradient checkpointing to save memory
+        max_grad_norm = 1.0,  # Clip gradients for stability
+    ),
+)
