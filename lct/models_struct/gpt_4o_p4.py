@@ -36,14 +36,13 @@ shot_list = [
     "NCT03862677_inc.txt"
 ]
 
-study_folder = f"{transform_lct}/dataset_p4_prompt6/train/input/"
-label_folder = f'{transform_lct}/dataset_p4_prompt6/train/output/'
+study_folder = f"{transform_lct}/input/dataset_p4_prompt6/train/input/"
+label_folder = f'{transform_lct}/input/dataset_p4_prompt6/train/output/'
 study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
-
 
 messages.append({"role": "system", "content": f"{model_desc}"})
 
