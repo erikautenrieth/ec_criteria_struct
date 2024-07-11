@@ -1,12 +1,12 @@
 #pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
 #pip install --no-deps xformers "trl<0.9.0" peft accelerate bitsandbytes
 import torch
-import os
 from unsloth import FastLanguageModel
 from trl import SFTTrainer
 from transformers import TrainingArguments
 from datasets import load_from_disk, DatasetDict
-
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
@@ -117,6 +117,7 @@ trainer = SFTTrainer(
             load_best_model_at_end=True,
         ),
     )
+
 
 
 gpu_stats = torch.cuda.get_device_properties(0)
