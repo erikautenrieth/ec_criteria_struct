@@ -13,9 +13,8 @@ if torch.cuda.device_count() > 1:
 
 
 ### Parameter
-r = 2048
+r = 128
 epoch = 10
-
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
@@ -105,7 +104,7 @@ trainer = SFTTrainer(
             bf16 = torch.cuda.is_bf16_supported(),
             optim = "adamw_8bit",
             weight_decay = 0.01,
-            lr_scheduler_type = "cosine",
+            lr_scheduler_type = "linear",
             seed = 3407,
             output_dir = "outputs_8b",
             logging_steps=10,
@@ -113,7 +112,6 @@ trainer = SFTTrainer(
             eval_steps=100,  
             eval_accumulation_steps=4,
             save_strategy='epoch',
-            load_best_model_at_end = True,
             metric_for_best_model = "eval_loss",  
             greater_is_better = False,  
             load_best_model_at_end=True,
@@ -144,7 +142,7 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 
 
-model.save_pretrained(f"8b_prompt2_finetuned/llama3_8b_Lora_ep{epoch}_r{r}")
+model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}")
 
 
 

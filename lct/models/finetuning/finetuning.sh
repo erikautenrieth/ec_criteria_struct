@@ -5,14 +5,14 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --time=40:00:00          # Time limit hrs:min:sec
 
-#SBATCH --output=llm_tune_p4_r64_20e_70B_prompt6_v1.%j.out   # Standard output and error log
-#SBATCH --error=llm_tune_p4_r64_20e_70B_prompt6_v1.%j.err    # Error log
-#SBATCH --job-name=llm_tune
+#SBATCH --output=p1_8b_e10_r128.%j.out   # Standard output and error log
+#SBATCH --error=p1_8b_e10_r128.%j.err    # Error log
+#SBATCH --job-name=tune8b
 
 module load cuda
 python finetune_llama3_p1.py
-#llama_p1_0_shot.py # phi3_p1_0_shot.py  # gpt2_0_shot_p1.py # phi3_p1_0_shot.py  llama_p1.py
-# llama_p1_0_shot_replace.py llama_autocriteria.py qwen_p1.py
+
+
 
 
   
