@@ -1,0 +1,164 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "1. Be either a female veteran",
+              "Life-Stage-And-Gender": [
+                "female"
+              ],
+              "Observation": [
+                "veteran"
+              ],
+              "Observation-Name": [
+                "veteran"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "with a current diagnosis of PTSD (for the PTSD group)",
+                  "Condition": [
+                    "PTSD"
+                  ],
+                  "Condition-Name": [
+                    "PTSD"
+                  ],
+                  "Eq-Comparison": [
+                    "current"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "current"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or a female",
+                      "Life-Stage-And-Gender": [
+                        "female"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "non-veteran",
+                              "Eq-Operator": [
+                                "-"
+                              ],
+                              "Observation": [
+                                "veteran"
+                              ],
+                              "Observation-Name": [
+                                "veteran"
+                              ],
+                              "Negation": [
+                                "non"
+                              ]
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "without a current diagnosis of PTSD (for the",
+                                      "Condition": [
+                                        "PTSD"
+                                      ],
+                                      "Condition-Name": [
+                                        "PTSD"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "current"
+                                      ],
+                                      "Eq-Temporal-Period": [
+                                        "current"
+                                      ],
+                                      "Negation": [
+                                        "without"
+                                      ]
+                                    },
+                                    "right": {
+                                      "NOT": {
+                                        "left": {
+                                          "raw_text": "non-PTSD control group).",
+                                          "Condition": [
+                                            "PTSD"
+                                          ],
+                                          "Condition-Name": [
+                                            "PTSD"
+                                          ],
+                                          "Eq-Operator": [
+                                            "-"
+                                          ],
+                                          "Negation": [
+                                            "non"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "2. Be between the ages of 18-65.",
+          "Eq-Operator": [
+            "-"
+          ],
+          "Eq-Value": [
+            "18",
+            "65"
+          ],
+          "Eq-Comparison": [
+            "18-65"
+          ],
+          "Age": [
+            "ages"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "3. Sedentary (exercises less than three times a week for thirty minutes or less).",
+      "Observation": [
+        "exercises",
+        "Sedentary"
+      ],
+      "Observation-Name": [
+        "exercises",
+        "Sedentary"
+      ],
+      "Eq-Operator": [
+        "less than",
+        "or less"
+      ],
+      "Eq-Temporal-Unit": [
+        "minutes",
+        "week"
+      ],
+      "Eq-Comparison": [
+        "less than three times a week",
+        "thirty minutes or less"
+      ],
+      "Eq-Value": [
+        "three",
+        "thirty"
+      ]
+    }
+  }
+}

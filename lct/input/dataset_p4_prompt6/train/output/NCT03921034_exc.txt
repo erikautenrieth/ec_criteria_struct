@@ -1,0 +1,278 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "- Contraindication to regional anesthesia",
+                                  "Procedure": [
+                                    "regional anesthesia"
+                                  ],
+                                  "Procedure-Name": [
+                                    "regional anesthesia"
+                                  ],
+                                  "Eq-Operator": [
+                                    "-"
+                                  ],
+                                  "Contraindication": [
+                                    "Contraindication"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or peripheral nerve blocks",
+                                  "Procedure": [
+                                    "nerve blocks"
+                                  ],
+                                  "Procedure-Name": [
+                                    "nerve blocks"
+                                  ],
+                                  "Modifier": [
+                                    "peripheral"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "- Allergy to local anesthetics",
+                              "Eq-Operator": [
+                                "-"
+                              ],
+                              "Allergy": [
+                                "Allergy"
+                              ],
+                              "Procedure": [
+                                "local anesthetics"
+                              ],
+                              "Procedure-Name": [
+                                "local anesthetics"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Allergy to NSAIDs",
+                          "Eq-Value": [
+                            "I"
+                          ],
+                          "Eq-Operator": [
+                            "-"
+                          ],
+                          "Allergy": [
+                            "Allergy"
+                          ],
+                          "Drug": [
+                            "NSAIDs"
+                          ],
+                          "Drug-Name": [
+                            "NSAIDs"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Chronic renal insufficiency",
+                          "Condition": [
+                            "renal insufficiency"
+                          ],
+                          "Condition-Name": [
+                            "renal insufficiency"
+                          ],
+                          "Eq-Operator": [
+                            "-"
+                          ],
+                          "Acuteness": [
+                            "Chronic"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "with Cr > 1.4",
+                              "Eq-Operator": [
+                                ">"
+                              ],
+                              "Eq-Value": [
+                                "1.4"
+                              ],
+                              "Eq-Comparison": [
+                                "> 1.4"
+                              ],
+                              "Condition": [
+                                "Cr"
+                              ],
+                              "Condition-Name": [
+                                "Cr"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or GFR < 60",
+                              "Eq-Operator": [
+                                "<"
+                              ],
+                              "Eq-Value": [
+                                "60"
+                              ],
+                              "Eq-Comparison": [
+                                "< 60"
+                              ],
+                              "Observation": [
+                                "GFR"
+                              ],
+                              "Observation-Name": [
+                                "GFR"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Have chronic pain that is",
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Observation": [
+                        "pain"
+                      ],
+                      "Observation-Name": [
+                        "pain"
+                      ],
+                      "Acuteness": [
+                        "chronic"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "not related to their knee joint",
+                          "Modifier": [
+                            "knee joint"
+                          ],
+                          "Negation": [
+                            "not"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Have been using opioids on a chronic basis (daily",
+                  "Drug": [
+                    "opioid",
+                    "opioids"
+                  ],
+                  "Drug-Name": [
+                    "opioid",
+                    "opioids"
+                  ],
+                  "Eq-Comparison": [
+                    "using",
+                    "daily"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "using"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Acuteness": [
+                    "chronic"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "daily"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or almost daily opioid use for 3 months or longer)",
+                  "Drug": [
+                    "opioid"
+                  ],
+                  "Drug-Name": [
+                    "opioid"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months",
+                    "daily"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Eq-Comparison": [
+                    "daily",
+                    "3 months or longer"
+                  ],
+                  "Eq-Operator": [
+                    "or longer"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Have a pre-existing peripheral neuropathy involving the operative site",
+          "Condition": [
+            "peripheral neuropathy"
+          ],
+          "Condition-Name": [
+            "peripheral neuropathy"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Modifier": [
+            "peripheral",
+            "operative site"
+          ],
+          "Eq-Comparison": [
+            "pre-existing"
+          ],
+          "Eq-Temporal-Period": [
+            "pre-existing"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Body mass index greater than or equal to 40",
+      "Observation": [
+        "Body mass index"
+      ],
+      "Observation-Name": [
+        "Body mass index"
+      ],
+      "Eq-Operator": [
+        "greater than or equal",
+        "-"
+      ],
+      "Eq-Value": [
+        "40"
+      ],
+      "Eq-Comparison": [
+        "greater than or equal to 40"
+      ]
+    }
+  }
+}

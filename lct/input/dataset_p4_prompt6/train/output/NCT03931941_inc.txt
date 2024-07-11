@@ -1,0 +1,243 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "1. ≥ 18 years old.",
+                      "Eq-Operator": [
+                        "≥"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "years",
+                        "year"
+                      ],
+                      "Age": [
+                        "old"
+                      ],
+                      "Eq-Value": [
+                        "18"
+                      ],
+                      "Eq-Comparison": [
+                        "≥ 18 years"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "2. Medical record documentation of either: a) recurrent CDI per the study definition, that includes at least one recurrence after a primary episode and has completed at least one round of standard-of-care oral antibiotic therapy, b)",
+                          "Procedure": [
+                            "oral antibiotic therapy",
+                            "antibiotic therapy"
+                          ],
+                          "Procedure-Name": [
+                            "oral antibiotic therapy",
+                            "antibiotic therapy"
+                          ],
+                          "Condition": [
+                            "CDI"
+                          ],
+                          "Condition-Name": [
+                            "CDI"
+                          ],
+                          "Modifier": [
+                            "recurrent"
+                          ],
+                          "Eq-Comparison": [
+                            "at least one"
+                          ],
+                          "Eq-Operator": [
+                            "at least"
+                          ],
+                          "Eq-Value": [
+                            "one"
+                          ],
+                          "Study": [
+                            "study"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or has had at least two episodes of severe CDI resulting in hospitalization.",
+                          "Condition": [
+                            "CDI"
+                          ],
+                          "Condition-Name": [
+                            "CDI"
+                          ],
+                          "Eq-Operator": [
+                            "at least"
+                          ],
+                          "Eq-Comparison": [
+                            "at least two"
+                          ],
+                          "Eq-Value": [
+                            "two"
+                          ],
+                          "Encounter": [
+                            "hospitalization"
+                          ],
+                          "Severity": [
+                            "severe"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "3. A positive stool test for the presence of toxigenic C. difficile",
+                      "Eq-Value": [
+                        "3"
+                      ],
+                      "Polarity": [
+                        "positive"
+                      ],
+                      "Observation": [
+                        "stool test"
+                      ],
+                      "Specimen": [
+                        "stool"
+                      ],
+                      "Observation-Name": [
+                        "test"
+                      ],
+                      "Organism": [
+                        "toxigenic C. difficile"
+                      ],
+                      "Organism-Name": [
+                        "toxigenic C. difficile"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or C. difficile toxin within 30 days prior to or on the date of enrollment.",
+                      "Eq-Temporal-Unit": [
+                        "days",
+                        "day"
+                      ],
+                      "Eq-Value": [
+                        "30",
+                        "3"
+                      ],
+                      "Eq-Comparison": [
+                        "within 30 days"
+                      ],
+                      "Organism": [
+                        "C. difficile toxin"
+                      ],
+                      "Organism-Name": [
+                        "C. difficile toxin"
+                      ],
+                      "Study": [
+                        "enrollment"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "within"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "4. Is currently taking",
+                  "Eq-Comparison": [
+                    "currently",
+                    "taking"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "currently",
+                    "taking"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or was just prescribed antibiotics to control CDI related diarrhea at the time of enrollment.",
+                  "Condition": [
+                    "CDI",
+                    "diarrhea"
+                  ],
+                  "Condition-Name": [
+                    "CDI",
+                    "diarrhea"
+                  ],
+                  "Drug": [
+                    "antibiotics"
+                  ],
+                  "Drug-Name": [
+                    "antibiotics"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "just"
+                  ],
+                  "Eq-Comparison": [
+                    "just"
+                  ],
+                  "Study": [
+                    "enrollment"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "[Note: Subject's CDI diarrhea must be controlled (<3 unformed/loose stools/day) while",
+          "Condition": [
+            "CDI",
+            "diarrhea",
+            "CDI diarrhea"
+          ],
+          "Condition-Name": [
+            "CDI",
+            "diarrhea",
+            "CDI diarrhea"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "3"
+          ],
+          "Eq-Comparison": [
+            "<3 unformed/loose stools/day"
+          ],
+          "Specimen": [
+            "stool"
+          ],
+          "Eq-Temporal-Unit": [
+            "day"
+          ],
+          "Eq-Unit": [
+            "stools"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "taking antibiotics during screening.]",
+      "Drug": [
+        "antibiotics"
+      ],
+      "Drug-Name": [
+        "antibiotics"
+      ],
+      "Study": [
+        "screening"
+      ],
+      "Eq-Comparison": [
+        "taking"
+      ],
+      "Eq-Temporal-Period": [
+        "taking"
+      ]
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- carotid stenosis <70% at carotid bifurcation",
+              "Condition": [
+                "carotid stenosis"
+              ],
+              "Condition-Name": [
+                "carotid stenosis"
+              ],
+              "Eq-Operator": [
+                "<",
+                "-"
+              ],
+              "Eq-Value": [
+                "70"
+              ],
+              "Eq-Comparison": [
+                "<70%"
+              ],
+              "Eq-Unit": [
+                "%"
+              ],
+              "Modifier": [
+                "carotid bifurcation"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or diagnosed with color doppler echography",
+                  "Procedure": [
+                    "color doppler echography"
+                  ],
+                  "Procedure-Name": [
+                    "color doppler echography"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or angio-MRI",
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Procedure": [
+                        "MRI"
+                      ],
+                      "Procedure-Name": [
+                        "MRI"
+                      ],
+                      "Modifier": [
+                        "angio"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or angiography;",
+                      "Modifier": [
+                        "angio"
+                      ],
+                      "Procedure": [
+                        "angiography"
+                      ],
+                      "Procedure-Name": [
+                        "angiography"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- severe neoplasia;",
+          "Eq-Operator": [
+            "-"
+          ],
+          "Severity": [
+            "severe"
+          ],
+          "Condition": [
+            "neoplasia"
+          ],
+          "Condition-Name": [
+            "neoplasia"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- participation to other clinical trial, ongoing",
+          "Eq-Operator": [
+            "-"
+          ],
+          "Study": [
+            "clinical trial"
+          ],
+          "Other": [
+            "other"
+          ],
+          "Eq-Comparison": [
+            "ongoing"
+          ],
+          "Eq-Temporal-Period": [
+            "ongoing"
+          ]
+        },
+        "right": {
+          "raw_text": "or terminated less than one month before enrolment in this study.",
+          "Study": [
+            "study"
+          ],
+          "Eq-Comparison": [
+            "less than one month"
+          ],
+          "Eq-Operator": [
+            "less than"
+          ],
+          "Eq-Value": [
+            "one"
+          ],
+          "Eq-Temporal-Unit": [
+            "month"
+          ]
+        }
+      }
+    }
+  }
+}

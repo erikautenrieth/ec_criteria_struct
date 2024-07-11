@@ -1,0 +1,76 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient already enrolled"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patient having a pathology",
+              "Condition": [
+                "pathology"
+              ],
+              "Condition-Name": [
+                "pathology"
+              ],
+              "Eq-Comparison": [
+                "having"
+              ],
+              "Eq-Temporal-Period": [
+                "having"
+              ]
+            },
+            "right": {
+              "raw_text": "with a life expectancy of less than two years",
+              "Eq-Operator": [
+                "less than"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Observation": [
+                "life expectancy"
+              ],
+              "Observation-Name": [
+                "life expectancy"
+              ],
+              "Eq-Comparison": [
+                "less than two years"
+              ],
+              "Eq-Unit": [
+                "two"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patient with serious psychiatric disorders,",
+          "Condition": [
+            "psychiatric disorders"
+          ],
+          "Condition-Name": [
+            "psychiatric disorders"
+          ],
+          "Severity": [
+            "serious"
+          ]
+        },
+        "right": {
+          "raw_text": "or dementia.",
+          "Condition": [
+            "dementia"
+          ],
+          "Condition-Name": [
+            "dementia"
+          ]
+        }
+      }
+    }
+  }
+}

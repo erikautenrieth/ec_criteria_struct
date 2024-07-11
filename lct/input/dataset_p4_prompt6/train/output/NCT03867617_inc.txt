@@ -1,0 +1,272 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Patient has provided written informed consent."
+                            },
+                            "right": {
+                              "raw_text": "- Patient is 18 years or older.",
+                              "Eq-Comparison": [
+                                "18 years or older"
+                              ],
+                              "Eq-Value": [
+                                "18"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "years"
+                              ],
+                              "Eq-Operator": [
+                                "or older"
+                              ],
+                              "Age": [
+                                "older"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Patient is a planned recipient of a living donor kidney transplant.",
+                          "Eq-Comparison": [
+                            "planned"
+                          ],
+                          "Modifier": [
+                            "living donor",
+                            "kidney",
+                            "donor"
+                          ],
+                          "Procedure": [
+                            "kidney transplant"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "planned"
+                          ],
+                          "Procedure-Name": [
+                            "kidney transplant"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Patient is a planned recipient of an ABO blood group-compatible kidney graft.",
+                      "Eq-Comparison": [
+                        "planned"
+                      ],
+                      "Modifier": [
+                        "ABO blood group-compatible",
+                        "kidney"
+                      ],
+                      "Procedure": [
+                        "kidney graft"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "planned"
+                      ],
+                      "Procedure-Name": [
+                        "kidney graft"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patient is a planned recipient of a kidney graft from a donor that is",
+                      "Eq-Comparison": [
+                        "planned"
+                      ],
+                      "Procedure": [
+                        "kidney graft"
+                      ],
+                      "Modifier": [
+                        "kidney",
+                        "donor"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "planned"
+                      ],
+                      "Procedure-Name": [
+                        "kidney graft"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "not HLA (human leukocyte antigen)-identical.",
+                          "Negation": [
+                            "not"
+                          ],
+                          "Condition": [
+                            "HLA",
+                            "human leukocyte antigen"
+                          ],
+                          "Condition-Name": [
+                            "HLA",
+                            "human leukocyte antigen"
+                          ],
+                          "Modifier": [
+                            "identical"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patient is negative for DSA (donor-specific antibodies).",
+              "Condition": [
+                "DSA",
+                "donor-specific antibodies"
+              ],
+              "Polarity": [
+                "negative"
+              ],
+              "Condition-Name": [
+                "DSA",
+                "donor-specific antibodies"
+              ],
+              "Modifier": [
+                "donor"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- WOCBP (women",
+              "Condition": [
+                "WOCBP"
+              ],
+              "Condition-Name": [
+                "WOCBP"
+              ],
+              "Life-Stage-And-Gender": [
+                "women"
+              ]
+            },
+            "right": {
+              "raw_text": "of child-bearing potential) must have a negative pregnancy test at inclusion.",
+              "Condition": [
+                "child-bearing potential",
+                "pregnancy"
+              ],
+              "Observation": [
+                "pregnancy test"
+              ],
+              "Polarity": [
+                "negative"
+              ],
+              "Condition-Name": [
+                "child-bearing potential",
+                "pregnancy"
+              ],
+              "Observation-Name": [
+                "pregnancy test"
+              ],
+              "Study": [
+                "inclusion"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- WOCBP must be using an adequate method of contraception to",
+          "Condition": [
+            "WOCBP"
+          ],
+          "Assertion": [
+            "must be"
+          ],
+          "Eq-Comparison": [
+            "using"
+          ],
+          "Procedure": [
+            "contraception"
+          ],
+          "Condition-Name": [
+            "WOCBP"
+          ],
+          "Eq-Temporal-Period": [
+            "using"
+          ],
+          "Procedure-Name": [
+            "contraception"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "avoid pregnancy throughout the study",
+                  "Negation": [
+                    "avoid"
+                  ],
+                  "Condition": [
+                    "pregnancy"
+                  ],
+                  "Study": [
+                    "study"
+                  ],
+                  "Condition-Name": [
+                    "pregnancy"
+                  ],
+                  "Assertion": [
+                    "avoid"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and for up to 12 weeks after the study in such a manner that the risk of pregnancy is minimized.",
+                  "Condition": [
+                    "pregnancy"
+                  ],
+                  "Study": [
+                    "study"
+                  ],
+                  "Eq-Comparison": [
+                    "up to 12 weeks"
+                  ],
+                  "Risk": [
+                    "risk"
+                  ],
+                  "Condition-Name": [
+                    "pregnancy"
+                  ],
+                  "Eq-Value": [
+                    "12"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "weeks"
+                  ],
+                  "Eq-Operator": [
+                    "up to"
+                  ],
+                  "Polarity": [
+                    "minimized"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

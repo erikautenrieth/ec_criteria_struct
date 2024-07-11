@@ -1,0 +1,122 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients with contraindication to spinal anesthesia (coagulopathy, local infection, allergy to local anesthetic)",
+                  "Procedure": [
+                    "spinal anesthesia",
+                    "local anesthetic"
+                  ],
+                  "Procedure-Name": [
+                    "spinal anesthesia",
+                    "local anesthetic"
+                  ],
+                  "Condition": [
+                    "coagulopathy",
+                    "infection"
+                  ],
+                  "Condition-Name": [
+                    "coagulopathy",
+                    "infection"
+                  ],
+                  "Contraindication": [
+                    "contraindication"
+                  ],
+                  "Modifier": [
+                    "local"
+                  ],
+                  "Allergy": [
+                    "allergy"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Patients with communication difficulties",
+                  "Condition": [
+                    "communication difficulties"
+                  ],
+                  "Condition-Name": [
+                    "communication difficulties"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patient who can"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "not take a sitting",
+                          "Modifier": [
+                            "sitting"
+                          ],
+                          "Negation": [
+                            "not"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or lateral decubitus position (fracture)",
+                          "Observation": [
+                            "position"
+                          ],
+                          "Observation-Name": [
+                            "position"
+                          ],
+                          "Modifier": [
+                            "lateral decubitus"
+                          ],
+                          "Condition": [
+                            "fracture"
+                          ],
+                          "Condition-Name": [
+                            "fracture"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patients with a history of spinal surgery",
+          "Eq-Comparison": [
+            "history"
+          ],
+          "Eq-Temporal-Period": [
+            "history"
+          ],
+          "Procedure": [
+            "spinal surgery"
+          ],
+          "Procedure-Name": [
+            "spinal surgery"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Patient with anatomical abnormality of the spine",
+      "Condition": [
+        "anatomical abnormality"
+      ],
+      "Condition-Name": [
+        "anatomical abnormality"
+      ],
+      "Modifier": [
+        "spine"
+      ]
+    }
+  }
+}
