@@ -10,7 +10,9 @@
 #SBATCH --job-name=tune8b
 
 module load cuda
-python finetune_llama3_p1.py
+export CUDA_VISIBLE_DEVICES=0 
+
+python finetune_llama3_p1_old.py
 
 
 
