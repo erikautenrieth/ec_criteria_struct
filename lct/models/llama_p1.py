@@ -90,7 +90,12 @@ labels = dict(zip(label_filenames, label_contents))
 messages = []
 
 cot = "Let's think through this carefully, step by step:"
-#command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything. Do not say anything else." 
+emotion_prompting = "This is very important to my career"
+#EP08: Embrace challenges as opportunities for growth. Each obstacle you overcome brings you closer to success.
+#EP09: Stay focused and dedicated to your goals. Your consistent efforts will lead to outstanding achievements.
+#EP10: Take pride in your work and give it your best. Your commitment to excellence sets you apart.
+
+# https://arxiv.org/abs/2307.11760
 
 
 messages.append({"role": "system", "content": f"{model_desc}"})
