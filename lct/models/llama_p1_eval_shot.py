@@ -39,7 +39,7 @@ pipeline = transformers.pipeline(
             )
 
 
-for i in range(3, 4):
+for i in range(2, 3):
     batch_path = f"eval_n_shot/eval_{i}_shot"
     n_shot = i
     
