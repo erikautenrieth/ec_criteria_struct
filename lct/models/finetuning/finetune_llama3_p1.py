@@ -8,9 +8,6 @@ from datasets import load_from_disk, DatasetDict
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-if torch.cuda.device_count() > 1:
-        print(f"Using {torch.cuda.device_count()} GPUs")
-
 
 ### Parameter
 r = 128

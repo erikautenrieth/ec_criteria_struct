@@ -10,9 +10,9 @@ from unsloth import FastLanguageModel
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
-batch_path = "eval_p1_finetuned_prompt2" 
-model_id = "tuned_models/llama3_70b_Lora_ep20_128_prompt6_v3"      #llama3_70b_Lora_ep10_128_prompt6_v2
-model_name = "LoRA_Fine-Tuned_ep20_128_v3"
+batch_path = "eval_p1_finetuned__8b_prompt2" 
+model_id = "tuned_models_8b/llama3_70b_Lora_ep20_128_prompt6_v3"      #llama3_70b_Lora_ep10_128_prompt6_v2
+model_name = "LoRA_Fine-Tuned_8b_ep10_128"
 
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 
