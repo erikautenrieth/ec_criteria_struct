@@ -104,7 +104,7 @@ trainer = SFTTrainer(
         bf16 = torch.cuda.is_bf16_supported(),
         optim = "adamw_8bit",
         weight_decay = 0.05,  
-        lr_scheduler_type = "cosine",  
+        lr_scheduler_type = "linear",  # cosine (default)
         seed = 42, 
         output_dir = "outputs_8b",
         logging_steps = 50,  
@@ -144,5 +144,5 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}")
+model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}_linear")
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
