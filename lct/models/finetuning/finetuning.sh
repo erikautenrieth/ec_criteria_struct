@@ -5,14 +5,15 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --time=40:00:00          # Time limit hrs:min:sec
 
-#SBATCH --output=p1_8b_e10_r128.%j.out   # Standard output and error log
-#SBATCH --error=p1_8b_e10_r128.%j.err    # Error log
+#SBATCH --output=opt.%j.out   # Standard output and error log
+#SBATCH --error=opt.%j.err    # Error log  p1_8b_e10_r2048.%j.err 
 #SBATCH --job-name=tune8b
 
 module load cuda
 export CUDA_VISIBLE_DEVICES=0 
 
 python finetune_llama3_p1.py
+#finetune_llama3_p1.py
 
 
 
