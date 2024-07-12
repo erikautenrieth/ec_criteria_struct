@@ -12,8 +12,8 @@ if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
 
-r = 2048
-epoch = 20
+r = 128
+epoch = 10
 
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -106,7 +106,7 @@ trainer = SFTTrainer(
         weight_decay = 0.05,  
         lr_scheduler_type = "cosine",  
         seed = 42, 
-        output_dir = "outputs_8b_improved",
+        output_dir = "outputs_8b",
         logging_steps = 50,  
         evaluation_strategy = 'steps',  
         eval_steps = 500,  
@@ -121,8 +121,6 @@ trainer = SFTTrainer(
         max_grad_norm = 1.0,  
     ),
 )
-
-trainer.train()
 
 
 #@title Show current memory stats
@@ -145,9 +143,6 @@ print(f"Peak reserved memory = {used_memory} GB.")
 print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
-
-
-
 
 model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}")
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
