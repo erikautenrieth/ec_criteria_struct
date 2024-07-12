@@ -12,7 +12,7 @@ if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
 
-r = 3500
+r = 2048
 epoch = 10
 
 
