@@ -13,7 +13,7 @@ if torch.cuda.device_count() > 1:
 
 
 r = 128
-epoch = 10
+epoch = 20
 
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -32,7 +32,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 ## 2048 _> 224.00 MiB. GPU 
 model = FastLanguageModel.get_peft_model(
     model,
-    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048
+    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 256, # 16,
@@ -91,8 +91,8 @@ trainer = SFTTrainer(
     eval_dataset = test,
     dataset_text_field = "text",
     max_seq_length = max_seq_length,
-    dataset_num_proc = 4,  # Increased for faster data processing
-    packing = True,  # Keeps this for efficient training
+    dataset_num_proc = 4,  
+    packing = True,  
     args = TrainingArguments(
         per_device_train_batch_size = 2,  
         gradient_accumulation_steps = 8,  
