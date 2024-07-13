@@ -13,7 +13,7 @@ if torch.cuda.device_count() > 1:
 
 
 r = 2048
-epoch = 10
+epoch = 30
 
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -104,7 +104,7 @@ trainer = SFTTrainer(
         bf16 = torch.cuda.is_bf16_supported(),
         optim = "adamw_8bit",
         weight_decay = 0.05,  
-        lr_scheduler_type = "linear",  # cosine (default)
+        lr_scheduler_type = "cosine",  # cosine (default)
         seed = 42, 
         output_dir = "outputs_8b",
         logging_steps = 50,  
