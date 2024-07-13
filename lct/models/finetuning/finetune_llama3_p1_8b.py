@@ -13,7 +13,7 @@ if torch.cuda.device_count() > 1:
 
 
 r = 2048
-epoch = 30
+epoch = 10
 
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
