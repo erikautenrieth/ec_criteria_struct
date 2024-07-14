@@ -3,11 +3,11 @@
 #SBATCH --nodes=1                # number of nodes
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
-#SBATCH --time=08:00:00          # Time limit hrs:min:sec
+#SBATCH --time=72:00:00          # Time limit hrs:min:sec
 #SBATCH --nodelist=wr21          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht), 24 (fail) ,25 (geht) 
 #SBATCH --output=log/llm_shot.%j.out   # Standard output and error log
 #SBATCH --error=log/llm_shot.%j.err    # Error log
-#SBATCH --job-name=1_shot
+#SBATCH --job-name=3_shot
 
 module load cuda
 nvidia-smi
