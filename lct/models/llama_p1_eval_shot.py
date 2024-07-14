@@ -30,7 +30,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
-
+print("Hallo Welt")
 pipeline = transformers.pipeline(
             "text-generation",
             model=model_id,
@@ -39,11 +39,10 @@ pipeline = transformers.pipeline(
             )
 
 
-for i in range(5, 6):
+for i in range(1, 2):
     batch_path = f"eval_n_shot/eval_{i}_shot"
     n_shot = i
-    
-    for j in range(16, 22):
+    for j in range(21, 23):
         study_path = f"{transform_lct}/input/dataset/test/input/"
         output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{n_shot}_shot_v_{j}/output/"  
         os.makedirs(output_path, exist_ok=True)

@@ -3,15 +3,23 @@
 #SBATCH --nodes=1                # number of nodes
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
-#SBATCH --time=00:05:00          # Time limit hrs:min:sec
-
+#SBATCH --time=08:00:00          # Time limit hrs:min:sec
+#SBATCH --nodelist=wr20          # Specify the node 20 (), 21, () 22 (geht), 23 (geht), 24 (fail) ,25 (geht) 
 #SBATCH --output=log/llm_shot.%j.out   # Standard output and error log
 #SBATCH --error=log/llm_shot.%j.err    # Error log
-#SBATCH --job-name=5_shot
+#SBATCH --job-name=1_shot
 
-#module load cuda
-python test.py #llama_p1_eval_shot.py 
+module load cuda
+nvidia-smi
+
+
+
+python llama_p1_eval_shot.py 
 #llama_p1_tuned.py
 
- #llama_p1.py
 
+#echo "Running nvidia-smi diagnostics"
+#nvidia-smi -q -d MEMORY 
+#nvidia-smi -q -d UTILIZATION 
+#nvidia-smi -q -d ECC 
+#export SLURM_DEBUG=nvml
