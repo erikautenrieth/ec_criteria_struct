@@ -12,8 +12,8 @@ if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
 
-r = 2048
-epoch = 10
+r = 128
+epoch = 40
 
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
