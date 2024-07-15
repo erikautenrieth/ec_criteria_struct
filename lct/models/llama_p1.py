@@ -41,7 +41,7 @@ command = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_2_CoT/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_2/output/"
 
 os.makedirs(output_path, exist_ok=True)
 
@@ -79,22 +79,12 @@ additional_files = [
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
 study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, additional_files)
- 
-
-## Random n-shot Data
-#study_filenames, study_contents, label_filenames, label_contents = read_random_matching_txt_files(study_folder, label_folder, n_shot)
-
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
 
 cot = "Let's think through this carefully, step by step:"
-emotion_prompting = "This is very important to my career"
-#EP08: Embrace challenges as opportunities for growth. Each obstacle you overcome brings you closer to success.
-#EP09: Stay focused and dedicated to your goals. Your consistent efforts will lead to outstanding achievements.
-#EP10: Take pride in your work and give it your best. Your commitment to excellence sets you apart.
 
-# https://arxiv.org/abs/2307.11760
 
 
 messages.append({"role": "system", "content": f"{model_desc}"})
