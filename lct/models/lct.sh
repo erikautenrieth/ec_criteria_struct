@@ -7,7 +7,7 @@
 #SBATCH --nodelist=wr23          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !
 #SBATCH --output=log/llm_shot.%j.out   # Standard output and error log
 #SBATCH --error=log/llm_shot.%j.err    # Error log
-#SBATCH --job-name=0-shot
+#SBATCH --job-name=0-ep
 
 module load cuda
 nvidia-smi
