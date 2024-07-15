@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-def read_matching_txt_files(n):
+def read_matching_txt_files_random(n):
     input_dir = f"{transform_lct}/input/dataset/train/input"
     output_dir = f"{transform_lct}/input/dataset/train/output"
     input_files = [f for f in os.listdir(input_dir) if f.endswith('.txt')]
@@ -16,7 +16,7 @@ def read_matching_txt_files(n):
     return nct_numbers, input_contents, output_contents
 
 def create_messages(n, command):
-    nct_numbers, study_contents, label_contents = read_matching_txt_files(n)
+    nct_numbers, study_contents, label_contents = read_matching_txt_files_random(n)
     messages = []
     messages.append({"role": "system", "content": f"{command}"})
     for i in range(n):
