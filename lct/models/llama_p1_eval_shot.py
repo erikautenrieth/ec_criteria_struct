@@ -30,7 +30,29 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
-print("Hallo Welt")
+
+
+# Best 5-shot
+shot_list = [
+    "NCT03865433.txt",
+    "NCT03860324.txt",
+    "NCT03860233.txt",
+    "NCT03923231.txt",
+    "NCT03930121.txt"
+]
+study_folder = f"{transform_lct}/input/lct_txt/"
+label_folder = f'{transform_lct}/input/lct_p1'
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
+studies = dict(zip(study_filenames, study_contents))
+labels = dict(zip(label_filenames, label_contents))
+messages = []
+messages.append({"role": "system", "content": f"{command}"})
+
+for i in range(5):
+    messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
+    messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
+# End of Best 5-shot
+
 pipeline = transformers.pipeline(
             "text-generation",
             model=model_id,
@@ -39,16 +61,16 @@ pipeline = transformers.pipeline(
             )
 
 
-for i in range(3, 4):
-    batch_path = f"eval_n_shot/eval_{i}_shot"
+for i in range(5, 6):
+    batch_path = f"eval_n_shot/eval_{i}_shot_best"
     n_shot = i
-    for j in range(14, 23):
+    for j in range(1, 22):
         study_path = f"{transform_lct}/input/dataset/test/input/"
         output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{n_shot}_shot_v_{j}/output/"  
         os.makedirs(output_path, exist_ok=True)
         study_files = os.listdir(study_path)
 
-        messages = create_messages(n=n_shot,command=command)
+        #messages = create_messages(n=n_shot,command=command)
 
         first_call = True
         for file in study_files:

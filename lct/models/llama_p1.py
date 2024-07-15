@@ -7,8 +7,6 @@ batch_path = "eval_p1_prompt_evalset"#"eval_p1_prompt_evalset"
 n_prompt = 6
 n_shot = 5
 
-cot_true = "" # "_cot"
-
 model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
 model_name = "Llama-3-8B-Instruct"
 
