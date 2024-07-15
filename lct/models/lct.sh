@@ -14,7 +14,7 @@ nvidia-smi
 
 
 
-python llama_p1_tuned.py
+python llama8b_0_shot.py
 #llama_p1_tuned.py llama_p1_eval_shot.py  llama_p1_0_shot.py
 
 
