@@ -18,25 +18,23 @@ temp = 0.5
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
 
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
+model_desc = read_text_file(f"{transform_lct}/input/prompt/agent.txt") 
 command = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
+
+
 cot = "Let's think through this carefully, step by step."
 
 
 EP02 = "This is very important to my career"
-
 EP05 = "Are you sure that's your final answer? It might be worth taking another look." 
 EP07 = "Are you sure that's your final answer? Believe in your abilities and strive for excellence. Your hard work will yield remarkable results."
-
 EP09 = "Stay focused and dedicated to your goals. Your consistent efforts will lead to outstanding achievements"
-
 #EP08: Embrace challenges as opportunities for growth. Each obstacle you overcome brings you closer to success.
-#EP09: Stay focused and dedicated to your goals. Your consistent efforts will lead to outstanding achievements.
 #EP10: Take pride in your work and give it your best. Your commitment to excellence sets you apart.
 
 EP = EP02 + EP07 + EP09
 
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_prompt_2_EP279/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_prompt_2_agent/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
@@ -63,7 +61,7 @@ for file in study_files:
 
     messages = [
     {"role": "system", "content": f"{model_desc}"},
-    {"role": "user", "content": f"{command + EP}{test_file}"}, # + "\n" + cot
+    {"role": "user", "content": f"{command}{test_file}"}, 
     ]
 
     prompt = pipeline.tokenizer.apply_chat_template(
