@@ -8,35 +8,25 @@ batch_path = "eval_0_shot_evaldata"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-
-n_prompt = 1
-
-#top = 0.98
-#top_str = f"_top_{str(top)}"
+n_prompt = 6
 temp = 0.5
-temp_str = f"_temp_{str(temp).split('.')[1]}"
-temp_str = "" # temp_1
-cot_true = ""  #"_cot"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
-#output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_prompt_{n_prompt}{cot_true}/output/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_prompt_1/output/"
+
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
+command = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
+cot = "Let's think through this carefully, step by step."
+ep5 = "Are you sure that's your final answer? It might be worth taking another look."
+
+
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_prompt_2_CoT/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
 
 
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") # p{n_prompt}
-
-
-
 messages = []
-
-cot = "Let's think through this carefully, step by step."
-#command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
-#command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything:" #+ cot
-command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
 
 
 print("Hier fängt die Pipeline an")
@@ -57,9 +47,8 @@ for file in study_files:
 
     messages = [
     {"role": "system", "content": f"{model_desc}"},
-    {"role": "user", "content": f"{command}{test_file}"}, # + "\n" + cot
+    {"role": "user", "content": f"{command + cot}{test_file}"}, # + "\n" + cot
     ]
-
 
     prompt = pipeline.tokenizer.apply_chat_template(
                 messages, 
