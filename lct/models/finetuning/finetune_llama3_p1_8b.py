@@ -13,7 +13,7 @@ if torch.cuda.device_count() > 1:
 
 
 r = 128
-epoch = 40
+epoch = 10
 
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -35,7 +35,7 @@ model = FastLanguageModel.get_peft_model(
     r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096 (zu groß)
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
-    lora_alpha = 256, # 16,
+    lora_alpha = 2048, # 256 (default),
     lora_dropout=0.05,
     bias = "none",    # Supports any, but = "none" is optimized
     use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context  # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
@@ -143,5 +143,5 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}")
+model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}_alpha2048")
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving

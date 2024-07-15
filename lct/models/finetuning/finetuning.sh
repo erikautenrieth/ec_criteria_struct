@@ -5,8 +5,8 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --time=72:00:00          # Time limit hrs:min:sec
 #SBATCH --nodelist=wr25          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !
-#SBATCH --output=p1_8b_e40_r128_linear.%j.out   # Standard output and error log
-#SBATCH --error=p1_8b_e40_r128_linear.%j.err    # Error log  p1_8b_e10_r2048.%j.err 
+#SBATCH --output=p1_8b_e10_r128_alpha2048.%j.out   # Standard output and error log
+#SBATCH --error=p1_8b_e10_r128_alpha2048.%j.err    # Error log  p1_8b_e10_r2048.%j.err 
 #SBATCH --job-name=tune8b
 
 module load cuda
