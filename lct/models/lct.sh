@@ -4,7 +4,7 @@
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
 #SBATCH --time=04:00:00          # Time limit hrs:min:sec
-#SBATCH --nodelist=wr25          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht), 24 (fail) ,25 (geht) 
+#SBATCH --nodelist=wr23          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !
 #SBATCH --output=log/llm_shot.%j.out   # Standard output and error log
 #SBATCH --error=log/llm_shot.%j.err    # Error log
 #SBATCH --job-name=0-shot

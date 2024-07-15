@@ -8,7 +8,7 @@ batch_path = "eval_0_shot_evaldata"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-n_prompt = 6
+n_prompt = 1
 temp = 0.5
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
@@ -20,7 +20,7 @@ cot = "Let's think through this carefully, step by step."
 ep5 = "Are you sure that's your final answer? It might be worth taking another look."
 
 
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_prompt_2_CoT/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_prompt_1_CoT/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
