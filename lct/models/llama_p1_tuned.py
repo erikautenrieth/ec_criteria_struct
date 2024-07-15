@@ -10,7 +10,7 @@ from unsloth import FastLanguageModel
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
-batch_path = "eval_p1_finetuned__8b_prompt2" 
+batch_path = "eval_p1_finetuned_8b_prompt2"
 model_id = "tuned_models_8b/llama3_8b_Lora_ep30_r2048_linear"      #llama3_70b_Lora_ep10_128_prompt6_v2
 model_name = "8b_LoRA_Fine-Tuned_ep30_r2048_linear"
 
