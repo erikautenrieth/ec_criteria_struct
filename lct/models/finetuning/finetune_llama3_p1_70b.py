@@ -13,7 +13,7 @@ if torch.cuda.device_count() > 1:
 
 
 r = 128
-epoch = 80
+epoch = 10
 
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -22,7 +22,7 @@ load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False
 
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = "meta-llama/Meta-Llama-3-8B-Instruct", 
+    model_name = "meta-llama/Meta-Llama-3-70B-Instruct", 
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
@@ -94,11 +94,11 @@ trainer = SFTTrainer(
     dataset_num_proc = 4,  
     packing = True,  
     args = TrainingArguments(
-        per_device_train_batch_size = 20,  # 2 (default)
-        gradient_accumulation_steps = 4,   # 8 (default)
-        per_device_eval_batch_size = 20,   # 4 (default)
+        per_device_train_batch_size = 2,  
+        gradient_accumulation_steps = 8,  
+        per_device_eval_batch_size = 4,  
         num_train_epochs = epoch,  
-        warmup_ratio = 0.03,  # 0.1 (default)
+        warmup_ratio = 0.1,  
         learning_rate = 5e-5, 
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
@@ -106,7 +106,7 @@ trainer = SFTTrainer(
         weight_decay = 0.05,  
         lr_scheduler_type = "cosine",  # cosine (default)
         seed = 42, 
-        output_dir = "outputs_8b",
+        output_dir = "outputs_70b",
         logging_steps = 50,  
         evaluation_strategy = 'steps',  
         eval_steps = 250,  
@@ -143,5 +143,5 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}_batch_20_1_20_warmp_0.03")
+model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}")
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
