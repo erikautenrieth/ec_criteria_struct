@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_best_5_shot_prompts"
+batch_path = "eval_p1_5_shot_types"
 
 n_prompt = 6
 n_shot = 5
@@ -41,7 +41,7 @@ command = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_2_CoT/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_min_operators/output/"
 
 os.makedirs(output_path, exist_ok=True)
 
@@ -94,7 +94,7 @@ additional_files = [
 # Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, additional_files)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, least_operators)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
@@ -108,7 +108,6 @@ EP07 = "Are you sure that's your final answer? Believe in your abilities and str
 EP09 = "Stay focused and dedicated to your goals. Your consistent efforts will lead to outstanding achievements"
 #EP08: Embrace challenges as opportunities for growth. Each obstacle you overcome brings you closer to success.
 #EP10: Take pride in your work and give it your best. Your commitment to excellence sets you apart.
-
 EP = EP02 + EP07 + EP09
 
 
@@ -116,7 +115,7 @@ EP = EP02 + EP07 + EP09
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 for i in range(n_shot):
-    messages.append({"role": "user", "content": f"{command + cot} {studies[study_filenames[i]]}"})
+    messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
@@ -136,10 +135,10 @@ for file in study_files:
     test_file = read_text_file(study_path+file)
 
     if first_call:
-        messages.append({"role": "user", "content": f"{command + cot} {test_file}"})
+        messages.append({"role": "user", "content": f"{command} {test_file}"})
         first_call = False
     else:
-        messages[-1] = {"role": "user", "content": f"{command + cot} {test_file}"} 
+        messages[-1] = {"role": "user", "content": f"{command} {test_file}"} 
 
 
     prompt = pipeline.tokenizer.apply_chat_template(
