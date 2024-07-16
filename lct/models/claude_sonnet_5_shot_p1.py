@@ -10,7 +10,7 @@ n_shot = 5
 model_name = "Claude-3.5-Sonnet" # "Claude-3-Opus"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-model_desc = read_text_file(f"{transform_lct}/input/prompt/claude_prompt6.txt") 
+model_desc = read_text_file(f"{transform_lct}/input/prompt/claude_prompt1.txt") 
 study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_temp_0.5/output/"
 os.makedirs(output_path, exist_ok=True)
@@ -37,7 +37,7 @@ for file in study_files:
                 "content": [
                     {
                         "type": "text",
-                        "text": test_file
+                        "text":  model_desc + test_file
                     }
                 ]
             }
