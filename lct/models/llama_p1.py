@@ -41,7 +41,7 @@ command = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_min_operators/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_max_operators/output/"
 
 os.makedirs(output_path, exist_ok=True)
 
@@ -94,7 +94,7 @@ additional_files = [
 # Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, least_operators)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, most_operators)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
