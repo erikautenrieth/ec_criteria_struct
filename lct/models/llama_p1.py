@@ -56,6 +56,22 @@ shot_list = [
     "NCT03930121.txt"
 ]
 
+most_operators = [
+    "NCT03860857.txt",  # 31 Operatoren
+    "NCT03866200.txt",  # 30 Operatoren
+    "NCT03861559.txt",  # 29 Operatoren
+    "NCT03865589.txt",  # 26 Operatoren
+    "NCT03868475.txt"   # 24 Operatoren
+]
+
+least_operators = [
+    "NCT03864653.txt",  # 3 Operatoren
+    "NCT03867422.txt",  # 3 Operatoren
+    "NCT03868865.txt",  # 3 Operatoren
+    "NCT03921138.txt",  # 3 Operatoren
+    "NCT03922269.txt"   # 3 Operatoren
+]
+
 # 15 -shot
 additional_files = [
     "NCT03865433.txt",
