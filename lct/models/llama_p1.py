@@ -2,8 +2,8 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_prompt_evalset"#"eval_p1_prompt_evalset"
-#batch_path = "eval_p1_n_shot_modelle_prompt6_temperatur5"
+batch_path = "eval_p1_best_5_shot_prompts"
+
 n_prompt = 6
 n_shot = 5
 
@@ -41,7 +41,7 @@ command = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_2/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt_2_CoT/output/"
 
 os.makedirs(output_path, exist_ok=True)
 
@@ -83,7 +83,17 @@ studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
 
-cot = "Let's think through this carefully, step by step:"
+cot = "Let's think through this carefully, step by step."
+
+
+EP02 = "This is very important to my career"
+EP05 = "Are you sure that's your final answer? It might be worth taking another look." 
+EP07 = "Are you sure that's your final answer? Believe in your abilities and strive for excellence. Your hard work will yield remarkable results."
+EP09 = "Stay focused and dedicated to your goals. Your consistent efforts will lead to outstanding achievements"
+#EP08: Embrace challenges as opportunities for growth. Each obstacle you overcome brings you closer to success.
+#EP10: Take pride in your work and give it your best. Your commitment to excellence sets you apart.
+
+EP = EP02 + EP07 + EP09
 
 
 
