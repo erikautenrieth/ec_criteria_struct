@@ -5,16 +5,16 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --time=05:00:00          # Time limit hrs:min:sec
 #SBATCH --nodelist=wr21          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !
-#SBATCH --output=log/llm_shot.%j.out   # Standard output and error log
-#SBATCH --error=log/llm_shot.%j.err    # Error log
-#SBATCH --job-name=less_op
+#SBATCH --output=log/llm.%j.out   # Standard output and error log
+#SBATCH --error=log/llm.%j.err    # Error log
+#SBATCH --job-name=llm
 
 module load cuda
 nvidia-smi
 
 
 
-python llama_p1.py
+python mixtral8x22b.py
 #llama_p1_tuned.py llama_p1_eval_shot.py  llama_p1_0_shot.py
 
 

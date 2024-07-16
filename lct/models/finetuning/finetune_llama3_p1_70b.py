@@ -13,7 +13,7 @@ if torch.cuda.device_count() > 1:
 
 
 r = 128
-epoch = 10
+epoch = 40
 
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -143,5 +143,5 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}")
+model.save_pretrained(f"70b_prompt2_finetuned_models/llama3_70b_Lora_ep{epoch}_r{r}")
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
