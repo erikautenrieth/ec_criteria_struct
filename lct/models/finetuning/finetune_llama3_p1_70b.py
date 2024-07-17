@@ -12,9 +12,11 @@ if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
 
-r = 256
-epoch = 40
+r = 512
+epoch = 10
 
+output_dir  = "outputs_70b_2"
+os.makedirs(output_dir, exist_ok=True)
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
@@ -106,7 +108,7 @@ trainer = SFTTrainer(
         weight_decay = 0.05,  
         lr_scheduler_type = "cosine",  # cosine (default)
         seed = 42, 
-        output_dir = "outputs_70b",
+        output_dir = output_dir,
         logging_steps = 50,  
         evaluation_strategy = 'steps',  
         eval_steps = 100,  

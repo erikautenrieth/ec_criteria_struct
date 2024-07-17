@@ -13,8 +13,9 @@ if torch.cuda.device_count() > 1:
 
 
 r = 128
-epoch = 10
-
+epoch = 20
+output_dir  = "outputs_8b_2"
+os.makedirs(output_dir, exist_ok=True)
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
@@ -48,8 +49,7 @@ model = FastLanguageModel.get_peft_model(
 #model = torch.nn.DataParallel(model, device_ids=[0,1])
 
 ## 80/20 Training 904 Dokumente Training, 202 Test Set [Random]
-## Dataset muss in der selben Struktur sein
-alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+llama3_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
 
 ### Instruction:
 {}
@@ -60,7 +60,7 @@ alpaca_prompt = """Below is an instruction that describes a task, paired with an
 ### Response:
 {}"""
 
-EOS_TOKEN = tokenizer.eos_token # Must add EOS_TOKEN
+EOS_TOKEN = tokenizer.eos_token 
 
 def formatting_prompts_func(examples):
     instructions = examples["instruction"]
@@ -69,7 +69,7 @@ def formatting_prompts_func(examples):
     texts = []
     for instruction, input, output in zip(instructions, inputs, outputs):
         # Must add EOS_TOKEN, otherwise your generation will go on forever!
-        text = alpaca_prompt.format(instruction, input, output) + EOS_TOKEN
+        text = llama3_prompt.format(instruction, input, output) + EOS_TOKEN
         texts.append(text)
     return { "text" : texts, }
 pass
@@ -106,7 +106,7 @@ trainer = SFTTrainer(
         weight_decay = 0.05,  
         lr_scheduler_type = "cosine",  # cosine (default)
         seed = 42, 
-        output_dir = "outputs_8b",
+        output_dir = output_dir,
         logging_steps = 50,  
         evaluation_strategy = 'steps',  
         eval_steps = 100,  
@@ -143,5 +143,7 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}_l2e4")
+model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}")
+
+
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
