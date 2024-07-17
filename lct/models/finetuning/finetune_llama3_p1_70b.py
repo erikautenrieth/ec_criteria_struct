@@ -12,8 +12,8 @@ if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
 
-r = 128
-epoch = 10
+r = 256
+epoch = 40
 
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -109,9 +109,9 @@ trainer = SFTTrainer(
         output_dir = "outputs_70b",
         logging_steps = 50,  
         evaluation_strategy = 'steps',  
-        eval_steps = 250,  
+        eval_steps = 100,  
         save_strategy = 'steps',  
-        save_steps = 250,  
+        save_steps = 100,  
         load_best_model_at_end = True,
         metric_for_best_model = "eval_loss", 
         greater_is_better = False,  
