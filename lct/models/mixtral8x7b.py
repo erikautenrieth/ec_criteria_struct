@@ -38,7 +38,6 @@ study_filenames, study_contents, label_filenames, label_contents = read_matching
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
-messages.append({"role": "system", "content": f"{model_desc}"})
 for i in range(n_shot):
     messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})

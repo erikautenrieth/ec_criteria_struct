@@ -4,18 +4,16 @@
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
 #SBATCH --time=05:00:00          # Time limit hrs:min:sec
-#SBATCH --nodelist=wr21          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !
+#SBATCH --nodelist=wr20          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !
 #SBATCH --output=log/llm.%j.out   # Standard output and error log
 #SBATCH --error=log/llm.%j.err    # Error log
-#SBATCH --job-name=tuned
+#SBATCH --job-name=mixtral
 
 module load cuda
-nvidia-smi
 
-
-
-python llama_p1_tuned.py #llama_p1.py 
+python mixtral8x7_test.py # mixtral8x7b.py #llama_p1.py 
 #llama_p1_tuned.py llama_p1_eval_shot.py  llama_p1_0_shot.py
+
 
 
 #echo "Running nvidia-smi diagnostics"
