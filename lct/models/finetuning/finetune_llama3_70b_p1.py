@@ -13,8 +13,9 @@ if torch.cuda.device_count() > 1:
 
 
 r = 128
-epoch = 20
-output_dir  = "outputs_8b_2"
+epoch = 10
+
+output_dir  = "outputs/outputs_70b_3"
 os.makedirs(output_dir, exist_ok=True)
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -23,7 +24,7 @@ load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False
 
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = "meta-llama/Meta-Llama-3-8B-Instruct", 
+    model_name = "meta-llama/Meta-Llama-3-70B-Instruct", 
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
@@ -49,7 +50,8 @@ model = FastLanguageModel.get_peft_model(
 #model = torch.nn.DataParallel(model, device_ids=[0,1])
 
 ## 80/20 Training 904 Dokumente Training, 202 Test Set [Random]
-llama3_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+## Dataset muss in der selben Struktur sein
+alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
 
 ### Instruction:
 {}
@@ -60,7 +62,7 @@ llama3_prompt = """Below is an instruction that describes a task, paired with an
 ### Response:
 {}"""
 
-EOS_TOKEN = tokenizer.eos_token 
+EOS_TOKEN = tokenizer.eos_token # Must add EOS_TOKEN
 
 def formatting_prompts_func(examples):
     instructions = examples["instruction"]
@@ -69,7 +71,7 @@ def formatting_prompts_func(examples):
     texts = []
     for instruction, input, output in zip(instructions, inputs, outputs):
         # Must add EOS_TOKEN, otherwise your generation will go on forever!
-        text = llama3_prompt.format(instruction, input, output) + EOS_TOKEN
+        text = alpaca_prompt.format(instruction, input, output) + EOS_TOKEN
         texts.append(text)
     return { "text" : texts, }
 pass
@@ -94,12 +96,12 @@ trainer = SFTTrainer(
     dataset_num_proc = 4,  
     packing = True,  
     args = TrainingArguments(
-        per_device_train_batch_size = 2,  # 2 (default)
-        gradient_accumulation_steps = 8,   # 8 (default)
-        per_device_eval_batch_size = 4,   # 4 (default)
+        per_device_train_batch_size = 2,  
+        gradient_accumulation_steps = 8,  
+        per_device_eval_batch_size = 4,  
         num_train_epochs = epoch,  
-        warmup_ratio = 0.1,  # 0.1 (default)
-        learning_rate = 5e-5, # 5e-5,
+        warmup_ratio = 0.1,  
+        learning_rate = 5e-5, 
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
         optim = "adamw_8bit",
@@ -143,7 +145,5 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}")
-
-
+model.save_pretrained(f"70b_prompt2_finetuned_models/llama3_70b_Lora_ep{epoch}_r{r}")
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving

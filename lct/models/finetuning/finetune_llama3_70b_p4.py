@@ -13,9 +13,8 @@ load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False
 r = 128
 epoch = 10
 
-output_dir  = "outputs_70b_p4"
+output_dir  = "outputs/outputs_70b_p4"
 os.makedirs(output_dir, exist_ok=True)
-
 
 
 model, tokenizer = FastLanguageModel.from_pretrained(
@@ -27,23 +26,19 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 )
 model = FastLanguageModel.get_peft_model(
     model,
-    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096 (zu groß)
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
-    lora_alpha = 256,
-    lora_dropout = 0, # Supports any, but = 0 is optimized
+    lora_alpha = 256, # 256 (default),
+    lora_dropout=0.05,
     bias = "none",    # Supports any, but = "none" is optimized
-    # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
-    use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context
+    use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context  # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
     random_state = 3407,
     use_rslora = True,  # We support rank stabilized LoRA
     loftq_config = None, # And LoftQ
 )
 
-
 ## 80/20 Training 904 Dokumente Training, 202 Test Set [Random]
-
-## Dataset muss in der selben Struktur sein
 alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
 
 ### Instruction:
@@ -55,20 +50,17 @@ alpaca_prompt = """Below is an instruction that describes a task, paired with an
 ### Response:
 {}"""
 
-EOS_TOKEN = tokenizer.eos_token # Must add EOS_TOKEN
+EOS_TOKEN = tokenizer.eos_token 
 def formatting_prompts_func(examples):
     instructions = examples["instruction"]
     inputs       = examples["input"]
     outputs      = examples["output"]
     texts = []
     for instruction, input, output in zip(instructions, inputs, outputs):
-        # Must add EOS_TOKEN, otherwise your generation will go on forever!
         text = alpaca_prompt.format(instruction, input, output) + EOS_TOKEN
         texts.append(text)
     return { "text" : texts, }
 pass
-
-
 
 dataset_path = 'dataset/dataset_p4_prompt6'
 dataset = load_from_disk(dataset_path)
