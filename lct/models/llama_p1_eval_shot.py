@@ -64,7 +64,7 @@ pipeline = transformers.pipeline(
 for i in range(5, 6):
     batch_path = f"eval_n_shot/eval_{i}_shot_best"
     n_shot = i
-    for j in range(15, 22):
+    for j in range(9, 15):
         study_path = f"{transform_lct}/input/dataset/test/input/"
         output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{n_shot}_shot_v_{j}/output/"  
         os.makedirs(output_path, exist_ok=True)

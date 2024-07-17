@@ -7,8 +7,8 @@ batch_path = "eval_p1_5_shot_types"
 n_prompt = 6
 n_shot = 5
 
-model_id =  "meta-llama/Meta-Llama-3-8B-Instruct"
-model_name = "Llama-3-8B-Instruct"
+model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
+model_name = "Llama-3-70B-Instruct"
 
 #model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 #model_name = "Llama-3-70B-Instruct"
