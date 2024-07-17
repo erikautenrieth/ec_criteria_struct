@@ -1,6 +1,7 @@
 import anthropic
 from helper_functions import *
 import os
+import time
 ## Kosten 100 Files: ca. 3€
 
 batch_path = "eval_p1_models_prompt6_evaldata"
@@ -47,3 +48,5 @@ for file in study_files:
     save_txt(message.content[0].text, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
 
 
+    # Wait for 10 seconds after each request
+    time.sleep(10)
