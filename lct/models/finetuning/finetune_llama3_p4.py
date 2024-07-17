@@ -9,6 +9,15 @@ max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
 load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
 
+
+r = 128
+epoch = 10
+
+output_dir  = "outputs_70b_p4"
+os.makedirs(output_dir, exist_ok=True)
+
+
+
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = "meta-llama/Meta-Llama-3-70B-Instruct", #"unsloth/llama-3-8b-Instruct-bnb-4bit",   # meta-llama/Meta-Llama-3-8B-Instruct
     max_seq_length = max_seq_length,
@@ -18,10 +27,10 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 )
 model = FastLanguageModel.get_peft_model(
     model,
-    r = 64, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
-    lora_alpha = 128,
+    lora_alpha = 256,
     lora_dropout = 0, # Supports any, but = 0 is optimized
     bias = "none",    # Supports any, but = "none" is optimized
     # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
@@ -71,36 +80,41 @@ test = test.map(formatting_prompts_func, batched=True)
 
 
 trainer = SFTTrainer(
-        model = model,
-        tokenizer = tokenizer,
-        train_dataset = train,
-        eval_dataset = test,
-        dataset_text_field = "text",
-        max_seq_length = max_seq_length,
-        dataset_num_proc = 1,
-        packing = True, 
-        args = TrainingArguments(
-            per_device_train_batch_size=4,
-            gradient_accumulation_steps=4,
-            per_device_eval_batch_size=8,
-            num_train_epochs=20,
-            warmup_ratio=.1,
-            learning_rate = 2e-4,
-            fp16 = not torch.cuda.is_bf16_supported(),
-            bf16 = torch.cuda.is_bf16_supported(),
-            optim = "adamw_8bit",
-            weight_decay = 0.01,
-            lr_scheduler_type = "cosine",
-            seed = 3407,
-            output_dir = "outputs_p4",
-            logging_steps=10,
-            evaluation_strategy='epoch',
-            eval_steps=100,  
-            eval_accumulation_steps=4,
-            save_strategy='epoch',
-            load_best_model_at_end=True,
-        ),
-    )
+    model = model,
+    tokenizer = tokenizer,
+    train_dataset = train,
+    eval_dataset = test,
+    dataset_text_field = "text",
+    max_seq_length = max_seq_length,
+    dataset_num_proc = 4,  
+    packing = True,  
+    args = TrainingArguments(
+        per_device_train_batch_size = 2,  
+        gradient_accumulation_steps = 8,  
+        per_device_eval_batch_size = 4,  
+        num_train_epochs = epoch,  
+        warmup_ratio = 0.1,  
+        learning_rate = 5e-5, 
+        fp16 = not torch.cuda.is_bf16_supported(),
+        bf16 = torch.cuda.is_bf16_supported(),
+        optim = "adamw_8bit",
+        weight_decay = 0.05,  
+        lr_scheduler_type = "cosine",  # cosine (default)
+        seed = 42, 
+        output_dir = output_dir,
+        logging_steps = 50,  
+        evaluation_strategy = 'steps',  
+        eval_steps = 100,  
+        save_strategy = 'steps',  
+        save_steps = 100,  
+        load_best_model_at_end = True,
+        metric_for_best_model = "eval_loss", 
+        greater_is_better = False,  
+        group_by_length = True,  
+        gradient_checkpointing = True,  
+        max_grad_norm = 1.0,  
+    ),
+)
 
 
 #@title Show current memory stats
@@ -125,9 +139,4 @@ print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
 
-
-new_model_name = f"llama3_70b_finetuned_p4_20e_r64"
-
-
-model.save_pretrained(new_model_name) # Local saving
-# model.push_to_hub("your_name/lora_model", token = "...") # Online saving
+model.save_pretrained(f"70b_p4/llama3_70b_Lora_ep{epoch}_r{r}_p4") 
