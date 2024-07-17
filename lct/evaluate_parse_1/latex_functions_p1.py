@@ -78,7 +78,7 @@ def avg_operators_latex(all_metrics, versuch_name):
     latex_table += "\\end{table}\n"
 
     os.makedirs("latex", exist_ok=True)
-    with open(f"latex/{versuch_name}.tex", "w") as file:
+    with open(f"data/latex/{versuch_name}.tex", "w") as file:
         file.write(latex_table)
     return latex_table
 
@@ -165,7 +165,7 @@ def and_or_not_to_latex(all_metrics, versuch_name):
     latex_table += "\\end{table}\n"
 
     os.makedirs("latex", exist_ok=True)
-    with open(f"latex/{versuch_name}_ops_einzeln.tex", "w") as file:
+    with open(f"data/latex/{versuch_name}_ops_einzeln.tex", "w") as file:
         file.write(latex_table)
     return latex_table
 

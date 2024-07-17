@@ -173,7 +173,7 @@ def plot_avg_pct(all_metrics, versuch_name):
         plt.text(i + bar_width, v2 + 0.5, f'{v2:.1f}%', ha='center', fontsize=12)
 
     plt.tight_layout()
-    plt.savefig(f'pics/missing_pct_{versuch_name}.png')
+    plt.savefig(f'data/pics/missing_pct_{versuch_name}.png')
     plt.show()
 
 
@@ -243,5 +243,5 @@ def plot_avg_metrics(all_metrics, versuch_name):
         plt.text(x[i * 4 + 2], avg_f1_scores[i] + y_offset, f'{avg_f1_scores[i]:.1f}%', ha='center', fontsize=10)
 
     plt.tight_layout()
-    plt.savefig(f'pics/all_operators_{versuch_name}.png')
+    plt.savefig(f'data/pics/all_operators_{versuch_name}.png')
     plt.show()
