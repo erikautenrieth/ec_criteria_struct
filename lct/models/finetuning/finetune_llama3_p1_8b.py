@@ -35,7 +35,7 @@ model = FastLanguageModel.get_peft_model(
     r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096 (zu groß)
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
-    lora_alpha = 256, # 256 (default),
+    lora_alpha = 350, # 256 (default),
     lora_dropout=0.05,
     bias = "none",    # Supports any, but = "none" is optimized
     use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context  # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
@@ -94,12 +94,12 @@ trainer = SFTTrainer(
     dataset_num_proc = 4,  
     packing = True,  
     args = TrainingArguments(
-        per_device_train_batch_size = 20,  # 2 (default)
-        gradient_accumulation_steps = 4,   # 8 (default)
-        per_device_eval_batch_size = 20,   # 4 (default)
+        per_device_train_batch_size = 2,  # 2 (default)
+        gradient_accumulation_steps = 8,   # 8 (default)
+        per_device_eval_batch_size = 4,   # 4 (default)
         num_train_epochs = epoch,  
-        warmup_ratio = 0.03,  # 0.1 (default)
-        learning_rate = 5e-5, 
+        warmup_ratio = 0.1,  # 0.1 (default)
+        learning_rate = 5e-5, # 5e-5,
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
         optim = "adamw_8bit",
@@ -143,5 +143,5 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}_batch_20_1_20_warmp_0.03")
+model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}_a350")
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
