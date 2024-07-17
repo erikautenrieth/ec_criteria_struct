@@ -7,3 +7,10 @@ To enable the following instructions: AVX2 FMA, in other operations, rebuild Ten
 Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
 Unsloth: Dropout = 0 is supported for fast patching. You are using dropout = 0.05.
 Unsloth will patch all other layers, except LoRA matrices, causing a performance hit.
+Unsloth 2024.6 patched 80 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 224 | Num Epochs = 10
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 8
+\        /    Total batch size = 16 | Total steps = 140
+ "-____-"     Number of trainable parameters = 3,313,500,160
+  0%|          | 0/140 [00:00<?, ?it/s]  1%|          | 1/140 [01:18<3:02:35, 78.82s/it]  1%|▏         | 2/140 [02:36<2:59:29, 78.04s/it]  2%|▏         | 3/140 [03:53<2:57:46, 77.86s/it]  3%|▎         | 4/140 [05:11<2:56:17, 77.77s/it]  4%|▎         | 5/140 [06:29<2:54:53, 77.73s/it]  4%|▍         | 6/140 [07:46<2:53:31, 77.70s/it]  5%|▌         | 7/140 [09:04<2:52:12, 77.69s/it]  6%|▌         | 8/140 [10:22<2:50:53, 77.68s/it]  6%|▋         | 9/140 [11:39<2:49:35, 77.67s/it]  7%|▋         | 10/140 [12:57<2:48:16, 77.66s/it]  8%|▊         | 11/140 [14:15<2:46:57, 77.66s/it]  9%|▊         | 12/140 [15:32<2:45:39, 77.65s/it]  9%|▉         | 13/140 [16:50<2:44:21, 77.65s/it] 10%|█         | 14/140 [18:08<2:43:03, 77.65s/it] 11%|█         | 15/140 [19:25<2:41:45, 77.65s/it] 11%|█▏        | 16/140 [20:43<2:40:28, 77.65s/it] 12%|█▏        | 17/140 [22:01<2:39:10, 77.65s/it] 13%|█▎        | 18/140 [23:18<2:37:52, 77.65s/it] 14%|█▎        | 19/140 [24:36<2:36:35, 77.65s/it] 14%|█▍        | 20/140 [25:53<2:35:17, 77.65s/it] 15%|█▌        | 21/140 [27:11<2:33:59, 77.65s/it] 16%|█▌        | 22/140 [28:29<2:32:42, 77.64s/it] 16%|█▋        | 23/140 [29:46<2:31:25, 77.65s/it] 17%|█▋        | 24/140 [31:04<2:30:07, 77.65s/it] 18%|█▊        | 25/140 [32:22<2:28:49, 77.65s/it]

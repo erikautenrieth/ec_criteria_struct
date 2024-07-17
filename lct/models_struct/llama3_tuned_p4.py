@@ -15,7 +15,7 @@ model_name = "Llama3_70b_Fine-Tuned_p4_ep10"
   
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset_p4_prompt6/test/input/"
-output_path = f"{transform_lct}/evaluate_struct/model_output/{batch_path}/{model_name}_p{n_prompt}/output/"
+output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}_p{n_prompt}/output/"
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 
