@@ -12,7 +12,7 @@ module load cuda
 export CUDA_VISIBLE_DEVICES=0 
 
 python finetune_llama3_p1_70b.py
-#finetune_llama3_p1.py
+
 
 
 

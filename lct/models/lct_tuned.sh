@@ -10,12 +10,4 @@
 
 module load cuda
 
-python llama_p1_tuned.py 
-
-
-##SBATCH --nodelist=wr21          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !
-#echo "Running nvidia-smi diagnostics"
-#nvidia-smi -q -d MEMORY 
-#nvidia-smi -q -d UTILIZATION 
-#nvidia-smi -q -d ECC 
-#export SLURM_DEBUG=nvml
+python 70b_tuned.py   # 8b_tuned.py  
