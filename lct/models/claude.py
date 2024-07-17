@@ -15,7 +15,7 @@ study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_temp_0.5/output/"
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[105:]
+study_files = os.listdir(study_path)[117:]
 
 client = anthropic.Anthropic(
     api_key="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",#os.getenv("ANTHROPIC_API_KEY"), #os.environ.get("ANTHROPIC_API_KEY"),
