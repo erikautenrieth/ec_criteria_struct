@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "struct2_eval_testdataset"
+batch_path = "struct2"
 
 n_shot = 3
 struct_prompt = 2
@@ -13,7 +13,7 @@ model_name = "Llama-3-70B-Instruct"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset_p2/test/input/"
-output_path = f"{transform_lct}/evaluate_struct/model_output/{batch_path}/{model_name}_{n_shot}_shot/output/"
+output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}_{n_shot}_shot_prompt2/output/"
 os.makedirs(output_path, exist_ok=True)
 
 
@@ -36,8 +36,6 @@ for i in range(n_shot):
     messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
-
-print("Hier fängt die Pipeline an")
 pipeline = transformers.pipeline(
             "text-generation",
             model=model_id,
