@@ -26,17 +26,19 @@ def naive_greedy_match_v1(criteria_text):
     # Apply OR pattern after comma and after slash
     criteria_text = re.sub(r',\s(?!or\b)', r', [OR] ', criteria_text)
     criteria_text = re.sub(r'\/', r'/ [OR] ', criteria_text)
+    
     # Apply AND patterns
     for pattern in and_patterns:
         criteria_text = re.sub(pattern, r'[AND] \g<0>', criteria_text)
     # Apply NOT patterns
     for pattern in not_patterns:
         criteria_text = re.sub(pattern, r'[NOT] \g<0>', criteria_text)
+
     criteria_text = re.sub(r'\s(\[OR\]\s)+', ' [OR] ', criteria_text)
+    criteria_text = re.sub(r'\s*(\[OR\]\s*)+', ' [OR] ', criteria_text)
+    criteria_text = re.sub(r'\[OR\]\s*\[AND\]', '[AND]', criteria_text)
+
     return criteria_text.strip() 
-
-
-
 
 def naive_greedy_match(criteria_text):
     """
@@ -48,28 +50,25 @@ def naive_greedy_match(criteria_text):
         str: The processed criteria text with the predefined patterns replaced
              by corresponding operators.
     """
-   
-    # Patterns for AND and NOT operators
+
     patterns = {
-        '[AND]': [r'\bwith\b', r'\bwho\b', r'\bin addition\b', r'\bplus\b', r'\band\b', r'\bbut\b',
-                  r'\bthat\b', r'\bdespite\b', r'\bhaving\b'],
-        '[NOT]': [r'\bno\b', r'\bnot\b', r'\bnone\b', r'\bdon\'t\b', r'\bfree\b', r'\bprevent\b',
-                  r'\bInability\b', r'\black\b', r'\bimpossible\b', r'\boff\b', r'\bwithout\b',
-                  r'\bunable\b', r'\bnaive\b', r'\bexcluded\b', r'\babsence\b']
+        'OR': [r'(?<=,\s)or\b', r'\band / or\b', r'\band/or\b', r'\bor\b'],
+        'AND': [r'\b(?:with|who|in addition|plus|and|but|that|despite|having)\b'],
+        'NOT': [r'\b(?:no|not|none|don\'t|free|prevent|Inability|lack|impossible|off|without|unable|naive|excluded|absence)\b']
     }
-    
-    # Apply patterns for AND and NOT operators
-    for operator, pats in patterns.items():
-        for pattern in pats:
-            criteria_text = re.sub(pattern, rf'{operator} \g<0>', criteria_text)
-    
-    # Insert [OR] after commas (but not if followed by "or") and after forward slashes
-    criteria_text = re.sub(r',\s*(?!or\b)', r', [OR] ', criteria_text)
-    criteria_text = re.sub(r'/', r'/ [OR] ', criteria_text)
-    
-    # Remove any [OR] that might have been inserted at the start of the string
-    criteria_text = re.sub(r'^\s*\[OR\]\s*', '', criteria_text)
-    
+
+    for op, pattern_list in patterns.items():
+        for pattern in pattern_list:
+            criteria_text = re.sub(pattern, f'[{op}] \g<0>', criteria_text)
+
+    # Apply OR pattern after comma and slash
+    criteria_text = re.sub(r',\s(?!or\b)', r', [OR] ', criteria_text)
+    criteria_text = re.sub(r'\/', r'/ [OR] ', criteria_text)
+
+    # Clean up wrong OR occurrences
+    criteria_text = re.sub(r'\s*(\[OR\]\s*)+', ' [OR] ', criteria_text)
+    criteria_text = re.sub(r'\[OR\]\s*\[AND\]', '[AND]', criteria_text)
+    criteria_text = re.sub(r'\[OR\]\s*\[AND\]', '[AND]', criteria_text)
     return criteria_text.strip()
 
 
