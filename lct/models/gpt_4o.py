@@ -25,7 +25,7 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 
 
-batch_path = "eval_p1_gpt_evaldataset" #"eval_p1_finetuned_testset_prompt1_llama3_70b"
+batch_path = "modelle_prompt2" #"eval_p1_finetuned_testset_prompt1_llama3_70b"
 n_prompt = 6
 n_shot = 5
 

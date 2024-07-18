@@ -4,7 +4,7 @@ import os
 import time
 ## Kosten 100 Files: ca. 3€
 
-batch_path = "eval_p1_models_prompt6_evaldata"
+batch_path = "modelle_prompt2"
 n_prompt = 6
 n_shot = 10
 

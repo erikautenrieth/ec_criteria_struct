@@ -4,7 +4,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from helper_functions import *
 
 
-batch_path = "eval_p1_models_prompt6_evaldata"
+batch_path = "modelle_prompt2"
 
 n_prompt = 6
 n_shot = 5

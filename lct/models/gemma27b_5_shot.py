@@ -4,7 +4,7 @@ import torch
 from helper_functions import *
 import re
 
-batch_path = "eval_p1_models_prompt6_evaldata"
+batch_path = "modelle_prompt2"
 
 model_name = "Gemma-27b"
 model_id = "google/gemma-2-27b-it"

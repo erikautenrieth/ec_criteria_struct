@@ -3,7 +3,7 @@ import os
 import re
 
 
-batch_path = "eval_p1_finetuned_testset_prompt6_llama3_70b"
+batch_path = "modelle_prompt2"
 model_name = " Naive greedy match (Prompt 2)"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
