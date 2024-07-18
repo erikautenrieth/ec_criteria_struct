@@ -10,8 +10,8 @@ batch_path = "eval_p4"
 n_prompt = 2
 
 
-model_id = "tuned_models/llama3_70b_finetuned_p4_ep10"
-model_name = "Llama3_70b_Fine-Tuned_ep10__v1_p4"
+model_id = "tuned_models/llama3_70b_Lora_ep10_r128_p4"
+model_name = "Llama3_70b_Fine-Tuned_ep10_r128"
   
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
