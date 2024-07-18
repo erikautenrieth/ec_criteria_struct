@@ -12,7 +12,7 @@ output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{mode
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 
-def naive_greedy_match_v1(criteria_text):
+def naive_greedy_match ( criteria_text : str) -> str:
     or_patterns =  [r'(?<=,\s)or\b', r'\band / or\b', r'\band/or\b', r'\bor\b']
     and_patterns = [r'\bwith\b', r'\bwho\b', r'\bin addition\b', r'\bplus\b',
                     r'\band\b', r'\bbut\b', r'\bthat\b', r'\bdespite\b', r'\bhaving\b']
@@ -41,14 +41,12 @@ def naive_greedy_match_v1(criteria_text):
     return criteria_text.strip() 
 
 def naive_greedy_match(criteria_text):
-    """
-    Applies logical operators [AND] and [NOT] to the given criteria text based on specified patterns.
-    
+    """ Applies logical operators [AND] [OR] [NOT] to the given criteria text based on specified patterns.
+        The patterns are based on Prompt 2 for the instructions of the Large Language Models. 
     Args:
         criteria_text (str): The criteria text to be processed.
     Returns:
-        str: The processed criteria text with the predefined patterns replaced
-             by corresponding operators.
+        str: The processed criteria text with the predefined patterns replaced by corresponding operators.
     """
 
     patterns = {
@@ -69,25 +67,57 @@ def naive_greedy_match(criteria_text):
     criteria_text = re.sub(r'\s*(\[OR\]\s*)+', ' [OR] ', criteria_text)
     criteria_text = re.sub(r'\[OR\]\s*\[AND\]', '[AND]', criteria_text)
     criteria_text = re.sub(r'\[OR\]\s*\[NOT\]', '[NOT]', criteria_text)
+
     return criteria_text.strip()
 
 
-def parse_criteria_file(file_content):
-    return naive_greedy_match(file_content)
+def parser():
+    start_time = time.time() 
+    for file in study_files:
+        file_name = file.split(".")[0]
+        test_file = read_text_file(study_path + file)
+        output = naive_greedy_match(test_file)
+        print(output)
+        save_txt(output, f"{output_path}{file_name}.txt")
+
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"Total time for all calls: {elapsed_time:.2f} seconds")
 
 
-start_time = time.time() 
 
-for file in study_files:
-    file_name = file.split(".")[0]
-    test_file = read_text_file(study_path + file)
 
-    output = parse_criteria_file(test_file)
-    print(output)
-    save_txt(output, f"{output_path}{file_name}.txt")
 
-end_time = time.time()
 
-elapsed_time = end_time - start_time
-print(f"Total time for all calls: {elapsed_time:.2f} seconds")
 
+
+
+def measure_average_runtime(num_runs=1000):
+    import time
+    import statistics
+    total_times = []
+    
+    for _ in range(num_runs):
+        start_time = time.time()
+        
+        for file in study_files:
+            file_name = file.split(".")[0]
+            test_file = read_text_file(study_path + file)
+            output = naive_greedy_match(test_file)
+            save_txt(output, f"{output_path}{file_name}.txt")
+        
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        total_times.append(elapsed_time)
+    
+    average_time = statistics.mean(total_times)
+    median_time = statistics.median(total_times)
+    std_dev = statistics.stdev(total_times)
+    
+    print(f"Number of runs: {num_runs}")
+    print(f"Average time per run: {average_time:.4f} seconds")
+    print(f"Median time per run: {median_time:.4f} seconds")
+    print(f"Standard deviation: {std_dev:.4f} seconds")
+    print(f"Total time for all runs: {sum(total_times):.2f} seconds")
+
+measure_average_runtime(1000)
