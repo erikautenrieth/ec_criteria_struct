@@ -68,7 +68,7 @@ def naive_greedy_match(criteria_text):
     # Clean up wrong OR occurrences
     criteria_text = re.sub(r'\s*(\[OR\]\s*)+', ' [OR] ', criteria_text)
     criteria_text = re.sub(r'\[OR\]\s*\[AND\]', '[AND]', criteria_text)
-    criteria_text = re.sub(r'\[OR\]\s*\[AND\]', '[AND]', criteria_text)
+    criteria_text = re.sub(r'\[OR\]\s*\[NOT\]', '[NOT]', criteria_text)
     return criteria_text.strip()
 
 
