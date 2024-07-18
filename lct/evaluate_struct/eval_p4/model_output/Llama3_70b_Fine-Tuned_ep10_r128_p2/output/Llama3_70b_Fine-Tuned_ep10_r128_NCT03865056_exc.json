@@ -1,0 +1,199 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "1. Lack of consent;",
+                                      "Eq-Value": [
+                                        "1"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "2. Age < 18 years;",
+                                      "Eq-Operator": [
+                                        "<"
+                                      ],
+                                      "Eq-Temporal-Unit": [
+                                        "years"
+                                      ],
+                                      "Age": [
+                                        "Age"
+                                      ],
+                                      "Eq-Value": [
+                                        "18"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "< 18 years"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "raw_text": "3. Invasive mechanical ventilation for > 48 hours in the same hospital admission",
+                                  "Procedure": [
+                                    "Invasive mechanical ventilation"
+                                  ],
+                                  "Procedure-Name": [
+                                    "Invasive mechanical ventilation"
+                                  ],
+                                  "Eq-Operator": [
+                                    ">"
+                                  ],
+                                  "Eq-Value": [
+                                    "48"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "> 48 hours"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "hours"
+                                  ],
+                                  "Encounter": [
+                                    "hospital admission"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "4. Immediate need for intubation;",
+                              "Procedure": [
+                                "intubation"
+                              ],
+                              "Procedure-Name": [
+                                "intubation"
+                              ],
+                              "Assertion": [
+                                "need for"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "5. Previous inclusion in the present study;",
+                          "Study": [
+                            "study"
+                          ],
+                          "Eq-Comparison": [
+                            "Previous"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "Previous"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "6. Systolic arterial pressure < 90 mm Hg after optimal fluid therapy;",
+                      "Eq-Operator": [
+                        "<"
+                      ],
+                      "Eq-Value": [
+                        "90"
+                      ],
+                      "Eq-Comparison": [
+                        "< 90 mm Hg"
+                      ],
+                      "Observation": [
+                        "Systolic arterial pressure"
+                      ],
+                      "Observation-Name": [
+                        "Systolic arterial pressure"
+                      ],
+                      "Eq-Unit": [
+                        "mm Hg"
+                      ],
+                      "Procedure": [
+                        "fluid therapy"
+                      ],
+                      "Procedure-Name": [
+                        "fluid therapy"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "7. Cardiogenic pulmonary edema;",
+                  "Condition": [
+                    "Cardiogenic pulmonary edema"
+                  ],
+                  "Condition-Name": [
+                    "Cardiogenic pulmonary edema"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "8. Glasgow Coma Scale < 12;",
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "12"
+              ],
+              "Eq-Comparison": [
+                "< 12"
+              ],
+              "Observation": [
+                "Glasgow Coma Scale"
+              ],
+              "Observation-Name": [
+                "Glasgow Coma Scale"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "9. Imminent death;",
+          "Death": [
+            "death"
+          ],
+          "Risk": [
+            "Imminent"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "10. Contraindications to",
+          "Contraindication": [
+            "Contraindications"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "noninvasive ventilation;",
+              "Procedure": [
+                "invasive ventilation",
+                "noninvasive ventilation"
+              ],
+              "Procedure-Name": [
+                "invasive ventilation",
+                "noninvasive ventilation"
+              ],
+              "Negation": [
+                "non"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

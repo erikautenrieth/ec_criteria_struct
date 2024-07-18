@@ -1,0 +1,74 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Inability to give informed consent",
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "raw_text": "- <18 years of age",
+              "Eq-Operator": [
+                "<",
+                "-"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Age": [
+                "age"
+              ],
+              "Eq-Value": [
+                "18"
+              ],
+              "Eq-Comparison": [
+                "<18 years"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Inability to understand written English language",
+          "Eq-Operator": [
+            "-"
+          ],
+          "Language": [
+            "English"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Hypertensive urgency",
+          "Condition": [
+            "Hypertensive"
+          ],
+          "Condition-Name": [
+            "Hypertensive"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Modifier": [
+            "urgency"
+          ]
+        },
+        "right": {
+          "raw_text": "or emergency as an admission diagnosis",
+          "Encounter": [
+            "admission"
+          ],
+          "Modifier": [
+            "emergency"
+          ]
+        }
+      }
+    }
+  }
+}
