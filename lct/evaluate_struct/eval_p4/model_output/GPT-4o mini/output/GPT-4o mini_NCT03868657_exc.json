@@ -1,0 +1,105 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Chronic diseases (cardiac, metabolic, liver) including a family history of congenital Long QT syndrome.",
+          "Condition": [
+            "chronic diseases",
+            "cardiac",
+            "metabolic",
+            "liver",
+            "Long QT syndrome"
+          ],
+          "Condition-Name": [
+            "chronic diseases",
+            "cardiac",
+            "metabolic",
+            "liver",
+            "Long QT syndrome"
+          ],
+          "Other": [
+            "family history"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- QTc values >440 ms (men) and >450 ms (women)",
+              "Condition": [
+                "QTc values"
+              ],
+              "Condition-Name": [
+                "QTc values"
+              ],
+              "Eq-Operator": [
+                ">",
+                ">"
+              ],
+              "Eq-Value": [
+                "440",
+                "450"
+              ],
+              "Eq-Comparison": [
+                ">440 ms",
+                ">450 ms"
+              ],
+              "Observation": [
+                "QTc"
+              ],
+              "Observation-Name": [
+                "QTc"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Clinical important and/or symptomatic bradycardia",
+                  "Condition": [
+                    "bradycardia"
+                  ],
+                  "Condition-Name": [
+                    "bradycardia"
+                  ],
+                  "Modifier": [
+                    "symptomatic"
+                  ],
+                  "Severity": [
+                    "clinical important"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Regular medication (contraceptive pills allowed)",
+                      "Other": [
+                        "Regular medication"
+                      ],
+                      "Drug": [
+                        "contraceptive pills"
+                      ],
+                      "Drug-Name": [
+                        "contraceptive pills"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Pregnancy and breastfeeding",
+                      "Condition": [
+                        "Pregnancy",
+                        "breastfeeding"
+                      ],
+                      "Condition-Name": [
+                        "Pregnancy",
+                        "breastfeeding"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

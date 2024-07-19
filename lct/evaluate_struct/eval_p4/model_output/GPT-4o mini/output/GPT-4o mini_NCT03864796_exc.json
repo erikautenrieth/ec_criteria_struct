@@ -1,0 +1,76 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "We will exclude patients with any other possible cause of thrombocytopenia either immune or non immune as:",
+      "Condition": [
+        "thrombocytopenia"
+      ],
+      "Condition-Name": [
+        "thrombocytopenia"
+      ],
+      "Negation": [
+        "exclude"
+      ]
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients with diabetes",
+          "Condition": [
+            "diabetes"
+          ],
+          "Condition-Name": [
+            "diabetes"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- HCV",
+              "Condition": [
+                "HCV"
+              ],
+              "Condition-Name": [
+                "HCV"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- other autoimmune disease (as SLE or RA)",
+                  "Other": [
+                    "other"
+                  ],
+                  "Condition": [
+                    "autoimmune disease",
+                    "SLE",
+                    "RA"
+                  ],
+                  "Condition-Name": [
+                    "autoimmune disease",
+                    "SLE",
+                    "RA"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Chronic Liver or kidney disease",
+                  "Condition": [
+                    "Liver disease",
+                    "kidney disease"
+                  ],
+                  "Condition-Name": [
+                    "Liver disease",
+                    "kidney disease"
+                  ],
+                  "Acuteness": [
+                    "Chronic"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
