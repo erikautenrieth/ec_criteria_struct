@@ -7,39 +7,11 @@ from openai import OpenAI
 
 batch_path = "eval_p4"
 n_prompt = 6
-n_shot = 15
+n_shot = 5
+
+# 15 shot zu viels
 
 model_name = "GPT-4o mini"
-
-
-def read_matching_txt_files_gpt(study_folder, label_folder, shot_list):
-    study_filenames = []
-    label_filenames = []
-    study_contents = []
-    label_contents = []
-
-    for filename in shot_list:
-        study_filepath = os.path.join(study_folder, filename)
-        label_filepath = os.path.join(label_folder, filename)
-        print(f"Study file path: {study_filepath}")
-        print(f"Label file path: {label_filepath}")
-        
-        if not os.path.exists(study_filepath):
-            print(f"Study file does not exist: {study_filepath}")
-        if not os.path.exists(label_filepath):
-            print(f"Label file does not exist: {label_filepath}")
-
-        study_filenames.append(f"{filename}_study")
-        label_filenames.append(f"{filename}_label")
-
-        label_contents.append(read_file_content(label_filepath))
-        study_contents.append(read_file_content(study_filepath))
-        
-        print("Study:", study_contents)
-    
-    return study_filenames, study_contents, label_filenames, label_contents
-
-
 
 
 client = OpenAI(
@@ -51,35 +23,37 @@ client = OpenAI(
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt2.txt")
-command = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt2.txt")
+#command = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt2.txt")
+
+command = "Structure the eligibility criteria based on the system input in JSON and extract the entities."
 
 study_path = f"{transform_lct}/input/dataset_p4_prompt6/test/input/"
 output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}/output/"
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[:1]
+study_files = os.listdir(study_path)
 
 top_15_files = [
-    "NCT03867344_exc.txt",
-    "NCT03929718_exc.txt",
-    "NCT03921502_exc.txt",
-    "NCT03862027_exc.txt",
-    "NCT03867942_inc.txt",
-    "NCT03863639_inc.txt",
-    "NCT03865953_inc.txt",
-    "NCT03925142_exc.txt",
-    "NCT03863847_exc.txt",
-    "NCT03868709_exc.txt",
-    "NCT03925454_exc.txt",
-    "NCT03924024_inc.txt",
-    "NCT03864822_exc.txt",
-    "NCT03869073_exc.txt",
-    "NCT03863366_exc.txt"
+    "NCT03863509_inc.txt",
+    "NCT03861819_inc.txt",
+    "NCT03865589_inc.txt",
+    "NCT03928158_exc.txt",
+    "NCT03863418_inc.txt",
+    "NCT03869086_exc.txt",
+    "NCT03923894_exc.txt",
+    "NCT03861559_exc.txt",
+    "NCT03860350_exc.txt",
+    "NCT03868475_exc.txt",
+    "NCT03925142_inc.txt",
+    "NCT03925298_exc.txt",
+    "NCT03860480_inc.txt",
+    "NCT03921580_exc.txt",
+    "NCT03929328_inc.txt"
 ]
 
 study_folder = f"{transform_lct}/input/dataset_p4_prompt6/train/input/"
 label_folder = f"{transform_lct}/input/dataset_p4_prompt6/train/output/"
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files_gpt(study_folder, label_folder, top_15_files)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, top_15_files)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))

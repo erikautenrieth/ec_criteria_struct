@@ -1,0 +1,86 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- patients who will not want to participate to the study",
+          "Negation": [
+            "not"
+          ],
+          "Condition": [
+            "participate"
+          ],
+          "Condition-Name": [
+            "participate"
+          ],
+          "Study": [
+            "study"
+          ]
+        },
+        "right": {
+          "raw_text": "- revision surgeries",
+          "Condition": [
+            "revision surgeries"
+          ],
+          "Condition-Name": [
+            "revision surgeries"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- if the patient is taking antidepressants during the last 6 months",
+          "Drug": [
+            "antidepressants"
+          ],
+          "Drug-Name": [
+            "antidepressants"
+          ],
+          "Eq-Comparison": [
+            "during the last 6 months"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Eq-Value": [
+            "6"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- if the patient has a history of a disease that can affect anxiety levels",
+              "Condition": [
+                "disease",
+                "anxiety levels"
+              ],
+              "Condition-Name": [
+                "anxiety levels"
+              ],
+              "Modifier": [
+                "history"
+              ]
+            },
+            "right": {
+              "raw_text": "- if patient wants to be excluded from the study",
+              "Negation": [
+                "not"
+              ],
+              "Condition": [
+                "excluded"
+              ],
+              "Condition-Name": [
+                "excluded"
+              ],
+              "Study": [
+                "study"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

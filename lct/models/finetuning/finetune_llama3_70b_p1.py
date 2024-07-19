@@ -12,8 +12,8 @@ if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
 
-r = 128
-epoch = 4
+r = 512
+epoch = 10
 
 output_dir  = "outputs/outputs_70b_2"
 os.makedirs(output_dir, exist_ok=True)
@@ -96,7 +96,7 @@ trainer = SFTTrainer(
     dataset_num_proc = 4,  
     packing = True,  
     args = TrainingArguments(
-        per_device_train_batch_size = 2,  # 2
+        per_device_train_batch_size = 2,  # 2 (64 zu groß)
         gradient_accumulation_steps = 8,  # 8 
         per_device_eval_batch_size =  4,   # 4
         num_train_epochs = epoch,  

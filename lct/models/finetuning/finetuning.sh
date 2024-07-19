@@ -4,8 +4,8 @@
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
 #SBATCH --time=72:00:00          # Time limit hrs:min:sec
-#SBATCH --output=70b_e4_r128_b64_p1.%j.out   # Standard output and error log
-#SBATCH --error=70b_e4_r128_b64_p1.%j.err    # Error log  p1_8b_e10_r2048.%j.err 
+#SBATCH --output=70b_e10_r512_p1.%j.out   # Standard output and error log
+#SBATCH --error=70b_e10_r512_p1.%j.err    # Error log  p1_8b_e10_r2048.%j.err 
 #SBATCH --job-name=tune_p4
 
 module load cuda
