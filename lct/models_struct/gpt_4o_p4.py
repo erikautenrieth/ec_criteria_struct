@@ -12,6 +12,36 @@ n_shot = 15
 model_name = "GPT-4o mini"
 
 
+def read_matching_txt_files_gpt(study_folder, label_folder, shot_list):
+    study_filenames = []
+    label_filenames = []
+    study_contents = []
+    label_contents = []
+
+    for filename in shot_list:
+        study_filepath = os.path.join(study_folder, filename)
+        label_filepath = os.path.join(label_folder, filename)
+        print(f"Study file path: {study_filepath}")
+        print(f"Label file path: {label_filepath}")
+        
+        if not os.path.exists(study_filepath):
+            print(f"Study file does not exist: {study_filepath}")
+        if not os.path.exists(label_filepath):
+            print(f"Label file does not exist: {label_filepath}")
+
+        study_filenames.append(f"{filename}_study")
+        label_filenames.append(f"{filename}_label")
+
+        label_contents.append(read_file_content(label_filepath))
+        study_contents.append(read_file_content(study_filepath))
+        
+        print("Study:", study_contents)
+    
+    return study_filenames, study_contents, label_filenames, label_contents
+
+
+
+
 client = OpenAI(
   api_key='sk-proj-HyHBjQ17zJgYhbn4HYooT3BlbkFJqChjIl1UUqCcBE4GSePi',
   #organization='$org-gd7cNf2GXYihWhZKxOmQyJpw',
@@ -20,14 +50,14 @@ client = OpenAI(
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt6.txt")
-command = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt6.txt")
+model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt2.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt2.txt")
 
 study_path = f"{transform_lct}/input/dataset_p4_prompt6/test/input/"
 output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}/output/"
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)
+study_files = os.listdir(study_path)[:1]
 
 top_15_files = [
     "NCT03867344_exc.txt",
@@ -48,8 +78,8 @@ top_15_files = [
 ]
 
 study_folder = f"{transform_lct}/input/dataset_p4_prompt6/train/input/"
-label_folder = f'{transform_lct}/input/dataset_p4_prompt6/train/output/'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, top_15_files)
+label_folder = f"{transform_lct}/input/dataset_p4_prompt6/train/output/"
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files_gpt(study_folder, label_folder, top_15_files)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
@@ -94,7 +124,7 @@ for file in study_files:
         messages.append({"role": "user", "content": f"{command} {test_file}"})
         first_call = False
     else:
-        messages[-1] = {"role": "user", "content": f"{command} {test_file}"} # {cot} 
+        messages[-1] = {"role": "user", "content": f"{command} {test_file}"} 
 
     completion = client.chat.completions.create(
     model="gpt-4o-mini",# "gpt-4o", "gpt-3.5-turbo",
