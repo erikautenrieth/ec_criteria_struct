@@ -1,0 +1,114 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "1. Clinical diagnosis of NTM pulmonary disease.",
+              "Condition": [
+                "NTM pulmonary disease"
+              ],
+              "Condition-Name": [
+                "NTM pulmonary disease"
+              ],
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "raw_text": "2. The causative agent of NTM pulmonary disease includes: M. avium complex, or M. abscessus subspecies abscessus, or M. abscessus subspecies massiliense, or M. kansasii.",
+              "Condition": [
+                "NTM pulmonary disease"
+              ],
+              "Condition-Name": [
+                "NTM pulmonary disease"
+              ],
+              "Other": [
+                "causative agent"
+              ],
+              "Eq-Comparison": [
+                "M. avium complex",
+                "M. abscessus subspecies abscessus",
+                "M. abscessus subspecies massiliense",
+                "M. kansasii"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "3. Patients who starts new treatment (those who have previous history of treatment are eligible)",
+          "Condition": [
+            "treatment"
+          ],
+          "Condition-Name": [
+            "treatment"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Other": [
+            "new"
+          ],
+          "Negation": [
+            "previous"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "Exclusion Criteria",
+      "Other": [
+        "Exclusion Criteria"
+      ]
+    }
+  },
+  "OR": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. Patients who have been treated for more than 4 weeks.",
+          "Condition": [
+            "treatment"
+          ],
+          "Condition-Name": [
+            "treatment"
+          ],
+          "Eq-Comparison": [
+            "> 4 weeks"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Eq-Temporal-Unit": [
+            "weeks"
+          ]
+        },
+        "right": {
+          "raw_text": "2. The causative agent of NTM pulmonary disease is none of M. avium complex, M. abscessus subspecies abscessus, M. abscessus subspecies massiliense, or M. kansasii.",
+          "Condition": [
+            "NTM pulmonary disease"
+          ],
+          "Condition-Name": [
+            "NTM pulmonary disease"
+          ],
+          "Other": [
+            "causative agent"
+          ],
+          "Negation": [
+            "none"
+          ],
+          "Eq-Comparison": [
+            "M. avium complex",
+            "M. abscessus subspecies abscessus",
+            "M. abscessus subspecies massiliense",
+            "M. kansasii"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": ""
+    }
+  }
+}
