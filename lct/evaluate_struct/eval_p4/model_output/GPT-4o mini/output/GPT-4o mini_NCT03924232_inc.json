@@ -1,0 +1,60 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- All patients aged 18 or older",
+      "Age": [
+        "aged",
+        "age"
+      ],
+      "Eq-Comparison": [
+        "18 or older"
+      ],
+      "Eq-Value": [
+        "18"
+      ],
+      "Eq-Operator": [
+        ">="
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "and with a recent (<48h) ICU entry",
+          "Observation": [
+            "ICU entry"
+          ],
+          "Eq-Comparison": [
+            "<48h"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Temporal-Unit": [
+            "hours"
+          ]
+        },
+        "right": {
+          "raw_text": "requiring mechanical ventilation for at least 3 days",
+          "Procedure": [
+            "mechanical ventilation"
+          ],
+          "Procedure-Name": [
+            "mechanical ventilation"
+          ],
+          "Eq-Comparison": [
+            "at least 3 days"
+          ],
+          "Eq-Operator": [
+            ">="
+          ],
+          "Eq-Value": [
+            "3"
+          ],
+          "Eq-Temporal-Unit": [
+            "days"
+          ]
+        }
+      }
+    }
+  }
+}

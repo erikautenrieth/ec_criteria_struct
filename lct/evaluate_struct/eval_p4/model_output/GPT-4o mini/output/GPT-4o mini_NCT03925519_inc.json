@@ -1,0 +1,126 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- patients with type 2 diabetes for more than 5 years.",
+                      "Condition": [
+                        "type 2 diabetes"
+                      ],
+                      "Condition-Name": [
+                        "type 2 diabetes"
+                      ],
+                      "Eq-Comparison": [
+                        "more than 5 years"
+                      ],
+                      "Eq-Value": [
+                        "5"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Patients who were diagnosed according to the criteria of the American diabetes association.",
+                      "Condition": [
+                        "diabetes"
+                      ],
+                      "Condition-Name": [
+                        "diabetes"
+                      ],
+                      "Modifier": [
+                        "American diabetes association"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Not receiving any drugs affecting the data obtained",
+                      "Negation": [
+                        "Not"
+                      ],
+                      "Condition": [
+                        "drugs"
+                      ],
+                      "Condition-Name": [
+                        "drugs"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- had Normal daily diets",
+                  "Observation": [
+                    "Normal daily diets"
+                  ],
+                  "Observation-Name": [
+                    "Normal daily diets"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Not participating in any other exercise programs",
+                      "Negation": [
+                        "Not"
+                      ],
+                      "Condition": [
+                        "exercise programs"
+                      ],
+                      "Condition-Name": [
+                        "exercise programs"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Without any musculoskeletal disorders affecting an exercise program",
+              "Negation": [
+                "Without"
+              ],
+              "Condition": [
+                "musculoskeletal disorders"
+              ],
+              "Condition-Name": [
+                "musculoskeletal disorders"
+              ],
+              "Eq-Operator": [
+                "-"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

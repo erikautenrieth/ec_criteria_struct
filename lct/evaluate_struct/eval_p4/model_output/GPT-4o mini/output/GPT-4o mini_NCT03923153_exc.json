@@ -1,0 +1,98 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients under the age of 18",
+          "Age": [
+            "under 18"
+          ],
+          "Eq-Comparison": [
+            "under 18"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "18"
+          ]
+        },
+        "right": {
+          "raw_text": "- Pregnancy",
+          "Condition": [
+            "Pregnancy"
+          ],
+          "Condition-Name": [
+            "Pregnancy"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Active infection",
+          "Condition": [
+            "Active infection"
+          ],
+          "Condition-Name": [
+            "Active infection"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients with known malignancies",
+              "Condition": [
+                "malignancies"
+              ],
+              "Condition-Name": [
+                "malignancies"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- patients without consent",
+                  "Negation": [
+                    "without"
+                  ],
+                  "Condition": [
+                    "consent"
+                  ],
+                  "Condition-Name": [
+                    "consent"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- known arrhythmia, dilated or hypertrophic cardiomyopathy, heart failure (EF <40%)",
+                  "Condition": [
+                    "arrhythmia",
+                    "dilated cardiomyopathy",
+                    "hypertrophic cardiomyopathy",
+                    "heart failure"
+                  ],
+                  "Condition-Name": [
+                    "arrhythmia",
+                    "dilated cardiomyopathy",
+                    "hypertrophic cardiomyopathy",
+                    "heart failure"
+                  ],
+                  "Eq-Comparison": [
+                    "EF <40%"
+                  ],
+                  "Eq-Operator": [
+                    "<"
+                  ],
+                  "Eq-Value": [
+                    "40"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

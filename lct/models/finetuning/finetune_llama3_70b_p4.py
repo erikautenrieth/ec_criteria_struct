@@ -10,7 +10,7 @@ dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for
 load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
 
 
-r = 128
+r = 256
 epoch = 10
 
 output_dir  = "outputs/outputs_70b_p4"
@@ -62,7 +62,7 @@ def formatting_prompts_func(examples):
     return { "text" : texts, }
 pass
 
-dataset_path = 'dataset/dataset_p4_prompt6'
+dataset_path = 'dataset/dataset_p4_prompt1'
 dataset = load_from_disk(dataset_path)
 train_test_split = dataset['train'].train_test_split(test_size=0.1, seed=42)
 train = train_test_split['train'] # 723 Files
@@ -131,4 +131,4 @@ print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
 
-model.save_pretrained(f"70b_p4/llama3_70b_Lora_ep{epoch}_r{r}_p4") 
+model.save_pretrained(f"70b_p4/llama3_70b_Lora_ep{epoch}_r{r}_pr2_p4") 

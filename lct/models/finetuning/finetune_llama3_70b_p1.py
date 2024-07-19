@@ -12,7 +12,7 @@ if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
 
-r = 512
+r = 256
 epoch = 10
 
 output_dir  = "outputs/outputs_70b_2"
@@ -34,7 +34,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 ## 2048 _> 224.00 MiB. GPU 
 model = FastLanguageModel.get_peft_model(
     model,
-    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096 (zu groß)
+    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512 (zu groß), 1024, 2048, 4096 (zu groß)
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 256, # 256 (default),
@@ -96,9 +96,9 @@ trainer = SFTTrainer(
     dataset_num_proc = 4,  
     packing = True,  
     args = TrainingArguments(
-        per_device_train_batch_size = 2,  # 2 (64 zu groß)
+        per_device_train_batch_size = 4,  # 2 (64 zu groß)
         gradient_accumulation_steps = 8,  # 8 
-        per_device_eval_batch_size =  4,   # 4
+        per_device_eval_batch_size =  8,   # 4
         num_train_epochs = epoch,  
         warmup_ratio = 0.1,  
         learning_rate = 5e-5, 
@@ -145,5 +145,5 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"70b_prompt2_finetuned_models/llama3_70b_Lora_ep{epoch}_r{r}")
+model.save_pretrained(f"70b_prompt2_finetuned_models/llama3_70b_Lora_ep{epoch}_r{r}_b488")
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
