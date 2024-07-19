@@ -1,0 +1,104 @@
+/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+2024-07-19 08:29:01.649631: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-19 08:29:03.230664: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:14<01:12, 14.58s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:28<00:57, 14.32s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:44<00:44, 14.77s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:58<00:29, 14.77s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [01:12<00:14, 14.40s/it]Loading checkpoint shards: 100%|██████████| 6/6 [01:22<00:00, 12.85s/it]Loading checkpoint shards: 100%|██████████| 6/6 [01:22<00:00, 13.73s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Unsloth: Dropout = 0 is supported for fast patching. You are using dropout = 0.05.
+Unsloth will patch all other layers, except LoRA matrices, causing a performance hit.
+Unsloth 2024.6 patched 80 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
+Map:   0%|          | 0/723 [00:00<?, ? examples/s]Map: 100%|██████████| 723/723 [00:00<00:00, 14969.45 examples/s]
+Map:   0%|          | 0/81 [00:00<?, ? examples/s]Map: 100%|██████████| 81/81 [00:00<00:00, 10973.47 examples/s]
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 1 examples [00:00,  1.81 examples/s]Generating train split: 224 examples [00:00, 356.93 examples/s]
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 24 examples [00:00, 325.87 examples/s]
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 224 | Num Epochs = 10
+O^O/ \_/ \    Batch size per device = 64 | Gradient Accumulation steps = 1
+\        /    Total batch size = 64 | Total steps = 40
+ "-____-"     Number of trainable parameters = 1,656,750,080
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+  0%|          | 0/40 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Traceback (most recent call last):
+  File "/work/eauten2s/ec_criteria_struct/lct/models/finetuning/finetune_llama3_70b_p1.py", line 135, in <module>
+    trainer_stats = trainer.train()
+  File "<string>", line 123, in train
+  File "<string>", line 365, in _fast_inner_training_loop
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/trainer.py", line 2902, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/trainer.py", line 2925, in compute_loss
+    outputs = model(**inputs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/utils/operations.py", line 822, in forward
+    return model_forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/utils/operations.py", line 810, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/amp/autocast_mode.py", line 16, in decorate_autocast
+    return func(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/llama.py", line 892, in PeftModelForCausalLM_fast_forward
+    return self.base_model(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/tuners_utils.py", line 179, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/llama.py", line 820, in _CausalLM_fast_forward
+    outputs = self.model(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/llama.py", line 657, in LlamaModel_fast_forward
+    hidden_states = Unsloth_Offloaded_Gradient_Checkpointer.apply(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/autograd/function.py", line 598, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/cuda/amp/autocast_mode.py", line 115, in decorate_fwd
+    return fwd(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/_utils.py", line 390, in forward
+    output = forward_function(hidden_states, *args)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/llama.py", line 455, in LlamaDecoderLayer_fast_forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 236, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/peft/tuners/lora/bnb.py", line 474, in forward
+    output = lora_B(lora_A(dropout(x))) * scaling
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.00 GiB. GPU 
+  0%|          | 0/40 [00:05<?, ?it/s]

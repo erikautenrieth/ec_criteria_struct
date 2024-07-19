@@ -25,11 +25,11 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 
 
-batch_path = "modelle_prompt2" #"eval_p1_finetuned_testset_prompt1_llama3_70b"
+batch_path = "modelle_prompt2" 
 n_prompt = 6
-n_shot = 5
+n_shot = 15
 
-model_name = "GPT-4o"
+model_name = "GPT-4o mini"
 
 
 client = OpenAI(
@@ -43,7 +43,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"  
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_t0.5/output/"  
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
@@ -56,9 +56,28 @@ shot_list = [
     "NCT03865771.txt"
 ]
 
+additional_files = [
+    "NCT03865433.txt",
+    "NCT03860324.txt",
+    "NCT03860233.txt",
+    "NCT03923231.txt",
+    "NCT03930121.txt",
+    "NCT03863717.txt",
+    "NCT03863925.txt",
+    "NCT03863951.txt",
+    "NCT03865134.txt",
+    "NCT03868267.txt",
+    "NCT03929640.txt",
+    "NCT03861845.txt",
+    "NCT03921827.txt",
+    "NCT03924479.txt",
+    "NCT03924102.txt"
+]
+
+
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, additional_files)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
@@ -88,9 +107,9 @@ for file in study_files:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"} # {cot} 
 
     completion = client.chat.completions.create(
-    model="gpt-4o",# "gpt-3.5-turbo",
+    model="gpt-4o-mini",# "gpt-4o" "gpt-3.5-turbo"
     messages=messages,
-    temperature=0.7,
+    temperature=0.5,
     )
     gen_output = completion.choices[0].message
     gen_output = gen_output.content

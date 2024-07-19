@@ -7,9 +7,9 @@ from openai import OpenAI
 
 batch_path = "eval_p4"
 n_prompt = 6
-n_shot = 5
+n_shot = 15
 
-model_name = "GPT-4o"
+model_name = "GPT-4o mini"
 
 
 client = OpenAI(
@@ -22,23 +22,34 @@ client = OpenAI(
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt6.txt")
 command = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt6.txt")
+
 study_path = f"{transform_lct}/input/dataset_p4_prompt6/test/input/"
-output_path = f"{transform_lct}/evaluate_struct/model_output/{batch_path}/{model_name}/output/"
+output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}/output/"
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[:5]
+study_files = os.listdir(study_path)
 
-shot_list = [
-    "NCT03860545_exc.txt",
-    "NCT03861156_inc.txt",
-    "NCT03861637_exc.txt",
-    "NCT03862118_exc.txt",
-    "NCT03862677_inc.txt"
+top_15_files = [
+    "NCT03867344_exc.txt",
+    "NCT03929718_exc.txt",
+    "NCT03921502_exc.txt",
+    "NCT03862027_exc.txt",
+    "NCT03867942_inc.txt",
+    "NCT03863639_inc.txt",
+    "NCT03865953_inc.txt",
+    "NCT03925142_exc.txt",
+    "NCT03863847_exc.txt",
+    "NCT03868709_exc.txt",
+    "NCT03925454_exc.txt",
+    "NCT03924024_inc.txt",
+    "NCT03864822_exc.txt",
+    "NCT03869073_exc.txt",
+    "NCT03863366_exc.txt"
 ]
 
 study_folder = f"{transform_lct}/input/dataset_p4_prompt6/train/input/"
 label_folder = f'{transform_lct}/input/dataset_p4_prompt6/train/output/'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, top_15_files)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
@@ -73,9 +84,6 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
       raise NotImplementedError(f"""num_tokens_from_messages() is not presently implemented for model {model}.""")
 
 
-
-
-
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
@@ -89,9 +97,9 @@ for file in study_files:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"} # {cot} 
 
     completion = client.chat.completions.create(
-    model="gpt-4o",# "gpt-3.5-turbo",
+    model="gpt-4o-mini",# "gpt-4o", "gpt-3.5-turbo",
     messages=messages,
-    temperature=0.7,
+    temperature=0.5,
     )
     gen_output = completion.choices[0].message
     gen_output = gen_output.content

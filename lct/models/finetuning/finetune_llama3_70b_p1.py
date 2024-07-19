@@ -13,9 +13,9 @@ if torch.cuda.device_count() > 1:
 
 
 r = 128
-epoch = 10
+epoch = 4
 
-output_dir  = "outputs/outputs_70b_3"
+output_dir  = "outputs/outputs_70b_2"
 os.makedirs(output_dir, exist_ok=True)
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -96,9 +96,9 @@ trainer = SFTTrainer(
     dataset_num_proc = 4,  
     packing = True,  
     args = TrainingArguments(
-        per_device_train_batch_size = 2,  
-        gradient_accumulation_steps = 8,  
-        per_device_eval_batch_size = 4,  
+        per_device_train_batch_size = 2,  # 2
+        gradient_accumulation_steps = 8,  # 8 
+        per_device_eval_batch_size =  4,   # 4
         num_train_epochs = epoch,  
         warmup_ratio = 0.1,  
         learning_rate = 5e-5, 
