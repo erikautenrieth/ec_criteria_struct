@@ -46,7 +46,7 @@ pipeline = transformers.pipeline(
         )
 
 
-for temp in np.arange(0.0, 1.1, 0.1):
+for temp in np.arange(0.1, 1.1, 0.1):
     temp = round(temp,2)
 
     messages = []

@@ -23,7 +23,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 FastLanguageModel.for_inference(model) # Enable native 2x faster inference
 
 
-for temp in np.arange(0.0, 1.1, 0.1):
+for temp in np.arange(0.1, 1.1, 0.1):
     temp = round(temp,2)
 
      

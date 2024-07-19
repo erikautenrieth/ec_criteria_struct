@@ -10,7 +10,7 @@
 
 module load cuda
 
-python llama3_n_shot_temp.py
+python 70b_tuned_temp.py
 
 
 ##SBATCH --nodelist=wr21          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !
