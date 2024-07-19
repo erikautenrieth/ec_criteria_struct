@@ -1,0 +1,277 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- Concurrent",
+                              "Eq-Comparison": [
+                                "Concurrent"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "Concurrent"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or past diagnosis of cancer",
+                                  "Condition": [
+                                    "cancer"
+                                  ],
+                                  "Condition-Name": [
+                                    "cancer"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "past"
+                                  ],
+                                  "Eq-Temporal-Period": [
+                                    "past"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or history of radiation",
+                                  "Procedure": [
+                                    "radiation"
+                                  ],
+                                  "Procedure-Name": [
+                                    "radiation"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "history"
+                                  ],
+                                  "Eq-Temporal-Period": [
+                                    "history"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- Have or had vestibular pathology,",
+                              "Condition": [
+                                "vestibular pathology"
+                              ],
+                              "Condition-Name": [
+                                "vestibular pathology"
+                              ],
+                              "Eq-Comparison": [
+                                "had"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "had"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "cranial base surgery",
+                                  "Procedure": [
+                                    "cranial base surgery"
+                                  ],
+                                  "Procedure-Name": [
+                                    "cranial base surgery"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or ossicular chain reconstruction",
+                                  "Procedure": [
+                                    "ossicular chain reconstruction"
+                                  ],
+                                  "Procedure-Name": [
+                                    "ossicular chain reconstruction"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Craniofacial dysmorphology (other than",
+                          "Condition": [
+                            "Craniofacial dysmorphology"
+                          ],
+                          "Condition-Name": [
+                            "Craniofacial dysmorphology"
+                          ],
+                          "Exception": [
+                            "other than"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "non-syndromic CP with or without cleft lip in the CP cohort)",
+                                  "Condition": [
+                                    "CP",
+                                    "cleft lip"
+                                  ],
+                                  "Condition-Name": [
+                                    "CP",
+                                    "cleft lip"
+                                  ],
+                                  "Modifier": [
+                                    "syndromic",
+                                    "non-syndromic"
+                                  ],
+                                  "Study": [
+                                    "study"
+                                  ],
+                                  "Negation": [
+                                    "without"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or other syndrome",
+                                  "Condition": [
+                                    "syndrome"
+                                  ],
+                                  "Condition-Name": [
+                                    "syndrome"
+                                  ],
+                                  "Other": [
+                                    "other"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- A non-patent nasal cavity",
+                  "Condition": [
+                    "non-patent nasal cavity"
+                  ],
+                  "Condition-Name": [
+                    "non-patent nasal cavity"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patulous ET",
+                  "Condition": [
+                    "Patulous ET"
+                  ],
+                  "Condition-Name": [
+                    "Patulous ET"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or pathologically low ET opening",
+                      "Condition": [
+                        "pathologically low ET"
+                      ],
+                      "Condition-Name": [
+                        "pathologically low ET"
+                      ],
+                      "Modifier": [
+                        "opening"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or closing pressures",
+                      "Modifier": [
+                        "closing pressures"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Pregnancy",
+          "Condition": [
+            "Pregnancy"
+          ],
+          "Condition-Name": [
+            "Pregnancy"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-",
+          "Eq-Operator": [
+            "-"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "Unable",
+                  "Negation": [
+                    "Unable"
+                  ],
+                  "Assertion": [
+                    "Unable"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "or unwilling to perform the tests and exercises outlined in the study",
+                      "Study": [
+                        "study"
+                      ],
+                      "Procedure": [
+                        "exercises"
+                      ],
+                      "Procedure-Name": [
+                        "exercises"
+                      ],
+                      "Assertion": [
+                        "unwilling"
+                      ],
+                      "Negation": [
+                        "unwilling"
+                      ],
+                      "Observation": [
+                        "tests"
+                      ],
+                      "Observation-Name": [
+                        "tests"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

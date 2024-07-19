@@ -1,0 +1,116 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Hysterectomy in a context of gynecologic cancer",
+          "Procedure": [
+            "Hysterectomy"
+          ],
+          "Procedure-Name": [
+            "Hysterectomy"
+          ],
+          "Condition": [
+            "cancer"
+          ],
+          "Condition-Name": [
+            "cancer"
+          ],
+          "Modifier": [
+            "gynecologic"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Hysterectomy"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not carried out using laparoscopy",
+                  "Procedure": [
+                    "laparoscopy"
+                  ],
+                  "Procedure-Name": [
+                    "laparoscopy"
+                  ],
+                  "Negation": [
+                    "not"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Fimbriated end missing",
+          "Condition": [
+            "Fimbriated end"
+          ],
+          "Condition-Name": [
+            "Fimbriated end"
+          ],
+          "Modifier": [
+            "missing"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or damaged",
+              "Modifier": [
+                "damaged"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or impossible for pathologist to analyze",
+                  "Provider": [
+                    "pathologist"
+                  ],
+                  "Assertion": [
+                    "impossible"
+                  ],
+                  "Observation": [
+                    "analyze"
+                  ],
+                  "Observation-Name": [
+                    "analyze"
+                  ],
+                  "Stability": [
+                    "impossible"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not for pathologist to analyze",
+                      "Provider": [
+                        "pathologist"
+                      ],
+                      "Observation": [
+                        "analyze"
+                      ],
+                      "Observation-Name": [
+                        "analyze"
+                      ],
+                      "Negation": [
+                        "not"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Ulcerative colitis with confirmed diagnosis by histology",
+          "Condition": [
+            "Ulcerative colitis"
+          ],
+          "Condition-Name": [
+            "Ulcerative colitis"
+          ],
+          "Procedure": [
+            "histology"
+          ],
+          "Procedure-Name": [
+            "histology"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "and endoscopy",
+              "Procedure": [
+                "endoscopy"
+              ],
+              "Procedure-Name": [
+                "endoscopy"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "AND in stable remission for 3 months or more",
+                  "Eq-Comparison": [
+                    "3 months or more"
+                  ],
+                  "Condition": [
+                    "stable remission"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Operator": [
+                    "or more"
+                  ],
+                  "Condition-Name": [
+                    "stable remission"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "without therapy",
+                          "Procedure": [
+                            "therapy"
+                          ],
+                          "Procedure-Name": [
+                            "therapy"
+                          ],
+                          "Negation": [
+                            "without"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or with a maintenance therapy (except steroids",
+                                  "Procedure": [
+                                    "therapy",
+                                    "maintenance therapy",
+                                    "steroids"
+                                  ],
+                                  "Procedure-Name": [
+                                    "therapy",
+                                    "maintenance therapy",
+                                    "steroids"
+                                  ],
+                                  "Exception": [
+                                    "except"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "and antibiotics for 3 months)",
+                                  "Eq-Comparison": [
+                                    "3 months"
+                                  ],
+                                  "Drug": [
+                                    "antibiotics"
+                                  ],
+                                  "Eq-Value": [
+                                    "3"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "months"
+                                  ],
+                                  "Drug-Name": [
+                                    "antibiotics"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- A negative pregnancy test",
+      "Observation": [
+        "pregnancy test"
+      ],
+      "Observation-Name": [
+        "pregnancy test"
+      ],
+      "Polarity": [
+        "negative"
+      ]
+    }
+  }
+}

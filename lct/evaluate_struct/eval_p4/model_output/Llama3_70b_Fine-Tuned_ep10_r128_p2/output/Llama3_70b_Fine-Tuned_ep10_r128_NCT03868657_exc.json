@@ -1,0 +1,169 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Chronic diseases (cardiac,",
+                      "Condition": [
+                        "diseases"
+                      ],
+                      "Condition-Name": [
+                        "diseases"
+                      ],
+                      "Acuteness": [
+                        "Chronic"
+                      ],
+                      "Modifier": [
+                        "cardiac"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "metabolic,",
+                          "Modifier": [
+                            "metabolic"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "liver) including a family history of congenital Long QT syndrome.",
+                          "Condition": [
+                            "congenital Long QT syndrome"
+                          ],
+                          "Condition-Name": [
+                            "congenital Long QT syndrome"
+                          ],
+                          "Modifier": [
+                            "liver"
+                          ],
+                          "Family-Member": [
+                            "family history"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- QTc values >440 ms (men)",
+                      "Eq-Operator": [
+                        ">"
+                      ],
+                      "Eq-Value": [
+                        "440"
+                      ],
+                      "Eq-Comparison": [
+                        ">440 ms"
+                      ],
+                      "Observation": [
+                        "QTc"
+                      ],
+                      "Observation-Name": [
+                        "QTc"
+                      ],
+                      "Eq-Unit": [
+                        "ms"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "men"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and >450 ms (women)",
+                      "Eq-Operator": [
+                        ">"
+                      ],
+                      "Eq-Value": [
+                        "450"
+                      ],
+                      "Eq-Comparison": [
+                        ">450 ms"
+                      ],
+                      "Eq-Unit": [
+                        "ms"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "women"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Clinical important",
+                  "Severity": [
+                    "important"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and/or symptomatic bradycardia",
+                  "Condition": [
+                    "bradycardia"
+                  ],
+                  "Condition-Name": [
+                    "bradycardia"
+                  ],
+                  "Assertion": [
+                    "symptomatic"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Regular medication (contraceptive pills allowed)",
+          "Drug": [
+            "contraceptive pills",
+            "medication"
+          ],
+          "Drug-Name": [
+            "contraceptive pills"
+          ],
+          "Eq-Comparison": [
+            "Regular"
+          ],
+          "Eq-Temporal-Period": [
+            "Regular"
+          ],
+          "Exception": [
+            "allowed"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Pregnancy",
+          "Condition": [
+            "Pregnancy"
+          ],
+          "Condition-Name": [
+            "Pregnancy"
+          ]
+        },
+        "right": {
+          "raw_text": "and breastfeeding",
+          "Condition": [
+            "breastfeeding"
+          ],
+          "Condition-Name": [
+            "breastfeeding"
+          ]
+        }
+      }
+    }
+  }
+}

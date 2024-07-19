@@ -1,0 +1,165 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "1. Has the pathologically-confirmed diagnosis of locally recurrent",
+                      "Modifier": [
+                        "locally recurrent"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or metastatic,",
+                          "Modifier": [
+                            "metastatic"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "hormone-receptor positive,",
+                              "Condition": [
+                                "hormone-receptor"
+                              ],
+                              "Polarity": [
+                                "positive"
+                              ],
+                              "Condition-Name": [
+                                "hormone-receptor"
+                              ]
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "HER2 negative Breast Cancer.",
+                                  "Condition": [
+                                    "Breast Cancer",
+                                    "HER2"
+                                  ],
+                                  "Condition-Name": [
+                                    "Breast Cancer",
+                                    "HER2"
+                                  ],
+                                  "Polarity": [
+                                    "negative"
+                                  ],
+                                  "Negation": [
+                                    "negative"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "2. Age: 18 - 75 years old, postmenopausal women or prepostmenopausal women",
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "Age"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Eq-Value": [
+                    "18",
+                    "75"
+                  ],
+                  "Eq-Comparison": [
+                    "18 - 75 years"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "postmenopausal",
+                    "prepostmenopausal",
+                    "women"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "3. Received prior endocrine therapy",
+              "Procedure": [
+                "endocrine therapy"
+              ],
+              "Procedure-Name": [
+                "endocrine therapy"
+              ],
+              "Eq-Comparison": [
+                "Received prior"
+              ],
+              "Eq-Temporal-Period": [
+                "Received prior"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "4. One previous line of chemotherapy for advanced/metastatic disease is allowed in addition to endocrine therapy.",
+          "Procedure": [
+            "chemotherapy",
+            "endocrine therapy"
+          ],
+          "Procedure-Name": [
+            "chemotherapy",
+            "endocrine therapy"
+          ],
+          "Eq-Comparison": [
+            "One previous"
+          ],
+          "Eq-Value": [
+            "One"
+          ],
+          "Eq-Temporal-Period": [
+            "previous"
+          ],
+          "Condition": [
+            "metastatic disease"
+          ],
+          "Condition-Name": [
+            "metastatic disease"
+          ],
+          "Modifier": [
+            "advanced"
+          ],
+          "Exception": [
+            "allowed"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "5. Eastern Cooperative Oncology Group [ECOG] 0-1",
+      "Observation": [
+        "Eastern Cooperative Oncology Group",
+        "ECOG"
+      ],
+      "Observation-Name": [
+        "Eastern Cooperative Oncology Group",
+        "ECOG"
+      ],
+      "Eq-Comparison": [
+        "0-1"
+      ],
+      "Eq-Value": [
+        "0",
+        "1"
+      ],
+      "Eq-Operator": [
+        "-"
+      ]
+    }
+  }
+}
