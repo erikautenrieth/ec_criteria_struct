@@ -139,7 +139,6 @@ def read_and_process_files(model_path, model_name):
 
                 try:
                     output_text = json_to_text_failure(file_path)
-                    print(f"Successfully processed {filename}")
                     shutil.copy(file_path, ready_folder)
                 except Exception as e:
                     print(f"Failed to process file: {filename} - Error: {e}")
@@ -156,11 +155,11 @@ def read_and_process_files(model_path, model_name):
 
 
 ### Count failed files and plot
-def count_files(model_name):
-    model_folder = f"model_output/{model_name}/output"
-    ready_folder = f"model_output/{model_name}/ready"
-    failure_folder = f"model_output/{model_name}/failure"
-    struct_failure_folder = f"model_output/{model_name}/structure_failure"
+def count_files(model_name, batch_name):
+    model_folder = f"{batch_name}/model_output/{model_name}/output"
+    ready_folder = f"{batch_name}/model_output/{model_name}/ready"
+    failure_folder = f"{batch_name}/model_output/{model_name}/failure"
+    struct_failure_folder = f"{batch_name}/model_output/{model_name}/structure_failure"
 
     def count_files_in_folder(folder):
         if os.path.exists(folder):
@@ -174,8 +173,8 @@ def count_files(model_name):
 
     return model_folder_count, ready_folder_count, failure_folder_count, struct_failure_folder_count
 
-def plot_file_counts(model_name):
-    model_folder_count, ready_folder_count, failure_folder_count, struct_failure_folder_count = count_files(model_name)
+def plot_file_counts(model_name, batch_name):
+    model_folder_count, ready_folder_count, failure_folder_count, struct_failure_folder_count = count_files(model_name, batch_name)
     total_files = model_folder_count
 
     categories = ['Ausgabe', 'Korrekt', 'Parse Fehler', 'Struktur Fehler']
@@ -209,7 +208,7 @@ def plot_file_counts(model_name):
                     ha='center', va='bottom', fontsize=9)
 
     plt.tight_layout()
-    plt.savefig(f'pics/file_counts_{model_name}.png', dpi=300, bbox_inches='tight')
+    plt.savefig(f'data/pics/file_counts_{model_name}.png', bbox_inches='tight')
     plt.show()
 
 
