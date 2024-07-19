@@ -13,4 +13,36 @@ Unsloth 2024.6 patched 80 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
 O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 8
 \        /    Total batch size = 16 | Total steps = 140
  "-____-"     Number of trainable parameters = 6,627,000,320
-  0%|          | 0/140 [00:00<?, ?it/s]
+  0%|          | 0/140 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/work/eauten2s/ec_criteria_struct/lct/models/finetuning/finetune_llama3_70b_p1.py", line 135, in <module>
+    trainer_stats = trainer.train()
+  File "<string>", line 123, in train
+  File "<string>", line 365, in _fast_inner_training_loop
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/trainer.py", line 2911, in training_step
+    self.accelerator.backward(loss)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/accelerate/accelerator.py", line 2125, in backward
+    loss.backward(**kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/_tensor.py", line 525, in backward
+    torch.autograd.backward(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/autograd/__init__.py", line 267, in backward
+    _engine_run_backward(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/autograd/function.py", line 301, in apply
+    return user_fn(self, *args)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/cuda/amp/autocast_mode.py", line 142, in decorate_bwd
+    return bwd(*args, **kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/unsloth/models/_utils.py", line 405, in backward
+    torch.autograd.backward(output, dY)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/autograd/__init__.py", line 267, in backward
+    _engine_run_backward(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/autograd/graph.py", line 744, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/torch/autograd/function.py", line 301, in apply
+    return user_fn(self, *args)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/bitsandbytes/autograd/_functions.py", line 540, in backward
+    grad_A = torch.matmul(grad_output, F.dequantize_4bit(B, ctx.state).to(grad_output.dtype).t())
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/bitsandbytes/functional.py", line 1349, in dequantize_4bit
+    out = torch.empty(quant_state.shape, dtype=quant_state.dtype, device=A.device)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 448.00 MiB. GPU 
+  0%|          | 0/140 [00:09<?, ?it/s]
