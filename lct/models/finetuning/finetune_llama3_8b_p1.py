@@ -12,8 +12,8 @@ if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
 
-r = 128
-epoch = 20
+r = 256
+epoch = 10
 output_dir  = "outputs/outputs_8b_2"
 os.makedirs(output_dir, exist_ok=True)
 

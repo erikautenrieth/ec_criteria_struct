@@ -43,7 +43,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_t0.5/output/"  
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_t1.0/output/"  
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
@@ -109,7 +109,7 @@ for file in study_files:
     completion = client.chat.completions.create(
     model="gpt-4o-mini",# "gpt-4o" "gpt-3.5-turbo"
     messages=messages,
-    temperature=0.5,
+    temperature=1.0,
     )
     gen_output = completion.choices[0].message
     gen_output = gen_output.content
