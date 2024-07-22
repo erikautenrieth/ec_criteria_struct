@@ -11,8 +11,8 @@ from unsloth import FastLanguageModel
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 batch_path = "lora_8b_prompt2"
-model_id = "tuned_models_8b/llama3_8b_Lora_ep20_r128" 
-model_name = "8b_EP20_r128"
+model_id = "tuned_models_8b/llama3_8b_Lora_ep10_r256" 
+model_name = "8b_EP10_r256"
 
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 
