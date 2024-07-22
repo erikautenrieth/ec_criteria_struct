@@ -15,11 +15,18 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 command = read_text_file(f"{transform_lct}/input/struct_prompt/all_entitys_prompt1.txt")
 
-study_path = f"{transform_lct}/input/dataset_p4_prompt6/test/input/"
+study_path = f"{transform_lct}/input/dataset_p4_prompt1/test/input/"
 output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}/output/"
 
 os.makedirs(output_path, exist_ok=True)
-study_files = os.listdir(study_path)
+study_files = os.listdir(study_path)[:4]
+
+print("Command:", command)
+
+print("study files", study_files)
+
+
+
 
 model, tokenizer = FastLanguageModel.from_pretrained(
         model_name = model_id, #
