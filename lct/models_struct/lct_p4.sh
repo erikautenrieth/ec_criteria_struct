@@ -10,7 +10,7 @@
 #SBATCH --job-name=llama_struct
 
 module load cuda
-python llama3_tuned_p4.py #llama3_tuned_p4.py
+python  llama3_p2.py # llama3_tuned_p4.py #llama3_tuned_p4.py
 
 
 

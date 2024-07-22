@@ -1,0 +1,289 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "AND": {
+                                        "left": {
+                                          "AND": {
+                                            "left": {
+                                              "AND": {
+                                                "left": {
+                                                  "raw_text": "- Patient refusal"
+                                                },
+                                                "right": {
+                                                  "raw_text": "- BMI > 40 kg/m2",
+                                                  "Observation": [
+                                                    "BMI"
+                                                  ],
+                                                  "Observation-Name": [
+                                                    "BMI"
+                                                  ],
+                                                  "Eq-Operator": [
+                                                    ">"
+                                                  ],
+                                                  "Eq-Unit": [
+                                                    "kg",
+                                                    "m2"
+                                                  ],
+                                                  "Eq-Value": [
+                                                    "40"
+                                                  ],
+                                                  "Eq-Comparison": [
+                                                    "> 40 kg/m2"
+                                                  ]
+                                                }
+                                              }
+                                            },
+                                            "right": {
+                                              "raw_text": "- Surgical plan for revision of hip replacement",
+                                              "Procedure": [
+                                                "hip replacement"
+                                              ],
+                                              "Procedure-Name": [
+                                                "hip replacement"
+                                              ],
+                                              "Eq-Comparison": [
+                                                "plan"
+                                              ],
+                                              "Eq-Temporal-Period": [
+                                                "plan"
+                                              ],
+                                              "Modifier": [
+                                                "revision"
+                                              ]
+                                            }
+                                          }
+                                        },
+                                        "right": {
+                                          "raw_text": "- Patient unable to quantify pain level",
+                                          "Observation": [
+                                            "pain"
+                                          ],
+                                          "Observation-Name": [
+                                            "pain"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    "right": {
+                                      "raw_text": "- Chronic kidney disease with a Glomerular Filtration Rate < 50ml/min",
+                                      "Condition": [
+                                        "kidney disease"
+                                      ],
+                                      "Condition-Name": [
+                                        "kidney disease"
+                                      ],
+                                      "Observation": [
+                                        "Glomerular Filtration Rate"
+                                      ],
+                                      "Observation-Name": [
+                                        "Glomerular Filtration Rate"
+                                      ],
+                                      "Eq-Operator": [
+                                        "<"
+                                      ],
+                                      "Eq-Value": [
+                                        "50"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "< 50ml/min"
+                                      ],
+                                      "Eq-Unit": [
+                                        "ml"
+                                      ],
+                                      "Eq-Temporal-Unit": [
+                                        "min"
+                                      ],
+                                      "Acuteness": [
+                                        "Chronic"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "raw_text": "- Previously medicated with opioids",
+                                  "Drug": [
+                                    "opioid",
+                                    "opioids"
+                                  ],
+                                  "Drug-Name": [
+                                    "opioid",
+                                    "opioids"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "Previously"
+                                  ],
+                                  "Eq-Temporal-Period": [
+                                    "Previously"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- Patient"
+                                },
+                                "right": {
+                                  "NOT": {
+                                    "left": {
+                                      "raw_text": "unable to perform the surgery with spinal block",
+                                      "Procedure": [
+                                        "spinal block",
+                                        "surgery"
+                                      ],
+                                      "Procedure-Name": [
+                                        "spinal block",
+                                        "surgery"
+                                      ],
+                                      "Negation": [
+                                        "unable"
+                                      ],
+                                      "Assertion": [
+                                        "unable"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Allergy to local anesthetics",
+                          "Drug": [
+                            "local anesthetics"
+                          ],
+                          "Drug-Name": [
+                            "local anesthetics"
+                          ],
+                          "Allergy": [
+                            "Allergy"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Infection in the site of the Erector Spinae Plane",
+                          "Condition": [
+                            "Infection"
+                          ],
+                          "Condition-Name": [
+                            "Infection"
+                          ],
+                          "Modifier": [
+                            "Erector Spinae Plane"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or Fascia Iliaca block",
+                          "Modifier": [
+                            "Fascia Iliaca"
+                          ],
+                          "Procedure": [
+                            "block"
+                          ],
+                          "Procedure-Name": [
+                            "block"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Allergy",
+                      "Allergy": [
+                        "Allergy"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or contraindication to the use of morphine",
+                      "Drug": [
+                        "morphine"
+                      ],
+                      "Drug-Name": [
+                        "morphine"
+                      ],
+                      "Contraindication": [
+                        "contraindication"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patient unable to perform the surgery",
+              "Procedure": [
+                "surgery"
+              ],
+              "Procedure-Name": [
+                "surgery"
+              ],
+              "Negation": [
+                "unable"
+              ],
+              "Assertion": [
+                "unable"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Allergy or contraindication to the use of local anesthetics",
+          "Drug": [
+            "local anesthetics"
+          ],
+          "Drug-Name": [
+            "local anesthetics"
+          ],
+          "Allergy": [
+            "Allergy"
+          ],
+          "Contraindication": [
+            "contraindication"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Infection in the site of the Erector Spinae Plane or Fascia Iliaca block",
+      "Condition": [
+        "Infection"
+      ],
+      "Condition-Name": [
+        "Infection"
+      ],
+      "Modifier": [
+        "Erector Spinae Plane",
+        "Fascia Iliaca"
+      ],
+      "Procedure": [
+        "block"
+      ],
+      "Procedure-Name": [
+        "block"
+      ]
+    }
+  }
+}
