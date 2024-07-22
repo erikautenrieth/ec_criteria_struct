@@ -10,13 +10,14 @@ batch_path = "eval_p4"
 
 model_id = "tuned_models/llama3_70b_Lora_ep10_r256_pr1_p4"
 model_name = "Llama3_70b_Fine-Tuned_ep10_r256_pr1_p4"
-  
+
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 command = read_text_file(f"{transform_lct}/input/struct_prompt/all_entitys_prompt1.txt")
 
 study_path = f"{transform_lct}/input/dataset_p4_prompt6/test/input/"
 output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}/output/"
+
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 
@@ -56,7 +57,7 @@ for file in study_files:
         )
     ], return_tensors = "pt").to("cuda")
 
-    outputs = model.generate(**inputs, max_new_tokens=2048, use_cache=True)
+    outputs = model.generate(**inputs, max_new_tokens=2048, use_cache=True, temperature=1.0)
     decoded_outputs = tokenizer.batch_decode(outputs)
     response = decoded_outputs[0].split("### Response:")[1].strip()
     response = response.replace("<|eot_id|>", "")

@@ -32,7 +32,7 @@ pipeline = transformers.pipeline(
         )
 
 
-for temp in np.arange(0.1, 1.1, 0.1):
+for temp in np.arange(0.6, 1.1, 0.1):
         temp = round(temp,2)
         output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_{str(temp)}/output/"
         os.makedirs(output_path, exist_ok=True)
