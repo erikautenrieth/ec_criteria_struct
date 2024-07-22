@@ -1,0 +1,88 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- diagnosis of schizophrenia",
+                  "Condition": [
+                    "schizophrenia"
+                  ],
+                  "Condition-Name": [
+                    "schizophrenia"
+                  ]
+                },
+                "right": {
+                  "raw_text": "OR schizoaffective-depressed OR healthy subjects",
+                  "Condition": [
+                    "schizoaffective-depressed"
+                  ],
+                  "Condition-Name": [
+                    "schizoaffective-depressed"
+                  ],
+                  "Negation": [
+                    "healthy"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- ages 18-50 for all subjects",
+              "Age": [
+                "ages"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Eq-Value": [
+                "18",
+                "50"
+              ],
+              "Eq-Comparison": [
+                "18-50"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- double barrier contraception for all subjects",
+          "Procedure": [
+            "double barrier contraception"
+          ],
+          "Procedure-Name": [
+            "double barrier contraception"
+          ],
+          "Eq-Operator": [
+            "-"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "not pregnant for all subjects",
+              "Condition": [
+                "pregnant"
+              ],
+              "Condition-Name": [
+                "pregnant"
+              ],
+              "Negation": [
+                "not"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

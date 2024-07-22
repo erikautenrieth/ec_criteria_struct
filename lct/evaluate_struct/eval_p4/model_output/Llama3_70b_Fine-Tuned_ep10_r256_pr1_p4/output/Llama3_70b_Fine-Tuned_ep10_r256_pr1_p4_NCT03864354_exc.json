@@ -1,0 +1,107 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Current smoker",
+          "Eq-Comparison": [
+            "Current"
+          ],
+          "Observation": [
+            "smoker"
+          ],
+          "Eq-Temporal-Period": [
+            "Current"
+          ],
+          "Observation-Name": [
+            "smoker"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Diagnosed with any other respiratory disease",
+              "Condition": [
+                "respiratory disease"
+              ],
+              "Condition-Name": [
+                "respiratory disease"
+              ],
+              "Other": [
+                "other"
+              ]
+            },
+            "right": {
+              "raw_text": "besides asthma",
+              "Condition": [
+                "asthma"
+              ],
+              "Condition-Name": [
+                "asthma"
+              ],
+              "Exception": [
+                "besides"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Receiving OMM from a licensed physician,",
+          "Procedure": [
+            "OMM"
+          ],
+          "Procedure-Name": [
+            "OMM"
+          ],
+          "Eq-Comparison": [
+            "Receiving"
+          ],
+          "Eq-Temporal-Period": [
+            "Receiving"
+          ],
+          "Provider": [
+            "licensed physician"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "chiropractic treatment,",
+              "Procedure": [
+                "chiropractic treatment"
+              ],
+              "Procedure-Name": [
+                "chiropractic treatment"
+              ]
+            },
+            "right": {
+              "raw_text": "or massage therapy for 30 days prior to and during the study",
+              "Procedure": [
+                "massage therapy"
+              ],
+              "Procedure-Name": [
+                "massage therapy"
+              ],
+              "Eq-Temporal-Unit": [
+                "days"
+              ],
+              "Eq-Value": [
+                "30"
+              ],
+              "Eq-Comparison": [
+                "30 days"
+              ],
+              "Study": [
+                "study"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
