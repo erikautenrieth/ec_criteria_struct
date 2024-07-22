@@ -119,7 +119,7 @@ def and_or_not_to_latex(all_metrics, versuch_name):
                 if value > max_values[op][metric]:
                     max_values[op][metric] = value
 
-    latex_table = "\\begin{table}[h]\n"
+    latex_table = "\\begin{table}[ht]\n"
     latex_table += "\\centering\n"
     latex_table += "\\begin{tabular}{l" + "c" * (len(metrics_to_plot) * len(operators)) + "}\n"
     latex_table += "\\toprule\n"
