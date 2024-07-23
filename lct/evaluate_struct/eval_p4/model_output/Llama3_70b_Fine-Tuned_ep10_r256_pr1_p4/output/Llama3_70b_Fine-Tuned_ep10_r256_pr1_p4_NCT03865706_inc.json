@@ -1,0 +1,169 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. Hospitalized in an eligible medical ICU",
+                  "Encounter": [
+                    "Hospitalized"
+                  ],
+                  "Location": [
+                    "ICU"
+                  ]
+                },
+                "right": {
+                  "raw_text": "2. Age ≥ 18 years old at the time of hospitalization",
+                  "Age": [
+                    "Age"
+                  ],
+                  "Eq-Comparison": [
+                    "≥ 18 years"
+                  ],
+                  "Encounter": [
+                    "hospitalization"
+                  ],
+                  "Eq-Operator": [
+                    "≥"
+                  ],
+                  "Eq-Value": [
+                    "18"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "3. With sepsis as defined by the Sepsis-3 (2016) consensus as a known",
+                  "Condition": [
+                    "sepsis"
+                  ],
+                  "Condition-Name": [
+                    "sepsis"
+                  ],
+                  "Modifier": [
+                    "Sepsis-3"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or suspected infection with a SOFA score of ≥2 points above baseline",
+                  "Condition": [
+                    "infection"
+                  ],
+                  "Condition-Name": [
+                    "infection"
+                  ],
+                  "Observation": [
+                    "SOFA"
+                  ],
+                  "Observation-Name": [
+                    "SOFA"
+                  ],
+                  "Eq-Comparison": [
+                    "≥2"
+                  ],
+                  "Eq-Operator": [
+                    "≥"
+                  ],
+                  "Eq-Value": [
+                    "2"
+                  ],
+                  "Assertion": [
+                    "suspected"
+                  ],
+                  "Modifier": [
+                    "above baseline"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "4. Received broad-spectrum antibiotics within the last 24 hours",
+              "Eq-Comparison": [
+                "within the last 24 hours",
+                "Received"
+              ],
+              "Procedure": [
+                "broad-spectrum antibiotics"
+              ],
+              "Procedure-Name": [
+                "broad-spectrum antibiotics"
+              ],
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Eq-Value": [
+                "24"
+              ],
+              "Eq-Temporal-Period": [
+                "last",
+                "Received"
+              ]
+            },
+            "right": {
+              "raw_text": "or ordered and pending administration",
+              "Eq-Comparison": [
+                "ordered"
+              ],
+              "Eq-Temporal-Period": [
+                "ordered"
+              ],
+              "Assertion": [
+                "pending"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "5. Able to complete enrollment within 4 hours of ICU admission for administration of the intervention within 6 hours of ICU admission",
+      "Eq-Comparison": [
+        "within 4 hours",
+        "within 6 hours"
+      ],
+      "Eq-Operator": [
+        "within"
+      ],
+      "Eq-Value": [
+        "4",
+        "6"
+      ],
+      "Eq-Temporal-Unit": [
+        "hours"
+      ],
+      "Assertion": [
+        "Able to"
+      ],
+      "Encounter": [
+        "ICU admission"
+      ],
+      "Location": [
+        "ICU"
+      ],
+      "Procedure": [
+        "intervention"
+      ],
+      "Procedure-Name": [
+        "intervention"
+      ],
+      "Study": [
+        "enrollment"
+      ]
+    }
+  }
+}

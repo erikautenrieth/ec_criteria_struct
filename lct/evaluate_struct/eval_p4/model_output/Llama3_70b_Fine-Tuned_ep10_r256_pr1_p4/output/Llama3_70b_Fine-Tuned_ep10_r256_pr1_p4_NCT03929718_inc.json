@@ -1,0 +1,133 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- diagnosis of typical AFL confirmed by 12-lead ECG",
+              "Condition": [
+                "AFL"
+              ],
+              "Condition-Name": [
+                "AFL"
+              ],
+              "Procedure": [
+                "12-lead ECG"
+              ],
+              "Procedure-Name": [
+                "12-lead ECG"
+              ],
+              "Modifier": [
+                "typical"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "-"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "no documented AF on ECG,",
+                          "Condition": [
+                            "AF"
+                          ],
+                          "Condition-Name": [
+                            "AF"
+                          ],
+                          "Procedure": [
+                            "ECG"
+                          ],
+                          "Procedure-Name": [
+                            "ECG"
+                          ],
+                          "Negation": [
+                            "no"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "ambulatory monitor,",
+                              "Procedure": [
+                                "ambulatory monitor"
+                              ],
+                              "Procedure-Name": [
+                                "ambulatory monitor"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "pacemaker",
+                                  "Procedure": [
+                                    "pacemaker"
+                                  ],
+                                  "Procedure-Name": [
+                                    "pacemaker"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or ICD at any time",
+                                  "Procedure": [
+                                    "ICD"
+                                  ],
+                                  "Procedure-Name": [
+                                    "ICD"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- scheduled to undergo catheter ablation of the CTI for treatment of AFL",
+      "Condition": [
+        "AFL",
+        "CTI"
+      ],
+      "Condition-Name": [
+        "AFL",
+        "CTI"
+      ],
+      "Procedure": [
+        "catheter ablation"
+      ],
+      "Procedure-Name": [
+        "catheter ablation"
+      ],
+      "Eq-Comparison": [
+        "scheduled"
+      ],
+      "Eq-Temporal-Period": [
+        "scheduled"
+      ],
+      "Modifier": [
+        "CTI"
+      ],
+      "Assertion": [
+        "scheduled"
+      ],
+      "Procedure-Name": [
+        "catheter ablation"
+      ],
+      "Condition-Name": [
+        "AFL"
+      ]
+    }
+  }
+}

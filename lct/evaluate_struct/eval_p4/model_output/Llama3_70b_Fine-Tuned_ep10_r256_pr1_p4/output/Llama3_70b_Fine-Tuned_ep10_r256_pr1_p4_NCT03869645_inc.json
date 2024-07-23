@@ -1,0 +1,85 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients who are > 18 years of age",
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Age": [
+            "age"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Comparison": [
+            "> 18 years"
+          ],
+          "Eq-Operator": [
+            ">"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients with clinical signs, symptoms",
+              "Assertion": [
+                "signs",
+                "symptoms"
+              ]
+            },
+            "right": {
+              "raw_text": "and presentation consistent with acute thrombosis; onset of symptoms < 14 days",
+              "Condition": [
+                "thrombosis"
+              ],
+              "Condition-Name": [
+                "thrombosis"
+              ],
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Temporal-Unit": [
+                "days"
+              ],
+              "Eq-Value": [
+                "14"
+              ],
+              "Eq-Comparison": [
+                "< 14 days"
+              ],
+              "Assertion": [
+                "symptoms"
+              ],
+              "Acuteness": [
+                "acute"
+              ],
+              "Observation": [
+                "onset of symptoms"
+              ],
+              "Observation-Name": [
+                "onset of symptoms"
+              ],
+              "Condition-Type": [
+                "presentation"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Patients cleared medically for invasive endovenous procedures",
+      "Procedure": [
+        "invasive endovenous procedures"
+      ],
+      "Procedure-Name": [
+        "invasive endovenous procedures"
+      ],
+      "Assertion": [
+        "cleared medically"
+      ]
+    }
+  }
+}

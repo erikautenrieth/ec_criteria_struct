@@ -1,0 +1,90 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patient with paroxysmal/",
+              "Modifier": [
+                "paroxysmal"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "persistent/",
+                  "Modifier": [
+                    "persistent"
+                  ]
+                },
+                "right": {
+                  "raw_text": "permanent atrial fibrillation",
+                  "Condition": [
+                    "atrial fibrillation"
+                  ],
+                  "Condition-Name": [
+                    "atrial fibrillation"
+                  ],
+                  "Modifier": [
+                    "permanent"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- CHA2DS2VASc score ≥2 for male and ≥3 for female",
+          "Observation": [
+            "CHA2DS2VASc"
+          ],
+          "Observation-Name": [
+            "CHA2DS2VASc"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Value": [
+            "2",
+            "3"
+          ],
+          "Eq-Comparison": [
+            "≥2",
+            "≥3"
+          ],
+          "Life-Stage-And-Gender": [
+            "male",
+            "female"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Without contraindications to anticoagulation therapy",
+              "Procedure": [
+                "anticoagulation therapy"
+              ],
+              "Procedure-Name": [
+                "anticoagulation therapy"
+              ],
+              "Contraindication": [
+                "contraindications"
+              ],
+              "Negation": [
+                "Without"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
