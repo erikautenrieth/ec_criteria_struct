@@ -6,11 +6,11 @@
 #SBATCH --time=72:00:00             # Time limit hrs:min:sec
 #SBATCH --output=log/tuned.%j.out   # Standard output and error log
 #SBATCH --error=log/tuned.%j.err    # Error log
-#SBATCH --job-name=0_shot_temp           # Job name
+#SBATCH --job-name=5_max           # Job name
 
 module load cuda
 
-python llama3_0_shot_temp.py
+python llama_p1_eval_shot.py
 
 
 ##SBATCH --nodelist=wr21          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !

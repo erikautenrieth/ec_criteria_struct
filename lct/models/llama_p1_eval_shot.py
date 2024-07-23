@@ -40,9 +40,25 @@ shot_list = [
     "NCT03923231.txt",
     "NCT03930121.txt"
 ]
+most_operators = [
+    "NCT03860857.txt",  # 31 Operatoren
+    "NCT03866200.txt",  # 30 Operatoren
+    "NCT03861559.txt",  # 29 Operatoren
+    "NCT03865589.txt",  # 26 Operatoren
+    "NCT03868475.txt"   # 24 Operatoren
+]
+
+least_operators = [
+    "NCT03864653.txt",  # 3 Operatoren
+    "NCT03867422.txt",  # 3 Operatoren
+    "NCT03868865.txt",  # 3 Operatoren
+    "NCT03921138.txt",  # 3 Operatoren
+    "NCT03922269.txt"   # 3 Operatoren
+]
+
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, most_operators)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
@@ -62,9 +78,9 @@ pipeline = transformers.pipeline(
 
 
 for i in range(5, 6):
-    batch_path = f"eval_n_shot/eval_{i}_shot_best"
+    batch_path = f"eval_{i}_shot_max"
     n_shot = i
-    for j in range(9, 15):
+    for j in range(11, 21):
         study_path = f"{transform_lct}/input/dataset/test/input/"
         output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{n_shot}_shot_v_{j}/output/"  
         os.makedirs(output_path, exist_ok=True)
