@@ -58,7 +58,7 @@ least_operators = [
 
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, most_operators)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, least_operators)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
@@ -78,9 +78,9 @@ pipeline = transformers.pipeline(
 
 
 for i in range(5, 6):
-    batch_path = f"eval_{i}_shot_max"
+    batch_path = f"eval_{i}_shot_min"
     n_shot = i
-    for j in range(11, 21):
+    for j in range(0, 11):
         study_path = f"{transform_lct}/input/dataset/test/input/"
         output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{n_shot}_shot_v_{j}/output/"  
         os.makedirs(output_path, exist_ok=True)

@@ -6,7 +6,7 @@
 #SBATCH --time=72:00:00             # Time limit hrs:min:sec
 #SBATCH --output=log/tuned.%j.out   # Standard output and error log
 #SBATCH --error=log/tuned.%j.err    # Error log
-#SBATCH --job-name=5_max           # Job name
+#SBATCH --job-name=5_min           # Job name
 
 module load cuda
 
