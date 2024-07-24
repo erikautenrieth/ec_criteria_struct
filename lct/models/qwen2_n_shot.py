@@ -3,8 +3,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 device = "cuda" 
 from helper_functions import *
 
-batch_path = "eval_p1_models_prompt6_evaldata"
-n_shot = 15
+batch_path = "modelle_prompt2"
+n_shot = 5
 
 model_id =  "Qwen/Qwen2-72B-Instruct"
 model_name = "Qwen2-72B"
@@ -48,7 +48,7 @@ additional_files = [
 # Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, additional_files)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
 
 ## Random n-shot Data
 #study_filenames, study_contents, label_filenames, label_contents = read_random_matching_txt_files(study_folder, label_folder, n_shot)

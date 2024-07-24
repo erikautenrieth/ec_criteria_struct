@@ -2,16 +2,19 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_5_shot_types"
+batch_path = "modelle_prompt2"
 
 n_prompt = 6
 n_shot = 5
 
-model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
-model_name = "Llama-3-70B-Instruct"
-
 #model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 #model_name = "Llama-3-70B-Instruct"
+
+model_id = "meta-llama/Meta-Llama-3.1-70B-Instruct"
+model_name = "Llama-3.1-70B-Instruct"
+
+#model_id =  "meta-llama/meta-llama/Meta-Llama-3.1-405B-Instruct"
+#model_name = "Llama-3.1-405B-Instruct"
 
 #model_id =  "NousResearch/Hermes-2-Theta-Llama-3-70B"
 #model_name = "Llama-3-70B-Hermes2"
@@ -94,7 +97,7 @@ additional_files = [
 # Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, most_operators)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []

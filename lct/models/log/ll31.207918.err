@@ -1,0 +1,21 @@
+2024-07-24 10:37:24.772003: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-24 10:37:25.756584: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+/home/eauten2s/.local/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/work/eauten2s/ec_criteria_struct/lct/models/llama3_n_shot.py", line 125, in <module>
+    pipeline = transformers.pipeline(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/pipelines/__init__.py", line 815, in pipeline
+    config = AutoConfig.from_pretrained(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/models/auto/configuration_auto.py", line 1135, in from_pretrained
+    return config_class.from_dict(config_dict, **unused_kwargs)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/configuration_utils.py", line 763, in from_dict
+    config = cls(**config_dict)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/models/llama/configuration_llama.py", line 160, in __init__
+    self._rope_scaling_validation()
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/models/llama/configuration_llama.py", line 180, in _rope_scaling_validation
+    raise ValueError(
+ValueError: `rope_scaling` must be a dictionary with with two fields, `type` and `factor`, got {'factor': 8.0, 'low_freq_factor': 1.0, 'high_freq_factor': 4.0, 'original_max_position_embeddings': 8192, 'rope_type': 'llama3'}

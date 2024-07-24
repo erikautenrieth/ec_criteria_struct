@@ -32,7 +32,7 @@ pipeline = transformers.pipeline(
         )
 
 
-for i in np.arange(11, 21):
+for i in np.arange(0, 12):
         output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_v_{i}/output/"
         os.makedirs(output_path, exist_ok=True)
 
