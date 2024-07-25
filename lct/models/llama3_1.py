@@ -3,6 +3,7 @@ import torch
 
 model_id = "meta-llama/Meta-Llama-3.1-70B-Instruct"
 
+#model="meta-llama/Meta-Llama-3.1-405B-Instruct"
 pipeline = transformers.pipeline(
     "text-generation",
     model=model_id,
