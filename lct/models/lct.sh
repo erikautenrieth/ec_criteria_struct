@@ -4,17 +4,17 @@
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
 #SBATCH --time=72:00:00             # Time limit hrs:min:sec
-#SBATCH --output=log/5min.%j.out   # Standard output and error log
-#SBATCH --error=log/5min.1.%j.err    # Error log
-#SBATCH --job-name=5min         # Job name
+#SBATCH --output=log/405b.%j.out   # Standard output and error log
+#SBATCH --error=log/405b.%j.err    # Error log
+#SBATCH --job-name=405b         # Job name
 
 module load cuda
 
-python llama_p1_eval_shot.py
+python llama3_1.py
 
 #llama3_1.py
 
-#
+#flan.py
 
 ##SBATCH --nodelist=wr21          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !
 #echo "Running nvidia-smi diagnostics"
