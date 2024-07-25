@@ -3,14 +3,14 @@
 #SBATCH --nodes=1                # number of nodes
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
-#SBATCH --time=72:00:00             # Time limit hrs:min:sec
-#SBATCH --output=log/405b.%j.out   # Standard output and error log
-#SBATCH --error=log/405b.%j.err    # Error log
-#SBATCH --job-name=405b         # Job name
+#SBATCH --time=06:00:00             # Time limit hrs:min:sec
+#SBATCH --output=log/3.1_5shot.%j.out   # Standard output and error log
+#SBATCH --error=log/3.1_5shot.%j.err    # Error log
+#SBATCH --job-name=3.1_5shot       # Job name
 
 module load cuda
 
-python llama3_1.py
+python llama3_n_shot.py
 
 #llama3_1.py
 
