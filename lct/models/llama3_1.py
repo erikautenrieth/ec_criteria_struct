@@ -2,9 +2,9 @@ import transformers
 import torch
 
 #model_id = "meta-llama/Meta-Llama-3.1-70B-Instruct"
+#model_id="meta-llama/Meta-Llama-3.1-405B-Instruct"
 
-model_id="meta-llama/Meta-Llama-3.1-405B-Instruct"
-#meta-llama/Meta-Llama-3.1-8B-Instruct
+model_id="meta-llama/Meta-Llama-3.1-8B-Instruct"
 
 
 pipeline = transformers.pipeline(

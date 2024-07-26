@@ -33,7 +33,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 ## 2048 _> 224.00 MiB. GPU 
 model = FastLanguageModel.get_peft_model(
     model,
-    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096 (zu groß)
+    r = r, # default 16  | Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096 (zu groß)
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 256, # 256 (default),
@@ -94,17 +94,17 @@ trainer = SFTTrainer(
     dataset_num_proc = 4,  
     packing = True,  
     args = TrainingArguments(
-        per_device_train_batch_size = 2,  # 2 (default)
-        gradient_accumulation_steps = 8,   # 8 (default)
-        per_device_eval_batch_size = 4,   # 4 (default)
+        per_device_train_batch_size = 2,  
+        gradient_accumulation_steps = 8,  
+        per_device_eval_batch_size = 4,   
         num_train_epochs = epoch,  
-        warmup_ratio = 0.1,  # 0.1 (default)
-        learning_rate = 5e-5, # 5e-5,
+        warmup_ratio = 0.1,  
+        learning_rate = 5e-5, 
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
         optim = "adamw_8bit",
         weight_decay = 0.05,  
-        lr_scheduler_type = "cosine",  # cosine (default)
+        lr_scheduler_type = "cosine", 
         seed = 42, 
         output_dir = output_dir,
         logging_steps = 50,  

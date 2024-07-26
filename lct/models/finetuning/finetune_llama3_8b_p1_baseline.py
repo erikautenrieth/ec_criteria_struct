@@ -1,5 +1,8 @@
 #pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
 #pip install --no-deps xformers "trl<0.9.0" peft accelerate bitsandbytes
+
+
+# pip install transformers==4.38.0
 import torch
 import os
 from unsloth import FastLanguageModel
@@ -28,6 +31,8 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     load_in_4bit = load_in_4bit,
     token = "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"
 )
+
+
 
 model = FastLanguageModel.get_peft_model(
         model               = model,
@@ -87,6 +92,9 @@ test = train_test_split['test'] # 81 Files
 train = train.map(formatting_prompts_func, batched=True)
 test = test.map(formatting_prompts_func, batched=True)
 
+
+
+
 trainer = SFTTrainer(
     model=model,
     tokenizer=tokenizer,
@@ -125,6 +133,10 @@ trainer = SFTTrainer(
 )
 
 
+
+
+
+
 #@title Show current memory stats
 gpu_stats = torch.cuda.get_device_properties(0)
 start_gpu_memory = round(torch.cuda.max_memory_reserved() / 1024 / 1024 / 1024, 3)
@@ -146,7 +158,7 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_baseline")
+model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_baseline_ep10")
 
 
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
