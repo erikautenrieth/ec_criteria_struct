@@ -15,6 +15,4 @@ python finetune_llama3_8b_p1.py #finetune_llama3_8b_p1_baseline.py # finetune_ll
 
 
 
-
-
   ##SBATCH --nodelist=wr24          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht), 24 (fail) ,25 (geht) !
