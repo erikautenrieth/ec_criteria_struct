@@ -11,10 +11,10 @@ from datasets import load_from_disk, DatasetDict
 if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
-a = 512
+a = 1024
 r = 128
 epoch = 10
-output_dir  = "outputs/outputs_8b_2"
+output_dir  = "outputs/outputs_8b_4"
 os.makedirs(output_dir, exist_ok=True)
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
