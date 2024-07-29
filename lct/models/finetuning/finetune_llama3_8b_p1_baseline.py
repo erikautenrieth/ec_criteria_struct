@@ -16,7 +16,7 @@ if torch.cuda.device_count() > 1:
 
 
 
-output_dir  = "outputs/outputs_8b_2"
+output_dir  = "outputs/outputs_base"
 os.makedirs(output_dir, exist_ok=True)
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
