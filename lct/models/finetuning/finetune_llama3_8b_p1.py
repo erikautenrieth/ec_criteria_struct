@@ -11,10 +11,10 @@ from datasets import load_from_disk, DatasetDict
 if torch.cuda.device_count() > 1:
         print(f"Using {torch.cuda.device_count()} GPUs")
 
-
-r = 64
+a = 256
+r = 128
 epoch = 10
-output_dir  = "outputs/outputs_8b_3"
+output_dir  = "outputs/outputs_8b_2"
 os.makedirs(output_dir, exist_ok=True)
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -36,8 +36,8 @@ model = FastLanguageModel.get_peft_model(
     r = r, # default 16  | Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096 (zu groß)
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
-    lora_alpha = 256, # 256 (default),
-    lora_dropout=0.05,
+    lora_alpha = a, # 256 (default),
+    lora_dropout=0.05, # 0.05 (default)
     bias = "none",    # Supports any, but = "none" is optimized
     use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context  # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
     random_state = 3407,
@@ -98,13 +98,13 @@ trainer = SFTTrainer(
         gradient_accumulation_steps = 8,  
         per_device_eval_batch_size = 4,   
         num_train_epochs = epoch,  
-        warmup_ratio = 0.1,  
-        learning_rate = 5e-5, 
+        warmup_ratio = 0.1,  # 0.1
+        learning_rate = 5e-5, # 5e-5
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
         optim = "adamw_8bit",
         weight_decay = 0.05,  
-        lr_scheduler_type = "cosine", 
+        lr_scheduler_type = "cosine", # "cosine"
         seed = 42, 
         output_dir = output_dir,
         logging_steps = 50,  
@@ -143,7 +143,7 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}")
+model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}_warmup0")
 
 
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
