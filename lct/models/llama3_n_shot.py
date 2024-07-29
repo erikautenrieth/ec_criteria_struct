@@ -10,11 +10,11 @@ n_shot = 5
 #model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 #model_name = "Llama-3-70B-Instruct"
 
-model_id = "meta-llama/Meta-Llama-3.1-70B-Instruct"
-model_name = "Llama-3.1-70B-Instruct"
+#model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+#model_name = "Llama-3.1-8B-Instruct"
 
-#model_id =  "meta-llama/meta-llama/Meta-Llama-3.1-405B-Instruct"
-#model_name = "Llama-3.1-405B-Instruct"
+model_id =  "meta-llama/meta-llama/Meta-Llama-3.1-405B-Instruct"
+model_name = "Llama-3.1-405B-Instruct"
 
 #model_id =  "NousResearch/Hermes-2-Theta-Llama-3-70B"
 #model_name = "Llama-3-70B-Hermes2"
@@ -44,7 +44,7 @@ command = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_max_operators/output/"
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
 
 os.makedirs(output_path, exist_ok=True)
 
