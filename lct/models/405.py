@@ -23,6 +23,8 @@ def main(rank, world_size):
 
     # Bereinigen des GPU-Speichers vor dem Start
     torch.cuda.empty_cache()
+    num_gpus = torch.cuda.device_count()
+    print(f"Anzahl der sichtbaren GPUs: {num_gpus}")
 
     batch_path = "modelle_prompt2"
     n_prompt = 6
@@ -94,9 +96,10 @@ def main(rank, world_size):
 
         terminators = [
             pipeline.tokenizer.eos_token_id,
-            pipeline.tokenizer.convert_tokens_to_ids("")
+            pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
         ]
 
+        torch.cuda.empty_cache()
         with torch.cuda.amp.autocast():
             outputs = pipeline(
                 prompt,
