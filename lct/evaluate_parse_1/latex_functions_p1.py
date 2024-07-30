@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 
 sota_metrics = {
     'SciBERT': {
@@ -40,7 +41,7 @@ def avg_operators_latex(all_metrics, versuch_name):
             if value > max_values[metric]:
                 max_values[metric] = value
 
-    latex_table = "\\begin{table}[h]\n"
+    latex_table = "\\begin{table}[ht]\n"
     latex_table += "\\centering\n"
     latex_table += "\\begin{tabular}{lccc}\n"
     latex_table += "\\toprule\n"
@@ -169,3 +170,58 @@ def and_or_not_to_latex(all_metrics, versuch_name):
         file.write(latex_table)
     return latex_table
 
+
+
+def calculate_mean_excel(data, model_names, file_path='n_shot_mean_results.xlsx'):
+    n_shot_models = [model for model in data.keys() ]
+    precisions = []
+    recalls = []
+    f1_scores = []
+    missing_percentages = []
+    excess_percentages = []
+
+    for model in n_shot_models:
+        print(model)
+        avg = data[model]['average']
+        precisions.append(avg['precision'])
+        recalls.append(avg['recall'])
+        f1_scores.append(avg['f1'])
+        missing_percentages.append(data[model]['average_missing_percentage'])
+        excess_percentages.append(data[model]['average_zuviel_percentage'])
+
+    avg_precision = np.mean(precisions)
+    avg_recall = np.mean(recalls)
+    avg_f1 = np.mean(f1_scores)
+    avg_missing_percentage = np.mean(missing_percentages)
+    avg_excess_percentage = np.mean(excess_percentages)
+    print(avg_missing_percentage)
+    std_precision = np.std(precisions)
+    std_recall = np.std(recalls)
+    std_f1 = np.std(f1_scores)
+    std_missing_percentage = np.std(missing_percentages)
+    std_excess_percentage = np.std(excess_percentages)
+
+    result = {
+        'average_precision': avg_precision,
+        'average_recall': avg_recall,
+        'average_f1': avg_f1,
+        'std_precision': std_precision,
+        'std_recall': std_recall,
+        'std_f1': std_f1,
+        'average_missing_percentage': avg_missing_percentage,
+        'average_excess_percentage': avg_excess_percentage,
+        'std_missing_percentage': std_missing_percentage,
+        'std_excess_percentage': std_excess_percentage
+    }
+
+    df = pd.DataFrame(result, index=[model_names])
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    if os.path.exists(file_path):
+        existing_df = pd.read_excel(file_path, index_col=0)
+        existing_df.update(df)
+        df = pd.concat([existing_df, df[~df.index.isin(existing_df.index)]])
+
+    df.to_excel(file_path)
+    print(f"Results saved/updated in {file_path}")
+
+    return result
