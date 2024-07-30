@@ -2,6 +2,13 @@ import os
 import transformers
 from helper_functions import *
 
+import torch
+def clean_cuda_memory():
+    torch.cuda.empty_cache()
+    torch.cuda.ipc_collect()
+
+clean_cuda_memory()
+
 batch_path = "modelle_prompt2"
 
 n_prompt = 6
@@ -13,8 +20,10 @@ n_shot = 5
 #model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 #model_name = "Llama-3.1-8B-Instruct"
 
-model_id =  "meta-llama/meta-llama/Meta-Llama-3.1-405B-Instruct"
+model_id =  "meta-llama/Meta-Llama-3.1-405B-Instruct" # transformers==4.43.1  vllm==0.5.3.post1
 model_name = "Llama-3.1-405B-Instruct"
+
+
 
 #model_id =  "NousResearch/Hermes-2-Theta-Llama-3-70B"
 #model_name = "Llama-3-70B-Hermes2"
@@ -155,14 +164,15 @@ for file in study_files:
             pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
     ]
 
-    outputs = pipeline(
+    with torch.cuda.amp.autocast():
+        outputs = pipeline(
             prompt,
             max_new_tokens=2048,
             eos_token_id=terminators,
             do_sample=True,
             temperature=0.5,
             top_p=0.95,
-    )
+        )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
 

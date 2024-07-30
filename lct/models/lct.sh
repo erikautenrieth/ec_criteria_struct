@@ -3,14 +3,22 @@
 #SBATCH --nodes=2                # number of nodes
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
-#SBATCH --time=72:00:00             # Time limit hrs:min:sec
+#SBATCH --time=10:00:00             # Time limit hrs:min:sec
 #SBATCH --output=log/405b.%j.out   # Standard output and error log
 #SBATCH --error=log/405b.%j.err    # Error log
-#SBATCH --job-name=450b       # Job name
+#SBATCH --job-name=405b            # Job name
 
 module load cuda
 
-python llama3_n_shot.py
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export MASTER_ADDR=$(hostname)
+export MASTER_PORT=12355
+
+python -c "import torch; torch.cuda.empty_cache()"
+
+python 405.py
+
+nvidia-smi
 
 #llama3_1.py
 
