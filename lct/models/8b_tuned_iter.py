@@ -34,7 +34,7 @@ alpaca_prompt = """Below is an instruction that describes a task, paired with an
 ### Response:
 {}"""
 
-for i in range(11,21):
+for i in range(0,21):
 
     model_name = f"llama3_8b_Lora_ep10_r128_v{i}"
     output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}/output/"

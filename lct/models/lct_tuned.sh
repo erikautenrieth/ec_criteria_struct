@@ -6,8 +6,8 @@
 #SBATCH --time=16:00:00             # Time limit hrs:min:sec
 #SBATCH --output=log/tuned.%j.out   # Standard output and error log
 #SBATCH --error=log/tuned.%j.err    # Error log
-#SBATCH --job-name=tuned_8b           # Job name
+#SBATCH --job-name=tuned_70b           # Job name
 
 module load cuda
 
-python 8b_tuned_iter.py    # 8b_tuned.py  
+python 70b_tuned_iter.py    # 8b_tuned.py  
