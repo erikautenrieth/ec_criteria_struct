@@ -25,7 +25,7 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 
 
-batch_path = "gpt_prompt2" 
+batch_path = "modelle_prompt2" 
 n_shot = 15
 model_name = "GPT-4o"
 
@@ -42,10 +42,10 @@ model_desc = read_text_file(f"{transform_lct}/input/prompt/agent.txt")
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_agent_t0.5_p2/output/"  
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_t0.5/output/"  
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[:50]
+study_files = os.listdir(study_path)
 
 shot_list = [
     "NCT03861156.txt",
@@ -83,7 +83,7 @@ labels = dict(zip(label_filenames, label_contents))
 messages = []
 
 
-messages.append({"role": "system", "content": f"{model_desc + command}"})
+messages.append({"role": "system", "content": f"{command}"})
 
 
 for i in range(n_shot):
@@ -103,7 +103,7 @@ for file in study_files:
         messages.append({"role": "user", "content": f"{command} {test_file}"})
         first_call = False
     else:
-        messages[-1] = {"role": "user", "content": f"{command} {test_file}"} # {cot} 
+        messages[-1] = {"role": "user", "content": f"{command} {test_file}"} 
 
     completion = client.chat.completions.create(
     model="gpt-4o",      # "gpt-4o" "gpt-3.5-turbo" "gpt-4o-mini"
