@@ -1,28 +1,23 @@
 #!/bin/bash
 #SBATCH --partition=gpu4         # GPU partition
 #SBATCH --nodes=2                # number of nodes
+#SBATCH --gpus-per-node=4
 #SBATCH --ntasks-per-node=4          # number of tasks per node
 #SBATCH --mem=260G               # memory per node in MB (different units with suffix K|M|G|T) 260-70B, 160-8B
 #SBATCH --gres=gpu:4 
 #SBATCH --time=10:00:00             # Time limit hrs:min:sec
-#SBATCH --output=log/405b.%j.out   # Standard output and error log
-#SBATCH --error=log/405b.%j.err    # Error log
-#SBATCH --job-name=405b            # Job name
+#SBATCH --output=log/llama.%j.out   # Standard output and error log
+#SBATCH --error=log/llama.%j.err    # Error log
+#SBATCH --job-name=llama            # Job name
 
 module load cuda
 
-export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export MASTER_PORT=12355
+export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
+
+python llama3_1.py
 
 
 
-#llama3_1.py
 
-#flan.py
 
-##SBATCH --nodelist=wr21          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht)!, 24 (fail) ,25 (geht) !
-#echo "Running nvidia-smi diagnostics"
-#nvidia-smi -q -d MEMORY 
-#nvidia-smi -q -d UTILIZATION 
-#nvidia-smi -q -d ECC 
-#export SLURM_DEBUG=nvml

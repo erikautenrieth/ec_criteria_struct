@@ -39,10 +39,10 @@ client = OpenAI(
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/agent.txt") 
-command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_t0.5/output/"  
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_t0.5_pro1_agent/output/"  
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
@@ -83,7 +83,7 @@ labels = dict(zip(label_filenames, label_contents))
 messages = []
 
 
-messages.append({"role": "system", "content": f"{command}"})
+messages.append({"role": "system", "content": f"{model_desc + command}"})
 
 
 for i in range(n_shot):
