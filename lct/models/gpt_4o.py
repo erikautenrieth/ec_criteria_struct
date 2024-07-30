@@ -26,7 +26,7 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 
 batch_path = "modelle_prompt2" 
-n_shot = 15
+n_shot = 5
 model_name = "GPT-4o"
 
 
@@ -39,10 +39,10 @@ client = OpenAI(
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/agent.txt") 
-command = read_text_file(f"{transform_lct}/input/prompt/p1.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_t0.5_pro1_agent/output/"  
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_t0.5/output/"  
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
@@ -76,14 +76,14 @@ additional_files = [
 
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, additional_files)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
 
 
-messages.append({"role": "system", "content": f"{model_desc + command}"})
+messages.append({"role": "system", "content": f"{command}"})
 
 
 for i in range(n_shot):
