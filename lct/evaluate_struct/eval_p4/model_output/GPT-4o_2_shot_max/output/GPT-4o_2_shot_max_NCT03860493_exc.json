@@ -1,0 +1,104 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Known allergies to iodides",
+      "Condition": [
+        "allergies"
+      ],
+      "Drug": [
+        "iodides"
+      ],
+      "Condition-Name": [
+        "allergies"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Known history of coagulopathy",
+          "Condition": [
+            "coagulopathy"
+          ],
+          "Condition-Name": [
+            "coagulopathy"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Women who are pregnant",
+                  "Life-Stage-And-Gender": [
+                    "Women"
+                  ],
+                  "Condition": [
+                    "pregnant"
+                  ],
+                  "Condition-Name": [
+                    "pregnant"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or breastfeeding",
+                      "Condition": [
+                        "breastfeeding"
+                      ],
+                      "Condition-Name": [
+                        "breastfeeding"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or for whom possibility of pregnancy",
+                          "Condition": [
+                            "pregnancy"
+                          ],
+                          "Condition-Name": [
+                            "pregnancy"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "was not ruled out",
+                              "Negation": [
+                                "not"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "Women who are pregnant or breastfeeding, or for whom possibility of pregnancy was not ruled out",
+              "Life-Stage-And-Gender": [
+                "Women"
+              ],
+              "Condition": [
+                "pregnant",
+                "breastfeeding",
+                "pregnancy"
+              ],
+              "Condition-Name": [
+                "pregnant",
+                "breastfeeding",
+                "pregnancy"
+              ],
+              "Negation": [
+                "not"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

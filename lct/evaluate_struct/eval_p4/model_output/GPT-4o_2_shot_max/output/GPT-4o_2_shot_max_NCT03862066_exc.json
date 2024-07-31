@@ -1,0 +1,111 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- prior immunotherapy or treatment with another anti PD-1 agent besides nivolumab",
+                  "Observation": [
+                    "immunotherapy",
+                    "treatment"
+                  ],
+                  "Drug": [
+                    "anti PD-1 agent",
+                    "nivolumab"
+                  ],
+                  "Drug-Name": [
+                    "anti PD-1 agent",
+                    "nivolumab"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "prior"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- prior chemotherapy including cetuximab or radiation therapy",
+                  "Observation": [
+                    "chemotherapy",
+                    "radiation therapy"
+                  ],
+                  "Drug": [
+                    "cetuximab"
+                  ],
+                  "Drug-Name": [
+                    "cetuximab"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "prior"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- concomitant malignancies except cutaneous squamous cell carcinoma or basal cell carcinoma",
+              "Condition": [
+                "malignancies",
+                "cutaneous squamous cell carcinoma",
+                "basal cell carcinoma"
+              ],
+              "Exception": [
+                "except"
+              ],
+              "Condition-Name": [
+                "malignancies",
+                "cutaneous squamous cell carcinoma",
+                "basal cell carcinoma"
+              ],
+              "Modifier": [
+                "cutaneous"
+              ],
+              "Eq-Operator": [
+                "or"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- unresectable primary tumor",
+              "Condition": [
+                "primary tumor"
+              ],
+              "Condition-Name": [
+                "primary tumor"
+              ],
+              "Modifier": [
+                "unresectable"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or regional disease",
+                  "Condition": [
+                    "regional disease"
+                  ],
+                  "Condition-Name": [
+                    "regional disease"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or distant metastases",
+                  "Condition": [
+                    "distant metastases"
+                  ],
+                  "Condition-Name": [
+                    "distant metastases"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {}
+  }
+}

@@ -25,12 +25,11 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 
 batch_path = "eval_p4"
-n_prompt = 6
-n_shot = 10
+n_shot = 2
 
-# 15 shot zu viel für mini
+# 15 shot zu viel für mini (5 geht)
 
-model_name = f"GPT-4o_{n_shot}_shot_random"
+model_name = f"GPT-4o_{n_shot}_shot_max"
 
 
 client = OpenAI(
@@ -79,7 +78,7 @@ all_label_files = [f for f in os.listdir(label_folder) if f.endswith('.txt')]
 random_files = random.sample(all_label_files, n_shot)
 
 
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, random_files)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, top_15_files)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))

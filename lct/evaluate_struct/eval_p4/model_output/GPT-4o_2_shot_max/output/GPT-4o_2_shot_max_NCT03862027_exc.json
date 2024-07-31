@@ -1,0 +1,330 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "1. Pneumothorax",
+          "Condition": [
+            "Pneumothorax"
+          ],
+          "Condition-Name": [
+            "Pneumothorax"
+          ]
+        },
+        "right": {
+          "raw_text": "or pneumomediastinum",
+          "Condition": [
+            "pneumomediastinum"
+          ],
+          "Condition-Name": [
+            "pneumomediastinum"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "2. Life expectancy < 24 hours",
+              "Condition": [
+                "Life expectancy"
+              ],
+              "Eq-Comparison": [
+                "< 24 hours"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "24"
+              ],
+              "Condition-Name": [
+                "Life expectancy"
+              ]
+            },
+            "right": {
+              "raw_text": "or expected to require mechanical ventilation for < 24 hours",
+              "Condition": [
+                "mechanical ventilation"
+              ],
+              "Eq-Comparison": [
+                "< 24 hours"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "24"
+              ],
+              "Condition-Name": [
+                "mechanical ventilation"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "3. Condition that precludes placement of an esophageal balloon",
+              "Condition": [
+                "condition"
+              ],
+              "Procedure": [
+                "placement of an esophageal balloon"
+              ],
+              "Condition-Name": [
+                "condition"
+              ],
+              "Procedure-Name": [
+                "placement of an esophageal balloon"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "[esophageal or nasopharyngeal pathology preventing insertion of the esophageal balloon catheter",
+                  "Condition": [
+                    "esophageal pathology",
+                    "nasopharyngeal pathology"
+                  ],
+                  "Procedure": [
+                    "insertion of the esophageal balloon catheter"
+                  ],
+                  "Condition-Name": [
+                    "esophageal pathology",
+                    "nasopharyngeal pathology"
+                  ],
+                  "Procedure-Name": [
+                    "insertion of the esophageal balloon catheter"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "(esophageal ulcerations, tumors, diverticulitis, bleeding varices",
+                      "Condition": [
+                        "esophageal ulcerations",
+                        "tumors",
+                        "diverticulitis",
+                        "bleeding varices"
+                      ],
+                      "Condition-Name": [
+                        "esophageal ulcerations",
+                        "tumors",
+                        "diverticulitis",
+                        "bleeding varices"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or in patients with sinusitis, epistaxis or recent nasopharyngeal surgery)",
+                          "Condition": [
+                            "sinusitis",
+                            "epistaxis"
+                          ],
+                          "Procedure": [
+                            "nasopharyngeal surgery"
+                          ],
+                          "Condition-Name": [
+                            "sinusitis",
+                            "epistaxis"
+                          ],
+                          "Procedure-Name": [
+                            "nasopharyngeal surgery"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "severe thrombocytopenia (platelet count < 30)",
+                              "Condition": [
+                                "thrombocytopenia"
+                              ],
+                              "Severity": [
+                                "severe"
+                              ],
+                              "Observation": [
+                                "platelet count"
+                              ],
+                              "Eq-Comparison": [
+                                "< 30"
+                              ],
+                              "Eq-Value": [
+                                "30"
+                              ],
+                              "Eq-Operator": [
+                                "<"
+                              ],
+                              "Condition-Name": [
+                                "thrombocytopenia"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or coagulopathy (INR > 3",
+                                  "Condition": [
+                                    "coagulopathy"
+                                  ],
+                                  "Observation": [
+                                    "INR"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "> 3"
+                                  ],
+                                  "Eq-Value": [
+                                    "3"
+                                  ],
+                                  "Eq-Operator": [
+                                    ">"
+                                  ],
+                                  "Condition-Name": [
+                                    "coagulopathy"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or on oral anticoagulants).",
+                                  "Drug": [
+                                    "oral anticoagulants"
+                                  ],
+                                  "Drug-Name": [
+                                    "oral anticoagulants"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "4. Pre-enrollment ICP > 20 mm Hg",
+          "Observation": [
+            "ICP"
+          ],
+          "Eq-Comparison": [
+            "> 20 mm Hg"
+          ],
+          "Eq-Value": [
+            "20"
+          ],
+          "Eq-Operator": [
+            ">"
+          ],
+          "Eq-Unit": [
+            "mm Hg"
+          ],
+          "Assertion": [
+            "Pre-enrollment"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "5. Pre-enrollment CPP < 60 mm Hg",
+              "Observation": [
+                "CPP"
+              ],
+              "Eq-Comparison": [
+                "< 60 mm Hg"
+              ],
+              "Eq-Value": [
+                "60"
+              ],
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Unit": [
+                "mm Hg"
+              ],
+              "Assertion": [
+                "Pre-enrollment"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "6. Planned change in the external ventricular drain set point during the pre-intervention, intervention or post-intervention periods",
+                  "Procedure": [
+                    "external ventricular drain set point"
+                  ],
+                  "Observation": [
+                    "intervention"
+                  ],
+                  "Condition": [
+                    "Planned change"
+                  ],
+                  "Condition-Name": [
+                    "Planned change"
+                  ],
+                  "Observation-Name": [
+                    "intervention"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "7. Incarceration",
+                      "Condition": [
+                        "Incarceration"
+                      ],
+                      "Condition-Name": [
+                        "Incarceration"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "8. Variation in ICP of > 2 cm H2O in the hour prior to intervention.",
+                      "Observation": [
+                        "ICP"
+                      ],
+                      "Eq-Comparison": [
+                        "> 2 cm H2O"
+                      ],
+                      "Eq-Value": [
+                        "2"
+                      ],
+                      "Eq-Operator": [
+                        ">"
+                      ],
+                      "Eq-Unit": [
+                        "cm H2O"
+                      ],
+                      "Observation-Name": [
+                        "ICP"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "prior"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "hour"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- patients (adults and children)",
+                  "Encounter": [
+                    "patients"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "adults",
+                    "children"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- patients recipients in France from 2008 to 2015 of a first kidney transplant",
+                      "Encounter": [
+                        "patients"
+                      ],
+                      "Location": [
+                        "France"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "from 2008 to 2015"
+                      ],
+                      "Procedure": [
+                        "kidney transplant"
+                      ],
+                      "Eq-Value": [
+                        "2008",
+                        "2015",
+                        "first"
+                      ],
+                      "Procedure-Name": [
+                        "kidney transplant"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "heart / lung / liver donor living or deceased, non-immunized anti-HLA before the transplant",
+                          "Procedure": [
+                            "heart transplant",
+                            "lung transplant",
+                            "liver transplant"
+                          ],
+                          "Organism-Name": [
+                            "donor"
+                          ],
+                          "Polarity": [
+                            "living",
+                            "deceased"
+                          ],
+                          "Negation": [
+                            "non-immunized"
+                          ],
+                          "Modifier": [
+                            "anti-HLA"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "before the transplant"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "- patients having preserved their graft > 2 years",
+                          "Encounter": [
+                            "patients"
+                          ],
+                          "Condition": [
+                            "preserved graft"
+                          ],
+                          "Eq-Comparison": [
+                            "> 2 years"
+                          ],
+                          "Eq-Value": [
+                            "2"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "years"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- having agreed to the use for research purposes in transplantation of the remains of the DNA and serum samples taken as part of the care of which the remains are available",
+              "Assertion": [
+                "agreed"
+              ],
+              "Study": [
+                "research purposes in transplantation"
+              ],
+              "Specimen": [
+                "DNA",
+                "serum samples"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "-",
+          "Eq-Operator": [
+            "-"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "-",
+      "Eq-Operator": [
+        "-"
+      ]
+    }
+  }
+}
