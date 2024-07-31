@@ -165,7 +165,6 @@ def read_matching_txt_files(study_folder, label_folder, shot_list):
     for filename in shot_list:
         study_filepath = os.path.join(study_folder, filename)
         label_filepath = os.path.join(label_folder, filename)
-        print(study_filepath)
         if os.path.isfile(study_filepath) and os.path.isfile(label_filepath):
             study_filenames.append(f"{filename}_study")
             label_filenames.append(f"{filename}_label")

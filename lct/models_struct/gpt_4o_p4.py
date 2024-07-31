@@ -4,14 +4,33 @@ import transformers
 from helper_functions import *
 from openai import OpenAI
 
+def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
+  """Returns the number of tokens used by a list of messages."""
+  try:
+      encoding = tiktoken.encoding_for_model(model)
+  except KeyError:
+      encoding = tiktoken.get_encoding("cl100k_base")
+  if model == "gpt-3.5-turbo":  # note: future models may deviate from this
+      num_tokens = 0
+      for message in messages:
+          num_tokens += 4  # every message follows <im_start>{role/name}\n{content}<im_end>\n
+          for key, value in message.items():
+              num_tokens += len(encoding.encode(value))
+              if key == "name":  # if there's a name, the role is omitted
+                  num_tokens += -1  # role is always required and always 1 token
+      num_tokens += 2  # every reply is primed with <im_start>assistant
+      return num_tokens
+  else:
+      raise NotImplementedError(f"""num_tokens_from_messages() is not presently implemented for model {model}.""")
+
 
 batch_path = "eval_p4"
 n_prompt = 6
-n_shot = 5
+n_shot = 10
 
-# 15 shot zu viels
+# 15 shot zu viel für mini
 
-model_name = "GPT-4o mini"
+model_name = f"GPT-4o_{n_shot}_shot_random"
 
 
 client = OpenAI(
@@ -24,7 +43,6 @@ client = OpenAI(
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt2.txt")
 #command = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt2.txt")
-
 command = "Structure the eligibility criteria based on the system input in JSON and extract the entities."
 
 study_path = f"{transform_lct}/input/dataset_p4_prompt6/test/input/"
@@ -51,9 +69,17 @@ top_15_files = [
     "NCT03929328_inc.txt"
 ]
 
+
+
+
 study_folder = f"{transform_lct}/input/dataset_p4_prompt6/train/input/"
 label_folder = f"{transform_lct}/input/dataset_p4_prompt6/train/output/"
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, top_15_files)
+
+all_label_files = [f for f in os.listdir(label_folder) if f.endswith('.txt')]
+random_files = random.sample(all_label_files, n_shot)
+
+
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, random_files)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
@@ -68,24 +94,6 @@ for i in range(n_shot):
 
 first_call = True
 
-def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
-  """Returns the number of tokens used by a list of messages."""
-  try:
-      encoding = tiktoken.encoding_for_model(model)
-  except KeyError:
-      encoding = tiktoken.get_encoding("cl100k_base")
-  if model == "gpt-3.5-turbo":  # note: future models may deviate from this
-      num_tokens = 0
-      for message in messages:
-          num_tokens += 4  # every message follows <im_start>{role/name}\n{content}<im_end>\n
-          for key, value in message.items():
-              num_tokens += len(encoding.encode(value))
-              if key == "name":  # if there's a name, the role is omitted
-                  num_tokens += -1  # role is always required and always 1 token
-      num_tokens += 2  # every reply is primed with <im_start>assistant
-      return num_tokens
-  else:
-      raise NotImplementedError(f"""num_tokens_from_messages() is not presently implemented for model {model}.""")
 
 
 for file in study_files:
@@ -101,7 +109,7 @@ for file in study_files:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"} 
 
     completion = client.chat.completions.create(
-    model="gpt-4o-mini",# "gpt-4o", "gpt-3.5-turbo",
+    model="gpt-4o",# "gpt-4o", "gpt-3.5-turbo",
     messages=messages,
     temperature=0.5,
     )

@@ -1,0 +1,94 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- patients who will not want to participate to the study",
+                      "Study": [
+                        "study"
+                      ],
+                      "Negation": [
+                        "not want"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- revision surgeries",
+                  "Procedure": [
+                    "revision surgeries"
+                  ],
+                  "Procedure-Name": [
+                    "revision surgeries"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- if the patient is taking antidepressants during the last 6 months",
+                  "Drug": [
+                    "antidepressants"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "last"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Value": [
+                    "6"
+                  ],
+                  "Eq-Comparison": [
+                    "during the last 6 months"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- if the patient has a history of a disease that can affect anxiety levels",
+                  "Condition": [
+                    "disease"
+                  ],
+                  "Condition-Name": [
+                    "disease"
+                  ],
+                  "Observation": [
+                    "anxiety levels"
+                  ],
+                  "Observation-Name": [
+                    "anxiety levels"
+                  ],
+                  "Eq-Comparison": [
+                    "history"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "history"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- if patient wants to be excluded from the study",
+              "Study": [
+                "study"
+              ],
+              "Negation": [
+                "excluded"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
