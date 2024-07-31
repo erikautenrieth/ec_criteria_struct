@@ -27,7 +27,7 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 batch_path = "modelle_prompt2" 
 n_shot = 5
-model_name = "GPT-4o"
+model_name = "GPT-4o-mini"
 
 
 client = OpenAI(
@@ -106,7 +106,7 @@ for file in study_files:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"} 
 
     completion = client.chat.completions.create(
-    model="gpt-4o",      # "gpt-4o" "gpt-3.5-turbo" "gpt-4o-mini"
+    model="gpt-4o-mini",      # "gpt-4o" "gpt-3.5-turbo" "gpt-4o-mini"
     messages=messages,
     temperature=0.5,
     )
