@@ -1,0 +1,86 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient with paroxysmal/persistent/permanent atrial fibrillation",
+          "Condition": [
+            "paroxysmal atrial fibrillation",
+            "persistent atrial fibrillation",
+            "permanent atrial fibrillation"
+          ],
+          "Condition-Name": [
+            "paroxysmal atrial fibrillation",
+            "persistent atrial fibrillation",
+            "permanent atrial fibrillation"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- CHA2DS2VASc score ≥2 for male",
+              "Observation": [
+                "CHA2DS2VASc score"
+              ],
+              "Observation-Name": [
+                "CHA2DS2VASc score"
+              ],
+              "Eq-Operator": [
+                "≥"
+              ],
+              "Eq-Value": [
+                "2"
+              ],
+              "Eq-Comparison": [
+                "≥2"
+              ],
+              "Life-Stage-And-Gender": [
+                "male"
+              ]
+            },
+            "right": {
+              "raw_text": "and ≥3 for female",
+              "Observation": [
+                "CHA2DS2VASc score"
+              ],
+              "Observation-Name": [
+                "CHA2DS2VASc score"
+              ],
+              "Eq-Operator": [
+                "≥"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Comparison": [
+                "≥3"
+              ],
+              "Life-Stage-And-Gender": [
+                "female"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- Without contraindications to anticoagulation therapy",
+          "Negation": [
+            "Without"
+          ],
+          "Condition": [
+            "contraindications"
+          ],
+          "Procedure": [
+            "anticoagulation therapy"
+          ],
+          "Procedure-Name": [
+            "anticoagulation therapy"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Patient is EBV (epstein barr virus)-negative on serology.",
+                              "Condition": [
+                                "EBV",
+                                "epstein barr virus"
+                              ],
+                              "Observation": [
+                                "serology"
+                              ],
+                              "Observation-Name": [
+                                "serology"
+                              ],
+                              "Organism-Name": [
+                                "epstein barr virus"
+                              ],
+                              "Negation": [
+                                "negative"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "- Patient is HIV-positive",
+                                  "Condition": [
+                                    "HIV"
+                                  ],
+                                  "Condition-Name": [
+                                    "HIV"
+                                  ],
+                                  "Polarity": [
+                                    "positive"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or suffering from chronic viral hepatitis.",
+                                  "Condition": [
+                                    "chronic viral hepatitis"
+                                  ],
+                                  "Condition-Name": [
+                                    "chronic viral hepatitis"
+                                  ],
+                                  "Acuteness": [
+                                    "chronic"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Patient is CMV (cytomegalo virus)-negative",
+                              "Condition": [
+                                "CMV",
+                                "cytomegalo virus"
+                              ],
+                              "Organism-Name": [
+                                "cytomegalo virus"
+                              ],
+                              "Negation": [
+                                "negative"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "and receiving a kidney from a CMV-positive donor.",
+                              "Organism-Name": [
+                                "CMV"
+                              ],
+                              "Polarity": [
+                                "positive"
+                              ],
+                              "Procedure": [
+                                "kidney transplant"
+                              ],
+                              "Procedure-Name": [
+                                "kidney transplant"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Positive T-cell lymphocytotoxic cross match.",
+                      "Observation": [
+                        "T-cell lymphocytotoxic cross match"
+                      ],
+                      "Observation-Name": [
+                        "T-cell lymphocytotoxic cross match"
+                      ],
+                      "Polarity": [
+                        "Positive"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patient with prior kidney transplant",
+                      "Procedure": [
+                        "kidney transplant"
+                      ],
+                      "Procedure-Name": [
+                        "kidney transplant"
+                      ],
+                      "Eq-Comparison": [
+                        "prior"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "prior"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or non-renal solid organ transplant.",
+                      "Procedure": [
+                        "solid organ transplant"
+                      ],
+                      "Procedure-Name": [
+                        "solid organ transplant"
+                      ],
+                      "Modifier": [
+                        "non-renal"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patient has a known contraindication to any of the protocol-specified treatments.",
+              "Contraindication": [
+                "known contraindication"
+              ],
+              "Condition": [
+                "contraindication"
+              ],
+              "Condition-Name": [
+                "contraindication"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patient had been diagnosed with a malignancy within 5 years prior to study entry, excluding non-metastatic basal or squamous cell carcinoma of the skin.",
+          "Condition": [
+            "malignancy",
+            "basal cell carcinoma",
+            "squamous cell carcinoma"
+          ],
+          "Condition-Name": [
+            "malignancy",
+            "basal cell carcinoma",
+            "squamous cell carcinoma"
+          ],
+          "Eq-Comparison": [
+            "within 5 years",
+            "prior"
+          ],
+          "Eq-Temporal-Period": [
+            "within",
+            "prior"
+          ],
+          "Eq-Value": [
+            "5"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Exception": [
+            "excluding"
+          ],
+          "Modifier": [
+            "non-metastatic",
+            "of the skin"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Female patients who are breast-feeding.",
+          "Life-Stage-And-Gender": [
+            "Female"
+          ],
+          "Condition": [
+            "breast-feeding"
+          ],
+          "Condition-Name": [
+            "breast-feeding"
+          ]
+        },
+        "right": {
+          "raw_text": "- Female patients with a positive pregnancy test.",
+          "Life-Stage-And-Gender": [
+            "Female"
+          ],
+          "Observation": [
+            "pregnancy test"
+          ],
+          "Observation-Name": [
+            "pregnancy test"
+          ],
+          "Polarity": [
+            "positive"
+          ]
+        }
+      }
+    }
+  }
+}

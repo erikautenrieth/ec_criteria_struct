@@ -1,0 +1,83 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Present a medical diagnosis of injury or illness",
+              "Condition": [
+                "injury",
+                "illness"
+              ],
+              "Condition-Name": [
+                "injury",
+                "illness"
+              ],
+              "Observation": [
+                "medical diagnosis"
+              ],
+              "Observation-Name": [
+                "medical diagnosis"
+              ]
+            },
+            "right": {
+              "raw_text": "- Have suffered a knee injury in the 6 months prior to the study",
+              "Condition": [
+                "knee injury"
+              ],
+              "Condition-Name": [
+                "knee injury"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Value": [
+                "6"
+              ],
+              "Eq-Comparison": [
+                "in the 6 months prior"
+              ],
+              "Study": [
+                "study"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Doing some pharmacological or physiotherapy treatment external to the study",
+          "Procedure": [
+            "pharmacological treatment",
+            "physiotherapy treatment"
+          ],
+          "Procedure-Name": [
+            "pharmacological treatment",
+            "physiotherapy treatment"
+          ],
+          "Other": [
+            "external"
+          ],
+          "Study": [
+            "study"
+          ]
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- Not signed the informed consent document.",
+          "Negation": [
+            "Not"
+          ],
+          "Observation": [
+            "informed consent document"
+          ],
+          "Observation-Name": [
+            "informed consent document"
+          ]
+        }
+      }
+    }
+  }
+}

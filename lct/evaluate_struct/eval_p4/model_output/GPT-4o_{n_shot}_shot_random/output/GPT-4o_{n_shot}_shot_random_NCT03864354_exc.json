@@ -1,0 +1,102 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Current smoker",
+              "Observation": [
+                "smoker"
+              ],
+              "Observation-Name": [
+                "smoker"
+              ],
+              "Modifier": [
+                "Current"
+              ]
+            },
+            "right": {
+              "raw_text": "- Diagnosed with any other respiratory disease besides asthma",
+              "Condition": [
+                "respiratory disease"
+              ],
+              "Condition-Name": [
+                "respiratory disease"
+              ],
+              "Other": [
+                "besides"
+              ],
+              "Condition-Type": [
+                "any other"
+              ],
+              "Modifier": [
+                "respiratory"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Receiving OMM from a licensed physician",
+              "Procedure": [
+                "OMM"
+              ],
+              "Provider": [
+                "licensed physician"
+              ],
+              "Eq-Temporal-Period": [
+                "Receiving"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "chiropractic treatment",
+                  "Procedure": [
+                    "chiropractic treatment"
+                  ],
+                  "Procedure-Name": [
+                    "chiropractic treatment"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or massage therapy for 30 days prior to",
+                      "Procedure": [
+                        "massage therapy"
+                      ],
+                      "Procedure-Name": [
+                        "massage therapy"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "days"
+                      ],
+                      "Eq-Value": [
+                        "30"
+                      ],
+                      "Eq-Comparison": [
+                        "for 30 days prior to"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and during the study",
+                      "Study": [
+                        "study"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "during"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

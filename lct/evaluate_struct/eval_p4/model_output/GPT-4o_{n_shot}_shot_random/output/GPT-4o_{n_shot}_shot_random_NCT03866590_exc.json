@@ -1,0 +1,165 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Inability to provide informed consent",
+                  "Negation": [
+                    "Inability"
+                  ],
+                  "Observation": [
+                    "informed consent"
+                  ],
+                  "Observation-Name": [
+                    "informed consent"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- The patient does not suffer from chronic anaemia",
+                      "Negation": [
+                        "does not"
+                      ],
+                      "Condition": [
+                        "chronic anaemia"
+                      ],
+                      "Condition-Name": [
+                        "chronic anaemia"
+                      ],
+                      "Acuteness": [
+                        "chronic"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or cholelithiasis",
+                          "Negation": [
+                            "does not"
+                          ],
+                          "Condition": [
+                            "cholelithiasis"
+                          ],
+                          "Condition-Name": [
+                            "cholelithiasis"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or cholecystitis",
+                          "Negation": [
+                            "does not"
+                          ],
+                          "Condition": [
+                            "cholecystitis"
+                          ],
+                          "Condition-Name": [
+                            "cholecystitis"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- The aetiology of chronic anaemia or cholelithiasis or cholecystitis is determined",
+              "Condition": [
+                "chronic anaemia",
+                "cholelithiasis",
+                "cholecystitis"
+              ],
+              "Condition-Name": [
+                "chronic anaemia",
+                "cholelithiasis",
+                "cholecystitis"
+              ],
+              "Acuteness": [
+                "chronic"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "and is not due to PKD",
+                  "Negation": [
+                    "is not"
+                  ],
+                  "Condition": [
+                    "PKD"
+                  ],
+                  "Condition-Name": [
+                    "PKD"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- The participant is younger than 14 years",
+              "Eq-Operator": [
+                "younger than"
+              ],
+              "Eq-Value": [
+                "14"
+              ],
+              "Eq-Comparison": [
+                "younger than 14 years"
+              ],
+              "Age": [
+                "years"
+              ]
+            },
+            "right": {
+              "raw_text": "or older than 25 years old",
+              "Eq-Operator": [
+                "older than"
+              ],
+              "Eq-Value": [
+                "25"
+              ],
+              "Eq-Comparison": [
+                "older than 25 years"
+              ],
+              "Age": [
+                "years old"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Previously enrolled in the study",
+          "Study": [
+            "study"
+          ],
+          "Eq-Comparison": [
+            "Previously"
+          ],
+          "Eq-Temporal-Period": [
+            "Previously"
+          ]
+        }
+      }
+    }
+  }
+}
