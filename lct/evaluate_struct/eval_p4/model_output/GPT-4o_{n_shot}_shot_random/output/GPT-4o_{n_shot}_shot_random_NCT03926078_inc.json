@@ -1,0 +1,58 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- All patients that visit the Zuyderland Medical Centre outpatient clinic for evaluation of their pectus excavatum.",
+      "Location": [
+        "Zuyderland Medical Centre",
+        "outpatient clinic"
+      ],
+      "Encounter": [
+        "visit"
+      ],
+      "Condition": [
+        "pectus excavatum"
+      ],
+      "Condition-Name": [
+        "pectus excavatum"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- No age restrictions were imposed,",
+              "Negation": [
+                "No"
+              ],
+              "Age": [
+                "age"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "however, to be eligible, it was mandatory to be able to stand still in an upright position for 60 seconds.",
+          "Eq-Temporal-Unit": [
+            "seconds"
+          ],
+          "Eq-Value": [
+            "60"
+          ],
+          "Observation": [
+            "stand still in an upright position"
+          ],
+          "Observation-Name": [
+            "stand still in an upright position"
+          ],
+          "Stability": [
+            "stand still"
+          ],
+          "Assertion": [
+            "mandatory"
+          ]
+        }
+      }
+    }
+  }
+}

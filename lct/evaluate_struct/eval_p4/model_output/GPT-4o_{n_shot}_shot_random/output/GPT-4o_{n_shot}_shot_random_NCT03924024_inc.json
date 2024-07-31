@@ -1,0 +1,277 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "- Male",
+                                  "Life-Stage-And-Gender": [
+                                    "Male"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or female, 18 to 65 years of age.",
+                                  "Life-Stage-And-Gender": [
+                                    "female"
+                                  ],
+                                  "Age": [
+                                    "age"
+                                  ],
+                                  "Eq-Operator": [
+                                    "to"
+                                  ],
+                                  "Eq-Value": [
+                                    "18",
+                                    "65"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "18 to 65 years"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "years"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "- Able to provide informed consent.",
+                              "Study": [
+                                "informed consent"
+                              ],
+                              "Assertion": [
+                                "Able to provide"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Present to Stanford Emergency Department as a trauma with a major operative lower extremity injury",
+                          "Location": [
+                            "Stanford Emergency Department"
+                          ],
+                          "Condition": [
+                            "trauma",
+                            "major operative lower extremity injury"
+                          ],
+                          "Condition-Name": [
+                            "trauma",
+                            "major operative lower extremity injury"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Glasgow coma scale of 15 within 24 hours after admission or extubation",
+                      "Observation": [
+                        "Glasgow coma scale"
+                      ],
+                      "Observation-Name": [
+                        "Glasgow coma scale"
+                      ],
+                      "Eq-Value": [
+                        "15",
+                        "24"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "hours"
+                      ],
+                      "Eq-Comparison": [
+                        "within 24 hours"
+                      ],
+                      "Encounter": [
+                        "admission",
+                        "extubation"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Negative urinary toxicology screen for illicit substances;",
+                  "Observation": [
+                    "urinary toxicology screen"
+                  ],
+                  "Observation-Name": [
+                    "urinary toxicology screen"
+                  ],
+                  "Polarity": [
+                    "Negative"
+                  ],
+                  "Condition": [
+                    "illicit substances"
+                  ],
+                  "Condition-Name": [
+                    "illicit substances"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Negative pregnancy test if female and less than 60 y/o;",
+                  "Observation": [
+                    "pregnancy test"
+                  ],
+                  "Observation-Name": [
+                    "pregnancy test"
+                  ],
+                  "Polarity": [
+                    "Negative"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "female"
+                  ],
+                  "Eq-Operator": [
+                    "less than"
+                  ],
+                  "Age": [
+                    "y/o"
+                  ],
+                  "Eq-Value": [
+                    "60"
+                  ],
+                  "Eq-Comparison": [
+                    "less than 60 y/o"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- No suspicion for a head injury",
+                          "Condition": [
+                            "head injury"
+                          ],
+                          "Condition-Name": [
+                            "head injury"
+                          ],
+                          "Negation": [
+                            "No"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "and/or negative head CT scan for intracranial hemorrhage or injury based on standard of care",
+                          "Observation": [
+                            "head CT scan",
+                            "intracranial hemorrhage",
+                            "injury"
+                          ],
+                          "Observation-Name": [
+                            "head CT scan",
+                            "intracranial hemorrhage",
+                            "injury"
+                          ],
+                          "Polarity": [
+                            "negative"
+                          ],
+                          "Condition": [
+                            "intracranial hemorrhage"
+                          ],
+                          "Condition-Name": [
+                            "intracranial hemorrhage"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- No history of seizure disorder or other neurological disorders.",
+              "Condition": [
+                "seizure disorder",
+                "neurological disorders"
+              ],
+              "Condition-Name": [
+                "seizure disorder",
+                "neurological disorders"
+              ],
+              "Negation": [
+                "No"
+              ],
+              "Eq-Comparison": [
+                "history"
+              ],
+              "Eq-Temporal-Period": [
+                "history"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- All patients included must screen positive for PHQ-9 score >4 (positive symptoms of depression)",
+          "Observation": [
+            "PHQ-9 score",
+            "symptoms of depression"
+          ],
+          "Observation-Name": [
+            "PHQ-9 score",
+            "symptoms of depression"
+          ],
+          "Condition": [
+            "depression"
+          ],
+          "Condition-Name": [
+            "depression"
+          ],
+          "Polarity": [
+            "positive"
+          ],
+          "Eq-Operator": [
+            ">"
+          ],
+          "Eq-Value": [
+            "4"
+          ],
+          "Eq-Comparison": [
+            ">4"
+          ]
+        },
+        "right": {
+          "raw_text": "and CES-T score <36 (poor coping self-efficacy).",
+          "Observation": [
+            "CES-T score",
+            "coping self-efficacy"
+          ],
+          "Observation-Name": [
+            "CES-T score",
+            "coping self-efficacy"
+          ],
+          "Polarity": [
+            "poor"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "36"
+          ],
+          "Eq-Comparison": [
+            "<36"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Age <40",
+          "Age": [
+            "Age"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "40"
+          ],
+          "Eq-Comparison": [
+            "<40"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Attended a pulmonary rehabilitation programme",
+              "Encounter": [
+                "pulmonary rehabilitation programme"
+              ],
+              "Eq-Comparison": [
+                "Attended"
+              ],
+              "Eq-Temporal-Period": [
+                "Attended"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or participating in a physical activity intervention study in current time",
+                  "Study": [
+                    "physical activity intervention study"
+                  ],
+                  "Eq-Comparison": [
+                    "participating"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "current time"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or in the last 6 months.",
+                  "Eq-Temporal-Period": [
+                    "last"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Value": [
+                    "6"
+                  ],
+                  "Eq-Comparison": [
+                    "in the last 6 months"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Any other significant diseases or disorders that are a contraindication to be enrolled in a pulmonary rehabilitation programme.",
+      "Condition": [
+        "significant diseases",
+        "disorders"
+      ],
+      "Condition-Name": [
+        "significant diseases",
+        "disorders"
+      ],
+      "Contraindication": [
+        "contraindication"
+      ],
+      "Encounter": [
+        "pulmonary rehabilitation programme"
+      ]
+    }
+  }
+}

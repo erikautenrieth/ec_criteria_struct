@@ -1,0 +1,77 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- all consecutive patients from SERD of 18 yrs or older",
+              "Location": [
+                "SERD"
+              ],
+              "Age": [
+                "18 yrs or older"
+              ],
+              "Eq-Value": [
+                "18"
+              ],
+              "Eq-Operator": [
+                "or older"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "either naive",
+                  "Polarity": [
+                    "naive"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or previously treated",
+                  "Eq-Comparison": [
+                    "previously"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "previously"
+                  ],
+                  "Stability": [
+                    "treated"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "including HBsAg positive",
+              "Observation": [
+                "HBsAg"
+              ],
+              "Observation-Name": [
+                "HBsAg"
+              ],
+              "Polarity": [
+                "positive"
+              ]
+            },
+            "right": {
+              "raw_text": "and HIV positive.",
+              "Observation": [
+                "HIV"
+              ],
+              "Observation-Name": [
+                "HIV"
+              ],
+              "Polarity": [
+                "positive"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
