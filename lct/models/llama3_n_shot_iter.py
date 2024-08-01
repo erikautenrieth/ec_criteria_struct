@@ -43,22 +43,20 @@ pipeline = transformers.pipeline(
             model_kwargs={"torch_dtype": torch.bfloat16},
             device_map="auto", 
         )
+messages = []
+messages.append({"role": "system", "content": f"{model_desc}"})
+
+for i in range(n_shot):
+    messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
+    messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
-for i in np.arange(16, 25):
-    messages = []
-    messages.append({"role": "system", "content": f"{model_desc}"})
-
-    for i in range(n_shot):
-        messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
-        messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
-
+for i in np.arange(0, 10):
     model_name = f"Llama-3-8B"
     output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_max_v{i}/output/"
     os.makedirs(output_path, exist_ok=True)
 
     first_call = True
-
     for file in study_files:
         file_name = file.split(".")[0]
         print("File:", file_name, "\n")
