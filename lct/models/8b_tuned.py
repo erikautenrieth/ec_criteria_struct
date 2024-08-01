@@ -13,8 +13,8 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 batch_path = "lora_8b_prompt2"
 
 
-model_id = "tuned_models_8b/paper/llama3_8b_Lora_gemma_paper"  # baseline/llama3_8b_Lora_baseline
-model_name = "EP10_gemma7b_paper"
+model_id = "tuned_models_8b/llama3_8b_Lora_ep10_r128_a256_b182"  # baseline/llama3_8b_Lora_baseline
+model_name = "llama3_8b_Lora_ep10_r128_a256_b182"
 
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 
