@@ -10,4 +10,4 @@
 
 module load cuda
 
-python 8b_tuned_iter.py    # 8b_tuned.py  
+python 8b_tuned.py    # 8b_tuned.py  
