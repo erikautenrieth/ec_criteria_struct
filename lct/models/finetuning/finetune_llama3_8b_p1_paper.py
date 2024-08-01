@@ -13,7 +13,6 @@ if torch.cuda.device_count() > 1:
 
 a = 256
 r = 128
-epoch = 10
 output_dir  = "outputs/outputs_8b_4"
 os.makedirs(output_dir, exist_ok=True)
 
@@ -37,9 +36,9 @@ model = FastLanguageModel.get_peft_model(
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = a, # 256 (default),
-    lora_dropout=0.05, # 0.05 (default)
+    lora_dropout=0, # 0.05 (default)
     bias = "none",    # Supports any, but = "none" is optimized
-    use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context  # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!#
+    use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context  # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
     random_state = 3407,
     use_rslora = True,  # We support rank stabilized LoRA
     loftq_config = None, # And LoftQ
@@ -96,12 +95,15 @@ trainer = SFTTrainer(
     args = TrainingArguments(
         per_device_train_batch_size = 1,  
         gradient_accumulation_steps = 8,  
+        per_device_eval_batch_size = 4,   
         num_train_epochs = 3,  
-        warmup_ratio = 0.03,  # 0.1
-        learning_rate = 2e-4, # 5e-5
+        warmup_ratio = 0.03, 
+        learning_rate = 2e-4, 
         fp16 = not torch.cuda.is_bf16_supported(),
         bf16 = torch.cuda.is_bf16_supported(),
-        optim = "paged_adamw_32bit",
+        optim = "adamw_8bit",
+        weight_decay = 0.05,  
+        lr_scheduler_type = "linear", 
         seed = 42, 
         output_dir = output_dir,
         logging_steps = 50,  
@@ -112,12 +114,12 @@ trainer = SFTTrainer(
         load_best_model_at_end = True,
         metric_for_best_model = "eval_loss", 
         greater_is_better = False,  
-        group_by_length = True,  
         gradient_checkpointing = True,  
     ),
 )
 
 
+#@title Show current memory stats
 gpu_stats = torch.cuda.get_device_properties(0)
 start_gpu_memory = round(torch.cuda.max_memory_reserved() / 1024 / 1024 / 1024, 3)
 max_memory = round(gpu_stats.total_memory / 1024 / 1024 / 1024, 3)
@@ -138,7 +140,7 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_gemma7b_paper")
+model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}_a{a}")
 
 
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
