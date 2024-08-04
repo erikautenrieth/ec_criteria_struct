@@ -1,0 +1,111 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "- 1.Histologically confirmed pancreatic adenocarcinoma 2.Locally advanced",
+      "Procedure": [
+        "Histologically"
+      ],
+      "Condition": [
+        "pancreatic adenocarcinoma"
+      ],
+      "Modifier": [
+        "Locally advanced"
+      ],
+      "Procedure-Name": [
+        "Histologically"
+      ],
+      "Condition-Name": [
+        "pancreatic adenocarcinoma"
+      ],
+      "Eq-Value": [
+        "1"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "or metastatic PC 3.Chemotherapy-",
+          "Modifier": [
+            "metastatic"
+          ],
+          "Procedure": [
+            "Chemotherapy"
+          ],
+          "Other": [
+            "other"
+          ],
+          "Condition": [
+            "PC"
+          ],
+          "Condition-Name": [
+            "PC"
+          ],
+          "Procedure-Name": [
+            "Chemotherapy"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "naïve 4.ECOG performance status of 0 or 1 5. An adequate bone marrow,",
+                  "Observation": [
+                    "ECOG performance status"
+                  ],
+                  "Eq-Comparison": [
+                    "0 or 1"
+                  ],
+                  "Modifier": [
+                    "bone marrow"
+                  ],
+                  "Observation-Name": [
+                    "ECOG performance status"
+                  ],
+                  "Eq-Value": [
+                    "0",
+                    "1"
+                  ],
+                  "Negation": [
+                    "naïve"
+                  ],
+                  "Polarity": [
+                    "adequate"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "liver function",
+                      "Modifier": [
+                        "liver"
+                      ],
+                      "Condition": [
+                        "function"
+                      ],
+                      "Condition-Name": [
+                        "function"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and kidney function",
+                      "Condition": [
+                        "function"
+                      ],
+                      "Condition-Name": [
+                        "function"
+                      ],
+                      "Modifier": [
+                        "kidney"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
