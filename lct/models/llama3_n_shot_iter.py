@@ -51,7 +51,7 @@ for i in range(n_shot):
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
-for i in np.arange(7, 10):
+for i in np.arange(20, 25):
     model_name = f"Llama-3-8B"
     output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot_max_v{i}/output/"
     os.makedirs(output_path, exist_ok=True)
