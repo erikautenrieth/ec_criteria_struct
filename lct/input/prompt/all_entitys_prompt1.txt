@@ -38,11 +38,9 @@ Provide a JSON response based on the following instructions:
 3. Sequence and structure:
 - AND/OR always start with "left" and "right" branches
 - NOT always starts with a "left" branch
-- A "left" or "right" key is followed by either:
-- Another operator (AND, OR, NOT)
-- An object with "raw_text" (and optional additional fields)
+- A "left" or "right" key is followed by either: another operator (AND, OR, NOT) or an object with "raw_text" (and optional additional fields)
 - "raw_text" fields contain the actual text of the criterion. The raw text must always be transferred in full.
-- Additional fields such as "Drug", "Condition", "Observation", "Age" ... can appear next to "raw_text" to categorise specific terms.
+- Additional fields such as "Drug", "Condition", "Observation" or "Age" can appear next to "raw_text" to categorise specific terms.
 
 4. Extract the following entities from the raw text and include them in the JSON object:
 Nodes could include attributes such as:
