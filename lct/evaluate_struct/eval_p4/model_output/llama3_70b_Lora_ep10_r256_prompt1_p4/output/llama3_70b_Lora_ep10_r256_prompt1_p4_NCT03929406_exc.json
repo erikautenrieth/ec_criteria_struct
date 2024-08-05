@@ -1,0 +1,108 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patient not eligible for deep brain stimulation surgery",
+                  "Procedure": [
+                    "deep brain stimulation surgery"
+                  ],
+                  "Procedure-Name": [
+                    "deep brain stimulation surgery"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Negation": [
+                    "not"
+                  ],
+                  "Assertion": [
+                    "eligible for"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Pregnant women",
+                      "Condition": [
+                        "Pregnant"
+                      ],
+                      "Condition-Name": [
+                        "Pregnant"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "women"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or nursing mothers",
+                      "Condition": [
+                        "nursing"
+                      ],
+                      "Condition-Name": [
+                        "nursing"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "mothers"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Persons deprived of liberty by judicial",
+                  "Observation": [
+                    "deprived of liberty"
+                  ],
+                  "Observation-Name": [
+                    "deprived of liberty"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Modifier": [
+                    "judicial"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or administrative decision",
+                  "Modifier": [
+                    "administrative"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Persons unable to express their consent or legally protected",
+          "Eq-Operator": [
+            "-"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Persons in period of disqualification for another interventional research",
+      "Eq-Operator": [
+        "-"
+      ],
+      "Study": [
+        "interventional"
+      ],
+      "Other": [
+        "another"
+      ]
+    }
+  }
+}

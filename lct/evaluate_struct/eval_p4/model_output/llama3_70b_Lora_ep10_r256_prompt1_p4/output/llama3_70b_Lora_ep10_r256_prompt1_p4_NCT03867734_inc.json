@@ -1,0 +1,83 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "- Persons diagnosed with pharyngeal gonorrhea",
+      "Condition": [
+        "gonorrhea"
+      ],
+      "Condition-Name": [
+        "gonorrhea"
+      ],
+      "Modifier": [
+        "pharyngeal"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "or gonococcal urethritis",
+          "Condition": [
+            "gonococcal urethritis"
+          ],
+          "Condition-Name": [
+            "gonococcal urethritis"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "who are undergoing pharyngeal gonorrhea testing,",
+              "Eq-Comparison": [
+                "undergoing"
+              ],
+              "Eq-Temporal-Period": [
+                "undergoing"
+              ],
+              "Condition": [
+                "gonorrhea"
+              ],
+              "Condition-Name": [
+                "gonorrhea"
+              ],
+              "Procedure": [
+                "testing"
+              ],
+              "Procedure-Name": [
+                "testing"
+              ],
+              "Modifier": [
+                "pharyngeal"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "who are"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not yet treated.",
+                      "Negation": [
+                        "not"
+                      ],
+                      "Eq-Comparison": [
+                        "yet"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "yet"
+                      ],
+                      "Procedure": [
+                        "treated"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

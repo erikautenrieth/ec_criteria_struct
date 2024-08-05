@@ -1,0 +1,103 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. Patients with recent stroke/TIA",
+          "Condition": [
+            "stroke",
+            "TIA"
+          ],
+          "Condition-Name": [
+            "stroke",
+            "TIA"
+          ],
+          "Eq-Comparison": [
+            "recent"
+          ],
+          "Eq-Temporal-Period": [
+            "recent"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "and severe stenosis of intracranial ICA",
+              "Condition": [
+                "stenosis"
+              ],
+              "Condition-Name": [
+                "stenosis"
+              ],
+              "Modifier": [
+                "intracranial ICA"
+              ],
+              "Severity": [
+                "severe"
+              ]
+            },
+            "right": {
+              "raw_text": "and MCA and impaired CVR within previous three months but not before 3 weeks after acute stroke. This is to differentiate between patients with a long-standing fixed-stenosis from patients with partially recanalized intracranial artery (masquerading as severe stenosis).",
+              "Condition": [
+                "stroke",
+                "stenosis",
+                "impaired CVR",
+                "recanalized intracranial artery"
+              ],
+              "Condition-Name": [
+                "stroke",
+                "stenosis",
+                "impaired CVR",
+                "recanalized intracranial artery"
+              ],
+              "Modifier": [
+                "MCA",
+                "intracranial ICA",
+                "fixed-stenosis"
+              ],
+              "Eq-Comparison": [
+                "previous three months",
+                "3 weeks"
+              ],
+              "Eq-Temporal-Period": [
+                "previous"
+              ],
+              "Eq-Value": [
+                "three",
+                "3"
+              ],
+              "Eq-Temporal-Unit": [
+                "months",
+                "weeks"
+              ],
+              "Severity": [
+                "severe"
+              ],
+              "Acuteness": [
+                "acute"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "2. Age >21 years",
+      "Age": [
+        "Age"
+      ],
+      "Eq-Comparison": [
+        ">21 years"
+      ],
+      "Eq-Operator": [
+        ">"
+      ],
+      "Eq-Value": [
+        "21"
+      ],
+      "Eq-Temporal-Unit": [
+        "years"
+      ]
+    }
+  }
+}

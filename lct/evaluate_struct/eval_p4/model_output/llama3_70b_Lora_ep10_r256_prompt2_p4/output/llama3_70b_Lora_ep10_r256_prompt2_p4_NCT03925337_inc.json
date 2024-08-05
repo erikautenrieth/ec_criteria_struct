@@ -1,0 +1,105 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients age: ≥ 22 years",
+              "Eq-Operator": [
+                "≥"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Age": [
+                "age"
+              ],
+              "Eq-Value": [
+                "22"
+              ],
+              "Eq-Comparison": [
+                "≥ 22 years"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patients presenting for routine colonoscopy for screening",
+                  "Procedure": [
+                    "colonoscopy"
+                  ],
+                  "Procedure-Name": [
+                    "colonoscopy"
+                  ],
+                  "Modifier": [
+                    "screening",
+                    "routine"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and/or surveillance purposes.",
+                  "Modifier": [
+                    "surveillance"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Willingness to undergo two withdrawals with",
+              "Procedure": [
+                "withdrawals"
+              ],
+              "Procedure-Name": [
+                "withdrawals"
+              ],
+              "Eq-Comparison": [
+                "two"
+              ],
+              "Eq-Value": [
+                "two"
+              ],
+              "Assertion": [
+                "Willingness to undergo"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "and without the use of computer-aided software while undergoing conventional colonoscopy with sedation",
+                  "Procedure": [
+                    "colonoscopy",
+                    "sedation"
+                  ],
+                  "Procedure-Name": [
+                    "colonoscopy",
+                    "sedation"
+                  ],
+                  "Modifier": [
+                    "conventional"
+                  ],
+                  "Negation": [
+                    "without"
+                  ],
+                  "Procedure-Name": [
+                    "colonoscopy"
+                  ],
+                  "Provider": [
+                    "computer-aided software"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Ability to provide written, informed consent and understand the responsibilities of trial participation"
+    }
+  }
+}

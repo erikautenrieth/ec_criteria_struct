@@ -1,0 +1,113 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Male",
+                      "Life-Stage-And-Gender": [
+                        "Male"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or female ≥ 18 years",
+                      "Eq-Operator": [
+                        "≥"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "years"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "female"
+                      ],
+                      "Eq-Value": [
+                        "18"
+                      ],
+                      "Eq-Comparison": [
+                        "≥ 18 years"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patient for whom a vascular surgery is programmed,",
+                      "Procedure": [
+                        "vascular surgery"
+                      ],
+                      "Procedure-Name": [
+                        "vascular surgery"
+                      ],
+                      "Eq-Comparison": [
+                        "programmed"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "programmed"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "and whose nature allows obtaining of arterial segment",
+                          "Observation": [
+                            "arterial segments"
+                          ],
+                          "Observation-Name": [
+                            "arterial segments"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "without any harm for the health of the patient",
+                              "Negation": [
+                                "without"
+                              ],
+                              "Stability": [
+                                "harm"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patient for whom a blood sample is planned on the day of the procedure",
+              "Eq-Comparison": [
+                "planned"
+              ],
+              "Eq-Temporal-Period": [
+                "planned"
+              ],
+              "Observation": [
+                "blood samples"
+              ],
+              "Observation-Name": [
+                "blood samples"
+              ],
+              "Procedure": [
+                "procedure"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Persons who has received complete information on the organization of the research and who has not objected to his participation and the exploitation of his data"
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Compulsory affiliation to social security"
+    }
+  }
+}

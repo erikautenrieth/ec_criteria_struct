@@ -1,0 +1,73 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Treatment-seeking cigarette smoker",
+          "Procedure": [
+            "Treatment"
+          ],
+          "Observation": [
+            "smoker"
+          ],
+          "Observation-Name": [
+            "smoker"
+          ],
+          "Drug": [
+            "cigarette"
+          ],
+          "Drug-Name": [
+            "cigarette"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Assertion": [
+            "seeking"
+          ]
+        },
+        "right": {
+          "raw_text": "- Meet DSM-IV criteria for nicotine dependence",
+          "Condition": [
+            "nicotine dependence"
+          ],
+          "Condition-Name": [
+            "nicotine dependence"
+          ],
+          "Eq-Operator": [
+            "-"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Negative result on urine test for drug use during screening",
+              "Observation": [
+                "urine test"
+              ],
+              "Observation-Name": [
+                "urine test"
+              ],
+              "Negation": [
+                "Negative"
+              ],
+              "Drug": [
+                "drug"
+              ],
+              "Study": [
+                "screening"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

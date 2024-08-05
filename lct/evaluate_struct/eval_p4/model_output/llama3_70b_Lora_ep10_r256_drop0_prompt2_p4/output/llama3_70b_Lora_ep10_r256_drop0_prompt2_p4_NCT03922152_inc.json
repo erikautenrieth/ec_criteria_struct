@@ -1,0 +1,152 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- histologically proven advanced esophageal cancer",
+              "Condition": [
+                "cancer"
+              ],
+              "Condition-Name": [
+                "cancer"
+              ],
+              "Modifier": [
+                "esophageal"
+              ],
+              "Severity": [
+                "advanced"
+              ],
+              "Procedure": [
+                "histologically"
+              ],
+              "Procedure-Name": [
+                "histologically"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- excluded from curative therapy because of disease stage",
+                  "Procedure": [
+                    "curative therapy"
+                  ],
+                  "Procedure-Name": [
+                    "curative therapy"
+                  ],
+                  "Condition": [
+                    "disease"
+                  ],
+                  "Condition-Name": [
+                    "disease"
+                  ],
+                  "Eq-Comparison": [
+                    "stage"
+                  ],
+                  "Eq-Unit": [
+                    "stage"
+                  ],
+                  "Exception": [
+                    "excluded"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "and/or presence of multiple comorbidities",
+                      "Condition": [
+                        "comorbidities"
+                      ],
+                      "Condition-Name": [
+                        "comorbidities"
+                      ],
+                      "Eq-Comparison": [
+                        "multiple"
+                      ],
+                      "Eq-Operator": [
+                        "multiple"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "and/or poor performance status",
+                          "Observation": [
+                            "performance status"
+                          ],
+                          "Observation-Name": [
+                            "performance status"
+                          ],
+                          "Polarity": [
+                            "poor"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "because of age > 18 years",
+                          "Eq-Operator": [
+                            ">"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "years"
+                          ],
+                          "Age": [
+                            "age"
+                          ],
+                          "Eq-Value": [
+                            "18"
+                          ],
+                          "Eq-Comparison": [
+                            "> 18 years"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Eastern Cooperative Oncology Group (ECOG) <3",
+          "Observation": [
+            "Eastern Cooperative Oncology Group",
+            "ECOG"
+          ],
+          "Observation-Name": [
+            "Eastern Cooperative Oncology Group",
+            "ECOG"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "3"
+          ],
+          "Eq-Comparison": [
+            "<3"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "because of age > 18 years",
+      "Eq-Operator": [
+        ">"
+      ],
+      "Eq-Temporal-Unit": [
+        "years"
+      ],
+      "Age": [
+        "age"
+      ],
+      "Eq-Value": [
+        "18"
+      ],
+      "Eq-Comparison": [
+        "> 18 years"
+      ]
+    }
+  }
+}

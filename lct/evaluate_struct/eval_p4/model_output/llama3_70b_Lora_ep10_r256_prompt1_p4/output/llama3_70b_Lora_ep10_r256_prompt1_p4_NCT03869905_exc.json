@@ -1,0 +1,169 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- No history or diagnosis of any of the following conditions: Chron's disease, bleeding disorders, gastrointestinal",
+          "Eq-Comparison": [
+            "history"
+          ],
+          "Condition": [
+            "Chron's disease",
+            "bleeding disorders",
+            "gastrointestinal"
+          ],
+          "Eq-Temporal-Period": [
+            "history"
+          ],
+          "Condition-Name": [
+            "Chron's disease",
+            "bleeding disorders",
+            "gastrointestinal"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or colonic malignancy, Kidney disease, including kidney \"stones\"",
+              "Condition": [
+                "malignancy",
+                "Kidney disease",
+                "kidney \"stones\""
+              ],
+              "Condition-Name": [
+                "malignancy",
+                "Kidney disease",
+                "kidney \"stones\""
+              ],
+              "Modifier": [
+                "colonic"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or hypercalcemia, Coagulopathy/",
+                  "Condition": [
+                    "hypercalcemia",
+                    "Coagulopathy"
+                  ],
+                  "Condition-Name": [
+                    "hypercalcemia",
+                    "Coagulopathy"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "hereditary hemorrhagic disorders/",
+                      "Condition": [
+                        "hereditary hemorrhagic disorders"
+                      ],
+                      "Condition-Name": [
+                        "hereditary hemorrhagic disorders"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or receiving therapeutic doses of Coumadin",
+                          "Eq-Comparison": [
+                            "receiving"
+                          ],
+                          "Drug": [
+                            "Coumadin"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "receiving"
+                          ],
+                          "Drug-Name": [
+                            "Coumadin"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or heparin.",
+                          "Drug": [
+                            "heparin"
+                          ],
+                          "Drug-Name": [
+                            "heparin"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Ingested certain medications (Calcium,",
+          "Drug": [
+            "medications",
+            "Calcium"
+          ],
+          "Drug-Name": [
+            "Calcium"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Vitamin D,",
+              "Drug": [
+                "Vitamin D"
+              ],
+              "Drug-Name": [
+                "Vitamin D"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "fiber supplements",
+                  "Drug": [
+                    "fiber supplements"
+                  ],
+                  "Drug-Name": [
+                    "fiber supplements"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and Non-steroidal anti-inflammatory drugs - NSAIDs) within 30 days of study start.",
+                  "Eq-Comparison": [
+                    "within 30 days"
+                  ],
+                  "Drug": [
+                    "Non-steroidal anti-inflammatory drugs",
+                    "NSAIDs"
+                  ],
+                  "Eq-Operator": [
+                    "within"
+                  ],
+                  "Eq-Value": [
+                    "30"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "days"
+                  ],
+                  "Drug-Name": [
+                    "Non-steroidal anti-inflammatory drugs",
+                    "NSAIDs"
+                  ],
+                  "Study": [
+                    "study"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

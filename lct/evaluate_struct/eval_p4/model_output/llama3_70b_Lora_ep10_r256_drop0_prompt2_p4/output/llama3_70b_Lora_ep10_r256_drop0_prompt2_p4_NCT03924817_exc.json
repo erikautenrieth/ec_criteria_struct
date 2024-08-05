@@ -1,0 +1,150 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients with central sleep apnea (central AI > 5/hour)",
+          "Condition": [
+            "sleep apnea"
+          ],
+          "Condition-Name": [
+            "sleep apnea"
+          ],
+          "Modifier": [
+            "central"
+          ],
+          "Observation": [
+            "AI"
+          ],
+          "Observation-Name": [
+            "AI"
+          ],
+          "Eq-Comparison": [
+            "> 5/hour"
+          ],
+          "Eq-Operator": [
+            ">"
+          ],
+          "Eq-Value": [
+            "5"
+          ],
+          "Eq-Temporal-Unit": [
+            "hour"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients with loose teeth",
+              "Condition": [
+                "loose teeth"
+              ],
+              "Condition-Name": [
+                "loose teeth"
+              ]
+            },
+            "right": {
+              "raw_text": "and severe parodontitis",
+              "Condition": [
+                "parodontitis"
+              ],
+              "Condition-Name": [
+                "parodontitis"
+              ],
+              "Severity": [
+                "severe"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients with completely missing teeth",
+          "Condition": [
+            "missing teeth"
+          ],
+          "Condition-Name": [
+            "missing teeth"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or removable tooth replacement,",
+              "Procedure": [
+                "tooth replacement"
+              ],
+              "Procedure-Name": [
+                "tooth replacement"
+              ],
+              "Modifier": [
+                "removable"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or with a teeth health insufficient to retain an MAD Patients with missing molars Patients with maximum protrusion of less than 5mm",
+                  "Condition": [
+                    "teeth health",
+                    "missing molars"
+                  ],
+                  "Condition-Name": [
+                    "teeth health",
+                    "missing molars"
+                  ],
+                  "Observation": [
+                    "maximum protrusion"
+                  ],
+                  "Observation-Name": [
+                    "maximum protrusion"
+                  ],
+                  "Eq-Comparison": [
+                    "less than 5mm"
+                  ],
+                  "Eq-Operator": [
+                    "less than"
+                  ],
+                  "Eq-Value": [
+                    "5"
+                  ],
+                  "Eq-Unit": [
+                    "mm"
+                  ],
+                  "Procedure": [
+                    "MAD"
+                  ],
+                  "Procedure-Name": [
+                    "MAD"
+                  ],
+                  "Assertion": [
+                    "insufficient to"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "retain an MAD",
+                      "Procedure": [
+                        "MAD"
+                      ],
+                      "Procedure-Name": [
+                        "MAD"
+                      ],
+                      "Negation": [
+                        "retain"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- biopsy proven rectal cancer (anal verge ≤ 10cm)",
+          "Condition": [
+            "cancer"
+          ],
+          "Condition-Name": [
+            "cancer"
+          ],
+          "Modifier": [
+            "rectal",
+            "anal verge"
+          ],
+          "Eq-Operator": [
+            "≤"
+          ],
+          "Eq-Unit": [
+            "cm"
+          ],
+          "Eq-Value": [
+            "10"
+          ],
+          "Eq-Comparison": [
+            "≤ 10cm"
+          ],
+          "Procedure": [
+            "biopsy"
+          ],
+          "Procedure-Name": [
+            "biopsy"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- neoadjuvant radiotherapy",
+              "Procedure": [
+                "neoadjuvant radiotherapy"
+              ],
+              "Procedure-Name": [
+                "neoadjuvant radiotherapy"
+              ]
+            },
+            "right": {
+              "raw_text": "or chemoradiotherapy",
+              "Procedure": [
+                "chemoradiotherapy"
+              ],
+              "Procedure-Name": [
+                "chemoradiotherapy"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "no radical surgery after neoadjuvant therapy",
+              "Procedure": [
+                "neoadjuvant therapy",
+                "radical surgery"
+              ],
+              "Procedure-Name": [
+                "neoadjuvant therapy",
+                "radical surgery"
+              ],
+              "Negation": [
+                "no"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

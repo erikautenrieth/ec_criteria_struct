@@ -1,0 +1,281 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. Healthy volunteers aged between ≥20 and ≤45 years old",
+                  "Eq-Operator": [
+                    "≥",
+                    "≤"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "aged"
+                  ],
+                  "Eq-Value": [
+                    "20",
+                    "45"
+                  ],
+                  "Eq-Comparison": [
+                    "≥20 and ≤45 years"
+                  ],
+                  "Condition": [
+                    "Healthy"
+                  ],
+                  "Condition-Name": [
+                    "Healthy"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "2. Weight ≥ 50 kg,",
+                      "Eq-Operator": [
+                        "≥"
+                      ],
+                      "Eq-Unit": [
+                        "kg"
+                      ],
+                      "Eq-Value": [
+                        "50"
+                      ],
+                      "Eq-Comparison": [
+                        "≥ 50 kg"
+                      ],
+                      "Observation": [
+                        "Weight"
+                      ],
+                      "Observation-Name": [
+                        "Weight"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "with calculated body mass index(BMI) of ≥ 18.5",
+                          "Observation": [
+                            "body mass index",
+                            "BMI"
+                          ],
+                          "Observation-Name": [
+                            "body mass index",
+                            "BMI"
+                          ],
+                          "Eq-Operator": [
+                            "≥"
+                          ],
+                          "Eq-Value": [
+                            "18.5"
+                          ],
+                          "Eq-Comparison": [
+                            "≥ 18.5"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "and"
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "≤ 27.0 kg/m2",
+                                  "Eq-Operator": [
+                                    "≤"
+                                  ],
+                                  "Eq-Unit": [
+                                    "kg",
+                                    "m2"
+                                  ],
+                                  "Eq-Value": [
+                                    "27.0"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "≤ 27.0 kg/m2"
+                                  ],
+                                  "Negation": [
+                                    "NOT"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "3. Those who have"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "no congenital chronic disease",
+                          "Condition": [
+                            "disease"
+                          ],
+                          "Condition-Name": [
+                            "disease"
+                          ],
+                          "Acuteness": [
+                            "chronic"
+                          ],
+                          "Negation": [
+                            "no"
+                          ],
+                          "Modifier": [
+                            "congenital"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "or chronic disease requiring treatment",
+                              "Condition": [
+                                "disease"
+                              ],
+                              "Condition-Name": [
+                                "disease"
+                              ],
+                              "Acuteness": [
+                                "chronic"
+                              ],
+                              "Procedure": [
+                                "treatment"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "and"
+                                },
+                                "right": {
+                                  "NOT": {
+                                    "left": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "who have"
+                                        },
+                                        "right": {
+                                          "NOT": {
+                                            "left": {
+                                              "OR": {
+                                                "left": {
+                                                  "raw_text": "no pathological symptoms",
+                                                  "Condition": [
+                                                    "pathological"
+                                                  ],
+                                                  "Condition-Name": [
+                                                    "pathological"
+                                                  ],
+                                                  "Negation": [
+                                                    "no"
+                                                  ],
+                                                  "Assertion": [
+                                                    "symptoms"
+                                                  ]
+                                                },
+                                                "right": {
+                                                  "AND": {
+                                                    "left": {
+                                                      "raw_text": "or findings",
+                                                      "Observation": [
+                                                        "findings"
+                                                      ],
+                                                      "Observation-Name": [
+                                                        "findings"
+                                                      ]
+                                                    },
+                                                    "right": {
+                                                      "NOT": {
+                                                        "left": {
+                                                          "raw_text": "that have no pathological symptoms or findings",
+                                                          "Condition": [
+                                                            "pathological"
+                                                          ],
+                                                          "Condition-Name": [
+                                                            "pathological"
+                                                          ],
+                                                          "Negation": [
+                                                            "no"
+                                                          ],
+                                                          "Observation": [
+                                                            "findings"
+                                                          ],
+                                                          "Observation-Name": [
+                                                            "findings"
+                                                          ],
+                                                          "Assertion": [
+                                                            "symptoms"
+                                                          ]
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "4. Those who are judged to be eligible for clinical trials based on laboratory and ECG results during screening tests",
+          "Procedure": [
+            "laboratory",
+            "ECG",
+            "screening tests"
+          ],
+          "Procedure-Name": [
+            "laboratory",
+            "ECG",
+            "screening tests"
+          ],
+          "Study": [
+            "clinical trials"
+          ],
+          "Assertion": [
+            "judged to be"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "5. Those who voluntarily decide to participate and agree to comply with the cautions after hearing and fully understanding the detailed description of this clinical trial",
+      "Study": [
+        "clinical trial"
+      ],
+      "Assertion": [
+        "agree to",
+        "decide to"
+      ]
+    }
+  }
+}
