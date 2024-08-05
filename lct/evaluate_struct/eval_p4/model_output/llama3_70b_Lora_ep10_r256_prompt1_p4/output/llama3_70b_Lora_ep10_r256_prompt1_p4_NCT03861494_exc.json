@@ -1,0 +1,108 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- admitted with transient ischemic attack",
+                          "Encounter": [
+                            "admitted"
+                          ],
+                          "Condition": [
+                            "transient ischemic attack"
+                          ],
+                          "Condition-Name": [
+                            "transient ischemic attack"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "- admitted with an intracerebral hemorrhage",
+                          "Encounter": [
+                            "admitted"
+                          ],
+                          "Condition": [
+                            "intracerebral hemorrhage"
+                          ],
+                          "Condition-Name": [
+                            "intracerebral hemorrhage"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- experience an in-hospital ischemic cerebral infarction",
+                      "Encounter": [
+                        "in-hospital"
+                      ],
+                      "Condition": [
+                        "ischemic cerebral infarction"
+                      ],
+                      "Condition-Name": [
+                        "ischemic cerebral infarction"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- hospital to hospital transfer patients",
+                  "Encounter": [
+                    "transfer"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- nursing home as primary residence before",
+                  "Location": [
+                    "nursing home"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or after discharge",
+                  "Encounter": [
+                    "discharge"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- hospice",
+          "Location": [
+            "hospice"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "inability to comply with post discharge follow up",
+              "Encounter": [
+                "discharge"
+              ],
+              "Negation": [
+                "inability"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

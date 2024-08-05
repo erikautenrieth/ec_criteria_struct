@@ -1,0 +1,202 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Histologically",
+                      "Procedure": [
+                        "Histologically"
+                      ],
+                      "Procedure-Name": [
+                        "Histologically"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or cytologically confirmed non-small cell lung cancer.",
+                      "Procedure": [
+                        "cytologically"
+                      ],
+                      "Procedure-Name": [
+                        "cytologically"
+                      ],
+                      "Condition": [
+                        "cancer"
+                      ],
+                      "Condition-Name": [
+                        "cancer"
+                      ],
+                      "Modifier": [
+                        "non-small cells lung"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- The ECOG score of performance status is 0-1.",
+                  "Observation": [
+                    "ECOG"
+                  ],
+                  "Observation-Name": [
+                    "ECOG"
+                  ],
+                  "Eq-Comparison": [
+                    "0-1"
+                  ],
+                  "Eq-Value": [
+                    "0",
+                    "1"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Locally advanced",
+                  "Modifier": [
+                    "Locally advanced"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or recurrent metastatic NSCLC that has never received systemic treatment.",
+                  "Condition": [
+                    "NSCLC"
+                  ],
+                  "Condition-Name": [
+                    "NSCLC"
+                  ],
+                  "Modifier": [
+                    "recurrent metastatic"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Negation": [
+                    "never"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- According to RECIST1.1 criteria, there is at least 1 measurable lesion that has",
+              "Eq-Comparison": [
+                "at least 1"
+              ],
+              "Eq-Operator": [
+                "at least"
+              ],
+              "Eq-Value": [
+                "1"
+              ],
+              "Observation": [
+                "lesion"
+              ],
+              "Observation-Name": [
+                "lesion"
+              ],
+              "Modifier": [
+                "measurable"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not been previously irradiated.",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Eq-Comparison": [
+                    "previously"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "previously"
+                  ],
+                  "Procedure": [
+                    "irradiated"
+                  ],
+                  "Procedure-Name": [
+                    "irradiated"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Prior to enrollment, a central laboratory testing report has confirmed that the tumor has one of two common EGFR mutations positive that are sensitive to EGFR-TKI therapy, accompanied with",
+          "Eq-Comparison": [
+            "one of two"
+          ],
+          "Eq-Value": [
+            "one",
+            "two"
+          ],
+          "Observation": [
+            "laboratory testing"
+          ],
+          "Observation-Name": [
+            "laboratory testing"
+          ],
+          "Condition": [
+            "tumor",
+            "EGFR mutations"
+          ],
+          "Condition-Name": [
+            "tumor",
+            "EGFR mutations"
+          ],
+          "Procedure": [
+            "EGFR-TKI therapy"
+          ],
+          "Procedure-Name": [
+            "EGFR-TKI therapy"
+          ],
+          "Polarity": [
+            "positive"
+          ],
+          "Study": [
+            "enrollment"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "not accompanied with other EGFR mutation, with the exception of exon 20 insertion.",
+              "Negation": [
+                "not"
+              ],
+              "Condition": [
+                "EGFR mutation",
+                "exon 20 insertion"
+              ],
+              "Condition-Name": [
+                "EGFR mutation",
+                "exon 20 insertion"
+              ],
+              "Exception": [
+                "exception"
+              ],
+              "Other": [
+                "other"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

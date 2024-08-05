@@ -1,0 +1,149 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- inability to provide informed consent"
+                    },
+                    "right": {
+                      "raw_text": "- hemoglobin < 70 g/L",
+                      "Observation": [
+                        "hemoglobin"
+                      ],
+                      "Eq-Comparison": [
+                        "< 70 g/L"
+                      ],
+                      "Observation-Name": [
+                        "hemoglobin"
+                      ],
+                      "Eq-Operator": [
+                        "<"
+                      ],
+                      "Eq-Value": [
+                        "70"
+                      ],
+                      "Eq-Unit": [
+                        "g",
+                        "L"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Z scores for weight-for-age (WAZ)",
+                      "Observation": [
+                        "weight-for-age",
+                        "WAZ"
+                      ],
+                      "Observation-Name": [
+                        "weight-for-age",
+                        "WAZ"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or weight-for-height (WHZ) <3,",
+                      "Observation": [
+                        "weight-for-height",
+                        "WHZ"
+                      ],
+                      "Eq-Comparison": [
+                        "<3"
+                      ],
+                      "Observation-Name": [
+                        "weight-for-height",
+                        "WHZ"
+                      ],
+                      "Eq-Operator": [
+                        "<"
+                      ],
+                      "Eq-Value": [
+                        "3"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- any maternal",
+                  "Modifier": [
+                    "maternal"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or infant chronic illness",
+                  "Condition": [
+                    "chronic illness"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "infant"
+                  ],
+                  "Condition-Name": [
+                    "chronic illness"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- administration of any infant vitamin or mineral supplements for the past 2 months",
+          "Life-Stage-AndGender": [
+            "infant"
+          ],
+          "Drug": [
+            "vitamin",
+            "mineral supplements"
+          ],
+          "Eq-Comparison": [
+            "past 2 months"
+          ],
+          "Drug-Name": [
+            "vitamin",
+            "mineral supplements"
+          ],
+          "Eq-Temporal-Period": [
+            "past"
+          ],
+          "Eq-Value": [
+            "2"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- any history of infant antibiotic treatment.",
+      "Life-Stage-And-Gender": [
+        "infant"
+      ],
+      "Eq-Comparison": [
+        "history"
+      ],
+      "Procedure": [
+        "treatment"
+      ],
+      "Drug": [
+        "antibiotic"
+      ],
+      "Eq-Temporal-Period": [
+        "history"
+      ],
+      "Drug-Name": [
+        "antibiotic"
+      ]
+    }
+  }
+}

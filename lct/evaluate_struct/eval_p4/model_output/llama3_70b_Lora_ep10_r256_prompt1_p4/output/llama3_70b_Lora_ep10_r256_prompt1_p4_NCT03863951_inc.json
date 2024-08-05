@@ -1,0 +1,110 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- diagnosed with the first ever acute ischemic stroke occurring within 2 weeks and were confirmed by CT",
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Temporal-Unit": [
+                "weeks"
+              ],
+              "Eq-Value": [
+                "2"
+              ],
+              "Eq-Comparison": [
+                "within 2 weeks",
+                "first ever"
+              ],
+              "Condition": [
+                "ischemic stroke"
+              ],
+              "Condition-Name": [
+                "ischemic stroke"
+              ],
+              "Eq-Temporal-Recency": [
+                "first ever"
+              ],
+              "Procedure": [
+                "CT"
+              ],
+              "Procedure-Name": [
+                "CT"
+              ]
+            },
+            "right": {
+              "raw_text": "or MRI,",
+              "Procedure": [
+                "MRI"
+              ],
+              "Procedure-Name": [
+                "MRI"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- has"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "no history of depression",
+                      "Eq-Comparison": [
+                        "history"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "history"
+                      ],
+                      "Condition": [
+                        "depression"
+                      ],
+                      "Condition-Name": [
+                        "depression"
+                      ],
+                      "Negation": [
+                        "no"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "raw_text": "or use of antidepressants or antipsychotics,",
+                        "Eq-Comparison": [
+                        "use"
+                        ],
+                        "Eq-Temporal-Period": [
+                        "use"
+                        ],
+                        "Drug": [
+                        "antidepressants",
+                        "antipsychotics"
+                        ],
+                        "Drug-Name": [
+                        "antidepressants",
+                        "antipsychotics"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- were competent to consent to take part in this research.",
+      "Eq-Value": [
+        "one"
+      ]
+    }
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "1. prior randomization to either STAR or usual care study arms;"
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "2. not a North Carolina resident",
+                              "Location": [
+                                "North Carolina"
+                              ],
+                              "Negation": [
+                                "not"
+                              ],
+                              "Residence": [
+                                "resident"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or residence >2.5-hour drive time from treating hospital;",
+                              "Location": [
+                                "treating hospital"
+                              ],
+                              "Observation": [
+                                "drive time"
+                              ],
+                              "Observation-Name": [
+                                "drive time"
+                              ],
+                              "Eq-Comparison": [
+                                ">2.5-hour"
+                              ],
+                              "Eq-Operator": [
+                                ">"
+                              ],
+                              "Eq-Value": [
+                                "2.5"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "hour"
+                              ],
+                              "Residence": [
+                                "residence"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "3. the only antibiotic associated with patient is administered in the operating room as this likely represents pre-operative infection prophylaxis and not presumed infection;",
+                      "Procedure": [
+                        "operative infection prophylaxis",
+                        "infection"
+                      ],
+                      "Procedure-Name": [
+                        "operative infection prophylaxis",
+                        "infection"
+                      ],
+                      "Drug": [
+                        "antibiotic"
+                      ],
+                      "Drug-Name": [
+                        "antibiotic"
+                      ],
+                      "Location": [
+                        "operating room"
+                      ],
+                      "Assertion": [
+                        "likely"
+                      ],
+                      "Modifier": [
+                        "pre-operative"
+                      ],
+                      "Condition": [
+                        "infection"
+                      ],
+                      "Condition-Name": [
+                        "infection"
+                      ],
+                      "Negation": [
+                        "not"
+                      ],
+                      "Eq-Comparison": [
+                        "only"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "only"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "4. patients transferred from other acute care hospitals;",
+                  "Location": [
+                    "acute care hospitals"
+                  ],
+                  "Other": [
+                    "other"
+                  ],
+                  "Encounter": [
+                    "transferred"
+                  ],
+                  "Provider": [
+                    "hospitals"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "5. patients with a change in code status (i.e., do not resuscitate, do not intubate) within 24 hours after admission due to the general assumption of increased risk of exposure to less aggressive treatment;",
+              "Procedure": [
+                "resuscitate",
+                "intubate",
+                "treatment"
+              ],
+              "Procedure-Name": [
+                "resuscitate",
+                "intubate"
+              ],
+              "Observation": [
+                "code status"
+              ],
+              "Observation-Name": [
+                "code status"
+              ],
+              "Eq-Comparison": [
+                "within 24 hours"
+              ],
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Value": [
+                "24"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Encounter": [
+                "admission"
+              ],
+              "Risk": [
+                "risk"
+              ],
+              "Polarity": [
+                "aggressive"
+              ],
+              "Stability": [
+                "change"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "6. patients with infection ruled out during the index hospitalization.",
+          "Condition": [
+            "infection"
+          ],
+          "Condition-Name": [
+            "infection"
+          ],
+          "Provider": [
+            "hospitalization",
+            "hospitals"
+          ],
+          "Negation": [
+            "ruled out"
+          ],
+          "Assertion": [
+            "ruled out"
+          ],
+          "Encounter": [
+            "hospitalization"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "7. patients with a history of prior antibiotic use within 48 hours of hospitalization.",
+      "Eq-Comparison": [
+        "history of prior",
+        "within 48 hours"
+      ],
+      "Eq-Temporal-Period": [
+        "history of prior"
+      ],
+      "Drug": [
+        "antibiotic"
+      ],
+      "Drug-Name": [
+        "antibiotic"
+      ],
+      "Provider": [
+        "hospitalization",
+        "hospitals"
+      ],
+      "Eq-Operator": [
+        "within"
+      ],
+      "Eq-Value": [
+        "48"
+      ],
+      "Eq-Temporal-Unit": [
+        "hours"
+      ],
+      "Encounter": [
+        "hospitalization"
+      ]
+    }
+  }
+}

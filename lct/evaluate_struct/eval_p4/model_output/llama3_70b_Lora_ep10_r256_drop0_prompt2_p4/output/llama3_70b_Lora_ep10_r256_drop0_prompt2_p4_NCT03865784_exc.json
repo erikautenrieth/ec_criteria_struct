@@ -1,0 +1,86 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Federated boxers with lumbar injury with medical diagnosis",
+              "Observation": [
+                "injury"
+              ],
+              "Observation-Name": [
+                "injury"
+              ],
+              "Modifier": [
+                "lumbar"
+              ],
+              "Provider": [
+                "Federated boxers"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Who are or have been treated by pharmacological",
+                  "Procedure": [
+                    "treated"
+                  ],
+                  "Modifier": [
+                    "pharmacological"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or physiotherapy in the last 6 months",
+                  "Procedure": [
+                    "physiotherapy"
+                  ],
+                  "Procedure-Name": [
+                    "physiotherapy"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Value": [
+                    "6"
+                  ],
+                  "Eq-Comparison": [
+                    "last 6 months"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "last"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Presenting allergies",
+              "Allergy": [
+                "allergies"
+              ]
+            },
+            "right": {
+              "raw_text": "or alterations of the skin",
+              "Condition": [
+                "alterations"
+              ],
+              "Condition-Name": [
+                "alterations"
+              ],
+              "Modifier": [
+                "skin"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Not sign the informed consent document."
+    }
+  }
+}

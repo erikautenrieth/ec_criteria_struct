@@ -1,0 +1,157 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- inability to provide informed consent"
+                        },
+                        "right": {
+                          "raw_text": "- hemoglobin < 70 g/L",
+                          "Observation": [
+                            "hemoglobin"
+                          ],
+                          "Eq-Comparison": [
+                            "< 70 g/L"
+                          ],
+                          "Observation-Name": [
+                            "hemoglobin"
+                          ],
+                          "Eq-Operator": [
+                            "<"
+                          ],
+                          "Eq-Value": [
+                            "70"
+                          ],
+                          "Eq-Unit": [
+                            "g",
+                            "L"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Z scores for weight-for-age (WAZ)",
+                          "Observation": [
+                            "weight-for-age",
+                            "WAZ"
+                          ],
+                          "Observation-Name": [
+                            "weight-for-age",
+                            "WAZ"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or weight-for-height (WHZ) <3,",
+                          "Observation": [
+                            "weight-for-height",
+                            "WHZ"
+                          ],
+                          "Eq-Comparison": [
+                            "<3"
+                          ],
+                          "Observation-Name": [
+                            "weight-for-height",
+                            "WHZ"
+                          ],
+                          "Eq-Operator": [
+                            "<"
+                          ],
+                          "Eq-Value": [
+                            "3"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- any maternal",
+                      "Family-Member": [
+                        "maternal"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or infant chronic illness",
+                      "Condition": [
+                        "illness"
+                      ],
+                      "Acuteness": [
+                        "chronic"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "infant"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- administration of any infant vitamin or mineral supplements for the past 2 months",
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Value": [
+                "2"
+              ],
+              "Drug": [
+                "vitamin or mineral supplements"
+              ],
+              "Drug-Name": [
+                "vitamin or mineral supplements"
+              ],
+              "Life-Stage-And-Gender": [
+                "infant"
+              ],
+              "Eq-Comparison": [
+                "past 2 months"
+              ],
+              "Eq-Temporal-Period": [
+                "past"
+              ],
+              "Procedure": [
+                "administration"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- any history of infant antibiotic treatment.",
+          "Procedure": [
+            "treatment"
+          ],
+          "Eq-Comparison": [
+            "history"
+          ],
+          "Drug": [
+            "antibiotic"
+          ],
+          "Life-Stage-And-Gender": [
+            "infant"
+          ],
+          "Eq-Temporal-Period": [
+            "history"
+          ],
+          "Drug-Name": [
+            "antibiotic"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "and"
+    }
+  }
+}

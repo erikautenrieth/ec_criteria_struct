@@ -1,0 +1,205 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Age >= 18 years",
+                  "Age": [
+                    "Age"
+                  ],
+                  "Eq-Comparison": [
+                    ">= 18 years"
+                  ],
+                  "Eq-Operator": [
+                    ">=",
+                    ">",
+                    "<"
+                  ],
+                  "Eq-Value": [
+                    "18"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Known history of objectively documented deep vein thrombosis of the lower limb (with",
+                      "Condition": [
+                        "deep vein thrombosis"
+                      ],
+                      "Condition-Name": [
+                        "deep vein thrombosis"
+                      ],
+                      "Eq-Comparison": [
+                        "history"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "history"
+                      ],
+                      "Modifier": [
+                        "lower limb"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "without pulmonary embolism)",
+                              "Condition": [
+                                "pulmonary embolism"
+                              ],
+                              "Condition-Name": [
+                                "pulmonary embolism"
+                              ],
+                              "Negation": [
+                                "without"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Out-patients referred for clinically suspected acute recurrent ipsilateral DVT of the lower limb i.e. the occurrence of new symptoms",
+                  "Condition": [
+                    "DVT"
+                  ],
+                  "Condition-Name": [
+                    "DVT"
+                  ],
+                  "Modifier": [
+                    "lower limb",
+                    "ipsilateral"
+                  ],
+                  "Acuteness": [
+                    "acute"
+                  ],
+                  "Recency": [
+                    "new"
+                  ],
+                  "Assertion": [
+                    "suspected"
+                  ],
+                  "Encounter": [
+                    "referred"
+                  ],
+                  "Eq-Comparison": [
+                    "new"
+                  ],
+                  "Eq-Temporal-Recency": [
+                    "new"
+                  ],
+                  "Eq-Operator": [
+                    ">"
+                  ],
+                  "Eq-Value": [
+                    "1"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "new"
+                  ],
+                  "Eq-Unit": [
+                    "l"
+                  ],
+                  "Symptoms": [
+                    "symptoms"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "and signs of DVT",
+                      "Condition": [
+                        "DVT"
+                      ],
+                      "Condition-Name": [
+                        "DVT"
+                      ],
+                      "Eq-Operator": [
+                        ">"
+                      ],
+                      "Eq-Value": [
+                        "1"
+                      ],
+                      "Eq-Unit": [
+                        "l"
+                      ],
+                      "Assertion": [
+                        "signs"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or the increase of symptoms",
+                          "Eq-Operator": [
+                            ">"
+                          ],
+                          "Eq-Value": [
+                            "1"
+                          ],
+                          "Eq-Unit": [
+                            "l"
+                          ],
+                          "Symptoms": [
+                            "symptoms"
+                          ],
+                          "Polarity": [
+                            "increase"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "and signs in patients with post-thrombotic syndrome",
+                          "Condition": [
+                            "post-thrombotic syndrome"
+                          ],
+                          "Condition-Name": [
+                            "post-thrombotic syndrome"
+                          ],
+                          "Eq-Operator": [
+                            ">"
+                          ],
+                          "Eq-Value": [
+                            "1"
+                          ],
+                          "Eq-Unit": [
+                            "l"
+                          ],
+                          "Assertion": [
+                            "signs"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patients covered by social security or equivalent regimen"
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Signed and dated informed consent"
+    }
+  }
+}
