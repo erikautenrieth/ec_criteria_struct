@@ -13,7 +13,7 @@ load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False
 r = 256
 epoch = 10
 
-output_dir  = "outputs/outputs_70b_p4"
+output_dir  = "outputs/outputs_70b_p4_5" # outputs_70b_p4_5
 os.makedirs(output_dir, exist_ok=True)
 
 
@@ -30,7 +30,7 @@ model = FastLanguageModel.get_peft_model(
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 256, # 256 (default),
-    lora_dropout=0.05,
+    lora_dropout=0,
     bias = "none",    # Supports any, but = "none" is optimized
     use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context  # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
     random_state = 3407,
@@ -62,7 +62,7 @@ def formatting_prompts_func(examples):
     return { "text" : texts, }
 pass
 
-dataset_path = 'dataset/dataset_p4_prompt1'
+dataset_path = 'dataset/dataset_p4_prompt2'
 dataset = load_from_disk(dataset_path)
 train_test_split = dataset['train'].train_test_split(test_size=0.1, seed=42)
 train = train_test_split['train'] # 723 Files
@@ -131,4 +131,4 @@ print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
 
-model.save_pretrained(f"70b_p4/llama3_70b_Lora_ep{epoch}_r{r}_pr2_p4") 
+model.save_pretrained(f"70b_p4/llama3_70b_Lora_ep{epoch}_r{r}_drop0_prompt2_p4") 

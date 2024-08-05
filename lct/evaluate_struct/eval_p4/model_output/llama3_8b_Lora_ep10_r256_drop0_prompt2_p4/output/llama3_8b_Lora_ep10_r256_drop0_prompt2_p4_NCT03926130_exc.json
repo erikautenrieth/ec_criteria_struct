@@ -1,0 +1,151 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Have a current diagnosis of ulcerative colitis, inflammatory bowel disease-unclassified (IBD-U) (formerly known as indeterminate colitis), abdominal",
+                  "Condition": [
+                    "ulcerative colitis",
+                    "inflammatory bowel disease",
+                    "IBD",
+                    "IBD-U"
+                  ],
+                  "Condition-Name": [
+                    "ulcerative colitis",
+                    "inflammatory bowel disease",
+                    "IBD",
+                    "IBD-U"
+                  ],
+                  "Modifier": [
+                    "abdominal"
+                  ],
+                  "Eq-Comparison": [
+                    "current"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "current"
+                  ],
+                  "Negation": [
+                    "unclassified"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or perianal abscess",
+                      "Modifier": [
+                        "perianal"
+                      ],
+                      "Condition": [
+                        "abscess"
+                      ],
+                      "Condition-Name": [
+                        "abscess"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or short bowel syndrome",
+                      "Condition": [
+                        "short bowel syndrome"
+                      ],
+                      "Condition-Name": [
+                        "short bowel syndrome"
+                      ]
+                    }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Have a stoma",
+              "Procedure": [
+                "stoma"
+              ],
+              "Procedure-Name": [
+                "stoma"
+              ]
+            },
+            "right": {
+              "raw_text": "or ostomy",
+              "Procedure": [
+                "ostomy"
+              ],
+              "Procedure-Name": [
+                "ostomy"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Have had a bowel resection within 6 months,",
+          "Procedure": [
+            "bowel resection"
+          ],
+          "Procedure-Name": [
+            "bowel resection"
+          ],
+          "Eq-Comparison": [
+            "within 6 months"
+          ],
+          "Eq-Operator": [
+            "within"
+          ],
+          "Eq-Value": [
+            "6"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Eq-Temporal-Period": [
+            "had"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or any kind of intra-abdominal",
+              "Modifier": [
+                "intra-abdominal"
+              ]
+            },
+            "right": {
+              "raw_text": "or extra abdominal surgery within 3 months of baseline",
+              "Procedure": [
+                "surgery"
+              ],
+              "Procedure-Name": [
+                "surgery"
+              ],
+              "Eq-Comparison": [
+                "within 3 months"
+              ],
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Temporal-Period": [
+                "baseline"
+              ],
+              "Modifier": [
+                "extra abdominal"
+              ],
+              "Eq-Value": [
+                "3"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
