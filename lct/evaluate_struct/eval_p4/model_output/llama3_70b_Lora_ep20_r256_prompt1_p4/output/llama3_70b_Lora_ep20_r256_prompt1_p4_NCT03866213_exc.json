@@ -1,0 +1,52 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Parent or guardian is unable or unwilling to provide informed consent.",
+      "Eq-Operator": [
+        "-"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- The patient is",
+          "Eq-Operator": [
+            "-"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "unable to receive a blood draw/",
+                  "Negation": [
+                    "unable"
+                  ],
+                  "Observation": [
+                    "blood draw"
+                  ],
+                  "Observation-Name": [
+                    "blood draw"
+                  ],
+                  "Assertion": [
+                    "receive"
+                  ]
+                },
+                "right": {
+                  "raw_text": "heel stick as determined by their clinician.",
+                  "Observation": [
+                    "heel stick"
+                  ],
+                  "Observation-Name": [
+                    "heel stick"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

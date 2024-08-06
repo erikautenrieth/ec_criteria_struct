@@ -8,8 +8,8 @@ from unsloth import FastLanguageModel
 
 batch_path = "eval_p4"
 
-model_id = "tuned_models/llama3_70b_Lora_ep10_r256_prompt1_p4"
-model_name = "llama3_70b_Lora_ep10_r256_prompt1_p4"
+model_id = "tuned_models/llama3_70b_Lora_ep20_r256_prompt1_p4"
+model_name = "llama3_70b_Lora_ep20_r256_prompt1_p4"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 

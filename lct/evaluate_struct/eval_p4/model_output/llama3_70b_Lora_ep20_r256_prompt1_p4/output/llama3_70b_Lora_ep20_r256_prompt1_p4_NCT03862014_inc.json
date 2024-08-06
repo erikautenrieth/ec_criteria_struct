@@ -1,0 +1,174 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients and parents of the patients who accept to participate and sign the informed consent",
+                  "Eq-Operator": [
+                    "-"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Teeth that are fully erupted",
+                  "Condition": [
+                    "fully erupted"
+                  ],
+                  "Condition-Name": [
+                    "fully erupted"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Observation": [
+                    "Teeth"
+                  ],
+                  "Observation-Name": [
+                    "Teeth"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients who have at least two permanent first molars that",
+                  "Eq-Operator": [
+                    "-",
+                    "at least"
+                  ],
+                  "Eq-Value": [
+                    "two"
+                  ],
+                  "Eq-Comparison": [
+                    "at least two"
+                  ],
+                  "Observation": [
+                    "permanent first molars"
+                  ],
+                  "Observation-Name": [
+                    "permanent first molars"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "need fissure sealant",
+                      "Procedure": [
+                        "fissure sealant"
+                      ],
+                      "Procedure-Name": [
+                        "fissure sealant"
+                      ],
+                      "Negation": [
+                        "need"
+                      ],
+                      "Assertion": [
+                        "need"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Teeth that have white-",
+              "Eq-Operator": [
+                "-"
+              ],
+              "Observation": [
+                "Teeth"
+              ],
+              "Observation-Name": [
+                "Teeth"
+              ],
+              "Modifier": [
+                "white"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "yellow-",
+                  "Modifier": [
+                    "yellow"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "brown discoloration that indicate high-caries",
+                      "Condition": [
+                        "discoloration"
+                      ],
+                      "Condition-Name": [
+                        "discoloration"
+                      ],
+                      "Modifier": [
+                        "brown"
+                      ],
+                      "Condition-Type": [
+                        "caries"
+                      ],
+                      "Risk": [
+                        "risk"
+                      ],
+                      "Polarity": [
+                        "high"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "risk",
+                      "Risk": [
+                        "risk"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Teeth that have white-yellow-brown discoloration that indicate high-caries risk",
+      "Condition": [
+        "discoloration"
+      ],
+      "Condition-Name": [
+        "discoloration"
+      ],
+      "Eq-Operator": [
+        "-"
+      ],
+      "Observation": [
+        "Teeth"
+      ],
+      "Observation-Name": [
+        "Teeth"
+      ],
+      "Modifier": [
+        "white",
+        "yellow",
+        "brown"
+      ],
+      "Condition-Type": [
+        "caries"
+      ],
+      "Risk": [
+        "risk"
+      ],
+      "Polarity": [
+        "high"
+      ]
+    }
+  }
+}

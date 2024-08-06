@@ -1,0 +1,167 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. Skeletal maturity",
+                  "Condition": [
+                    "Skeletal maturity"
+                  ],
+                  "Condition-Name": [
+                    "Skeletal maturity"
+                  ]
+                },
+                "right": {
+                  "raw_text": "2. AO/OTA 42 open tibia fractures",
+                  "Condition": [
+                    "fractures"
+                  ],
+                  "Condition-Name": [
+                    "fractures"
+                  ],
+                  "Modifier": [
+                    "open tibia"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "3. Wound primarily closeable (",
+                  "Condition": [
+                    "Wound"
+                  ],
+                  "Condition-Name": [
+                    "Wound"
+                  ],
+                  "Modifier": [
+                    "primarily closeable"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "no flap",
+                          "Negation": [
+                            "no"
+                          ],
+                          "Procedure": [
+                            "flap"
+                          ],
+                          "Procedure-Name": [
+                            "flap"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "or delay in closure due to contamination needed)",
+                              "Condition": [
+                                "contamination"
+                              ],
+                              "Condition-Name": [
+                                "contamination"
+                              ],
+                              "Procedure": [
+                                "closure"
+                              ],
+                              "Procedure-Name": [
+                                "closure"
+                              ],
+                              "Modifier": [
+                                "delay"
+                              ]
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "due to contamination needed)",
+                                  "Condition": [
+                                    "contamination"
+                                  ],
+                                  "Condition-Name": [
+                                    "contamination"
+                                  ],
+                                  "Negation": [
+                                    "no"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "4. Palpable pedal pulses (",
+              "Condition": [
+                "Palpable pedal pulses"
+              ],
+              "Condition-Name": [
+                "Palpable pedal pulses"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "no vascular injury sustained)",
+                  "Negation": [
+                    "no"
+                  ],
+                  "Condition": [
+                    "vascular injury"
+                  ],
+                  "Condition-Name": [
+                    "vascular injury"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "5. Presentation within 24 hours from injury",
+      "Eq-Operator": [
+        "within"
+      ],
+      "Eq-Temporal-Unit": [
+        "hours"
+      ],
+      "Eq-Value": [
+        "24"
+      ],
+      "Eq-Comparison": [
+        "within 24 hours"
+      ],
+      "Observation": [
+        "Presentation"
+      ],
+      "Observation-Name": [
+        "Presentation"
+      ],
+      "Condition": [
+        "injury"
+      ],
+      "Condition-Name": [
+        "injury"
+      ]
+    }
+  }
+}
