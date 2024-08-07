@@ -8,7 +8,6 @@ class Node:
         self.criteria = criteria
         self.left = None
         self.right = None
-
     def to_dict(self):
         if self.operator:
             children = {}
@@ -23,7 +22,6 @@ class Node:
 def parse_text(text):
     if not text:
         return None
-
     pattern = r'\[AND\]|\[OR\]|\[NOT\]'
     matches = list(re.finditer(pattern, text))
     if matches:
