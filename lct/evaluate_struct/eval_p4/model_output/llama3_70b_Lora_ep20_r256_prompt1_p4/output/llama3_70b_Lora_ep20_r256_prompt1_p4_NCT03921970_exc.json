@@ -1,0 +1,124 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Bleeding diathesis",
+                      "Condition": [
+                        "Bleeding diathesis"
+                      ],
+                      "Condition-Name": [
+                        "Bleeding diathesis"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Receiving anticoagulant treatment",
+                      "Procedure": [
+                        "anticoagulant treatment"
+                      ],
+                      "Procedure-Name": [
+                        "anticoagulant treatment"
+                      ],
+                      "Eq-Comparison": [
+                        "Receiving"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "Receiving"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Known local anesthetics",
+                      "Drug": [
+                        "local anesthetics"
+                      ],
+                      "Drug-Name": [
+                        "local anesthetics"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and opioid allergy",
+                      "Drug": [
+                        "opioid"
+                      ],
+                      "Drug-Name": [
+                        "opioid"
+                      ],
+                      "Allergy": [
+                        "allergy"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Infection of the skin at the site of the needle puncture",
+              "Condition": [
+                "Infection"
+              ],
+              "Condition-Name": [
+                "Infection"
+              ],
+              "Modifier": [
+                "skin",
+                "site of the needle puncture"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnancy",
+              "Condition": [
+                "Pregnancy"
+              ],
+              "Condition-Name": [
+                "Pregnancy"
+              ]
+            },
+            "right": {
+              "raw_text": "or lactation",
+              "Condition": [
+                "lactation"
+              ],
+              "Condition-Name": [
+                "lactation"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients who do"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "not accept the procedure",
+              "Procedure": [
+                "procedure"
+              ],
+              "Negation": [
+                "not"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

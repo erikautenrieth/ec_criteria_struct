@@ -1,0 +1,125 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients age: ≥ 22 years",
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Age": [
+                "age"
+              ],
+              "Eq-Value": [
+                "22"
+              ],
+              "Eq-Operator": [
+                "≥"
+              ],
+              "Eq-Comparison": [
+                "≥ 22 years"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patients presenting for routine colonoscopy for screening",
+                  "Procedure": [
+                    "colonoscopy"
+                  ],
+                  "Procedure-Name": [
+                    "colonoscopy"
+                  ],
+                  "Eq-Operator": [
+                    "to"
+                  ],
+                  "Modifier": [
+                    "routine",
+                    "screening"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and/or surveillance purposes.",
+                  "Modifier": [
+                    "surveillance"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Willingness to undergo two withdrawals",
+              "Eq-Value": [
+                "two"
+              ],
+              "Procedure": [
+                "withdrawals"
+              ],
+              "Procedure-Name": [
+                "withdrawals"
+              ],
+              "Assertion": [
+                "Willingness to"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "with",
+                  "Modifier": [
+                    "with"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "and"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "without the use of computer-aided software while undergoing conventional colonoscopy with sedation",
+                          "Procedure": [
+                            "colonoscopy",
+                            "sedation"
+                          ],
+                          "Procedure-Name": [
+                            "colonoscopy",
+                            "sedation"
+                          ],
+                          "Negation": [
+                            "without"
+                          ],
+                          "Modifier": [
+                            "conventional"
+                          ],
+                          "Eq-Comparison": [
+                            "undergoing"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "undergoing"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Ability to provide written, informed consent and understand the responsibilities of trial participation",
+      "Eq-Operator": [
+        "to"
+      ]
+    }
+  }
+}
