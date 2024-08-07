@@ -1,0 +1,29 @@
+/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+2024-08-06 12:00:46.807894: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-08-06 12:00:48.327339: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:10<00:54, 10.88s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:21<00:43, 10.94s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:33<00:33, 11.08s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:44<00:22, 11.19s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:54<00:10, 10.93s/it]Loading checkpoint shards: 100%|██████████| 6/6 [01:02<00:00,  9.71s/it]Loading checkpoint shards: 100%|██████████| 6/6 [01:02<00:00, 10.38s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Unsloth: Dropout = 0 is supported for fast patching. You are using dropout = 0.05.
+Unsloth will patch all other layers, except LoRA matrices, causing a performance hit.
+Unsloth 2024.6 patched 80 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
+ValueError: 'ReduceLROnPlateau' is not a valid SchedulerType
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/work/eauten2s/ec_criteria_struct/lct/models/finetuning/finetune_llama3_70b_p4.py", line 83, in <module>
+    args = TrainingArguments(
+  File "<string>", line 123, in __init__
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/training_args.py", line 1388, in __post_init__
+    self.lr_scheduler_type = SchedulerType(self.lr_scheduler_type)
+  File "/usr/lib64/python3.9/enum.py", line 384, in __call__
+    return cls.__new__(cls, value)
+  File "/usr/lib64/python3.9/enum.py", line 709, in __new__
+    raise exc
+  File "/usr/lib64/python3.9/enum.py", line 692, in __new__
+    result = cls._missing_(value)
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/transformers/utils/generic.py", line 476, in _missing_
+    raise ValueError(
+ValueError: ReduceLROnPlateau is not a valid SchedulerType, please select one of ['linear', 'cosine', 'cosine_with_restarts', 'polynomial', 'constant', 'constant_with_warmup', 'inverse_sqrt', 'reduce_lr_on_plateau']

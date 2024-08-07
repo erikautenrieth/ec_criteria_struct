@@ -1,0 +1,203 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Those reporting any chronic",
+                  "Acuteness": [
+                    "chronic"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or acute diseases,",
+                      "Acuteness": [
+                        "acute"
+                      ],
+                      "Condition": [
+                        "diseases"
+                      ],
+                      "Condition-Name": [
+                        "diseases"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "food allergies,",
+                          "Allergy": [
+                            "allergies"
+                          ],
+                          "Allergy-Name": [
+                            "food"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "smoking",
+                              "Observation": [
+                                "smoking"
+                              ],
+                              "Observation-Name": [
+                                "smoking"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or alcohol abuse",
+                              "Condition": [
+                                "abuse"
+                              ],
+                              "Condition-Name": [
+                                "abuse"
+                              ],
+                              "Modifier": [
+                                "alcohol"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Use of illicit drugs; regular consumption of medications,",
+                  "Drug": [
+                    "medications",
+                    "illicit drugs"
+                  ],
+                  "Drug-Name": [
+                    "illicit drugs"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "micronutrient supplements,",
+                      "Drug": [
+                        "micronutrient supplements"
+                      ],
+                      "Drug-Name": [
+                        "micronutrient supplements"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or both",
+                      "Other": [
+                        "both"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Vegetarians,",
+              "Condition": [
+                "Vegetarians"
+              ],
+              "Condition-Name": [
+                "Vegetarians"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or those",
+                  "Other": [
+                    "both"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "unable to eat meat, are also",
+                          "Negation": [
+                            "unable"
+                          ],
+                          "Assertion": [
+                            "unable"
+                          ],
+                          "Food": [
+                            "meat"
+                          ],
+                          "Food-Name": [
+                            "meat"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "excluded since the foods for the study contain meat",
+                              "Negation": [
+                                "excluded"
+                              ],
+                              "Food": [
+                                "meat"
+                              ],
+                              "Food-Name": [
+                                "meat"
+                              ],
+                              "Study": [
+                                "study"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-",
+          "Eq-Operator": [
+            "-"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Unable to refrain from taking medications during the study period",
+              "Negation": [
+                "Unable"
+              ],
+              "Assertion": [
+                "Unable"
+              ],
+              "Drug": [
+                "medications"
+              ],
+              "Study": [
+                "study"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

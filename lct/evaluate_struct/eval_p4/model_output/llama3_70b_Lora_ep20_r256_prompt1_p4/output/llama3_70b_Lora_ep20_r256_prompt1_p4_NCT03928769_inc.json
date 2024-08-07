@@ -1,0 +1,165 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Male",
+                      "Life-Stage-And-Gender": [
+                        "Male"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or female ≥ 18 years",
+                      "Life-Stage-And-Gender": [
+                        "female"
+                      ],
+                      "Eq-Operator": [
+                        "≥"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "years"
+                      ],
+                      "Age": [
+                        "years"
+                      ],
+                      "Eq-Value": [
+                        "18"
+                      ],
+                      "Eq-Comparison": [
+                        "≥ 18 years"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patient for whom a vascular surgery is programmed,",
+                      "Procedure": [
+                        "vascular surgery"
+                      ],
+                      "Procedure-Name": [
+                        "vascular surgery"
+                      ],
+                      "Eq-Comparison": [
+                        "programmed"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "programmed"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "and whose nature allows obtaining of arterial segment",
+                          "Observation": [
+                            "arterial segment"
+                          ],
+                          "Observation-Name": [
+                            "arterial segment"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "without any harm for the health of the patient",
+                              "Condition": [
+                                "harm"
+                              ],
+                              "Condition-Name": [
+                                "harm"
+                              ],
+                              "Negation": [
+                                "without"
+                              ]
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "without any harm for the health of the patient",
+                                  "Condition": [
+                                    "harm"
+                                  ],
+                                  "Condition-Name": [
+                                    "harm"
+                                  ],
+                                  "Negation": [
+                                    "without"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patient for whom a blood sample is planned on the day of the procedure",
+              "Observation": [
+                "blood sample"
+              ],
+              "Observation-Name": [
+                "blood sample"
+              ],
+              "Eq-Comparison": [
+                "planned"
+              ],
+              "Eq-Temporal-Period": [
+                "planned"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Person who has received complete information on the organization of the research",
+              "Eq-Comparison": [
+                "received"
+              ],
+              "Eq-Temporal-Period": [
+                "received"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "and who has"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not objected to his participation and the exploitation of his data",
+                      "Negation": [
+                        "not"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Compulsory affiliation to social security",
+      "Observation": [
+        "social security"
+      ],
+      "Observation-Name": [
+        "social security"
+      ]
+    }
+  }
+}

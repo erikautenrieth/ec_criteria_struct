@@ -1,0 +1,64 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Pregnant woman;",
+      "Condition": [
+        "Pregnant"
+      ],
+      "Condition-Name": [
+        "Pregnant"
+      ],
+      "Life-Stage-And-Gender": [
+        "woman"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient present clinical signes of stroke",
+          "Condition": [
+            "stroke"
+          ],
+          "Condition-Name": [
+            "stroke"
+          ],
+          "Eq-Comparison": [
+            "present"
+          ],
+          "Eq-Temporal-Period": [
+            "present"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "and"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "without CO detection.",
+                  "Condition": [
+                    "CO"
+                  ],
+                  "Condition-Name": [
+                    "CO"
+                  ],
+                  "Procedure": [
+                    "detection"
+                  ],
+                  "Procedure-Name": [
+                    "detection"
+                  ],
+                  "Negation": [
+                    "without"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

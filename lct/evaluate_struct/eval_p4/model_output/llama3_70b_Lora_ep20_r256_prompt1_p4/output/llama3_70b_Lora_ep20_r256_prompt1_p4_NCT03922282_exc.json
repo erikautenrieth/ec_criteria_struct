@@ -1,0 +1,187 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Subject who underwent thyroid surgery",
+                              "Eq-Comparison": [
+                                "underwent"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "underwent"
+                              ],
+                              "Procedure": [
+                                "thyroid surgery"
+                              ],
+                              "Procedure-Name": [
+                                "thyroid surgery"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- Subject who underwent any radiotherapy on neck",
+                              "Eq-Comparison": [
+                                "underwent"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "underwent"
+                              ],
+                              "Procedure": [
+                                "radiotherapy"
+                              ],
+                              "Procedure-Name": [
+                                "radiotherapy"
+                              ],
+                              "Modifier": [
+                                "neck"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Subject who need to neck dissection",
+                          "Assertion": [
+                            "need to"
+                          ],
+                          "Procedure": [
+                            "neck dissection"
+                          ],
+                          "Procedure-Name": [
+                            "neck dissection"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Subject under 18 years",
+                          "Eq-Temporal-Unit": [
+                            "years"
+                          ],
+                          "Eq-Value": [
+                            "18"
+                          ],
+                          "Eq-Comparison": [
+                            "under 18 years"
+                          ],
+                          "Eq-Operator": [
+                            "under"
+                          ],
+                          "Age": [
+                            "years"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or over 70 years",
+                          "Eq-Temporal-Unit": [
+                            "years"
+                          ],
+                          "Eq-Value": [
+                            "70"
+                          ],
+                          "Eq-Comparison": [
+                            "over 70 years"
+                          ],
+                          "Eq-Operator": [
+                            "over"
+                          ],
+                          "Age": [
+                            "years"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Bad general condition",
+                  "Condition": [
+                    "Bad general condition"
+                  ],
+                  "Condition-Name": [
+                    "Bad general condition"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- High American Society of Anesthesiologists(ASA) score (over 3)",
+              "Observation": [
+                "American Society of Anesthesiologists",
+                "ASA"
+              ],
+              "Observation-Name": [
+                "American Society of Anesthesiologists",
+                "ASA"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Comparison": [
+                "over 3"
+              ],
+              "Eq-Operator": [
+                "over"
+              ],
+              "Polarity": [
+                "High"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Breast feeder",
+              "Condition": [
+                "Breast feeder"
+              ],
+              "Condition-Name": [
+                "Breast feeder"
+              ]
+            },
+            "right": {
+              "raw_text": "or pregnancy",
+              "Condition": [
+                "pregnancy"
+              ],
+              "Condition-Name": [
+                "pregnancy"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Subject who disagree to do this trial",
+              "Negation": [
+                "disagree"
+              ],
+              "Study": [
+                "trial"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

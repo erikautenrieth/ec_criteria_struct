@@ -1,0 +1,120 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patient"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "not eligible for deep brain stimulation surgery",
+                          "Procedure": [
+                            "deep brain stimulation surgery"
+                          ],
+                          "Procedure-Name": [
+                            "deep brain stimulation surgery"
+                          ],
+                          "Negation": [
+                            "not"
+                          ],
+                          "Assertion": [
+                            "eligible for"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Pregnant women",
+                      "Condition": [
+                        "Pregnant"
+                      ],
+                      "Condition-Name": [
+                        "Pregnant"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "women"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or nursing mothers",
+                      "Condition": [
+                        "nursing"
+                      ],
+                      "Condition-Name": [
+                        "nursing"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "mothers"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Persons deprived of liberty by judicial",
+                  "Observation": [
+                    "deprived of liberty"
+                  ],
+                  "Observation-Name": [
+                    "deprived of liberty"
+                  ],
+                  "Modifier": [
+                    "judicial"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or administrative decision",
+                  "Modifier": [
+                    "administrative"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Persons unable to express their consent",
+              "Eq-Operator": [
+                "to"
+              ]
+            },
+            "right": {
+              "raw_text": "or legally protected",
+              "Observation": [
+                "legally protected"
+              ],
+              "Observation-Name": [
+                "legally protected"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Persons in period of disqualification for another interventional research",
+      "Other": [
+        "another"
+      ],
+      "Study": [
+        "interventional research"
+      ]
+    }
+  }
+}
