@@ -1,0 +1,175 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients under tutorship or curatorship",
+                  "Condition": [
+                    "tutorship",
+                    "curatorship"
+                  ],
+                  "Condition-Name": [
+                    "tutorship",
+                    "curatorship"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or inability to give informed consent"
+                    },
+                    "right": {
+                      "raw_text": "- Patients receiving an anti-osteoporotic treatment",
+                      "Condition": [
+                        "osteoporotic"
+                      ],
+                      "Condition-Name": [
+                        "osteoporotic"
+                      ],
+                      "Procedure": [
+                        "treatment"
+                      ],
+                      "Eq-Comparison": [
+                        "receiving"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "receiving"
+                      ],
+                      "Assertion": [
+                        "inability"
+                      ],
+                      "Procedure-Name": [
+                        "anti-osteoporotic treatment"
+                      ],
+                      "Modifier": [
+                        "informed consent"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patients requiring an anti-osteoporotic baseline treatment (T-score ⩽ -3DS on at least 1 site",
+                  "Condition": [
+                    "osteoporotic"
+                  ],
+                  "Condition-Name": [
+                    "osteoporotic"
+                  ],
+                  "Procedure": [
+                    "treatment",
+                    "baseline treatment"
+                  ],
+                  "Procedure-Name": [
+                    "anti-osteoporotic baseline treatment",
+                    "anti-osteoporotic treatment"
+                  ],
+                  "Eq-Operator": [
+                    "⩽",
+                    "-",
+                    "at least"
+                  ],
+                  "Eq-Comparison": [
+                    "⩽ -3DS on at least 1 site"
+                  ],
+                  "Eq-Value": [
+                    "1",
+                    "3",
+                    "-3",
+                    "-3DS"
+                  ],
+                  "Observation": [
+                    "T-score"
+                  ],
+                  "Observation-Name": [
+                    "T-score"
+                  ],
+                  "Eq-Unit": [
+                    "site",
+                    "DS"
+                  ],
+                  "Assertion": [
+                    "requiring"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or FRAX score above the therapeutic intervention threshold)",
+                  "Eq-Comparison": [
+                    "above the therapeutic intervention threshold"
+                  ],
+                  "Eq-Value": [
+                    "above"
+                  ],
+                  "Eq-Unit": [
+                    "therapeutic intervention threshold"
+                  ],
+                  "Observation": [
+                    "FRAX score"
+                  ],
+                  "Observation-Name": [
+                    "FRAX score"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients with one or more major risk factors for osteoporosis",
+              "Condition": [
+                "osteoporosis"
+              ],
+              "Condition-Name": [
+                "osteoporosis"
+              ],
+              "Risk": [
+                "risk"
+              ],
+              "Polarity": [
+                "major"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patients who have received topical corticosteroids in less than 3 months",
+              "Eq-Comparison": [
+                "received",
+                "less than 3 months"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Temporal-Period": [
+                "received"
+              ],
+              "Drug": [
+                "topical corticosteroids"
+              ],
+              "Drug-Name": [
+                "topical corticosteroids"
+              ],
+              "Eq-Operator": [
+                "-",
+                "less than"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": ""
+    }
+  }
+}

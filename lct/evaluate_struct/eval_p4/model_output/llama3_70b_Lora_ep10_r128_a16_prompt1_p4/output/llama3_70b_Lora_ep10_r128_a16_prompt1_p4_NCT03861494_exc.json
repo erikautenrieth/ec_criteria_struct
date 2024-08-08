@@ -1,0 +1,136 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- admitted with transient ischemic attack",
+                              "Condition": [
+                                "ischemic attack"
+                              ],
+                              "Encounter": [
+                                "admitted"
+                              ],
+                              "Modifier": [
+                                "transient"
+                              ],
+                              "Condition-Name": [
+                                "ischemic attack"
+                              ],
+                              "Acuteness": [
+                                "transient"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- admitted with an intracerebral hemorrhage",
+                              "Condition": [
+                                "intracerebral hemorrhage"
+                              ],
+                              "Encounter": [
+                                "admitted"
+                              ],
+                              "Condition-Name": [
+                                "intracerebral hemorrhage"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- experience an in-hospital ischemic cerebral infarction",
+                          "Condition": [
+                            "cerebral infarction",
+                            "ischemic"
+                          ],
+                          "Encounter": [
+                            "in-hospital"
+                          ],
+                          "Condition-Name": [
+                            "cerebral infarction"
+                          ],
+                          "Modifier": [
+                            "ischemic"
+                          ],
+                          "Eq-Operator": [
+                            "to"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- hospital to hospital transfer patients",
+                      "Encounter": [
+                        "transfer",
+                        "hospital"
+                      ],
+                      "Eq-Operator": [
+                        "to"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- nursing home as primary residence before or after discharge",
+                  "Eq-Operator": [
+                    "to"
+                  ],
+                  "Encounter": [
+                    "discharge",
+                    "admitted"
+                  ],
+                  "Location": [
+                    "nursing home",
+                    "primary residence"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- hospice",
+              "Location": [
+                "hospice"
+              ],
+              "Eq-Operator": [
+                "to"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "-"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "inability to comply with post discharge follow up",
+                  "Encounter": [
+                    "discharge"
+                  ],
+                  "Negation": [
+                    "inability"
+                  ],
+                  "Assertion": [
+                    "inability"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "empty set"
+    }
+  }
+}

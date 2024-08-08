@@ -1,0 +1,50 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Patients transferred to a health facility",
+      "Location": [
+        "health facility"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "not supported by Damien Foundation will be excluded. This includes patients diagnosed",
+          "Negation": [
+            "not"
+          ],
+          "Location": [
+            "health facility"
+          ],
+          "Eq-Operator": [
+            "-"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "with HIV/",
+              "Condition": [
+                "HIV"
+              ],
+              "Condition-Name": [
+                "HIV"
+              ]
+            },
+            "right": {
+              "raw_text": "TB-coinfection.",
+              "Condition": [
+                "TB-coinfection",
+                "TB"
+              ],
+              "Condition-Name": [
+                "TB",
+                "TB-coinfection"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

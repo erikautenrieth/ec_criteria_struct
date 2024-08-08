@@ -1,0 +1,165 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patient's refusal"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or inability to consent",
+                      "Negation": [
+                        "inability"
+                      ],
+                      "Assertion": [
+                        "inability"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Allergy, hypersensibility",
+                      "Allergy": [
+                        "Allergy"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "or resistance to local anesthetic",
+              "Procedure": [
+                "local anesthetic"
+              ],
+              "Procedure-Name": [
+                "local anesthetic"
+              ],
+              "Condition": [
+                "resistance"
+              ],
+              "Condition-Name": [
+                "resistance"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Contraindication to regional anesthesia: infection in the designated area, severe congenital coagulopathy",
+              "Procedure": [
+                "regional anesthesia",
+                "infection"
+              ],
+              "Procedure-Name": [
+                "regional anesthesia",
+                "infection"
+              ],
+              "Contraindication": [
+                "Contraindication"
+              ],
+              "Condition": [
+                "congenital coagulopathy"
+              ],
+              "Condition-Name": [
+                "congenital coagulopathy"
+              ],
+              "Severity": [
+                "severe"
+              ],
+              "Modifier": [
+                "designated area"
+              ]
+            },
+            "right": {
+              "raw_text": "or inadequate hemostasis before PIFB",
+              "Procedure": [
+                "PIFB",
+                "hemostasis"
+              ],
+              "Procedure-Name": [
+                "PIFB",
+                "hemostasis"
+              ],
+              "Polarity": [
+                "inadequate"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Severe hepatic (Child B",
+          "Severity": [
+            "Severe"
+          ],
+          "Condition": [
+            "hepatic"
+          ],
+          "Condition-Name": [
+            "hepatic"
+          ],
+          "Eq-Comparison": [
+            "Child B"
+          ],
+          "Eq-Value": [
+            "B"
+          ],
+          "Eq-Unit": [
+            "Child"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "and C)",
+              "Eq-Comparison": [
+                "C"
+              ],
+              "Eq-Value": [
+                "C"
+              ]
+            },
+            "right": {
+              "raw_text": "or renal insufficiency (GFR<30 mL/min)",
+              "Condition": [
+                "renal insufficiency"
+              ],
+              "Condition-Name": [
+                "renal insufficiency"
+              ],
+              "Observation": [
+                "GFR"
+              ],
+              "Observation-Name": [
+                "GFR"
+              ],
+              "Eq-Comparison": [
+                "<30 mL/min"
+              ],
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "30"
+              ],
+              "Eq-Unit": [
+                "mL"
+              ],
+              "Eq-Temporal-Unit": [
+                "min"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
