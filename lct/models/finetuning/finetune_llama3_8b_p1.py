@@ -94,9 +94,9 @@ trainer = SFTTrainer(
     dataset_num_proc = 4,  
     packing = True,  
     args = TrainingArguments(
-        per_device_train_batch_size = 1,  
+        per_device_train_batch_size = 2,  
         gradient_accumulation_steps = 8,  
-        per_device_eval_batch_size = 2,   
+        per_device_eval_batch_size = 4,   
         num_train_epochs = epoch,  
         warmup_ratio = 0.1,  # 0.1
         learning_rate = 5e-5, # 5e-5
@@ -143,7 +143,7 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}_a{a}_b182")
+model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_ep{epoch}_r{r}_a{a}")
 
 
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
