@@ -1,0 +1,105 @@
+{
+  "OR": {
+    "left": {
+	      "raw_text": "- Persons diagnosed with pharyngeal gonorrhea",
+	      "Condition": [
+	        "gonorrhea"
+	      ],
+	      "Modifier": [
+	        "pharyngeal"
+	      ],
+	      "Condition-Name": [
+	        "gonorrhea"
+	      ]
+	    }
+	    "right": {
+	      "AND": {
+	        "left": {
+	          "raw_text": "or gonococcal urethritis",
+	          "Condition": [
+	            "gonococcal urethritis"
+	          ],
+	          "Condition-Name": [
+	            "gonococcal urethritis"
+	          ]
+	        },
+	        "right": {
+	          "AND": {
+	            "left": {
+	              "raw_text": "who are undergoing pharyngeal gonorrhea testing,",
+	              "Eq-Comparison": [
+	                "undergoing"
+	              ],
+	              "Condition": [
+	                "gonorrhea"
+	              ],
+	              "Observation": [
+	                "testing"
+	              ],
+	              "Eq-Temporal-Period": [
+	                "undergoing"
+	              ],
+	              "Modifier": [
+	                "pharyngeal"
+	              ],
+	              "Condition-Name": [
+	                "gonorrhea"
+	              ],
+	              "Observation-Name": [
+	                "testing"
+	              ]
+	            },
+	            "right": {
+	              "AND": {
+	                "left": {
+	                  "raw_text": "who are"
+	                }
+	                "right": {
+	                  "NOT": {
+	                    "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "not yet treated.",
+                              "Negation": [
+                                "not"
+                              ],
+                              "Eq-Comparison": [
+                                "yet"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "yet"
+                              ],
+                              "Procedure": [
+                                "treated"
+                              ]
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "for gonococcal urethritis",
+                                  "Condition": [
+                                    "gonococcal urethritis"
+                                  ],
+                                  "Condition-Name": [
+                                    "gonococcal urethritis"
+                                  ],
+                                  "Negation": [
+                                    "for"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

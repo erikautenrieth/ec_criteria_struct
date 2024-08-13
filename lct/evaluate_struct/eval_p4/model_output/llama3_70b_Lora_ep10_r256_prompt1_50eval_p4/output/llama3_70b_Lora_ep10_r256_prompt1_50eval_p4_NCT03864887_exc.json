@@ -1,0 +1,256 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients who are in pregnancy",
+                      "Condition": [
+                        "pregnancy"
+                      ],
+                      "Condition-Name": [
+                        "pregnancy"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or have plan to conception.",
+                      "Modifier": [
+                        "conception"
+                      ],
+                      "Assertion": [
+                        "plan to"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients who have vertebra surgery",
+                      "Procedure": [
+                        "surgery"
+                      ],
+                      "Procedure-Name": [
+                        "surgery"
+                      ],
+                      "Modifier": [
+                        "vertebra"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or have plan of surgery.",
+                      "Procedure": [
+                        "surgery"
+                      ],
+                      "Procedure-Name": [
+                        "surgery"
+                      ],
+                      "Assertion": [
+                        "plan"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patients who are",
+                  "Eq-Operator": [
+                    "-"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "inappropriate to join this trial judged by the radiologists or specialists.",
+                      "Study": [
+                        "trial"
+                      ],
+                      "Negation": [
+                        "inappropriate"
+                      ],
+                      "Eq-Value": [
+                        "one"
+                      ],
+                      "Provider": [
+                        "radiologists",
+                        "specialists"
+                      ],
+                      "Assertion": [
+                        "plan to"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- AIDS, Active Hepatitis, Tuberculosis,",
+                          "Condition": [
+                            "AIDS",
+                            "Hepatitis",
+                            "Tuberculosis"
+                          ],
+                          "Eq-Operator": [
+                            "-"
+                          ],
+                          "Condition-Name": [
+                            "AIDS",
+                            "Hepatitis",
+                            "Tuberculosis"
+                          ],
+                          "Eq-Comparison": [
+                            "Active"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "Active"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "Syphilis",
+                          "Condition": [
+                            "Syphilis"
+                          ],
+                          "Condition-Name": [
+                            "Syphilis"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients who regularly take anticoagulants,",
+              "Eq-Operator": [
+                "-"
+              ],
+              "Drug": [
+                "anticoagulants"
+              ],
+              "Eq-Comparison": [
+                "take"
+              ],
+              "Drug-Name": [
+                "anticoagulants"
+              ],
+              "Eq-Temporal-Period": [
+                "take"
+              ]
+            },
+            "right": {
+              "raw_text": "antiplatelet drugs",
+              "Drug": [
+                "antiplatelet drugs"
+              ],
+              "Drug-Name": [
+                "antiplatelet drugs"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients who are",
+          "Eq-Operator": [
+            "-"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "in",
+              "Eq-Operator": [
+                "to"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "inappropriate to join this trial judged by the radiologists",
+                      "Study": [
+                        "trial"
+                      ],
+                      "Negation": [
+                        "inappropriate"
+                      ],
+                      "Eq-Value": [
+                        "one"
+                      ],
+                      "Provider": [
+                        "radiologists"
+                      ],
+                      "Assertion": [
+                        "plan to"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or specialists.",
+                          "Provider": [
+                            "specialists"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- AIDS, Active Hepatitis, Tuberculosis,",
+                              "Condition": [
+                                "AIDS",
+                                "Hepatitis",
+                                "Tuberculosis"
+                              ],
+                              "Eq-Operator": [
+                                "-"
+                              ],
+                              "Condition-Name": [
+                                "AIDS",
+                                "Hepatitis",
+                                "Tuberculosis"
+                              ],
+                              "Eq-Comparison": [
+                                "Active"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "Active"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "Syphilis",
+                              "Condition": [
+                                "Syphilis"
+                              ],
+                              "Condition-Name": [
+                                "Syphilis"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

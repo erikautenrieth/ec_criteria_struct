@@ -1,0 +1,279 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patient's refusal or inability to consent"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Allergy, hypersensibility or resistance to local anesthetic",
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Eq-Comparison": [
+                    "on"
+                  ],
+                  "Procedure": [
+                    "local anesthetic"
+                  ],
+                  "Allergy": [
+                    "Allergy"
+                  ],
+                  "Assertion": [
+                    "resistance"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "on"
+                  ],
+                  "Procedure-Name": [
+                    "local anesthetic"
+                  ],
+                  "Modifier": [
+                    "hypersensibility"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Contraindication to regional anesthesia: infection in the designated area, severe congenital coagulopathy",
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Modifier": [
+                        "congenital"
+                      ],
+                      "Eq-Comparison": [
+                        "on"
+                      ],
+                      "Condition": [
+                        "infection",
+                        "coagulopathy"
+                      ],
+                      "Severity": [
+                        "severe"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "on"
+                      ],
+                      "Procedure": [
+                        "regional anesthesia"
+                      ],
+                      "Contraindication": [
+                        "Contraindication"
+                      ],
+                      "Procedure-Name": [
+                        "regional anesthesia"
+                      ],
+                      "Condition-Name": [
+                        "infection",
+                        "coagulopathy"
+                      ],
+                      "Eq-Value": [
+                        "I"
+                      ],
+                      "Modifier": [
+                        "designated area"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or inadequate hemostasis before PIFB",
+                          "Eq-Operator": [
+                            "-"
+                          ],
+                          "Condition": [
+                            "inadequate hemostasis",
+                            "PIFB"
+                          ],
+                          "Eq-Comparison": [
+                            "on"
+                          ],
+                          "Condition-Name": [
+                            "inadequate hemostasis",
+                            "PIFB"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "on"
+                          ],
+                          "Procedure": [
+                            "PIFB"
+                          ],
+                          "Procedure-Name": [
+                            "PIFB"
+                          ],
+                          "Eq-Value": [
+                            "I"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- Severe hepatic (Child B",
+                              "Eq-Operator": [
+                                "-"
+                              ],
+                              "Eq-Comparison": [
+                                "on"
+                              ],
+                              "Severity": [
+                                "Severe"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "on"
+                              ],
+                              "Condition": [
+                                "hepatic"
+                              ],
+                              "Eq-Value": [
+                                "B"
+                              ],
+                              "Modifier": [
+                                "Child"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "h"
+                              ],
+                              "Condition-Name": [
+                                "hepatic"
+                              ],
+                              "Eq-Unit": [
+                                "L"
+                              ],
+                              "Modifier": [
+                                "hepatic"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "and C) or renal insufficiency (GFR<30 mL/min)",
+                              "Eq-Operator": [
+                                "<"
+                              ],
+                              "Eq-Unit": [
+                                "mL",
+                                "min"
+                              ],
+                              "Eq-Value": [
+                                "I",
+                                "30",
+                                "C"
+                              ],
+                              "Eq-Comparison": [
+                                "<30 mL/min"
+                              ],
+                              "Modifier": [
+                                "renal"
+                              ],
+                              "Condition": [
+                                "insufficiency"
+                              ],
+                              "Condition-Name": [
+                                "insufficiency"
+                              ],
+                              "Observation-Name": [
+                                "GFR"
+                              ],
+                              "Observation": [
+                                "GFR"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Severe hepatic (Child B and C) or renal insufficiency (GFR<30 mL/min)",
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Unit": [
+            "mL",
+            "min"
+          ],
+          "Eq-Value": [
+            "B",
+            "30",
+            "C"
+          ],
+          "Eq-Comparison": [
+            "<30 mL/min"
+          ],
+          "Modifier": [
+            "renal",
+            "hepatic",
+            "Child"
+          ],
+          "Condition": [
+            "insufficiency"
+          ],
+          "Severity": [
+            "Severe"
+          ],
+          "Eq-Temporal-Unit": [
+            "h"
+          ],
+          "Observation-Name": [
+            "GFR"
+          ],
+          "Condition-Name": [
+            "insufficiency"
+          ],
+          "Observation": [
+            "GFR"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patient's refusal or inability to consent"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Allergy, hypersensibility",
+              "Eq-Operator": [
+                "-"
+              ],
+              "Allergy": [
+                "Allergy"
+              ],
+              "Modifier": [
+                "hypersensibility"
+              ]
+            },
+            "right": {
+              "raw_text": "or resistance to local anesthetic",
+              "Assertion": [
+                "resistance"
+              ],
+              "Procedure": [
+                "local anesthetic"
+              ],
+              "Eq-Comparison": [
+                "on"
+              ],
+              "Eq-Temporal-Period": [
+                "on"
+              ],
+              "Procedure-Name": [
+                "local anesthetic"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Be a patient in the Bellevue Hospital Center ED.",
+                  "Encounter": [
+                    "ED"
+                  ],
+                  "Location": [
+                    "Bellevue Hospital Center ED",
+                    "Bellevue Hospital Center"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Be ≥18 years old.",
+                  "Eq-Operator": [
+                    "≥"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "old"
+                  ],
+                  "Eq-Value": [
+                    "18"
+                  ],
+                  "Eq-Comparison": [
+                    "≥18 years"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Screen positive for homelessness risk using a homelessness risk screening tool (HRST).",
+              "Observation": [
+                "homelessness risk screening tool",
+                "HRST"
+              ],
+              "Polarity": [
+                "positive"
+              ],
+              "Eq-Value": [
+                "one"
+              ],
+              "Observation-Name": [
+                "homelessness risk screening tool",
+                "HRST"
+              ],
+              "Risk": [
+                "risk"
+              ],
+              "Assertion": [
+                "Screen"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Screen positive for unhealthy alcohol",
+              "Eq-Value": [
+                "one"
+              ],
+              "Modifier": [
+                "alcohol"
+              ],
+              "Polarity": [
+                "positive"
+              ],
+              "Assertion": [
+                "Screen"
+              ],
+              "Observation": [
+                "alcohol"
+              ],
+              "Observation-Name": [
+                "alcohol"
+              ]
+            },
+            "right": {
+              "raw_text": "or drug use.",
+              "Modifier": [
+                "drug"
+              ],
+              "Observation": [
+                "drug use"
+              ],
+              "Observation-Name": [
+                "drug use"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Able to provide consent.",
+      "Eq-Value": [
+        "one"
+      ]
+    }
+  }
+}

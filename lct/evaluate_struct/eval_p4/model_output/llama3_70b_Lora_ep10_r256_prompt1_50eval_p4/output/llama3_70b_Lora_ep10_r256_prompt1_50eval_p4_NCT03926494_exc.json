@@ -1,0 +1,90 @@
+{
+  "AND": {
+    "left": {
+	      "AND": {
+	        "left": {
+	          "raw_text": "- Pregnant woman;",
+	          "Condition": [
+	            "Pregnant"
+	          ],
+	          "Condition-Name": [
+	            "Pregnant"
+	          ],
+	          "Life-Stage-And-Gender": [
+	            "woman"
+	          ]
+	        },
+	        "right": {
+	          "AND": {
+	            "left": {
+	              "raw_text": "- Patient present clinical signes of stroke",
+	              "Condition": [
+	                "stroke"
+	              ],
+	              "Condition-Name": [
+	                "stroke"
+	              ],
+	              "Assertion": [
+	                "signes"
+	              ]
+	            },
+	            "right": {
+	              "AND": {
+	                "left": {
+                      "raw_text": "and"
+                    }
+	                },
+	                "right": {
+	                  "NOT": {
+	                    "left": {
+	                      "OR": {
+                        "left": {
+                          "raw_text": "without CO detection.",
+                          "Negation": [
+                            "without"
+                          ],
+                          "Eq-Value": [
+                            "O"
+                          ],
+                          "Observation-Name": [
+                            "CO detection",
+                            "detection"
+                          ],
+                          "Observation": [
+                            "CO detection",
+                            "detection"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "In case of unusable data, patient will be excluded from study.",
+                          "Eq-Value": [
+                            "O"
+                          ],
+                          "Eq-Unit": [
+                            "ml"
+                          ],
+                          "Study": [
+                            "study"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "In case of unusable data, patient will be excluded from study.",
+      "Eq-Value": [
+        "O"
+      ],
+      "Study": [
+        "study"
+      ]
+    }
+  }
+}

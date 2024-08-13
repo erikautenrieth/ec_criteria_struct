@@ -1,0 +1,158 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- (1) having fetus with abnormality",
+          "Modifier": [
+            "fetus"
+          ],
+          "Condition": [
+            "abnormality"
+          ],
+          "Condition-Name": [
+            "abnormality"
+          ]
+        },
+        "right": {
+          "raw_text": "- (2) high-risk pregnancy",
+          "Condition": [
+            "pregnancy"
+          ],
+          "Condition-Name": [
+            "pregnancy"
+          ],
+          "Risk": [
+            "risk"
+          ],
+          "Polarity": [
+            "high"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- (3) cannot room-in due to newborn's medical conditions",
+          "Assertion": [
+            "cannot"
+          ],
+          "Modifier": [
+            "newborn"
+          ],
+          "Condition": [
+            "medical conditions"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "that require medical monitoring of the infant",
+                  "Modifier": [
+                    "infant"
+                  ],
+                  "Procedure": [
+                    "medical monitoring"
+                  ],
+                  "Negation": [
+                    "no"
+                  ],
+                  "Procedure-Name": [
+                    "medical monitoring"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "such as prematurity (",
+                      "Condition": [
+                        "prematurity"
+                      ],
+                      "Condition-Name": [
+                        "prematurity"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "genetics disorders,",
+                          "Modifier": [
+                            "genetics"
+                          ],
+                          "Condition": [
+                            "disorders"
+                          ],
+                          "Condition-Name": [
+                            "disorders"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "cardiovascular",
+                              "Modifier": [
+                                "cardiovascular"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "digestive",
+                                  "Modifier": [
+                                    "digestive"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "malformations,",
+                                      "Condition": [
+                                        "malformations"
+                                      ],
+                                      "Condition-Name": [
+                                        "malformations"
+                                      ]
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "infections,",
+                                          "Modifier": [
+                                            "infections"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "and genetic syndromes.)",
+                                          "Modifier": [
+                                            "genetic"
+                                          ],
+                                          "Condition": [
+                                            "syndromes"
+                                          ],
+                                          "Condition-Name": [
+                                            "syndromes"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

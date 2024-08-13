@@ -1,0 +1,150 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Age < 18 years old",
+                  "Eq-Operator": [
+                    "<"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "Age"
+                  ],
+                  "Eq-Value": [
+                    "18"
+                  ],
+                  "Eq-Comparison": [
+                    "< 18 years"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Unstable cardiac disease",
+                  "Condition": [
+                    "cardiac disease"
+                  ],
+                  "Stability": [
+                    "Unstable"
+                  ],
+                  "Condition-Name": [
+                    "cardiac disease"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Musculoskeletal",
+                  "Modifier": [
+                    "Musculoskeletal"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "and neurological diseases that could affect exercise performance",
+                      "Condition": [
+                        "disease",
+                        "diseases"
+                      ],
+                      "Modifier": [
+                        "neurological"
+                      ],
+                      "Observation": [
+                        "exercise performance"
+                      ],
+                      "Assertion": [
+                        "could"
+                      ],
+                      "Condition-Name": [
+                        "disease"
+                      ],
+                      "Observation-Name": [
+                        "exercise performance"
+                      ],
+                      "Stability": [
+                        "affect"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or preclude exercise",
+                      "Observation": [
+                        "exercise"
+                      ],
+                      "Observation-Name": [
+                        "exercise"
+                      ],
+                      "Negation": [
+                        "preclude"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients of COPD final stage",
+              "Condition": [
+                "COPD"
+              ],
+              "Condition-Name": [
+                "COPD"
+              ]
+            },
+            "right": {
+              "raw_text": "or other serious disease final stage",
+              "Other": [
+                "other"
+              ],
+              "Condition": [
+                "disease"
+              ],
+              "Condition-Name": [
+                "disease"
+              ],
+              "Severity": [
+                "serious"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Significant cognitive",
+          "Modifier": [
+            "cognitive"
+          ],
+          "Severity": [
+            "Significant"
+          ]
+        },
+        "right": {
+          "raw_text": "or psychiatric impairment that would lead to an inability to follow simple commands in a group setting",
+          "Modifier": [
+            "psychiatric"
+          ],
+          "Condition": [
+            "impairment"
+          ],
+          "Condition-Name": [
+            "impairment"
+          ]
+        }
+      }
+    }
+  }
+}

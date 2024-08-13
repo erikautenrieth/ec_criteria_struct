@@ -1,0 +1,207 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients under tutorship",
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Observation": [
+                        "tutorship"
+                      ],
+                      "Eq-Comparison": [
+                        "under"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "under"
+                      ],
+                      "Observation-Name": [
+                        "tutorship"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or curatorship",
+                          "Observation": [
+                            "curatorship"
+                          ],
+                          "Observation-Name": [
+                            "curatorship"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "or"
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "inability to give informed consent",
+                                  "Eq-Operator": [
+                                    "-"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "on"
+                                  ],
+                                  "Eq-Temporal-Period": [
+                                    "on"
+                                  ],
+                                  "Negation": [
+                                    "inability"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Patients receiving an anti-osteoporotic treatment",
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Drug": [
+                    "anti-osteoporotic treatment"
+                  ],
+                  "Drug-Name": [
+                    "anti-osteoporotic treatment"
+                  ],
+                  "Eq-Comparison": [
+                    "receiving"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "receiving"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patients requiring an anti-osteoporotic baseline treatment (T-score ⩽ -3DS on at least 1 site",
+                  "Assertion": [
+                    "requiring"
+                  ],
+                  "Drug": [
+                    "anti-osteoporotic treatment",
+                    "anti-osteoporotic baseline treatment"
+                  ],
+                  "Eq-Operator": [
+                    "⩽",
+                    "at least",
+                    "-"
+                  ],
+                  "Eq-Comparison": [
+                    "at least 1 site",
+                    "-3DS"
+                  ],
+                  "Drug-Name": [
+                    "anti-osteoporotic treatment",
+                    "anti-osteoporotic baseline treatment"
+                  ],
+                  "Eq-Value": [
+                    "3",
+                    "1"
+                  ],
+                  "Eq-Unit": [
+                    "DS",
+                    "site"
+                  ],
+                  "Observation": [
+                    "T-score"
+                  ],
+                  "Observation-Name": [
+                    "T-score"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or FRAX score above the therapeutic intervention threshold)",
+                  "Eq-Operator": [
+                    "above"
+                  ],
+                  "Eq-Value": [
+                    "the therapeutic intervention"
+                  ],
+                  "Eq-Comparison": [
+                    "above the therapeutic intervention"
+                  ],
+                  "Observation": [
+                    "FRAX score"
+                  ],
+                  "Observation-Name": [
+                    "FRAX score"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patients with one or more major risk factors for osteoporosis",
+          "Eq-Operator": [
+            "or more",
+            "-"
+          ],
+          "Eq-Comparison": [
+            "one or more"
+          ],
+          "Eq-Value": [
+            "one"
+          ],
+          "Risk": [
+            "risk"
+          ],
+          "Condition": [
+            "osteoporosis"
+          ],
+          "Severity": [
+            "major"
+          ],
+          "Condition-Name": [
+            "osteoporosis"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Patients who have received topical corticosteroids in less than 3 months",
+      "Eq-Operator": [
+        "less than",
+        "-"
+      ],
+      "Eq-Comparison": [
+        "received",
+        "less than 3 months"
+      ],
+      "Eq-Temporal-Period": [
+        "received"
+      ],
+      "Eq-Value": [
+        "3"
+      ],
+      "Eq-Temporal-Unit": [
+        "months"
+      ],
+      "Drug": [
+        "corticosteroids",
+        "topical corticosteroids"
+      ],
+      "Drug-Name": [
+        "corticosteroids",
+        "topical corticosteroids"
+      ]
+    }
+  }
+}

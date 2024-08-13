@@ -1,0 +1,159 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. Female (mandatory)",
+                  "Life-Stage-And-Gender": [
+                    "Female"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "2."
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Not currently pregnant",
+                              "Condition": [
+                                "pregnant"
+                              ],
+                              "Eq-Comparison": [
+                                "currently"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "currently"
+                              ],
+                              "Negation": [
+                                "Not"
+                              ],
+                              "Condition-Name": [
+                                "pregnant"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or nursing (pregnancy affects PdG levels)",
+                              "Condition": [
+                                "nursing",
+                                "pregnancy"
+                              ],
+                              "Eq-Comparison": [
+                                "currently"
+                              ],
+                              "Observation": [
+                                "PdG levels"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "currently"
+                              ],
+                              "Condition-Name": [
+                                "nursing",
+                                "pregnancy"
+                              ],
+                              "Observation-Name": [
+                                "PdG levels"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "3. Aged 18-34 (advanced age can hinder PdG levels)",
+              "Eq-Comparison": [
+                "18-34"
+              ],
+              "Eq-Value": [
+                "18",
+                "34"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Age": [
+                "Aged",
+                "age"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Observation": [
+                "PdG levels"
+              ],
+              "Eq-Unit": [
+                "years"
+              ],
+              "Eq-Temporal-Period": [
+                "years"
+              ],
+              "Observation-Name": [
+                "PdG levels"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "4. Cycle length of 26-39 days (long or short cycles have inconsistent PdG levels)",
+          "Eq-Comparison": [
+            "26-39 days",
+            "long or short cycles"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Eq-Value": [
+            "26",
+            "39"
+          ],
+          "Eq-Temporal-Unit": [
+            "days"
+          ],
+          "Observation": [
+            "PdG levels"
+          ],
+          "Observation-Name": [
+            "PdG levels"
+          ],
+          "Eq-Unit": [
+            "cycles"
+          ],
+          "Modifier": [
+            "long or short cycles"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "5. Currently use other fertility monitoring tools (this allows us to compare Proov - Ovulation Double Check test results with other fertility tracking methods)",
+      "Eq-Comparison": [
+        "Currently"
+      ],
+      "Eq-Temporal-Period": [
+        "Currently"
+      ],
+      "Observation": [
+        "Proov - Ovulation Double Check test",
+        "fertility tracking methods"
+      ],
+      "Observation-Name": [
+        "Proov - Ovulation Double Check test",
+        "fertility tracking methods"
+      ],
+      "Eq-Unit": [
+        "Other"
+      ]
+    }
+  }
+}

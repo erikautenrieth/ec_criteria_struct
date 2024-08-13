@@ -1,0 +1,163 @@
+{
+  "AND": {
+    "left": {
+	      "AND": {
+	        "left": {
+	          "AND": {
+	            "left": {
+	              "AND": {
+	                "left": {
+	                  "raw_text": "- Recent cardiorespiratory exacerbation (<6 weeks).",
+	                  "Acuteness": [
+	                    "Recent"
+	                  ],
+	                  "Condition": [
+	                    "cardiorespiratory exacerbation"
+	                  ],
+	                  "Eq-Comparison": [
+	                    "<6 weeks"
+	                  ],
+	                  "Eq-Operator": [
+	                    "<"
+	                  ],
+	                  "Eq-Value": [
+	                    "6"
+	                  ],
+	                  "Eq-Temporal-Unit": [
+	                    "weeks"
+	                  ],
+	                  "Condition-Name": [
+	                    "cardiorespiratory exacerbation"
+	                  ]
+	                },
+	                "right": {
+	                  "raw_text": "- Pulmonary rehabilitation program during the last 2 months",
+	                  "Procedure": [
+	                    "Pulmonary rehabilitation program"
+	                  ],
+	                  "Eq-Comparison": [
+	                    "last 2 months"
+	                  ],
+	                  "Procedure-Name": [
+	                    "Pulmonary rehabilitation program"
+	                  ],
+	                  "Eq-Temporal-Unit": [
+	                    "months"
+	                  ],
+	                  "Eq-Temporal-Period": [
+	                    "last"
+	                  ],
+	                  "Eq-Value": [
+	                    "2"
+	                  ]
+	                }
+	              }
+	            },
+	            "right": {
+	              "OR": {
+	                "left": {
+	                  "raw_text": "- Continuous LTOT (24 hours), or deambulation O2 therapy",
+	                  "Procedure": [
+	                    "LTOT",
+	                    "O2 therapy",
+	                    "therapy"
+	                  ],
+	                  "Procedure-Name": [
+	                    "LTOT",
+	                    "O2 therapy",
+	                    "therapy"
+                  ],
+	                  "Eq-Comparison": [
+	                    "Continuous"
+                  ],
+	                  "Eq-Temporal-Unit": [
+	                    "hours"
+                  ],
+	                  "Modifier": [
+	                    "deambulation"
+                  ]
+	                },
+	                "right": {
+	                  "AND": {
+	                    "left": {
+						  "raw_text": "alone",
+                          "Modifier": [
+                            "alone"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "or deambulation O2 therapy alone",
+                              "Procedure": [
+                                "O2 therapy",
+                                "therapy"
+                              ],
+                              "Eq-Comparison": [
+                                "alone"
+                              ],
+                              "Procedure-Name": [
+                                "O2 therapy",
+                                "therapy"
+                              ],
+                              "Modifier": [
+                                "deambulation"
+                              ],
+                              "Negation": [
+                                "alone"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Anticoagulant drugs",
+          "Drug": [
+            "Anticoagulant drugs"
+          ],
+          "Drug-Name": [
+            "Anticoagulant drugs"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Hematocrit outside the normal range (35-50%)",
+      "Eq-Value": [
+        "35",
+        "50"
+      ],
+      "Eq-Comparison": [
+        "35-50%"
+      ],
+      "Eq-Operator": [
+        "-"
+      ],
+      "Eq-Unit": [
+        "%"
+      ],
+      "Eq-Range": [
+        "range"
+      ],
+      "Eq-Temporal-Unit": [
+        "s"
+      ],
+      "Observation": [
+        "Hematocrit"
+      ],
+      "Observation-Name": [
+        "Hematocrit"
+      ],
+      "Polarity": [
+        "outside the normal"
+      ]
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Parent or guardian is unable or unwilling to provide informed consent."
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- The patient is"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "unable to receive a blood draw/",
+                  "Assertion": [
+                    "unable to receive"
+                  ],
+                  "Procedure": [
+                    "blood draw"
+                  ],
+                  "Procedure-Name": [
+                    "blood draw"
+                  ],
+                  "Negation": [
+                    "unable"
+                  ]
+                },
+                "right": {
+                  "raw_text": "heel stick as determined by their clinician.",
+                  "Procedure": [
+                    "heel stick"
+                  ],
+                  "Procedure-Name": [
+                    "heel stick"
+                  ],
+                  "Provider": [
+                    "clinician"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

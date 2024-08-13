@@ -1,0 +1,153 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- admitted with transient ischemic attack",
+                              "Condition": [
+                                "ischemic attack"
+                              ],
+                              "Acuteness": [
+                                "transient"
+                              ],
+                              "Condition-Name": [
+                                "ischemic attack"
+                              ],
+                              "Encounter": [
+                                "admitted"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- admitted with an intracerebral hemorrhage",
+                              "Condition": [
+                                "intracerebral hemorrhage"
+                              ],
+                              "Encounter": [
+                                "admitted"
+                              ],
+                              "Condition-Name": [
+                                "intracerebral hemorrhage"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- experience an in-hospital ischemic cerebral infarction",
+                          "Condition": [
+                            "ischemic cerebral infarction",
+                            "ischemic"
+                          ],
+                          "Condition-Name": [
+                            "ischemic cerebral infarction",
+                            "ischemic"
+                          ],
+                          "Location": [
+                            "hospital"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- hospital to hospital transfer patients",
+                      "Encounter": [
+                        "transfer"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- nursing home as primary residence before",
+                      "Location": [
+                        "nursing home",
+                        "primary residence"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or after discharge",
+                          "Encounter": [
+                            "discharge"
+                          ],
+                          "Eq-Comparison": [
+                            "on"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "on"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "hospice",
+                              "Location": [
+                                "hospice"
+                              ],
+                              "Negation": [
+                                "hospice"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "-",
+                  "Eq-Operator": [
+                    "-"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "inability to comply with post discharge follow up",
+                      "Eq-Comparison": [
+                        "on"
+                      ],
+                      "Encounter": [
+                        "discharge"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "on"
+                      ],
+                      "Assertion": [
+                        "inability"
+                      ],
+                      "Negation": [
+                        "inability"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "empty set"
+        }
+      }
+    },
+    "right": {
+      "raw_text": "empty set"
+    }
+  }
+}

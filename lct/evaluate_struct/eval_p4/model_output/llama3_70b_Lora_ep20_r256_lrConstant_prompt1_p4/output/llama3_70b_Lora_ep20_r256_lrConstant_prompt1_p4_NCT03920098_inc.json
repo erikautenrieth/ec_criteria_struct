@@ -1,0 +1,105 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Primipara (no previous pregnancies)",
+              "Condition": [
+                "pregnancies"
+              ],
+              "Condition-Name": [
+                "pregnancies"
+              ],
+              "Modifier": [
+                "previous"
+              ],
+              "Negation": [
+                "no"
+              ]
+            },
+            "right": {
+              "raw_text": "- 18 to 25 years of age",
+              "Eq-Comparison": [
+                "18 to 25 years"
+              ],
+              "Eq-Value": [
+                "18",
+                "25"
+              ],
+              "Eq-Operator": [
+                "to"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Age": [
+                "age"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Gestation <15 weeks at first prenatal visit",
+          "Observation": [
+            "Gestation"
+          ],
+          "Eq-Comparison": [
+            "<15 weeks"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Observation-Name": [
+            "Gestation"
+          ],
+          "Eq-Value": [
+            "15"
+          ],
+          "Eq-Temporal-Unit": [
+            "weeks"
+          ],
+          "Encounter": [
+            "visit"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-",
+          "Eq-Operator": [
+            "-"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "No intention to move outside the city of Santiago in the next to years",
+              "Eq-Comparison": [
+                "next to years"
+              ],
+              "Eq-Temporal-Period": [
+                "next"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Negation": [
+                "No"
+              ],
+              "Assertion": [
+                "intention"
+              ],
+              "Location": [
+                "city of Santiago"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Edentulous mouth.",
+              "Modifier": [
+                "Edentulous mouth"
+              ]
+            },
+            "right": {
+              "raw_text": "- Pregnant females.",
+              "Life-Stage-And-Gender": [
+                "females",
+                "female"
+              ],
+              "Condition": [
+                "Pregnant"
+              ],
+              "Condition-Name": [
+                "Pregnant"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Having received professional periodontal treatment (other than supragingival cleaning)",
+              "Eq-Operator": [
+                "-"
+              ],
+              "Eq-Comparison": [
+                "received"
+              ],
+              "Eq-Temporal-Period": [
+                "received"
+              ],
+              "Procedure": [
+                "professional periodontal treatment",
+                "supragingival cleaning"
+              ],
+              "Other": [
+                "other"
+              ],
+              "Exception": [
+                "other than"
+              ],
+              "Procedure-Name": [
+                "professional periodontal treatment",
+                "supragingival cleaning"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "within the previous 12 months.",
+                  "Eq-Operator": [
+                    "within"
+                  ],
+                  "Eq-Comparison": [
+                    "within the previous 12 months",
+                    "previous 12 months"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "previous"
+                  ],
+                  "Eq-Value": [
+                    "12"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Having received antibiotic medication",
+                          "Drug": [
+                            "antibiotic medication"
+                          ],
+                          "Eq-Comparison": [
+                            "received"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "received"
+                          ],
+                          "Drug-Name": [
+                            "antibiotic medication"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "within the previous 3 months.",
+                              "Eq-Operator": [
+                                "within"
+                              ],
+                              "Eq-Comparison": [
+                                "within the previous 3 months",
+                                "previous 3 months"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "months"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "previous"
+                              ],
+                              "Eq-Value": [
+                                "3"
+                              ],
+                              "Negation": [
+                                "within the previous"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Having received antibiotic medication within the previous 3 months.",
+      "Eq-Operator": [
+        "within",
+        "-"
+      ],
+      "Eq-Comparison": [
+        "within the previous 3 months",
+        "received",
+        "previous 3 months"
+      ],
+      "Eq-Temporal-Unit": [
+        "months"
+      ],
+      "Drug": [
+        "antibiotic medication"
+      ],
+      "Eq-Temporal-Period": [
+        "received",
+        "previous"
+      ],
+      "Drug-Name": [
+        "antibiotic medication"
+      ],
+      "Eq-Value": [
+        "3"
+      ]
+    }
+  }
+}

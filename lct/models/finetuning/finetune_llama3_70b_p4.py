@@ -11,9 +11,9 @@ load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False
 
 
 r = 256
-epoch = 20
+epoch = 40
 
-output_dir  = "outputs/outputs_70b_p4_6" # outputs_70b_p4_5
+output_dir  = "outputs/outputs_70b_p4_2" # outputs_70b_p4_5
 os.makedirs(output_dir, exist_ok=True)
 
 
@@ -91,14 +91,14 @@ trainer = SFTTrainer(
         bf16 = torch.cuda.is_bf16_supported(),
         optim = "adamw_8bit",
         weight_decay = 0.05,  
-        lr_scheduler_type = "constant",  # cosine (default)
+        lr_scheduler_type = "cosine",  # cosine (default)
         seed = 42, 
         output_dir = output_dir,
         logging_steps = 50,  
         evaluation_strategy = 'steps',  
-        eval_steps = 100,  
+        eval_steps = 50,  # 100
         save_strategy = 'steps',  
-        save_steps = 100,  
+        save_steps = 50,  # 100
         load_best_model_at_end = True,
         metric_for_best_model = "eval_loss", 
         greater_is_better = False,  
@@ -131,4 +131,4 @@ print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
 
-model.save_pretrained(f"70b_p4/llama3_70b_Lora_ep{epoch}_r{r}_lrConstant_prompt1_p4") 
+model.save_pretrained(f"70b_p4/llama3_70b_Lora_ep{epoch}_r{r}_prompt1_50eval_p4") 

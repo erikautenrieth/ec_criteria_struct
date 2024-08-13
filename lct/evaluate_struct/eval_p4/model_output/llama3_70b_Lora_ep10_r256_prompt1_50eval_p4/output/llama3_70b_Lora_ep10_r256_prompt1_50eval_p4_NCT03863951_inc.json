@@ -1,0 +1,170 @@
+{
+  "AND": {
+    "left": {
+	      "AND": {
+	        "left": {
+	          "OR": {
+	            "left": {
+	              "raw_text": "- diagnosed with the first ever acute ischemic stroke occurring within 2 weeks",
+	              "Eq-Operator": [
+	                "within"
+	              ],
+	              "Eq-Value": [
+	                "2"
+	              ],
+	              "Eq-Comparison": [
+	                "within 2 weeks"
+	              ],
+	              "Modifier": [
+	                "acute ischemic"
+	              ],
+	              "Eq-Temporal-Unit": [
+	                "weeks"
+	              ],
+	              "Condition": [
+	                "stroke"
+	              ],
+	              "Condition-Name": [
+	                "stroke"
+	              ]
+	            },
+	            "right": {
+	              "OR": {
+	                "left": {
+	                  "raw_text": "and were confirmed by CT",
+	                  "Procedure": [
+	                    "CT"
+	                  ],
+	                  "Procedure-Name": [
+	                    "CT"
+	                  ]
+	                },
+	                "right": {
+	                  "AND": {
+	                    "left": {
+					      "raw_text": "or MRI,",
+					      "Procedure": [
+	                        "MRI"
+					      ],
+					      "Procedure-Name": [
+	                        "MRI"
+					      ]
+	                    },
+	                    "right": {
+					      "raw_text": "- has no history of depression or use of antidepressants or antipsychotics,",
+                          "Eq-Value": [
+                            "2"
+                          ],
+                          "Eq-Comparison": [
+                            "history"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "history"
+                          ],
+                          "Drug": [
+                            "antidepressants",
+                            "antipsychotics"
+                          ],
+                          "Drug-Name": [
+                            "antidepressants",
+                            "antipsychotics"
+                          ],
+                          "Negation": [
+                            "no"
+                          ],
+                          "Condition": [
+                            "depression"
+                          ],
+                          "Condition-Name": [
+                            "depression"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- were competent to consent to take part in this research. The participant",
+              "Eq-Value": [
+                "2"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "has no history of depression",
+                      "Eq-Value": [
+                        "2"
+                      ],
+                      "Eq-Comparison": [
+                        "history"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "history"
+                      ],
+                      "Negation": [
+                        "no"
+                      ],
+                      "Condition": [
+                        "depression"
+                      ],
+                      "Condition-Name": [
+                        "depression"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or use of antidepressants",
+                          "Drug": [
+                            "antidepressants"
+                          ],
+                          "Drug-Name": [
+                            "antidepressants"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "or antipsychotics,",
+                              "Drug": [
+                                "antipsychotics"
+                              ],
+                              "Drug-Name": [
+                                "antipsychotics"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "is able to complete the follow-up visits",
+                              "Encounter": [
+                                "follow-up visits"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- were competent to consent to take part in this research.",
+      "Eq-Value": [
+        "2"
+      ]
+    }
+  }
+}

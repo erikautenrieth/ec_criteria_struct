@@ -1,0 +1,23 @@
+/usr/lib64/python3.9/site-packages/scipy/__init__.py:138: UserWarning: A NumPy version >=1.16.5 and <1.23.0 is required for this version of SciPy (detected version 1.26.4)
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion} is required for this version of "
+2024-08-12 17:59:03.981428: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-08-12 17:59:05.557268: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:12<01:02, 12.42s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:24<00:49, 12.36s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:37<00:37, 12.36s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:49<00:24, 12.43s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [01:01<00:12, 12.36s/it]Loading checkpoint shards: 100%|██████████| 6/6 [01:10<00:00, 11.01s/it]Loading checkpoint shards: 100%|██████████| 6/6 [01:10<00:00, 11.71s/it]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Unsloth: Dropout = 0 is supported for fast patching. You are using dropout = 0.05.
+Unsloth will patch all other layers, except LoRA matrices, causing a performance hit.
+Unsloth 2024.6 patched 80 layers with 0 QKV layers, 0 O layers and 0 MLP layers.
+Map:   0%|          | 0/1609 [00:00<?, ? examples/s]Map: 100%|██████████| 1609/1609 [00:00<00:00, 14728.68 examples/s]Map: 100%|██████████| 1609/1609 [00:00<00:00, 13628.62 examples/s]
+Map:   0%|          | 0/403 [00:00<?, ? examples/s]Map: 100%|██████████| 403/403 [00:00<00:00, 15355.66 examples/s]
+Traceback (most recent call last):
+  File "/work/eauten2s/ec_criteria_struct/lct/models/finetuning/finetune_llama3_70b_p4_train.py", line 70, in <module>
+    trainer = SFTTrainer(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/trl/trainer/sft_trainer.py", line 283, in __init__
+    train_dataset = self._prepare_dataset(
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/trl/trainer/sft_trainer.py", line 424, in _prepare_dataset
+    return self._prepare_non_packed_dataloader(
+  File "<string>", line 16, in _prepare_non_packed_dataloader
+  File "/home/eauten2s/.local/lib/python3.9/site-packages/datasets/dataset_dict.py", line 81, in __getitem__
+    raise KeyError(
+KeyError: "Invalid key: 0. Please first select a split. For example: `my_dataset_dictionary['train'][0]`. Available splits: ['test', 'train']"

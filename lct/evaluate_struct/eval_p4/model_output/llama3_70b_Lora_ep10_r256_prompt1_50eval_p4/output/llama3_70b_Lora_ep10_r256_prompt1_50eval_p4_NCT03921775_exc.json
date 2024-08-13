@@ -1,0 +1,413 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "1. Patients scheduled for emergency surgery",
+                              "Eq-Comparison": [
+                                "scheduled"
+                              ],
+                              "Procedure": [
+                                "surgery"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "scheduled"
+                              ],
+                              "Procedure-Name": [
+                                "surgery"
+                              ],
+                              "Modifier": [
+                                "emergency"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "2. Patients with a history of drug abuse",
+                                  "Eq-Comparison": [
+                                    "history"
+                                  ],
+                                  "Modifier": [
+                                    "drug abuse"
+                                  ],
+                                  "Eq-Temporal-Period": [
+                                    "history"
+                                  ],
+                                  "Observation": [
+                                    "drug"
+                                  ],
+                                  "Observation-Name": [
+                                    "drug"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "and / or alcohol abuse 2 years prior to the screening period",
+                                  "Eq-Comparison": [
+                                    "2 years"
+                                  ],
+                                  "Modifier": [
+                                    "alcohol abuse"
+                                  ],
+                                  "Eq-Value": [
+                                    "2"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "years"
+                                  ],
+                                  "Study": [
+                                    "screening"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "3. One or more of the laboratory findings fall out of the limitations for this study(platelet,",
+                              "Eq-Comparison": [
+                                "One or more"
+                              ],
+                              "Eq-Value": [
+                                "One"
+                              ],
+                              "Eq-Operator": [
+                                "or more"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "h"
+                              ],
+                              "Observation": [
+                                "laboratory findings",
+                                "platelet"
+                              ],
+                              "Observation-Name": [
+                                "laboratory findings",
+                                "platelet"
+                              ],
+                              "Study": [
+                                "study"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "hemoglobin,",
+                                  "Eq-Value": [
+                                    "g"
+                                  ],
+                                  "Observation": [
+                                    "hemoglobin"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "h"
+                                  ],
+                                  "Observation-Name": [
+                                    "hemoglobin"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "aspartate aminotransferase,",
+                                      "Eq-Value": [
+                                        "a"
+                                      ],
+                                      "Eq-Temporal-Unit": [
+                                        "h"
+                                      ],
+                                      "Observation": [
+                                        "aspartate aminotransferase"
+                                      ],
+                                      "Eq-Temporal-Unit": [
+                                        "h"
+                                      ],
+                                      "Observation-Name": [
+                                        "aspartate aminotransferase"
+                                      ]
+                                    },
+                                    "right": {
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "etc.)",
+                                          "Eq-Value": [
+                                            "e"
+                                          ],
+                                          "Eq-Temporal-Unit": [
+                                            "h"
+                                          ]
+                                        },
+                                        "right": {
+                                          "OR": {
+                                            "left": {
+                                              "raw_text": "4. Pregnant women",
+                                              "Condition": [
+                                                "Pregnant"
+                                              ],
+                                              "Life-Stage-And-Gender": [
+                                                "women"
+                                              ],
+                                              "Condition-Name": [
+                                                "Pregnant"
+                                              ]
+                                            },
+                                            "right": {
+                                              "raw_text": "or those in lactation period",
+                                              "Eq-Value": [
+                                                "e"
+                                              ],
+                                              "Condition": [
+                                                "lactation"
+                                              ],
+                                              "Condition-Name": [
+                                                "lactation"
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "5. Allergic to drugs used in the study",
+                          "Eq-Value": [
+                            "e"
+                          ],
+                          "Observation": [
+                            "drug",
+                            "drugs"
+                          ],
+                          "Drug": [
+                            "drug",
+                            "drugs"
+                          ],
+                          "Study": [
+                            "study"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "h"
+                          ],
+                          "Allergy": [
+                            "Allergic"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or alcohol",
+                          "Eq-Value": [
+                            "a"
+                          ],
+                          "Modifier": [
+                            "alcohol"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "h"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "6. Patients with respiratory management difficulties (Modified Mallampati grade IV)",
+                  "Eq-Comparison": [
+                    "grade IV"
+                  ],
+                  "Condition": [
+                    "respiratory management difficulties"
+                  ],
+                  "Eq-Unit": [
+                    "grade"
+                  ],
+                  "Eq-Value": [
+                    "IV"
+                  ],
+                  "Condition-Name": [
+                    "respiratory management difficulties"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "h"
+                  ],
+                  "Modifier": [
+                    "Modified Mallampati"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "7. Patients have participated in other clinical trial within the 3 months prior to randomization",
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Comparison": [
+                "within the 3 months"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Study": [
+                "clinical trial",
+                "randomization"
+              ],
+              "Other": [
+                "other"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "8. Any patient judged by the Principal Investigator (PI)",
+              "Eq-Value": [
+                "e"
+              ],
+              "Study": [
+                "Investigator"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or Sub-Investigator to be inappropriate for the subject for any other reason due to the presence of psychiatric disorders (DSM V Axis I psychiatric disorders",
+                  "Modifier": [
+                    "Sub-Investigator",
+                    "Axis"
+                  ],
+                  "Other": [
+                    "other"
+                  ],
+                  "Condition": [
+                    "psychiatric disorders"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "h"
+                  ],
+                  "Condition-Name": [
+                    "psychiatric disorders"
+                  ],
+                  "Criteria-Count": [
+                    "Axis"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "such as severe depression,",
+                      "Condition": [
+                        "depression"
+                      ],
+                      "Severity": [
+                        "severe"
+                      ],
+                      "Condition-Name": [
+                        "depression"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "h"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "psychosis,",
+                          "Modifier": [
+                            "psychosis"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "h"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "schizophrenia,",
+                              "Modifier": [
+                                "schizophrenia"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "h"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "substance use disorders other than tobacco",
+                                  "Modifier": [
+                                    "substance use",
+                                    "tobacco"
+                                  ],
+                                  "Other": [
+                                    "other"
+                                  ],
+                                  "Condition": [
+                                    "disorders"
+                                  ],
+                                  "Condition-Name": [
+                                    "disorders"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "and mild alcohol abuse),",
+                                  "Eq-Operator": [
+                                    "or more"
+                                  ],
+                                  "Modifier": [
+                                    "alcohol abuse",
+                                    "mild"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "h"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "9. Patients with history of neurological or muscular diseases that could interfere with nerve block placement or positioning of the patient during surgery.",
+      "Modifier": [
+        "neurological",
+        "muscular",
+        "muscle"
+      ],
+      "Eq-Operator": [
+        "or more",
+        "to"
+      ],
+      "Procedure": [
+        "nerve block placement",
+        "surgery"
+      ],
