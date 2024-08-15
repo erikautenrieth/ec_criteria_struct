@@ -4,6 +4,8 @@ from transformers import TrainingArguments
 import torch
 import os
 from datasets import load_from_disk
+from datasets import load_dataset
+
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
@@ -13,7 +15,7 @@ load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False
 r = 256
 epoch = 10
 
-output_dir  = "outputs/outputs_70b_p4_2" # outputs_70b_p4_5
+output_dir  = "outputs/outputs_70b_p4_4" # outputs_70b_p4_5
 os.makedirs(output_dir, exist_ok=True)
 
 
@@ -64,13 +66,14 @@ pass
 
 dataset_path = 'dataset/dataset_p4_prompt1'
 dataset = load_from_disk(dataset_path)
-train = dataset.map(formatting_prompts_func, batched=True)
+dataset = dataset['train']
+dataset = dataset.map(formatting_prompts_func, batched=True)
 
 
 trainer = SFTTrainer(
     model = model,
     tokenizer = tokenizer,
-    train_dataset = train,
+    train_dataset = dataset,
     dataset_text_field = "text",
     max_seq_length = max_seq_length,
     dataset_num_proc = 2,  
@@ -89,16 +92,9 @@ trainer = SFTTrainer(
         lr_scheduler_type = "cosine",  # cosine (default)
         seed = 42, 
         output_dir = output_dir,
-        logging_steps = 50,  
-        evaluation_strategy = 'steps',  
-        eval_steps = 50,  # 100
+        logging_steps = 20,  
         save_strategy = 'steps',  
-        save_steps = 50,  # 100
-        load_best_model_at_end = True,
-        metric_for_best_model = "loss", 
-        greater_is_better = False,  
-        group_by_length = True,  
-        gradient_checkpointing = True,  
+        save_steps = 20,  # 100
         max_grad_norm = 1.0,  
     ),
 )
