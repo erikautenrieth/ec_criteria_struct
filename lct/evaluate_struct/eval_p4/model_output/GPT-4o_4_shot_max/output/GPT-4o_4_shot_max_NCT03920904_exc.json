@@ -1,0 +1,182 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Patient's refusal or inability to consent",
+              "Negation": [
+                "refusal",
+                "inability"
+              ],
+              "Assertion": [
+                "refusal",
+                "inability"
+              ],
+              "Observation": [
+                "consent"
+              ],
+              "Observation-Name": [
+                "consent"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Allergy,",
+              "Condition": [
+                "Allergy"
+              ],
+              "Condition-Name": [
+                "Allergy"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "hypersensibility",
+                  "Condition": [
+                    "hypersensibility"
+                  ],
+                  "Condition-Name": [
+                    "hypersensibility"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or resistance to local anesthetic",
+                  "Condition": [
+                    "resistance"
+                  ],
+                  "Condition-Name": [
+                    "resistance"
+                  ],
+                  "Drug": [
+                    "local anesthetic"
+                  ],
+                  "Drug-Name": [
+                    "local anesthetic"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Contraindication to regional anesthesia: infection in the designated area,",
+          "Contraindication": [
+            "regional anesthesia",
+            "infection"
+          ],
+          "Procedure": [
+            "regional anesthesia"
+          ],
+          "Procedure-Name": [
+            "regional anesthesia"
+          ],
+          "Condition": [
+            "infection"
+          ],
+          "Condition-Name": [
+            "infection"
+          ],
+          "Location": [
+            "designated area"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "severe congenital coagulopathy",
+              "Condition": [
+                "coagulopathy"
+              ],
+              "Condition-Name": [
+                "coagulopathy"
+              ],
+              "Severity": [
+                "severe"
+              ],
+              "Modifier": [
+                "congenital"
+              ]
+            },
+            "right": {
+              "raw_text": "or inadequate hemostasis before PIFB",
+              "Condition": [
+                "hemostasis"
+              ],
+              "Condition-Name": [
+                "hemostasis"
+              ],
+              "Negation": [
+                "inadequate"
+              ],
+              "Procedure": [
+                "PIFB"
+              ],
+              "Procedure-Name": [
+                "PIFB"
+              ],
+              "Eq-Temporal-Period": [
+                "before"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Severe hepatic (Child B and C)",
+          "Condition": [
+            "hepatic"
+          ],
+          "Condition-Name": [
+            "hepatic"
+          ],
+          "Severity": [
+            "Severe"
+          ],
+          "Modifier": [
+            "Child B and C"
+          ]
+        },
+        "right": {
+          "raw_text": "or renal insufficiency (GFR<30 mL/min)",
+          "Condition": [
+            "renal insufficiency"
+          ],
+          "Condition-Name": [
+            "renal insufficiency"
+          ],
+          "Observation": [
+            "GFR"
+          ],
+          "Observation-Name": [
+            "GFR"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "30"
+          ],
+          "Eq-Unit": [
+            "mL/min"
+          ],
+          "Severity": [
+            "Severe"
+          ]
+        }
+      }
+    }
+  }
+}

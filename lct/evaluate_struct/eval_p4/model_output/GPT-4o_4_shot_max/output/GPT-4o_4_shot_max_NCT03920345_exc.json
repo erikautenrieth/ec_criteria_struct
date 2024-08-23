@@ -1,0 +1,227 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Patients receiving additional invasive back surgery after the study treatment.",
+                              "Procedure": [
+                                "back surgery"
+                              ],
+                              "Procedure-Name": [
+                                "back surgery"
+                              ],
+                              "Study": [
+                                "study treatment"
+                              ],
+                              "Modifier": [
+                                "additional invasive"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "after"
+                              ]
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "Inability to complete follow-up visits or required questionnaires.",
+                                  "Negation": [
+                                    "Inability"
+                                  ],
+                                  "Procedure": [
+                                    "follow-up visits",
+                                    "questionnaires"
+                                  ],
+                                  "Procedure-Name": [
+                                    "follow-up visits",
+                                    "questionnaires"
+                                  ],
+                                  "Assertion": [
+                                    "complete"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "Non-compliant patients",
+                          "Condition": [
+                            "Non-compliant"
+                          ],
+                          "Condition-Name": [
+                            "Non-compliant"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Difficult",
+                          "Assertion": [
+                            "Difficult"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or impossible communication with the patient",
+                          "Negation": [
+                            "impossible"
+                          ],
+                          "Condition": [
+                            "communication"
+                          ],
+                          "Condition-Name": [
+                            "communication"
+                          ],
+                          "Assertion": [
+                            "impossible"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Breastfeeding,",
+                      "Condition": [
+                        "Breastfeeding"
+                      ],
+                      "Condition-Name": [
+                        "Breastfeeding"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "pregnant",
+                          "Condition": [
+                            "pregnant"
+                          ],
+                          "Condition-Name": [
+                            "pregnant"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or patients who plan a pregnancy while participating in the study",
+                          "Condition": [
+                            "pregnancy"
+                          ],
+                          "Condition-Name": [
+                            "pregnancy"
+                          ],
+                          "Study": [
+                            "participating in the study"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "while"
+                          ],
+                          "Assertion": [
+                            "plan"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "Systemic neurological disorders with mobility limitations (e.g. advanced Parkinson's disease or multiple sclerosis)",
+              "Condition": [
+                "neurological disorders",
+                "Parkinson's disease",
+                "multiple sclerosis"
+              ],
+              "Condition-Name": [
+                "neurological disorders",
+                "Parkinson's disease",
+                "multiple sclerosis"
+              ],
+              "Modifier": [
+                "Systemic",
+                "advanced"
+              ],
+              "Severity": [
+                "advanced"
+              ],
+              "Observation": [
+                "mobility limitations"
+              ],
+              "Observation-Name": [
+                "mobility limitations"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Patients with incompatibilities or known limitations that make participation impossible",
+          "Condition": [
+            "incompatibilities",
+            "limitations"
+          ],
+          "Condition-Name": [
+            "incompatibilities",
+            "limitations"
+          ],
+          "Negation": [
+            "impossible"
+          ],
+          "Assertion": [
+            "make"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients after stabilization with implants on thoracic or lumbar spine.",
+          "Procedure": [
+            "implants"
+          ],
+          "Procedure-Name": [
+            "implants"
+          ],
+          "Modifier": [
+            "thoracic",
+            "lumbar"
+          ],
+          "Eq-Temporal-Period": [
+            "after"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Inability to provide informed consent without a legally authorized representative.",
+              "Negation": [
+                "Inability"
+              ],
+              "Procedure": [
+                "informed consent"
+              ],
+              "Procedure-Name": [
+                "informed consent"
+              ],
+              "Assertion": [
+                "provide"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

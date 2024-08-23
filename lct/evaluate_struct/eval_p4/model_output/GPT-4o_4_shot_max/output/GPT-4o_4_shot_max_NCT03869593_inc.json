@@ -1,0 +1,111 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patient with S. aureus",
+                      "Condition": [
+                        "bacteremia"
+                      ],
+                      "Condition-Name": [
+                        "bacteremia"
+                      ],
+                      "Organism-Name": [
+                        "S. aureus"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or E. coli bacteriostatic bacteremia defined by at least one positive blood culture bottle",
+                      "Condition": [
+                        "bacteremia"
+                      ],
+                      "Condition-Name": [
+                        "bacteremia"
+                      ],
+                      "Organism-Name": [
+                        "E. coli"
+                      ],
+                      "Observation": [
+                        "positive blood culture bottle"
+                      ],
+                      "Observation-Name": [
+                        "positive blood culture bottle"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Patient requiring a blood test as part of his bacteremia",
+                  "Condition": [
+                    "bacteremia"
+                  ],
+                  "Condition-Name": [
+                    "bacteremia"
+                  ],
+                  "Procedure": [
+                    "blood test"
+                  ],
+                  "Procedure-Name": [
+                    "blood test"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- not subject to a judicial protection measure",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Condition": [
+                    "judicial protection measure"
+                  ],
+                  "Condition-Name": [
+                    "judicial protection measure"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Signature of the non-opposition of consent (for minor patients signed by one of the parents or the representative of the parental authority)",
+          "Assertion": [
+            "Signature"
+          ],
+          "Condition": [
+            "non-opposition of consent"
+          ],
+          "Condition-Name": [
+            "non-opposition of consent"
+          ],
+          "Family-Member": [
+            "parents"
+          ],
+          "Provider": [
+            "representative of the parental authority"
+          ],
+          "Life-Stage-And-Gender": [
+            "minor patients"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Affiliation to social security",
+      "Condition": [
+        "Affiliation to social security"
+      ],
+      "Condition-Name": [
+        "Affiliation to social security"
+      ]
+    }
+  }
+}

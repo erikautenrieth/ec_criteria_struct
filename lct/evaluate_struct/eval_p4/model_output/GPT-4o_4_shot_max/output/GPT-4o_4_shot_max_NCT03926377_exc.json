@@ -1,0 +1,183 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Patients under tutorship",
+                          "Condition": [
+                            "tutorship"
+                          ],
+                          "Condition-Name": [
+                            "tutorship"
+                          ],
+                          "Life-Stage-And-Gender": [
+                            "Patients"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or curatorship",
+                          "Condition": [
+                            "curatorship"
+                          ],
+                          "Condition-Name": [
+                            "curatorship"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "inability to give informed consent",
+                              "Negation": [
+                                "inability"
+                              ],
+                              "Assertion": [
+                                "give informed consent"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "or inability to give informed consent",
+                          "Negation": [
+                            "inability"
+                          ],
+                          "Assertion": [
+                            "give informed consent"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Patients receiving an anti-osteoporotic treatment",
+                  "Life-Stage-And-Gender": [
+                    "Patients"
+                  ],
+                  "Drug": [
+                    "anti-osteoporotic treatment"
+                  ],
+                  "Drug-Name": [
+                    "anti-osteoporotic treatment"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Procedure-Name": [
+                    "treatment"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patients requiring an anti-osteoporotic baseline treatment (T-score ⩽ -3DS on at least 1 site or FRAX score above the therapeutic intervention threshold)",
+              "Life-Stage-And-Gender": [
+                "Patients"
+              ],
+              "Drug": [
+                "anti-osteoporotic baseline treatment"
+              ],
+              "Drug-Name": [
+                "anti-osteoporotic baseline treatment"
+              ],
+              "Procedure": [
+                "treatment"
+              ],
+              "Procedure-Name": [
+                "treatment"
+              ],
+              "Observation": [
+                "T-score",
+                "FRAX score"
+              ],
+              "Observation-Name": [
+                "T-score",
+                "FRAX score"
+              ],
+              "Eq-Operator": [
+                "⩽"
+              ],
+              "Eq-Value": [
+                "-3DS"
+              ],
+              "Eq-Comparison": [
+                "⩽ -3DS",
+                "above the therapeutic intervention threshold"
+              ],
+              "Modifier": [
+                "baseline",
+                "anti-osteoporotic"
+              ],
+              "Condition": [
+                "osteoporosis"
+              ],
+              "Condition-Name": [
+                "osteoporosis"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patients with one or more major risk factors for osteoporosis",
+          "Life-Stage-And-Gender": [
+            "Patients"
+          ],
+          "Risk": [
+            "risk factors"
+          ],
+          "Condition": [
+            "osteoporosis"
+          ],
+          "Condition-Name": [
+            "osteoporosis"
+          ],
+          "Polarity": [
+            "major"
+          ],
+          "Eq-Comparison": [
+            "one or more"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Patients who have received topical corticosteroids in less than 3 months",
+      "Life-Stage-And-Gender": [
+        "Patients"
+      ],
+      "Drug": [
+        "topical corticosteroids"
+      ],
+      "Drug-Name": [
+        "topical corticosteroids"
+      ],
+      "Eq-Operator": [
+        "less than"
+      ],
+      "Eq-Temporal-Unit": [
+        "months"
+      ],
+      "Eq-Value": [
+        "3"
+      ],
+      "Eq-Comparison": [
+        "less than 3 months"
+      ],
+      "Eq-Temporal-Period": [
+        "received"
+      ]
+    }
+  }
+}

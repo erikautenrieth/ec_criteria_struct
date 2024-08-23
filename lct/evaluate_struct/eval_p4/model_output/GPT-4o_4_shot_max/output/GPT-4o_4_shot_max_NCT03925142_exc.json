@@ -1,0 +1,416 @@
+{
+  "OR": {
+    "left": {
+      "OR": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- <30 or >69 years old",
+              "Age": [
+                "<30",
+                ">69"
+              ],
+              "Eq-Operator": [
+                "<",
+                ">"
+              ],
+              "Eq-Value": [
+                "30",
+                "69"
+              ],
+              "Eq-Comparison": [
+                "<30",
+                ">69"
+              ]
+            },
+            "right": {
+              "raw_text": "- BMI <25.0 or >37 kg/m2",
+              "Observation": [
+                "BMI"
+              ],
+              "Observation-Name": [
+                "BMI"
+              ],
+              "Eq-Operator": [
+                "<",
+                ">"
+              ],
+              "Eq-Value": [
+                "25.0",
+                "37"
+              ],
+              "Eq-Unit": [
+                "kg/m2"
+              ],
+              "Eq-Comparison": [
+                "<25.0",
+                ">37 kg/m2"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Fasting serum total cholesterol > 260 mg/dL",
+              "Observation": [
+                "Fasting serum total cholesterol"
+              ],
+              "Observation-Name": [
+                "Fasting serum total cholesterol"
+              ],
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Value": [
+                "260"
+              ],
+              "Eq-Unit": [
+                "mg/dL"
+              ],
+              "Eq-Comparison": [
+                "> 260 mg/dL"
+              ]
+            },
+            "right": {
+              "raw_text": "- Low-density lipoprotein cholesterol >189 mg/dL",
+              "Observation": [
+                "Low-density lipoprotein cholesterol"
+              ],
+              "Observation-Name": [
+                "Low-density lipoprotein cholesterol"
+              ],
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Value": [
+                "189"
+              ],
+              "Eq-Unit": [
+                "mg/dL"
+              ],
+              "Eq-Comparison": [
+                ">189 mg/dL"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Glucose >110 mg/dL",
+              "Observation": [
+                "Glucose"
+              ],
+              "Observation-Name": [
+                "Glucose"
+              ],
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Value": [
+                "110"
+              ],
+              "Eq-Unit": [
+                "mg/dL"
+              ],
+              "Eq-Comparison": [
+                ">110 mg/dL"
+              ]
+            },
+            "right": {
+              "raw_text": "- Systolic/diastolic blood pressure > 140/90",
+              "Observation": [
+                "Systolic/diastolic blood pressure"
+              ],
+              "Observation-Name": [
+                "Systolic/diastolic blood pressure"
+              ],
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Value": [
+                "140/90"
+              ],
+              "Eq-Comparison": [
+                "> 140/90"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Body weight stable for <3 months prior (±3 kg)",
+              "Observation": [
+                "Body weight"
+              ],
+              "Observation-Name": [
+                "Body weight"
+              ],
+              "Stability": [
+                "stable"
+              ],
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Comparison": [
+                "<3 months",
+                "±3 kg"
+              ],
+              "Eq-Temporal-Period": [
+                "prior"
+              ]
+            },
+            "right": {
+              "raw_text": "- Stable physical activity regimen < 3 months prior",
+              "Observation": [
+                "physical activity regimen"
+              ],
+              "Observation-Name": [
+                "physical activity regimen"
+              ],
+              "Stability": [
+                "Stable"
+              ],
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Comparison": [
+                "< 3 months"
+              ],
+              "Eq-Temporal-Period": [
+                "prior"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- Medication use unstable for 6 months prior and using medications",
+          "Observation": [
+            "Medication use"
+          ],
+          "Observation-Name": [
+            "Medication use"
+          ],
+          "Stability": [
+            "unstable"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Eq-Value": [
+            "6"
+          ],
+          "Eq-Comparison": [
+            "for 6 months"
+          ],
+          "Eq-Temporal-Period": [
+            "prior"
+          ],
+          "Drug": [
+            "medications"
+          ],
+          "Drug-Name": [
+            "medications"
+          ]
+        },
+        "right": {
+          "raw_text": "- Smoking",
+          "Condition": [
+            "Smoking"
+          ],
+          "Condition-Name": [
+            "Smoking"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Drinking more than 2 alcoholic drinks per day",
+              "Observation": [
+                "Drinking"
+              ],
+              "Observation-Name": [
+                "Drinking"
+              ],
+              "Eq-Operator": [
+                "more than"
+              ],
+              "Eq-Value": [
+                "2"
+              ],
+              "Eq-Temporal-Unit": [
+                "day"
+              ],
+              "Eq-Comparison": [
+                "more than 2"
+              ],
+              "Modifier": [
+                "alcoholic"
+              ]
+            },
+            "right": {
+              "raw_text": "- Diabetic",
+              "Condition": [
+                "Diabetic"
+              ],
+              "Condition-Name": [
+                "Diabetic"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Have renal failure",
+                  "Condition": [
+                    "renal failure"
+                  ],
+                  "Condition-Name": [
+                    "renal failure"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Have liver failure",
+                  "Condition": [
+                    "liver failure"
+                  ],
+                  "Condition-Name": [
+                    "liver failure"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Have cardiovascular events (myocardial infarction or stroke) during the 6 months prior to the study",
+                      "Condition": [
+                        "cardiovascular events",
+                        "myocardial infarction",
+                        "stroke"
+                      ],
+                      "Condition-Name": [
+                        "cardiovascular events",
+                        "myocardial infarction",
+                        "stroke"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "months"
+                      ],
+                      "Eq-Value": [
+                        "6"
+                      ],
+                      "Eq-Comparison": [
+                        "during the 6 months"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "prior"
+                      ],
+                      "Study": [
+                        "study"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Pregnant",
+                          "Condition": [
+                            "Pregnant"
+                          ],
+                          "Condition-Name": [
+                            "Pregnant"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or lactating",
+                          "Condition": [
+                            "lactating"
+                          ],
+                          "Condition-Name": [
+                            "lactating"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "8. Variation in ICP of > 2 cm H2O in the hour prior to intervention.",
+                  "Procedure": [
+                    "intervention"
+                  ],
+                  "Procedure-Name": [
+                    "intervention"
+                  ],
+                  "Eq-Operator": [
+                    ">"
+                  ],
+                  "Eq-Unit": [
+                    "cm",
+                    "H2O"
+                  ],
+                  "Eq-Value": [
+                    "2"
+                  ],
+                  "Eq-Comparison": [
+                    "> 2 cm H2O",
+                    "on",
+                    "hour"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "on"
+                  ],
+                  "Observation": [
+                    "ICP"
+                  ],
+                  "Observation-Name": [
+                    "ICP"
+                  ],
+                  "Stability": [
+                    "Variation"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "hour"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "1. Patients scheduled for emergency surgery",
+                                  "Procedure": [
+                                    "emergency surgery"
+                                  ],
+                                  "Procedure-Name": [
+                                    "emergency surgery"
+                                  ],
+                                  "Encounter": [
+                                    "scheduled"
+                                  ],
+                                  "Condition": [
+                                    "Patients"
+                                  ],
+                                  "Condition-Name": [
+                                    "Patients"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "2. Patients with a history of drug abuse",
+                                      "Condition": [
+                                        "drug abuse"
+                                      ],
+                                      "Condition-Name": [
+                                        "drug abuse"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "history"
+                                      ],
+                                      "Eq-Temporal-Period": [
+                                        "history"
+                                      ],
+                                      "Condition": [
+                                        "Patients"
+                                      ],
+                                      "Condition-Name": [
+                                        "Patients"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "and / or alcohol abuse 2 years prior to the screening period",
+                                      "Condition": [
+                                        "alcohol abuse"
+                                      ],
+                                      "Condition-Name": [
+                                        "alcohol abuse"
+                                      ],
+                                      "Eq-Operator": [
+                                        "prior to"
+                                      ],
+                                      "Eq-Temporal-Unit": [
+                                        "years"
+                                      ],
+                                      "Eq-Value": [
+                                        "2"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "2 years prior to the screening period"
+                                      ],
+                                      "Condition": [
+                                        "Patients"
+                                      ],
+                                      "Condition-Name": [
+                                        "Patients"
+                                      ],
+                                      "Study": [
+                                        "screening period"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "3. One or more of the laboratory findings fall out of the limitations for this study(platelet,hemoglobin,aspartate aminotransferase,etc.)",
+                              "Observation": [
+                                "platelet",
+                                "hemoglobin",
+                                "aspartate aminotransferase"
+                              ],
+                              "Observation-Name": [
+                                "platelet",
+                                "hemoglobin",
+                                "aspartate aminotransferase"
+                              ],
+                              "Study": [
+                                "study"
+                              ],
+                              "Condition": [
+                                "limitations"
+                              ],
+                              "Condition-Name": [
+                                "limitations"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "4. Pregnant women",
+                              "Condition": [
+                                "Pregnant women"
+                              ],
+                              "Condition-Name": [
+                                "Pregnant women"
+                              ],
+                              "Life-Stage-And-Gender": [
+                                "women"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or those in lactation period",
+                              "Condition": [
+                                "lactation"
+                              ],
+                              "Condition-Name": [
+                                "lactation"
+                              ],
+                              "Life-Stage-And-Gender": [
+                                "women"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "5. Allergic to drugs used in the study",
+                      "Condition": [
+                        "Allergic"
+                      ],
+                      "Condition-Name": [
+                        "Allergic"
+                      ],
+                      "Drug": [
+                        "drugs used in the study"
+                      ],
+                      "Drug-Name": [
+                        "drugs used in the study"
+                      ],
+                      "Study": [
+                        "study"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "6. Patients with respiratory management difficulties (Modified Mallampati grade IV)",
+                  "Condition": [
+                    "respiratory management difficulties"
+                  ],
+                  "Condition-Name": [
+                    "respiratory management difficulties"
+                  ],
+                  "Observation": [
+                    "Mallampati grade"
+                  ],
+                  "Observation-Name": [
+                    "Mallampati grade"
+                  ],
+                  "Modifier": [
+                    "Modified"
+                  ],
+                  "Eq-Value": [
+                    "IV"
+                  ],
+                  "Condition": [
+                    "Patients"
+                  ],
+                  "Condition-Name": [
+                    "Patients"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "7. Patients have participated in other clinical trial within the 3 months prior to randomization",
+              "Study": [
+                "clinical trial",
+                "randomization"
+              ],
+              "Condition": [
+                "Patients"
+              ],
+              "Condition-Name": [
+                "Patients"
+              ],
+              "Eq-Operator": [
+                "within",
+                "prior to"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Comparison": [
+                "within the 3 months prior to randomization"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "8. Any patient judged by the Principal Investigator (PI) or Sub-Investigator to be inappropriate for the subject for any other reason",
+          "Condition": [
+            "patient"
+          ],
+          "Condition-Name": [
+            "patient"
+          ],
+          "Provider": [
+            "Principal Investigator",
+            "PI",
+            "Sub-Investigator"
+          ],
+          "Assertion": [
+            "judged"
+          ],
+          "Other": [
+            "reason"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "9. Variation in ICP of > 2 cm H2O in the hour prior to intervention.",
+      "Procedure": [
+        "intervention"
+      ],
+      "Procedure-Name": [
+        "intervention"
+      ],
+      "Eq-Operator": [
+        ">"
+      ],
+      "Eq-Unit": [
+        "cm",
+        "H2O"
+      ],
+      "Eq-Value": [
+        "2"
+      ],
+      "Eq-Comparison": [
+        "> 2 cm H2O",
+        "on",
+        "hour"
+      ],
+      "Eq-Temporal-Period": [
+        "on"
+      ],
+      "Observation": [
+        "ICP"
+      ],
+      "Observation-Name": [
+        "ICP"
+      ],
+      "Stability": [
+        "Variation"
+      ],
+      "Eq-Temporal-Unit": [
+        "hour"
+      ]
+    }
+  }
+}

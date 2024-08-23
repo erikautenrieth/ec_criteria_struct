@@ -1,0 +1,157 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "1. Patient with paroxysmal atrial fibrillation who is scheduled for ablation procedure and ≥20 and ≤80 years of age",
+                      "Condition": [
+                        "paroxysmal atrial fibrillation"
+                      ],
+                      "Condition-Name": [
+                        "paroxysmal atrial fibrillation"
+                      ],
+                      "Procedure": [
+                        "ablation procedure"
+                      ],
+                      "Procedure-Name": [
+                        "ablation procedure"
+                      ],
+                      "Eq-Operator": [
+                        "≥",
+                        "≤"
+                      ],
+                      "Eq-Value": [
+                        "20",
+                        "80"
+                      ],
+                      "Eq-Comparison": [
+                        "≥20",
+                        "≤80"
+                      ],
+                      "Age": [
+                        "20",
+                        "80"
+                      ],
+                      "Life-Stage-And-Gender": [
+                        "Patient"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "2. Left atrium size < 45mm",
+                      "Observation": [
+                        "Left atrium size"
+                      ],
+                      "Observation-Name": [
+                        "Left atrium size"
+                      ],
+                      "Eq-Operator": [
+                        "<"
+                      ],
+                      "Eq-Value": [
+                        "45"
+                      ],
+                      "Eq-Unit": [
+                        "mm"
+                      ],
+                      "Eq-Comparison": [
+                        "< 45mm"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "3. paroxysmal atrial fibrillation that is recurrence during antiarrhythmic drug treatment",
+                      "Condition": [
+                        "paroxysmal atrial fibrillation"
+                      ],
+                      "Condition-Name": [
+                        "paroxysmal atrial fibrillation"
+                      ],
+                      "Drug": [
+                        "antiarrhythmic drug"
+                      ],
+                      "Drug-Name": [
+                        "antiarrhythmic drug"
+                      ],
+                      "Procedure": [
+                        "treatment"
+                      ],
+                      "Procedure-Name": [
+                        "treatment"
+                      ],
+                      "Observation": [
+                        "recurrence"
+                      ],
+                      "Observation-Name": [
+                        "recurrence"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "during"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "is not able to use an antiarrhythmic drug.",
+                          "Drug": [
+                            "antiarrhythmic drug"
+                          ],
+                          "Drug-Name": [
+                            "antiarrhythmic drug"
+                          ],
+                          "Negation": [
+                            "not able"
+                          ],
+                          "Assertion": [
+                            "not able"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "4. Patient who is indicated for anticoagulation therapy (for prevention of cerebral infarction)",
+              "Procedure": [
+                "anticoagulation therapy",
+                "prevention"
+              ],
+              "Procedure-Name": [
+                "anticoagulation therapy",
+                "prevention"
+              ],
+              "Condition": [
+                "cerebral infarction"
+              ],
+              "Condition-Name": [
+                "cerebral infarction"
+              ],
+              "Indication": [
+                "indicated"
+              ],
+              "Life-Stage-And-Gender": [
+                "Patient"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": ""
+        }
+      }
+    },
+    "right": {
+      "raw_text": ""
+    }
+  }
+}

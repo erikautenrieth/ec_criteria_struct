@@ -1,0 +1,227 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "1. Admitted from the emergency department to inpatient or observation status at one of: Carolinas Medical Center, Carolinas Medical Center - Mercy, or Atrium Health Northeast;",
+                      "Encounter": [
+                        "emergency department",
+                        "admission"
+                      ],
+                      "Location": [
+                        "Carolinas Medical Center",
+                        "Carolinas Medical Center - Mercy",
+                        "Atrium Health Northeast"
+                      ],
+                      "Assertion": [
+                        "Admitted"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "2. ≥18 years of age upon admission;",
+                      "Eq-Operator": [
+                        "≥"
+                      ],
+                      "Eq-Value": [
+                        "18"
+                      ],
+                      "Eq-Comparison": [
+                        "≥18 years"
+                      ],
+                      "Age": [
+                        "18 years"
+                      ],
+                      "Encounter": [
+                        "admission"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "3. oral/parenteral antibiotic or bacterial culture order within 24 hours of emergency department presentation",
+                      "Drug": [
+                        "antibiotic"
+                      ],
+                      "Drug-Name": [
+                        "antibiotic"
+                      ],
+                      "Observation": [
+                        "bacterial culture"
+                      ],
+                      "Observation-Name": [
+                        "bacterial culture"
+                      ],
+                      "Procedure": [
+                        "oral/parenteral antibiotic",
+                        "bacterial culture"
+                      ],
+                      "Procedure-Name": [
+                        "oral/parenteral antibiotic",
+                        "bacterial culture"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "hours"
+                      ],
+                      "Eq-Value": [
+                        "24"
+                      ],
+                      "Eq-Comparison": [
+                        "within 24 hours"
+                      ],
+                      "Encounter": [
+                        "emergency department"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "1. culture drawn first,",
+                              "Procedure": [
+                                "culture"
+                              ],
+                              "Procedure-Name": [
+                                "culture"
+                              ],
+                              "Eq-Comparison": [
+                                "first"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "first"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "antibiotics ordered within 48 hours",
+                              "Drug": [
+                                "antibiotics"
+                              ],
+                              "Drug-Name": [
+                                "antibiotics"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "hours"
+                              ],
+                              "Eq-Value": [
+                                "48"
+                              ],
+                              "Eq-Comparison": [
+                                "within 48 hours"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "2. antibiotics ordered first,",
+                              "Drug": [
+                                "antibiotics"
+                              ],
+                              "Drug-Name": [
+                                "antibiotics"
+                              ],
+                              "Eq-Comparison": [
+                                "first"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "first"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "culture ordered within 48 hours (adapted from criteria applied in development of the Third International Consensus Definitions for Sepsis and Septic Shock)",
+                              "Procedure": [
+                                "culture"
+                              ],
+                              "Procedure-Name": [
+                                "culture"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "hours"
+                              ],
+                              "Eq-Value": [
+                                "48"
+                              ],
+                              "Eq-Comparison": [
+                                "within 48 hours"
+                              ],
+                              "Study": [
+                                "Third International Consensus Definitions for Sepsis and Septic Shock"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "4. deemed as high-risk for 30-day readmission (i.e., ≥ 20%) or 30-day mortality (i.e., ≥ 10%) using risk-scoring models",
+              "Risk": [
+                "risk",
+                "high-risk",
+                "30-day readmission",
+                "30-day mortality"
+              ],
+              "Eq-Comparison": [
+                "≥ 20%",
+                "≥ 10%"
+              ],
+              "Eq-Value": [
+                "20",
+                "10"
+              ],
+              "Eq-Unit": [
+                "%"
+              ],
+              "Observation": [
+                "readmission",
+                "mortality"
+              ],
+              "Observation-Name": [
+                "readmission",
+                "mortality"
+              ],
+              "Polarity": [
+                "high"
+              ],
+              "Eq-Temporal-Unit": [
+                "day"
+              ],
+              "Eq-Temporal-Period": [
+                "30-day"
+              ],
+              "Study": [
+                "risk-scoring models"
+              ]
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "5. not discharged at the time of patient list generation",
+              "Negation": [
+                "not"
+              ],
+              "Encounter": [
+                "discharged",
+                "patient list generation"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

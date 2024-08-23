@@ -1,0 +1,250 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Immunocompromised patient defined by:",
+      "Condition": [
+        "Immunocompromised"
+      ],
+      "Condition-Name": [
+        "Immunocompromised"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- current immunosuppressive therapies: corticosteroids,",
+              "Drug": [
+                "immunosuppressive therapies",
+                "corticosteroids"
+              ],
+              "Drug-Name": [
+                "immunosuppressive therapies",
+                "corticosteroids"
+              ],
+              "Eq-Comparison": [
+                "current"
+              ],
+              "Eq-Temporal-Period": [
+                "current"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "chemotherapy,",
+                  "Drug": [
+                    "chemotherapy"
+                  ],
+                  "Drug-Name": [
+                    "chemotherapy"
+                  ]
+                },
+                "right": {
+                  "raw_text": "biotherapy",
+                  "Drug": [
+                    "biotherapy"
+                  ],
+                  "Drug-Name": [
+                    "biotherapy"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- solid organ transplant patient",
+                  "Procedure": [
+                    "solid organ transplant"
+                  ],
+                  "Procedure-Name": [
+                    "solid organ transplant"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or hematopoietic stem cell transplant",
+                  "Procedure": [
+                    "hematopoietic stem cell transplant"
+                  ],
+                  "Procedure-Name": [
+                    "hematopoietic stem cell transplant"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- chemotherapy-induced neutropenia",
+                  "Condition": [
+                    "neutropenia"
+                  ],
+                  "Condition-Name": [
+                    "neutropenia"
+                  ],
+                  "Drug": [
+                    "chemotherapy"
+                  ],
+                  "Drug-Name": [
+                    "chemotherapy"
+                  ],
+                  "Modifier": [
+                    "induced"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Congenital immune deficiency",
+                      "Condition": [
+                        "immune deficiency"
+                      ],
+                      "Condition-Name": [
+                        "immune deficiency"
+                      ],
+                      "Modifier": [
+                        "Congenital"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- bacteremia related to a peripheral or central catheter",
+                          "Condition": [
+                            "bacteremia"
+                          ],
+                          "Condition-Name": [
+                            "bacteremia"
+                          ],
+                          "Procedure": [
+                            "catheter"
+                          ],
+                          "Procedure-Name": [
+                            "catheter"
+                          ],
+                          "Modifier": [
+                            "peripheral",
+                            "central"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Urinary obstruction not lifted within the first 24 hours of management",
+                              "Condition": [
+                                "Urinary obstruction"
+                              ],
+                              "Condition-Name": [
+                                "Urinary obstruction"
+                              ],
+                              "Negation": [
+                                "not"
+                              ],
+                              "Eq-Operator": [
+                                "within"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "hours"
+                              ],
+                              "Eq-Value": [
+                                "24"
+                              ],
+                              "Eq-Comparison": [
+                                "within the first 24 hours"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- Intra-abdominal infection collected undrained in the first 24 hours of management",
+                                  "Condition": [
+                                    "Intra-abdominal infection"
+                                  ],
+                                  "Condition-Name": [
+                                    "Intra-abdominal infection"
+                                  ],
+                                  "Negation": [
+                                    "undrained"
+                                  ],
+                                  "Eq-Operator": [
+                                    "within"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "hours"
+                                  ],
+                                  "Eq-Value": [
+                                    "24"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "within the first 24 hours"
+                                  ]
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "- primary infectious focus represented by mechanically ventilated pneumonia",
+                                      "Condition": [
+                                        "pneumonia"
+                                      ],
+                                      "Condition-Name": [
+                                        "pneumonia"
+                                      ],
+                                      "Procedure": [
+                                        "ventilated"
+                                      ],
+                                      "Procedure-Name": [
+                                        "ventilated"
+                                      ],
+                                      "Modifier": [
+                                        "mechanically"
+                                      ]
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "- Pregnant",
+                                          "Condition": [
+                                            "Pregnant"
+                                          ],
+                                          "Condition-Name": [
+                                            "Pregnant"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "or lactating woman",
+                                          "Life-Stage-And-Gender": [
+                                            "woman"
+                                          ],
+                                          "Condition": [
+                                            "lactating"
+                                          ],
+                                          "Condition-Name": [
+                                            "lactating"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

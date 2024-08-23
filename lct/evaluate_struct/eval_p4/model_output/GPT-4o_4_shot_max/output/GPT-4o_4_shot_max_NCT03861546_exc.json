@@ -1,0 +1,264 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "1. type 1 diabetes",
+                                  "Condition": [
+                                    "diabetes"
+                                  ],
+                                  "Condition-Name": [
+                                    "diabetes"
+                                  ],
+                                  "Eq-Value": [
+                                    "1"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "type 1"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or diabetes secondary to other conditions (e.g. steroid-induced, pancreatic insufficiency, or chemotherapy-induced);",
+                                  "Condition": [
+                                    "diabetes",
+                                    "pancreatic insufficiency"
+                                  ],
+                                  "Condition-Name": [
+                                    "diabetes",
+                                    "pancreatic insufficiency"
+                                  ],
+                                  "Other": [
+                                    "other"
+                                  ],
+                                  "Modifier": [
+                                    "steroid-induced",
+                                    "chemotherapy-induced"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "2. malignancy",
+                                  "Condition": [
+                                    "malignancy"
+                                  ],
+                                  "Condition-Name": [
+                                    "malignancy"
+                                  ]
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "or life-threatening illness",
+                                      "Condition": [
+                                        "illness"
+                                      ],
+                                      "Condition-Name": [
+                                        "illness"
+                                      ],
+                                      "Modifier": [
+                                        "life-threatening"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "with life expectancy of <5 years;",
+                                      "Observation": [
+                                        "life expectancy"
+                                      ],
+                                      "Observation-Name": [
+                                        "life expectancy"
+                                      ],
+                                      "Eq-Operator": [
+                                        "<"
+                                      ],
+                                      "Eq-Temporal-Unit": [
+                                        "years"
+                                      ],
+                                      "Eq-Value": [
+                                        "5"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "<5 years"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "3. end-stage disease",
+                              "Condition": [
+                                "end-stage disease"
+                              ],
+                              "Condition-Name": [
+                                "end-stage disease"
+                              ],
+                              "Modifier": [
+                                "end-stage"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "or serious illness that prohibits participation (e.g. end-stage renal disease",
+                                  "Condition": [
+                                    "illness",
+                                    "renal disease"
+                                  ],
+                                  "Condition-Name": [
+                                    "illness",
+                                    "renal disease"
+                                  ],
+                                  "Modifier": [
+                                    "serious",
+                                    "end-stage"
+                                  ],
+                                  "Assertion": [
+                                    "prohibits participation"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or class IV congestive heart failure);",
+                                  "Condition": [
+                                    "congestive heart failure"
+                                  ],
+                                  "Condition-Name": [
+                                    "congestive heart failure"
+                                  ],
+                                  "Eq-Value": [
+                                    "IV"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "class IV"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "4. inability to perform unsupervised physical activity;",
+                      "Negation": [
+                        "inability"
+                      ],
+                      "Assertion": [
+                        "inability"
+                      ],
+                      "Procedure": [
+                        "physical activity"
+                      ],
+                      "Procedure-Name": [
+                        "physical activity"
+                      ],
+                      "Modifier": [
+                        "unsupervised"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "5. pregnancy;",
+                  "Condition": [
+                    "pregnancy"
+                  ],
+                  "Condition-Name": [
+                    "pregnancy"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "6. diagnosed cognitive deficits",
+                  "Condition": [
+                    "cognitive deficits"
+                  ],
+                  "Condition-Name": [
+                    "cognitive deficits"
+                  ],
+                  "Assertion": [
+                    "diagnosed"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or limited decision-making capacity;",
+                  "Condition": [
+                    "limited decision-making capacity"
+                  ],
+                  "Condition-Name": [
+                    "limited decision-making capacity"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "7. alcohol",
+              "Condition": [
+                "alcohol"
+              ],
+              "Condition-Name": [
+                "alcohol"
+              ]
+            },
+            "right": {
+              "raw_text": "or substance abuse;",
+              "Condition": [
+                "substance abuse"
+              ],
+              "Condition-Name": [
+                "substance abuse"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "8. homelessness",
+          "Condition": [
+            "homelessness"
+          ],
+          "Condition-Name": [
+            "homelessness"
+          ]
+        },
+        "right": {
+          "raw_text": "or no fixed address.",
+          "Condition": [
+            "no fixed address"
+          ],
+          "Condition-Name": [
+            "no fixed address"
+          ]
+        }
+      }
+    }
+  }
+}

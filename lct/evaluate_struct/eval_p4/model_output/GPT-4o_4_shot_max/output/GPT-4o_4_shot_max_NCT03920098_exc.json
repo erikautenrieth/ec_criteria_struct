@@ -1,0 +1,173 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Multipara",
+                      "Condition": [
+                        "Multipara"
+                      ],
+                      "Condition-Name": [
+                        "Multipara"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "- Pre-existing cancer (except non-melanoma skin cancer)",
+                          "Condition": [
+                            "cancer",
+                            "skin cancer"
+                          ],
+                          "Condition-Name": [
+                            "cancer",
+                            "skin cancer"
+                          ],
+                          "Polarity": [
+                            "Pre-existing"
+                          ],
+                          "Exception": [
+                            "except non-melanoma"
+                          ],
+                          "Modifier": [
+                            "non-melanoma"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Family history of breast cancer (one first-degree female relative diagnosed with breast cancer)",
+                  "Condition": [
+                    "breast cancer",
+                    "cancer"
+                  ],
+                  "Condition-Name": [
+                    "breast cancer",
+                    "cancer"
+                  ],
+                  "Observation": [
+                    "Family history"
+                  ],
+                  "Observation-Name": [
+                    "Family history"
+                  ],
+                  "Family-Member": [
+                    "first-degree female relative"
+                  ],
+                  "Eq-Comparison": [
+                    "one"
+                  ],
+                  "Polarity": [
+                    "diagnosed"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- High-risk pregnancy according to national guidelines",
+              "Condition": [
+                "pregnancy"
+              ],
+              "Condition-Name": [
+                "pregnancy"
+              ],
+              "Risk": [
+                "risk"
+              ],
+              "Polarity": [
+                "High"
+              ]
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- During the follow-up, pregnant women under any treatment that may affect the levels of metabolic markers will be excluded from the analysis",
+                  "Condition": [
+                    "pregnant women"
+                  ],
+                  "Condition-Name": [
+                    "pregnant women"
+                  ],
+                  "Polarity": [
+                    "affect"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Observation": [
+                    "metabolic markers"
+                  ],
+                  "Observation-Name": [
+                    "metabolic markers"
+                  ],
+                  "Study": [
+                    "follow-up"
+                  ],
+                  "Negation": [
+                    "excluded"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Pregnant women with pre-eclampsia",
+                      "Condition": [
+                        "pregnant women",
+                        "pre-eclampsia"
+                      ],
+                      "Condition-Name": [
+                        "pregnant women",
+                        "pre-eclampsia"
+                      ],
+                      "Polarity": [
+                        "with"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or with preterm birth (less than 37 weeks of gestational age) will be also excluded",
+                      "Condition": [
+                        "preterm birth",
+                        "pregnant women"
+                      ],
+                      "Condition-Name": [
+                        "preterm birth",
+                        "pregnant women"
+                      ],
+                      "Polarity": [
+                        "with"
+                      ],
+                      "Eq-Comparison": [
+                        "less than 37 weeks"
+                      ],
+                      "Eq-Value": [
+                        "37"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "weeks"
+                      ],
+                      "Negation": [
+                        "excluded"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

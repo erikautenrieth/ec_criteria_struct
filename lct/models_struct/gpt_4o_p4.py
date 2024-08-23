@@ -25,7 +25,7 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 
 batch_path = "eval_p4"
-n_shot = 2
+n_shot = 4
 
 # 15 shot zu viel für mini (5 geht)
 
@@ -40,45 +40,49 @@ client = OpenAI(
 
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt2.txt")
-#command = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt2.txt")
-command = "Structure the eligibility criteria based on the system input in JSON and extract the entities."
+#model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt2.txt")
+#command = "Structure the eligibility criteria based on the system input in JSON and extract the entities."
 
-study_path = f"{transform_lct}/input/dataset_p4_prompt6/test/input/"
+model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt1.txt")
+command = "Structure the eligibility criteria based on the system input in JSON and extract the entities."
+study_path = f"{transform_lct}/input/dataset_p4_prompt1_new/test/input/"
+
 output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
 
-top_15_files = [
+additional = [
     "NCT03863509_inc.txt",
     "NCT03861819_inc.txt",
     "NCT03865589_inc.txt",
+    "NCT03867344_exc.txt",
     "NCT03928158_exc.txt",
     "NCT03863418_inc.txt",
     "NCT03869086_exc.txt",
     "NCT03923894_exc.txt",
     "NCT03861559_exc.txt",
     "NCT03860350_exc.txt",
-    "NCT03868475_exc.txt",
-    "NCT03925142_inc.txt",
-    "NCT03925298_exc.txt",
-    "NCT03860480_inc.txt",
-    "NCT03921580_exc.txt",
-    "NCT03929328_inc.txt"
+    "NCT03867942_inc.txt"
 ]
 
 
+files = [
+    "NCT03929718_exc.txt",
+    "NCT03868475_exc.txt",
+    "NCT03921502_exc.txt",
+    "NCT03862027_exc.txt"
+]
+
+study_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/input/"
+label_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/output/"
+
+## Random Files
+#all_label_files = [f for f in os.listdir(label_folder) if f.endswith('.txt')]
+#random_files = random.sample(all_label_files, n_shot)
 
 
-study_folder = f"{transform_lct}/input/dataset_p4_prompt6/train/input/"
-label_folder = f"{transform_lct}/input/dataset_p4_prompt6/train/output/"
-
-all_label_files = [f for f in os.listdir(label_folder) if f.endswith('.txt')]
-random_files = random.sample(all_label_files, n_shot)
-
-
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, top_15_files)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, files)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
@@ -92,7 +96,6 @@ for i in range(n_shot):
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 first_call = True
-
 
 
 for file in study_files:

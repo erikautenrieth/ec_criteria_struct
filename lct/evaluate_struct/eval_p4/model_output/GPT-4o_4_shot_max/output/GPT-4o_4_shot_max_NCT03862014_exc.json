@@ -1,0 +1,131 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- Teeth that are previously restored",
+          "Condition": [
+            "restored"
+          ],
+          "Condition-Name": [
+            "restored"
+          ],
+          "Eq-Comparison": [
+            "previously"
+          ],
+          "Eq-Temporal-Period": [
+            "previously"
+          ],
+          "Observation": [
+            "Teeth"
+          ],
+          "Observation-Name": [
+            "Teeth"
+          ]
+        },
+        "right": {
+          "raw_text": "or have caries",
+          "Condition": [
+            "caries"
+          ],
+          "Condition-Name": [
+            "caries"
+          ],
+          "Observation": [
+            "Teeth"
+          ],
+          "Observation-Name": [
+            "Teeth"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients who have orthodontic treatment",
+          "Condition": [
+            "orthodontic treatment"
+          ],
+          "Condition-Name": [
+            "orthodontic treatment"
+          ],
+          "Procedure": [
+            "treatment"
+          ],
+          "Procedure-Name": [
+            "treatment"
+          ],
+          "Life-Stage-And-Gender": [
+            "Patients"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Patients who are not cooperative for the dental procedure",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Condition": [
+                    "cooperative"
+                  ],
+                  "Condition-Name": [
+                    "cooperative"
+                  ],
+                  "Procedure": [
+                    "dental procedure"
+                  ],
+                  "Procedure-Name": [
+                    "dental procedure"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "Patients"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Teeth that have dental fluorosis",
+                  "Condition": [
+                    "dental fluorosis"
+                  ],
+                  "Condition-Name": [
+                    "dental fluorosis"
+                  ],
+                  "Observation": [
+                    "Teeth"
+                  ],
+                  "Observation-Name": [
+                    "Teeth"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or enamel malformation according to the specific syndromes",
+                  "Condition": [
+                    "enamel malformation",
+                    "specific syndromes"
+                  ],
+                  "Condition-Name": [
+                    "enamel malformation",
+                    "specific syndromes"
+                  ],
+                  "Observation": [
+                    "Teeth"
+                  ],
+                  "Observation-Name": [
+                    "Teeth"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

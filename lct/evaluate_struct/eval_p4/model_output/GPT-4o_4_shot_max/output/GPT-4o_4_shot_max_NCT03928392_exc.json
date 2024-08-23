@@ -1,0 +1,109 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- Younger than 18 years of age",
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Comparison": [
+            "< 18 years"
+          ],
+          "Age": [
+            "18 years"
+          ]
+        },
+        "right": {
+          "raw_text": "or older than 95 years of age",
+          "Eq-Operator": [
+            ">"
+          ],
+          "Eq-Value": [
+            "95"
+          ],
+          "Eq-Comparison": [
+            "> 95 years"
+          ],
+          "Age": [
+            "95 years"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "a member of WAVES Project within 3 months of study recruitment",
+              "Negation": [
+                "Not"
+              ],
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Comparison": [
+                "within 3 months"
+              ],
+              "Study": [
+                "WAVES Project"
+              ],
+              "Eq-Temporal-Period": [
+                "study recruitment"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "has completed 3 open water dives",
+                  "Negation": [
+                    "Not"
+                  ],
+                  "Criteria-Count": [
+                    "3"
+                  ],
+                  "Procedure": [
+                    "open water dives"
+                  ],
+                  "Procedure-Name": [
+                    "open water dives"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "proficient in written and verbal English",
+                  "Negation": [
+                    "Not"
+                  ],
+                  "Language": [
+                    "written and verbal English"
+                  ],
+                  "Assertion": [
+                    "proficient"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
