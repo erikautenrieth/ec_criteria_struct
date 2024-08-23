@@ -1,0 +1,160 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Subjects who do"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "not have malignant tissue available",
+                      "Negation": [
+                        "not"
+                      ],
+                      "Condition": [
+                        "malignant tissue"
+                      ],
+                      "Condition-Name": [
+                        "malignant tissue"
+                      ],
+                      "Assertion": [
+                        "available"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and accessible",
+                      "Assertion": [
+                        "accessible"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- The amount of excised malignant tissue is",
+              "Procedure": [
+                "excised"
+              ],
+              "Condition": [
+                "malignant tissue"
+              ],
+              "Condition-Name": [
+                "malignant tissue"
+              ],
+              "Procedure-Name": [
+                "excised"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "not sufficient for the ex vivo drug testing",
+                      "Negation": [
+                        "not"
+                      ],
+                      "Assertion": [
+                        "sufficient"
+                      ],
+                      "Procedure": [
+                        "drug testing"
+                      ],
+                      "Procedure-Name": [
+                        "drug testing"
+                      ],
+                      "Modifier": [
+                        "ex vivo"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and/or genetic profiling.",
+                      "Procedure": [
+                        "genetic profiling"
+                      ],
+                      "Procedure-Name": [
+                        "genetic profiling"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients with newly diagnosed tumors",
+          "Condition": [
+            "tumors",
+            "tumor"
+          ],
+          "Condition-Name": [
+            "tumor",
+            "tumors"
+          ],
+          "Eq-Comparison": [
+            "newly"
+          ],
+          "Eq-Temporal-Recency": [
+            "newly"
+          ]
+        },
+        "right": {
+          "raw_text": "and tumors that have high (>90%) cure rate with safe standard therapy.",
+          "Condition": [
+            "tumors",
+            "tumor"
+          ],
+          "Eq-Comparison": [
+            ">90%"
+          ],
+          "Observation": [
+            "cure rate"
+          ],
+          "Modifier": [
+            "safe"
+          ],
+          "Procedure": [
+            "standard therapy"
+          ],
+          "Condition-Name": [
+            "tumor",
+            "tumors"
+          ],
+          "Polarity": [
+            "high"
+          ],
+          "Eq-Operator": [
+            ">"
+          ],
+          "Eq-Value": [
+            "90"
+          ],
+          "Eq-Unit": [
+            "%"
+          ],
+          "Procedure-Name": [
+            "standard therapy"
+          ],
+          "Observation-Name": [
+            "cure rate"
+          ]
+        }
+      }
+    }
+  }
+}

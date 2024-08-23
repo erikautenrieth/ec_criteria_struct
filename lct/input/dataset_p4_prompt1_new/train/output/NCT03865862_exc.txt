@@ -1,0 +1,86 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Present a medical diagnosis of injury",
+                  "Observation": [
+                    "injury"
+                  ],
+                  "Observation-Name": [
+                    "injury"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or illness",
+                  "Condition": [
+                    "illness"
+                  ],
+                  "Condition-Name": [
+                    "illness"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Have suffered a knee injury in the 6 months prior to the study",
+              "Study": [
+                "study"
+              ],
+              "Observation": [
+                "injury"
+              ],
+              "Modifier": [
+                "knee"
+              ],
+              "Eq-Comparison": [
+                "6 months"
+              ],
+              "Observation-Name": [
+                "injury"
+              ],
+              "Eq-Value": [
+                "6"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Doing some pharmacological",
+              "Drug": [
+                "pharmacological"
+              ]
+            },
+            "right": {
+              "raw_text": "or physiotherapy treatment external to the study",
+              "Study": [
+                "study"
+              ],
+              "Procedure": [
+                "physiotherapy treatment"
+              ],
+              "Procedure-Name": [
+                "physiotherapy treatment"
+              ],
+              "Other": [
+                "external to"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Not signed the informed consent document."
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "1. Current diagnosis of co-morbid delirium, measured by the Confusion Assessment Measure (CAM) and by clinical diagnosis",
+                      "Condition": [
+                        "co-morbid delirium"
+                      ],
+                      "Condition-Name": [
+                        "co-morbid delirium"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Eq-Comparison": [
+                        "Current"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "Current"
+                      ],
+                      "Observation": [
+                        "Confusion Assessment Measure",
+                        "CAM"
+                      ],
+                      "Observation-Name": [
+                        "Confusion Assessment Measure",
+                        "CAM"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "2. Diagnosis of",
+                          "Eq-Value": [
+                            "2"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "Non-AD Dementia",
+                              "Condition": [
+                                "Dementia",
+                                "AD"
+                              ],
+                              "Condition-Name": [
+                                "Dementia",
+                                "AD"
+                              ],
+                              "Eq-Operator": [
+                                "-"
+                              ],
+                              "Negation": [
+                                "Non"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "3. Lifetime",
+                      "Eq-Value": [
+                        "3"
+                      ],
+                      "Eq-Comparison": [
+                        "Lifetime"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "Lifetime"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or current diagnosis of Schizophrenia,",
+                          "Condition": [
+                            "Schizophrenia"
+                          ],
+                          "Condition-Name": [
+                            "Schizophrenia"
+                          ],
+                          "Eq-Comparison": [
+                            "current"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "current"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Bipolar Disorder",
+                              "Condition": [
+                                "Bipolar Disorder"
+                              ],
+                              "Condition-Name": [
+                                "Bipolar Disorder"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or Schizoaffective Disorder",
+                              "Condition": [
+                                "Schizoaffective Disorder"
+                              ],
+                              "Condition-Name": [
+                                "Schizoaffective Disorder"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "4. Current episode of Major Depressive Disorder (MDD)",
+              "Condition": [
+                "Depressive Disorder",
+                "MDD"
+              ],
+              "Condition-Name": [
+                "Depressive Disorder",
+                "MDD"
+              ],
+              "Eq-Value": [
+                "4"
+              ],
+              "Eq-Comparison": [
+                "Current"
+              ],
+              "Eq-Temporal-Period": [
+                "Current"
+              ],
+              "Modifier": [
+                "Major"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "5. Active substance use disorder within past 6 months",
+          "Condition": [
+            "substance use disorder"
+          ],
+          "Condition-Name": [
+            "substance use disorder"
+          ],
+          "Eq-Operator": [
+            "within"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Eq-Value": [
+            "6"
+          ],
+          "Eq-Comparison": [
+            "Active",
+            "within past 6 months"
+          ],
+          "Eq-Temporal-Period": [
+            "Active",
+            "past"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "6. Treatment with ECT",
+          "Procedure": [
+            "ECT",
+            "Treatment"
+          ],
+          "Procedure-Name": [
+            "ECT"
+          ],
+          "Eq-Value": [
+            "6"
+          ]
+        },
+        "right": {
+          "raw_text": "or other neurostimulation therapies (e.g., TMS or vagal nerve stimulation) within the past 3 months",
+          "Procedure": [
+            "vagal nerve stimulation",
+            "TMS",
+            "neurostimulation therapies"
+          ],
+          "Procedure-Name": [
+            "vagal nerve stimulation",
+            "TMS",
+            "neurostimulation therapies"
+          ],
+          "Eq-Operator": [
+            "within"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Eq-Value": [
+            "3"
+          ],
+          "Eq-Comparison": [
+            "within the past 3 months"
+          ],
+          "Eq-Temporal-Period": [
+            "past"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "1. Patients below 18",
+                  "Eq-Value": [
+                    "18"
+                  ],
+                  "Eq-Comparison": [
+                    "below 18"
+                  ],
+                  "Eq-Operator": [
+                    "below"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and above 45years.",
+                  "Eq-Operator": [
+                    "above"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Eq-Value": [
+                    "45",
+                    "4"
+                  ],
+                  "Eq-Comparison": [
+                    "above 45years"
+                  ],
+                  "Age": [
+                    "years"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "2. Patients with any concomitant Dermatologic",
+                  "Modifier": [
+                    "concomitant Dermatologic"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or systemic illness",
+                  "Condition": [
+                    "illness"
+                  ],
+                  "Condition-Name": [
+                    "illness"
+                  ],
+                  "Modifier": [
+                    "systemic"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "3. Patients on any topical",
+              "Modifier": [
+                "topical"
+              ]
+            },
+            "right": {
+              "raw_text": "or systemic medication within 4 weeks before enrollment.",
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Temporal-Unit": [
+                "weeks"
+              ],
+              "Eq-Value": [
+                "4"
+              ],
+              "Eq-Comparison": [
+                "within 4 weeks"
+              ],
+              "Modifier": [
+                "systemic"
+              ],
+              "Drug": [
+                "medication"
+              ],
+              "Study": [
+                "enrollment"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "4. Pregnancy.",
+      "Condition": [
+        "Pregnancy"
+      ],
+      "Condition-Name": [
+        "Pregnancy"
+      ],
+      "Eq-Value": [
+        "4"
+      ]
+    }
+  }
+}

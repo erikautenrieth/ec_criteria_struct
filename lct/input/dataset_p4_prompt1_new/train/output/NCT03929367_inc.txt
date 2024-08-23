@@ -1,0 +1,235 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Male",
+                      "Life-Stage-And-Gender": [
+                        "Male"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or female > 18",
+                          "Life-Stage-And-Gender": [
+                            "female"
+                          ],
+                          "Eq-Operator": [
+                            ">"
+                          ],
+                          "Eq-Value": [
+                            "18",
+                            "1"
+                          ],
+                          "Eq-Comparison": [
+                            "> 18"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "and < 60 years of age, Body Mass Index (BMI) <40.",
+                          "Observation": [
+                            "Body Mass Index",
+                            "BMI"
+                          ],
+                          "Observation-Name": [
+                            "Body Mass Index",
+                            "BMI"
+                          ],
+                          "Eq-Operator": [
+                            "<"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "years",
+                            "year"
+                          ],
+                          "Eq-Value": [
+                            "60",
+                            "40",
+                            "I"
+                          ],
+                          "Eq-Comparison": [
+                            "< 60 years",
+                            "<40"
+                          ],
+                          "Age": [
+                            "age"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Generally in good health as determined by the Principal Investigator based on prior medical history, American Society of Anesthesiologists physical status I or II",
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Condition": [
+                    "good health"
+                  ],
+                  "Condition-Name": [
+                    "good health"
+                  ],
+                  "Observation": [
+                    "American Society of Anesthesiologists"
+                  ],
+                  "Observation-Name": [
+                    "American Society of Anesthesiologists"
+                  ],
+                  "Eq-Comparison": [
+                    "status I or II"
+                  ],
+                  "Eq-Unit": [
+                    "status"
+                  ],
+                  "Eq-Value": [
+                    "I",
+                    "II"
+                  ],
+                  "Modifier": [
+                    "medical"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Normal blood pressure (systolic 90-140 mmHg; diastolic 50-90 mmHg) resting heart rate",
+              "Eq-Unit": [
+                "mmHg"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Eq-Value": [
+                "40",
+                "90",
+                "140",
+                "50",
+                "1"
+              ],
+              "Eq-Comparison": [
+                "90-140 mmHg",
+                "50-90 mmHg"
+              ],
+              "Observation": [
+                "blood pressure",
+                "systolic",
+                "diastolic",
+                "resting heart rate"
+              ],
+              "Observation-Name": [
+                "blood pressure",
+                "systolic",
+                "diastolic",
+                "resting heart rate"
+              ],
+              "Polarity": [
+                "Normal"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "45-100 beats per minute)",
+              "Eq-Operator": [
+                "-"
+              ],
+              "Eq-Value": [
+                "45",
+                "100",
+                "1"
+              ],
+              "Eq-Comparison": [
+                "45-100 beats per minute"
+              ],
+              "Eq-Unit": [
+                "beats"
+              ],
+              "Eq-Temporal-Unit": [
+                "minute"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "without medication",
+                  "Drug": [
+                    "medication"
+                  ],
+                  "Negation": [
+                    "without"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Female subjects of child-bearing potential",
+          "Life-Stage-And-Gender": [
+            "Female"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Condition": [
+            "child-bearing potential"
+          ],
+          "Condition-Name": [
+            "child-bearing potential"
+          ]
+        },
+        "right": {
+          "raw_text": "and those < 1 year post-menopausal, must be practicing highly effective methods of birth control such as hormonal methods",
+          "Procedure": [
+            "birth control",
+            "hormonal methods"
+          ],
+          "Procedure-Name": [
+            "birth control",
+            "hormonal methods"
+          ],
+          "Eq-Operator": [
+            "<",
+            "-"
+          ],
+          "Eq-Value": [
+            "1"
+          ],
+          "Eq-Comparison": [
+            "< 1 year",
+            "practicing"
+          ],
+          "Condition": [
+            "menopausal"
+          ],
+          "Condition-Name": [
+            "menopausal"
+          ],
+          "Eq-Temporal-Unit": [
+            "year"
+          ],
+          "Eq-Temporal-Period": [
+            "practicing"
+          ]
+        }
+      }
+    }
+  }
+}

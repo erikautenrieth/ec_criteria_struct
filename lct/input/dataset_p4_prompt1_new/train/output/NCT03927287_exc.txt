@@ -1,0 +1,141 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "1. Patients that were younger than 18,",
+              "Eq-Operator": [
+                "younger than"
+              ],
+              "Eq-Value": [
+                "18"
+              ],
+              "Eq-Comparison": [
+                "younger than 18"
+              ],
+              "Age": [
+                "younger"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "2. Patients with prostate cancer other than adenocarcinoma, such as small cell",
+                  "Condition": [
+                    "adenocarcinoma",
+                    "prostate cancer",
+                    "cancer"
+                  ],
+                  "Condition-Name": [
+                    "adenocarcinoma",
+                    "prostate cancer",
+                    "cancer"
+                  ],
+                  "Modifier": [
+                    "prostate",
+                    "small cell"
+                  ],
+                  "Exception": [
+                    "other than"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and neuroendocrine cancer",
+                  "Condition": [
+                    "cancer"
+                  ],
+                  "Condition-Name": [
+                    "cancer"
+                  ],
+                  "Modifier": [
+                    "neuroendocrine"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "3. Patients with prostate adenocarcinoma",
+              "Condition": [
+                "adenocarcinoma",
+                "prostate adenocarcinoma"
+              ],
+              "Condition-Name": [
+                "adenocarcinoma",
+                "prostate adenocarcinoma"
+              ],
+              "Modifier": [
+                "prostate"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "that did"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not develop biochemical recurrence.",
+                      "Condition": [
+                        "biochemical recurrence"
+                      ],
+                      "Condition-Name": [
+                        "biochemical recurrence"
+                      ],
+                      "Negation": [
+                        "not"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "4. In the retrospective cohorts - patients that did"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "not have at least one post-treatment free PSA blood test.",
+              "Observation": [
+                "PSA",
+                "PSA blood test"
+              ],
+              "Observation-Name": [
+                "PSA",
+                "PSA blood test"
+              ],
+              "Procedure": [
+                "treatment"
+              ],
+              "Eq-Comparison": [
+                "at least one"
+              ],
+              "Eq-Operator": [
+                "at least"
+              ],
+              "Eq-Value": [
+                "one"
+              ],
+              "Negation": [
+                "not"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

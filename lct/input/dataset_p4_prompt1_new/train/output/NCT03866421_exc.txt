@@ -1,0 +1,275 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- End stage liver disease as diagnosed by MELD (model for end stage liver disease) criteria",
+                              "Modifier": [
+                                "End stage"
+                              ],
+                              "Condition": [
+                                "liver disease"
+                              ],
+                              "Eq-Unit": [
+                                "l",
+                                "g"
+                              ],
+                              "Condition-Name": [
+                                "liver disease"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "OR"
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- At the waiting list for liver transplantation",
+                              "Procedure": [
+                                "liver transplantation"
+                              ],
+                              "Eq-Unit": [
+                                "l",
+                                "g"
+                              ],
+                              "Procedure-Name": [
+                                "liver transplantation"
+                              ],
+                              "Assertion": [
+                                "waiting list"
+                              ],
+                              "Modifier": [
+                                "A"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "OR"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Daily alcohol intake above 20 g",
+                          "Eq-Comparison": [
+                            "Daily",
+                            "above 20 g"
+                          ],
+                          "Observation": [
+                            "alcohol intake"
+                          ],
+                          "Eq-Unit": [
+                            "l",
+                            "g"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "Daily"
+                          ],
+                          "Observation-Name": [
+                            "alcohol intake"
+                          ],
+                          "Eq-Operator": [
+                            "above"
+                          ],
+                          "Eq-Value": [
+                            "20"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "and 30 g for women",
+                              "Eq-Unit": [
+                                "g"
+                              ],
+                              "Life-Stage-And-Gender": [
+                                "women",
+                                "men"
+                              ],
+                              "Eq-Comparison": [
+                                "30 g"
+                              ],
+                              "Eq-Value": [
+                                "30"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "and men respectively",
+                                  "Eq-Unit": [
+                                    "l"
+                                  ],
+                                  "Life-Stage-And-Gender": [
+                                    "men"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "OR"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Known hepatitis",
+                      "Condition": [
+                        "hepatitis"
+                      ],
+                      "Condition-Name": [
+                        "hepatitis"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "A,",
+                          "Modifier": [
+                            "A"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "B",
+                              "Modifier": [
+                                "B"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or C or hepatocellular carcinoma",
+                                  "Modifier": [
+                                    "C",
+                                    "hepatocellular"
+                                  ],
+                                  "Condition": [
+                                    "carcinoma"
+                                  ],
+                                  "Eq-Unit": [
+                                    "l"
+                                  ],
+                                  "Condition-Name": [
+                                    "carcinoma"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "or other known liver disease",
+                                      "Condition": [
+                                        "liver disease"
+                                      ],
+                                      "Other": [
+                                        "other"
+                                      ],
+                                      "Eq-Unit": [
+                                        "l"
+                                      ],
+                                      "Condition-Name": [
+                                        "liver disease"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "OR"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Pregnancy",
+                  "Condition": [
+                    "Pregnancy"
+                  ],
+                  "Eq-Unit": [
+                    "g"
+                  ],
+                  "Condition-Name": [
+                    "Pregnancy"
+                  ]
+                },
+                "right": {
+                  "raw_text": "OR"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Weight > 130 kg",
+              "Observation": [
+                "Weight"
+              ],
+              "Eq-Comparison": [
+                "> 130 kg"
+              ],
+              "Eq-Unit": [
+                "g",
+                "kg"
+              ],
+              "Observation-Name": [
+                "Weight"
+              ],
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Value": [
+                "130",
+                "30"
+              ]
+            },
+            "right": {
+              "raw_text": "OR"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Implanted pacemaker",
+      "Procedure": [
+        "Implanted pacemaker"
+      ],
+      "Eq-Unit": [
+        "l"
+      ],
+      "Procedure-Name": [
+        "Implanted pacemaker"
+      ]
+    }
+  }
+}

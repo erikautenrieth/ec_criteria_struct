@@ -1,0 +1,78 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "Only patients diagnosed with Type I",
+      "Modifier": [
+        "Type I"
+      ],
+      "Negation": [
+        "no"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "or Type II Diabetes",
+          "Condition": [
+            "Diabetes"
+          ],
+          "Condition-Name": [
+            "Diabetes"
+          ],
+          "Modifier": [
+            "Type I",
+            "Type II"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "with"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "no evidence in their medical records of a screening within the last 2 years will be included in the study and only individuals 18 years of age or older will be included.",
+                  "Eq-Operator": [
+                    "within",
+                    "or older"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years",
+                    "year"
+                  ],
+                  "Age": [
+                    "age"
+                  ],
+                  "Eq-Value": [
+                    "2",
+                    "18"
+                  ],
+                  "Procedure": [
+                    "screening"
+                  ],
+                  "Procedure-Name": [
+                    "screening"
+                  ],
+                  "Negation": [
+                    "no"
+                  ],
+                  "Eq-Comparison": [
+                    "within the last 2 years",
+                    "18 years of age or older"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "last"
+                  ],
+                  "Study": [
+                    "study"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

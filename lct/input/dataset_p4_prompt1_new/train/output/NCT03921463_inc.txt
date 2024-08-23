@@ -1,0 +1,111 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- 1)Age: 20 ~35 years old; 2) first parturients registered in the obstetrics department of our hospital; 3)",
+      "Eq-Temporal-Unit": [
+        "years"
+      ],
+      "Eq-Value": [
+        "20"
+      ],
+      "Age": [
+        "Age"
+      ],
+      "Eq-Comparison": [
+        "20 ~35 years",
+        "first"
+      ],
+      "Eq-Operator": [
+        "~"
+      ],
+      "Condition": [
+        "parturients"
+      ],
+      "Condition-Name": [
+        "parturients"
+      ],
+      "Eq-Temporal-Recency": [
+        "first"
+      ],
+      "Location": [
+        "obstetrics department of our hospital"
+      ]
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "no medical complications before pregnancy,",
+              "Condition": [
+                "medical complications",
+                "pregnancy"
+              ],
+              "Negation": [
+                "no"
+              ],
+              "Condition-Name": [
+                "pregnancy"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "no UI",
+                      "Negation": [
+                        "no"
+                      ],
+                      "Condition": [
+                        "UI"
+                      ],
+                      "Condition-Name": [
+                        "UI"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "and POP (according to the standard of POP-Q stage); 4)",
+                          "Condition": [
+                            "POP"
+                          ],
+                          "Condition-Name": [
+                            "POP"
+                          ],
+                          "Observation": [
+                            "standard of POP-Q stage"
+                          ],
+                          "Observation-Name": [
+                            "standard of POP-Q stage"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "no obstetric complications; 5) the patients agreed to conduct the study and signed the informed consent.",
+                              "Negation": [
+                                "no"
+                              ],
+                              "Condition": [
+                                "obstetric complications"
+                              ],
+                              "Condition-Name": [
+                                "obstetric complications"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

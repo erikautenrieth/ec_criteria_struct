@@ -1,0 +1,293 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- Acute coronary syndrome, including acute myocardial infarction",
+                              "Condition": [
+                                "myocardial infarction",
+                                "coronary syndrome"
+                              ],
+                              "Condition-Name": [
+                                "myocardial infarction",
+                                "coronary syndrome"
+                              ],
+                              "Acuteness": [
+                                "Acute",
+                                "acute"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "or unstable angina, known",
+                                  "Condition": [
+                                    "angina"
+                                  ],
+                                  "Condition-Name": [
+                                    "angina"
+                                  ],
+                                  "Stability": [
+                                    "unstable"
+                                  ]
+                                },
+                                "right": {
+                                  "NOT": {
+                                    "left": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "non-ischemic cardiomyopathy",
+                                          "Condition": [
+                                            "cardiomyopathy"
+                                          ],
+                                          "Condition-Name": [
+                                            "cardiomyopathy"
+                                          ],
+                                          "Negation": [
+                                            "non"
+                                          ],
+                                          "Modifier": [
+                                            "ischemic"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "or other cardiac disease (e.g. mitral valve prolapse, etc.) which would require urgent cardiac evaluation",
+                                          "Condition": [
+                                            "cardiac disease",
+                                            "mitral valve prolapse"
+                                          ],
+                                          "Condition-Name": [
+                                            "cardiac disease",
+                                            "mitral valve prolapse"
+                                          ],
+                                          "Modifier": [
+                                            "urgent"
+                                          ],
+                                          "Other": [
+                                            "other"
+                                          ],
+                                          "Procedure": [
+                                            "cardiac evaluation"
+                                          ],
+                                          "Procedure-Name": [
+                                            "cardiac evaluation"
+                                          ],
+                                          "Assertion": [
+                                            "would"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Known CAD",
+                          "Condition": [
+                            "CAD"
+                          ],
+                          "Condition-Name": [
+                            "CAD"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Prior cardiac evaluation for current episode of symptoms",
+                      "Eq-Comparison": [
+                        "current",
+                        "Prior"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "current",
+                        "Prior"
+                      ],
+                      "Assertion": [
+                        "symptoms"
+                      ],
+                      "Procedure": [
+                        "cardiac evaluation"
+                      ],
+                      "Procedure-Name": [
+                        "cardiac evaluation"
+                      ],
+                      "Condition": [
+                        "symptoms"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Previously investigated for CAD in the last 12 months",
+                  "Condition": [
+                    "CAD"
+                  ],
+                  "Condition-Name": [
+                    "CAD"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Value": [
+                    "12"
+                  ],
+                  "Eq-Comparison": [
+                    "Previously",
+                    "last 12 months"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "Previously",
+                    "last"
+                  ],
+                  "Procedure": [
+                    "investigated"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Severe allergic reaction to iodinated contrast (mild reactions such as urticaria that can be controlled by premedication with Benadryl",
+                  "Procedure": [
+                    "premedication"
+                  ],
+                  "Procedure-Name": [
+                    "premedication"
+                  ],
+                  "Condition": [
+                    "urticaria"
+                  ],
+                  "Condition-Name": [
+                    "urticaria"
+                  ],
+                  "Allergy": [
+                    "allergic"
+                  ],
+                  "Severity": [
+                    "Severe",
+                    "mild"
+                  ],
+                  "Allergy-Name": [
+                    "iodinated contrast"
+                  ],
+                  "Drug": [
+                    "Benadryl"
+                  ],
+                  "Drug-Name": [
+                    "Benadryl"
+                  ],
+                  "Stability": [
+                    "controlled"
+                  ],
+                  "Assertion": [
+                    "can"
+                  ]
+                },
+                "right": {
+                  "raw_text": "& Prednisone may be included in the study)",
+                  "Drug": [
+                    "Prednisone"
+                  ],
+                  "Drug-Name": [
+                    "Prednisone"
+                  ],
+                  "Study": [
+                    "study"
+                  ],
+                  "Assertion": [
+                    "may"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Renal failure",
+              "Condition": [
+                "Renal failure"
+              ],
+              "Condition-Name": [
+                "Renal failure"
+              ]
+            },
+            "right": {
+              "raw_text": "or dysfunction (estimated Glomerular Filtration Rate<30ml/min/m2 within the past 3 months)",
+              "Condition": [
+                "dysfunction"
+              ],
+              "Condition-Name": [
+                "dysfunction"
+              ],
+              "Eq-Operator": [
+                "<",
+                "within"
+              ],
+              "Eq-Temporal-Unit": [
+                "months",
+                "min"
+              ],
+              "Eq-Value": [
+                "30",
+                "3"
+              ],
+              "Eq-Comparison": [
+                "<30ml/min/m2",
+                "within the past 3 months"
+              ],
+              "Observation": [
+                "estimated Glomerular Filtration Rate"
+              ],
+              "Observation-Name": [
+                "estimated Glomerular Filtration Rate"
+              ],
+              "Eq-Unit": [
+                "ml",
+                "m2"
+              ],
+              "Eq-Temporal-Period": [
+                "past"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Pregnancy (status will be confirmed verbally. For premenopausal patients who are unsure, status will be confirmed by completing a pregnancy strip test).",
+      "Condition": [
+        "Pregnancy",
+        "premenopausal"
+      ],
+      "Condition-Name": [
+        "Pregnancy",
+        "premenopausal"
+      ],
+      "Observation": [
+        "pregnancy strip test"
+      ],
+      "Observation-Name": [
+        "pregnancy strip test"
+      ],
+      "Assertion": [
+        "will be"
+      ]
+    }
+  }
+}

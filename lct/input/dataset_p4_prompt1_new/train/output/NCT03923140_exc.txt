@@ -1,0 +1,116 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients will not be included if meets any of the following criteria:"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "1. Being treated with IL-1 inhibitor, other biological agents",
+                  "Drug": [
+                    "biological agents",
+                    "IL-1 inhibitor"
+                  ],
+                  "Drug-Name": [
+                    "biological agents",
+                    "IL-1 inhibitor"
+                  ],
+                  "Eq-Comparison": [
+                    "Being"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "Being"
+                  ],
+                  "Procedure": [
+                    "treated"
+                  ],
+                  "Other": [
+                    "other"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and immunosuppressants",
+                  "Drug": [
+                    "immunosuppressants"
+                  ],
+                  "Drug-Name": [
+                    "immunosuppressants"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "2. Pregnant",
+              "Eq-Value": [
+                "2"
+              ],
+              "Condition": [
+                "Pregnant"
+              ],
+              "Condition-Name": [
+                "Pregnant"
+              ]
+            },
+            "right": {
+              "raw_text": "and lactating women",
+              "Condition": [
+                "lactating"
+              ],
+              "Condition-Name": [
+                "lactating"
+              ],
+              "Life-Stage-And-Gender": [
+                "women"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "3. Serious organ function failure,",
+          "Condition": [
+            "organ function failure"
+          ],
+          "Condition-Name": [
+            "organ function failure"
+          ],
+          "Severity": [
+            "Serious"
+          ]
+        },
+        "right": {
+          "raw_text": "expected life time less than 6 months",
+          "Eq-Operator": [
+            "less than"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Eq-Value": [
+            "6"
+          ],
+          "Eq-Comparison": [
+            "less than 6 months"
+          ],
+          "Observation": [
+            "expected life time"
+          ],
+          "Observation-Name": [
+            "expected life time"
+          ]
+        }
+      }
+    }
+  }
+}
