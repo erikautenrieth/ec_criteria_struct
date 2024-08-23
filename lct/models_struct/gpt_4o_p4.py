@@ -25,11 +25,11 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 
 batch_path = "eval_p4"
-n_shot = 4
+n_shot = 15
 
 # 15 shot zu viel für mini (5 geht)
 
-model_name = f"GPT-4o_{n_shot}_shot_max"
+model_name = f"GPT-4o_mini_{n_shot}_shot_max"
 
 
 client = OpenAI(
@@ -63,7 +63,11 @@ additional = [
     "NCT03923894_exc.txt",
     "NCT03861559_exc.txt",
     "NCT03860350_exc.txt",
-    "NCT03867942_inc.txt"
+    "NCT03867942_inc.txt",
+    "NCT03929718_exc.txt",
+    "NCT03868475_exc.txt",
+    "NCT03921502_exc.txt",
+    "NCT03862027_exc.txt"
 ]
 
 
@@ -82,7 +86,7 @@ label_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/output/"
 #random_files = random.sample(all_label_files, n_shot)
 
 
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, files)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, additional)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
@@ -111,7 +115,7 @@ for file in study_files:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"} 
 
     completion = client.chat.completions.create(
-    model="gpt-4o",# "gpt-4o", "gpt-3.5-turbo",
+    model="gpt-4o-mini",# "gpt-4o", "gpt-3.5-turbo",
     messages=messages,
     temperature=0.5,
     )

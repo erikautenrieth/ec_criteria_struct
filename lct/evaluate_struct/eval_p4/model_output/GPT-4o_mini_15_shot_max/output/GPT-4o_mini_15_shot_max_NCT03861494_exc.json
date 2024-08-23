@@ -1,0 +1,107 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- admitted with transient ischemic attack",
+                  "Condition": [
+                    "transient ischemic attack"
+                  ],
+                  "Condition-Name": [
+                    "transient ischemic attack"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- admitted with an intracerebral hemorrhage",
+                  "Condition": [
+                    "intracerebral hemorrhage"
+                  ],
+                  "Condition-Name": [
+                    "intracerebral hemorrhage"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- experience an in-hospital ischemic cerebral infarction",
+                  "Condition": [
+                    "ischemic cerebral infarction"
+                  ],
+                  "Condition-Name": [
+                    "ischemic cerebral infarction"
+                  ],
+                  "Eq-Comparison": [
+                    "experience"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- hospital to hospital transfer patients",
+                  "Condition": [
+                    "hospital to hospital transfer"
+                  ],
+                  "Condition-Name": [
+                    "hospital to hospital transfer"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- nursing home as primary residence before or after discharge",
+              "Condition": [
+                "nursing home"
+              ],
+              "Condition-Name": [
+                "nursing home"
+              ],
+              "Modifier": [
+                "primary residence"
+              ],
+              "Eq-Comparison": [
+                "before",
+                "after"
+              ],
+              "Eq-Temporal-Period": [
+                "before",
+                "after"
+              ]
+            },
+            "right": {
+              "raw_text": "- hospice",
+              "Condition": [
+                "hospice"
+              ],
+              "Condition-Name": [
+                "hospice"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- inability to comply with post discharge follow up",
+      "Negation": [
+        "inability"
+      ],
+      "Assertion": [
+        "comply"
+      ],
+      "Eq-Comparison": [
+        "with"
+      ],
+      "Eq-Temporal-Period": [
+        "post discharge follow up"
+      ]
+    }
+  }
+}
