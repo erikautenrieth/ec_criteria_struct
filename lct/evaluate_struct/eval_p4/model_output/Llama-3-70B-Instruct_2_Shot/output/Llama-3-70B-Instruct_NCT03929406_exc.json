@@ -1,0 +1,100 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "- Patient not eligible for deep brain stimulation surgery",
+          "Procedure": [
+            "deep brain stimulation surgery"
+          ],
+          "Procedure-Name": [
+            "deep brain stimulation surgery"
+          ],
+          "Exception": [
+            "not eligible"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnant women",
+              "Condition": [
+                "Pregnant"
+              ],
+              "Condition-Name": [
+                "Pregnant"
+              ],
+              "Life-Stage-And-Gender": [
+                "Pregnant women"
+              ]
+            },
+            "right": {
+              "raw_text": "or nursing mothers",
+              "Condition": [
+                "nursing mothers"
+              ],
+              "Condition-Name": [
+                "nursing mothers"
+              ],
+              "Life-Stage-And-Gender": [
+                "nursing mothers"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Persons deprived of liberty by judicial or administrative decision",
+              "Condition": [
+                "deprived of liberty"
+              ],
+              "Condition-Name": [
+                "deprived of liberty"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Persons unable to express their consent",
+                  "Condition": [
+                    "unable to express their consent"
+                  ],
+                  "Condition-Name": [
+                    "unable to express their consent"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or legally protected",
+                      "Condition": [
+                        "legally protected"
+                      ],
+                      "Condition-Name": [
+                        "legally protected"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Persons in period of disqualification for another interventional research",
+                      "Condition": [
+                        "in period of disqualification"
+                      ],
+                      "Condition-Name": [
+                        "in period of disqualification"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

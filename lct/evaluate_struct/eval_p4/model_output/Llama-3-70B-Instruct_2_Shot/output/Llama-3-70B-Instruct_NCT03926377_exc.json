@@ -1,0 +1,79 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "- Patients under tutorship or curatorship or inability to give informed consent",
+      "Condition": [
+        "tutorship",
+        "curatorship",
+        "inability to give informed consent"
+      ],
+      "Condition-Name": [
+        "tutorship",
+        "curatorship",
+        "inability to give informed consent"
+      ]
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients receiving an anti-osteoporotic treatment",
+          "Drug": [
+            "anti-osteoporotic treatment"
+          ],
+          "Drug-Name": [
+            "anti-osteoporotic treatment"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients requiring an anti-osteoporotic baseline treatment (T-score ⩽ -3DS on at least 1 site or FRAX score above the therapeutic intervention threshold)",
+              "Observation": [
+                "T-score",
+                "FRAX score"
+              ],
+              "Observation-Name": [
+                "T-score",
+                "FRAX score"
+              ],
+              "Eq-Operator": [
+                "⩽"
+              ],
+              "Eq-Value": [
+                "-3DS"
+              ],
+              "Eq-Comparison": [
+                "⩽ -3DS"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patients with one or more major risk factors for osteoporosis",
+                  "Condition": [
+                    "major risk factors for osteoporosis"
+                  ],
+                  "Condition-Name": [
+                    "major risk factors for osteoporosis"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Patients who have received topical corticosteroids in less than 3 months",
+                  "Drug": [
+                    "topical corticosteroids"
+                  ],
+                  "Drug-Name": [
+                    "topical corticosteroids"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "less than 3 months"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

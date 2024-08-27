@@ -1,0 +1,55 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Pregnant woman;",
+      "Condition": [
+        "Pregnant"
+      ],
+      "Condition-Name": [
+        "Pregnant"
+      ],
+      "Life-Stage-And-Gender": [
+        "Pregnant woman"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient present clinical signes of stroke",
+          "Condition": [
+            "stroke"
+          ],
+          "Condition-Name": [
+            "stroke"
+          ],
+          "Observation": [
+            "clinical signes"
+          ],
+          "Observation-Name": [
+            "clinical signes"
+          ]
+        },
+        "right": {
+          "raw_text": "and without CO detection.",
+          "NOT": {
+            "left": {
+              "raw_text": "CO detection",
+              "Observation": [
+                "CO detection"
+              ],
+              "Observation-Name": [
+                "CO detection"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "Exception": {
+    "raw_text": "In case of unusable data, patient will be excluded from study.",
+    "Exception": [
+      "unusable data"
+    ]
+  }
+}

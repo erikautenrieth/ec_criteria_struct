@@ -1,0 +1,248 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- No history or diagnosis of any of the following conditions: Chron's disease",
+              "Negation": [
+                "No",
+                "No history",
+                "No diagnosis"
+              ],
+              "Condition": [
+                "Chron's disease",
+                "conditions"
+              ],
+              "Condition-Name": [
+                "Chron's disease"
+              ],
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": ", bleeding disorders",
+                  "Condition": [
+                    "disorders"
+                  ],
+                  "Modifier": [
+                    "bleeding"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Condition-Name": [
+                    "disorders"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": ", gastrointestinal or colonic malignancy,",
+                      "Condition": [
+                        "malignancy"
+                      ],
+                      "Modifier": [
+                        "gastrointestinal",
+                        "colonic"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Condition-Name": [
+                        "malignancy"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Kidney disease",
+                          "Condition": [
+                            "disease"
+                          ],
+                          "Modifier": [
+                            "Kidney"
+                          ],
+                          "Eq-Operator": [
+                            "-"
+                          ],
+                          "Condition-Name": [
+                            "disease"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": ", including kidney \"stones\"",
+                              "Condition": [
+                                "stones"
+                              ],
+                              "Modifier": [
+                                "kidney"
+                              ],
+                              "Eq-Operator": [
+                                "-"
+                              ],
+                              "Condition-Name": [
+                                "stones"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or hypercalcemia,",
+                              "Condition": [
+                                "hypercalcemia"
+                              ],
+                              "Eq-Operator": [
+                                "-"
+                              ],
+                              "Condition-Name": [
+                                "hypercalcemia"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": ", Coagulopathy/hereditary hemorrhagic disorders/",
+          "Condition": [
+            "Coagulopathy",
+            "disorders"
+          ],
+          "Modifier": [
+            "hereditary",
+            "hemorrhagic"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Condition-Name": [
+            "Coagulopathy",
+            "disorders"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or receiving therapeutic doses of Coumadin",
+              "Procedure": [
+                "receiving"
+              ],
+              "Drug": [
+                "Coumadin",
+                "doses"
+              ],
+              "Modifier": [
+                "therapeutic"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Drug-Name": [
+                "Coumadin",
+                "doses"
+              ]
+            },
+            "right": {
+              "raw_text": "or heparin.",
+              "Drug": [
+                "heparin"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Drug-Name": [
+                "heparin"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "raw_text": "- Ingested certain medications",
+        "Procedure": [
+          "Ingested"
+        ],
+        "Eq-Operator": [
+          "-"
+        ],
+        "Drug": [
+          "medications"
+        ]
+      },
+      "right": {
+        "OR": {
+          "left": {
+            "raw_text": "(Calcium",
+            "Drug": [
+              "Calcium"
+            ],
+            "Drug-Name": [
+              "Calcium"
+            ]
+          },
+          "right": {
+            "OR": {
+              "left": {
+                "raw_text": ", Vitamin D",
+                "Drug": [
+                  "Vitamin D"
+                ],
+                "Drug-Name": [
+                  "Vitamin D"
+                ]
+              },
+              "right": {
+                "OR": {
+                  "left": {
+                    "raw_text": ", fiber supplements",
+                    "Drug": [
+                      "supplements"
+                    ],
+                    "Modifier": [
+                      "fiber"
+                    ]
+                  },
+                  "right": {
+                    "raw_text": "and Non-steroidal anti-inflammatory drugs - NSAIDs",
+                    "Drug": [
+                      "drugs"
+                    ],
+                    "Modifier": [
+                      "Non-steroidal",
+                      "anti-inflammatory"
+                    ],
+                    "Eq-Operator": [
+                      "-"
+                    ],
+                    "Drug-Name": [
+                      "NSAIDs"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

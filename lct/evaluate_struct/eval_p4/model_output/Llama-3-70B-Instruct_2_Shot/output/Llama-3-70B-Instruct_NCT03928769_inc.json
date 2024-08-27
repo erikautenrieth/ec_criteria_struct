@@ -1,0 +1,81 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Male or female ≥ 18 years",
+      "OR": {
+        "left": {
+          "raw_text": "Male",
+          "Gender": [
+            "Male"
+          ]
+        },
+        "right": {
+          "raw_text": "female",
+          "Gender": [
+            "female"
+          ]
+        }
+      },
+      "Eq-Operator": [
+        "≥"
+      ],
+      "Age": [
+        "age"
+      ],
+      "Eq-Value": [
+        "18"
+      ],
+      "Eq-Comparison": [
+        "≥ 18 years"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient for whom a vascular surgery is programmed, and whose nature allows obtaining of arterial segment without any harm for the health of the patient",
+          "Procedure": [
+            "vascular surgery"
+          ],
+          "Procedure-Name": [
+            "vascular surgery"
+          ],
+          "Condition": [
+            "obtaining of arterial segment"
+          ],
+          "Condition-Name": [
+            "obtaining of arterial segment"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patient for whom a blood sample is planned on the day of the procedure",
+              "Procedure": [
+                "blood sample"
+              ],
+              "Procedure-Name": [
+                "blood sample"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Person who has received complete information on the organization of the research and who has not objected to his participation and the exploitation of his data",
+                  "Study": [
+                    "research"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Compulsory affiliation to social security",
+                  "Insurance": [
+                    "social security"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

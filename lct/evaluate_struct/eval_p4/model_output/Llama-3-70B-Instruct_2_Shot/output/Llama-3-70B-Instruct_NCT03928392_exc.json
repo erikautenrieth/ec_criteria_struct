@@ -1,0 +1,109 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Younger than 18 years of age",
+          "Age": [
+            "age"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Comparison": [
+            "< 18"
+          ],
+          "Eq-Unit": [
+            "years"
+          ]
+        },
+        "right": {
+          "raw_text": "or older than 95 years of age",
+          "Age": [
+            "age"
+          ],
+          "Eq-Operator": [
+            ">"
+          ],
+          "Eq-Value": [
+            "95"
+          ],
+          "Eq-Comparison": [
+            "> 95"
+          ],
+          "Eq-Unit": [
+            "years"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Not a member of WAVES Project within 3 months of study recruitment",
+              "NOT": {
+                "left": {
+                  "raw_text": "a member of WAVES Project within 3 months of study recruitment",
+                  "Study": [
+                    "study recruitment"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "within 3 months"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Condition": [
+                    "WAVES Project"
+                  ],
+                  "Condition-Name": [
+                    "WAVES Project"
+                  ]
+                }
+              }
+            }
+          },
+          "right": {
+            "raw_text": "- Has not completed 3 open water dives",
+            "NOT": {
+              "left": {
+                "raw_text": "completed 3 open water dives",
+                "Procedure": [
+                  "open water dives"
+                ],
+                "Procedure-Name": [
+                  "open water dives"
+                ],
+                "Eq-Value": [
+                  "3"
+                ]
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Not proficient in written and verbal English",
+          "NOT": {
+            "left": {
+              "raw_text": "proficient in written and verbal English",
+              "Language": [
+                "English"
+              ],
+              "Condition": [
+                "written and verbal English"
+              ],
+              "Condition-Name": [
+                "written and verbal English"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

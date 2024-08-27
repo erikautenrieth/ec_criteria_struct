@@ -1,0 +1,64 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- BMI : 18-30 kg/m2",
+      "Eq-Operator": [
+        ":"
+      ],
+      "Observation": [
+        "BMI"
+      ],
+      "Observation-Name": [
+        "Body Mass Index"
+      ],
+      "Eq-Value": [
+        "18",
+        "30"
+      ],
+      "Eq-Unit": [
+        "kg/m2"
+      ],
+      "Eq-Comparison": [
+        "18-30 kg/m2"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Ability and willingness to abstain from alcohol, methylxanthine-containing beverages or food (coffee, tea, cola, chocolate, \"powerdrinks\"), grapefruit (juice) from 48 h prior to entry in the clinical research center until discharge",
+          "Condition": [
+            "Ability and willingness to abstain"
+          ],
+          "Condition-Name": [
+            "Ability and willingness to abstain"
+          ],
+          "Drug": [
+            "alcohol",
+            "methylxanthine-containing beverages",
+            "coffee",
+            "tea",
+            "cola",
+            "chocolate",
+            "powerdrinks",
+            "grapefruit",
+            "juice"
+          ]
+        },
+        "right": {
+          "raw_text": "- Medical history without major pathology",
+          "NOT": {
+            "left": {
+              "raw_text": "major pathology",
+              "Condition": [
+                "major pathology"
+              ],
+              "Condition-Name": [
+                "major pathology"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

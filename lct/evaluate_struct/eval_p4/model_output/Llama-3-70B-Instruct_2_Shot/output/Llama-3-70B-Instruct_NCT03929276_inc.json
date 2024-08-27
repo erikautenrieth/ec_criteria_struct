@@ -1,0 +1,73 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Subjects with adhesive capsulitis diagnosis by physical examination",
+          "Condition": [
+            "adhesive capsulitis"
+          ],
+          "Condition-Name": [
+            "adhesive capsulitis"
+          ],
+          "Observation": [
+            "physical examination"
+          ]
+        },
+        "right": {
+          "raw_text": "(Compared with intact side, there is more than 25% limitation in at least two directions of shoulder range of motion)",
+          "Observation": [
+            "shoulder range of motion"
+          ],
+          "Observation-Name": [
+            "shoulder range of motion"
+          ],
+          "Eq-Operator": [
+            ">"
+          ],
+          "Eq-Value": [
+            "25%"
+          ],
+          "Eq-Comparison": [
+            "> 25%"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Subjects have complaints for at least 1 month",
+          "Eq-Operator": [
+            ">="
+          ],
+          "Eq-Value": [
+            "1 month"
+          ],
+          "Eq-Comparison": [
+            "at least 1 month"
+          ],
+          "Time": [
+            "1 month"
+          ]
+        },
+        "right": {
+          "raw_text": "- No pregnancy / breastfeeding",
+          "NOT": {
+            "left": {
+              "raw_text": "pregnancy / breastfeeding",
+              "Condition": [
+                "pregnancy",
+                "breastfeeding"
+              ],
+              "Condition-Name": [
+                "pregnancy",
+                "breastfeeding"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
