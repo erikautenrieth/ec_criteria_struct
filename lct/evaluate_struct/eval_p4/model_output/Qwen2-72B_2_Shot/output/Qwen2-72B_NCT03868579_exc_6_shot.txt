@@ -1,0 +1,58 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Patients with known malignant pleural effusion",
+      "Condition": [
+        "malignant pleural effusion"
+      ],
+      "Condition-Name": [
+        "malignant pleural effusion"
+      ],
+      "Eq-Operator": [
+        "-"
+      ],
+      "Observation": [
+        "Patients"
+      ],
+      "Observation-Name": [
+        "Patients"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "Inability",
+              "Negation": [
+                "Inability"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or unwillingness to give informed consent",
+              "Negation": [
+                "unwillingness"
+              ],
+              "Modifier": [
+                "give"
+              ],
+              "Condition": [
+                "informed consent"
+              ],
+              "Condition-Name": [
+                "informed consent"
+              ]
+            },
+            "right": {
+              "raw_text": ""
+            }
+          }
+        }
+      }
+    }
+  }
+}
