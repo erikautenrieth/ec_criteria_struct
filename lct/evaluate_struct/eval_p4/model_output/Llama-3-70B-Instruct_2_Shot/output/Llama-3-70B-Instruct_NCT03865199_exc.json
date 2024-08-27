@@ -1,0 +1,53 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Exclusion criteria will include non-English speaking",
+      "NOT": {
+        "left": {
+          "raw_text": "non-English speaking",
+          "Language": [
+            "English"
+          ],
+          "Exception": [
+            "non-English speaking"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- no working telephone",
+          "NOT": {
+            "left": {
+              "raw_text": "working telephone",
+              "Exception": [
+                "no working telephone"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- and less than 5th grade education level",
+          "NOT": {
+            "left": {
+              "raw_text": "less than 5th grade education level",
+              "Eq-Operator": [
+                "less than"
+              ],
+              "Eq-Value": [
+                "5th grade"
+              ],
+              "Eq-Comparison": [
+                "less than 5th grade"
+              ],
+              "Education": [
+                "education level"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

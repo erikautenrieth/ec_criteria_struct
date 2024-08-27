@@ -1,0 +1,142 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Subject who underwent thyroid surgery",
+                  "Procedure": [
+                    "thyroid surgery"
+                  ],
+                  "Procedure-Name": [
+                    "thyroid surgery"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Subject who underwent any radiotherapy on neck",
+                  "Procedure": [
+                    "radiotherapy"
+                  ],
+                  "Location": [
+                    "neck"
+                  ],
+                  "Procedure-Name": [
+                    "radiotherapy"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Subject who need to neck dissection",
+              "Procedure": [
+                "neck dissection"
+              ],
+              "Procedure-Name": [
+                "neck dissection"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Subject under 18 years",
+              "Age": [
+                "18"
+              ],
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Comparison": [
+                "< 18"
+              ]
+            },
+            "right": {
+              "raw_text": "- Subject over 70 years",
+              "Age": [
+                "70"
+              ],
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Comparison": [
+                "> 70"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Bad general condition",
+          "Condition": [
+            "Bad general condition"
+          ],
+          "Condition-Name": [
+            "Bad general condition"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- High American Society of Anesthesiologists(ASA) score (over 3)",
+              "Observation": [
+                "ASA score"
+              ],
+              "Observation-Name": [
+                "ASA score"
+              ],
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Comparison": [
+                "> 3"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Breast feeder",
+                  "Condition": [
+                    "Breast feeder"
+                  ],
+                  "Condition-Name": [
+                    "Breast feeder"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- pregnancy",
+                  "Condition": [
+                    "pregnancy"
+                  ],
+                  "Condition-Name": [
+                    "pregnancy"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "NOT": {
+    "left": {
+      "raw_text": "- Subject who disagree to do this trial",
+      "Condition": [
+        "disagree"
+      ],
+      "Condition-Name": [
+        "disagree"
+      ]
+    }
+  }
+}

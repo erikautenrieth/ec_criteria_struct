@@ -1,0 +1,90 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "pregnancy",
+          "Condition": [
+            "pregnancy"
+          ],
+          "Condition-Name": [
+            "pregnancy"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "presence of a urinary tract infection",
+              "Condition": [
+                "urinary tract infection"
+              ],
+              "Condition-Name": [
+                "urinary tract infection"
+              ]
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "previous treatment for SI",
+              "Eq-Comparison": [
+                "previous"
+              ],
+              "Condition": [
+                "SI"
+              ],
+              "Condition-Name": [
+                "SI"
+              ],
+              "Eq-Temporal-Period": [
+                "previous"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "NOT": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "patient non-compliance with the protocol",
+          "Condition": [
+            "non-compliance"
+          ],
+          "Condition-Name": [
+            "non-compliance"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "failure in contacting the patient",
+              "Condition": [
+                "failure in contacting"
+              ],
+              "Condition-Name": [
+                "failure in contacting"
+              ]
+            },
+            "right": {
+              "raw_text": "the patient's wish to withdraw from the study",
+              "Condition": [
+                "wish to withdraw"
+              ],
+              "Condition-Name": [
+                "wish to withdraw"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,67 +2,71 @@ import os
 from transformers import AutoModelForCausalLM, AutoTokenizer
 device = "cuda" 
 from helper_functions import *
+import os
+import tiktoken
+import transformers
+from helper_functions import *
+from openai import OpenAI
 
-batch_path = "modelle_prompt2"
-n_shot = 5
+
+batch_path = "eval_p4"
+n_shot = 15
+
 
 model_id =  "Qwen/Qwen2-72B-Instruct"
 model_name = "Qwen2-72B"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p6.txt") 
 
-study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
+
+model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt1.txt")
+command = "Structure the eligibility criteria based on the system input in JSON and extract the entities."
+study_path = f"{transform_lct}/input/dataset_p4_prompt1_new/test/input/"
+
+output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}_2_Shot/output/"
 os.makedirs(output_path, exist_ok=True)
-
 
 study_files = os.listdir(study_path)
 
-shot_list = [
-    "NCT03865433.txt",
-    "NCT03860324.txt",
-    "NCT03860233.txt",
-    "NCT03923231.txt",
-    "NCT03930121.txt"
+files = [
+    "NCT03863509_inc.txt",
+    "NCT03861819_inc.txt",
+    "NCT03865589_inc.txt",
+    "NCT03867344_exc.txt",
+    "NCT03928158_exc.txt",
+    "NCT03863418_inc.txt",
+    "NCT03869086_exc.txt",
+    "NCT03923894_exc.txt",
+    "NCT03861559_exc.txt",
+    "NCT03860350_exc.txt",
+    "NCT03867942_inc.txt",
+    "NCT03921502_exc.txt",
+    "NCT03862027_exc.txt",
+    "NCT03929718_exc.txt",
+    "NCT03868475_exc.txt"
 ]
 
-additional_files = [
-    "NCT03865433.txt",
-    "NCT03860324.txt",
-    "NCT03860233.txt",
-    "NCT03923231.txt",
-    "NCT03930121.txt",
-    "NCT03863717.txt",
-    "NCT03863925.txt",
-    "NCT03863951.txt",
-    "NCT03865134.txt",
-    "NCT03868267.txt",
-    "NCT03929640.txt",
-    "NCT03861845.txt",
-    "NCT03921827.txt",
-    "NCT03924479.txt",
-    "NCT03924102.txt"
-]
 
-# Load n-shot Data
-study_folder = f"{transform_lct}/input/lct_txt/"
-label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
 
-## Random n-shot Data
-#study_filenames, study_contents, label_filenames, label_contents = read_random_matching_txt_files(study_folder, label_folder, n_shot)
+
+
+study_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/input/"
+label_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/output/"
+
+
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, files)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
 
-command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 messages.append({"role": "system", "content": f"{model_desc}"})
+
 
 for i in range(n_shot):
     messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
+
 
 
 model = AutoModelForCausalLM.from_pretrained(

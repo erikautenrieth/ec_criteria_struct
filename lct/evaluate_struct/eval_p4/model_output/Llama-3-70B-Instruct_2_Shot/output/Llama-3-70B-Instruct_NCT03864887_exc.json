@@ -1,0 +1,79 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients who are in pregnancy or have plan to conception.",
+          "Condition": [
+            "pregnancy"
+          ],
+          "Condition-Name": [
+            "pregnancy"
+          ],
+          "Eq-Temporal-Period": [
+            "in"
+          ]
+        },
+        "right": {
+          "raw_text": "- Patients who have vertebra surgery or have plan of surgery.",
+          "Procedure": [
+            "vertebra surgery"
+          ],
+          "Procedure-Name": [
+            "vertebra surgery"
+          ],
+          "Eq-Temporal-Period": [
+            "have"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients who are inappropriate to join this trial judged by the radiologists or specialists.",
+          "Condition": [
+            "inappropriate"
+          ],
+          "Condition-Name": [
+            "inappropriate"
+          ],
+          "Provider": [
+            "radiologists",
+            "specialists"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- AIDS, Active Hepatitis, Tuberculosis, Syphilis",
+              "Condition": [
+                "AIDS",
+                "Active Hepatitis",
+                "Tuberculosis",
+                "Syphilis"
+              ],
+              "Condition-Name": [
+                "AIDS",
+                "Active Hepatitis",
+                "Tuberculosis",
+                "Syphilis"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patients who regularly take anticoagulants, antiplatelet drugs",
+              "Drug": [
+                "anticoagulants",
+                "antiplatelet drugs"
+              ],
+              "Drug-Name": [
+                "anticoagulants",
+                "antiplatelet drugs"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

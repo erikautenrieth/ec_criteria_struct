@@ -1,0 +1,133 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Informed consent from the patient or the parents before any study related procedures",
+              "Negation": [
+                "No"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Condition": [
+                "consent"
+              ],
+              "Condition-Name": [
+                "consent"
+              ],
+              "Observation": [
+                "Informed consent",
+                "study related procedures"
+              ],
+              "Observation-Name": [
+                "Informed consent",
+                "study related procedures"
+              ],
+              "Study": [
+                "study"
+              ],
+              "Eq-Comparison": [
+                "before"
+              ],
+              "Eq-Temporal-Period": [
+                "before"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients of both genders younger than 6 months",
+              "Life-Stage-And-Gender": [
+                "both genders"
+              ],
+              "Negation": [
+                "No"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Condition": [
+                "patients"
+              ],
+              "Condition-Name": [
+                "patients"
+              ],
+              "Age": [
+                "younger"
+              ],
+              "Eq-Comparison": [
+                "younger than 6 months"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Value": [
+                "6"
+              ]
+            },
+            "right": {
+              "raw_text": "and older than 80 years",
+              "Age": [
+                "older"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Condition": [
+                "patients"
+              ],
+              "Condition-Name": [
+                "patients"
+              ],
+              "Life-Stage-And-Gender": [
+                "both genders"
+              ],
+              "Eq-Comparison": [
+                "older than 80 years"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Eq-Value": [
+                "80"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- No diagnosis of Wilson disease",
+          "Negation": [
+            "No"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Condition": [
+            "diagnosis"
+          ],
+          "Condition-Name": [
+            "diagnosis"
+          ],
+          "Eq-Comparison": [
+            "of Wilson disease"
+          ],
+          "Observation": [
+            "Wilson disease"
+          ],
+          "Observation-Name": [
+            "Wilson disease"
+          ]
+        }
+      }
+    }
+  }
+}

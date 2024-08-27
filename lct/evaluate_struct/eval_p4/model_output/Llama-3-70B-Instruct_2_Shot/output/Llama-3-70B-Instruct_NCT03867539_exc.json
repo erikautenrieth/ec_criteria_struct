@@ -1,0 +1,74 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "- allergy to bupivacaine",
+      "Allergy": [
+        "allergy"
+      ],
+      "Allergy-Name": [
+        "bupivacaine"
+      ],
+      "Drug": [
+        "bupivacaine"
+      ]
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- pre-operative opioid usage within the last six months",
+          "Drug": [
+            "opioid"
+          ],
+          "Eq-Temporal-Period": [
+            "within the last six months"
+          ],
+          "Eq-Temporal-Unit": [
+            "six months"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- patients allergic to Percocet or acetaminophen",
+              "Allergy": [
+                "allergy"
+              ],
+              "Allergy-Name": [
+                "Percocet",
+                "acetaminophen"
+              ],
+              "Drug": [
+                "Percocet",
+                "acetaminophen"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- patients taking tricyclic antidepressants (interaction with bupivacaine)",
+                  "Drug": [
+                    "tricyclic antidepressants",
+                    "bupivacaine"
+                  ],
+                  "Interaction": [
+                    "interaction"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- vulnerable populations (prisoners or pregnant women)",
+                  "Life-Stage-And-Gender": [
+                    "pregnant women"
+                  ],
+                  "Other": [
+                    "prisoners",
+                    "vulnerable populations"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

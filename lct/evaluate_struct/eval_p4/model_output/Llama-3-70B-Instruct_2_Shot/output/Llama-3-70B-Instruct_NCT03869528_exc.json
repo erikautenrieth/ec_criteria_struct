@@ -1,0 +1,116 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- Uncontrolled hypertension Systolic Blood Pressure >180 mm Hg",
+          "Condition": [
+            "Uncontrolled hypertension"
+          ],
+          "Observation": [
+            "Systolic Blood Pressure"
+          ],
+          "Observation-Name": [
+            "Systolic Blood Pressure"
+          ],
+          "Eq-Operator": [
+            ">"
+          ],
+          "Eq-Value": [
+            "180"
+          ],
+          "Eq-Unit": [
+            "mm Hg"
+          ],
+          "Eq-Comparison": [
+            ">180 mm Hg"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Symptomatic coronary artery disease",
+              "Condition": [
+                "Symptomatic coronary artery disease"
+              ],
+              "Condition-Name": [
+                "coronary artery disease"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Pregnancy",
+                  "Condition": [
+                    "Pregnancy"
+                  ],
+                  "Condition-Name": [
+                    "Pregnancy"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Not giving informed consent for the procedure",
+                      "NOT": {
+                        "left": {
+                          "raw_text": "giving informed consent for the procedure",
+                          "Procedure": [
+                            "informed consent"
+                          ],
+                          "Procedure-Name": [
+                            "informed consent"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Hypoxemia (oxygen saturation [by pulse oximetry] < 92% with Fio2 of ≥ 0.3",
+                          "Condition": [
+                            "Hypoxemia"
+                          ],
+                          "Observation": [
+                            "oxygen saturation"
+                          ],
+                          "Observation-Name": [
+                            "oxygen saturation"
+                          ],
+                          "Eq-Operator": [
+                            "<"
+                          ],
+                          "Eq-Value": [
+                            "92"
+                          ],
+                          "Eq-Unit": [
+                            "%"
+                          ],
+                          "Eq-Comparison": [
+                            "< 92%"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "- Bronchoscopy performed through an artificial airway",
+                          "Procedure": [
+                            "Bronchoscopy"
+                          ],
+                          "Procedure-Name": [
+                            "Bronchoscopy"
+                          ],
+                          "Location": [
+                            "artificial airway"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "- No Informed consent from the patient or the parents before any study related procedures",
+          "Exception": [
+            "Informed consent"
+          ],
+          "Study": [
+            "study related procedures"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients of both genders younger than 6 months and older than 80 years",
+          "Age": [
+            "6 months",
+            "80 years"
+          ],
+          "Eq-Operator": [
+            "<",
+            ">"
+          ],
+          "Eq-Value": [
+            "6",
+            "80"
+          ],
+          "Eq-Unit": [
+            "months",
+            "years"
+          ],
+          "Eq-Comparison": [
+            "younger than 6 months",
+            "older than 80 years"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- No diagnosis of Wilson disease",
+              "Condition": [
+                "Wilson disease"
+              ],
+              "Condition-Name": [
+                "Wilson disease"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

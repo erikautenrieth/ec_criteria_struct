@@ -1,0 +1,149 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Subjects less than 18 years of age",
+          "Age": [
+            "age"
+          ],
+          "Eq-Operator": [
+            "less than"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Comparison": [
+            "less than 18"
+          ]
+        },
+        "right": {
+          "raw_text": "or older than 65 years of age",
+          "Age": [
+            "age"
+          ],
+          "Eq-Operator": [
+            "older than"
+          ],
+          "Eq-Value": [
+            "65"
+          ],
+          "Eq-Comparison": [
+            "older than 65"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Subjects that have ever been diagnosed with any mood disorder by a clinician prior to starting spironolactone (history of mood disorder)",
+              "Condition": [
+                "mood disorder"
+              ],
+              "Condition-Name": [
+                "mood disorder"
+              ],
+              "Eq-Temporal-Period": [
+                "prior to starting spironolactone"
+              ]
+            },
+            "right": {
+              "raw_text": "or current mood disorder",
+              "Condition": [
+                "mood disorder"
+              ],
+              "Condition-Name": [
+                "mood disorder"
+              ],
+              "Eq-Temporal-Period": [
+                "current"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Subjects taking hormonal contraception (including but not limited to oral contraceptive pills) for a duration of less than 6 months",
+              "Drug": [
+                "hormonal contraception"
+              ],
+              "Drug-Name": [
+                "hormonal contraception"
+              ],
+              "Eq-Operator": [
+                "less than"
+              ],
+              "Eq-Value": [
+                "6"
+              ],
+              "Eq-Comparison": [
+                "less than 6 months"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Subjects that have ever been diagnosed with any type of sexual dysfunction prior to starting spironolactone",
+                  "Condition": [
+                    "sexual dysfunction"
+                  ],
+                  "Condition-Name": [
+                    "sexual dysfunction"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "prior to starting spironolactone"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Subjects not able to complete an online survey in English",
+                      "Language": [
+                        "English"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Subjects taking oral isotretinoin for a diagnosis of acne",
+                          "Drug": [
+                            "oral isotretinoin"
+                          ],
+                          "Drug-Name": [
+                            "oral isotretinoin"
+                          ],
+                          "Condition": [
+                            "acne"
+                          ],
+                          "Condition-Name": [
+                            "acne"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "Subjects that are currently pregnant",
+                          "Condition": [
+                            "pregnant"
+                          ],
+                          "Condition-Name": [
+                            "pregnant"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "currently"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
