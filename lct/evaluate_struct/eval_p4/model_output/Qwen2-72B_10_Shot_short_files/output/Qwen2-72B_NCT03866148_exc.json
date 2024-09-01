@@ -1,0 +1,188 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients with a diagnosis of atrial fibrillation (AF)",
+                      "Condition": [
+                        "atrial fibrillation"
+                      ],
+                      "Condition-Name": [
+                        "atrial fibrillation"
+                      ],
+                      "Condition-Type": [
+                        "diagnosis"
+                      ],
+                      "Modifier": [
+                        "AF"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "atrial flutter",
+                          "Condition": [
+                            "atrial flutter"
+                          ],
+                          "Condition-Name": [
+                            "atrial flutter"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "and/or",
+                              "Modifier": [
+                                "and/or"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "ventricular tachycardia (VT)",
+                              "Condition": [
+                                "ventricular tachycardia"
+                              ],
+                              "Condition-Name": [
+                                "ventricular tachycardia"
+                              ],
+                              "Modifier": [
+                                "VT"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patients with an ILR already in-situ",
+                      "Condition": [
+                        "ILR"
+                      ],
+                      "Condition-Name": [
+                        "ILR"
+                      ],
+                      "Condition-Type": [
+                        "established"
+                      ],
+                      "Modifier": [
+                        "already",
+                        "in-situ"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or",
+                          "Modifier": [
+                            "or"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "an established indication for ILR",
+                          "Condition": [
+                            "indication"
+                          ],
+                          "Condition-Name": [
+                            "indication"
+                          ],
+                          "Condition-Type": [
+                            "established"
+                          ],
+                          "Modifier": [
+                            "for"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients with a palliative diagnosis",
+                  "Condition": [
+                    "palliative diagnosis"
+                  ],
+                  "Condition-Name": [
+                    "palliative diagnosis"
+                  ],
+                  "Condition-Type": [
+                    "diagnosis"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "i.e.",
+                      "Modifier": [
+                        "i.e."
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                      "left": {
+                        "raw_text": "life expectancy",
+                        "Condition": [
+                          "life expectancy"
+                        ],
+                        "Condition-Name": [
+                          "life expectancy"
+                        ]
+                      },
+                      "right": {
+                        "AND": {
+                          "left": {
+                            "raw_text": "less than",
+                            "Modifier": [
+                              "less than"
+                            ]
+                          },
+                          "right": {
+                            "raw_text": "3 years",
+                            "Eq-Value": [
+                              "3"
+                            ],
+                            "Eq-Temporal-Unit": [
+                              "years"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients who lack capacity",
+              "Condition": [
+                "capacity"
+              ],
+              "Condition-Name": [
+                "capacity"
+              ],
+              "Negation": [
+                "lack"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

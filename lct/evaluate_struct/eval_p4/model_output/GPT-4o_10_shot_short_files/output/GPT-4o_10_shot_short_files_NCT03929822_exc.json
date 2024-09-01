@@ -1,0 +1,124 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Age <30 years old",
+                  "Age": [
+                    "Age"
+                  ],
+                  "Eq-Comparison": [
+                    "< 30 years"
+                  ],
+                  "Eq-Value": [
+                    "30"
+                  ],
+                  "Eq-Operator": [
+                    "<"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Screening mammography with only calcifications abnormalities",
+                  "Procedure": [
+                    "Screening mammography"
+                  ],
+                  "Procedure-Name": [
+                    "Screening mammography"
+                  ],
+                  "Observation": [
+                    "calcifications abnormalities"
+                  ],
+                  "Observation-Name": [
+                    "calcifications abnormalities"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Male patients",
+                  "Life-Stage-And-Gender": [
+                    "Male"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Pregnant patients",
+                      "Life-Stage-And-Gender": [
+                        "Pregnant"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or lactating patients",
+                      "Life-Stage-And-Gender": [
+                        "lactating"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients with any allergy to iodinated contrast",
+              "Condition": [
+                "allergy"
+              ],
+              "Condition-Name": [
+                "allergy"
+              ],
+              "Drug": [
+                "iodinated contrast"
+              ],
+              "Drug-Name": [
+                "iodinated contrast"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patients with eGFR < 45",
+              "Observation": [
+                "eGFR"
+              ],
+              "Observation-Name": [
+                "eGFR"
+              ],
+              "Eq-Comparison": [
+                "< 45"
+              ],
+              "Eq-Value": [
+                "45"
+              ],
+              "Eq-Operator": [
+                "<"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Patients that may be treated with radioactive iodine",
+      "Procedure": [
+        "treated"
+      ],
+      "Drug": [
+        "radioactive iodine"
+      ],
+      "Drug-Name": [
+        "radioactive iodine"
+      ]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- allergy to bupivacaine",
+                  "Allergy": [
+                    "allergy"
+                  ],
+                  "Drug": [
+                    "bupivacaine"
+                  ],
+                  "Drug-Name": [
+                    "bupivacaine"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- pre-operative opioid usage within the last six months",
+              "Condition": [
+                "opioid usage"
+              ],
+              "Condition-Name": [
+                "opioid usage"
+              ],
+              "Eq-Comparison": [
+                "within the last six months"
+              ],
+              "Eq-Temporal-Period": [
+                "within the last six months"
+              ],
+              "Modifier": [
+                "pre-operative"
+              ],
+              "Drug": [
+                "opioid"
+              ],
+              "Drug-Name": [
+                "opioid"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- patients allergic to Percocet or acetaminophen",
+                  "Allergy": [
+                    "allergic"
+                  ],
+                  "Drug": [
+                    "Percocet",
+                    "acetaminophen"
+                  ],
+                  "Drug-Name": [
+                    "Percocet",
+                    "acetaminophen"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- patients taking tricyclic antidepressants (interaction with bupivacaine)",
+                  "Drug": [
+                    "tricyclic antidepressants",
+                    "bupivacaine"
+                  ],
+                  "Drug-Name": [
+                    "tricyclic antidepressants",
+                    "bupivacaine"
+                  ],
+                  "Condition": [
+                    "taking"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- vulnerable populations (prisoners or pregnant women)",
+          "Condition": [
+            "vulnerable populations"
+          ],
+          "Condition-Name": [
+            "vulnerable populations"
+          ],
+          "Life-Stage-And-Gender": [
+            "pregnant women"
+          ],
+          "Modifier": [
+            "prisoners"
+          ]
+        }
+      }
+    }
+  }
+}

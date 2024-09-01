@@ -1,0 +1,173 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Age less than 16 years",
+                  "Age": [
+                    "Age"
+                  ],
+                  "Eq-Operator": [
+                    "less than"
+                  ],
+                  "Eq-Value": [
+                    "16"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Eq-Comparison": [
+                    "less than 16 years"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Receipt of antibiotics in ≤30 days",
+                      "Drug": [
+                        "antibiotics"
+                      ],
+                      "Eq-Operator": [
+                        "≤"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "days"
+                      ],
+                      "Eq-Value": [
+                        "30"
+                      ],
+                      "Eq-Comparison": [
+                        "≤30 days"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Known allergy to aztreonam",
+                      "Allergy": [
+                        "allergy"
+                      ],
+                      "Allergy-Name": [
+                        "aztreonam"
+                      ],
+                      "Condition": [
+                        "allergy"
+                      ],
+                      "Condition-Name": [
+                        "allergy"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- History of renal disease (including diagnosis of solitary kidney, chronic renal insufficiency, renal cell carcinoma etc.)",
+                  "Condition": [
+                    "renal disease",
+                    "solitary kidney",
+                    "chronic renal insufficiency",
+                    "renal cell carcinoma"
+                  ],
+                  "Condition-Name": [
+                    "renal disease",
+                    "solitary kidney",
+                    "chronic renal insufficiency",
+                    "renal cell carcinoma"
+                  ],
+                  "Observation": [
+                    "diagnosis"
+                  ],
+                  "Observation-Name": [
+                    "diagnosis"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Concurrent infection with syphilis",
+                      "Condition": [
+                        "syphilis",
+                        "infection"
+                      ],
+                      "Condition-Name": [
+                        "syphilis",
+                        "infection"
+                      ],
+                      "Polarity": [
+                        "Concurrent"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or chlamydia",
+                      "Condition": [
+                        "chlamydia"
+                      ],
+                      "Condition-Name": [
+                        "chlamydia"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnancy",
+              "Condition": [
+                "Pregnancy"
+              ],
+              "Condition-Name": [
+                "Pregnancy"
+              ]
+            },
+            "right": {
+              "raw_text": "and/or nursing",
+              "Condition": [
+                "nursing"
+              ],
+              "Condition-Name": [
+                "nursing"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Unable to return for a follow-up visit 4-7 days (+/- 1 day).",
+          "Encounter": [
+            "follow-up visit"
+          ],
+          "Eq-Temporal-Period": [
+            "4-7 days"
+          ],
+          "Eq-Comparison": [
+            "4-7 days (+/- 1 day)"
+          ],
+          "Eq-Temporal-Recency": [
+            "+/- 1 day"
+          ],
+          "Negation": [
+            "Unable"
+          ]
+        },
+        "right": {
+          "raw_text": "- Study team's discretion",
+          "Study": [
+            "Study"
+          ]
+        }
+      }
+    }
+  }
+}

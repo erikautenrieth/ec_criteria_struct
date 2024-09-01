@@ -1,0 +1,174 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients who have had brain death or serious brain trauma.",
+          "Condition": [
+            "brain death",
+            "serious brain trauma"
+          ],
+          "Condition-Name": [
+            "brain death",
+            "serious brain trauma"
+          ],
+          "Eq-Comparison": [
+            "had"
+          ],
+          "Eq-Temporal-Period": [
+            "had"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or serious brain trauma."
+            },
+            "right": {
+              "raw_text": "."
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Healthy people who are interested in optical assessment of hemodynamic parameters",
+          "Condition": [
+            "Healthy"
+          ],
+          "Condition-Name": [
+            "Healthy"
+          ],
+          "Observation": [
+            "hemodynamic parameters"
+          ],
+          "Observation-Name": [
+            "hemodynamic parameters"
+          ],
+          "Procedure": [
+            "optical assessment"
+          ],
+          "Procedure-Name": [
+            "optical assessment"
+          ]
+        },
+        "right": {
+          "raw_text": ""
+        }
+      }
+    }
+  }
+} 
+
+However, this structure doesn't properly reflect the logical relationship between the criteria. The correct JSON structure should separate the two patient groups with an 'OR' since they represent distinct eligibility categories:
+
+{
+  "OR": [
+    {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients who have had brain death or serious brain trauma.",
+          "Condition": [
+            "brain death",
+            "serious brain trauma"
+          ],
+          "Condition-Name": [
+            "brain death",
+            "serious brain trauma"
+          ],
+          "Eq-Comparison": [
+            "had"
+          ],
+          "Eq-Temporal-Period": [
+            "had"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or serious brain trauma."
+            },
+            "right": {
+              "raw_text": "."
+            }
+          }
+        }
+      }
+    },
+    {
+      "AND": {
+        "left": {
+          "raw_text": "- Healthy people who are interested in optical assessment of hemodynamic parameters",
+          "Condition": [
+            "Healthy"
+          ],
+          "Condition-Name": [
+            "Healthy"
+          ],
+          "Observation": [
+            "hemodynamic parameters"
+          ],
+          "Observation-Name": [
+            "hemodynamic parameters"
+          ],
+          "Procedure": [
+            "optical assessment"
+          ],
+          "Procedure-Name": [
+            "optical assessment"
+          ]
+        },
+        "right": {
+          "raw_text": ""
+        }
+      }
+    }
+  ]
+}
+
+But given the guidelines provided, here's the final corrected structure:
+
+{
+  "OR": {
+    "left": {
+      "raw_text": "- Patients who have had brain death or serious brain trauma.",
+      "Condition": [
+        "brain death",
+        "serious brain trauma"
+      ],
+      "Condition-Name": [
+        "brain death",
+        "serious brain trauma"
+      ],
+      "Eq-Comparison": [
+        "had"
+      ],
+      "Eq-Temporal-Period": [
+        "had"
+      ]
+    },
+    "right": {
+      "raw_text": "- Healthy people who are interested in optical assessment of hemodynamic parameters",
+      "Condition": [
+        "Healthy"
+      ],
+      "Condition-Name": [
+        "Healthy"
+      ],
+      "Observation": [
+        "hemodynamic parameters"
+      ],
+      "Observation-Name": [
+        "hemodynamic parameters"
+      ],
+      "Procedure": [
+        "optical assessment"
+      ],
+      "Procedure-Name": [
+        "optical assessment"
+      ]
+    }
+  }
+}

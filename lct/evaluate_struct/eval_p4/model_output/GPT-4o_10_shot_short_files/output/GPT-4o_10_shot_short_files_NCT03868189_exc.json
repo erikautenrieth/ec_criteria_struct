@@ -1,0 +1,181 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patient with symptoms of neuropathy during the screening.",
+                  "Condition": [
+                    "neuropathy"
+                  ],
+                  "Condition-Name": [
+                    "neuropathy"
+                  ],
+                  "Observation": [
+                    "symptoms"
+                  ],
+                  "Observation-Name": [
+                    "symptoms"
+                  ],
+                  "Encounter": [
+                    "screening"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Patient whose Neurological severity score (NSS) score is ≥ 3.",
+                  "Observation": [
+                    "Neurological severity score",
+                    "NSS"
+                  ],
+                  "Observation-Name": [
+                    "Neurological severity score",
+                    "NSS"
+                  ],
+                  "Eq-Comparison": [
+                    "≥ 3"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Eq-Operator": [
+                    "≥"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patient whose neurological examination is abnormal and suggestive of neuropathy.",
+                  "Condition": [
+                    "neuropathy"
+                  ],
+                  "Condition-Name": [
+                    "neuropathy"
+                  ],
+                  "Observation": [
+                    "neurological examination"
+                  ],
+                  "Observation-Name": [
+                    "neurological examination"
+                  ],
+                  "Polarity": [
+                    "abnormal"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Patient presenting a pathology that could cause neuropathy (e.g. diabetes, renal failure, etc.).",
+                  "Condition": [
+                    "neuropathy",
+                    "diabetes",
+                    "renal failure"
+                  ],
+                  "Condition-Name": [
+                    "neuropathy",
+                    "diabetes",
+                    "renal failure"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patient already participating in a category 1 research study (Jardé law).",
+              "Study": [
+                "research study"
+              ],
+              "Modifier": [
+                "category 1",
+                "Jardé law"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patient in an exclusion period determined by another study.",
+              "Study": [
+                "another study"
+              ],
+              "Modifier": [
+                "exclusion period"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patient under the protection of justice, under guardianship or under curatorship.",
+                  "Condition": [
+                    "protection of justice",
+                    "guardianship",
+                    "curatorship"
+                  ],
+                  "Condition-Name": [
+                    "protection of justice",
+                    "guardianship",
+                    "curatorship"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Patient refusing to sign the consent form.",
+                  "Negation": [
+                    "refusing"
+                  ],
+                  "Study": [
+                    "consent form"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patient for which it is impossible to provide information about the study.",
+              "Negation": [
+                "impossible"
+              ],
+              "Study": [
+                "study"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnant patient",
+              "Life-Stage-And-Gender": [
+                "Pregnant"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "parturient",
+                  "Life-Stage-And-Gender": [
+                    "parturient"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or breastfeeding.",
+                  "Life-Stage-And-Gender": [
+                    "breastfeeding"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
