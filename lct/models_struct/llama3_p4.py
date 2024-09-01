@@ -18,7 +18,7 @@ model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt1.t
 command = "Structure the eligibility criteria based on the system input in JSON and extract the entities."
 study_path = f"{transform_lct}/input/dataset_p4_prompt1_new/test/input/"
 
-output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}_2_Shot/output/"
+output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}_2_Shot_short_files/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
@@ -47,13 +47,10 @@ files = [
 ]
 
 short_files = [
+"NCT03860714_inc.txt",
 "NCT03860012_exc.txt",
-"NCT03860090_exc.txt",
-"NCT03929289_inc.txt",
+"NCT03860090_exc.txt"
 ]
-
-
-
 
 study_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/input/"
 label_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/output/"

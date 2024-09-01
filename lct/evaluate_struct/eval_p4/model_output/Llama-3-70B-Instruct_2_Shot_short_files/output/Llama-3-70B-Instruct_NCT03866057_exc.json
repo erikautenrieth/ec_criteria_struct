@@ -1,0 +1,71 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Stroke occurred more than 30 days after the transfer to intensive rehabilitation",
+      "Condition": [
+        "Stroke"
+      ],
+      "Condition-Name": [
+        "Stroke"
+      ],
+      "Eq-Temporal-Unit": [
+        "days"
+      ],
+      "Eq-Value": [
+        "30"
+      ],
+      "Eq-Comparison": [
+        "more than 30 days"
+      ],
+      "Procedure": [
+        "transfer to intensive rehabilitation"
+      ],
+      "Procedure-Name": [
+        "transfer to intensive rehabilitation"
+      ]
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "history of major psychiatric disorder or recent exacerbation",
+              "Condition": [
+                "psychiatric disorder"
+              ],
+              "Condition-Name": [
+                "psychiatric disorder"
+              ],
+              "Severity": [
+                "major"
+              ]
+            },
+            "right": {
+              "raw_text": "global aphasia",
+              "Condition": [
+                "aphasia"
+              ],
+              "Condition-Name": [
+                "aphasia"
+              ],
+              "Severity": [
+                "global"
+              ]
+            }
+          }
+        }
+      },
+      "NOT": {
+        "left": {
+          "raw_text": "refusal of the patient to participate in the study",
+          "Negation": [
+            "refusal"
+          ],
+          "Study": [
+            "study"
+          ]
+        }
+      }
+    }
+  }
+}

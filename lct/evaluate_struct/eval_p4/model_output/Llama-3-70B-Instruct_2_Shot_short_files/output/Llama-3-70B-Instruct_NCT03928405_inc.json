@@ -1,0 +1,119 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Having mild or moderate severity of AD",
+          "Condition": [
+            "AD"
+          ],
+          "Condition-Type": [
+            "disease"
+          ],
+          "Severity": [
+            "mild",
+            "moderate"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Lack of communication difficulties or problems",
+              "Condition": [
+                "communication difficulties",
+                "problems"
+              ],
+              "Negation": [
+                "Lack of"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Volunteering to participate in the study",
+          "Study": [
+            "participate in the study"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Cerebrovascular event,",
+                  "Condition": [
+                    "Cerebrovascular event"
+                  ],
+                  "Condition-Type": [
+                    "event"
+                  ],
+                  "Negation": [
+                    "NOT"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Having disturbing the balance and coordination of neurological disease such as Parkinson, MS,",
+                      "Condition": [
+                        "Parkinson",
+                        "MS"
+                      ],
+                      "Condition-Type": [
+                        "neurological disease"
+                      ],
+                      "Negation": [
+                        "NOT"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Mini Mental Test Score, 18 to 24 points from being scored",
+                      "Observation": [
+                        "Mini Mental Test Score"
+                      ],
+                      "Observation-Name": [
+                        "Mini Mental Test Score"
+                      ],
+                      "Eq-Value": [
+                        "18",
+                        "24"
+                      ],
+                      "Eq-Comparison": [
+                        "18 to 24 points"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "being 65-80 aged.",
+                      "Age": [
+                        "age"
+                      ],
+                      "Eq-Value": [
+                        "65",
+                        "80"
+                      ],
+                      "Eq-Comparison": [
+                        "65-80"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

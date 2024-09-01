@@ -1,0 +1,169 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "1. prior randomization to either STAR or usual care study arms;",
+      "Condition": [
+        "prior randomization"
+      ],
+      "Condition-Name": [
+        "prior randomization"
+      ],
+      "Study": [
+        "STAR",
+        "usual care"
+      ],
+      "Study": [
+        "STAR",
+        "usual care"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "2. not a North Carolina resident or residence >2.5-hour drive time from treating hospital;",
+              "Condition": [
+                "not a North Carolina resident"
+              ],
+              "Condition-Name": [
+                "not a North Carolina resident"
+              ],
+              "Location": [
+                "North Carolina"
+              ],
+              "Condition": [
+                "residence >2.5-hour drive time from treating hospital"
+              ],
+              "Condition-Name": [
+                "residence >2.5-hour drive time from treating hospital"
+              ],
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Value": [
+                "2.5"
+              ],
+              "Eq-Temporal-Unit": [
+                "hour"
+              ],
+              "Eq-Comparison": [
+                ">2.5-hour drive time"
+              ],
+              "Condition-Type": [
+                "drive time"
+              ],
+              "Location": [
+                "treating hospital"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "3. the only antibiotic associated with patient is administered in the operating room as this likely represents pre-operative infection prophylaxis and not presumed infection;",
+              "Drug": [
+                "antibiotic"
+              ],
+              "Drug-Name": [
+                "antibiotic"
+              ],
+              "Condition": [
+                "pre-operative infection prophylaxis"
+              ],
+              "Condition-Name": [
+                "pre-operative infection prophylaxis"
+              ],
+              "Condition": [
+                "presumed infection"
+              ],
+              "Condition-Name": [
+                "presumed infection"
+              ],
+              "Location": [
+                "operating room"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "4. patients transferred from other acute care hospitals;",
+                  "Condition": [
+                    "patients transferred"
+                  ],
+                  "Condition-Name": [
+                    "patients transferred"
+                  ],
+                  "Location": [
+                    "other acute care hospitals"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "5. patients with a change in code status (i.e., do not resuscitate, do not intubate) within 24 hours after admission due to the general assumption of increased risk of exposure to less aggressive treatment;",
+                      "Condition": [
+                        "patients with a change in code status"
+                      ],
+                      "Condition-Name": [
+                        "patients with a change in code status"
+                      ],
+                      "Condition": [
+                        "do not resuscitate",
+                        "do not intubate"
+                      ],
+                      "Condition-Name": [
+                        "do not resuscitate",
+                        "do not intubate"
+                      ],
+                      "Eq-Operator": [
+                        "within"
+                      ],
+                      "Eq-Value": [
+                        "24"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "hours"
+                      ],
+                      "Eq-Comparison": [
+                        "within 24 hours"
+                      ],
+                      "Condition-Type": [
+                        "code status"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "6. patients with infection ruled out during the index hospitalization.",
+                      "Condition": [
+                        "patients with infection ruled out"
+                      ],
+                      "Condition-Name": [
+                        "patients with infection ruled out"
+                      ],
+                      "Condition": [
+                        "infection"
+                      ],
+                      "Condition-Name": [
+                        "infection"
+                      ],
+                      "Condition": [
+                        "ruled out"
+                      ],
+                      "Condition-Name": [
+                        "ruled out"
+                      ],
+                      "Location": [
+                        "index hospitalization"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

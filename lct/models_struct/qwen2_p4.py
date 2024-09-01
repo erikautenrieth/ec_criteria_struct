@@ -8,7 +8,7 @@ from helper_functions import *
 
 
 batch_path = "eval_p4"
-n_shot = 6
+n_shot = 2
 
 model_id =  "Qwen/Qwen2-72B-Instruct"
 model_name = "Qwen2-72B"
@@ -20,7 +20,7 @@ model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt1.t
 command = "Structure the eligibility criteria based on the system input in JSON and extract the entities."
 study_path = f"{transform_lct}/input/dataset_p4_prompt1_new/test/input/"
 
-output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}_2_Shot/output/"
+output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}_2_Shot_short_files/output/"
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
@@ -43,13 +43,17 @@ top_files = [
     "NCT03868475_exc.txt"
 ]
 
-
+short_files = [
+"NCT03860714_inc.txt",
+"NCT03860012_exc.txt",
+"NCT03860090_exc.txt"
+]
 
 study_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/input/"
 label_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/output/"
 
 
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, top_files)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, short_files)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))

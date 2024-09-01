@@ -1,0 +1,100 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "-  Recent cardiorespiratory exacerbation (<6 weeks).",
+      "Condition": [
+        "cardiorespiratory exacerbation"
+      ],
+      "Condition-Name": [
+        "cardiorespiratory exacerbation"
+      ],
+      "Eq-Temporal-Recency": [
+        "<6 weeks"
+      ],
+      "Eq-Temporal-Period": [
+        "weeks"
+      ],
+      "Eq-Comparison": [
+        "<6 weeks"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-  Pulmonary rehabilitation program during the last 2 months",
+          "Procedure": [
+            "Pulmonary rehabilitation program"
+          ],
+          "Procedure-Name": [
+            "Pulmonary rehabilitation program"
+          ],
+          "Eq-Temporal-Recency": [
+            "during the last 2 months"
+          ],
+          "Eq-Temporal-Period": [
+            "months"
+          ],
+          "Eq-Comparison": [
+            "last 2 months"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "-  Continuous LTOT (24 hours) or deambulation O2 therapy alone",
+              "Procedure": [
+                "Continuous LTOT",
+                "deambulation O2 therapy"
+              ],
+              "Procedure-Name": [
+                "Continuous LTOT",
+                "deambulation O2 therapy"
+              ],
+              "Eq-Temporal-Recency": [
+                "(24 hours)"
+              ],
+              "Eq-Temporal-Period": [
+                "hours"
+              ],
+              "Eq-Comparison": [
+                "(24 hours)"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "-  Anticoagulant drugs",
+                  "Drug": [
+                    "Anticoagulant drugs"
+                  ],
+                  "Drug-Name": [
+                    "Anticoagulant drugs"
+                  ]
+                },
+                "right": {
+                  "raw_text": "-  Hematocrit outside the normal range (35-50%)",
+                  "Observation": [
+                    "Hematocrit"
+                  ],
+                  "Observation-Name": [
+                    "Hematocrit"
+                  ],
+                  "Eq-Comparison": [
+                    "outside the normal range (35-50%)"
+                  ],
+                  "Eq-Value": [
+                    "35",
+                    "50"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "%"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

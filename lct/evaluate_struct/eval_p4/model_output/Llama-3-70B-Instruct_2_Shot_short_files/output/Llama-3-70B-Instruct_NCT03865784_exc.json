@@ -1,0 +1,72 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Federated boxers with lumbar injury with medical diagnosis",
+      "Condition": [
+        "lumbar injury"
+      ],
+      "Condition-Name": [
+        "lumbar injury"
+      ],
+      "Modifier": [
+        "Federated"
+      ],
+      "Occupation": [
+        "boxers"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Who are or have been treated by pharmacological or physiotherapy in the last 6 months",
+          "Treatment": [
+            "pharmacological",
+            "physiotherapy"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Eq-Temporal-Recency": [
+            "last 6 months"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Presenting allergies",
+              "Allergy": [
+                "allergies"
+              ],
+              "Allergy-Name": [
+                "allergies"
+              ]
+            },
+            "right": {
+              "raw_text": "or alterations of the skin",
+              "Condition": [
+                "alterations of the skin"
+              ],
+              "Condition-Name": [
+                "alterations of the skin"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "NOT": {
+      "left": {
+        "raw_text": "Not sign the informed consent document.",
+        "Negation": [
+          "Not"
+        ],
+        "Procedure": [
+          "sign"
+        ],
+        "Procedure-Name": [
+          "informed consent"
+        ]
+      }
+    }
+  }
+}

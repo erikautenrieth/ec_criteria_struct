@@ -1,0 +1,61 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Patients undergoing emergency surgery",
+      "Procedure": [
+        "surgery"
+      ],
+      "Procedure-Name": [
+        "emergency surgery"
+      ],
+      "Condition": [
+        "emergency"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Endoscopic procedures",
+          "Procedure": [
+            "Endoscopic procedures"
+          ],
+          "Procedure-Name": [
+            "Endoscopic procedures"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Non-oncological gastric surgery",
+              "Procedure": [
+                "gastric surgery"
+              ],
+              "Procedure-Name": [
+                "gastric surgery"
+              ],
+              "Negation": [
+                "Non"
+              ],
+              "Condition": [
+                "oncological"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Patients who refuse to participate",
+                  "Condition": [
+                    "refuse"
+                  ],
+                  "Modifier": [
+                    "participate"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

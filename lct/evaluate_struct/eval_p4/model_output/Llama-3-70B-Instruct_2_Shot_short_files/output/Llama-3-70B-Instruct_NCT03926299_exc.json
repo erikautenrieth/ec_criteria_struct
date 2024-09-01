@@ -1,0 +1,111 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Concomitant steroid, calcineurin inhibitor or any other topical or systemic treatment for LS",
+          "Drug": [
+            "steroid",
+            "calcineurin inhibitor"
+          ],
+          "Condition": [
+            "LS"
+          ],
+          "Contraindication": [
+            "Concomitant treatment"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "< 3 months since start of vaginal estrogen treatment",
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Comparison": [
+                "< 3 months"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Drug": [
+                "vaginal estrogen"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Malignant disease as the cause of the vulval symptoms",
+                  "Condition": [
+                    "Malignant disease"
+                  ],
+                  "Condition-Type": [
+                    "Malignant"
+                  ],
+                  "Location": [
+                    "vulva"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "BMI > 35 kg/m²",
+                      "Eq-Operator": [
+                        ">"
+                      ],
+                      "Eq-Value": [
+                        "35"
+                      ],
+                      "Eq-Comparison": [
+                        "> 35 kg/m²"
+                      ],
+                      "Eq-Unit": [
+                        "kg/m²"
+                      ],
+                      "Observation": [
+                        "BMI"
+                      ],
+                      "Observation-Name": [
+                        "BMI"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Acute infection (fungal, bacterial, viral) of the vulva, vagina or bladder",
+                          "Condition": [
+                            "Acute infection"
+                          ],
+                          "Location": [
+                            "vulva",
+                            "vagina",
+                            "bladder"
+                          ],
+                          "Organism-Name": [
+                            "fungal",
+                            "bacterial",
+                            "viral"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "Presence of contraindications for the laser treatment or topical steroid treatment",
+                          "Contraindication": [
+                            "laser treatment",
+                            "topical steroid treatment"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

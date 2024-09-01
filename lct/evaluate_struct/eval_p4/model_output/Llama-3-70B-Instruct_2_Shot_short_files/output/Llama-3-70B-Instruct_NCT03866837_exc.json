@@ -1,0 +1,105 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "inability to provide informed consent",
+          "Negation": [
+            "inability"
+          ],
+          "Condition": [
+            "informed consent"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "hemoglobin < 70 g/L",
+              "Observation": [
+                "hemoglobin"
+              ],
+              "Observation-Name": [
+                "hemoglobin"
+              ],
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "70"
+              ],
+              "Eq-Unit": [
+                "g/L"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Z scores for weight-for-age (WAZ) or weight-for-height (WHZ) <3",
+                  "Observation": [
+                    "Z scores",
+                    "weight-for-age",
+                    "weight-for-height"
+                  ],
+                  "Observation-Name": [
+                    "Z scores",
+                    "WAZ",
+                    "WHZ"
+                  ],
+                  "Eq-Operator": [
+                    "<"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "any maternal or infant chronic illness",
+                      "Condition": [
+                        "maternal chronic illness",
+                        "infant chronic illness"
+                      ],
+                      "Condition-Type": [
+                        "chronic"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "administration of any infant vitamin or mineral supplements for the past 2 months",
+                          "Drug": [
+                            "vitamin",
+                            "mineral supplements"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "months"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "2 months"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "any history of infant antibiotic treatment",
+                          "Drug": [
+                            "antibiotic"
+                          ],
+                          "Condition": [
+                            "infant antibiotic treatment"
+                          ],
+                          "Condition-Type": [
+                            "history"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

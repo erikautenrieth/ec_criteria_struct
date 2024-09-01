@@ -1,0 +1,109 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Younger than 18 years of age",
+          "Age": [
+            "18 years"
+          ],
+          "Eq-Operator": [
+            "younger than"
+          ],
+          "Eq-Comparison": [
+            "younger than 18 years"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ]
+        },
+        "right": {
+          "raw_text": "older than 95 years of age",
+          "Age": [
+            "95 years"
+          ],
+          "Eq-Operator": [
+            "older than"
+          ],
+          "Eq-Comparison": [
+            "older than 95 years"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "a member of WAVES Project within 3 months of study recruitment",
+              "Condition": [
+                "member of WAVES Project"
+              ],
+              "Condition-Type": [
+                "member"
+              ],
+              "Condition-Name": [
+                "WAVES Project"
+              ],
+              "Eq-Temporal-Period": [
+                "3 months"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Study": [
+                "study recruitment"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Has not completed 3 open water dives",
+                  "Condition": [
+                    "completed 3 open water dives"
+                  ],
+                  "Condition-Type": [
+                    "completed"
+                  ],
+                  "Condition-Name": [
+                    "open water dives"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "proficient in written and verbal English",
+                  "Condition": [
+                    "proficient in written and verbal English"
+                  ],
+                  "Condition-Type": [
+                    "proficient"
+                  ],
+                  "Condition-Name": [
+                    "written and verbal English"
+                  ],
+                  "Language": [
+                    "English"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

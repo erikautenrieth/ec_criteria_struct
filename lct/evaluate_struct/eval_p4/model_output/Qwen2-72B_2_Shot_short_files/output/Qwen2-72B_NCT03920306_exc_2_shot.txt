@@ -1,0 +1,75 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Recurrent gastrocutaneous fistula",
+      "Condition": [
+        "Recurrent gastrocutaneous fistula"
+      ],
+      "Condition-Name": [
+        "gastrocutaneous fistula"
+      ],
+      "Modifier": [
+        "Recurrent"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+            "raw_text": "- Non-consenting",
+            "Negation": [
+              "Non"
+            ],
+            "Condition": [
+              "consenting"
+            ],
+            "Condition-Type": [
+              "consent"
+            ]
+          }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Unable to comply with follow up assessments",
+                  "Condition": [
+                    "comply with follow up assessments"
+                  ],
+                  "Negation": [
+                    "Unable"
+                  ],
+                  "Modifier": [
+                    "follow up"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Known allergic reaction to study products",
+                  "Condition": [
+                    "allergic reaction"
+                  ],
+                  "Condition-Name": [
+                    "allergic reaction"
+                  ],
+                  "Modifier": [
+                    "Known"
+                  ],
+                  "Allergy-Name": [
+                    "study products"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

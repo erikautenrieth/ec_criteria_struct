@@ -1,0 +1,76 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Be a patient in the Bellevue Hospital Center ED.",
+      "Location": [
+        "Bellevue Hospital Center ED"
+      ],
+      "Encounter": [
+        "ED"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Be ≥18 years old.",
+          "Age": [
+            "age"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Comparison": [
+            "≥18 years old"
+          ],
+          "Eq-Unit": [
+            "years"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Screen positive for homelessness risk using a homelessness risk screening tool (HRST).",
+              "Observation": [
+                "homelessness risk"
+              ],
+              "Observation-Name": [
+                "homelessness risk"
+              ],
+              "Polarity": [
+                "positive"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Screen positive for unhealthy alcohol or drug use.",
+                  "Observation": [
+                    "unhealthy alcohol or drug use"
+                  ],
+                  "Observation-Name": [
+                    "unhealthy alcohol or drug use"
+                  ],
+                  "Polarity": [
+                    "positive"
+                  ],
+                  "Condition": [
+                    "unhealthy alcohol or drug use"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Able to provide consent.",
+                  "Condition": [
+                    "able to provide consent"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

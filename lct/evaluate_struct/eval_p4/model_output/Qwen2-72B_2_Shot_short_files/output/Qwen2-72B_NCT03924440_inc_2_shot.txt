@@ -1,0 +1,90 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "1. Female (mandatory)",
+      "Life-Stage-And-Gender": [
+        "Female"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "2. Not currently pregnant or nursing (pregnancy affects PdG levels)",
+              "Condition": [
+                "pregnant",
+                "nursing"
+              ],
+              "Negation": [
+                "Not"
+              ],
+              "Condition-Name": [
+                "pregnant",
+                "nursing"
+              ],
+              "Modifier": [
+                "currently"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "3. Aged 18-34 (advanced age can hinder PdG levels)",
+              "Age": [
+                "Aged"
+              ],
+              "Eq-Comparison": [
+                "18-34"
+              ],
+              "Eq-Value": [
+                "18",
+                "34"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "4. Cycle length of 26-39 days (long or short cycles have inconsistent PdG levels)",
+                  "Observation": [
+                    "Cycle length"
+                  ],
+                  "Eq-Comparison": [
+                    "26-39 days"
+                  ],
+                  "Eq-Value": [
+                    "26",
+                    "39"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "days"
+                  ],
+                  "Observation-Name": [
+                    "Cycle length"
+                  ]
+                },
+                "right": {
+                  "raw_text": "5. Currently use other fertility monitoring tools (this allows us to compare Proov - Ovulation Double Check test results with other fertility tracking methods)",
+                  "Condition": [
+                    "use other fertility monitoring tools"
+                  ],
+                  "Condition-Name": [
+                    "use other fertility monitoring tools"
+                  ],
+                  "Modifier": [
+                    "Currently"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
