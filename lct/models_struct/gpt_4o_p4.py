@@ -25,11 +25,11 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 
 batch_path = "eval_p4"
-n_shot = 15
+n_shot = 2
 
 # 15 shot zu viel für mini (5 geht)
 
-model_name = f"GPT-4o_mini_{n_shot}_shot_max"
+model_name = f"GPT-4o_{n_shot}_shot_short_files"
 
 
 client = OpenAI(
@@ -67,16 +67,39 @@ additional = [
     "NCT03929718_exc.txt",
     "NCT03868475_exc.txt",
     "NCT03921502_exc.txt",
-    "NCT03862027_exc.txt"
-]
-
-
-files = [
+    "NCT03862027_exc.txt",
     "NCT03929718_exc.txt",
     "NCT03868475_exc.txt",
     "NCT03921502_exc.txt",
     "NCT03862027_exc.txt"
 ]
+
+
+short_files = [
+"NCT03860714_inc.txt",
+"NCT03860012_exc.txt",
+"NCT03860090_exc.txt",
+"NCT03863756_exc.txt",
+"NCT03926949_inc.txt",
+"NCT03868865_exc.txt",
+"NCT03867422_inc.txt",
+"NCT03864653_exc.txt",
+"NCT03922269_inc.txt",
+"NCT03921138_exc.txt",
+'NCT03860025_inc.txt',
+'NCT03861221_inc.txt',
+'NCT03861286_inc.txt',
+'NCT03860779_inc.txt',
+'NCT03860493_exc.txt',
+'NCT03861689_inc.txt',
+'NCT03863223_inc.txt',
+'NCT03861078_exc.txt',
+'NCT03863548_inc.txt',
+'NCT03863873_inc.txt',
+'NCT03864315_inc.txt',
+'NCT03864549_inc.txt'
+]
+
 
 study_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/input/"
 label_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/output/"
@@ -86,7 +109,7 @@ label_folder = f"{transform_lct}/input/dataset_p4_prompt1_new/train/output/"
 #random_files = random.sample(all_label_files, n_shot)
 
 
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, additional)
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, short_files)
 
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
@@ -115,7 +138,7 @@ for file in study_files:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"} 
 
     completion = client.chat.completions.create(
-    model="gpt-4o-mini",# "gpt-4o", "gpt-3.5-turbo",
+    model="gpt-4o",# "gpt-4o-mini", "gpt-3.5-turbo",
     messages=messages,
     temperature=0.5,
     )
