@@ -25,7 +25,7 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 
 batch_path = "eval_p4"
-n_shot = 2
+n_shot = 10
 
 # 15 shot zu viel für mini (5 geht)
 
