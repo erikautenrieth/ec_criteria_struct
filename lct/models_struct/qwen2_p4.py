@@ -109,4 +109,4 @@ for file in study_files:
 
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
-    save_txt(response, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
+    save_json(response, f"{output_path}{model_name}_{file_name}.json")
