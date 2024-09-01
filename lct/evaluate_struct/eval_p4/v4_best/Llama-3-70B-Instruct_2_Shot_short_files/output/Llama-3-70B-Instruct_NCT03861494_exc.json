@@ -1,0 +1,93 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "admitted with transient ischemic attack",
+      "Condition": [
+        "transient ischemic attack"
+      ],
+      "Condition-Name": [
+        "transient ischemic attack"
+      ],
+      "Encounter": [
+        "admitted"
+      ]
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "admitted with an intracerebral hemorrhage",
+          "Condition": [
+            "intracerebral hemorrhage"
+          ],
+          "Condition-Name": [
+            "intracerebral hemorrhage"
+          ],
+          "Encounter": [
+            "admitted"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "experience an in-hospital ischemic cerebral infarction",
+              "Condition": [
+                "ischemic cerebral infarction"
+              ],
+              "Condition-Name": [
+                "ischemic cerebral infarction"
+              ],
+              "Encounter": [
+                "in-hospital"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "hospital to hospital transfer patients",
+                  "Encounter": [
+                    "hospital to hospital transfer"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "nursing home as primary residence before or after discharge",
+                      "Location": [
+                        "nursing home"
+                      ],
+                      "Encounter": [
+                        "primary residence"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "hospice",
+                          "Location": [
+                            "hospice"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "inability to comply with post discharge follow up",
+                          "Condition": [
+                            "inability to comply"
+                          ],
+                          "Condition-Name": [
+                            "inability to comply"
+                          ],
+                          "Observation": [
+                            "post discharge follow up"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "- Patient refusal"
+                                    },
+                                    "right": {
+                                      "raw_text": "- BMI > 40 kg/m2",
+                                      "Observation": [
+                                        "BMI"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "> 40 kg/m2"
+                                      ],
+                                      "Observation-Name": [
+                                        "BMI"
+                                      ],
+                                      "Eq-Operator": [
+                                        ">"
+                                      ],
+                                      "Eq-Value": [
+                                        "40",
+                                        "I"
+                                      ],
+                                      "Eq-Unit": [
+                                        "kg",
+                                        "m2"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "raw_text": "- Surgical plan for revision of hip replacement",
+                                  "Procedure": [
+                                    "hip replacement"
+                                  ],
+                                  "Procedure-Name": [
+                                    "hip replacement"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "plan"
+                                  ],
+                                  "Eq-Temporal-Period": [
+                                    "plan"
+                                  ],
+                                  "Modifier": [
+                                    "revision"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "- Patient unable to quantify pain level",
+                              "Observation": [
+                                "pain"
+                              ],
+                              "Observation-Name": [
+                                "pain"
+                              ],
+                              "Negation": [
+                                "unable"
+                              ],
+                              "Assertion": [
+                                "unable"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Chronic kidney disease with a Glomerular Filtration Rate < 50ml/min",
+                          "Condition": [
+                            "kidney disease"
+                          ],
+                          "Observation": [
+                            "Glomerular Filtration Rate"
+                          ],
+                          "Eq-Comparison": [
+                            "< 50ml/min"
+                          ],
+                          "Condition-Name": [
+                            "kidney disease"
+                          ],
+                          "Observation-Name": [
+                            "Glomerular Filtration Rate"
+                          ],
+                          "Eq-Operator": [
+                            "<"
+                          ],
+                          "Eq-Value": [
+                            "50"
+                          ],
+                          "Eq-Unit": [
+                            "ml"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "min"
+                          ],
+                          "Acuteness": [
+                            "Chronic"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Previously medicated with opioids",
+                      "Eq-Comparison": [
+                        "Previously"
+                      ],
+                      "Drug": [
+                        "opioids"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "Previously"
+                      ],
+                      "Drug-Name": [
+                        "opioids"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patient"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "unable to perform the surgery with spinal block",
+                          "Procedure": [
+                            "surgery",
+                            "spinal block"
+                          ],
+                          "Procedure-Name": [
+                            "surgery",
+                            "spinal block"
+                          ],
+                          "Negation": [
+                            "unable"
+                          ],
+                          "Assertion": [
+                            "unable"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Allergy to local anesthetics",
+              "Drug": [
+                "local anesthetics"
+              ],
+              "Drug-Name": [
+                "local anesthetics"
+              ],
+              "Allergy": [
+                "Allergy"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Infection in the site of the Erector Spinae Plane",
+              "Condition": [
+                "Infection"
+              ],
+              "Condition-Name": [
+                "Infection"
+              ],
+              "Modifier": [
+                "Erector Spinae Plane"
+              ]
+            },
+            "right": {
+              "raw_text": "or Fascia Iliaca block",
+              "Procedure": [
+                "Fascia Iliaca block"
+              ],
+              "Procedure-Name": [
+                "Fascia Iliaca block"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Allergy",
+          "Allergy": [
+            "Allergy"
+          ]
+        },
+        "right": {
+          "raw_text": "or contraindication to the use of morphine",
+          "Drug": [
+            "morphine"
+          ],
+          "Drug-Name": [
+            "morphine"
+          ],
+          "Contraindication": [
+            "contraindication"
+          ]
+        }
+      }
+    }
+  }
+}

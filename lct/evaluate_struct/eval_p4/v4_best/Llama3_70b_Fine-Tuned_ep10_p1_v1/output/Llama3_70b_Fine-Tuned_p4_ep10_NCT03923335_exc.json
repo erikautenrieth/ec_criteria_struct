@@ -1,0 +1,148 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "1. have had a previous diagnosis of any cancer",
+              "Eq-Comparison": [
+                "previous"
+              ],
+              "Condition": [
+                "cancer"
+              ],
+              "Eq-Temporal-Period": [
+                "previous"
+              ],
+              "Condition-Name": [
+                "cancer"
+              ]
+            },
+            "right": {
+              "raw_text": "or presence of any tumor other than the CRC",
+              "Modifier": [
+                "tumor"
+              ],
+              "Condition": [
+                "CRC"
+              ],
+              "Exception": [
+                "other than"
+              ],
+              "Condition-Name": [
+                "CRC"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "2. have had inflammatory bowel disease",
+          "Condition": [
+            "inflammatory bowel disease"
+          ],
+          "Condition-Name": [
+            "inflammatory bowel disease"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "3. have had hereditary colorectal cancer syndromes, including Familial adenomatous polyposis, mutyh (MYH)-associated polyposis,",
+          "Condition": [
+            "cancer",
+            "hereditary colorectal cancer syndromes",
+            "Familial adenomatous polyposis",
+            "polyposis"
+          ],
+          "Modifier": [
+            "colorectal"
+          ],
+          "Condition-Name": [
+            "cancer",
+            "hereditary colorectal cancer syndromes",
+            "Familial adenomatous polyposis",
+            "polyposis"
+          ],
+          "Eq-Comparison": [
+            "previous"
+          ],
+          "Observation": [
+            "MYH"
+          ],
+          "Observation-Name": [
+            "MYH"
+          ],
+          "Eq-Temporal-Period": [
+            "previous"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Peutz-Jeghers syndrome,",
+              "Condition": [
+                "Peutz-Jeghers syndrome"
+              ],
+              "Condition-Name": [
+                "Peutz-Jeghers syndrome"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Juvenile polyposis coli, phosphate",
+                  "Condition": [
+                    "polyposis coli"
+                  ],
+                  "Modifier": [
+                    "phosphate"
+                  ],
+                  "Condition-Name": [
+                    "polyposis coli"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "Juvenile"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "and tension homology deleted on chromosome ten (PTEN) tumor-hamartoma syndromes,",
+                      "Modifier": [
+                        "tumor",
+                        "tension homology deleted on chromosome ten"
+                      ],
+                      "Condition": [
+                        "PTEN tumor-hamartoma syndromes"
+                      ],
+                      "Condition-Name": [
+                        "PTEN tumor-hamartoma syndromes"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "Lynch Syndrome, and Familial Colorectal Cancer Type X.",
+                      "Condition": [
+                        "cancer",
+                        "Lynch Syndrome"
+                      ],
+                      "Modifier": [
+                        "colorectal"
+                      ],
+                      "Condition-Name": [
+                        "cancer",
+                        "Lynch Syndrome"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patients with a compromised medical history.",
+                      "Eq-Comparison": [
+                        "medical history"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "medical history"
+                      ],
+                      "Modifier": [
+                        "compromised"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Severe",
+                          "Severity": [
+                            "Severe"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or active periodontal disease.",
+                          "Eq-Comparison": [
+                            "active"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "active"
+                          ],
+                          "Condition": [
+                            "periodontal disease"
+                          ],
+                          "Condition-Name": [
+                            "periodontal disease"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Heavy bruxism",
+                      "Condition": [
+                        "bruxism"
+                      ],
+                      "Condition-Name": [
+                        "bruxism"
+                      ],
+                      "Modifier": [
+                        "Heavy"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or a traumatic occlusion.",
+                      "Modifier": [
+                        "traumatic"
+                      ],
+                      "Condition": [
+                        "occlusion"
+                      ],
+                      "Condition-Name": [
+                        "occlusion"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Acute",
+                  "Acuteness": [
+                    "Acute"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or chronic dental infection.",
+                  "Condition": [
+                    "dental infection"
+                  ],
+                  "Condition-Name": [
+                    "dental infection"
+                  ],
+                  "Acuteness": [
+                    "chronic"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnant",
+              "Condition": [
+                "Pregnant"
+              ],
+              "Condition-Name": [
+                "Pregnant"
+              ]
+            },
+            "right": {
+              "raw_text": "or breastfeeding women.",
+              "Condition": [
+                "breastfeeding"
+              ],
+              "Condition-Name": [
+                "breastfeeding"
+              ],
+              "Life-Stage-And-Gender": [
+                "women"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients with posterior restorations on molars",
+          "Procedure": [
+            "restorations"
+          ],
+          "Procedure-Name": [
+            "restorations"
+          ],
+          "Modifier": [
+            "posterior",
+            "molars"
+          ]
+        },
+        "right": {
+          "raw_text": "or premolars",
+          "Modifier": [
+            "premolars"
+          ]
+        }
+      }
+    }
+  }
+}

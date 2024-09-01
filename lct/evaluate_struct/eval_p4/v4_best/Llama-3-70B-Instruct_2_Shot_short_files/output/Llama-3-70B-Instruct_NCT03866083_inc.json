@@ -1,0 +1,91 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Critically ill cirrhotics",
+      "Condition": [
+        "cirrhotics"
+      ],
+      "Condition-Type": [
+        "critically ill"
+      ],
+      "Severity": [
+        "critically ill"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "with early onset septic shock",
+          "Condition": [
+            "septic shock"
+          ],
+          "Condition-Type": [
+            "early onset"
+          ],
+          "Severity": [
+            "early onset"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "<24 hours",
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "24"
+              ],
+              "Eq-Unit": [
+                "hours"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "with norepinephrine of more than 10 ug/min",
+                  "Drug": [
+                    "norepinephrine"
+                  ],
+                  "Drug-Name": [
+                    "norepinephrine"
+                  ],
+                  "Eq-Operator": [
+                    "more than"
+                  ],
+                  "Eq-Value": [
+                    "10"
+                  ],
+                  "Eq-Unit": [
+                    "ug/min"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and lactate >4 mmol/L",
+                  "Observation": [
+                    "lactate"
+                  ],
+                  "Observation-Name": [
+                    "lactate"
+                  ],
+                  "Eq-Operator": [
+                    ">"
+                  ],
+                  "Eq-Value": [
+                    "4"
+                  ],
+                  "Eq-Unit": [
+                    "mmol/L"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

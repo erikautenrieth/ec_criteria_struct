@@ -1,0 +1,117 @@
+{
+  "NOT": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Medically (e.g., critically ill) or psychiatrically unstable.",
+          "Condition": [
+            "critically ill",
+            "psychiatrically unstable"
+          ],
+          "Condition-Type": [
+            "medical",
+            "psychiatric"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Unable to provide informed consent for other reason (e.g., cognitive deficit, profound intoxication).",
+              "Condition": [
+                "cognitive deficit",
+                "profound intoxication"
+              ],
+              "Condition-Type": [
+                "cognitive",
+                "intoxication"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Incarcerated or in police custody.",
+                  "Condition": [
+                    "incarcerated",
+                    "police custody"
+                  ],
+                  "Condition-Type": [
+                    "incarceration",
+                    "custody"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Unable to understand and speak English.",
+                      "Language": [
+                        "English"
+                      ],
+                      "Condition": [
+                        "unable to understand and speak"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Lives outside NYC and/or cannot give a NYC ZIP code.",
+                          "Location": [
+                            "NYC"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Already homeless (residing in a shelter or on the streets).",
+                              "Condition": [
+                                "homeless"
+                              ],
+                              "Condition-Type": [
+                                "housing"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "Does not have a telephone where can be reached for follow-up.",
+                                  "Condition": [
+                                    "no telephone"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "Has already received specialized peer navigator/addiction social worker services during current ED visit.",
+                                      "Condition": [
+                                        "received services"
+                                      ],
+                                      "Condition-Type": [
+                                        "medical"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "Has already participated in the study.",
+                                      "Condition": [
+                                        "participated in study"
+                                      ],
+                                      "Condition-Type": [
+                                        "study"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

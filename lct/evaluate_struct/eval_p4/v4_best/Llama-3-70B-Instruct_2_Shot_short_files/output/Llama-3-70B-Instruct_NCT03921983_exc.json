@@ -1,0 +1,85 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Recent cardiorespiratory exacerbation (<6 weeks).",
+      "Condition": [
+        "cardiorespiratory exacerbation"
+      ],
+      "Condition-Name": [
+        "cardiorespiratory exacerbation"
+      ],
+      "Eq-Temporal-Recency": [
+        "<6 weeks"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Pulmonary rehabilitation program during the last 2 months",
+          "Procedure": [
+            "Pulmonary rehabilitation program"
+          ],
+          "Procedure-Name": [
+            "Pulmonary rehabilitation program"
+          ],
+          "Eq-Temporal-Recency": [
+            "during the last 2 months"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Continuous LTOT (24 hours) or deambulation O2 therapy alone",
+              "Observation": [
+                "LTOT",
+                "O2 therapy"
+              ],
+              "Observation-Name": [
+                "LTOT",
+                "O2 therapy"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Eq-Value": [
+                "24"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Anticoagulant drugs",
+                  "Drug": [
+                    "Anticoagulant"
+                  ],
+                  "Drug-Name": [
+                    "Anticoagulant"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Hematocrit outside the normal range (35-50%).",
+                  "Observation": [
+                    "Hematocrit"
+                  ],
+                  "Observation-Name": [
+                    "Hematocrit"
+                  ],
+                  "Eq-Comparison": [
+                    "outside the normal range"
+                  ],
+                  "Eq-Value": [
+                    "35",
+                    "50"
+                  ],
+                  "Eq-Unit": [
+                    "%"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

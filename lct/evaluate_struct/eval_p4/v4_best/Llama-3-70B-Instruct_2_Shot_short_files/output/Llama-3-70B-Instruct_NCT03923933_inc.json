@@ -1,0 +1,91 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "glomerular filtration rate less than 30 ml / min / 1.73m",
+      "Observation": [
+        "glomerular filtration rate"
+      ],
+      "Observation-Name": [
+        "glomerular filtration rate"
+      ],
+      "Eq-Operator": [
+        "less than"
+      ],
+      "Eq-Value": [
+        "30"
+      ],
+      "Eq-Unit": [
+        "ml",
+        "min",
+        "1.73m"
+      ],
+      "Eq-Comparison": [
+        "less than 30 ml / min / 1.73m"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "Without replacement therapy (dialysis or hemodialysis)",
+              "Procedure": [
+                "replacement therapy",
+                "dialysis",
+                "hemodialysis"
+              ],
+              "Negation": [
+                "Without"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Volume overload",
+              "Condition": [
+                "Volume overload"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "At least 100 ml per day of residual diuresis",
+                  "Observation": [
+                    "residual diuresis"
+                  ],
+                  "Observation-Name": [
+                    "residual diuresis"
+                  ],
+                  "Eq-Operator": [
+                    "at least"
+                  ],
+                  "Eq-Value": [
+                    "100"
+                  ],
+                  "Eq-Unit": [
+                    "ml",
+                    "per day"
+                  ],
+                  "Eq-Comparison": [
+                    "at least 100 ml per day"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Use of a loop diuretic for at least one month",
+                  "Drug": [
+                    "loop diuretic"
+                  ],
+                  "Duration": [
+                    "at least one month"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

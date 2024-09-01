@@ -1,0 +1,169 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "1. Current injury is a pathologic fracture",
+      "Condition": [
+        "pathologic fracture"
+      ],
+      "Condition-Name": [
+        "pathologic fracture"
+      ]
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "2. Sustained bilateral tibia fracture",
+          "Condition": [
+            "bilateral tibia fracture"
+          ],
+          "Condition-Name": [
+            "bilateral tibia fracture"
+          ],
+          "Location": [
+            "tibia"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "3. Sustained comminuted femur fracture",
+              "Condition": [
+                "comminuted femur fracture"
+              ],
+              "Condition-Name": [
+                "comminuted femur fracture"
+              ],
+              "Location": [
+                "femur"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "4. Sustained severe Traumatic Brain Injury (GCS<12) ***",
+                  "Condition": [
+                    "Traumatic Brain Injury"
+                  ],
+                  "Condition-Name": [
+                    "Traumatic Brain Injury"
+                  ],
+                  "Severity": [
+                    "severe"
+                  ],
+                  "Observation": [
+                    "GCS"
+                  ],
+                  "Eq-Operator": [
+                    "<"
+                  ],
+                  "Eq-Value": [
+                    "12"
+                  ],
+                  "Eq-Comparison": [
+                    "GCS<12"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "5. Sustained severe spinal cord injury (lower extremity paresis/paralysis)",
+                      "Condition": [
+                        "spinal cord injury"
+                      ],
+                      "Condition-Name": [
+                        "spinal cord injury"
+                      ],
+                      "Severity": [
+                        "severe"
+                      ],
+                      "Location": [
+                        "lower extremity"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "6. Sustained severe burns (>10% total body surface area (TBSA) or >5% TBSA with full thickness or circumferential injury)",
+                          "Condition": [
+                            "burns"
+                          ],
+                          "Condition-Name": [
+                            "burns"
+                          ],
+                          "Severity": [
+                            "severe"
+                          ],
+                          "Observation": [
+                            "total body surface area (TBSA)"
+                          ],
+                          "Eq-Operator": [
+                            ">",
+                            ">"
+                          ],
+                          "Eq-Value": [
+                            "10%",
+                            "5%"
+                          ],
+                          "Eq-Comparison": [
+                            ">10% TBSA",
+                            ">5% TBSA"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "7. Prior ipsilateral leg injury requiring surgery",
+                              "Condition": [
+                                "ipsilateral leg injury"
+                              ],
+                              "Condition-Name": [
+                                "ipsilateral leg injury"
+                              ],
+                              "Procedure": [
+                                "surgery"
+                              ],
+                              "Location": [
+                                "leg"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "8. Prior or current lower limb deformity or abnormality",
+                                  "Condition": [
+                                    "lower limb deformity",
+                                    "lower limb abnormality"
+                                  ],
+                                  "Condition-Name": [
+                                    "lower limb deformity",
+                                    "lower limb abnormality"
+                                  ],
+                                  "Location": [
+                                    "lower limb"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "9. Unable to complete follow-up visits",
+                                  "Negation": [
+                                    "Unable"
+                                  ],
+                                  "Procedure": [
+                                    "follow-up visits"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
