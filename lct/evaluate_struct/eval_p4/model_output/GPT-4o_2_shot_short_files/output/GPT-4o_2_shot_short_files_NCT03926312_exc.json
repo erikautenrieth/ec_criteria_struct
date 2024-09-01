@@ -1,0 +1,138 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. Heart failure NYHA IIIB-IV",
+          "Condition": [
+            "Heart failure"
+          ],
+          "Condition-Name": [
+            "Heart failure"
+          ],
+          "Severity": [
+            "NYHA IIIB-IV"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "2. Planned coronary revascularization",
+              "Procedure": [
+                "coronary revascularization"
+              ],
+              "Procedure-Name": [
+                "coronary revascularization"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "3. Planned major surgery within the next 12 months",
+                  "Procedure": [
+                    "major surgery"
+                  ],
+                  "Procedure-Name": [
+                    "major surgery"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "within the next 12 months"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "4. Inability to walk for any reason",
+                          "Negation": [
+                            "Inability"
+                          ],
+                          "Observation": [
+                            "walk"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "5. Comorbidities that would preclude adherence to the rehabilitation program (e.g. arthrosis, active malignancy, major depression or other significant psychiatric disorder, cognitive impairment) - at the discretion of the physician",
+                          "Condition": [
+                            "arthrosis",
+                            "active malignancy",
+                            "major depression",
+                            "other significant psychiatric disorder",
+                            "cognitive impairment"
+                          ],
+                          "Condition-Name": [
+                            "arthrosis",
+                            "active malignancy",
+                            "major depression",
+                            "other significant psychiatric disorder",
+                            "cognitive impairment"
+                          ],
+                          "Provider": [
+                            "physician"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "6. Life expectancy less than 12 months",
+                              "Condition": [
+                                "Life expectancy"
+                              ],
+                              "Condition-Name": [
+                                "Life expectancy"
+                              ],
+                              "Eq-Comparison": [
+                                "less than 12 months"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "12 months"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "7. Pregnancy",
+                                  "Condition": [
+                                    "Pregnancy"
+                                  ],
+                                  "Condition-Name": [
+                                    "Pregnancy"
+                                  ]
+                                },
+                                "right": {
+                                  "NOT": {
+                                    "left": {
+                                      "raw_text": "8. Inability to operate the smart-watch",
+                                      "Negation": [
+                                        "Inability"
+                                      ],
+                                      "Observation": [
+                                        "operate the smart-watch"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": ""
+    }
+  }
+}

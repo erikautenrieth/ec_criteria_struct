@@ -1,0 +1,85 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Those reporting any chronic or acute diseases, food allergies, smoking or alcohol abuse",
+              "Condition": [
+                "chronic diseases",
+                "acute diseases",
+                "food allergies"
+              ],
+              "Risk": [
+                "smoking",
+                "alcohol abuse"
+              ],
+              "Acuteness": [
+                "chronic",
+                "acute"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Use of illicit drugs",
+                  "Drug": [
+                    "illicit drugs"
+                  ]
+                },
+                "right": {
+                  "raw_text": "regular consumption of medications, micronutrient supplements, or both",
+                  "Drug": [
+                    "medications",
+                    "micronutrient supplements"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Vegetarians, or those unable to eat meat, are also excluded since the foods for the study contain meat",
+                  "Negation": [
+                    "unable",
+                    "excluded"
+                  ],
+                  "Condition": [
+                    "Vegetarians"
+                  ],
+                  "Modifier": [
+                    "unable to eat meat"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Unable to refrain from taking medications during the study period",
+                  "Negation": [
+                    "Unable"
+                  ],
+                  "Drug": [
+                    "medications"
+                  ],
+                  "Modifier": [
+                    "refrain from taking medications during the study period"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "-"
+    }
+  }
+}

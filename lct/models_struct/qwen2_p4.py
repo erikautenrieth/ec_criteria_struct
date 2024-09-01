@@ -8,7 +8,7 @@ from helper_functions import *
 
 
 batch_path = "eval_p4"
-n_shot = 25
+n_shot = 10
 
 model_id =  "Qwen/Qwen2-72B-Instruct"
 model_name = "Qwen2-72B"
