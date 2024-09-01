@@ -1,0 +1,150 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Male or Female ≥ 60 years old",
+          "OR": {
+            "left": {
+              "raw_text": "Male",
+              "Life-Stage-And-Gender": [
+                "Male"
+              ]
+            },
+            "right": {
+              "raw_text": "Female ≥ 60 years old",
+              "Life-Stage-And-Gender": [
+                "Female"
+              ],
+              "Age": [
+                "≥ 60 years old"
+              ],
+              "Eq-Comparison": [
+                "≥ 60"
+              ],
+              "Eq-Value": [
+                "60"
+              ],
+              "Eq-Operator": [
+                "≥"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- MMSE score between 4 and 26 / 30",
+              "Observation": [
+                "MMSE score"
+              ],
+              "Observation-Name": [
+                "MMSE"
+              ],
+              "Eq-Comparison": [
+                "between 4 and 26 / 30"
+              ],
+              "Eq-Value": [
+                "4",
+                "26",
+                "30"
+              ],
+              "Eq-Operator": [
+                "between"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Diagnosis of minor to major NeuroCognitive Disorder of the Alzheimer type or multiple etiology;",
+                  "Condition": [
+                    "NeuroCognitive Disorder",
+                    "Alzheimer type",
+                    "multiple etiology"
+                  ],
+                  "Condition-Type": [
+                    "minor to major"
+                  ],
+                  "Diagnosis": [
+                    "Diagnosis"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Subject without a major hearing or visual impairment;",
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Subject without a major hearing or visual impairment",
+                          "Condition": [
+                            "hearing impairment",
+                            "visual impairment"
+                          ],
+                          "Modifier": [
+                            "major"
+                          ],
+                          "Polarity": [
+                            "without"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Subject not presenting any contraindications to the practice of adapted physical activity;",
+                          "NOT": {
+                            "left": {
+                              "raw_text": "Subject not presenting any contraindications to the practice of adapted physical activity",
+                              "Condition": [
+                                "contraindications"
+                              ],
+                              "Polarity": [
+                                "not"
+                              ],
+                              "Procedure": [
+                                "adapted physical activity"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Subject affiliated to Social Security System;",
+                              "Condition": [
+                                "affiliated"
+                              ],
+                              "Other": [
+                                "Social Security System"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- Signing informed consent",
+                              "Condition": [
+                                "informed consent"
+                              ],
+                              "Procedure": [
+                                "Signing"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": ""
+    }
+  }
+}

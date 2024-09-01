@@ -1,0 +1,90 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- allergy to bupivacaine",
+          "Allergy": [
+            "bupivacaine"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- pre-operative opioid usage within the last six months",
+              "Observation": [
+                "pre-operative opioid usage"
+              ],
+              "Eq-Temporal-Recency": [
+                "within the last six months"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- patients allergic to Percocet",
+                      "Allergy": [
+                        "Percocet"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or acetaminophen",
+                      "Allergy": [
+                        "acetaminophen"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- patients taking tricyclic antidepressants (interaction with bupivacaine)",
+                      "Drug": [
+                        "tricyclic antidepressants"
+                      ],
+                      "Drug-Name": [
+                        "tricyclic antidepressants",
+                        "bupivacaine"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- vulnerable populations (prisoners or pregnant women)",
+                      "Condition": [
+                        "vulnerable populations"
+                      ],
+                      "Condition-Type": [
+                        "vulnerable populations"
+                      ],
+                      "OR": {
+                        "left": {
+                          "raw_text": "prisoners",
+                          "Condition": [
+                            "prisoners"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "pregnant women",
+                          "Condition": [
+                            "pregnant women"
+                          ],
+                          "Life-Stage-And-Gender": [
+                            "pregnant women"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "-"
+    }
+  }
+}

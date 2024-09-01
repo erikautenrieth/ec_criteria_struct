@@ -1,0 +1,113 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. prior randomization to either STAR or usual care study arms;",
+          "Study": [
+            "STAR",
+            "usual care"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "2. not a North Carolina resident",
+                      "Negation": [
+                        "not"
+                      ],
+                      "Location": [
+                        "North Carolina"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or residence >2.5-hour drive time from treating hospital;",
+                      "Eq-Comparison": [
+                        ">2.5-hour drive time"
+                      ],
+                      "Eq-Operator": [
+                        ">"
+                      ],
+                      "Location": [
+                        "treating hospital"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "hour"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "3. the only antibiotic associated with patient is administered in the operating room as this likely represents pre-operative infection prophylaxis and not presumed infection;",
+                  "Drug": [
+                    "antibiotic"
+                  ],
+                  "Procedure-Name": [
+                    "operating room"
+                  ],
+                  "Condition": [
+                    "pre-operative infection prophylaxis",
+                    "presumed infection"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "4. patients transferred from other acute care hospitals;",
+                      "Encounter": [
+                        "transferred from other acute care hospitals"
+                      ],
+                      "Condition-Type": [
+                        "acute"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "5. patients with a change in code status (i.e., do not resuscitate, do not intubate) within 24 hours after admission due to the general assumption of increased risk of exposure to less aggressive treatment;",
+                          "Condition": [
+                            "change in code status"
+                          ],
+                          "Negation": [
+                            "do not resuscitate",
+                            "do not intubate"
+                          ],
+                          "Eq-Temporal-Recency": [
+                            "within 24 hours after admission"
+                          ],
+                          "Risk": [
+                            "increased risk of exposure to less aggressive treatment"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "6. patients with infection ruled out during the index hospitalization.",
+                          "Condition": [
+                            "infection ruled out"
+                          ],
+                          "Encounter": [
+                            "index hospitalization"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "-"
+    }
+  }
+}

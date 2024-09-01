@@ -1,0 +1,149 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Age < 20",
+              "Eq-Operator": [
+                "<"
+              ],
+              "Age": [
+                "Age"
+              ],
+              "Eq-Value": [
+                "20"
+              ],
+              "Eq-Comparison": [
+                "< 20"
+              ]
+            },
+            "right": {
+              "raw_text": "> 70 years",
+              "Eq-Operator": [
+                ">"
+              ],
+              "Age": [
+                "Age"
+              ],
+              "Eq-Value": [
+                "70"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Eq-Comparison": [
+                "> 70 years"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Anemia (serum hemoglobin level < 10 g/dL)",
+              "Condition": [
+                "Anemia"
+              ],
+              "Observation": [
+                "serum hemoglobin level"
+              ],
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "10"
+              ],
+              "Eq-Unit": [
+                "g/dL"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Severe systemic disease",
+                  "Condition": [
+                    "Severe systemic disease"
+                  ],
+                  "Severity": [
+                    "Severe"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Advanced chronic liver disease",
+                      "Condition": [
+                        "Advanced chronic liver disease"
+                      ],
+                      "Condition-Type": [
+                        "chronic"
+                      ],
+                      "Modifier": [
+                        "Advanced"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Use of certain medications, including proton pump inhibitors, H2-receptor antagonists, or antibiotics",
+                          "Drug": [
+                            "proton pump inhibitors",
+                            "H2-receptor antagonists",
+                            "antibiotics"
+                          ],
+                          "Observation": [
+                            "Use of certain medications"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- History of H. pylori eradication",
+                              "Condition": [
+                                "H. pylori eradication"
+                              ],
+                              "Observation": [
+                                "History of H. pylori eradication"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- History of gastric surgery",
+                                  "Procedure": [
+                                    "gastric surgery"
+                                  ],
+                                  "Observation": [
+                                    "History of gastric surgery"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "- Recent history of upper gastrointestinal bleeding",
+                                  "Observation": [
+                                    "Recent history of upper gastrointestinal bleeding"
+                                  ],
+                                  "Condition": [
+                                    "upper gastrointestinal bleeding"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "-"
+    }
+  }
+}

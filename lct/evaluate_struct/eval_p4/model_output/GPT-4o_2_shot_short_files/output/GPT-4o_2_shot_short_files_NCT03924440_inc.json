@@ -1,0 +1,82 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. Female (mandatory)",
+          "Life-Stage-And-Gender": [
+            "Female"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "2. Not currently pregnant",
+                  "Negation": [
+                    "Not"
+                  ],
+                  "Condition": [
+                    "currently pregnant"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or nursing (pregnancy affects PdG levels)",
+                  "Condition": [
+                    "nursing"
+                  ],
+                  "Observation": [
+                    "PdG levels"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "3. Aged 18-34 (advanced age can hinder PdG levels)",
+              "Age": [
+                "Aged 18-34"
+              ],
+              "Observation": [
+                "PdG levels"
+              ]
+            },
+            "right": {
+              "raw_text": "4. Cycle length of 26-39 days (long or short cycles have inconsistent PdG levels)",
+              "Observation": [
+                "Cycle length",
+                "PdG levels"
+              ],
+              "Eq-Comparison": [
+                "26-39 days"
+              ],
+              "Eq-Value": [
+                "26",
+                "39"
+              ],
+              "Eq-Temporal-Unit": [
+                "days"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "5. Currently use other fertility monitoring tools (this allows us to compare Proov - Ovulation Double Check test results with other fertility tracking methods)",
+          "Observation": [
+            "fertility monitoring tools",
+            "Proov - Ovulation Double Check test results",
+            "fertility tracking methods"
+          ]
+        }
+      }
+    }
+  }
+}

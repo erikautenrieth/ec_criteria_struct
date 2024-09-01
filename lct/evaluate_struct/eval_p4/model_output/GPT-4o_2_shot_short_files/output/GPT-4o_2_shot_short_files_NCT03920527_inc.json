@@ -1,0 +1,115 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "includes presence of all the following:"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- one or more clinical symptoms (persistent cough, recurrent hemoptysis, weight loss, malaise, fever and dyspnea) for ≥3 months",
+              "Condition": [
+                "persistent cough",
+                "recurrent hemoptysis",
+                "weight loss",
+                "malaise",
+                "fever",
+                "dyspnea"
+              ],
+              "Eq-Comparison": [
+                "≥3 months"
+              ],
+              "Eq-Temporal-Period": [
+                "months"
+              ],
+              "Eq-Value": [
+                "3"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- slowly progressive or persistent radiological findings (one or more cavities and surrounding fibrosis, infiltrates, consolidation, with or without fungal ball or progressive pleural thickening) on computed tomography (CT) of the thorax",
+                  "Observation": [
+                    "radiological findings",
+                    "cavities",
+                    "surrounding fibrosis",
+                    "infiltrates",
+                    "consolidation",
+                    "fungal ball",
+                    "pleural thickening"
+                  ],
+                  "Procedure": [
+                    "computed tomography"
+                  ],
+                  "Procedure-Name": [
+                    "CT"
+                  ],
+                  "Location": [
+                    "thorax"
+                  ],
+                  "Modifier": [
+                    "slowly progressive",
+                    "persistent"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- immunological (A.fumigatus-specific IgG >27 mgA/L or positive Aspergillus precipitins) or microbiological evidence of Aspergillus infection (growth of Aspergillus in respiratory secretions or serum galactomannan index >0.5 or BALF galactomannan index >1)",
+                      "Condition": [
+                        "Aspergillus infection"
+                      ],
+                      "Observation": [
+                        "A.fumigatus-specific IgG",
+                        "Aspergillus precipitins",
+                        "growth of Aspergillus",
+                        "serum galactomannan index",
+                        "BALF galactomannan index"
+                      ],
+                      "Eq-Comparison": [
+                        ">27 mgA/L",
+                        ">0.5",
+                        ">1"
+                      ],
+                      "Eq-Value": [
+                        "27",
+                        "0.5",
+                        "1"
+                      ],
+                      "Eq-Unit": [
+                        "mgA/L"
+                      ],
+                      "Organism-Name": [
+                        "Aspergillus",
+                        "A.fumigatus"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and, - exclusion of other pulmonary disorders with similar presentation.",
+                      "NOT": {
+                        "left": {
+                          "raw_text": "other pulmonary disorders with similar presentation",
+                          "Condition": [
+                            "pulmonary disorders"
+                          ],
+                          "Modifier": [
+                            "similar presentation"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": ""
+    }
+  }
+}

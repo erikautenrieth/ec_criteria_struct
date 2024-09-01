@@ -1,0 +1,149 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnancy",
+              "Condition": [
+                "Pregnancy"
+              ]
+            },
+            "right": {
+              "raw_text": "or lactation.",
+              "Condition": [
+                "lactation"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Inability to give informed consent in the absence of a legal representative.",
+                  "Negation": [
+                    "Inability",
+                    "absence"
+                  ],
+                  "Condition": [
+                    "give informed consent"
+                  ],
+                  "Other": [
+                    "legal representative"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Subjects that are participating in a study with medicines or other medical devices.",
+                  "Study": [
+                    "study"
+                  ],
+                  "Drug": [
+                    "medicines"
+                  ],
+                  "Procedure": [
+                    "medical devices"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Those who show inability to follow the instructions or collaborate during the development of the study.",
+                  "Negation": [
+                    "inability"
+                  ],
+                  "Other": [
+                    "follow the instructions",
+                    "collaborate"
+                  ],
+                  "Study": [
+                    "development of the study"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- If in the opinion of the researcher there are findings in the physical examination, abnormalities in the results of the clinical analyzes or other medical, social or psychosocial factors that could have a negative influence",
+          "Condition": [
+            "findings in the physical examination",
+            "abnormalities in the results of the clinical analyzes",
+            "other medical, social or psychosocial factors"
+          ],
+          "Other": [
+            "opinion of the researcher"
+          ],
+          "Observation": [
+            "physical examination",
+            "clinical analyzes"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Having had a previous surgical procedure on or around the knee in the last 12 months (such as proximal tibial osteotomy, femoral osteotomy, open reduction and internal fixation for a fracture, patellectomy or patellar realignment).",
+              "Condition": [
+                "previous surgical procedure on or around the knee"
+              ],
+              "Procedure": [
+                "proximal tibial osteotomy",
+                "femoral osteotomy",
+                "open reduction and internal fixation for a fracture",
+                "patellectomy",
+                "patellar realignment"
+              ],
+              "Eq-Temporal-Period": [
+                "last 12 months"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Need a simultaneous bilateral TKA.",
+                  "Condition": [
+                    "simultaneous bilateral TKA"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Have a varus angle or valgus ≥ 15 °.",
+                      "Condition": [
+                        "varus angle",
+                        "valgus"
+                      ],
+                      "Eq-Comparison": [
+                        "≥ 15 °"
+                      ],
+                      "Eq-Value": [
+                        "15"
+                      ],
+                      "Eq-Operator": [
+                        "≥"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Total revision knee arthroplasty.",
+                      "Procedure": [
+                        "Total revision knee arthroplasty"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

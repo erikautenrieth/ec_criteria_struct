@@ -1,0 +1,136 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. Patients scheduled for emergency surgery",
+          "Condition": [
+            "emergency surgery"
+          ],
+          "Procedure-Name": [
+            "surgery"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "2. Patients with a history of drug abuse",
+                      "Condition": [
+                        "drug abuse"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and / or alcohol abuse 2 years prior to the screening period",
+                      "Condition": [
+                        "alcohol abuse"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "2 years"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "or alcohol abuse 2 years prior to the screening period",
+                  "Condition": [
+                    "alcohol abuse"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "2 years"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "3. One or more of the laboratory findings fall out of the limitations for this study (platelet, hemoglobin, aspartate aminotransferase, etc.)",
+                  "Observation": [
+                    "laboratory findings",
+                    "platelet",
+                    "hemoglobin",
+                    "aspartate aminotransferase"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "4. Pregnant women",
+                      "Life-Stage-And-Gender": [
+                        "Pregnant women"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or those in lactation period",
+                      "Life-Stage-And-Gender": [
+                        "lactation period"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "5. Allergic to drugs used in the study",
+              "Allergy": [
+                "drugs used in the study"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "6. Patients with respiratory management difficulties (Modified Mallampati grade IV)",
+                  "Condition": [
+                    "respiratory management difficulties"
+                  ],
+                  "Observation-Name": [
+                    "Modified Mallampati grade IV"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "7. Patients have participated in other clinical trial within the 3 months prior to randomization",
+                      "Study": [
+                        "other clinical trial"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "3 months"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "8. Any patient judged by the Principal Investigator (PI) or Sub-Investigator to be inappropriate for the subject for any other reason",
+                      "Provider": [
+                        "Principal Investigator (PI)",
+                        "Sub-Investigator"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "8. Any patient judged by the Principal Investigator (PI) or Sub-Investigator to be inappropriate for the subject for any other reason",
+          "Provider": [
+            "Principal Investigator (PI)",
+            "Sub-Investigator"
+          ]
+        }
+      }
+    }
+  }
+}
