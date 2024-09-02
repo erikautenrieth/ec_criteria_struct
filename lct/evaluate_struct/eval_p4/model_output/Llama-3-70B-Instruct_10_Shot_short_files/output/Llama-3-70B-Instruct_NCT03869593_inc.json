@@ -1,0 +1,88 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient with S. aureus or E. coli bacteriostatic bacteremia defined by at least one positive blood culture bottle",
+          "Condition": [
+            "bacteriostatic bacteremia"
+          ],
+          "Condition-Name": [
+            "bacteriostatic bacteremia"
+          ],
+          "Organism": [
+            "S. aureus",
+            "E. coli"
+          ],
+          "Observation": [
+            "blood culture bottle"
+          ],
+          "Observation-Name": [
+            "blood culture bottle"
+          ]
+        },
+        "right": {
+          "raw_text": "- Patient requiring a blood test as part of his bacteremia",
+          "Procedure": [
+            "blood test"
+          ],
+          "Procedure-Name": [
+            "blood test"
+          ],
+          "Condition": [
+            "bacteremia"
+          ],
+          "Condition-Name": [
+            "bacteremia"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "-"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not subject to a judicial protection measure",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Procedure": [
+                    "judicial protection measure"
+                  ],
+                  "Procedure-Name": [
+                    "judicial protection measure"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Signature of the non-opposition of consent (for minor patients signed by one of the parents or the representative of the parental authority)",
+              "Study": [
+                "consent"
+              ]
+            },
+            "right": {
+              "raw_text": "- Affiliation to social security",
+              "Procedure": [
+                "social security"
+              ],
+              "Procedure-Name": [
+                "social security"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

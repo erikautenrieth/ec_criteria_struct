@@ -1,0 +1,131 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- COPD diagnostic",
+          "Condition": [
+            "COPD"
+          ],
+          "Condition-Name": [
+            "COPD"
+          ]
+        },
+        "right": {
+          "raw_text": "- Both sex",
+          "Life-Stage-And-Gender": [
+            "Both sex"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- 18 <Age <80 years old",
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Age": [
+            "Age"
+          ],
+          "Eq-Value": [
+            "18",
+            "80"
+          ],
+          "Eq-Comparison": [
+            "< 18",
+            "> 80"
+          ],
+          "Eq-Operator": [
+            "<",
+            ">"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- LTOT- group : PaO2 ≥ 65 mmHg and SaO2≥ 92%",
+              "Procedure": [
+                "LTOT-"
+              ],
+              "Procedure-Name": [
+                "LTOT-"
+              ],
+              "Observation": [
+                "PaO2",
+                "SaO2"
+              ],
+              "Observation-Name": [
+                "PaO2",
+                "SaO2"
+              ],
+              "Eq-Value": [
+                "65",
+                "92"
+              ],
+              "Eq-Comparison": [
+                "≥ 65 mmHg",
+                "≥ 92%"
+              ],
+              "Eq-Operator": [
+                "≥"
+              ]
+            },
+            "right": {
+              "raw_text": "- LTOT+ group: long term oxygenotherapy prescribed for more than 3 months, with daily use between 12 and 15 hours.",
+              "Procedure": [
+                "LTOT+",
+                "long term oxygenotherapy"
+              ],
+              "Procedure-Name": [
+                "LTOT+",
+                "long term oxygenotherapy"
+              ],
+              "Eq-Temporal-Unit": [
+                "months",
+                "hours"
+              ],
+              "Eq-Value": [
+                "3",
+                "12",
+                "15"
+              ],
+              "Eq-Comparison": [
+                "more than 3 months",
+                "between 12 and 15 hours"
+              ],
+              "Eq-Operator": [
+                "more than",
+                "between"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "matching_criteria": {
+    "Age": {
+      "Eq-Value": [
+        "± 5 years"
+      ]
+    },
+    "Sex": {
+      "Eq-Value": [
+        "sex"
+      ]
+    },
+    "Physical Activity": {
+      "Eq-Value": [
+        "± 15% Mets.min/week"
+      ],
+      "Observation": [
+        "GPAQ questionnaire"
+      ],
+      "Observation-Name": [
+        "GPAQ questionnaire"
+      ]
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients under tutorship",
+                      "Condition": [
+                        "Patients"
+                      ],
+                      "Condition-Name": [
+                        "Patients"
+                      ],
+                      "Modifier": [
+                        "under",
+                        "tutorship"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or curatorship",
+                      "Modifier": [
+                        "curatorship"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "or inability to give informed consent",
+                      "Negation": [
+                        "inability"
+                      ],
+                      "Condition": [
+                        "give informed consent"
+                      ],
+                      "Condition-Name": [
+                        "give informed consent"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patients receiving an anti-osteoporotic treatment",
+              "Condition": [
+                "receiving"
+              ],
+              "Condition-Name": [
+                "receiving"
+              ],
+              "Procedure": [
+                "anti-osteoporotic treatment"
+              ],
+              "Procedure-Name": [
+                "anti-osteoporotic treatment"
+              ],
+              "Eq-Comparison": [
+                "receiving"
+              ],
+              "Eq-Temporal-Period": [
+                "receiving"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patients requiring an anti-osteoporotic baseline treatment (T-score ⩽ -3DS on at least 1 site or FRAX score above the therapeutic intervention threshold)",
+          "Condition": [
+            "requiring"
+          ],
+          "Condition-Name": [
+            "requiring"
+          ],
+          "Procedure": [
+            "anti-osteoporotic baseline treatment"
+          ],
+          "Procedure-Name": [
+            "anti-osteoporotic baseline treatment"
+          ],
+          "Eq-Comparison": [
+            "at least"
+          ],
+          "Eq-Operator": [
+            "at least"
+          ],
+          "Eq-Value": [
+            "1"
+          ],
+          "Observation": [
+            "FRAX score"
+          ],
+          "Observation-Name": [
+            "FRAX score"
+          ],
+          "Eq-Unit": [
+            "DS"
+          ],
+          "Eq-Temporal-Unit": [
+            "at least"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients with one or more major risk factors for osteoporosis",
+          "Condition": [
+            "major risk factors"
+          ],
+          "Condition-Name": [
+            "major risk factors"
+          ],
+          "Eq-Comparison": [
+            "one or more"
+          ],
+          "Eq-Operator": [
+            "or more"
+          ],
+          "Eq-Value": [
+            "one"
+          ]
+        },
+        "right": {
+          "raw_text": "- Patients who have received topical corticosteroids in less than 3 months",
+          "Condition": [
+            "received"
+          ],
+          "Condition-Name": [
+            "received"
+          ],
+          "Procedure": [
+            "topical corticosteroids"
+          ],
+          "Procedure-Name": [
+            "topical corticosteroids"
+          ],
+          "Eq-Comparison": [
+            "in less than 3 months"
+          ],
+          "Eq-Operator": [
+            "in less than"
+          ],
+          "Eq-Value": [
+            "3"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ]
+        }
+      }
+    }
+  }
+}

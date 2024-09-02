@@ -1,0 +1,81 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients with a diagnosis of atrial fibrillation (AF), atrial flutter and/or ventricular tachycardia (VT)",
+          "Condition": [
+            "atrial fibrillation",
+            "atrial flutter",
+            "ventricular tachycardia"
+          ],
+          "Condition-Name": [
+            "atrial fibrillation",
+            "atrial flutter",
+            "ventricular tachycardia"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients with an ILR already in-situ or an established indication for ILR",
+              "Procedure": [
+                "ILR"
+              ],
+              "Procedure-Name": [
+                "ILR"
+              ],
+              "Eq-Comparison": [
+                "already in-situ"
+              ],
+              "Eq-Temporal-Period": [
+                "already in-situ"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Patients with a palliative diagnosis i.e. life expectancy less than 3 years",
+                  "Condition": [
+                    "palliative diagnosis"
+                  ],
+                  "Condition-Name": [
+                    "palliative diagnosis"
+                  ],
+                  "Eq-Comparison": [
+                    "less than 3 years"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Negation": [
+                    "not"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- Patients who lack capacity",
+          "Condition": [
+            "lack capacity"
+          ],
+          "Condition-Name": [
+            "lack capacity"
+          ],
+          "Negation": [
+            "not"
+          ]
+        }
+      }
+    }
+  }
+}

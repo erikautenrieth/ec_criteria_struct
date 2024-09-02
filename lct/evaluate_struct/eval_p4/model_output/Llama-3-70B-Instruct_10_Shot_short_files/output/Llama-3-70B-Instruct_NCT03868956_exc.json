@@ -1,0 +1,206 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Known current pregnancy",
+                          "Condition": [
+                            "pregnancy"
+                          ],
+                          "Condition-Name": [
+                            "pregnancy"
+                          ],
+                          "Negation": [
+                            "Known"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Any condition, which, in the opinion of the investigator may prevent him from performing the colour doppler ultrasound test",
+                          "Condition": [
+                            "condition"
+                          ],
+                          "Condition-Name": [
+                            "condition"
+                          ],
+                          "Procedure": [
+                            "colour doppler ultrasound test"
+                          ],
+                          "Procedure-Name": [
+                            "colour doppler ultrasound test"
+                          ],
+                          "Negation": [
+                            "Any"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Delay from onset of symptoms to inclusion of more than 10 days",
+                      "Eq-Comparison": [
+                        "more than 10 days"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "days"
+                      ],
+                      "Eq-Value": [
+                        "10"
+                      ],
+                      "Negation": [
+                        "Delay"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Therapeutic anticoagulation for more than 48 hours in the two days prior to consent",
+                  "Procedure": [
+                    "anticoagulation"
+                  ],
+                  "Procedure-Name": [
+                    "anticoagulation"
+                  ],
+                  "Eq-Comparison": [
+                    "more than 48 hours"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "hours"
+                  ],
+                  "Eq-Value": [
+                    "48"
+                  ],
+                  "Negation": [
+                    "Therapeutic"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Prophylactic anticoagulation for more than 48 hours in the two days prior to consent",
+              "Procedure": [
+                "anticoagulation"
+              ],
+              "Procedure-Name": [
+                "anticoagulation"
+              ],
+              "Eq-Comparison": [
+                "more than 48 hours"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Eq-Value": [
+                "48"
+              ],
+              "Negation": [
+                "Prophylactic"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "Clinical symptoms of pulmonary embolism",
+              "Condition": [
+                "pulmonary embolism"
+              ],
+              "Condition-Name": [
+                "pulmonary embolism"
+              ],
+              "Negation": [
+                "Clinical"
+              ]
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Life expectancy less than 3 months",
+              "Eq-Comparison": [
+                "less than 3 months"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Negation": [
+                "Life"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "AND": {
+      "left": {
+        "NOT": {
+          "left": {
+            "raw_text": "Patient unable to adhere to protocol or follow-up visits and contacts",
+            "Negation": [
+              "unable"
+            ]
+          }
+        }
+      },
+      "right": {
+        "NOT": {
+          "left": {
+            "raw_text": "Participants under legal guardianship or incapacitation",
+            "Negation": [
+              "under"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "NOT": {
+      "left": {
+        "raw_text": "Patient already enrolled in a deep vein thrombosis (DVT) diagnostic research",
+        "Study": [
+          "deep vein thrombosis"
+        ],
+        "Study-Name": [
+          "deep vein thrombosis"
+        ],
+        "Negation": [
+          "already"
+        ]
+      }
+    }
+  }
+}

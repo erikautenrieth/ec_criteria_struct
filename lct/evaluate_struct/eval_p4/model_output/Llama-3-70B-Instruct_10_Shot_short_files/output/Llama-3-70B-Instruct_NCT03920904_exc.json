@@ -1,0 +1,101 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient's refusal or inability to consent",
+          "Study": [
+            "consent"
+          ],
+          "Negation": [
+            "refusal",
+            "inability"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Allergy, hypersensibility or resistance to local anesthetic",
+              "Allergy": [
+                "Allergy"
+              ],
+              "Condition": [
+                "hypersensibility",
+                "resistance"
+              ],
+              "Condition-Name": [
+                "hypersensibility",
+                "resistance"
+              ],
+              "Drug": [
+                "local anesthetic"
+              ]
+            },
+            "right": {
+              "raw_text": "- Contraindication to regional anesthesia: infection in the designated area, severe congenital coagulopathy or inadequate hemostasis before PIFB",
+              "Contraindication": [
+                "Contraindication"
+              ],
+              "Procedure": [
+                "regional anesthesia"
+              ],
+              "Procedure-Name": [
+                "regional anesthesia"
+              ],
+              "Condition": [
+                "infection",
+                "severe congenital coagulopathy",
+                "inadequate hemostasis"
+              ],
+              "Condition-Name": [
+                "infection",
+                "severe congenital coagulopathy",
+                "inadequate hemostasis"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Severe hepatic (Child B and C) or renal insufficiency (GFR<30 mL/min)",
+          "Condition": [
+            "Severe hepatic"
+          ],
+          "Condition-Name": [
+            "Severe hepatic"
+          ],
+          "Observation": [
+            "Child B and C"
+          ],
+          "Observation-Name": [
+            "Child B and C"
+          ]
+        },
+        "right": {
+          "raw_text": "renal insufficiency (GFR<30 mL/min)",
+          "Condition": [
+            "renal insufficiency"
+          ],
+          "Condition-Name": [
+            "renal insufficiency"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "30"
+          ],
+          "Eq-Temporal-Unit": [
+            "mL/min"
+          ],
+          "Eq-Comparison": [
+            "GFR<30 mL/min"
+          ]
+        }
+      }
+    }
+  }
+}

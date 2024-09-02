@@ -1,0 +1,99 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- Pregnant (any plurality) delivering at or after 20 weeks of gestation",
+          "Condition": [
+            "Pregnant"
+          ],
+          "Condition-Name": [
+            "Pregnant"
+          ],
+          "Eq-Temporal-Unit": [
+            "weeks"
+          ],
+          "Eq-Value": [
+            "20"
+          ],
+          "Eq-Comparison": [
+            "at or after 20 weeks"
+          ]
+        },
+        "right": {
+          "raw_text": "OR postpartum (during hospitalization), regardless of perinatal outcome",
+          "Condition": [
+            "postpartum"
+          ],
+          "Condition-Name": [
+            "postpartum"
+          ],
+          "Modifier": [
+            "during hospitalization"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- 16 years or older",
+          "Age": [
+            "Age"
+          ],
+          "Eq-Operator": [
+            "or older"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Eq-Value": [
+            "16"
+          ],
+          "Eq-Comparison": [
+            "16 years or older"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Low-income socioeconomic status (publicly funded prenatal care)",
+              "Socioeconomic-Status": [
+                "Low-income"
+              ],
+              "Modifier": [
+                "publicly funded"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Ability to speak and read English or Spanish",
+                  "Language": [
+                    "English",
+                    "Spanish"
+                  ],
+                  "Modifier": [
+                    "Ability"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Established patient at the Northwestern Medicine Prentice Ambulatory Care clinical site (at least one antenatal clinical visit)",
+                  "Study": [
+                    "Northwestern Medicine Prentice Ambulatory Care"
+                  ],
+                  "Modifier": [
+                    "Established"
+                  ],
+                  "Procedure": [
+                    "antenatal clinical visit"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
