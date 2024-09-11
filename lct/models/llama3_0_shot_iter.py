@@ -45,9 +45,9 @@ for i in np.arange(0, 12):
                 test_file = read_text_file(study_path+file)
 
                 messages = [
-                {"role": "system", "content": f"{command}"},
-                {"role": "user", "content": f"{command}{test_file}"}, 
-                ]
+                        {"role": "system", "content": f"{command}"},
+                        {"role": "user", "content": f"{command}{test_file}"},
+                           ]
 
                 prompt = pipeline.tokenizer.apply_chat_template(
                                 messages, 
