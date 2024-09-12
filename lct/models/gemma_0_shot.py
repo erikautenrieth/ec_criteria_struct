@@ -19,7 +19,7 @@ study_path = f"{transform_lct}/input/lct_txt/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/" 
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[:50]
+study_files = os.listdir(study_path)
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
 

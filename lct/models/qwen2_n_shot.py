@@ -1,10 +1,7 @@
 import os
 from transformers import AutoModelForCausalLM, AutoTokenizer
-device = "cuda" 
 from helper_functions import *
 import os
-import tiktoken
-import transformers
 from helper_functions import *
 from openai import OpenAI
 
@@ -98,7 +95,7 @@ for file in study_files:
     add_generation_prompt=True
     )
 
-    model_inputs = tokenizer([text], return_tensors="pt").to(device)
+    model_inputs = tokenizer([text], return_tensors="pt").to("cuda")
 
     generated_ids = model.generate(
         model_inputs.input_ids,
