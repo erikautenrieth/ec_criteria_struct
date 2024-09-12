@@ -39,8 +39,7 @@ for file in study_files:
     test_file = read_text_file(study_path+file)
 
     messages = [
-    {"role": "system", "content": f"{command}"},
-    {"role": "user", "content": f"{command}{test_file}"}, 
+    {"role": "user", "content": f"{command}{test_file}"}
     ]
 
     text = tokenizer.apply_chat_template(
