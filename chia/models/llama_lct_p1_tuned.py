@@ -6,14 +6,14 @@ from helper_functions import *
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
 
-batch_path = "eval_p1_finetuned" 
+batch_path = "eval_full_chia" 
 
 model_id = "tuned_models/llama3_70b_Lora_ep10_r256_prompt6"   
 model_name = "llama3_70b_Lora_ep10_r256_prompt6"
 transform ="/work/eauten2s/ec_criteria_struct/chia"
 model_desc = read_text_file(f"{transform}/input/prompt/chia_p2.txt") # lct_p2.txt
 
-study_path = f"{transform}/input/chia_text_half/"
+study_path = f"{transform}/input/chia_text_full/"
 output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_lct_model_chia2_prompt/output/"
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)

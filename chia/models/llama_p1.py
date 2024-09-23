@@ -2,7 +2,7 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1_finetuned" 
+batch_path = "eval_full_chia" 
 n_prompt = 2
 n_shot = 5
 
