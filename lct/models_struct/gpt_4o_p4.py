@@ -25,7 +25,7 @@ def num_tokens_from_messages(messages, model="gpt-3.5-turbo"):
 
 
 batch_path = "eval_p4"
-n_shot = 10
+n_shot = 25
 
 # 15 shot zu viel für mini (5 geht)
 
@@ -97,7 +97,11 @@ short_files = [
 'NCT03863548_inc.txt',
 'NCT03863873_inc.txt',
 'NCT03864315_inc.txt',
-'NCT03864549_inc.txt'
+'NCT03864549_inc.txt',
+'NCT03864874_exc.txt',
+'NCT03864770_inc.txt',
+'NCT03864094_inc.txt',
+'NCT03864991_inc.txt'
 ]
 
 
