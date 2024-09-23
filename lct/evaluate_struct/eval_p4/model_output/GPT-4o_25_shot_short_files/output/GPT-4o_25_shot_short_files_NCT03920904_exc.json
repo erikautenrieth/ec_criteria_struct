@@ -1,0 +1,178 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patient's refusal",
+                      "Assertion": [
+                        "refusal"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or inability to consent",
+                      "Assertion": [
+                        "inability"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Allergy",
+                  "Allergy": [
+                    "Allergy"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "hypersensibility",
+                      "Condition": [
+                        "hypersensibility"
+                      ],
+                      "Condition-Name": [
+                        "hypersensibility"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or resistance to local anesthetic",
+                      "Condition": [
+                        "resistance"
+                      ],
+                      "Condition-Name": [
+                        "resistance"
+                      ],
+                      "Drug": [
+                        "local anesthetic"
+                      ],
+                      "Drug-Name": [
+                        "local anesthetic"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Contraindication to regional anesthesia: infection in the designated area",
+              "Contraindication": [
+                "Contraindication"
+              ],
+              "Condition": [
+                "infection"
+              ],
+              "Condition-Name": [
+                "infection"
+              ],
+              "Procedure": [
+                "regional anesthesia"
+              ],
+              "Procedure-Name": [
+                "regional anesthesia"
+              ],
+              "Location": [
+                "designated area"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "severe congenital coagulopathy",
+                  "Condition": [
+                    "coagulopathy"
+                  ],
+                  "Condition-Name": [
+                    "coagulopathy"
+                  ],
+                  "Severity": [
+                    "severe"
+                  ],
+                  "Modifier": [
+                    "congenital"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or inadequate hemostasis before PIFB",
+                  "Condition": [
+                    "hemostasis"
+                  ],
+                  "Condition-Name": [
+                    "hemostasis"
+                  ],
+                  "Modifier": [
+                    "inadequate"
+                  ],
+                  "Procedure": [
+                    "PIFB"
+                  ],
+                  "Procedure-Name": [
+                    "PIFB"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Severe hepatic (Child B and C)",
+          "Severity": [
+            "Severe"
+          ],
+          "Condition": [
+            "hepatic"
+          ],
+          "Condition-Name": [
+            "hepatic"
+          ],
+          "Modifier": [
+            "Child B and C"
+          ]
+        },
+        "right": {
+          "raw_text": "or renal insufficiency (GFR<30 mL/min)",
+          "Condition": [
+            "renal insufficiency"
+          ],
+          "Condition-Name": [
+            "renal insufficiency"
+          ],
+          "Observation": [
+            "GFR"
+          ],
+          "Observation-Name": [
+            "GFR"
+          ],
+          "Eq-Comparison": [
+            "<30 mL/min"
+          ],
+          "Eq-Value": [
+            "30"
+          ],
+          "Eq-Unit": [
+            "mL/min"
+          ],
+          "Eq-Operator": [
+            "<"
+          ]
+        }
+      }
+    }
+  }
+}

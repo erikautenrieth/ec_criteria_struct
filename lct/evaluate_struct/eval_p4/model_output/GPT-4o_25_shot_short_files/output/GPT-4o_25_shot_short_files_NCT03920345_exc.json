@@ -1,0 +1,209 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Patients receiving additional invasive back surgery after the study treatment.",
+                  "Procedure": [
+                    "back surgery"
+                  ],
+                  "Procedure-Name": [
+                    "back surgery"
+                  ],
+                  "Assertion": [
+                    "receiving"
+                  ],
+                  "Modifier": [
+                    "additional",
+                    "invasive"
+                  ],
+                  "Study": [
+                    "study treatment"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Inability to complete follow-up visits or required questionnaires.",
+                      "Negation": [
+                        "Inability"
+                      ],
+                      "Observation": [
+                        "follow-up visits",
+                        "required questionnaires"
+                      ],
+                      "Observation-Name": [
+                        "follow-up visits",
+                        "required questionnaires"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Non-compliant patients",
+                  "Condition": [
+                    "Non-compliant"
+                  ],
+                  "Condition-Name": [
+                    "Non-compliant"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Difficult",
+                      "Modifier": [
+                        "Difficult"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or impossible communication with the patient",
+                      "Modifier": [
+                        "impossible"
+                      ],
+                      "Assertion": [
+                        "communication"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Breastfeeding",
+              "Condition": [
+                "Breastfeeding"
+              ],
+              "Condition-Name": [
+                "Breastfeeding"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "pregnant",
+                  "Condition": [
+                    "pregnant"
+                  ],
+                  "Condition-Name": [
+                    "pregnant"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or patients who plan a pregnancy while participating in the study",
+                  "Condition": [
+                    "pregnancy"
+                  ],
+                  "Condition-Name": [
+                    "pregnancy"
+                  ],
+                  "Study": [
+                    "study"
+                  ],
+                  "Assertion": [
+                    "plan"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Systemic neurological disorders with mobility limitations (e.g. advanced Parkinson's disease or multiple sclerosis)",
+              "Condition": [
+                "Systemic neurological disorders",
+                "Parkinson's disease",
+                "multiple sclerosis"
+              ],
+              "Condition-Name": [
+                "Systemic neurological disorders",
+                "Parkinson's disease",
+                "multiple sclerosis"
+              ],
+              "Modifier": [
+                "advanced"
+              ],
+              "Observation": [
+                "mobility limitations"
+              ],
+              "Observation-Name": [
+                "mobility limitations"
+              ]
+            },
+            "right": {
+              "raw_text": "Patients with incompatibilities or known limitations that make participation impossible",
+              "Condition": [
+                "incompatibilities",
+                "known limitations"
+              ],
+              "Condition-Name": [
+                "incompatibilities",
+                "known limitations"
+              ],
+              "Assertion": [
+                "make"
+              ],
+              "Modifier": [
+                "impossible"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Patients after stabilization with implants on thoracic or lumbar spine.",
+              "Procedure": [
+                "stabilization"
+              ],
+              "Procedure-Name": [
+                "stabilization"
+              ],
+              "Modifier": [
+                "thoracic",
+                "lumbar"
+              ],
+              "Condition": [
+                "spine"
+              ],
+              "Condition-Name": [
+                "spine"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Inability to provide informed consent without a legally authorized representative.",
+                  "Negation": [
+                    "Inability"
+                  ],
+                  "Study": [
+                    "informed consent"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

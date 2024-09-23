@@ -15,6 +15,8 @@ model_desc = read_text_file(f"{transform}/input/prompt/chia_p2.txt")
 
 study_path = f"{transform}/input/chia_text_full/"
 output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_chia_prompt2/output/"
+
+command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything."
 os.makedirs(output_path, exist_ok=True)
 
 
@@ -58,7 +60,7 @@ messages = []
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 for i in range(n_shot):
-    messages.append({"role": "user", "content": f"{model_desc} {studies[study_filenames[i]]}"})
+    messages.append({"role": "user", "content": f"{command} {studies[study_filenames[i]]}"})
     messages.append({"role": "assistant", "content": labels[label_filenames[i]]})
 
 
@@ -78,10 +80,10 @@ for file in study_files:
     test_file = read_text_file(study_path+file)
 
     if first_call:
-        messages.append({"role": "user", "content": f"{model_desc} {test_file}"})
+        messages.append({"role": "user", "content": f"{command} {test_file}"})
         first_call = False
     else:
-        messages[-1] = {"role": "user", "content": f"{model_desc} {test_file}"}
+        messages[-1] = {"role": "user", "content": f"{command} {test_file}"}
 
 
     prompt = pipeline.tokenizer.apply_chat_template(

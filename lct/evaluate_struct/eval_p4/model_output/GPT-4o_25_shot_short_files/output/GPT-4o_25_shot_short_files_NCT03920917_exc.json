@@ -1,0 +1,260 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "1. Patients with persistent or permanent atrial fibrillation",
+                      "Condition": [
+                        "persistent atrial fibrillation",
+                        "permanent atrial fibrillation"
+                      ],
+                      "Condition-Name": [
+                        "atrial fibrillation"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "2. Atrial fibrillation associated with severe cardiac malformation or a structural heart disease that is hemodynamically affected",
+                      "Condition": [
+                        "atrial fibrillation",
+                        "cardiac malformation",
+                        "structural heart disease"
+                      ],
+                      "Condition-Name": [
+                        "atrial fibrillation",
+                        "cardiac malformation",
+                        "structural heart disease"
+                      ],
+                      "Severity": [
+                        "severe"
+                      ],
+                      "Stability": [
+                        "hemodynamically affected"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "3. Patients with severe renal impairment",
+                          "Condition": [
+                            "renal impairment"
+                          ],
+                          "Condition-Name": [
+                            "renal impairment"
+                          ],
+                          "Severity": [
+                            "severe"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or CT imaging difficulty using contrast media",
+                          "Procedure": [
+                            "CT imaging"
+                          ],
+                          "Procedure-Name": [
+                            "CT imaging"
+                          ],
+                          "Modifier": [
+                            "difficulty"
+                          ],
+                          "Drug": [
+                            "contrast media"
+                          ],
+                          "Drug-Name": [
+                            "contrast media"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "4. Patients with a past history of radiofrequency ablation for atrial fibrillation or other cardiac surgery",
+                      "Procedure": [
+                        "radiofrequency ablation",
+                        "cardiac surgery"
+                      ],
+                      "Procedure-Name": [
+                        "radiofrequency ablation",
+                        "cardiac surgery"
+                      ],
+                      "Condition": [
+                        "atrial fibrillation"
+                      ],
+                      "Condition-Name": [
+                        "atrial fibrillation"
+                      ],
+                      "Eq-Comparison": [
+                        "past history"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "past history"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "5. Patients with active internal bleeding",
+                  "Condition": [
+                    "internal bleeding"
+                  ],
+                  "Condition-Name": [
+                    "internal bleeding"
+                  ],
+                  "Stability": [
+                    "active"
+                  ]
+                },
+                "right": {
+                  "raw_text": "6. Patients with contraindications for anticoagulation therapy(for prevention of cerebral infarction) and antiarrhythmic drugs",
+                  "Contraindication": [
+                    "contraindications"
+                  ],
+                  "Drug": [
+                    "anticoagulation therapy",
+                    "antiarrhythmic drugs"
+                  ],
+                  "Drug-Name": [
+                    "anticoagulation therapy",
+                    "antiarrhythmic drugs"
+                  ],
+                  "Indication": [
+                    "prevention of cerebral infarction"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "7. Patients with valvular atrial fibrillation (mitral stenosis >grade 2, mechanical valve, mitral valvuloplasty)",
+              "Condition": [
+                "valvular atrial fibrillation",
+                "mitral stenosis"
+              ],
+              "Condition-Name": [
+                "valvular atrial fibrillation",
+                "mitral stenosis"
+              ],
+              "Procedure": [
+                "mitral valvuloplasty"
+              ],
+              "Procedure-Name": [
+                "mitral valvuloplasty"
+              ],
+              "Eq-Comparison": [
+                ">grade 2"
+              ],
+              "Eq-Value": [
+                "2"
+              ],
+              "Eq-Operator": [
+                ">"
+              ],
+              "Drug": [
+                "mechanical valve"
+              ],
+              "Drug-Name": [
+                "mechanical valve"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "8. Patients with a severe comorbid disease",
+                  "Condition": [
+                    "comorbid disease"
+                  ],
+                  "Condition-Name": [
+                    "comorbid disease"
+                  ],
+                  "Severity": [
+                    "severe"
+                  ]
+                },
+                "right": {
+                  "raw_text": "9. Expected survival < 1 year",
+                  "Eq-Comparison": [
+                    "< 1 year"
+                  ],
+                  "Eq-Value": [
+                    "1"
+                  ],
+                  "Eq-Operator": [
+                    "<"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "year"
+                  ],
+                  "Death": [
+                    "survival"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "10. Drug addicts or alcoholics",
+              "Condition": [
+                "Drug addicts",
+                "alcoholics"
+              ],
+              "Condition-Name": [
+                "Drug addicts",
+                "alcoholics"
+              ]
+            },
+            "right": {
+              "raw_text": "11. Patients who cannot read the consent form (illiterates, foreigners, etc.)",
+              "Assertion": [
+                "cannot read"
+              ],
+              "Condition": [
+                "illiterates"
+              ],
+              "Condition-Name": [
+                "illiterates"
+              ],
+              "Language": [
+                "foreigners"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "12. Other patients who are judged by the principal or sub-investigator to be ineligible for participation in this clinical study",
+          "Study": [
+            "clinical study"
+          ],
+          "Provider": [
+            "principal",
+            "sub-investigator"
+          ],
+          "Assertion": [
+            "ineligible"
+          ]
+        }
+      }
+    }
+  }
+}
