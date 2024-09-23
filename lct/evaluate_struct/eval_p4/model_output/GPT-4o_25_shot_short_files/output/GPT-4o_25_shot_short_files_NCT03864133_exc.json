@@ -1,0 +1,258 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Allergy to Phenylephrine",
+                      "Allergy": [
+                        "Allergy"
+                      ],
+                      "Drug": [
+                        "Phenylephrine"
+                      ],
+                      "Drug-Name": [
+                        "Phenylephrine"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or NSAIDs.",
+                      "Drug": [
+                        "NSAIDs"
+                      ],
+                      "Drug-Name": [
+                        "NSAIDs"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Inability to sit steady and upright for the Optical Coherence Tomography (OCT).",
+                      "Negation": [
+                        "Inability"
+                      ],
+                      "Procedure": [
+                        "Optical Coherence Tomography",
+                        "OCT"
+                      ],
+                      "Procedure-Name": [
+                        "Optical Coherence Tomography",
+                        "OCT"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Complications during surgery, including posterior capsular rupture,",
+                  "Condition": [
+                    "Complications"
+                  ],
+                  "Procedure": [
+                    "surgery"
+                  ],
+                  "Condition-Name": [
+                    "Complications"
+                  ],
+                  "Procedure-Name": [
+                    "surgery"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "vitreous loss,",
+                      "Condition": [
+                        "vitreous loss"
+                      ],
+                      "Condition-Name": [
+                        "vitreous loss"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "zonular dialysis,",
+                          "Condition": [
+                            "zonular dialysis"
+                          ],
+                          "Condition-Name": [
+                            "zonular dialysis"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or iris trauma.",
+                          "Condition": [
+                            "iris trauma"
+                          ],
+                          "Condition-Name": [
+                            "iris trauma"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Macular thickness above 300 microns at baseline",
+              "Observation": [
+                "Macular thickness"
+              ],
+              "Observation-Name": [
+                "Macular thickness"
+              ],
+              "Eq-Comparison": [
+                "above 300 microns"
+              ],
+              "Eq-Value": [
+                "300"
+              ],
+              "Eq-Operator": [
+                "above"
+              ],
+              "Eq-Temporal-Period": [
+                "baseline"
+              ],
+              "Eq-Unit": [
+                "microns"
+              ]
+            },
+            "right": {
+              "raw_text": "- Currently taking a prostaglandin analogue",
+              "Drug": [
+                "prostaglandin analogue"
+              ],
+              "Drug-Name": [
+                "prostaglandin analogue"
+              ],
+              "Eq-Comparison": [
+                "Currently"
+              ],
+              "Eq-Temporal-Period": [
+                "Currently"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Presence of an epiretinal membrane on the preoperative OCT.",
+              "Condition": [
+                "epiretinal membrane"
+              ],
+              "Condition-Name": [
+                "epiretinal membrane"
+              ],
+              "Procedure": [
+                "OCT"
+              ],
+              "Procedure-Name": [
+                "OCT"
+              ],
+              "Eq-Temporal-Period": [
+                "preoperative"
+              ]
+            },
+            "right": {
+              "raw_text": "- Retained lens fragment post-operatively.",
+              "Condition": [
+                "Retained lens fragment"
+              ],
+              "Condition-Name": [
+                "Retained lens fragment"
+              ],
+              "Eq-Temporal-Period": [
+                "post-operatively"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Inability to return for follow appointments",
+                  "Negation": [
+                    "Inability"
+                  ],
+                  "Encounter": [
+                    "appointments"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "follow"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Female patients who are pregnant",
+                  "Condition": [
+                    "pregnant"
+                  ],
+                  "Condition-Name": [
+                    "pregnant"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "Female"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "lactating",
+                      "Condition": [
+                        "lactating"
+                      ],
+                      "Condition-Name": [
+                        "lactating"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or planning to become pregnant during the course of treatment.",
+                      "Condition": [
+                        "pregnant"
+                      ],
+                      "Condition-Name": [
+                        "pregnant"
+                      ],
+                      "Assertion": [
+                        "planning"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "during the course of treatment"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

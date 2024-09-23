@@ -1,0 +1,39 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Minor patient",
+      "Life-Stage-And-Gender": [
+        "Minor"
+      ]
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patient unable to give consent for reasons of understanding",
+              "Negation": [
+                "unable"
+              ],
+              "Assertion": [
+                "consent"
+              ],
+              "Condition": [
+                "understanding"
+              ]
+            },
+            "right": {
+              "raw_text": "or language barrier",
+              "Condition": [
+                "language barrier"
+              ],
+              "Condition-Name": [
+                "language barrier"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
