@@ -1,0 +1,97 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patient requiring a first total knee prosthesis (scheduled between Tuesday and Friday).",
+              "Procedure": [
+                "total knee prosthesis"
+              ],
+              "Procedure-Name": [
+                "total knee prosthesis"
+              ],
+              "Eq-Temporal-Period": [
+                "scheduled"
+              ],
+              "Modifier": [
+                "first",
+                "requiring"
+              ],
+              "Eq-Temporal-Unit": [
+                "Tuesday",
+                "Friday"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patient that has given his/her free and informed consent and signed the consent form.",
+              "Study": [
+                "consent form"
+              ],
+              "Assertion": [
+                "given"
+              ],
+              "Polarity": [
+                "free"
+              ],
+              "Eq-Temporal-Period": [
+                "signed"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- The patient must be a member or beneficiary of a health insurance plan",
+          "Insurance": [
+            "health insurance plan"
+          ],
+          "Modifier": [
+            "member",
+            "beneficiary"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- The patient is at least 18 years old (≥)",
+          "Age": [
+            "years old"
+          ],
+          "Eq-Comparison": [
+            "at least 18 years"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ]
+        },
+        "right": {
+          "raw_text": "and under 90 years old (<).",
+          "Age": [
+            "years old"
+          ],
+          "Eq-Comparison": [
+            "under 90 years"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "90"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ]
+        }
+      }
+    }
+  }
+}
