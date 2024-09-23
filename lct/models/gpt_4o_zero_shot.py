@@ -20,7 +20,7 @@ model_desc = read_text_file(f"{transform_lct}/input/prompt/agent.txt")
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 
 study_path = f"{transform_lct}/input/dataset/test/input/"
-output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_t0.5/output/"  
+output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_0_shot_new/output/"  
 os.makedirs(output_path, exist_ok=True)
 
 study_files = os.listdir(study_path)
