@@ -13,7 +13,7 @@ model_name = "Llama-3-70B-Instruct"
 transform ="/work/eauten2s/ec_criteria_struct/chia"
 model_desc = read_text_file(f"{transform}/input/prompt/chia_p2.txt")
 
-study_path = f"{transform}/input/chia_text_half/"
+study_path = f"{transform}/input/chia_text_full/"
 output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_chia_prompt2/output/"
 os.makedirs(output_path, exist_ok=True)
 
@@ -39,11 +39,18 @@ shot_list_best = [
     "NCT02202369_exc.txt"
 ]
 
+shot_list = [
+    "NCT01320579.txt",
+    "NCT01491763.txt",
+    "NCT01669369.txt",
+    "NCT01700790.txt",
+    "NCT01709981.txt",
+]
 
 # Load n-shot Data
-study_folder = f"{transform}/input/chia_text_half/"
-label_folder = f'{transform}/input/chia_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list_best)
+study_folder = f"{transform}/input/chia_text_full/"
+label_folder = f'{transform}/input/chia_p1_full'
+study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
