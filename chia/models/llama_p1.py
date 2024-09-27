@@ -11,10 +11,10 @@ model_name = "Llama-3-70B-Instruct"
 
 
 transform ="/work/eauten2s/ec_criteria_struct/chia"
-model_desc = read_text_file(f"{transform}/input/prompt/chia_p2.txt")
+model_desc = read_text_file(f"{transform}/input/prompt/lct_p2.txt")
 
 study_path = f"{transform}/input/chia_text_full/"
-output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_chia_prompt2/output/"
+output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_{n_shot}_shot_lct_prompt2/output/"
 
 command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything."
 os.makedirs(output_path, exist_ok=True)
