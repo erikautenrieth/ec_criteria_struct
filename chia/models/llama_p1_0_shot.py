@@ -2,35 +2,23 @@ import os
 import transformers
 from helper_functions import *
 
-batch_path = "eval_p1"
-
+batch_path = "eval_full_chia" 
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 
-n_prompt = 10
-
-temp_str = ""
-cot_true = "" #"_cot"
-
 transform ="/work/eauten2s/ec_criteria_struct/chia"
-study_path = f"{transform}/input/chia_text_half/"
-output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_0_shot_prompt_{n_prompt}{temp_str}{cot_true}/output/"
+study_path = f"{transform}/input/chia_text_full/"
+output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_0_shot_lct_prompt/output/"
 os.makedirs(output_path, exist_ok=True)
 
-study_files = os.listdir(study_path)[:100]
+study_files = os.listdir(study_path)
 
 
-model_desc = read_text_file(f"{transform}/input/prompt/p{n_prompt}.txt")
+model_desc = read_text_file(f"{transform}/input/prompt/lct_p2.txt") # lct_p2.txt # chia_p2.txt
 messages = []
 
-cot = "Let's think through this carefully, step by step."
 
-command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything." #+ cot
-
-
-
-print("Hier fängt die Pipeline an")
 pipeline = transformers.pipeline(
             "text-generation",
             model=model_id,
@@ -48,7 +36,7 @@ for file in study_files:
 
     messages = [
     {"role": "system", "content": f"{model_desc}"},
-    {"role": "user", "content": f"{command} {test_file}"},
+    {"role": "user", "content": f"{model_desc} {test_file}"},
     ]
 
 

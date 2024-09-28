@@ -5,12 +5,12 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --time=30:00:00          # Time limit hrs:min:sec
 
-#SBATCH --output=log/llm_sh.%j.out   # Standard output and error log
-#SBATCH --error=log/llm_sh.%j.err    # Error log
-#SBATCH --job-name=llm_shot
+#SBATCH --output=log/llm_0sh.%j.out   # Standard output and error log
+#SBATCH --error=log/llm_0sh.%j.err    # Error log
+#SBATCH --job-name=llm_0shot
 
 module load cuda
-python  llama_p1.py
+python llama_p1_0_shot.py
 #llama_p1_0_shot.py  llama_p1.py  llama_lct_p1_tuned.py
 
 
