@@ -3,7 +3,7 @@ import os
 import re
 
 
-batch_path = "modelle_prompt2"
+batch_path = "eval_full_chia"
 model_name = " Naive greedy match (LCT Prompt 2)"
 
 transform ="/work/eauten2s/ec_criteria_struct/chia"
