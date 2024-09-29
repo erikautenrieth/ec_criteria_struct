@@ -7,7 +7,44 @@ import pandas as pd
 import seaborn as sns
 
 from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
+def plot_avg_pct(all_metrics, versuch_name):
+    model_names = []
+    avg_missing_pcts = []
+    avg_zuviel_pcts = []
 
+    for model, metrics in all_metrics.items():
+        model_names.append(model.replace('-Instruct', ''))  # Entferne "-Instruct" aus den Modellnamen
+        avg_missing_pcts.append(metrics['average_missing_percentage'])
+        avg_zuviel_pcts.append(metrics['average_zuviel_percentage'])
+        model_names = [name.replace('-Instruct', '') for name in model_names]
+    model_names = [name.replace('_', '-') for name in model_names]
+    model_names = [name.replace('Llama-3', 'Llama3') for name in model_names]
+    model_names = [name.replace('prompt-', 'p') for name in model_names]
+    #model_names = [name.replace('-0-shot', '') for name in model_names]
+    x = range(len(model_names))
+
+    plt.figure(figsize=(14, 8))
+
+    bar_width = 0.4
+    plt.bar(x, avg_missing_pcts, color='skyblue', width=bar_width, label='Mittlere Anzahl fehlender Wörter')
+    plt.bar([p + bar_width for p in x], avg_zuviel_pcts, color='lightcoral', width=bar_width, label='Mittlere Anzahl zugefügter Wörter')
+
+    plt.xlabel('Modelle', fontsize=14)
+    plt.ylabel('Prozentsatz (%)', fontsize=14)
+    plt.title(f'Durchschnittlicher Prozentsatz fehlender und zugefügter Wörter der {versuch_name}', fontsize=18, pad=20)
+    plt.xticks([p + bar_width / 2 for p in x], model_names, rotation=45, ha='right', fontsize=14)
+    plt.yticks(fontsize=14)
+    plt.ylim(0, max(max(avg_missing_pcts), max(avg_zuviel_pcts)) + 5)
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.legend()
+
+    for i, (v1, v2) in enumerate(zip(avg_missing_pcts, avg_zuviel_pcts)):
+        plt.text(i, v1 + 0.5, f'{v1:.1f}%', ha='center', fontsize=12)
+        plt.text(i + bar_width, v2 + 0.5, f'{v2:.1f}%', ha='center', fontsize=12)
+
+    plt.tight_layout()
+    plt.savefig(f'data/pics/missing_pct_{versuch_name}.png')
+    plt.show()
 def plot_metrics(all_metrics):
     operators = ['AND', 'OR', 'NOT']
     metrics_to_plot = ['precision', 'recall', 'f1']

@@ -1,5 +1,4 @@
 import torch
-import os
 from unsloth import FastLanguageModel
 from trl import SFTTrainer
 from transformers import TrainingArguments
@@ -8,7 +7,6 @@ from datasets import load_from_disk
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = "meta-llama/Meta-Llama-3-70B-Instruct",
     max_seq_length = 2048,
-    dtype = None,
     load_in_4bit = True,
     token = "hf_..."
 )
@@ -24,7 +22,6 @@ model = FastLanguageModel.get_peft_model(
     use_gradient_checkpointing = "unsloth",
     random_state = 3407,
     use_rslora = True,
-    loftq_config = None,
 )
 
 llama3_prompt = """Below is an instruction that describes a task, 
@@ -39,7 +36,7 @@ llama3_prompt = """Below is an instruction that describes a task,
 ### Response:
 {}"""
 
-def formatting_prompts_func(examples):
+def format_prompts(examples):
     instructions = examples["instruction"]
     inputs       = examples["input"]
     outputs      = examples["output"]
@@ -53,8 +50,8 @@ pass
 
 dataset = load_from_disk('PATH_TO_DATASET')
 train_test_split = dataset['train'].train_test_split(test_size=0.1, seed=42)
-train = train_test_split['train'].map(formatting_prompts_func, batched=True)
-test = train_test_split['test'].map(formatting_prompts_func, batched=True)
+train = train_test_split['train'].map(format_prompts, batched=True)
+test = train_test_split['test'].map(format_prompts, batched=True)
 
 trainer = SFTTrainer(
     model = model,

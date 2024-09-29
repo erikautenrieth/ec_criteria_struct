@@ -8,6 +8,10 @@ def read_file(file_path):
     with open(file_path, 'r', encoding="utf-8") as file:
         return file.read()
 
+def extract_nct_number(filename):
+    match = re.search(r'(NCT\d+)', filename)
+    print(match.group(1))
+    return match.group(1)
 
 def extract_nct_number_and_suffix(filename):
     match = re.search(r'(NCT\d+)_(inc|exc)', filename)
@@ -105,12 +109,12 @@ def evaluate_models(label_folder, model_folder, model_name, raw_lct_text_folder,
 
     for model_file in os.listdir(model_folder):
         if model_file.endswith('.txt'):
-            nct_number, suffix = extract_nct_number_and_suffix(model_file)
+            nct_number = extract_nct_number(model_file)
             if nct_number:
                 print(nct_number)
-                label_file_path = os.path.join(label_folder, f'{nct_number}_{suffix}.txt')
+                label_file_path = os.path.join(label_folder, f'{nct_number}.txt') # f'{nct_number}_{suffix}.txt'
                 model_file_path = os.path.join(model_folder, model_file)
-                raw_lct_text_path = os.path.join(raw_lct_text_folder, f'{nct_number}_{suffix}.txt')
+                raw_lct_text_path = os.path.join(raw_lct_text_folder, f'{nct_number}.txt')
                 if os.path.exists(label_file_path):
                     processed_label_files += 1
                     label_text = read_file(label_file_path)

@@ -2,7 +2,6 @@ import os
 import json
 import time
 import psutil
-import torch
 import re
 import random
 def save_json(data, file_path):
@@ -83,6 +82,7 @@ def time_it(func):
 
 
 def print_cluster_resources():
+    #import torch
     # CPU Informationen
     print(f"Anzahl der Kerne (logisch): {psutil.cpu_count(logical=True)}")
     print(f"Anzahl der Kerne (physisch): {psutil.cpu_count(logical=False)}")
