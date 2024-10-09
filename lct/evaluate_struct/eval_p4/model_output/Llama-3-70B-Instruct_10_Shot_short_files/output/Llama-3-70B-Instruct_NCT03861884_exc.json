@@ -1,28 +1,31 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "1. Lack of mental capacity to consent to study involvement.",
-          "Condition": [
-            "mental capacity"
-          ],
-          "Condition-Name": [
-            "mental capacity"
-          ],
-          "Negation": [
-            "Lack"
-          ],
-          "Study": [
-            "study"
-          ]
-        },
-        "right": {
-          "OR": {
+          "AND": {
             "left": {
+              "raw_text": "1. Lack of mental capacity to consent to study involvement.",
+              "Condition": [
+                "mental capacity"
+              ],
+              "Condition-Name": [
+                "mental capacity"
+              ],
+              "Negation": [
+                "Lack"
+              ],
+              "Study": [
+                "study"
+              ]
+            },
+            "right": {
               "raw_text": "2. Not speaking English before age 5 years.",
               "Language": [
                 "English"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
               ],
               "Age": [
                 "age"
@@ -30,41 +33,34 @@
               "Eq-Value": [
                 "5"
               ],
-              "Eq-Temporal-Unit": [
-                "years"
-              ],
               "Negation": [
                 "Not"
               ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "3. Learning disability.",
-                  "Condition": [
-                    "Learning disability"
-                  ],
-                  "Condition-Name": [
-                    "Learning disability"
-                  ]
-                },
-                "right": {
-                  "raw_text": "4. MRI contraindications",
-                  "Procedure": [
-                    "MRI"
-                  ],
-                  "Procedure-Name": [
-                    "MRI"
-                  ],
-                  "Contraindication": [
-                    "contraindications"
-                  ]
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "3. Learning disability.",
+          "Condition": [
+            "Learning disability"
+          ],
+          "Condition-Name": [
+            "Learning disability"
+          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "4. MRI contraindications",
+      "Procedure": [
+        "MRI"
+      ],
+      "Procedure-Name": [
+        "MRI"
+      ],
+      "Contraindication": [
+        "contraindications"
+      ]
     }
   }
 }

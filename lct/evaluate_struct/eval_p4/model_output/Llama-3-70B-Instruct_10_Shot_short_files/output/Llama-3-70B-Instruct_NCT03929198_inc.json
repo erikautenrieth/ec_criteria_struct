@@ -5,41 +5,41 @@
         "left": {
           "AND": {
             "left": {
-              "raw_text": "- Dysfunctional lipids, blood pressure and glycemic control determined at a screening visit:",
-              "Observation": [
-                "lipids",
-                "blood pressure",
-                "glycemic control"
-              ],
-              "Observation-Name": [
-                "lipids",
-                "blood pressure",
-                "glycemic control"
-              ]
-            },
-            "right": {
-              "OR": {
+              "AND": {
                 "left": {
-                  "raw_text": "- Triglycerides > 150 mg/dL",
+                  "raw_text": "- Dysfunctional lipids, blood pressure and glycemic control determined at a screening visit:",
                   "Observation": [
-                    "Triglycerides"
+                    "lipids",
+                    "blood pressure",
+                    "glycemic control"
                   ],
                   "Observation-Name": [
-                    "Triglycerides"
-                  ],
-                  "Eq-Operator": [
-                    ">"
-                  ],
-                  "Eq-Value": [
-                    "150"
-                  ],
-                  "Eq-Unit": [
-                    "mg/dL"
+                    "lipids",
+                    "blood pressure",
+                    "glycemic control"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
+                      "raw_text": "- Triglycerides > 150 mg/dL",
+                      "Observation": [
+                        "Triglycerides"
+                      ],
+                      "Observation-Name": [
+                        "Triglycerides"
+                      ],
+                      "Eq-Operator": [
+                        ">"
+                      ],
+                      "Eq-Value": [
+                        "150"
+                      ],
+                      "Eq-Unit": [
+                        "mg/dL"
+                      ]
+                    },
+                    "right": {
                       "raw_text": "OR HDL <50 in females, <40 mg/dL in males",
                       "Observation": [
                         "HDL"
@@ -65,12 +65,8 @@
                   }
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
+            },
+            "right": {
               "OR": {
                 "left": {
                   "raw_text": "- Systolic blood pressure ≥130 mmHg",
@@ -109,29 +105,32 @@
                   ],
                   "Procedure": [
                     "hypertension medication"
+                  ],
+                  "Procedure-Name": [
+                    "hypertension medication"
                   ]
                 }
               }
-            },
-            "right": {
-              "raw_text": "- HbA1c ≥5.7% or higher",
-              "Observation": [
-                "HbA1c"
-              ],
-              "Observation-Name": [
-                "HbA1c"
-              ],
-              "Eq-Operator": [
-                "≥"
-              ],
-              "Eq-Value": [
-                "5.7"
-              ],
-              "Eq-Unit": [
-                "%"
-              ]
             }
           }
+        },
+        "right": {
+          "raw_text": "- HbA1c ≥5.7% or higher",
+          "Observation": [
+            "HbA1c"
+          ],
+          "Observation-Name": [
+            "HbA1c"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Value": [
+            "5.7"
+          ],
+          "Eq-Unit": [
+            "%"
+          ]
         }
       }
     },
@@ -178,12 +177,12 @@
             "left": {
               "raw_text": "- Ability to perform daily exercise, including aerobic activity and resistance exercise",
               "Procedure": [
-                "daily exercise",
-                "aerobic activity",
-                "resistance exercise"
+                "daily exercise"
               ],
               "Procedure-Name": [
-                "daily exercise",
+                "daily exercise"
+              ],
+              "Modifier": [
                 "aerobic activity",
                 "resistance exercise"
               ]

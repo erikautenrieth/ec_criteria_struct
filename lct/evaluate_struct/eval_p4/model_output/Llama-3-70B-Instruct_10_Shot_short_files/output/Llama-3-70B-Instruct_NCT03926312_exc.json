@@ -10,7 +10,7 @@
           "Condition-Name": [
             "Heart failure"
           ],
-          "Severity": [
+          "Modifier": [
             "NYHA IIIB-IV"
           ]
         },
@@ -24,7 +24,10 @@
               "Procedure-Name": [
                 "coronary revascularization"
               ],
-              "Study": [
+              "Eq-Comparison": [
+                "planned"
+              ],
+              "Eq-Temporal-Period": [
                 "planned"
               ]
             },
@@ -38,31 +41,28 @@
                   "Procedure-Name": [
                     "major surgery"
                   ],
-                  "Study": [
+                  "Eq-Comparison": [
                     "planned"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "next 12 months"
                   ],
                   "Eq-Temporal-Unit": [
                     "months"
-                  ],
-                  "Eq-Value": [
-                    "12"
-                  ],
-                  "Eq-Comparison": [
-                    "within the next 12 months"
                   ]
                 },
                 "right": {
                   "AND": {
                     "left": {
                       "raw_text": "4. Inability to walk for any reason",
-                      "Observation": [
-                        "walk"
+                      "Condition": [
+                        "Inability to walk"
                       ],
-                      "Observation-Name": [
-                        "walk"
+                      "Condition-Name": [
+                        "Inability to walk"
                       ],
                       "Modifier": [
-                        "inability"
+                        "for any reason"
                       ]
                     },
                     "right": {
@@ -76,10 +76,7 @@
                             "Comorbidities"
                           ],
                           "Modifier": [
-                            "preclude"
-                          ],
-                          "Study": [
-                            "rehabilitation program"
+                            "that would preclude adherence"
                           ]
                         },
                         "right": {
@@ -98,13 +95,10 @@
                                 "left": {
                                   "raw_text": "active malignancy",
                                   "Condition": [
-                                    "malignancy"
+                                    "active malignancy"
                                   ],
                                   "Condition-Name": [
-                                    "malignancy"
-                                  ],
-                                  "Modifier": [
-                                    "active"
+                                    "active malignancy"
                                   ]
                                 },
                                 "right": {
@@ -149,14 +143,20 @@
       "AND": {
         "left": {
           "raw_text": "6. Life expectancy less than 12 months",
-          "Eq-Temporal-Unit": [
-            "months"
+          "Condition": [
+            "Life expectancy"
+          ],
+          "Condition-Name": [
+            "Life expectancy"
+          ],
+          "Eq-Comparison": [
+            "less than"
           ],
           "Eq-Value": [
             "12"
           ],
-          "Eq-Comparison": [
-            "less than 12 months"
+          "Eq-Temporal-Unit": [
+            "months"
           ]
         },
         "right": {
@@ -172,17 +172,14 @@
             },
             "right": {
               "raw_text": "8. Inability to operate the smart-watch",
-              "Observation": [
-                "operate"
+              "Condition": [
+                "Inability to operate"
               ],
-              "Observation-Name": [
-                "operate"
+              "Condition-Name": [
+                "Inability to operate"
               ],
               "Modifier": [
-                "inability"
-              ],
-              "Device": [
-                "smart-watch"
+                "the smart-watch"
               ]
             }
           }

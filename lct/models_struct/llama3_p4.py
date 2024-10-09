@@ -6,7 +6,7 @@ from openai import OpenAI
 
 
 batch_path = "eval_p4"
-n_shot = 20
+n_shot = 10
 
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
@@ -15,6 +15,7 @@ transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 
 
 model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt1.txt")
+
 command = "Structure the eligibility criteria based on the system input in JSON and extract the entities."
 study_path = f"{transform_lct}/input/dataset_p4_prompt1_new/test/input/"
 

@@ -5,10 +5,7 @@
         "left": {
           "raw_text": "- Majors aged between 18 and 55 years",
           "Age": [
-            "aged"
-          ],
-          "Eq-Temporal-Unit": [
-            "years"
+            "age"
           ],
           "Eq-Value": [
             "18",
@@ -17,8 +14,8 @@
           "Eq-Comparison": [
             "between 18 and 55 years"
           ],
-          "Eq-Operator": [
-            "between"
+          "Eq-Temporal-Unit": [
+            "years"
           ]
         },
         "right": {
@@ -54,64 +51,102 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "- Needing treatment in odontology - periodontal surgery (coronary elongation or sanitation surgery or muco-gingival surgery) or implantary surgery (placement of an unit implant or two implant in the same localization)",
-          "Procedure": [
-            "periodontal surgery",
-            "implantary surgery"
-          ],
-          "Procedure-Name": [
-            "periodontal surgery",
-            "implantary surgery"
-          ],
+          "raw_text": "- Needing treatment in odontology",
           "Condition": [
-            "odontology"
+            "odontological treatment"
           ],
           "Condition-Name": [
-            "odontology"
+            "odontological treatment"
+          ],
+          "Modifier": [
+            "needing"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- periodontal surgery (coronary elongation or sanitation surgery or muco-gingival surgery)",
+              "Procedure": [
+                "periodontal surgery"
+              ],
+              "Procedure-Name": [
+                "periodontal surgery"
+              ],
+              "Modifier": [
+                "coronary elongation",
+                "sanitation surgery",
+                "muco-gingival surgery"
+              ]
+            },
+            "right": {
+              "raw_text": "or implantary surgery (placement of an unit implant or two implant in the same localization)",
+              "Procedure": [
+                "implantary surgery"
+              ],
+              "Procedure-Name": [
+                "implantary surgery"
+              ],
+              "Modifier": [
+                "placement of an unit implant",
+                "two implant in the same localization"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Oral and dated consent",
+          "Study": [
+            "consent"
+          ],
+          "Modifier": [
+            "oral",
+            "dated"
           ]
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "- Oral and dated consent",
+              "raw_text": "- Agreeing to be contacted via phone at J+1",
               "Study": [
-                "consent"
+                "contacted"
               ],
               "Modifier": [
-                "oral",
-                "dated"
+                "via phone"
+              ],
+              "Eq-Temporal-Period": [
+                "J+1"
               ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "- Agreeing to be contacted via phone at J+1 and to fill follow-up study documents",
-                  "Study": [
-                    "study"
-                  ],
-                  "Modifier": [
-                    "agreeing"
-                  ]
-                },
-                "right": {
-                  "raw_text": "- Profiting of social security or CMU",
-                  "Modifier": [
-                    "profiting"
-                  ],
-                  "Condition": [
-                    "social security",
-                    "CMU"
-                  ],
-                  "Condition-Name": [
-                    "social security",
-                    "CMU"
-                  ]
-                }
-              }
+              "raw_text": "and to fill follow-up study documents",
+              "Study": [
+                "follow-up study documents"
+              ],
+              "Modifier": [
+                "fill"
+              ]
             }
           }
         }
       }
+    },
+    "right": {
+      "raw_text": "- Profiting of social security or CMU",
+      "Modifier": [
+        "profiting"
+      ],
+      "Observation": [
+        "social security",
+        "CMU"
+      ],
+      "Observation-Name": [
+        "social security",
+        "CMU"
+      ]
     }
   }
 }

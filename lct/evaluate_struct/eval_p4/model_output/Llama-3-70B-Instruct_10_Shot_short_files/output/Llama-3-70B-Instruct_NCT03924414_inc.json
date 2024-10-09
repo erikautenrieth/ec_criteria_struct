@@ -1,32 +1,32 @@
 {
   "AND": {
     "left": {
-      "raw_text": "- Men and women age 65 years or older",
-      "Age": [
-        "age"
-      ],
-      "Eq-Temporal-Unit": [
-        "years"
-      ],
-      "Eq-Value": [
-        "65"
-      ],
-      "Eq-Comparison": [
-        "65 years or older"
-      ],
-      "Eq-Operator": [
-        "or older"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "- Men and women age 65 years or older",
+          "Age": [
+            "age"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Eq-Value": [
+            "65"
+          ],
+          "Eq-Comparison": [
+            "65 years or older"
+          ],
+          "Eq-Operator": [
+            "or older"
+          ]
+        },
+        "right": {
           "raw_text": "- Current PD diagnosis with symptoms severity at Hoehn & Yahr (H&Y) stage 1-4 based on an expert assessment (movement disorders neurologist report or telemedicine evaluation)",
           "Condition": [
-            "PD"
+            "PD diagnosis"
           ],
           "Condition-Name": [
-            "PD"
+            "PD diagnosis"
           ],
           "Observation": [
             "symptoms severity"
@@ -34,43 +34,47 @@
           "Observation-Name": [
             "symptoms severity"
           ],
-          "Eq-Comparison": [
-            "Hoehn & Yahr (H&Y) stage 1-4"
-          ],
           "Procedure": [
-            "expert assessment"
+            "Hoehn & Yahr"
           ],
           "Procedure-Name": [
-            "expert assessment"
+            "Hoehn & Yahr"
+          ],
+          "Eq-Comparison": [
+            "stage 1-4"
+          ],
+          "Eq-Value": [
+            "1",
+            "4"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Willing and able to continue in follow-up for at least 2 years",
+          "Study": [
+            "follow-up"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Eq-Value": [
+            "2"
+          ],
+          "Eq-Comparison": [
+            "at least 2 years"
+          ],
+          "Eq-Operator": [
+            "at least"
           ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "- Willing and able to continue in follow-up for at least 2 years",
-              "Study": [
-                "follow-up"
-              ],
-              "Eq-Temporal-Unit": [
-                "years"
-              ],
-              "Eq-Value": [
-                "2"
-              ],
-              "Eq-Comparison": [
-                "at least 2 years"
-              ],
-              "Eq-Operator": [
-                "at least"
-              ]
-            },
-            "right": {
-              "raw_text": "- Willing and able to provide informed consent",
-              "Study": [
-                "informed consent"
-              ]
-            }
-          }
+          "raw_text": "- Willing and able to provide informed consent",
+          "Study": [
+            "informed consent"
+          ]
         }
       }
     }

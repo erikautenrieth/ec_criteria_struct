@@ -10,11 +10,11 @@
           "Eq-Operator": [
             "over"
           ],
-          "Eq-Temporal-Unit": [
-            "years"
-          ],
           "Eq-Value": [
             "60"
+          ],
+          "Eq-Comparison": [
+            "over 60 years"
           ],
           "Condition": [
             "Parkinson's disease"
@@ -31,12 +31,12 @@
           "Condition-Name": [
             "Parkinson's disease"
           ],
-          "Eq-Comparison": [
-            "2-3"
-          ],
           "Eq-Value": [
             "2",
             "3"
+          ],
+          "Eq-Comparison": [
+            "2-3"
           ]
         }
       }
@@ -53,8 +53,8 @@
               "Modifier": [
                 "exposed"
               ],
-              "Substance": [
-                "tobacco"
+              "Eq-Temporal-Period": [
+                "any stage"
               ]
             },
             "right": {
@@ -78,10 +78,7 @@
               "Negation": [
                 "No"
               ],
-              "Observation": [
-                "laboratory"
-              ],
-              "Observation-Name": [
+              "Modifier": [
                 "laboratory"
               ]
             },
@@ -98,18 +95,66 @@
                   "Condition-Name": [
                     "adverse reactions"
                   ],
-                  "Substance": [
+                  "Modifier": [
                     "nicotine"
                   ]
                 },
                 "right": {
-                  "raw_text": "- Able to use nicotine nasal spray",
-                  "Procedure": [
-                    "nicotine nasal spray"
-                  ],
-                  "Procedure-Name": [
-                    "nicotine nasal spray"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Able to use nicotine nasal spray",
+                      "Modifier": [
+                        "able"
+                      ],
+                      "Procedure": [
+                        "nicotine nasal spray"
+                      ],
+                      "Procedure-Name": [
+                        "nicotine nasal spray"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Residents of Mexico City able to attend for evaluations",
+                          "Location": [
+                            "Mexico City"
+                          ],
+                          "Modifier": [
+                            "able"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Under current treatment with levodopa at a stable dose",
+                              "Procedure": [
+                                "levodopa"
+                              ],
+                              "Procedure-Name": [
+                                "levodopa"
+                              ],
+                              "Modifier": [
+                                "stable"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- Not currently receiving a monoamine oxidase inhibitor treatment",
+                              "Negation": [
+                                "Not"
+                              ],
+                              "Procedure": [
+                                "monoamine oxidase inhibitor"
+                              ],
+                              "Procedure-Name": [
+                                "monoamine oxidase inhibitor"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -118,36 +163,41 @@
       }
     }
   },
-  "Exclusion Criteria": {
-    "OR": {
-      "left": {
-        "raw_text": "- Unable to complete follow-up protocol",
-        "Negation": [
-          "Unable"
-        ],
-        "Study": [
-          "follow-up protocol"
-        ]
-      },
-      "right": {
-        "OR": {
-          "left": {
-            "raw_text": "- Drug adverse reaction",
-            "Condition": [
-              "adverse reaction"
-            ],
-            "Condition-Name": [
-              "adverse reaction"
-            ]
-          },
-          "right": {
-            "raw_text": "- Death",
-            "Condition": [
-              "Death"
-            ],
-            "Condition-Name": [
-              "Death"
-            ]
+  "NOT": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Exclusion Criteria - Unable to complete follow-up protocol",
+          "Negation": [
+            "Unable"
+          ],
+          "Procedure": [
+            "follow-up protocol"
+          ],
+          "Procedure-Name": [
+            "follow-up protocol"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Drug adverse reaction",
+              "Condition": [
+                "adverse reaction"
+              ],
+              "Condition-Name": [
+                "adverse reaction"
+              ]
+            },
+            "right": {
+              "raw_text": "- Death",
+              "Condition": [
+                "Death"
+              ],
+              "Condition-Name": [
+                "Death"
+              ]
+            }
           }
         }
       }

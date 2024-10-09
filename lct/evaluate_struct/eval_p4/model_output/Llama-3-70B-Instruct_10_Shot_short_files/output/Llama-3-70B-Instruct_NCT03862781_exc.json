@@ -5,32 +5,32 @@
         "left": {
           "AND": {
             "left": {
-              "raw_text": "- Pregnant women",
-              "Condition": [
-                "Pregnant"
-              ],
-              "Condition-Name": [
-                "Pregnant"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "- Pregnant women",
+                  "Condition": [
+                    "Pregnant"
+                  ],
+                  "Condition-Name": [
+                    "Pregnant"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Additional colon resection is planned (i.e. left colectomy or proctectomy)",
+                  "Procedure": [
+                    "colon resection",
+                    "left colectomy",
+                    "proctectomy"
+                  ],
+                  "Procedure-Name": [
+                    "colon resection",
+                    "left colectomy",
+                    "proctectomy"
+                  ]
+                }
+              }
             },
             "right": {
-              "raw_text": "- Additional colon resection is planned (i.e. left colectomy or proctectomy)",
-              "Procedure": [
-                "colon resection",
-                "left colectomy",
-                "proctectomy"
-              ],
-              "Procedure-Name": [
-                "colon resection",
-                "left colectomy",
-                "proctectomy"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
               "raw_text": "- Vulnerable populations such as prisoners or adults unable to give consent",
               "Condition": [
                 "Vulnerable populations"
@@ -38,40 +38,35 @@
               "Condition-Name": [
                 "Vulnerable populations"
               ]
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "- If the scheduled surgery is planned at Butterworth hospital (as to standardize the nursing care received postoperatively)",
-                  "Study": [
-                    "study"
-                  ],
-                  "Procedure": [
-                    "surgery"
-                  ],
-                  "Procedure-Name": [
-                    "surgery"
-                  ],
-                  "Location": [
-                    "Butterworth hospital"
-                  ]
-                },
-                "right": {
-                  "raw_text": "- Emergent cases",
-                  "Condition": [
-                    "Emergent cases"
-                  ],
-                  "Condition-Name": [
-                    "Emergent cases"
-                  ]
-                }
-              }
             }
           }
+        },
+        "right": {
+          "raw_text": "- If the scheduled surgery is planned at Butterworth hospital (as to standardize the nursing care received postoperatively)",
+          "Procedure": [
+            "surgery"
+          ],
+          "Procedure-Name": [
+            "surgery"
+          ],
+          "Location": [
+            "Butterworth hospital"
+          ]
         }
       }
     },
     "right": {
+      "raw_text": "- Emergent cases",
+      "Condition": [
+        "Emergent cases"
+      ],
+      "Condition-Name": [
+        "Emergent cases"
+      ]
+    }
+  },
+  "NOT": {
+    "left": {
       "OR": {
         "left": {
           "raw_text": "- The procedure is converted to an open resection",

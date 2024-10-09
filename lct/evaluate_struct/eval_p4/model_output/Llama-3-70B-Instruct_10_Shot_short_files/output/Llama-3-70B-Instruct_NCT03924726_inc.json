@@ -7,11 +7,11 @@
           "Age": [
             "Age"
           ],
-          "Eq-Temporal-Unit": [
-            "years"
-          ],
           "Eq-Value": [
             "18"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
           ],
           "Eq-Comparison": [
             "18 years and above"
@@ -30,89 +30,131 @@
               "Observation-Name": [
                 "Molar relationship"
               ],
+              "Eq-Value": [
+                "½"
+              ],
+              "Eq-Unit": [
+                "unit"
+              ],
               "Eq-Comparison": [
-                "either"
+                "< ½ unit"
               ],
               "Eq-Operator": [
-                "either"
+                "<"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Class I",
+                  "Condition": [
+                    "Class I"
+                  ],
+                  "Condition-Name": [
+                    "Class I"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Class II",
+                      "Condition": [
+                        "Class II"
+                      ],
+                      "Condition-Name": [
+                        "Class II"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "Class III",
+                      "Condition": [
+                        "Class III"
+                      ],
+                      "Condition-Name": [
+                        "Class III"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Extraction of all four first premolar teeth as part of orthodontic treatment.",
+          "Procedure": [
+            "Extraction"
+          ],
+          "Procedure-Name": [
+            "Extraction"
+          ],
+          "Observation": [
+            "premolar teeth"
+          ],
+          "Observation-Name": [
+            "premolar teeth"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Maximum anchorage required using mini-implant.",
+              "Procedure": [
+                "mini-implant"
               ],
-              "Modifier": [
-                "Class I",
-                "< ½ unit Class II",
-                "Class III"
+              "Procedure-Name": [
+                "mini-implant"
+              ],
+              "Observation": [
+                "anchorage"
+              ],
+              "Observation-Name": [
+                "anchorage"
               ]
             },
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "- Extraction of all four first premolar teeth as part of orthodontic treatment.",
-                  "Procedure": [
-                    "Extraction"
+                  "raw_text": "- No systemic disease.",
+                  "Condition": [
+                    "systemic disease"
                   ],
-                  "Procedure-Name": [
-                    "Extraction"
+                  "Condition-Name": [
+                    "systemic disease"
                   ],
-                  "Modifier": [
-                    "all four first premolar teeth"
+                  "Negation": [
+                    "No"
                   ]
                 },
                 "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "- Maximum anchorage required using mini-implant.",
-                      "Procedure": [
-                        "mini-implant"
+                      "raw_text": "- Good oral hygiene.",
+                      "Observation": [
+                        "oral hygiene"
                       ],
-                      "Procedure-Name": [
-                        "mini-implant"
+                      "Observation-Name": [
+                        "oral hygiene"
                       ],
                       "Modifier": [
-                        "Maximum anchorage"
+                        "Good"
                       ]
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "- No systemic disease.",
-                          "Condition": [
-                            "systemic disease"
-                          ],
-                          "Condition-Name": [
-                            "systemic disease"
-                          ],
-                          "Negation": [
-                            "No"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "- Good oral hygiene.",
-                              "Observation": [
-                                "oral hygiene"
-                              ],
-                              "Observation-Name": [
-                                "oral hygiene"
-                              ],
-                              "Modifier": [
-                                "Good"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "- No periodontal disease.",
-                              "Condition": [
-                                "periodontal disease"
-                              ],
-                              "Condition-Name": [
-                                "periodontal disease"
-                              ],
-                              "Negation": [
-                                "No"
-                              ]
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "- No periodontal disease.",
+                      "Condition": [
+                        "periodontal disease"
+                      ],
+                      "Condition-Name": [
+                        "periodontal disease"
+                      ],
+                      "Negation": [
+                        "No"
+                      ]
                     }
                   }
                 }

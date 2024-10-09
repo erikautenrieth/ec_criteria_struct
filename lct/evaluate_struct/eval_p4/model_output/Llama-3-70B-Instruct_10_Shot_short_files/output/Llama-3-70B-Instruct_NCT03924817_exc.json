@@ -1,7 +1,7 @@
 {
   "AND": {
     "left": {
-      "AND": {
+      "OR": {
         "left": {
           "raw_text": "- Patients with central sleep apnea (central AI > 5/hour)",
           "Condition": [
@@ -22,15 +22,12 @@
           "Eq-Value": [
             "5"
           ],
-          "Eq-Comparison": [
-            "> 5/hour"
-          ],
-          "Eq-Temporal-Unit": [
+          "Eq-Unit": [
             "hour"
           ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
               "raw_text": "- Patients with loose teeth and severe parodontitis",
               "Condition": [
@@ -40,10 +37,6 @@
               "Condition-Name": [
                 "loose teeth",
                 "severe parodontitis"
-              ],
-              "Modifier": [
-                "loose",
-                "severe"
               ]
             },
             "right": {
@@ -59,23 +52,30 @@
                     "completely missing teeth",
                     "removable tooth replacement",
                     "insufficient teeth health"
-                  ],
-                  "Modifier": [
-                    "completely",
-                    "removable",
-                    "insufficient"
                   ]
                 },
                 "right": {
-                  "raw_text": "Patients with missing molars",
+                  "raw_text": "Patients with missing molars Patients with maximum protrusion of less than 5mm",
                   "Condition": [
                     "missing molars"
                   ],
                   "Condition-Name": [
                     "missing molars"
                   ],
-                  "Modifier": [
-                    "missing"
+                  "Observation": [
+                    "maximum protrusion"
+                  ],
+                  "Observation-Name": [
+                    "maximum protrusion"
+                  ],
+                  "Eq-Operator": [
+                    "<"
+                  ],
+                  "Eq-Value": [
+                    "5"
+                  ],
+                  "Eq-Unit": [
+                    "mm"
                   ]
                 }
               }
@@ -83,27 +83,6 @@
           }
         }
       }
-    },
-    "right": {
-      "raw_text": "Patients with maximum protrusion of less than 5mm",
-      "Observation": [
-        "maximum protrusion"
-      ],
-      "Observation-Name": [
-        "maximum protrusion"
-      ],
-      "Eq-Operator": [
-        "less than"
-      ],
-      "Eq-Value": [
-        "5"
-      ],
-      "Eq-Comparison": [
-        "less than 5mm"
-      ],
-      "Eq-Temporal-Unit": [
-        "mm"
-      ]
     }
   }
 }

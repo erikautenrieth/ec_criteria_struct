@@ -1,26 +1,26 @@
 {
   "AND": {
     "left": {
-      "raw_text": "- Patients age: ≥ 22 years",
-      "Eq-Operator": [
-        "≥"
-      ],
-      "Eq-Temporal-Unit": [
-        "years"
-      ],
-      "Age": [
-        "age"
-      ],
-      "Eq-Value": [
-        "22"
-      ],
-      "Eq-Comparison": [
-        "≥ 22 years"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
+          "raw_text": "- Patients age: ≥ 22 years",
+          "Age": [
+            "age"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Eq-Value": [
+            "22"
+          ],
+          "Eq-Comparison": [
+            "≥ 22 years"
+          ]
+        },
+        "right": {
           "raw_text": "- Patients presenting for routine colonoscopy for screening and/or surveillance purposes.",
           "Procedure": [
             "colonoscopy"
@@ -29,40 +29,49 @@
             "colonoscopy"
           ],
           "Condition": [
-            "routine"
+            "screening",
+            "surveillance"
           ],
           "Condition-Name": [
-            "routine"
+            "screening",
+            "surveillance"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Willingness to undergo two withdrawals with and without the use of computer-aided software while undergoing conventional colonoscopy with sedation",
+          "Procedure": [
+            "withdrawals",
+            "colonoscopy"
+          ],
+          "Procedure-Name": [
+            "withdrawals",
+            "colonoscopy"
+          ],
+          "Modifier": [
+            "conventional"
+          ],
+          "Observation": [
+            "sedation"
+          ],
+          "Observation-Name": [
+            "sedation"
           ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "- Willingness to undergo two withdrawals with and without the use of computer-aided software while undergoing conventional colonoscopy with sedation",
-              "Procedure": [
-                "withdrawals",
-                "colonoscopy"
-              ],
-              "Procedure-Name": [
-                "withdrawals",
-                "colonoscopy"
-              ],
-              "Modifier": [
-                "computer-aided",
-                "conventional"
-              ]
-            },
-            "right": {
-              "raw_text": "- Ability to provide written, informed consent and understand the responsibilities of trial participation",
-              "Study": [
-                "trial"
-              ],
-              "Modifier": [
-                "written",
-                "informed"
-              ]
-            }
-          }
+          "raw_text": "- Ability to provide written, informed consent and understand the responsibilities of trial participation",
+          "Study": [
+            "trial"
+          ],
+          "Observation": [
+            "informed consent"
+          ],
+          "Observation-Name": [
+            "informed consent"
+          ]
         }
       }
     }

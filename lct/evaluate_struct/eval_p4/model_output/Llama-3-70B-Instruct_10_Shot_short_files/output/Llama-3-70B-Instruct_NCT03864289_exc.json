@@ -1,9 +1,9 @@
 {
   "AND": {
     "left": {
-      "NOT": {
+      "AND": {
         "left": {
-          "raw_text": "Children with Syndromic ASD caused by known genetic defects or inherited metabolic diseases",
+          "raw_text": "- Children with Syndromic ASD caused by known genetic defects or inherited metabolic diseases",
           "Condition": [
             "Syndromic ASD"
           ],
@@ -13,15 +13,18 @@
           "Modifier": [
             "known genetic defects",
             "inherited metabolic diseases"
-          ],
-          "Observation": [
+          ]
+        },
+        "right": {
+          "raw_text": "such as Rett Syndrome, Fragile X Syndrome, Angelman Syndrome, Prader-Willi Syndrome, tuberous sclerosis;",
+          "Condition": [
             "Rett Syndrome",
             "Fragile X Syndrome",
             "Angelman Syndrome",
             "Prader-Willi Syndrome",
             "tuberous sclerosis"
           ],
-          "Observation-Name": [
+          "Condition-Name": [
             "Rett Syndrome",
             "Fragile X Syndrome",
             "Angelman Syndrome",
@@ -32,58 +35,34 @@
       }
     },
     "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "- Visual",
-              "Modifier": [
-                "Visual"
-              ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "auditory",
-                  "Modifier": [
-                    "auditory"
-                  ]
-                },
-                "right": {
-                  "raw_text": "and physical disabilities",
-                  "Modifier": [
-                    "physical"
-                  ]
-                }
-              }
-            }
-          }
+          "raw_text": "- Visual, auditory and physical disabilities;",
+          "Condition": [
+            "Visual disabilities",
+            "auditory disabilities",
+            "physical disabilities"
+          ],
+          "Condition-Name": [
+            "Visual disabilities",
+            "auditory disabilities",
+            "physical disabilities"
+          ]
         },
         "right": {
-          "NOT": {
-            "left": {
-              "raw_text": "Complication with other serious chronic diseases",
-              "Condition": [
-                "chronic diseases"
-              ],
-              "Condition-Name": [
-                "chronic diseases"
-              ],
-              "Modifier": [
-                "serious"
-              ],
-              "Observation": [
-                "liver and kidney failure",
-                "connective tissue diseases",
-                "tumors"
-              ],
-              "Observation-Name": [
-                "liver and kidney failure",
-                "connective tissue diseases",
-                "tumors"
-              ]
-            }
-          }
+          "raw_text": "Complication with other serious chronic diseases, such as liver and kidney failure, connective tissue diseases, tumors.",
+          "Condition": [
+            "liver failure",
+            "kidney failure",
+            "connective tissue diseases",
+            "tumors"
+          ],
+          "Condition-Name": [
+            "liver failure",
+            "kidney failure",
+            "connective tissue diseases",
+            "tumors"
+          ]
         }
       }
     }

@@ -7,6 +7,9 @@
           "Age": [
             "Age"
           ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
           "Eq-Value": [
             "2",
             "6"
@@ -14,14 +17,17 @@
           "Eq-Comparison": [
             "between 2-6 years"
           ],
-          "Eq-Temporal-Unit": [
-            "years"
+          "Eq-Operator": [
+            "between"
           ]
         },
         "right": {
           "raw_text": "- Gestational age range 26-34. be between weeks",
           "Age": [
             "Gestational age"
+          ],
+          "Eq-Temporal-Unit": [
+            "weeks"
           ],
           "Eq-Value": [
             "26",
@@ -30,8 +36,8 @@
           "Eq-Comparison": [
             "between 26-34 weeks"
           ],
-          "Eq-Temporal-Unit": [
-            "weeks"
+          "Eq-Operator": [
+            "between"
           ]
         }
       }
@@ -62,29 +68,33 @@
                 "metabolic disease"
               ],
               "Negation": [
-                "not"
+                "not having"
               ]
             },
             "right": {
-              "raw_text": "- Compliance with visual examinations and physiotherapy evaluations",
-              "Procedure": [
-                "visual examinations",
-                "physiotherapy evaluations"
-              ],
-              "Procedure-Name": [
-                "visual examinations",
-                "physiotherapy evaluations"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "- Compliance with visual examinations and physiotherapy evaluations",
+                  "Procedure": [
+                    "visual examinations",
+                    "physiotherapy evaluations"
+                  ],
+                  "Procedure-Name": [
+                    "visual examinations",
+                    "physiotherapy evaluations"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- To be children and parents who agree to participate in the study",
+                  "Study": [
+                    "study"
+                  ]
+                }
+              }
             }
           }
         }
       }
-    },
-    "right": {
-      "raw_text": "- To be children and parents who agree to participate in the study",
-      "Study": [
-        "study"
-      ]
     }
   }
 }

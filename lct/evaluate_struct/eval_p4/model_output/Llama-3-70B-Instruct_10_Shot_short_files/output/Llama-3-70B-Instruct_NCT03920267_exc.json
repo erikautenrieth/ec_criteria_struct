@@ -1,31 +1,24 @@
 {
   "AND": {
     "left": {
-      "NOT": {
-        "left": {
-          "raw_text": "- Any disease or medical condition that, in the opinion of the investigator, would make the subject unsuitable for this study, would interfere with the interpretation of subject safety or study results, or considered unsuitable by the investigator for any other reason",
-          "Condition": [
-            "disease",
-            "medical condition"
-          ],
-          "Condition-Name": [
-            "disease",
-            "medical condition"
-          ],
-          "Negation": [
-            "not"
-          ],
-          "Study": [
-            "study"
-          ],
-          "Investigator": [
-            "investigator"
-          ]
-        }
-      }
+      "raw_text": "- Any disease or medical condition that, in the opinion of the investigator, would make the subject unsuitable for this study, would interfere with the interpretation of subject safety or study results, or considered unsuitable by the investigator for any other reason",
+      "Condition": [
+        "disease",
+        "medical condition"
+      ],
+      "Condition-Name": [
+        "disease",
+        "medical condition"
+      ],
+      "Investigator": [
+        "investigator"
+      ],
+      "Study": [
+        "study"
+      ]
     },
     "right": {
-      "NOT": {
+      "OR": {
         "left": {
           "raw_text": "- Evidence of active tuberculosis (TB)",
           "Condition": [
@@ -36,20 +29,17 @@
             "tuberculosis",
             "TB"
           ],
-          "Negation": [
-            "not"
-          ],
           "Modifier": [
             "active"
+          ]
+        },
+        "right": {
+          "raw_text": "Other protocol defined inclusion/exclusion criteria could apply",
+          "Study": [
+            "protocol"
           ]
         }
       }
     }
-  },
-  "Other": {
-    "raw_text": "Other protocol defined inclusion/exclusion criteria could apply",
-    "Study": [
-      "protocol"
-    ]
   }
 }

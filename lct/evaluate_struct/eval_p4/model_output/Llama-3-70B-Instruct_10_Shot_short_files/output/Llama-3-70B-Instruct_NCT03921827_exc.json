@@ -1,7 +1,7 @@
 {
   "AND": {
     "left": {
-      "AND": {
+      "OR": {
         "left": {
           "raw_text": "1. Patients with atrial fibrillation/ arrhythmias.",
           "Condition": [
@@ -14,7 +14,7 @@
           ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
               "raw_text": "2. Within 2 weeks of cardiac catheterization or arterial puncture at femoral puncture site.",
               "Procedure": [
@@ -25,18 +25,12 @@
                 "cardiac catheterization",
                 "arterial puncture"
               ],
-              "Eq-Temporal-Unit": [
-                "weeks"
-              ],
-              "Eq-Value": [
-                "2"
-              ],
-              "Eq-Comparison": [
+              "Eq-Temporal-Period": [
                 "Within 2 weeks"
               ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
                   "raw_text": "3. Decompensated heart failure, usually class 3 or 4",
                   "Condition": [
@@ -51,13 +45,10 @@
                   "Eq-Value": [
                     "3",
                     "4"
-                  ],
-                  "Eq-Comparison": [
-                    "usually class 3 or 4"
                   ]
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
                       "raw_text": "4. LV EF <30%",
                       "Observation": [
@@ -71,13 +62,10 @@
                       ],
                       "Eq-Value": [
                         "30%"
-                      ],
-                      "Eq-Comparison": [
-                        "<30%"
                       ]
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
                           "raw_text": "5. Moderate or severe AR",
                           "Condition": [
@@ -92,7 +80,7 @@
                           ]
                         },
                         "right": {
-                          "AND": {
+                          "OR": {
                             "left": {
                               "raw_text": "6. Persistent and uncontrolled hypertension (BP persistently >160/100 mmHg)",
                               "Condition": [
@@ -105,24 +93,15 @@
                                 "Persistent",
                                 "uncontrolled"
                               ],
-                              "Observation": [
-                                "BP"
-                              ],
-                              "Observation-Name": [
-                                "BP"
-                              ],
                               "Eq-Operator": [
                                 ">"
                               ],
                               "Eq-Value": [
                                 "160/100 mmHg"
-                              ],
-                              "Eq-Comparison": [
-                                ">160/100 mmHg"
                               ]
                             },
                             "right": {
-                              "AND": {
+                              "OR": {
                                 "left": {
                                   "raw_text": "7. Bleeding diathesis",
                                   "Condition": [
@@ -133,7 +112,7 @@
                                   ]
                                 },
                                 "right": {
-                                  "AND": {
+                                  "OR": {
                                     "left": {
                                       "raw_text": "8. Active thrombophlebitis/ venous disease of lower limbs",
                                       "Condition": [
@@ -149,7 +128,7 @@
                                       ]
                                     },
                                     "right": {
-                                      "AND": {
+                                      "OR": {
                                         "left": {
                                           "raw_text": "9. Severe lower extremity vaso-occlusive disease",
                                           "Condition": [
@@ -163,7 +142,7 @@
                                           ]
                                         },
                                         "right": {
-                                          "AND": {
+                                          "OR": {
                                             "left": {
                                               "raw_text": "10. Presence of a documented aortic aneurysm/ dissection requiring surgical repair",
                                               "Condition": [

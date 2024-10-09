@@ -17,10 +17,8 @@ def read_text_file(file_path):
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
         if content:
-            print(f"Das File: {file_path} wurde erfolgreich geladen.")
             return content
         else:
-            print("Das File ist leer.")
             return "Keine Daten vorhanden."
     except FileNotFoundError:
         return "Die Datei wurde nicht gefunden."

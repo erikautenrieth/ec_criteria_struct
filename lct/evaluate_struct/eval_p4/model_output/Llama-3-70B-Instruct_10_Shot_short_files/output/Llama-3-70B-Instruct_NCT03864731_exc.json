@@ -9,26 +9,15 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "- Pregnancy",
-                          "Condition": [
-                            "Pregnancy"
-                          ],
-                          "Condition-Name": [
-                            "Pregnancy"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or breastfeeding",
-                          "Condition": [
-                            "breastfeeding"
-                          ],
-                          "Condition-Name": [
-                            "breastfeeding"
-                          ]
-                        }
-                      }
+                      "raw_text": "- Pregnancy or breastfeeding",
+                      "Condition": [
+                        "Pregnancy",
+                        "breastfeeding"
+                      ],
+                      "Condition-Name": [
+                        "Pregnancy",
+                        "breastfeeding"
+                      ]
                     },
                     "right": {
                       "raw_text": "- Patient uses a hearing aid or plans to acquire a hearing aid",
@@ -39,6 +28,10 @@
                         "hearing aid"
                       ],
                       "Eq-Comparison": [
+                        "uses",
+                        "plans"
+                      ],
+                      "Eq-Temporal-Period": [
                         "uses",
                         "plans"
                       ]
@@ -68,32 +61,25 @@
                 "skin or scalp condition"
               ],
               "Modifier": [
-                "preclude"
+                "may preclude"
               ]
             }
           }
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- Patient cannot perform the audiological tests",
-              "Procedure": [
-                "audiological tests"
-              ],
-              "Procedure-Name": [
-                "audiological tests"
-              ],
-              "Negation": [
-                "cannot"
-              ]
-            },
-            "right": {
-              "raw_text": "or is unable to fill out the questionnaires.",
-              "Negation": [
-                "unable"
-              ]
-            }
-          }
+          "raw_text": "- Patient cannot perform the audiological tests or is unable to fill out the questionnaires.",
+          "Condition": [
+            "cannot perform",
+            "unable"
+          ],
+          "Condition-Name": [
+            "cannot perform",
+            "unable"
+          ],
+          "Modifier": [
+            "cannot",
+            "unable"
+          ]
         }
       }
     },
@@ -123,7 +109,7 @@
             "emotional disorder"
           ],
           "Modifier": [
-            "interfere"
+            "any"
           ]
         }
       }

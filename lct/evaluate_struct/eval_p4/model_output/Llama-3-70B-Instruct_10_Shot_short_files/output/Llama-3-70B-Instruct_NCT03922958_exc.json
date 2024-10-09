@@ -4,11 +4,11 @@
       "AND": {
         "left": {
           "raw_text": "- Factors that affect immune function or AKI assessment are the basis for",
-          "Condition": [
+          "Observation": [
             "immune function",
             "AKI assessment"
           ],
-          "Condition-Name": [
+          "Observation-Name": [
             "immune function",
             "AKI assessment"
           ]
@@ -36,108 +36,96 @@
               ]
             },
             "right": {
-              "raw_text": "- Documented acute infection with the past 1 month (e.g., pneumonia, urinary tract infection)",
-              "Condition": [
-                "acute infection",
-                "pneumonia",
-                "urinary tract infection"
-              ],
-              "Condition-Name": [
-                "acute infection",
-                "pneumonia",
-                "urinary tract infection"
-              ],
-              "Eq-Temporal-Unit": [
-                "month"
-              ],
-              "Eq-Value": [
-                "1"
-              ],
-              "Eq-Comparison": [
-                "past 1 month"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "- Documented acute infection with the past 1 month (e.g., pneumonia, urinary tract infection)",
+                  "Condition": [
+                    "acute infection",
+                    "pneumonia",
+                    "urinary tract infection"
+                  ],
+                  "Condition-Name": [
+                    "acute infection",
+                    "pneumonia",
+                    "urinary tract infection"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "past 1 month"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Prednisone or other steroid use currently or within the past one month",
+                      "Drug": [
+                        "Prednisone",
+                        "steroid"
+                      ],
+                      "Drug-Name": [
+                        "Prednisone",
+                        "steroid"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "currently",
+                        "past one month"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- AKI at the time of surgery",
+                          "Condition": [
+                            "AKI"
+                          ],
+                          "Condition-Name": [
+                            "AKI"
+                          ],
+                          "Procedure": [
+                            "surgery"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- ESRD requiring renal replacement therapy",
+                              "Condition": [
+                                "ESRD"
+                              ],
+                              "Condition-Name": [
+                                "ESRD"
+                              ],
+                              "Procedure": [
+                                "renal replacement therapy"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- Estimated GFR <45 mL/min (as judged by the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI) equation",
+                              "Observation": [
+                                "GFR"
+                              ],
+                              "Observation-Name": [
+                                "GFR"
+                              ],
+                              "Eq-Operator": [
+                                "<"
+                              ],
+                              "Eq-Value": [
+                                "45"
+                              ],
+                              "Eq-Unit": [
+                                "mL/min"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
-      }
-    },
-    "right": {
-      "OR": {
-        "left": {
-          "raw_text": "- Prednisone or other steroid use currently or within the past one month",
-          "Drug": [
-            "Prednisone",
-            "steroid"
-          ],
-          "Drug-Name": [
-            "Prednisone",
-            "steroid"
-          ],
-          "Eq-Temporal-Unit": [
-            "month"
-          ],
-          "Eq-Value": [
-            "1"
-          ],
-          "Eq-Comparison": [
-            "currently or within the past 1 month"
-          ]
-        },
-        "right": {
-          "raw_text": "- AKI at the time of surgery",
-          "Condition": [
-            "AKI"
-          ],
-          "Condition-Name": [
-            "AKI"
-          ],
-          "Procedure": [
-            "surgery"
-          ],
-          "Procedure-Name": [
-            "surgery"
-          ]
-        }
-      }
-    }
-  },
-  "right": {
-    "OR": {
-      "left": {
-        "raw_text": "- ESRD requiring renal replacement therapy",
-        "Condition": [
-          "ESRD"
-        ],
-        "Condition-Name": [
-          "ESRD"
-        ],
-        "Procedure": [
-          "renal replacement therapy"
-        ],
-        "Procedure-Name": [
-          "renal replacement therapy"
-        ]
-      },
-      "right": {
-        "raw_text": "- Estimated GFR <45 mL/min (as judged by the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI) equation",
-        "Observation": [
-          "GFR"
-        ],
-        "Observation-Name": [
-          "GFR"
-        ],
-        "Eq-Operator": [
-          "<"
-        ],
-        "Eq-Value": [
-          "45"
-        ],
-        "Eq-Unit": [
-          "mL/min"
-        ],
-        "Study": [
-          "CKD-EPI equation"
-        ]
       }
     }
   }

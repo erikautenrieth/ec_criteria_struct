@@ -1,0 +1,175 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients who are in pregnancy",
+                      "Condition": [
+                        "pregnancy"
+                      ],
+                      "Condition-Name": [
+                        "pregnancy"
+                      ],
+                      "Eq-Comparison": [
+                        "in"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "in"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or have plan to conception.",
+                      "Condition": [
+                        "conception"
+                      ],
+                      "Condition-Name": [
+                        "conception"
+                      ],
+                      "Assertion": [
+                        "plan"
+                      ],
+                      "Eq-Comparison": [
+                        "plan"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients who have vertebra surgery",
+                      "Procedure": [
+                        "vertebra surgery"
+                      ],
+                      "Procedure-Name": [
+                        "vertebra surgery"
+                      ],
+                      "Eq-Comparison": [
+                        "plan"
+                      ],
+                      "Assertion": [
+                        "plan"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or have plan of surgery.",
+                      "Procedure": [
+                        "surgery"
+                      ],
+                      "Procedure-Name": [
+                        "surgery"
+                      ],
+                      "Assertion": [
+                        "plan"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients who are"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "inappropriate to join this trial judged by the radiologists or specialists.",
+                      "Negation": [
+                        "inappropriate"
+                      ],
+                      "Study": [
+                        "trial"
+                      ],
+                      "Assertion": [
+                        "inappropriate"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- AIDS,",
+              "Condition": [
+                "AIDS"
+              ],
+              "Condition-Name": [
+                "AIDS"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Active Hepatitis,",
+                  "Condition": [
+                    "Hepatitis"
+                  ],
+                  "Condition-Name": [
+                    "Hepatitis"
+                  ],
+                  "Eq-Comparison": [
+                    "Active"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "Active"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Tuberculosis,",
+                      "Condition": [
+                        "Tuberculosis"
+                      ],
+                      "Condition-Name": [
+                        "Tuberculosis"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "Syphilis",
+                      "Condition": [
+                        "Syphilis"
+                      ],
+                      "Condition-Name": [
+                        "Syphilis"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Patients who regularly take anticoagulants, antiplatelet drugs",
+      "Drug": [
+        "anticoagulants",
+        "antiplatelet drugs"
+      ],
+      "Drug-Name": [
+        "anticoagulants",
+        "antiplatelet drugs"
+      ],
+      "Eq-Comparison": [
+        "regularly"
+      ],
+      "Eq-Temporal-Period": [
+        "regularly"
+      ]
+    }
+  }
+}

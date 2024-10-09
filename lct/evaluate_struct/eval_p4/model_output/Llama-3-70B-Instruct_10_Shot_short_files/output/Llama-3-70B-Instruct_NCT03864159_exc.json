@@ -11,7 +11,7 @@
       "Procedure-Name": [
         "individualized strength training"
       ],
-      "Modifier": [
+      "Location": [
         "lower limbs"
       ]
     },
@@ -31,28 +31,34 @@
               ]
             },
             "right": {
-              "raw_text": "- Subjects who present hypermobility",
-              "Condition": [
-                "hypermobility"
-              ],
-              "Condition-Name": [
-                "hypermobility"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "- Subjects who present hypermobility",
+                  "Condition": [
+                    "hypermobility"
+                  ],
+                  "Condition-Name": [
+                    "hypermobility"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Not signed the informed consent document",
+                  "Negation": [
+                    "Not"
+                  ],
+                  "Study": [
+                    "study"
+                  ],
+                  "Procedure": [
+                    "informed consent"
+                  ],
+                  "Procedure-Name": [
+                    "informed consent"
+                  ]
+                }
+              }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "NOT": {
-        "left": {
-          "raw_text": "- Not signed the informed consent document",
-          "Study": [
-            "study"
-          ],
-          "Negation": [
-            "Not"
-          ]
         }
       }
     }

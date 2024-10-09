@@ -1,0 +1,96 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "- 1.Histologically confirmed pancreatic adenocarcinoma 2.Locally advanced",
+      "Condition": [
+        "pancreatic adenocarcinoma"
+      ],
+      "Condition-Name": [
+        "pancreatic adenocarcinoma"
+      ],
+      "Modifier": [
+        "Locally advanced"
+      ],
+      "Eq-Value": [
+        "1"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "or metastatic PC 3.Chemotherapy-",
+          "Procedure": [
+            "Chemotherapy"
+          ],
+          "Procedure-Name": [
+            "Chemotherapy"
+          ],
+          "Condition": [
+            "PC"
+          ],
+          "Condition-Name": [
+            "PC"
+          ],
+          "Modifier": [
+            "metastatic"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "naïve 4.ECOG performance status of 0 or 1 5. An adequate bone marrow,",
+                  "Observation": [
+                    "ECOG performance status"
+                  ],
+                  "Observation-Name": [
+                    "ECOG performance status"
+                  ],
+                  "Eq-Comparison": [
+                    "0 or 1"
+                  ],
+                  "Eq-Value": [
+                    "0",
+                    "1"
+                  ],
+                  "Modifier": [
+                    "bone marrow"
+                  ],
+                  "Polarity": [
+                    "adequate"
+                  ],
+                  "Negation": [
+                    "naïve"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "liver function",
+                      "Observation": [
+                        "liver function"
+                      ],
+                      "Observation-Name": [
+                        "liver function"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and kidney function",
+                      "Observation": [
+                        "kidney function"
+                      ],
+                      "Observation-Name": [
+                        "kidney function"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

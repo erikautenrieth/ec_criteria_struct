@@ -18,7 +18,7 @@
           ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
               "raw_text": "- Mental handicap",
               "Condition": [
@@ -29,7 +29,7 @@
               ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
                   "raw_text": "- History of relevant drug and/or food allergies",
                   "Condition": [
@@ -38,13 +38,14 @@
                   "Condition-Name": [
                     "allergies"
                   ],
+                  "Drug": [
+                    "drug"
+                  ],
                   "Observation": [
-                    "drug",
-                    "food"
+                    "allergies"
                   ],
                   "Observation-Name": [
-                    "drug",
-                    "food"
+                    "allergies"
                   ]
                 },
                 "right": {
@@ -65,7 +66,7 @@
                       ]
                     },
                     "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
                           "raw_text": "- Smoking within 60 days prior to drug administration and through the follow-up visit",
                           "Condition": [
@@ -88,11 +89,16 @@
                             "alcohol abuse",
                             "drug addiction"
                           ],
-                          "Observation": [
+                          "Drug": [
                             "cannabis products"
                           ],
+                          "Observation": [
+                            "alcohol abuse",
+                            "drug addiction"
+                          ],
                           "Observation-Name": [
-                            "cannabis products"
+                            "alcohol abuse",
+                            "drug addiction"
                           ]
                         }
                       }

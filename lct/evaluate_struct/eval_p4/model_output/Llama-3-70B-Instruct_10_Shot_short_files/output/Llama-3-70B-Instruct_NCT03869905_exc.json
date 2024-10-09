@@ -5,7 +5,7 @@
         "left": {
           "OR": {
             "left": {
-              "raw_text": "- No history or diagnosis of any of the following conditions: Chron's disease",
+              "raw_text": "Chron's disease",
               "Condition": [
                 "Chron's disease"
               ],
@@ -16,7 +16,7 @@
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "- bleeding disorders",
+                  "raw_text": "bleeding disorders",
                   "Condition": [
                     "bleeding disorders"
                   ],
@@ -27,7 +27,7 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "- gastrointestinal or colonic malignancy",
+                      "raw_text": "gastrointestinal or colonic malignancy",
                       "Condition": [
                         "gastrointestinal malignancy",
                         "colonic malignancy"
@@ -40,41 +40,74 @@
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "- Kidney disease, including kidney \"stones\" or hypercalcemia",
+                          "raw_text": "Kidney disease",
                           "Condition": [
-                            "Kidney disease",
-                            "kidney stones",
-                            "hypercalcemia"
+                            "Kidney disease"
                           ],
                           "Condition-Name": [
-                            "Kidney disease",
-                            "kidney stones",
-                            "hypercalcemia"
+                            "Kidney disease"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "- Coagulopathy/hereditary hemorrhagic disorders/",
+                              "raw_text": "including kidney \"stones\"",
                               "Condition": [
-                                "Coagulopathy",
-                                "hereditary hemorrhagic disorders"
+                                "kidney stones"
                               ],
                               "Condition-Name": [
-                                "Coagulopathy",
-                                "hereditary hemorrhagic disorders"
+                                "kidney stones"
                               ]
                             },
                             "right": {
-                              "raw_text": "- or receiving therapeutic doses of Coumadin or heparin.",
-                              "Procedure": [
-                                "Coumadin",
-                                "heparin"
-                              ],
-                              "Procedure-Name": [
-                                "Coumadin",
-                                "heparin"
-                              ]
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or hypercalcemia",
+                                  "Condition": [
+                                    "hypercalcemia"
+                                  ],
+                                  "Condition-Name": [
+                                    "hypercalcemia"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "Coagulopathy",
+                                      "Condition": [
+                                        "Coagulopathy"
+                                      ],
+                                      "Condition-Name": [
+                                        "Coagulopathy"
+                                      ]
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "hereditary hemorrhagic disorders",
+                                          "Condition": [
+                                            "hereditary hemorrhagic disorders"
+                                          ],
+                                          "Condition-Name": [
+                                            "hereditary hemorrhagic disorders"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "or receiving therapeutic doses of Coumadin or heparin",
+                                          "Procedure": [
+                                            "Coumadin",
+                                            "heparin"
+                                          ],
+                                          "Procedure-Name": [
+                                            "Coumadin",
+                                            "heparin"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             }
                           }
                         }
@@ -91,8 +124,15 @@
     "right": {
       "NOT": {
         "left": {
-          "raw_text": "- Ingested certain medications (Calcium, Vitamin D, fiber supplements and Non-steroidal anti-inflammatory drugs - NSAIDs) within 30 days of study start.",
-          "Drug": [
+          "raw_text": "Ingested certain medications (Calcium, Vitamin D, fiber supplements and Non-steroidal anti-inflammatory drugs - NSAIDs) within 30 days of study start",
+          "Procedure": [
+            "Calcium",
+            "Vitamin D",
+            "fiber supplements",
+            "Non-steroidal anti-inflammatory drugs",
+            "NSAIDs"
+          ],
+          "Procedure-Name": [
             "Calcium",
             "Vitamin D",
             "fiber supplements",

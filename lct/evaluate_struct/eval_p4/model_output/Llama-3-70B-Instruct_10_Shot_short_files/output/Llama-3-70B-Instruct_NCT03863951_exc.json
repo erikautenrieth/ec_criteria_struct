@@ -1,28 +1,40 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "- significant acute or severe illness such as infection,heart failure and tumor",
-          "Condition": [
-            "infection",
-            "heart failure",
-            "tumor"
-          ],
-          "Condition-Name": [
-            "infection",
-            "heart failure",
-            "tumor"
-          ],
-          "Modifier": [
-            "acute",
-            "severe"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "- significant acute or severe illness such as infection",
+              "Condition": [
+                "infection"
+              ],
+              "Condition-Name": [
+                "infection"
+              ],
+              "Modifier": [
+                "significant",
+                "acute",
+                "severe"
+              ]
+            },
+            "right": {
+              "raw_text": "heart failure and tumor",
+              "Condition": [
+                "heart failure",
+                "tumor"
+              ],
+              "Condition-Name": [
+                "heart failure",
+                "tumor"
+              ]
+            }
+          }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "- previous diagnosis of depression or other mental disorder or who had recently accepted antidepressants or antipsychotics",
+              "raw_text": "- previous diagnosis of depression or other mental disorder",
               "Condition": [
                 "depression",
                 "mental disorder"
@@ -31,77 +43,96 @@
                 "depression",
                 "mental disorder"
               ],
-              "Drug": [
-                "antidepressants",
-                "antipsychotics"
-              ],
-              "Modifier": [
+              "Eq-Temporal-Period": [
                 "previous"
               ]
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "- antibiotics in the last two weeks",
-                  "Drug": [
-                    "antibiotics"
-                  ],
-                  "Eq-Temporal-Period": [
-                    "last two weeks"
-                  ]
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "- severe aphasia or dysarthria,irritable bowel syndrome,asthma,and pregnant or lactating women",
-                      "Condition": [
-                        "aphasia",
-                        "dysarthria",
-                        "irritable bowel syndrome",
-                        "asthma"
-                      ],
-                      "Condition-Name": [
-                        "aphasia",
-                        "dysarthria",
-                        "irritable bowel syndrome",
-                        "asthma"
-                      ],
-                      "Modifier": [
-                        "severe"
-                      ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "- a previous history of neurological illness including AD and PD",
-                          "Condition": [
-                            "neurological illness",
-                            "AD",
-                            "PD"
-                          ],
-                          "Condition-Name": [
-                            "neurological illness",
-                            "AD",
-                            "PD"
-                          ],
-                          "Modifier": [
-                            "previous"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "- Inflammatory bowel disease",
-                          "Condition": [
-                            "Inflammatory bowel disease"
-                          ],
-                          "Condition-Name": [
-                            "Inflammatory bowel disease"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "or who had recently accepted antidepressants or antipsychotics",
+              "Procedure": [
+                "antidepressants",
+                "antipsychotics"
+              ],
+              "Procedure-Name": [
+                "antidepressants",
+                "antipsychotics"
+              ],
+              "Eq-Temporal-Period": [
+                "recently"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- antibiotics in the last two weeks",
+              "Procedure": [
+                "antibiotics"
+              ],
+              "Procedure-Name": [
+                "antibiotics"
+              ],
+              "Eq-Temporal-Unit": [
+                "weeks"
+              ],
+              "Eq-Value": [
+                "2"
+              ],
+              "Eq-Comparison": [
+                "in the last two weeks"
+              ]
+            },
+            "right": {
+              "raw_text": "- severe aphasia or dysarthria,irritable bowel syndrome,asthma,and pregnant or lactating women",
+              "Condition": [
+                "aphasia",
+                "dysarthria",
+                "irritable bowel syndrome",
+                "asthma"
+              ],
+              "Condition-Name": [
+                "aphasia",
+                "dysarthria",
+                "irritable bowel syndrome",
+                "asthma"
+              ],
+              "Modifier": [
+                "severe"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- a previous history of neurological illness including AD and PD",
+              "Condition": [
+                "neurological illness",
+                "AD",
+                "PD"
+              ],
+              "Condition-Name": [
+                "neurological illness",
+                "AD",
+                "PD"
+              ],
+              "Eq-Temporal-Period": [
+                "previous"
+              ]
+            },
+            "right": {
+              "raw_text": "- Inflammatory bowel disease",
+              "Condition": [
+                "Inflammatory bowel disease"
+              ],
+              "Condition-Name": [
+                "Inflammatory bowel disease"
+              ]
             }
           }
         }

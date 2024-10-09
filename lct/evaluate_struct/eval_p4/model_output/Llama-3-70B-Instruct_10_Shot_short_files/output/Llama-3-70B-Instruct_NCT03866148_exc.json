@@ -3,17 +3,45 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "- Patients with a diagnosis of atrial fibrillation (AF), atrial flutter and/or ventricular tachycardia (VT)",
-          "Condition": [
-            "atrial fibrillation",
-            "atrial flutter",
-            "ventricular tachycardia"
-          ],
-          "Condition-Name": [
-            "atrial fibrillation",
-            "atrial flutter",
-            "ventricular tachycardia"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "- Patients with a diagnosis of atrial fibrillation (AF)",
+              "Condition": [
+                "atrial fibrillation"
+              ],
+              "Condition-Name": [
+                "atrial fibrillation"
+              ],
+              "Abbreviation": [
+                "AF"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "atrial flutter",
+                  "Condition": [
+                    "atrial flutter"
+                  ],
+                  "Condition-Name": [
+                    "atrial flutter"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and/or ventricular tachycardia (VT)",
+                  "Condition": [
+                    "ventricular tachycardia"
+                  ],
+                  "Condition-Name": [
+                    "ventricular tachycardia"
+                  ],
+                  "Abbreviation": [
+                    "VT"
+                  ]
+                }
+              }
+            }
+          }
         },
         "right": {
           "AND": {
@@ -33,7 +61,7 @@
               ]
             },
             "right": {
-              "NOT": {
+              "AND": {
                 "left": {
                   "raw_text": "- Patients with a palliative diagnosis i.e. life expectancy less than 3 years",
                   "Condition": [
@@ -50,30 +78,20 @@
                   ],
                   "Eq-Value": [
                     "3"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Patients who lack capacity",
+                  "Condition": [
+                    "lack capacity"
                   ],
-                  "Negation": [
-                    "not"
+                  "Condition-Name": [
+                    "lack capacity"
                   ]
                 }
               }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "NOT": {
-        "left": {
-          "raw_text": "- Patients who lack capacity",
-          "Condition": [
-            "lack capacity"
-          ],
-          "Condition-Name": [
-            "lack capacity"
-          ],
-          "Negation": [
-            "not"
-          ]
         }
       }
     }

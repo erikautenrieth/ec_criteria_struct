@@ -80,6 +80,9 @@
                             "research study"
                           ],
                           "Study-Name": [
+                            "category 1 research study"
+                          ],
+                          "Modifier": [
                             "Jardé law"
                           ]
                         },
@@ -91,9 +94,6 @@
                                 "study"
                               ],
                               "Study-Name": [
-                                "study"
-                              ],
-                              "Modifier": [
                                 "exclusion period"
                               ]
                             },
@@ -101,37 +101,48 @@
                               "OR": {
                                 "left": {
                                   "raw_text": "- Patient under the protection of justice, under guardianship or under curatorship.",
-                                  "Modifier": [
-                                    "under the protection of justice",
-                                    "under guardianship",
-                                    "under curatorship"
+                                  "Condition": [
+                                    "justice",
+                                    "guardianship",
+                                    "curatorship"
+                                  ],
+                                  "Condition-Name": [
+                                    "justice",
+                                    "guardianship",
+                                    "curatorship"
                                   ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
                                       "raw_text": "- Patient refusing to sign the consent form.",
-                                      "Modifier": [
+                                      "Negation": [
                                         "refusing"
+                                      ],
+                                      "Study": [
+                                        "consent form"
                                       ]
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
                                           "raw_text": "- Patient for which it is impossible to provide information about the study.",
-                                          "Modifier": [
+                                          "Study": [
+                                            "study"
+                                          ],
+                                          "Negation": [
                                             "impossible"
                                           ]
                                         },
                                         "right": {
                                           "raw_text": "- Pregnant patient, parturient, or breastfeeding.",
                                           "Condition": [
-                                            "Pregnant",
+                                            "pregnant",
                                             "parturient",
                                             "breastfeeding"
                                           ],
                                           "Condition-Name": [
-                                            "Pregnant",
+                                            "pregnant",
                                             "parturient",
                                             "breastfeeding"
                                           ]

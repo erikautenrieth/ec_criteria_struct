@@ -31,50 +31,44 @@
           }
         },
         "right": {
-          "raw_text": "- Patients that have a conventional contraindication for cardiac magnetic resonance imaging (MRI).",
-          "Condition": [
-            "contraindication"
-          ],
-          "Condition-Name": [
-            "contraindication"
-          ],
-          "Procedure": [
-            "cardiac magnetic resonance imaging"
-          ],
-          "Procedure-Name": [
-            "MRI"
-          ]
-        }
-      }
-    },
-    "right": {
-      "OR": {
-        "left": {
-          "raw_text": "- Patients that have had a blood transfusion within the last month",
-          "Procedure": [
-            "blood transfusion"
-          ],
-          "Procedure-Name": [
-            "blood transfusion"
-          ],
-          "Eq-Temporal-Unit": [
-            "month"
-          ],
-          "Eq-Comparison": [
-            "within the last"
-          ]
-        },
-        "right": {
-          "raw_text": "and patients having haemodialysis will be excluded.",
-          "Procedure": [
-            "haemodialysis"
-          ],
-          "Procedure-Name": [
-            "haemodialysis"
-          ],
-          "Negation": [
-            "excluded"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "- Patients that have a conventional contraindication for cardiac magnetic resonance imaging (MRI).",
+              "Condition": [
+                "contraindication"
+              ],
+              "Condition-Name": [
+                "contraindication"
+              ],
+              "Procedure": [
+                "cardiac magnetic resonance imaging"
+              ],
+              "Procedure-Name": [
+                "MRI"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patients that have had a blood transfusion within the last month and patients having haemodialysis will be excluded.",
+              "Procedure": [
+                "blood transfusion"
+              ],
+              "Procedure-Name": [
+                "blood transfusion"
+              ],
+              "Eq-Temporal-Unit": [
+                "month"
+              ],
+              "Eq-Comparison": [
+                "within the last month"
+              ],
+              "Condition": [
+                "haemodialysis"
+              ],
+              "Condition-Name": [
+                "haemodialysis"
+              ]
+            }
+          }
         }
       }
     }

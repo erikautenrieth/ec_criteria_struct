@@ -2,9 +2,6 @@
   "AND": {
     "left": {
       "raw_text": "- 18 years of age or older",
-      "Eq-Temporal-Unit": [
-        "years"
-      ],
       "Age": [
         "age"
       ],
@@ -16,6 +13,9 @@
       ],
       "Eq-Operator": [
         "or older"
+      ],
+      "Eq-Temporal-Unit": [
+        "years"
       ]
     },
     "right": {
@@ -27,25 +27,38 @@
           ]
         },
         "right": {
-          "raw_text": "- be prescribed to take two or more medications per day, and manage their own medications.",
-          "Procedure": [
-            "prescribed"
-          ],
-          "Procedure-Name": [
-            "prescribed"
-          ],
-          "Eq-Value": [
-            "two"
-          ],
-          "Eq-Comparison": [
-            "two or more"
-          ],
-          "Eq-Operator": [
-            "or more"
-          ],
-          "Drug": [
-            "medications"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "- be prescribed to take two or more medications per day",
+              "Procedure": [
+                "medications"
+              ],
+              "Procedure-Name": [
+                "medications"
+              ],
+              "Eq-Value": [
+                "two"
+              ],
+              "Eq-Comparison": [
+                "two or more"
+              ],
+              "Eq-Operator": [
+                "or more"
+              ]
+            },
+            "right": {
+              "raw_text": "- and manage their own medications.",
+              "Procedure": [
+                "medications"
+              ],
+              "Procedure-Name": [
+                "medications"
+              ],
+              "Modifier": [
+                "own"
+              ]
+            }
+          }
         }
       }
     }

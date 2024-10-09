@@ -27,18 +27,20 @@
           "AND": {
             "left": {
               "raw_text": "- Without replacement therapy (dialysis or hemodialysis)",
-              "Procedure": [
-                "replacement therapy"
-              ],
-              "Procedure-Name": [
-                "replacement therapy"
-              ],
-              "Modifier": [
-                "Without"
-              ],
-              "Negation": [
-                "Without"
-              ]
+              "NOT": {
+                "left": {
+                  "raw_text": "replacement therapy",
+                  "Procedure": [
+                    "replacement therapy"
+                  ],
+                  "Procedure-Name": [
+                    "replacement therapy"
+                  ],
+                  "Negation": [
+                    "Without"
+                  ]
+                }
+              }
             },
             "right": {
               "raw_text": "- Volume overload",
@@ -79,12 +81,18 @@
         "right": {
           "raw_text": "- Use of a loop diuretic for at least one month",
           "Procedure": [
-            "Use of a loop diuretic"
+            "loop diuretic"
           ],
           "Procedure-Name": [
-            "Use of a loop diuretic"
+            "loop diuretic"
           ],
-          "Eq-Temporal-Unit": [
+          "Eq-Operator": [
+            "at least"
+          ],
+          "Eq-Value": [
+            "one"
+          ],
+          "Eq-Unit": [
             "month"
           ],
           "Eq-Comparison": [

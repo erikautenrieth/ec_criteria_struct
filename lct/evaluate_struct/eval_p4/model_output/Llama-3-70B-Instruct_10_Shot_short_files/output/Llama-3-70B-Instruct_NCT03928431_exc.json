@@ -26,32 +26,38 @@
               "OR": {
                 "left": {
                   "raw_text": "mothers <18 years",
-                  "Age": [
-                    "Age"
-                  ],
                   "Eq-Operator": [
                     "<"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "Age"
                   ],
                   "Eq-Value": [
                     "18"
                   ],
-                  "Eq-Temporal-Unit": [
-                    "years"
+                  "Eq-Comparison": [
+                    "< 18 years"
                   ]
                 },
                 "right": {
                   "raw_text": "or >40 years of age",
-                  "Age": [
-                    "Age"
-                  ],
                   "Eq-Operator": [
                     ">"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "Age"
                   ],
                   "Eq-Value": [
                     "40"
                   ],
-                  "Eq-Temporal-Unit": [
-                    "years"
+                  "Eq-Comparison": [
+                    "> 40 years"
                   ]
                 }
               }
@@ -123,9 +129,12 @@
     }
   },
   "right": {
-    "AND": {
+    "OR": {
       "left": {
         "raw_text": "- infants delivered prior to 37 weeks of gestation",
+        "Eq-Operator": [
+          "prior to"
+        ],
         "Eq-Temporal-Unit": [
           "weeks"
         ],
@@ -137,103 +146,108 @@
         ]
       },
       "right": {
+        "raw_text": "Additional exclusion criteria for mothers in the CS group:",
+        "Study": [
+          "CS group"
+        ]
+      }
+    }
+  },
+  "right": {
+    "OR": {
+      "left": {
+        "raw_text": "- Mothers positive to Group B Streptococcus",
+        "Condition": [
+          "Group B Streptococcus"
+        ],
+        "Condition-Name": [
+          "Group B Streptococcus"
+        ]
+      },
+      "right": {
         "OR": {
           "left": {
-            "raw_text": "- Mothers positive to Group B Streptococcus",
+            "raw_text": "Group A Streptococcus",
             "Condition": [
-              "Group B Streptococcus"
+              "Group A Streptococcus"
             ],
             "Condition-Name": [
-              "Group B Streptococcus"
+              "Group A Streptococcus"
             ]
           },
           "right": {
             "OR": {
               "left": {
-                "raw_text": "Group A Streptococcus",
+                "raw_text": "bacterial vaginosis",
                 "Condition": [
-                  "Group A Streptococcus"
+                  "bacterial vaginosis"
                 ],
                 "Condition-Name": [
-                  "Group A Streptococcus"
+                  "bacterial vaginosis"
                 ]
               },
               "right": {
-                "OR": {
-                  "left": {
-                    "raw_text": "bacterial vaginosis",
-                    "Condition": [
-                      "bacterial vaginosis"
-                    ],
-                    "Condition-Name": [
-                      "bacterial vaginosis"
-                    ]
-                  },
-                  "right": {
-                    "OR": {
-                      "left": {
-                        "raw_text": "vaginal pH > 4 at the time of birth",
-                        "Eq-Operator": [
-                          ">"
-                        ],
-                        "Eq-Value": [
-                          "4"
-                        ],
-                        "Eq-Temporal-Unit": [
-                          "at the time of birth"
-                        ]
-                      },
-                      "right": {
-                        "OR": {
-                          "left": {
-                            "raw_text": "Mothers with fecal samples positive for Salmonella",
-                            "Condition": [
-                              "Salmonella"
-                            ],
-                            "Condition-Name": [
-                              "Salmonella"
-                            ]
-                          },
-                          "right": {
-                            "OR": {
-                              "left": {
-                                "raw_text": "Shigella",
-                                "Condition": [
-                                  "Shigella"
-                                ],
-                                "Condition-Name": [
-                                  "Shigella"
-                                ]
-                              },
-                              "right": {
-                                "OR": {
-                                  "left": {
-                                    "raw_text": "Campylobacter",
-                                    "Condition": [
-                                      "Campylobacter"
-                                    ],
-                                    "Condition-Name": [
-                                      "Campylobacter"
-                                    ]
-                                  },
-                                  "right": {
-                                    "raw_text": "or Yersinia",
-                                    "Condition": [
-                                      "Yersinia"
-                                    ],
-                                    "Condition-Name": [
-                                      "Yersinia"
-                                    ]
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
+                "raw_text": "vaginal pH > 4 at the time of birth",
+                "Eq-Operator": [
+                  ">"
+                ],
+                "Eq-Temporal-Unit": [
+                  "pH"
+                ],
+                "Eq-Value": [
+                  "4"
+                ],
+                "Eq-Comparison": [
+                  "> 4"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "right": {
+    "OR": {
+      "left": {
+        "raw_text": "- Mothers with fecal samples positive for Salmonella",
+        "Condition": [
+          "Salmonella"
+        ],
+        "Condition-Name": [
+          "Salmonella"
+        ]
+      },
+      "right": {
+        "OR": {
+          "left": {
+            "raw_text": "Shigella",
+            "Condition": [
+              "Shigella"
+            ],
+            "Condition-Name": [
+              "Shigella"
+            ]
+          },
+          "right": {
+            "OR": {
+              "left": {
+                "raw_text": "Campylobacter",
+                "Condition": [
+                  "Campylobacter"
+                ],
+                "Condition-Name": [
+                  "Campylobacter"
+                ]
+              },
+              "right": {
+                "raw_text": "or Yersinia",
+                "Condition": [
+                  "Yersinia"
+                ],
+                "Condition-Name": [
+                  "Yersinia"
+                ]
               }
             }
           }

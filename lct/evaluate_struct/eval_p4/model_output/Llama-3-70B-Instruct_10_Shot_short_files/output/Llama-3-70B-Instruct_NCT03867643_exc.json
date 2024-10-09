@@ -3,82 +3,69 @@
     "left": {
       "AND": {
         "left": {
-          "AND": {
+          "raw_text": "- Unwilling or impossible to participate in this research project;",
+          "Study": [
+            "research project"
+          ],
+          "Negation": [
+            "Unwilling",
+            "impossible"
+          ]
+        },
+        "right": {
+          "OR": {
             "left": {
-              "AND": {
-                "left": {
-                  "AND": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "- Unwilling or impossible to participate in this research project;",
-                          "Study": [
-                            "research project"
-                          ],
-                          "Negation": [
-                            "Unwilling",
-                            "impossible"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "- Have a history of allergy or have had a serious vaccine reaction",
-                          "Condition": [
-                            "allergy"
-                          ],
-                          "Condition-Name": [
-                            "allergy"
-                          ],
-                          "Procedure": [
-                            "vaccine reaction"
-                          ],
-                          "Procedure-Name": [
-                            "vaccine reaction"
-                          ]
-                        }
-                      }
-                    },
-                    "right": {
-                      "raw_text": "- Have immune impairment diseases and appear immune impairment;",
-                      "Condition": [
-                        "immune impairment diseases"
-                      ],
-                      "Condition-Name": [
-                        "immune impairment diseases"
-                      ],
-                      "Modifier": [
-                        "immune impairment"
-                      ]
-                    }
-                  }
-                },
-                "right": {
-                  "raw_text": "- Immunosuppressive treatment, receive any injection or oral administration of cortisone or cancer chemotherapy;",
-                  "Procedure": [
-                    "immunosuppressive treatment",
-                    "injection",
-                    "oral administration",
-                    "cortisone",
-                    "cancer chemotherapy"
-                  ],
-                  "Procedure-Name": [
-                    "immunosuppressive treatment",
-                    "injection",
-                    "oral administration",
-                    "cortisone",
-                    "cancer chemotherapy"
-                  ]
-                }
-              }
+              "raw_text": "- Have a history of allergy or have had a serious vaccine reaction",
+              "Condition": [
+                "allergy"
+              ],
+              "Condition-Name": [
+                "allergy"
+              ],
+              "Modifier": [
+                "serious"
+              ]
+            },
+            "right": {
+              "raw_text": "- Have immune impairment diseases and appear immune impairment;",
+              "Condition": [
+                "immune impairment diseases"
+              ],
+              "Condition-Name": [
+                "immune impairment diseases"
+              ],
+              "Modifier": [
+                "immune impairment"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Immunosuppressive treatment, receive any injection or oral administration of cortisone or cancer chemotherapy;",
+              "Procedure": [
+                "Immunosuppressive treatment"
+              ],
+              "Procedure-Name": [
+                "Immunosuppressive treatment"
+              ],
+              "Modifier": [
+                "cortisone",
+                "cancer chemotherapy"
+              ]
             },
             "right": {
               "raw_text": "- Any kind of vaccine or any kind of observation drug has been vaccinated in the past four weeks;",
               "Procedure": [
-                "vaccine",
-                "observation drug"
+                "vaccine"
               ],
               "Procedure-Name": [
-                "vaccine",
-                "observation drug"
+                "vaccine"
               ],
               "Eq-Temporal-Period": [
                 "past four weeks"
@@ -87,102 +74,100 @@
           }
         },
         "right": {
-          "raw_text": "- Any acute disease or other infection requiring antibiotic or antiviral treatment in the past four weeks;",
-          "Condition": [
-            "acute disease",
-            "infection"
-          ],
-          "Condition-Name": [
-            "acute disease",
-            "infection"
-          ],
-          "Procedure": [
-            "antibiotic",
-            "antiviral treatment"
-          ],
-          "Procedure-Name": [
-            "antibiotic",
-            "antiviral treatment"
-          ],
-          "Eq-Temporal-Period": [
-            "past four weeks"
-          ]
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Any acute disease or other infection requiring antibiotic or antiviral treatment in the past four weeks;",
+                  "Condition": [
+                    "acute disease"
+                  ],
+                  "Condition-Name": [
+                    "acute disease"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "past four weeks"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Fever symptoms occurred in the past week ( axillary temperature ≥ 38 ℃ );",
+                  "Condition": [
+                    "Fever"
+                  ],
+                  "Condition-Name": [
+                    "Fever"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "past week"
+                  ],
+                  "Eq-Value": [
+                    "38 ℃"
+                  ],
+                  "Eq-Operator": [
+                    "≥"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Blood transfusion experience;",
+                  "Procedure": [
+                    "Blood transfusion"
+                  ],
+                  "Procedure-Name": [
+                    "Blood transfusion"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Has a history of more serious infectious diseases ( five types of hepatitis, AIDS, syphilis, gonorrhea, etc. );",
+                      "Condition": [
+                        "hepatitis",
+                        "AIDS",
+                        "syphilis",
+                        "gonorrhea"
+                      ],
+                      "Condition-Name": [
+                        "hepatitis",
+                        "AIDS",
+                        "syphilis",
+                        "gonorrhea"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Hepatitis B infection or carriers(lineal relationship);",
+                      "Condition": [
+                        "Hepatitis B infection"
+                      ],
+                      "Condition-Name": [
+                        "Hepatitis B infection"
+                      ],
+                      "Modifier": [
+                        "carriers"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
     "right": {
-      "AND": {
-        "left": {
-          "raw_text": "- Fever symptoms occurred in the past week ( axillary temperature ≥ 38 ℃ );",
-          "Condition": [
-            "Fever"
-          ],
-          "Condition-Name": [
-            "Fever"
-          ],
-          "Eq-Temporal-Period": [
-            "past week"
-          ],
-          "Eq-Value": [
-            "38 ℃"
-          ],
-          "Eq-Operator": [
-            "≥"
-          ]
-        },
-        "right": {
-          "raw_text": "- Blood transfusion experience;",
-          "Procedure": [
-            "Blood transfusion"
-          ],
-          "Procedure-Name": [
-            "Blood transfusion"
-          ]
-        }
-      }
+      "raw_text": "- Abnormal physical examination;",
+      "Observation": [
+        "physical examination"
+      ],
+      "Observation-Name": [
+        "physical examination"
+      ],
+      "Modifier": [
+        "Abnormal"
+      ]
     }
-  },
-  "right": {
-    "AND": {
-      "left": {
-        "raw_text": "- Has a history of more serious infectious diseases ( five types of hepatitis, AIDS, syphilis, gonorrhea, etc. );",
-        "Condition": [
-          "hepatitis",
-          "AIDS",
-          "syphilis",
-          "gonorrhea"
-        ],
-        "Condition-Name": [
-          "hepatitis",
-          "AIDS",
-          "syphilis",
-          "gonorrhea"
-        ]
-      },
-      "right": {
-        "raw_text": "- Hepatitis B infection or carriers(lineal relationship);",
-        "Condition": [
-          "Hepatitis B infection"
-        ],
-        "Condition-Name": [
-          "Hepatitis B infection"
-        ],
-        "Modifier": [
-          "carriers"
-        ]
-      }
-    }
-  },
-  "right": {
-    "raw_text": "- Abnormal physical examination;",
-    "Procedure": [
-      "physical examination"
-    ],
-    "Procedure-Name": [
-      "physical examination"
-    ],
-    "Modifier": [
-      "Abnormal"
-    ]
   }
 }

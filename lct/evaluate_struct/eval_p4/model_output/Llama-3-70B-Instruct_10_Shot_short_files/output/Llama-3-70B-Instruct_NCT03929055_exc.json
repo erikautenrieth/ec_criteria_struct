@@ -3,27 +3,23 @@
     "left": {
       "AND": {
         "left": {
-          "NOT": {
-            "left": {
-              "raw_text": "patients in which it is not possible to place the esophageal catheter",
-              "Procedure": [
-                "place"
-              ],
-              "Procedure-Name": [
-                "esophageal catheter"
-              ],
-              "Negation": [
-                "not possible"
-              ]
-            }
-          }
+          "raw_text": "- patients in which it is not possible to place the esophageal catheter",
+          "Procedure": [
+            "place the esophageal catheter"
+          ],
+          "Procedure-Name": [
+            "esophageal catheter"
+          ],
+          "Negation": [
+            "not possible"
+          ]
         },
         "right": {
-          "NOT": {
+          "OR": {
             "left": {
               "raw_text": "or it is not possible to detect the diaphragm by ultrasound",
               "Procedure": [
-                "detect"
+                "detect the diaphragm"
               ],
               "Procedure-Name": [
                 "ultrasound"
@@ -37,24 +33,20 @@
               "Observation-Name": [
                 "diaphragm"
               ]
+            },
+            "right": {
+              "raw_text": "or it is not possible to apply the nasal cannula device",
+              "Procedure": [
+                "apply the nasal cannula device"
+              ],
+              "Procedure-Name": [
+                "nasal cannula device"
+              ],
+              "Negation": [
+                "not possible"
+              ]
             }
           }
-        }
-      }
-    },
-    "right": {
-      "NOT": {
-        "left": {
-          "raw_text": "or it is not possible to apply the nasal cannula device",
-          "Procedure": [
-            "apply"
-          ],
-          "Procedure-Name": [
-            "nasal cannula device"
-          ],
-          "Negation": [
-            "not possible"
-          ]
         }
       }
     }

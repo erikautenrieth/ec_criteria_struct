@@ -9,12 +9,6 @@
           ],
           "Condition-Name": [
             "ulcerative colitis"
-          ],
-          "Eq-Comparison": [
-            "current"
-          ],
-          "Eq-Temporal-Period": [
-            "current"
           ]
         },
         "right": {
@@ -22,10 +16,14 @@
             "left": {
               "raw_text": "- inflammatory bowel disease-unclassified (IBD-U) (formerly known as indeterminate colitis)",
               "Condition": [
-                "inflammatory bowel disease-unclassified"
+                "inflammatory bowel disease-unclassified",
+                "IBD-U",
+                "indeterminate colitis"
               ],
               "Condition-Name": [
-                "inflammatory bowel disease-unclassified"
+                "inflammatory bowel disease-unclassified",
+                "IBD-U",
+                "indeterminate colitis"
               ]
             },
             "right": {
@@ -92,12 +90,21 @@
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "- or any kind of intra-abdominal surgery within 3 months of baseline",
+                  "raw_text": "- or any kind of intra-abdominal surgery",
                   "Procedure": [
                     "intra-abdominal surgery"
                   ],
                   "Procedure-Name": [
                     "intra-abdominal surgery"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- or extra abdominal surgery within 3 months of baseline",
+                  "Procedure": [
+                    "extra abdominal surgery"
+                  ],
+                  "Procedure-Name": [
+                    "extra abdominal surgery"
                   ],
                   "Eq-Temporal-Unit": [
                     "months"
@@ -108,15 +115,6 @@
                   "Eq-Comparison": [
                     "within 3 months"
                   ]
-                },
-                "right": {
-                  "raw_text": "- or extra abdominal surgery",
-                  "Procedure": [
-                    "extra abdominal surgery"
-                  ],
-                  "Procedure-Name": [
-                    "extra abdominal surgery"
-                  ]
                 }
               }
             }
@@ -126,17 +124,20 @@
     },
     "right": {
       "raw_text": "- Have ever received any monoclonal antibodies binding IL-23",
-      "Drug": [
+      "Procedure": [
         "monoclonal antibodies"
       ],
-      "Drug-Name": [
+      "Procedure-Name": [
         "monoclonal antibodies"
       ],
       "Eq-Comparison": [
-        "ever"
+        "ever received"
       ],
       "Eq-Temporal-Period": [
         "ever"
+      ],
+      "Drug": [
+        "IL-23"
       ]
     }
   }

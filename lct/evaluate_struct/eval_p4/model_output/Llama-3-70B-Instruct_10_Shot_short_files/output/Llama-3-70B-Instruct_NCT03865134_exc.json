@@ -4,13 +4,16 @@
       "AND": {
         "left": {
           "raw_text": "- To be a child who does not comply with Optical Kohlerans Tomography (OCT)",
-          "Age": [
+          "Condition": [
             "child"
           ],
-          "Observation": [
+          "Condition-Name": [
+            "child"
+          ],
+          "Procedure": [
             "Optical Kohlerans Tomography"
           ],
-          "Observation-Name": [
+          "Procedure-Name": [
             "Optical Kohlerans Tomography"
           ],
           "Negation": [
@@ -18,9 +21,12 @@
           ]
         },
         "right": {
-          "NOT": {
+          "AND": {
             "left": {
               "raw_text": "- Not participating in one or more of the eye examination or physiotherapy assessments",
+              "Negation": [
+                "Not"
+              ],
               "Procedure": [
                 "eye examination",
                 "physiotherapy assessments"
@@ -28,43 +34,24 @@
               "Procedure-Name": [
                 "eye examination",
                 "physiotherapy assessments"
-              ],
-              "Negation": [
-                "Not"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "- Being children",
-          "Age": [
-            "children"
-          ]
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "and parents",
-              "Age": [
-                "parents"
               ]
             },
             "right": {
-              "NOT": {
-                "left": {
-                  "raw_text": "who do not agree to participate in the study",
-                  "Study": [
-                    "study"
-                  ],
-                  "Negation": [
-                    "do not agree"
-                  ]
-                }
-              }
+              "raw_text": "- Being children and parents who do not agree to participate in the study",
+              "Condition": [
+                "children",
+                "parents"
+              ],
+              "Condition-Name": [
+                "children",
+                "parents"
+              ],
+              "Negation": [
+                "do not agree"
+              ],
+              "Study": [
+                "study"
+              ]
             }
           }
         }

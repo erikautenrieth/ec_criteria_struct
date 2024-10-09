@@ -5,11 +5,11 @@
         "left": {
           "raw_text": "- History of serious medical conditions such as intestinal or severe metabolic diseases",
           "Condition": [
-            "intestinal",
+            "intestinal diseases",
             "severe metabolic diseases"
           ],
           "Condition-Name": [
-            "intestinal",
+            "intestinal diseases",
             "severe metabolic diseases"
           ]
         },
@@ -25,102 +25,36 @@
               ]
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "renal",
-                  "Condition": [
-                    "renal"
-                  ],
-                  "Condition-Name": [
-                    "renal"
-                  ]
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "hepatic or pancreatic diseases",
-                      "Condition": [
-                        "hepatic",
-                        "pancreatic diseases"
-                      ],
-                      "Condition-Name": [
-                        "hepatic",
-                        "pancreatic diseases"
-                      ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "disorders, ulcer",
-                          "Condition": [
-                            "ulcer"
-                          ],
-                          "Condition-Name": [
-                            "ulcer"
-                          ]
-                        },
-                        "right": {
-                          "OR": {
-                            "left": {
-                              "raw_text": "hyperthyroidism",
-                              "Condition": [
-                                "hyperthyroidism"
-                              ],
-                              "Condition-Name": [
-                                "hyperthyroidism"
-                              ]
-                            },
-                            "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "malignance",
-                                  "Condition": [
-                                    "malignance"
-                                  ],
-                                  "Condition-Name": [
-                                    "malignance"
-                                  ]
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "chronic malnutrition",
-                                      "Condition": [
-                                        "chronic malnutrition"
-                                      ],
-                                      "Condition-Name": [
-                                        "chronic malnutrition"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "anaemia",
-                                      "Condition": [
-                                        "anaemia"
-                                      ],
-                                      "Condition-Name": [
-                                        "anaemia"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "renal, hepatic or pancreatic diseases, disorders, ulcer, hyperthyroidism, malignance, chronic malnutrition, anaemia",
+              "Condition": [
+                "renal diseases",
+                "hepatic diseases",
+                "pancreatic diseases",
+                "ulcer",
+                "hyperthyroidism",
+                "malignance",
+                "chronic malnutrition",
+                "anaemia"
+              ],
+              "Condition-Name": [
+                "renal diseases",
+                "hepatic diseases",
+                "pancreatic diseases",
+                "ulcer",
+                "hyperthyroidism",
+                "malignance",
+                "chronic malnutrition",
+                "anaemia"
+              ]
             }
           }
         }
       }
     },
     "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "raw_text": "- History or on therapy with medication known to interfere with bone metabolism such as steroids, hormones, diuretics, cortisone or anti-seizure medication",
+          "raw_text": "- History or on therapy with medication known to interfere with bone metabolism such as steroids",
           "Procedure": [
             "therapy"
           ],
@@ -128,26 +62,37 @@
             "therapy"
           ],
           "Drug": [
-            "steroids",
+            "steroids"
+          ],
+          "Eq-Comparison": [
+            "known to interfere"
+          ]
+        },
+        "right": {
+          "raw_text": "hormones, diuretics, cortisone or anti-seizure medication",
+          "Drug": [
             "hormones",
             "diuretics",
             "cortisone",
             "anti-seizure medication"
           ]
-        },
-        "right": {
-          "raw_text": "- Taking regularly any nutritional supplements and unwilling to stop for the study",
-          "Procedure": [
-            "Taking regularly"
-          ],
-          "Procedure-Name": [
-            "Taking regularly"
-          ],
-          "Drug": [
-            "nutritional supplements"
-          ]
         }
       }
     }
+  },
+  "right": {
+    "raw_text": "- Taking regularly any nutritional supplements and unwilling to stop for the study",
+    "Procedure": [
+      "Taking regularly"
+    ],
+    "Procedure-Name": [
+      "Taking regularly"
+    ],
+    "Drug": [
+      "nutritional supplements"
+    ],
+    "Eq-Comparison": [
+      "unwilling to stop"
+    ]
   }
 }

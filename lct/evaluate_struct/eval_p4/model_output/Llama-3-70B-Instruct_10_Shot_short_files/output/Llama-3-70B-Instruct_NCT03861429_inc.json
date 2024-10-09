@@ -17,22 +17,23 @@
           "AND": {
             "left": {
               "raw_text": "- Mild to moderate cognitive impairment (BIMS = 8-15, (MDS C0500) (nursing home residents only)",
+              "Condition": [
+                "cognitive impairment"
+              ],
+              "Condition-Name": [
+                "cognitive impairment"
+              ],
+              "Eq-Value": [
+                "8-15"
+              ],
+              "Eq-Comparison": [
+                "Mild to moderate"
+              ],
               "Observation": [
                 "BIMS"
               ],
               "Observation-Name": [
                 "BIMS"
-              ],
-              "Eq-Value": [
-                "8",
-                "15"
-              ],
-              "Eq-Comparison": [
-                "8-15"
-              ],
-              "Modifier": [
-                "mild",
-                "moderate"
               ]
             },
             "right": {
@@ -46,7 +47,7 @@
                     "Makes Self Understood"
                   ],
                   "Eq-Value": [
-                    "1"
+                    "<1"
                   ],
                   "Eq-Comparison": [
                     "<1"
@@ -63,7 +64,7 @@
                         "Understood By Others"
                       ],
                       "Eq-Value": [
-                        "1"
+                        "<1"
                       ],
                       "Eq-Comparison": [
                         "<1"
@@ -90,6 +91,12 @@
                               "Age": [
                                 "Age"
                               ],
+                              "Eq-Operator": [
+                                ">"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "years"
+                              ],
                               "Eq-Value": [
                                 "65"
                               ],
@@ -108,37 +115,19 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "Family",
-                                      "Family": [
-                                        "Family"
+                                      "raw_text": "Family - Speaks English",
+                                      "Language": [
+                                        "English"
                                       ]
                                     },
                                     "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "- Speaks English",
-                                          "Language": [
-                                            "English"
-                                          ]
-                                        },
-                                        "right": {
-                                          "AND": {
-                                            "left": {
-                                              "raw_text": "- Willing and able to watch the videos",
-                                              "Modifier": [
-                                                "willing",
-                                                "able"
-                                              ]
-                                            },
-                                            "right": {
-                                              "raw_text": "- Willing to complete short surveys. Being unable to attend care conference to view the video (e.g. due to distance) will not exclude family from participating.",
-                                              "Modifier": [
-                                                "willing"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
+                                      "raw_text": "- Willing and able to watch the videos",
+                                      "Procedure": [
+                                        "videos"
+                                      ],
+                                      "Procedure-Name": [
+                                        "videos"
+                                      ]
                                     }
                                   }
                                 }
@@ -159,36 +148,19 @@
     "right": {
       "OR": {
         "left": {
-          "raw_text": "Staff",
-          "Staff": [
-            "Staff"
+          "raw_text": "Staff - Speaks English",
+          "Language": [
+            "English"
           ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "- Speaks English",
-              "Language": [
-                "English"
-              ]
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "- Willing to watch the videos",
-                  "Modifier": [
-                    "willing"
-                  ]
-                },
-                "right": {
-                  "raw_text": "- Willing to complete short surveys",
-                  "Modifier": [
-                    "willing"
-                  ]
-                }
-              }
-            }
-          }
+          "raw_text": "- Willing to watch the videos",
+          "Procedure": [
+            "videos"
+          ],
+          "Procedure-Name": [
+            "videos"
+          ]
         }
       }
     }

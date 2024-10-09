@@ -9,25 +9,18 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "NOT": {
+                      "AND": {
                         "left": {
-                          "raw_text": "Known current pregnancy",
+                          "raw_text": "- Known current pregnancy",
                           "Condition": [
                             "pregnancy"
                           ],
                           "Condition-Name": [
                             "pregnancy"
-                          ],
-                          "Negation": [
-                            "Known"
                           ]
-                        }
-                      }
-                    },
-                    "right": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "Any condition, which, in the opinion of the investigator may prevent him from performing the colour doppler ultrasound test",
+                        },
+                        "right": {
+                          "raw_text": "- Any condition, which, in the opinion of the investigator may prevent him from performing the colour doppler ultrasound test",
                           "Condition": [
                             "condition"
                           ],
@@ -39,19 +32,12 @@
                           ],
                           "Procedure-Name": [
                             "colour doppler ultrasound test"
-                          ],
-                          "Negation": [
-                            "Any"
                           ]
                         }
                       }
-                    }
-                  }
-                },
-                "right": {
-                  "NOT": {
-                    "left": {
-                      "raw_text": "Delay from onset of symptoms to inclusion of more than 10 days",
+                    },
+                    "right": {
+                      "raw_text": "- Delay from onset of symptoms to inclusion of more than 10 days",
                       "Eq-Comparison": [
                         "more than 10 days"
                       ],
@@ -61,18 +47,14 @@
                       "Eq-Value": [
                         "10"
                       ],
-                      "Negation": [
-                        "Delay"
+                      "Eq-Operator": [
+                        "more than"
                       ]
                     }
                   }
-                }
-              }
-            },
-            "right": {
-              "NOT": {
-                "left": {
-                  "raw_text": "Therapeutic anticoagulation for more than 48 hours in the two days prior to consent",
+                },
+                "right": {
+                  "raw_text": "- Therapeutic anticoagulation for more than 48 hours in the two days prior to consent",
                   "Procedure": [
                     "anticoagulation"
                   ],
@@ -88,18 +70,14 @@
                   "Eq-Value": [
                     "48"
                   ],
-                  "Negation": [
-                    "Therapeutic"
+                  "Eq-Operator": [
+                    "more than"
                   ]
                 }
               }
-            }
-          }
-        },
-        "right": {
-          "NOT": {
-            "left": {
-              "raw_text": "Prophylactic anticoagulation for more than 48 hours in the two days prior to consent",
+            },
+            "right": {
+              "raw_text": "- Prophylactic anticoagulation for more than 48 hours in the two days prior to consent",
               "Procedure": [
                 "anticoagulation"
               ],
@@ -115,50 +93,48 @@
               "Eq-Value": [
                 "48"
               ],
-              "Negation": [
-                "Prophylactic"
+              "Eq-Operator": [
+                "more than"
               ]
             }
           }
+        },
+        "right": {
+          "raw_text": "- Clinical symptoms of pulmonary embolism",
+          "Condition": [
+            "pulmonary embolism"
+          ],
+          "Condition-Name": [
+            "pulmonary embolism"
+          ]
         }
       }
     },
     "right": {
       "AND": {
         "left": {
-          "NOT": {
-            "left": {
-              "raw_text": "Clinical symptoms of pulmonary embolism",
-              "Condition": [
-                "pulmonary embolism"
-              ],
-              "Condition-Name": [
-                "pulmonary embolism"
-              ],
-              "Negation": [
-                "Clinical"
-              ]
-            }
-          }
+          "raw_text": "- Life expectancy less than 3 months",
+          "Eq-Comparison": [
+            "less than 3 months"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Eq-Value": [
+            "3"
+          ],
+          "Eq-Operator": [
+            "less than"
+          ]
         },
         "right": {
-          "NOT": {
-            "left": {
-              "raw_text": "Life expectancy less than 3 months",
-              "Eq-Comparison": [
-                "less than 3 months"
-              ],
-              "Eq-Temporal-Unit": [
-                "months"
-              ],
-              "Eq-Value": [
-                "3"
-              ],
-              "Negation": [
-                "Life"
-              ]
-            }
-          }
+          "raw_text": "- Patient unable to adhere to protocol or follow-up visits and contacts",
+          "Condition": [
+            "unable to adhere"
+          ],
+          "Condition-Name": [
+            "unable to adhere"
+          ]
         }
       }
     }
@@ -166,39 +142,23 @@
   "right": {
     "AND": {
       "left": {
-        "NOT": {
-          "left": {
-            "raw_text": "Patient unable to adhere to protocol or follow-up visits and contacts",
-            "Negation": [
-              "unable"
-            ]
-          }
-        }
+        "raw_text": "- Participants under legal guardianship or incapacitation",
+        "Condition": [
+          "legal guardianship",
+          "incapacitation"
+        ],
+        "Condition-Name": [
+          "legal guardianship",
+          "incapacitation"
+        ]
       },
       "right": {
-        "NOT": {
-          "left": {
-            "raw_text": "Participants under legal guardianship or incapacitation",
-            "Negation": [
-              "under"
-            ]
-          }
-        }
-      }
-    }
-  },
-  "right": {
-    "NOT": {
-      "left": {
-        "raw_text": "Patient already enrolled in a deep vein thrombosis (DVT) diagnostic research",
+        "raw_text": "- Patient already enrolled in a deep vein thrombosis (DVT) diagnostic research",
         "Study": [
-          "deep vein thrombosis"
+          "deep vein thrombosis (DVT) diagnostic research"
         ],
         "Study-Name": [
-          "deep vein thrombosis"
-        ],
-        "Negation": [
-          "already"
+          "deep vein thrombosis (DVT) diagnostic research"
         ]
       }
     }

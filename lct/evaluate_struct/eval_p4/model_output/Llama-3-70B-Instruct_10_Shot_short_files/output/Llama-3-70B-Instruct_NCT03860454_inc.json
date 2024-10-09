@@ -1,34 +1,35 @@
 {
   "OR": {
     "left": {
-      "raw_text": "- LMNA+ cases with pathogenic LMNA mutations for LMNA+ and heart myocardial samples from the explanted hearts of LMNA+ patients who are scheduled to undergo clinically indicated heart transplantation at the Papworth Hospital NHS Trust.",
-      "Condition": [
-        "LMNA+"
-      ],
-      "Condition-Name": [
-        "LMNA+"
-      ],
-      "Procedure": [
-        "heart transplantation"
-      ],
-      "Procedure-Name": [
-        "heart transplantation"
-      ],
-      "Location": [
-        "Papworth Hospital NHS Trust"
-      ],
-      "Observation": [
-        "heart myocardial samples"
-      ],
-      "Observation-Name": [
-        "heart myocardial samples"
-      ],
-      "Modifier": [
-        "pathogenic"
-      ]
+      "AND": {
+        "left": {
+          "raw_text": "- LMNA+ cases with pathogenic LMNA mutations for LMNA+ and heart myocardial samples from the explanted hearts of LMNA+ patients",
+          "Condition": [
+            "LMNA+"
+          ],
+          "Condition-Name": [
+            "LMNA+"
+          ],
+          "Procedure": [
+            "heart transplantation"
+          ],
+          "Procedure-Name": [
+            "heart transplantation"
+          ],
+          "Study": [
+            "Papworth Hospital NHS Trust"
+          ]
+        },
+        "right": {
+          "raw_text": "who are scheduled to undergo clinically indicated heart transplantation at the Papworth Hospital NHS Trust.",
+          "Study": [
+            "Papworth Hospital NHS Trust"
+          ]
+        }
+      }
     },
-    "right": {
-      "OR": {
+    "middle": {
+      "AND": {
         "left": {
           "raw_text": "- DCMWT cases: patients with heart muscle failure but with wild-type lamin gene.",
           "Condition": [
@@ -38,37 +39,31 @@
             "DCMWT"
           ],
           "Procedure": [
-            "heart transplantation"
+            "heart muscle failure"
           ],
           "Procedure-Name": [
-            "heart transplantation"
-          ],
-          "Location": [
-            "Papworth Hospital NHS Trust"
-          ],
-          "Observation": [
             "heart muscle failure"
-          ],
-          "Observation-Name": [
-            "heart muscle failure"
-          ],
-          "Modifier": [
-            "wild-type"
           ]
         },
         "right": {
-          "raw_text": "HV (controls): matched to cases.",
-          "Condition": [
-            "HV"
-          ],
-          "Condition-Name": [
-            "HV"
-          ],
-          "Modifier": [
-            "controls"
+          "raw_text": "Heart myocardial samples from the explanted hearts of DCMWT patients who are scheduled to undergo clinically indicated heart transplantation at the Papworth Hospital NHS Trust.",
+          "Study": [
+            "Papworth Hospital NHS Trust"
           ]
         }
       }
+    },
+    "right": {
+      "raw_text": "- HV (controls): matched to cases.",
+      "Condition": [
+        "HV"
+      ],
+      "Condition-Name": [
+        "HV"
+      ],
+      "Modifier": [
+        "controls"
+      ]
     }
   }
 }

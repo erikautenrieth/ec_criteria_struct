@@ -1,39 +1,17 @@
 {
   "OR": {
     "left": {
-      "OR": {
-        "left": {
-          "raw_text": "- history of myocardial infarction",
-          "Condition": [
-            "myocardial infarction"
-          ],
-          "Condition-Name": [
-            "myocardial infarction"
-          ]
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- supplemental oxygen requirement",
-              "Condition": [
-                "oxygen requirement"
-              ],
-              "Condition-Name": [
-                "oxygen requirement"
-              ]
-            },
-            "right": {
-              "raw_text": "- diabetes",
-              "Condition": [
-                "diabetes"
-              ],
-              "Condition-Name": [
-                "diabetes"
-              ]
-            }
-          }
-        }
-      }
+      "raw_text": "- history of myocardial infarction, supplemental oxygen requirement, or diabetes",
+      "Condition": [
+        "myocardial infarction",
+        "supplemental oxygen requirement",
+        "diabetes"
+      ],
+      "Condition-Name": [
+        "myocardial infarction",
+        "supplemental oxygen requirement",
+        "diabetes"
+      ]
     },
     "right": {
       "OR": {
@@ -45,7 +23,7 @@
           "Condition-Name": [
             "chronic gastrointestinal symptoms"
           ],
-          "Study": [
+          "Modifier": [
             "healthy control population"
           ]
         },
@@ -76,43 +54,70 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "- history of head injury",
+                      "raw_text": "- history of head injury, metal in the skull, stroke, or a history of seizures",
                       "Condition": [
-                        "head injury"
+                        "head injury",
+                        "metal in the skull",
+                        "stroke",
+                        "seizures"
                       ],
                       "Condition-Name": [
-                        "head injury"
+                        "head injury",
+                        "metal in the skull",
+                        "stroke",
+                        "seizures"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "- metal in the skull",
-                          "Condition": [
-                            "metal in the skull"
+                          "raw_text": "- implantable devices, such as a pacemaker or nerve stimulator",
+                          "Procedure": [
+                            "implantable devices",
+                            "pacemaker",
+                            "nerve stimulator"
                           ],
-                          "Condition-Name": [
-                            "metal in the skull"
+                          "Procedure-Name": [
+                            "implantable devices",
+                            "pacemaker",
+                            "nerve stimulator"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "- stroke",
-                              "Condition": [
-                                "stroke"
+                              "raw_text": "- current use of the following medications or use of substances which are known to lower the seizure threshold: amitriptyline (Elavil), nortriptyline (Pamelor), imipramine (Tofranil), doxepin (Sinequan), clozapine (Clozaril), chlorpromazine (Thorazine), amphetamines or methamphetamine, Ecstasy, Ketamine, Angel Dust/phencyclidine (PCP), cocaine, or 3 or more alcoholic drinks per day",
+                              "Drug": [
+                                "amitriptyline",
+                                "nortriptyline",
+                                "imipramine",
+                                "doxepin",
+                                "clozapine",
+                                "chlorpromazine",
+                                "amphetamines",
+                                "methamphetamine",
+                                "Ecstasy",
+                                "Ketamine",
+                                "Angel Dust/phencyclidine",
+                                "PCP",
+                                "cocaine"
                               ],
-                              "Condition-Name": [
-                                "stroke"
+                              "Drug-Name": [
+                                "Elavil",
+                                "Pamelor",
+                                "Tofranil",
+                                "Sinequan",
+                                "Clozaril",
+                                "Thorazine"
                               ]
                             },
                             "right": {
-                              "raw_text": "- or a history of seizures",
+                              "raw_text": "- pregnancy",
                               "Condition": [
-                                "seizures"
+                                "pregnancy"
                               ],
                               "Condition-Name": [
-                                "seizures"
+                                "pregnancy"
                               ]
                             }
                           }
@@ -126,73 +131,6 @@
           }
         }
       }
-    },
-    "right": {
-      "OR": {
-        "left": {
-          "raw_text": "- implantable devices, such as a pacemaker or nerve stimulator",
-          "Procedure": [
-            "implantable devices",
-            "pacemaker",
-            "nerve stimulator"
-          ],
-          "Procedure-Name": [
-            "implantable devices",
-            "pacemaker",
-            "nerve stimulator"
-          ]
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- current use of the following medications or use of substances which are known to lower the seizure threshold:",
-              "Drug": [
-                "amitriptyline",
-                "nortriptyline",
-                "imipramine",
-                "doxepin",
-                "clozapine",
-                "chlorpromazine",
-                "amphetamines",
-                "methamphetamine",
-                "Ecstasy",
-                "Ketamine",
-                "Angel Dust/phencyclidine",
-                "cocaine"
-              ],
-              "Drug-Name": [
-                "Elavil",
-                "Pamelor",
-                "Tofranil",
-                "Sinequan",
-                "Clozaril",
-                "Thorazine"
-              ]
-            },
-            "right": {
-              "raw_text": "- or 3 or more alcoholic drinks per day",
-              "Drug": [
-                "alcoholic drinks"
-              ],
-              "Eq-Value": [
-                "3"
-              ],
-              "Eq-Comparison": [
-                "or more"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "raw_text": "- pregnancy",
-      "Condition": [
-        "pregnancy"
-      ],
-      "Condition-Name": [
-        "pregnancy"
-      ]
     }
   }
 }

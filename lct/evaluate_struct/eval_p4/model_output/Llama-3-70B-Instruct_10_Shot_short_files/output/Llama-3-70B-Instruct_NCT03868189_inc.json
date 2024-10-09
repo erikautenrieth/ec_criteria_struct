@@ -23,54 +23,58 @@
               ]
             },
             "right": {
-              "raw_text": "- Patient that signed the consent form.",
-              "Study": [
-                "consent form"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "- Patient with an health insurance plan.",
-          "Insurance": [
-            "health insurance plan"
-          ]
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "- The patient is at least 18 years old (≥).",
-              "Age": [
-                "Age"
-              ],
-              "Eq-Operator": [
-                "≥"
-              ],
-              "Eq-Temporal-Unit": [
-                "years"
-              ],
-              "Eq-Value": [
-                "18"
-              ]
-            },
-            "right": {
-              "raw_text": "he patient is under 80 years old (≤).",
-              "Age": [
-                "Age"
-              ],
-              "Eq-Operator": [
-                "≤"
-              ],
-              "Eq-Temporal-Unit": [
-                "years"
-              ],
-              "Eq-Value": [
-                "80"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "- Patient that signed the consent form.",
+                  "Study": [
+                    "consent"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patient with an health insurance plan.",
+                      "Insurance": [
+                        "health insurance plan"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- The patient is at least 18 years old (≥).",
+                          "Age": [
+                            "Age"
+                          ],
+                          "Eq-Operator": [
+                            "≥"
+                          ],
+                          "Eq-Value": [
+                            "18"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "years"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "he patient is under 80 years old (≤).",
+                          "Age": [
+                            "Age"
+                          ],
+                          "Eq-Operator": [
+                            "≤"
+                          ],
+                          "Eq-Value": [
+                            "80"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "years"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }

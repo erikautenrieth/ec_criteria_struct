@@ -5,9 +5,6 @@
       "Age": [
         "age"
       ],
-      "Eq-Temporal-Unit": [
-        "years"
-      ],
       "Eq-Value": [
         "20",
         "70"
@@ -15,14 +12,14 @@
       "Eq-Comparison": [
         "20-70"
       ],
-      "Eq-Operator": [
-        "-"
+      "Eq-Temporal-Unit": [
+        "years"
       ]
     },
     "right": {
       "AND": {
         "left": {
-          "raw_text": "2. Chronic ankle sprain more than 3months with chronic ankle pain or instability sensation",
+          "raw_text": "2. Chronic ankle sprain more than 3months",
           "Condition": [
             "Chronic ankle sprain"
           ],
@@ -37,35 +34,46 @@
           ],
           "Eq-Comparison": [
             "more than 3months"
-          ],
-          "Eq-Operator": [
-            "more than"
-          ],
-          "Observation": [
-            "chronic ankle pain",
-            "instability sensation"
-          ],
-          "Observation-Name": [
-            "chronic ankle pain",
-            "instability sensation"
           ]
         },
         "right": {
-          "raw_text": "3. Ultrasound diagnosed anterior talofibular ligament sprain",
-          "Procedure": [
-            "Ultrasound"
-          ],
-          "Procedure-Name": [
-            "Ultrasound"
-          ],
-          "Condition": [
-            "anterior talofibular ligament sprain"
-          ],
-          "Condition-Name": [
-            "anterior talofibular ligament sprain"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "with chronic ankle pain",
+              "Condition": [
+                "chronic ankle pain"
+              ],
+              "Condition-Name": [
+                "chronic ankle pain"
+              ]
+            },
+            "right": {
+              "raw_text": "or instability sensation",
+              "Condition": [
+                "instability sensation"
+              ],
+              "Condition-Name": [
+                "instability sensation"
+              ]
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "3. Ultrasound diagnosed anterior talofibular ligament sprain",
+      "Procedure": [
+        "Ultrasound"
+      ],
+      "Procedure-Name": [
+        "Ultrasound"
+      ],
+      "Condition": [
+        "anterior talofibular ligament sprain"
+      ],
+      "Condition-Name": [
+        "anterior talofibular ligament sprain"
+      ]
     }
   }
 }

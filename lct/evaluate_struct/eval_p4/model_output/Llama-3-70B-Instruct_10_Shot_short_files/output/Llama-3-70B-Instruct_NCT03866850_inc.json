@@ -31,73 +31,93 @@
           ]
         },
         "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "- Early onset of deafness (< 3 years of age); no requirement for age at implantation",
-              "Condition": [
-                "deafness"
+              "OR": {
+                "left": {
+                  "raw_text": "- Early onset of deafness (< 3 years of age);",
+                  "Condition": [
+                    "deafness"
+                  ],
+                  "Condition-Name": [
+                    "deafness"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Eq-Comparison": [
+                    "< 3 years"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "age"
+                  ]
+                },
+                "right": {
+                  "raw_text": "no requirement for age at implantation"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Late onset of deafness (> 3 years of age);",
+                  "Condition": [
+                    "deafness"
+                  ],
+                  "Condition-Name": [
+                    "deafness"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Eq-Comparison": [
+                    "> 3 years"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "age"
+                  ]
+                },
+                "right": {
+                  "raw_text": "matched in duration of deafness to the early onset group"
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Has had device experience for at least one year",
+              "Device": [
+                "device"
               ],
-              "Condition-Name": [
-                "deafness"
-              ],
-              "Eq-Comparison": [
-                "< 3 years"
+              "Device-Name": [
+                "device"
               ],
               "Eq-Value": [
-                "3"
+                "1"
+              ],
+              "Eq-Comparison": [
+                "at least one year"
               ],
               "Eq-Temporal-Unit": [
-                "years"
+                "year"
               ]
             },
             "right": {
-              "raw_text": "- Late onset of deafness (> 3 years of age); matched in duration of deafness to the early onset group",
-              "Condition": [
-                "deafness"
-              ],
-              "Condition-Name": [
-                "deafness"
-              ],
-              "Eq-Comparison": [
-                "> 3 years"
-              ],
-              "Eq-Value": [
-                "3"
-              ],
-              "Eq-Temporal-Unit": [
-                "years"
+              "raw_text": "- Can be child or adult at the time of enrollment",
+              "Life-Stage-And-Gender": [
+                "child",
+                "adult"
               ]
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "- Has had device experience for at least one year",
-          "Device": [
-            "device"
-          ],
-          "Device-Name": [
-            "device"
-          ],
-          "Eq-Comparison": [
-            "at least one year"
-          ],
-          "Eq-Value": [
-            "1"
-          ],
-          "Eq-Temporal-Unit": [
-            "year"
-          ]
-        },
-        "right": {
-          "raw_text": "- Can be child or adult at the time of enrollment",
-          "Life-Stage-And-Gender": [
-            "child",
-            "adult"
-          ]
         }
       }
     }

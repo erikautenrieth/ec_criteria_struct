@@ -11,9 +11,9 @@ load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False
 
 
 r = 256
-epoch = 40
+epoch = 10
 
-output_dir  = "outputs/outputs_70b_p4_2" # outputs_70b_p4_5
+output_dir  = "outputs/outputs_8b_2" # outputs_70b_p4_5
 os.makedirs(output_dir, exist_ok=True)
 
 

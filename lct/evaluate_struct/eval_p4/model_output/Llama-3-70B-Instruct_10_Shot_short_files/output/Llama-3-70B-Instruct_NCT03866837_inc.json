@@ -1,64 +1,83 @@
 {
   "AND": {
     "left": {
-      "raw_text": "- vaginal delivery",
-      "Procedure": [
-        "vaginal delivery"
-      ],
-      "Procedure-Name": [
-        "vaginal delivery"
-      ]
-    },
-    "right": {
       "AND": {
         "left": {
-          "raw_text": "- an infant age of 6 months (±3 weeks)",
-          "Eq-Temporal-Unit": [
-            "months"
+          "raw_text": "- vaginal delivery",
+          "Procedure": [
+            "vaginal delivery"
           ],
-          "Eq-Value": [
-            "6"
-          ],
-          "Eq-Comparison": [
-            "6 months"
-          ],
-          "Age": [
-            "infant age"
+          "Procedure-Name": [
+            "vaginal delivery"
           ]
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "- mother ≥15 years of age",
+              "raw_text": "- an infant age of 6 months (±3 weeks)",
+              "Age": [
+                "infant age"
+              ],
               "Eq-Temporal-Unit": [
-                "years"
+                "months"
               ],
               "Eq-Value": [
-                "15"
+                "6"
               ],
               "Eq-Comparison": [
-                "≥15 years"
+                "6 months"
               ],
-              "Age": [
-                "mother age"
+              "Eq-Operator": [
+                "±"
               ]
             },
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "- infant still breastfeeding",
-                  "Observation": [
-                    "breastfeeding"
+                  "raw_text": "- mother ≥15 years of age",
+                  "Age": [
+                    "mother age"
                   ],
-                  "Observation-Name": [
-                    "breastfeeding"
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Eq-Value": [
+                    "15"
+                  ],
+                  "Eq-Comparison": [
+                    "≥15 years"
+                  ],
+                  "Eq-Operator": [
+                    "≥"
                   ]
                 },
                 "right": {
-                  "raw_text": "- anticipated residence in the area for the study duration.",
-                  "Study": [
-                    "study"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "- infant still breastfeeding",
+                      "Observation": [
+                        "breastfeeding"
+                      ],
+                      "Observation-Name": [
+                        "breastfeeding"
+                      ],
+                      "Eq-Comparison": [
+                        "still"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- anticipated residence in the area for the study duration.",
+                      "Study": [
+                        "study"
+                      ],
+                      "Eq-Comparison": [
+                        "anticipated"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "study duration"
+                      ]
+                    }
+                  }
                 }
               }
             }

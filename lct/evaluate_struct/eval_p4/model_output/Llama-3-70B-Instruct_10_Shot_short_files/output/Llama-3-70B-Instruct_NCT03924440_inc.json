@@ -4,9 +4,6 @@
       "raw_text": "1. Female (mandatory)",
       "Life-Stage-And-Gender": [
         "Female"
-      ],
-      "Modifier": [
-        "mandatory"
       ]
     },
     "right": {
@@ -15,29 +12,23 @@
           "AND": {
             "left": {
               "raw_text": "2. Not currently pregnant",
-              "Negation": [
-                "Not"
-              ],
               "Condition": [
-                "pregnant"
+                "pregnancy"
               ],
               "Condition-Name": [
-                "pregnant"
+                "pregnancy"
+              ],
+              "Negation": [
+                "Not"
               ]
             },
             "right": {
-              "raw_text": "or nursing (pregnancy affects PdG levels)",
-              "Negation": [
-                "Not"
-              ],
+              "raw_text": "or nursing",
               "Condition": [
                 "nursing"
               ],
               "Condition-Name": [
                 "nursing"
-              ],
-              "Modifier": [
-                "affects"
               ]
             }
           }
@@ -46,8 +37,8 @@
           "AND": {
             "left": {
               "raw_text": "3. Aged 18-34",
-              "Eq-Operator": [
-                "-"
+              "Eq-Temporal-Unit": [
+                "years"
               ],
               "Age": [
                 "Age"
@@ -64,14 +55,14 @@
               "AND": {
                 "left": {
                   "raw_text": "4. Cycle length of 26-39 days",
-                  "Eq-Operator": [
-                    "-"
-                  ],
                   "Observation": [
                     "Cycle length"
                   ],
                   "Observation-Name": [
                     "Cycle length"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "days"
                   ],
                   "Eq-Value": [
                     "26",
@@ -88,9 +79,6 @@
                   ],
                   "Procedure-Name": [
                     "fertility monitoring tools"
-                  ],
-                  "Modifier": [
-                    "Currently"
                   ]
                 }
               }

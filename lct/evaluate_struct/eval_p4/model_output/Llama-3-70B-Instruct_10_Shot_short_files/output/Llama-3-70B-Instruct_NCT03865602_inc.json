@@ -3,7 +3,7 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "1. Admitted from the emergency department to inpatient or observation status at one of:",
+          "raw_text": "1. Admitted from the emergency department to inpatient or observation status at one of: Carolinas Medical Center, Carolinas Medical Center - Mercy, or Atrium Health Northeast;",
           "Location": [
             "Carolinas Medical Center",
             "Carolinas Medical Center - Mercy",
@@ -108,7 +108,10 @@
       "AND": {
         "left": {
           "raw_text": "4. deemed as high-risk for 30-day readmission (i.e., ≥ 20%) or 30-day mortality (i.e., ≥ 10%) using risk-scoring models",
-          "Risk": [
+          "Condition": [
+            "high-risk"
+          ],
+          "Condition-Name": [
             "high-risk"
           ],
           "Eq-Operator": [
@@ -121,24 +124,18 @@
           "Eq-Comparison": [
             "≥ 20%",
             "≥ 10%"
-          ],
-          "Eq-Temporal-Unit": [
-            "days"
-          ],
-          "Eq-Temporal-Period": [
-            "30-day"
           ]
         },
         "right": {
           "raw_text": "5. not discharged at the time of patient list generation",
-          "Negation": [
-            "not"
-          ],
           "Procedure": [
-            "discharged"
+            "discharge"
           ],
           "Procedure-Name": [
-            "discharged"
+            "discharge"
+          ],
+          "Negation": [
+            "not"
           ]
         }
       }

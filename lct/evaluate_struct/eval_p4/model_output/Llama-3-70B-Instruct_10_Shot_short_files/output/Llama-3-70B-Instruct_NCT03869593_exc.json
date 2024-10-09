@@ -1,149 +1,159 @@
 {
   "AND": {
     "left": {
-      "raw_text": "- Immunocompromised patient defined by:",
-      "Condition": [
-        "Immunocompromised"
-      ],
-      "Condition-Name": [
-        "Immunocompromised"
-      ]
-    },
-    "right": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "- current immunosuppressive therapies: corticosteroids, chemotherapy, biotherapy",
-          "Procedure": [
-            "immunosuppressive therapies"
+          "raw_text": "- Immunocompromised patient defined by:",
+          "Condition": [
+            "Immunocompromised"
           ],
-          "Procedure-Name": [
-            "immunosuppressive therapies"
-          ],
-          "Drug": [
-            "corticosteroids",
-            "chemotherapy",
-            "biotherapy"
+          "Condition-Name": [
+            "Immunocompromised"
           ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "- solid organ transplant patient or hematopoietic stem cell transplant",
+              "raw_text": "- current immunosuppressive therapies: corticosteroids, chemotherapy, biotherapy",
               "Procedure": [
-                "solid organ transplant",
-                "hematopoietic stem cell transplant"
+                "immunosuppressive therapies"
               ],
               "Procedure-Name": [
-                "solid organ transplant",
-                "hematopoietic stem cell transplant"
+                "immunosuppressive therapies"
+              ],
+              "Drug": [
+                "corticosteroids",
+                "chemotherapy",
+                "biotherapy"
               ]
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "- chemotherapy-induced neutropenia",
-                  "Condition": [
-                    "neutropenia"
-                  ],
-                  "Condition-Name": [
-                    "neutropenia"
-                  ],
+                  "raw_text": "- solid organ transplant patient or hematopoietic stem cell transplant",
                   "Procedure": [
-                    "chemotherapy"
+                    "solid organ transplant",
+                    "hematopoietic stem cell transplant"
                   ],
                   "Procedure-Name": [
-                    "chemotherapy"
+                    "solid organ transplant",
+                    "hematopoietic stem cell transplant"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "- Congenital immune deficiency",
+                      "raw_text": "- chemotherapy-induced neutropenia",
                       "Condition": [
-                        "Congenital immune deficiency"
+                        "neutropenia"
                       ],
                       "Condition-Name": [
-                        "Congenital immune deficiency"
+                        "neutropenia"
+                      ],
+                      "Procedure": [
+                        "chemotherapy"
+                      ],
+                      "Procedure-Name": [
+                        "chemotherapy"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "- bacteremia related to a peripheral or central catheter",
+                          "raw_text": "- Congenital immune deficiency",
                           "Condition": [
-                            "bacteremia"
+                            "Congenital immune deficiency"
                           ],
                           "Condition-Name": [
-                            "bacteremia"
-                          ],
-                          "Procedure": [
-                            "peripheral or central catheter"
-                          ],
-                          "Procedure-Name": [
-                            "peripheral or central catheter"
+                            "Congenital immune deficiency"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "- Urinary obstruction not lifted within the first 24 hours of management",
+                              "raw_text": "- bacteremia related to a peripheral or central catheter",
                               "Condition": [
-                                "Urinary obstruction"
+                                "bacteremia"
                               ],
                               "Condition-Name": [
-                                "Urinary obstruction"
+                                "bacteremia"
                               ],
-                              "Eq-Temporal-Unit": [
-                                "hours"
+                              "Procedure": [
+                                "catheter"
                               ],
-                              "Eq-Value": [
-                                "24"
+                              "Procedure-Name": [
+                                "catheter"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "- Intra-abdominal infection collected undrained in the first 24 hours of management",
+                                  "raw_text": "- Urinary obstruction not lifted within the first 24 hours of management",
                                   "Condition": [
-                                    "Intra-abdominal infection"
+                                    "Urinary obstruction"
                                   ],
                                   "Condition-Name": [
-                                    "Intra-abdominal infection"
+                                    "Urinary obstruction"
                                   ],
                                   "Eq-Temporal-Unit": [
                                     "hours"
                                   ],
                                   "Eq-Value": [
                                     "24"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "within the first 24 hours"
                                   ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "- primary infectious focus represented by mechanically ventilated pneumonia",
+                                      "raw_text": "- Intra-abdominal infection collected undrained in the first 24 hours of management",
                                       "Condition": [
-                                        "pneumonia"
+                                        "Intra-abdominal infection"
                                       ],
                                       "Condition-Name": [
-                                        "pneumonia"
+                                        "Intra-abdominal infection"
                                       ],
-                                      "Procedure": [
-                                        "mechanically ventilated"
+                                      "Eq-Temporal-Unit": [
+                                        "hours"
                                       ],
-                                      "Procedure-Name": [
-                                        "mechanically ventilated"
+                                      "Eq-Value": [
+                                        "24"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "within the first 24 hours"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "- Pregnant or lactating woman",
-                                      "Condition": [
-                                        "Pregnant",
-                                        "lactating"
-                                      ],
-                                      "Condition-Name": [
-                                        "Pregnant",
-                                        "lactating"
-                                      ]
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "- primary infectious focus represented by mechanically ventilated pneumonia",
+                                          "Condition": [
+                                            "pneumonia"
+                                          ],
+                                          "Condition-Name": [
+                                            "pneumonia"
+                                          ],
+                                          "Procedure": [
+                                            "mechanically ventilated"
+                                          ],
+                                          "Procedure-Name": [
+                                            "mechanically ventilated"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "- Pregnant or lactating woman",
+                                          "Condition": [
+                                            "Pregnant",
+                                            "lactating"
+                                          ],
+                                          "Condition-Name": [
+                                            "Pregnant",
+                                            "lactating"
+                                          ]
+                                        }
+                                      }
                                     }
                                   }
                                 }

@@ -5,48 +5,45 @@
         "left": {
           "AND": {
             "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "- Allergy to tranexamic acid;",
-                  "Allergy": [
-                    "Allergy"
-                  ],
-                  "Allergy-Name": [
-                    "tranexamic acid"
-                  ]
-                },
-                "right": {
-                  "raw_text": "- Receiving warfarin or heparin;",
-                  "Drug": [
-                    "warfarin",
-                    "heparin"
-                  ],
-                  "Drug-Name": [
-                    "warfarin",
-                    "heparin"
-                  ]
-                }
-              }
+              "raw_text": "- Allergy to tranexamic acid;",
+              "Allergy": [
+                "Allergy"
+              ],
+              "Allergy-Name": [
+                "tranexamic acid"
+              ],
+              "Condition": [
+                "Allergy"
+              ],
+              "Condition-Name": [
+                "Allergy"
+              ]
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "had a history of hemophilia",
-                  "Condition": [
-                    "hemophilia"
+                  "raw_text": "- Receiving warfarin or heparin;",
+                  "Procedure": [
+                    "Receiving"
                   ],
-                  "Condition-Name": [
-                    "hemophilia"
+                  "Procedure-Name": [
+                    "Receiving"
+                  ],
+                  "Drug": [
+                    "warfarin",
+                    "heparin"
                   ]
                 },
                 "right": {
-                  "raw_text": "deep venous thrombosis, pulmonary embolism, or renal impairment;",
+                  "raw_text": "had a history of hemophilia, deep venous thrombosis, pulmonary embolism, or renal impairment;",
                   "Condition": [
+                    "hemophilia",
                     "deep venous thrombosis",
                     "pulmonary embolism",
                     "renal impairment"
                   ],
                   "Condition-Name": [
+                    "hemophilia",
                     "deep venous thrombosis",
                     "pulmonary embolism",
                     "renal impairment"
@@ -61,11 +58,13 @@
             "left": {
               "raw_text": "- Patients with any cardiovascular problems (such as myocardiac infarction history, atrial fibrillation, angina);",
               "Condition": [
+                "cardiovascular problems",
                 "myocardiac infarction history",
                 "atrial fibrillation",
                 "angina"
               ],
               "Condition-Name": [
+                "cardiovascular problems",
                 "myocardiac infarction history",
                 "atrial fibrillation",
                 "angina"
@@ -74,10 +73,12 @@
             "right": {
               "raw_text": "- Patients with thromboembolic disorders, or those exhibiting a deteriorating general condition;",
               "Condition": [
-                "thromboembolic disorders"
+                "thromboembolic disorders",
+                "deteriorating general condition"
               ],
               "Condition-Name": [
-                "thromboembolic disorders"
+                "thromboembolic disorders",
+                "deteriorating general condition"
               ]
             }
           }
@@ -87,7 +88,13 @@
     "right": {
       "OR": {
         "left": {
-          "raw_text": "- Preoperative anemia (a hemoglobin value of <11 g/dL in females and <12 g/dL in males);",
+          "raw_text": "- Preoperative anemia (a hemoglobin value of <11 g/dL in females and <12 g/dL in males),",
+          "Condition": [
+            "anemia"
+          ],
+          "Condition-Name": [
+            "anemia"
+          ],
           "Observation": [
             "hemoglobin"
           ],
@@ -107,8 +114,14 @@
         },
         "right": {
           "raw_text": "refusal of blood products;",
-          "Modifier": [
+          "Condition": [
             "refusal"
+          ],
+          "Condition-Name": [
+            "refusal"
+          ],
+          "Modifier": [
+            "blood products"
           ]
         }
       }
@@ -117,7 +130,7 @@
   "right": {
     "OR": {
       "left": {
-        "raw_text": "- Preoperative use of anticoagulant therapy within five days before surgery;",
+        "raw_text": "- Preoperative use of anticoagulant therapy within five days before surgery,",
         "Procedure": [
           "anticoagulant therapy"
         ],
@@ -125,10 +138,13 @@
           "anticoagulant therapy"
         ],
         "Eq-Temporal-Unit": [
-          "five days"
+          "days"
         ],
-        "Eq-Temporal-Period": [
-          "before surgery"
+        "Eq-Value": [
+          "five"
+        ],
+        "Eq-Comparison": [
+          "within five days"
         ]
       },
       "right": {
@@ -153,13 +169,11 @@
         ],
         "Eq-Operator": [
           "<",
-          ">",
           ">"
         ],
         "Eq-Value": [
-          "150,000/mm3",
-          "1.4",
-          "1.4 times normal"
+          "150,000",
+          "1.4"
         ],
         "Eq-Unit": [
           "mm3"

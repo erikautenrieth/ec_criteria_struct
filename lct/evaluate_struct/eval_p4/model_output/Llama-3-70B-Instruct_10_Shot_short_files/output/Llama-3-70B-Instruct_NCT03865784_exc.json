@@ -11,69 +11,75 @@
             "lumbar injury"
           ],
           "Modifier": [
-            "Federated boxers"
+            "Federated"
           ],
-          "Observation": [
+          "Procedure": [
             "medical diagnosis"
           ],
-          "Observation-Name": [
+          "Procedure-Name": [
             "medical diagnosis"
           ]
         },
         "right": {
-          "raw_text": "- Who are or have been treated by pharmacological or physiotherapy in the last 6 months",
-          "Procedure": [
-            "pharmacological",
-            "physiotherapy"
-          ],
-          "Procedure-Name": [
-            "pharmacological",
-            "physiotherapy"
-          ],
-          "Eq-Temporal-Unit": [
-            "months"
-          ],
-          "Eq-Value": [
-            "6"
-          ],
-          "Eq-Comparison": [
-            "in the last 6 months"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "- Who are or have been treated by pharmacological or physiotherapy in the last 6 months",
+              "Procedure": [
+                "pharmacological",
+                "physiotherapy"
+              ],
+              "Procedure-Name": [
+                "pharmacological",
+                "physiotherapy"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Value": [
+                "6"
+              ],
+              "Eq-Comparison": [
+                "in the last 6 months"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Presenting allergies",
+                  "Condition": [
+                    "allergies"
+                  ],
+                  "Condition-Name": [
+                    "allergies"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or alterations of the skin",
+                  "Condition": [
+                    "alterations of the skin"
+                  ],
+                  "Condition-Name": [
+                    "alterations of the skin"
+                  ]
+                }
+              }
+            }
+          }
         }
       }
     },
     "right": {
-      "OR": {
+      "NOT": {
         "left": {
-          "raw_text": "- Presenting allergies",
-          "Condition": [
-            "allergies"
+          "raw_text": "- Not sign the informed consent document.",
+          "Negation": [
+            "Not"
           ],
-          "Condition-Name": [
-            "allergies"
-          ]
-        },
-        "right": {
-          "raw_text": "or alterations of the skin",
-          "Condition": [
-            "alterations of the skin"
-          ],
-          "Condition-Name": [
-            "alterations of the skin"
+          "Study": [
+            "informed consent"
           ]
         }
       }
-    }
-  },
-  "NOT": {
-    "left": {
-      "raw_text": "- Not sign the informed consent document.",
-      "Negation": [
-        "Not"
-      ],
-      "Study": [
-        "informed consent document"
-      ]
     }
   }
 }

@@ -9,77 +9,61 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "- The subject is in a period of exclusion determined by a previous study (therapeutic study)",
-                          "Study": [
-                            "study"
-                          ],
-                          "Procedure": [
-                            "therapeutic study"
-                          ],
-                          "Procedure-Name": [
-                            "therapeutic study"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "- The subject refuses to sign the consent",
-                          "Study": [
-                            "study"
-                          ],
-                          "Negation": [
-                            "refuses"
-                          ]
-                        }
-                      }
+                      "raw_text": "- The subject is in a period of exclusion determined by a previous study (therapeutic study)",
+                      "Study": [
+                        "study"
+                      ],
+                      "Procedure": [
+                        "previous study"
+                      ],
+                      "Procedure-Name": [
+                        "previous study"
+                      ]
                     },
                     "right": {
-                      "raw_text": "- It is impossible to give the subject informed information",
+                      "raw_text": "- The subject refuses to sign the consent",
                       "Study": [
                         "study"
                       ],
                       "Negation": [
-                        "impossible"
+                        "refuses"
                       ]
                     }
                   }
                 },
                 "right": {
-                  "raw_text": "- The patient is under safeguard of justice or state guardianship",
-                  "Condition": [
-                    "safeguard of justice",
-                    "state guardianship"
+                  "raw_text": "- It is impossible to give the subject informed information",
+                  "Study": [
+                    "study"
                   ],
-                  "Condition-Name": [
-                    "safeguard of justice",
-                    "state guardianship"
+                  "Negation": [
+                    "impossible"
                   ]
                 }
               }
             },
             "right": {
-              "raw_text": "- The patient is pregnant or breastfeeding",
+              "raw_text": "- The patient is under safeguard of justice or state guardianship",
               "Condition": [
-                "pregnant",
-                "breastfeeding"
+                "safeguard of justice",
+                "state guardianship"
               ],
               "Condition-Name": [
-                "pregnant",
-                "breastfeeding"
+                "safeguard of justice",
+                "state guardianship"
               ]
             }
           }
         },
         "right": {
-          "raw_text": "- The patient is allergic to latex bandages.",
+          "raw_text": "- The patient is pregnant or breastfeeding",
           "Condition": [
-            "allergic"
+            "pregnant",
+            "breastfeeding"
           ],
           "Condition-Name": [
-            "allergic"
-          ],
-          "Modifier": [
-            "latex"
+            "pregnant",
+            "breastfeeding"
           ]
         }
       }
@@ -87,32 +71,65 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "- The subject has contralateral amputation, pressure ulcers, severe Obstructive Arteriopathy of Lower Limbs, lymphoedema or thromboembolic event of the lower limb (ipsilateral and / or contralateral / superficial or deep or detected by postoperative Doppler).",
-          "Condition": [
-            "contralateral amputation",
-            "pressure ulcers",
-            "severe Obstructive Arteriopathy of Lower Limbs",
-            "lymphoedema",
-            "thromboembolic event"
-          ],
-          "Condition-Name": [
-            "contralateral amputation",
-            "pressure ulcers",
-            "severe Obstructive Arteriopathy of Lower Limbs",
-            "lymphoedema",
-            "thromboembolic event"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "- The patient is allergic to latex bandages.",
+              "Condition": [
+                "allergic"
+              ],
+              "Condition-Name": [
+                "allergic"
+              ],
+              "Modifier": [
+                "latex bandages"
+              ]
+            },
+            "right": {
+              "raw_text": "- The subject has contralateral amputation, pressure ulcers, severe Obstructive Arteriopathy of Lower Limbs, lymphoedema or thromboembolic event of the lower limb (ipsilateral and / or contralateral / superficial or deep or detected by postoperative Doppler).",
+              "Condition": [
+                "contralateral amputation",
+                "pressure ulcers",
+                "severe Obstructive Arteriopathy of Lower Limbs",
+                "lymphoedema",
+                "thromboembolic event"
+              ],
+              "Condition-Name": [
+                "contralateral amputation",
+                "pressure ulcers",
+                "severe Obstructive Arteriopathy of Lower Limbs",
+                "lymphoedema",
+                "thromboembolic event"
+              ]
+            }
+          }
         },
         "right": {
-          "raw_text": "- The subject has chronic or active wounds or any cause that hinders normal rehabilitation or the application of a bandage.",
-          "Condition": [
-            "chronic wounds",
-            "active wounds"
-          ],
-          "Condition-Name": [
-            "chronic wounds",
-            "active wounds"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "- The subject has chronic or active wounds or any cause that hinders normal rehabilitation or the application of a bandage.",
+              "Condition": [
+                "chronic or active wounds"
+              ],
+              "Condition-Name": [
+                "chronic or active wounds"
+              ]
+            },
+            "right": {
+              "raw_text": "- patient with a stroke / Disabling Neurological Pathology, Chronic Immunological Pathology / Systemic Disease.",
+              "Condition": [
+                "stroke",
+                "Disabling Neurological Pathology",
+                "Chronic Immunological Pathology",
+                "Systemic Disease"
+              ],
+              "Condition-Name": [
+                "stroke",
+                "Disabling Neurological Pathology",
+                "Chronic Immunological Pathology",
+                "Systemic Disease"
+              ]
+            }
+          }
         }
       }
     }
@@ -120,21 +137,6 @@
   "right": {
     "AND": {
       "left": {
-        "raw_text": "- patient with a stroke / Disabling Neurological Pathology, Chronic Immunological Pathology / Systemic Disease.",
-        "Condition": [
-          "stroke",
-          "Disabling Neurological Pathology",
-          "Chronic Immunological Pathology",
-          "Systemic Disease"
-        ],
-        "Condition-Name": [
-          "stroke",
-          "Disabling Neurological Pathology",
-          "Chronic Immunological Pathology",
-          "Systemic Disease"
-        ]
-      },
-      "right": {
         "raw_text": "- patient with Hepatic insufficiency.",
         "Condition": [
           "Hepatic insufficiency"
@@ -142,66 +144,61 @@
         "Condition-Name": [
           "Hepatic insufficiency"
         ]
+      },
+      "right": {
+        "AND": {
+          "left": {
+            "raw_text": "- patient with Venous insufficiency (stages 3 and 4).",
+            "Condition": [
+              "Venous insufficiency"
+            ],
+            "Condition-Name": [
+              "Venous insufficiency"
+            ]
+          },
+          "right": {
+            "AND": {
+              "left": {
+                "raw_text": "- The patient is on dialysis.",
+                "Procedure": [
+                  "dialysis"
+                ],
+                "Procedure-Name": [
+                  "dialysis"
+                ]
+              },
+              "right": {
+                "raw_text": "- The subject has cognitive or behavioral disorders (Parkinson's disease, cerebellar syndrome, opposition, agitation, dementia).",
+                "Condition": [
+                  "cognitive or behavioral disorders",
+                  "Parkinson's disease",
+                  "cerebellar syndrome",
+                  "opposition",
+                  "agitation",
+                  "dementia"
+                ],
+                "Condition-Name": [
+                  "cognitive or behavioral disorders",
+                  "Parkinson's disease",
+                  "cerebellar syndrome",
+                  "opposition",
+                  "agitation",
+                  "dementia"
+                ]
+              }
+            }
+          }
+        }
       }
     }
   },
   "right": {
-    "AND": {
-      "left": {
-        "raw_text": "- patient with Venous insufficiency (stages 3 and 4).",
-        "Condition": [
-          "Venous insufficiency"
-        ],
-        "Condition-Name": [
-          "Venous insufficiency"
-        ],
-        "Modifier": [
-          "stages 3 and 4"
-        ]
-      },
-      "right": {
-        "raw_text": "- The patient is on dialysis.",
-        "Procedure": [
-          "dialysis"
-        ],
-        "Procedure-Name": [
-          "dialysis"
-        ]
-      }
-    }
-  },
-  "right": {
-    "AND": {
-      "left": {
-        "raw_text": "- The subject has cognitive or behavioral disorders (Parkinson's disease, cerebellar syndrome, opposition, agitation, dementia).",
-        "Condition": [
-          "cognitive disorders",
-          "behavioral disorders",
-          "Parkinson's disease",
-          "cerebellar syndrome",
-          "opposition",
-          "agitation",
-          "dementia"
-        ],
-        "Condition-Name": [
-          "cognitive disorders",
-          "behavioral disorders",
-          "Parkinson's disease",
-          "cerebellar syndrome",
-          "opposition",
-          "agitation",
-          "dementia"
-        ]
-      },
-      "right": {
-        "raw_text": "- The subject has a history of knee surgery.",
-        "Procedure": [
-          "knee surgery"
-        ],
-        "Procedure-Name": [
-          "knee surgery"
-        ]
-      }
-    }
+    "raw_text": "- The subject has a history of knee surgery.",
+    "Procedure": [
+      "knee surgery"
+    ],
+    "Procedure-Name": [
+      "knee surgery"
+    ]
   }
 }

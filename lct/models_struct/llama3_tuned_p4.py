@@ -1,10 +1,12 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+import time
+from datetime import timedelta
 
-import transformers
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 from helper_functions import *
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
+
 
 batch_path = "eval_p4"
 
@@ -23,7 +25,7 @@ os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name = model_id, #
+        model_name = model_id, 
         max_seq_length = 2048,
         dtype = None,
         load_in_4bit = True,
@@ -42,11 +44,9 @@ alpaca_prompt = """Below is an instruction that describes a task, paired with an
 {}"""
 
 first_call = True
-
+start_time = time.time()  
 for file in study_files:
     file_name = file.split(".")[0]
-    print("File:", file_name, "\n")
-    
     test_file = read_text_file(study_path+file)
 
     inputs = tokenizer(
@@ -62,8 +62,10 @@ for file in study_files:
     decoded_outputs = tokenizer.batch_decode(outputs)
     response = decoded_outputs[0].split("### Response:")[1].strip()
     response = response.replace("<|eot_id|>", "")
-    print("Output:", decoded_outputs)
-    print("Response:", response)
-
-    #save_txt(response, f"{output_path}{model_name}_{file_name}.txt")
     save_json(response, f"{output_path}{model_name}_{file_name}.json")
+
+# Print Time
+end_time = time.time()  
+total_time = end_time - start_time
+total_time_str = str(timedelta(seconds=total_time))
+print(f"Benötigte Zeit: {total_time_str}")

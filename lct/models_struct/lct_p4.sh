@@ -5,12 +5,12 @@
 #SBATCH --gres=gpu:4 
 #SBATCH --time=40:00:00          # Time limit hrs:min:sec
 
-#SBATCH --output=log/llama_p4.%j.out   # Standard output and error log
-#SBATCH --error=log/llama_p4.%j.err    # Error log
-#SBATCH --job-name=llama_struct
+#SBATCH --output=log/time_p4_8b_Tune.%j.out   # Standard output and error log
+#SBATCH --error=log/time_p4_8b_Tune.%j.err    # Error log
+#SBATCH --job-name=8b_tuned
 
 module load cuda
-python qwen2_p4.py # llama3_p4.py
+python llama3_8B_tuned_p4.py # llama3_p4.py #llama3_tuned_p4.py #qwen2_p4.py # 
 
 
 

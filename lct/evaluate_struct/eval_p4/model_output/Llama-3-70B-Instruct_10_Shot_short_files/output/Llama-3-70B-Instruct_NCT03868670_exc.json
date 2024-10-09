@@ -4,82 +4,106 @@
       "OR": {
         "left": {
           "raw_text": "- Subject has an implanted medical device that delivers electrical energy to the brain.",
+          "Device": [
+            "medical device"
+          ],
+          "Device-Name": [
+            "medical device"
+          ],
           "Procedure": [
-            "implanted medical device"
+            "implanted"
           ],
           "Procedure-Name": [
-            "implanted medical device"
-          ],
-          "Observation": [
-            "electrical energy"
-          ],
-          "Observation-Name": [
-            "electrical energy"
+            "implanted"
           ],
           "Modifier": [
-            "brain"
+            "electrical energy"
           ]
         },
         "right": {
-          "raw_text": "- Subject has an implantable cardiac pacemaker, defibrillator, or neurostimulator.",
-          "Procedure": [
-            "implantable cardiac pacemaker",
-            "defibrillator",
-            "neurostimulator"
-          ],
-          "Procedure-Name": [
-            "implantable cardiac pacemaker",
-            "defibrillator",
-            "neurostimulator"
-          ]
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "- Subject is likely to require repeat MR imaging after implant of the RNS Neurostimulator and Leads.",
-          "Procedure": [
-            "MR imaging"
-          ],
-          "Procedure-Name": [
-            "MR imaging"
-          ],
-          "Eq-Comparison": [
-            "likely"
-          ],
-          "Eq-Temporal-Period": [
-            "after"
-          ]
-        },
-        "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "- Subject is unable to fit into CT scanner (500lb upper weight limit for CT scanner).",
+              "raw_text": "- Subject has an implantable cardiac pacemaker, defibrillator, or neurostimulator.",
+              "Device": [
+                "cardiac pacemaker",
+                "defibrillator",
+                "neurostimulator"
+              ],
+              "Device-Name": [
+                "cardiac pacemaker",
+                "defibrillator",
+                "neurostimulator"
+              ],
               "Procedure": [
-                "CT scanner"
+                "implantable"
               ],
               "Procedure-Name": [
-                "CT scanner"
-              ],
-              "Eq-Value": [
-                "500lb"
-              ],
-              "Eq-Unit": [
-                "lb"
-              ],
-              "Negation": [
-                "unable"
+                "implantable"
               ]
             },
             "right": {
-              "raw_text": "- Inability to provide informed consent to treatment.",
-              "Negation": [
-                "Inability"
-              ],
-              "Study": [
-                "informed consent"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "- Subject is likely to require repeat MR imaging after implant of the RNS Neurostimulator and Leads.",
+                  "Procedure": [
+                    "MR imaging"
+                  ],
+                  "Procedure-Name": [
+                    "MR imaging"
+                  ],
+                  "Device": [
+                    "RNS Neurostimulator",
+                    "Leads"
+                  ],
+                  "Device-Name": [
+                    "RNS Neurostimulator",
+                    "Leads"
+                  ],
+                  "Eq-Comparison": [
+                    "likely"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "after"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Subject is unable to fit into CT scanner (500lb upper weight limit for CT scanner).",
+                      "Procedure": [
+                        "CT scanner"
+                      ],
+                      "Procedure-Name": [
+                        "CT scanner"
+                      ],
+                      "Modifier": [
+                        "unable"
+                      ],
+                      "Eq-Value": [
+                        "500lb"
+                      ],
+                      "Eq-Unit": [
+                        "lb"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Inability to provide informed consent to treatment.",
+                      "Negation": [
+                        "Inability"
+                      ],
+                      "Procedure": [
+                        "informed consent"
+                      ],
+                      "Procedure-Name": [
+                        "informed consent"
+                      ],
+                      "Modifier": [
+                        "unable"
+                      ]
+                    }
+                  }
+                }
+              }
             }
           }
         }

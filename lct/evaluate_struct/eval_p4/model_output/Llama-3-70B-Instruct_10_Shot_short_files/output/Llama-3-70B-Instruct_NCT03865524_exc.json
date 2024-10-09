@@ -24,7 +24,7 @@
                         "right": {
                           "raw_text": "- Inability to give informed consent in the absence of a legal representative.",
                           "Study": [
-                            "informed consent"
+                            "study"
                           ],
                           "Negation": [
                             "inability"
@@ -64,13 +64,13 @@
               "Study": [
                 "study"
               ],
-              "Condition": [
-                "findings",
-                "abnormalities"
+              "Observation": [
+                "physical examination",
+                "clinical analyzes"
               ],
-              "Condition-Name": [
-                "findings",
-                "abnormalities"
+              "Observation-Name": [
+                "physical examination",
+                "clinical analyzes"
               ]
             }
           }
@@ -83,7 +83,8 @@
                 "surgical procedure",
                 "proximal tibial osteotomy",
                 "femoral osteotomy",
-                "open reduction and internal fixation for a fracture",
+                "open reduction and internal fixation",
+                "fracture",
                 "patellectomy",
                 "patellar realignment"
               ],
@@ -91,7 +92,8 @@
                 "surgical procedure",
                 "proximal tibial osteotomy",
                 "femoral osteotomy",
-                "open reduction and internal fixation for a fracture",
+                "open reduction and internal fixation",
+                "fracture",
                 "patellectomy",
                 "patellar realignment"
               ],
@@ -100,51 +102,64 @@
               ],
               "Eq-Value": [
                 "12"
+              ],
+              "Eq-Comparison": [
+                "last 12 months"
               ]
             },
             "right": {
-              "raw_text": "- Need a simultaneous bilateral TKA.",
-              "Procedure": [
-                "bilateral TKA"
-              ],
-              "Procedure-Name": [
-                "bilateral TKA"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "- Need a simultaneous bilateral TKA.",
+                  "Procedure": [
+                    "TKA"
+                  ],
+                  "Procedure-Name": [
+                    "TKA"
+                  ],
+                  "Modifier": [
+                    "simultaneous bilateral"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Have a varus angle or valgus ≥ 15 °.",
+                      "Observation": [
+                        "varus angle",
+                        "valgus"
+                      ],
+                      "Observation-Name": [
+                        "varus angle",
+                        "valgus"
+                      ],
+                      "Eq-Operator": [
+                        "≥"
+                      ],
+                      "Eq-Value": [
+                        "15"
+                      ],
+                      "Eq-Unit": [
+                        "°"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Total revision knee arthroplasty.",
+                      "Procedure": [
+                        "revision knee arthroplasty"
+                      ],
+                      "Procedure-Name": [
+                        "revision knee arthroplasty"
+                      ],
+                      "Modifier": [
+                        "total"
+                      ]
+                    }
+                  }
+                }
+              }
             }
           }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "- Have a varus angle or valgus ≥ 15 °.",
-          "Observation": [
-            "varus angle",
-            "valgus"
-          ],
-          "Observation-Name": [
-            "varus angle",
-            "valgus"
-          ],
-          "Eq-Operator": [
-            "≥"
-          ],
-          "Eq-Value": [
-            "15"
-          ],
-          "Eq-Unit": [
-            "°"
-          ]
-        },
-        "right": {
-          "raw_text": "- Total revision knee arthroplasty.",
-          "Procedure": [
-            "Total revision knee arthroplasty"
-          ],
-          "Procedure-Name": [
-            "Total revision knee arthroplasty"
-          ]
         }
       }
     }

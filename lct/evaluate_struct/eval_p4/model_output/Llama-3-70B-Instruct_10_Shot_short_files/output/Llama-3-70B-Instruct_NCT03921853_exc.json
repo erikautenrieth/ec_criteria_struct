@@ -1,9 +1,9 @@
 {
   "AND": {
     "left": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "- Physical limitations",
+          "raw_text": "- Physical limitations (e.g., restricting injuries of the musculoskeletal system, or dependent of a third person).",
           "Condition": [
             "Physical limitations"
           ],
@@ -12,18 +12,32 @@
           ],
           "Modifier": [
             "restricting"
+          ],
+          "Observation": [
+            "musculoskeletal system"
+          ],
+          "Observation-Name": [
+            "musculoskeletal system"
           ]
         },
         "right": {
-          "raw_text": "(e.g., restricting injuries of the musculoskeletal system, or dependent of a third person).",
+          "raw_text": "- Exercise-related dyspnoea or respiratory alterations.",
           "Condition": [
-            "injuries"
+            "dyspnoea",
+            "respiratory alterations"
           ],
           "Condition-Name": [
-            "injuries"
+            "dyspnoea",
+            "respiratory alterations"
           ],
           "Modifier": [
-            "musculoskeletal system"
+            "Exercise-related"
+          ],
+          "Observation": [
+            "respiratory"
+          ],
+          "Observation-Name": [
+            "respiratory"
           ]
         }
       }
@@ -31,55 +45,39 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "- Exercise-related dyspnoea or respiratory alterations.",
+          "raw_text": "- Chronic heart disease with any worsening in the last month.",
           "Condition": [
-            "dyspnoea"
+            "Chronic heart disease"
           ],
           "Condition-Name": [
-            "dyspnoea"
+            "Chronic heart disease"
           ],
           "Modifier": [
-            "Exercise-related"
+            "Chronic"
+          ],
+          "Eq-Temporal-Period": [
+            "last month"
           ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "- Chronic heart disease",
-              "Condition": [
-                "heart disease"
-              ],
-              "Condition-Name": [
-                "heart disease"
-              ],
-              "Modifier": [
-                "Chronic"
-              ]
-            },
-            "right": {
-              "raw_text": "with any worsening in the last month.",
-              "Eq-Temporal-Period": [
-                "last month"
-              ],
-              "Eq-Comparison": [
-                "worsening"
-              ]
-            }
-          }
+          "raw_text": "- Adherence rate of less than 80% of the total interventions.",
+          "Eq-Operator": [
+            "less than"
+          ],
+          "Eq-Value": [
+            "80"
+          ],
+          "Eq-Comparison": [
+            "less than 80%"
+          ],
+          "Observation": [
+            "Adherence rate"
+          ],
+          "Observation-Name": [
+            "Adherence rate"
+          ]
         }
       }
-    },
-    "right": {
-      "raw_text": "- Adherence rate of less than 80% of the total interventions.",
-      "Eq-Value": [
-        "80%"
-      ],
-      "Eq-Operator": [
-        "less than"
-      ],
-      "Eq-Comparison": [
-        "less than 80%"
-      ]
     }
   }
 }

@@ -2,20 +2,17 @@
   "AND": {
     "left": {
       "raw_text": "- < 60 years",
-      "Eq-Temporal-Unit": [
-        "years"
+      "Eq-Operator": [
+        "<"
       ],
       "Age": [
-        "age"
+        "years"
       ],
       "Eq-Value": [
         "60"
       ],
       "Eq-Comparison": [
         "< 60 years"
-      ],
-      "Eq-Operator": [
-        "<"
       ]
     },
     "right": {
@@ -49,13 +46,10 @@
                 "left": {
                   "raw_text": "unstable angina",
                   "Condition": [
-                    "angina"
+                    "unstable angina"
                   ],
                   "Condition-Name": [
-                    "angina"
-                  ],
-                  "Modifier": [
-                    "unstable"
+                    "unstable angina"
                   ]
                 },
                 "right": {
@@ -63,13 +57,10 @@
                     "left": {
                       "raw_text": "uncontrolled arrhythmia",
                       "Condition": [
-                        "arrhythmia"
+                        "uncontrolled arrhythmia"
                       ],
                       "Condition-Name": [
-                        "arrhythmia"
-                      ],
-                      "Modifier": [
-                        "uncontrolled"
+                        "uncontrolled arrhythmia"
                       ]
                     },
                     "right": {
@@ -77,122 +68,121 @@
                         "left": {
                           "raw_text": "3rd degree BAV",
                           "Condition": [
-                            "BAV"
+                            "3rd degree BAV"
                           ],
                           "Condition-Name": [
-                            "BAV"
-                          ],
-                          "Modifier": [
-                            "3rd degree"
+                            "3rd degree BAV"
                           ]
                         },
                         "right": {
-                          "raw_text": "acute heart failure",
-                          "Condition": [
-                            "heart failure"
-                          ],
-                          "Condition-Name": [
-                            "heart failure"
-                          ],
-                          "Modifier": [
-                            "acute"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "OR": {
-        "left": {
-          "raw_text": "- MMSE score < 4",
-          "Observation": [
-            "MMSE score"
-          ],
-          "Observation-Name": [
-            "MMSE score"
-          ],
-          "Eq-Value": [
-            "4"
-          ],
-          "Eq-Comparison": [
-            "< 4"
-          ],
-          "Eq-Operator": [
-            "<"
-          ]
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- Subject already engaged in appropriate physical activity",
-              "Activity": [
-                "physical activity"
-              ],
-              "Activity-Name": [
-                "physical activity"
-              ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "- Subject with a perceptual disorder (AMD, deafness...)",
-                  "Condition": [
-                    "perceptual disorder"
-                  ],
-                  "Condition-Name": [
-                    "perceptual disorder"
-                  ],
-                  "Modifier": [
-                    "AMD",
-                    "deafness"
-                  ]
-                },
-                "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "- Subject with a motor disability",
-                      "Condition": [
-                        "motor disability"
-                      ],
-                      "Condition-Name": [
-                        "motor disability"
-                      ]
-                    },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "- Subject under guardianship, curatorship or safeguard of justice",
-                          "Condition": [
-                            "guardianship"
-                          ],
-                          "Condition-Name": [
-                            "guardianship"
-                          ],
-                          "Modifier": [
-                            "curatorship",
-                            "safeguard of justice"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "- Persons deprived of their liberty (administrative or judicial)",
-                          "Condition": [
-                            "liberty"
-                          ],
-                          "Condition-Name": [
-                            "liberty"
-                          ],
-                          "Modifier": [
-                            "deprived",
-                            "administrative",
-                            "judicial"
-                          ]
+                          "OR": {
+                            "left": {
+                              "raw_text": "acute heart failure",
+                              "Condition": [
+                                "acute heart failure"
+                              ],
+                              "Condition-Name": [
+                                "acute heart failure"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "- MMSE score < 4",
+                                  "Eq-Operator": [
+                                    "<"
+                                  ],
+                                  "Observation": [
+                                    "MMSE score"
+                                  ],
+                                  "Observation-Name": [
+                                    "MMSE score"
+                                  ],
+                                  "Eq-Value": [
+                                    "4"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "< 4"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "- Subject already engaged in appropriate physical activity",
+                                      "Condition": [
+                                        "physical activity"
+                                      ],
+                                      "Condition-Name": [
+                                        "physical activity"
+                                      ],
+                                      "Modifier": [
+                                        "already engaged"
+                                      ]
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "- Subject with a perceptual disorder (AMD, deafness...)",
+                                          "Condition": [
+                                            "perceptual disorder"
+                                          ],
+                                          "Condition-Name": [
+                                            "perceptual disorder"
+                                          ],
+                                          "Modifier": [
+                                            "AMD",
+                                            "deafness"
+                                          ]
+                                        },
+                                        "right": {
+                                          "OR": {
+                                            "left": {
+                                              "raw_text": "- Subject with a motor disability",
+                                              "Condition": [
+                                                "motor disability"
+                                              ],
+                                              "Condition-Name": [
+                                                "motor disability"
+                                              ]
+                                            },
+                                            "right": {
+                                              "OR": {
+                                                "left": {
+                                                  "raw_text": "- Subject under guardianship, curatorship or safeguard of justice",
+                                                  "Condition": [
+                                                    "guardianship",
+                                                    "curatorship",
+                                                    "safeguard of justice"
+                                                  ],
+                                                  "Condition-Name": [
+                                                    "guardianship",
+                                                    "curatorship",
+                                                    "safeguard of justice"
+                                                  ]
+                                                },
+                                                "right": {
+                                                  "raw_text": "- Persons deprived of their liberty (administrative or judicial)",
+                                                  "Condition": [
+                                                    "liberty"
+                                                  ],
+                                                  "Condition-Name": [
+                                                    "liberty"
+                                                  ],
+                                                  "Modifier": [
+                                                    "deprived"
+                                                  ]
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }

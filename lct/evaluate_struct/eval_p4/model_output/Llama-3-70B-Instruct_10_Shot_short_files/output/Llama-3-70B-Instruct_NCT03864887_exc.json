@@ -1,74 +1,41 @@
 {
   "AND": {
     "left": {
-      "AND": {
+      "OR": {
         "left": {
-          "AND": {
-            "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "- Patients who are in pregnancy or have plan to conception.",
-                  "Condition": [
-                    "pregnancy"
-                  ],
-                  "Condition-Name": [
-                    "pregnancy"
-                  ],
-                  "Eq-Comparison": [
-                    "in"
-                  ],
-                  "Eq-Temporal-Period": [
-                    "in"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or have plan to conception",
-                  "Condition": [
-                    "conception"
-                  ],
-                  "Condition-Name": [
-                    "conception"
-                  ],
-                  "Eq-Comparison": [
-                    "have plan"
-                  ],
-                  "Eq-Temporal-Period": [
-                    "have plan"
-                  ]
-                }
-              }
-            },
-            "right": {
-              "raw_text": "- Patients who have vertebra surgery or have plan of surgery.",
-              "Procedure": [
-                "vertebra surgery"
-              ],
-              "Procedure-Name": [
-                "vertebra surgery"
-              ],
-              "Eq-Comparison": [
-                "have"
-              ],
-              "Eq-Temporal-Period": [
-                "have"
-              ]
-            }
-          }
-        },
-        "right": {
-          "raw_text": "- Patients who are inappropriate to join this trial judged by the radiologists or specialists.",
-          "Study": [
-            "trial"
+          "raw_text": "- Patients who are in pregnancy or have plan to conception.",
+          "Condition": [
+            "pregnancy"
+          ],
+          "Condition-Name": [
+            "pregnancy"
           ],
           "Eq-Comparison": [
-            "inappropriate"
+            "in"
           ],
           "Eq-Temporal-Period": [
-            "inappropriate"
+            "in"
           ],
-          "Provider": [
-            "radiologists",
-            "specialists"
+          "Modifier": [
+            "plan"
+          ]
+        },
+        "right": {
+          "raw_text": "- Patients who have vertebra surgery or have plan of surgery.",
+          "Procedure": [
+            "vertebra surgery"
+          ],
+          "Procedure-Name": [
+            "vertebra surgery"
+          ],
+          "Eq-Comparison": [
+            "have"
+          ],
+          "Eq-Temporal-Period": [
+            "have"
+          ],
+          "Modifier": [
+            "plan"
           ]
         }
       }
@@ -76,38 +43,59 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "- AIDS, Active Hepatitis, Tuberculosis, Syphilis",
-          "Condition": [
-            "AIDS",
-            "Active Hepatitis",
-            "Tuberculosis",
-            "Syphilis"
+          "raw_text": "- Patients who are inappropriate to join this trial judged by the radiologists or specialists.",
+          "Study": [
+            "trial"
           ],
-          "Condition-Name": [
-            "AIDS",
-            "Active Hepatitis",
-            "Tuberculosis",
-            "Syphilis"
+          "Modifier": [
+            "inappropriate"
+          ],
+          "Provider": [
+            "radiologists",
+            "specialists"
           ]
         },
         "right": {
-          "raw_text": "- Patients who regularly take anticoagulants, antiplatelet drugs",
-          "Drug": [
-            "anticoagulants",
-            "antiplatelet drugs"
-          ],
-          "Drug-Name": [
-            "anticoagulants",
-            "antiplatelet drugs"
-          ],
-          "Eq-Comparison": [
-            "regularly take"
-          ],
-          "Eq-Temporal-Period": [
-            "regularly take"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "- AIDS",
+              "Condition": [
+                "AIDS"
+              ],
+              "Condition-Name": [
+                "AIDS"
+              ]
+            },
+            "right": {
+              "raw_text": "- Active Hepatitis, Tuberculosis, Syphilis",
+              "Condition": [
+                "Active Hepatitis",
+                "Tuberculosis",
+                "Syphilis"
+              ],
+              "Condition-Name": [
+                "Active Hepatitis",
+                "Tuberculosis",
+                "Syphilis"
+              ]
+            }
+          }
         }
       }
+    },
+    "right": {
+      "raw_text": "- Patients who regularly take anticoagulants, antiplatelet drugs",
+      "Drug": [
+        "anticoagulants",
+        "antiplatelet drugs"
+      ],
+      "Drug-Name": [
+        "anticoagulants",
+        "antiplatelet drugs"
+      ],
+      "Modifier": [
+        "regularly"
+      ]
     }
   }
 }

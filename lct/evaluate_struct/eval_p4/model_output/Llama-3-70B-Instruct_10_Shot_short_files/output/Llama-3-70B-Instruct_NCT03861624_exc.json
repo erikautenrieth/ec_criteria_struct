@@ -34,24 +34,24 @@
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "4. Sustained severe Traumatic Brain Injury (GCS<12)",
+                  "raw_text": "4. Sustained severe Traumatic Brain Injury (GCS<12) ***",
                   "Condition": [
                     "Traumatic Brain Injury"
                   ],
                   "Condition-Name": [
                     "Traumatic Brain Injury"
                   ],
-                  "Observation": [
-                    "GCS"
-                  ],
-                  "Observation-Name": [
-                    "GCS"
+                  "Severity": [
+                    "severe"
                   ],
                   "Eq-Value": [
                     "12"
                   ],
                   "Eq-Operator": [
                     "<"
+                  ],
+                  "Eq-Comparison": [
+                    "GCS<12"
                   ]
                 },
                 "right": {
@@ -64,8 +64,11 @@
                       "Condition-Name": [
                         "spinal cord injury"
                       ],
-                      "Modifier": [
+                      "Severity": [
                         "severe"
+                      ],
+                      "Modifier": [
+                        "lower extremity"
                       ]
                     },
                     "right": {
@@ -78,11 +81,8 @@
                           "Condition-Name": [
                             "burns"
                           ],
-                          "Observation": [
-                            "total body surface area"
-                          ],
-                          "Observation-Name": [
-                            "total body surface area"
+                          "Severity": [
+                            "severe"
                           ],
                           "Eq-Value": [
                             "10%",
@@ -91,23 +91,24 @@
                           "Eq-Operator": [
                             ">",
                             "with"
+                          ],
+                          "Eq-Comparison": [
+                            ">10% total body surface area",
+                            ">5% TBSA with full thickness or circumferential injury"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
                               "raw_text": "7. Prior ipsilateral leg injury requiring surgery",
-                              "Condition": [
-                                "ipsilateral leg injury"
-                              ],
-                              "Condition-Name": [
-                                "ipsilateral leg injury"
-                              ],
                               "Procedure": [
                                 "surgery"
                               ],
                               "Procedure-Name": [
                                 "surgery"
+                              ],
+                              "Modifier": [
+                                "ipsilateral leg"
                               ]
                             },
                             "right": {
@@ -121,12 +122,18 @@
                                   "Condition-Name": [
                                     "lower limb deformity",
                                     "lower limb abnormality"
+                                  ],
+                                  "Modifier": [
+                                    "prior or current"
                                   ]
                                 },
                                 "right": {
                                   "raw_text": "9. Unable to complete follow-up visits",
                                   "Study": [
                                     "follow-up visits"
+                                  ],
+                                  "Negation": [
+                                    "Unable"
                                   ]
                                 }
                               }

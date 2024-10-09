@@ -17,19 +17,13 @@
             "18"
           ],
           "Eq-Comparison": [
-            "younger than 18 years"
+            "< 18 years old"
           ]
         },
         "right": {
-          "OR": {
+          "AND": {
             "left": {
               "raw_text": "- ASA physical status >3.",
-              "Procedure": [
-                "ASA physical status"
-              ],
-              "Procedure-Name": [
-                "ASA physical status"
-              ],
               "Eq-Operator": [
                 ">"
               ],
@@ -38,10 +32,16 @@
               ],
               "Eq-Comparison": [
                 ">3"
+              ],
+              "Observation": [
+                "ASA physical status"
+              ],
+              "Observation-Name": [
+                "ASA physical status"
               ]
             },
             "right": {
-              "OR": {
+              "AND": {
                 "left": {
                   "raw_text": "- Immunosuppression or high risk of infection.",
                   "Condition": [
@@ -52,20 +52,26 @@
                   ],
                   "Risk": [
                     "high risk"
+                  ],
+                  "Observation": [
+                    "infection"
+                  ],
+                  "Observation-Name": [
+                    "infection"
                   ]
                 },
                 "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
                       "raw_text": "- Contraindications to receiving spinal anesthesia (e.g. coagulation impairment).",
+                      "Contraindication": [
+                        "Contraindications"
+                      ],
                       "Procedure": [
                         "spinal anesthesia"
                       ],
                       "Procedure-Name": [
                         "spinal anesthesia"
-                      ],
-                      "Contraindication": [
-                        "Contraindications"
                       ],
                       "Condition": [
                         "coagulation impairment"
@@ -75,7 +81,7 @@
                       ]
                     },
                     "right": {
-                      "OR": {
+                      "AND": {
                         "left": {
                           "raw_text": "- Patients with psychosis",
                           "Condition": [
@@ -86,7 +92,7 @@
                           ]
                         },
                         "right": {
-                          "OR": {
+                          "AND": {
                             "left": {
                               "raw_text": "- Patients with preexisting back pain.",
                               "Condition": [
@@ -94,10 +100,13 @@
                               ],
                               "Condition-Name": [
                                 "back pain"
+                              ],
+                              "Modifier": [
+                                "preexisting"
                               ]
                             },
                             "right": {
-                              "OR": {
+                              "AND": {
                                 "left": {
                                   "raw_text": "- Patients with cognitive impairment",
                                   "Condition": [
@@ -108,23 +117,26 @@
                                   ]
                                 },
                                 "right": {
-                                  "OR": {
+                                  "AND": {
                                     "left": {
                                       "raw_text": "- Allergies to local anesthetics, analgesics or any medication used in the study.",
-                                      "Allergy": [
+                                      "Condition": [
                                         "Allergies"
                                       ],
-                                      "Procedure": [
+                                      "Condition-Name": [
+                                        "Allergies"
+                                      ],
+                                      "Drug": [
                                         "local anesthetics",
                                         "analgesics"
                                       ],
-                                      "Procedure-Name": [
+                                      "Drug-Name": [
                                         "local anesthetics",
                                         "analgesics"
                                       ]
                                     },
                                     "right": {
-                                      "OR": {
+                                      "AND": {
                                         "left": {
                                           "raw_text": "- Patients with chronic regular opioid usage",
                                           "Condition": [
@@ -132,6 +144,12 @@
                                           ],
                                           "Condition-Name": [
                                             "chronic regular opioid usage"
+                                          ],
+                                          "Drug": [
+                                            "opioid"
+                                          ],
+                                          "Drug-Name": [
+                                            "opioid"
                                           ]
                                         },
                                         "right": {
@@ -141,6 +159,9 @@
                                           ],
                                           "Condition-Name": [
                                             "neurological symptoms"
+                                          ],
+                                          "Modifier": [
+                                            "preexisting"
                                           ]
                                         }
                                       }

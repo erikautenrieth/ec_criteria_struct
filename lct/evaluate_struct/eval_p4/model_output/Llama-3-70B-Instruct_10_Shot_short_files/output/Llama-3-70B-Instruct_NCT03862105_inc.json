@@ -3,7 +3,23 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "- Male or female patients with invasive bladder cancer scheduled for radical cystectomy at UNC within the next 30 days",
+          "OR": {
+            "left": {
+              "raw_text": "- Male patients",
+              "Life-Stage-And-Gender": [
+                "Male"
+              ]
+            },
+            "right": {
+              "raw_text": "or female patients",
+              "Life-Stage-And-Gender": [
+                "female"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "with invasive bladder cancer scheduled for radical cystectomy at UNC within the next 30 days",
           "Condition": [
             "invasive bladder cancer"
           ],
@@ -16,9 +32,6 @@
           "Procedure-Name": [
             "radical cystectomy"
           ],
-          "Location": [
-            "UNC"
-          ],
           "Eq-Temporal-Unit": [
             "days"
           ],
@@ -28,8 +41,12 @@
           "Eq-Comparison": [
             "within the next 30 days"
           ]
-        },
-        "right": {
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
           "AND": {
             "left": {
               "raw_text": "- English-speaking",
@@ -38,36 +55,32 @@
               ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "- Ability to access the Internet (either themselves or with assistance from their caregiver)",
-                  "Observation": [
-                    "access the Internet"
-                  ],
-                  "Observation-Name": [
-                    "access the Internet"
-                  ]
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "- Ability to read",
-                      "Observation": [
-                        "read"
-                      ],
-                      "Observation-Name": [
-                        "read"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "- Ability to provide informed consent.",
-                      "Study": [
-                        "informed consent"
-                      ]
-                    }
-                  }
-                }
-              }
+              "raw_text": "- Ability to access the Internet (either themselves or with assistance from their caregiver)",
+              "Observation": [
+                "Internet"
+              ],
+              "Observation-Name": [
+                "Internet"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Ability to read",
+              "Observation": [
+                "read"
+              ],
+              "Observation-Name": [
+                "read"
+              ]
+            },
+            "right": {
+              "raw_text": "- Ability to provide informed consent.",
+              "Study": [
+                "informed consent"
+              ]
             }
           }
         }

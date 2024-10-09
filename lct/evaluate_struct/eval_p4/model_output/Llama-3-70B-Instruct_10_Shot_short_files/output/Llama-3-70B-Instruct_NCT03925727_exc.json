@@ -9,151 +9,165 @@
                 "left": {
                   "AND": {
                     "left": {
-                      "raw_text": "- Have participated in a previous tavilermide (MIM-D3) study;",
-                      "Study": [
-                        "tavilermide",
-                        "MIM-D3"
-                      ],
-                      "Procedure": [
-                        "participated"
-                      ],
-                      "Procedure-Name": [
-                        "participated"
-                      ]
+                      "AND": {
+                        "left": {
+                          "raw_text": "-"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "Have participated in a previous tavilermide (MIM-D3) study;",
+                              "Study": [
+                                "tavilermide (MIM-D3) study"
+                              ],
+                              "Negation": [
+                                "not"
+                              ]
+                            }
+                          }
+                        }
+                      }
                     },
                     "right": {
-                      "raw_text": "- Have clinically significant slit lamp findings at Visit 1;",
-                      "Observation": [
-                        "slit lamp findings"
-                      ],
-                      "Observation-Name": [
-                        "slit lamp findings"
-                      ],
-                      "Modifier": [
-                        "clinically significant"
-                      ],
-                      "Study": [
-                        "Visit 1"
-                      ]
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Have clinically significant slit lamp findings at Visit 1;",
+                          "Observation": [
+                            "slit lamp findings"
+                          ],
+                          "Observation-Name": [
+                            "slit lamp findings"
+                          ],
+                          "Study": [
+                            "Visit 1"
+                          ],
+                          "Negation": [
+                            "not"
+                          ]
+                        }
+                      }
                     }
                   }
                 },
                 "right": {
-                  "raw_text": "- Have a history of lacrimal duct obstruction within 12 months of Visit 1;",
-                  "Condition": [
-                    "lacrimal duct obstruction"
-                  ],
-                  "Condition-Name": [
-                    "lacrimal duct obstruction"
-                  ],
-                  "Modifier": [
-                    "history"
-                  ],
-                  "Eq-Temporal-Unit": [
-                    "months"
-                  ],
-                  "Eq-Value": [
-                    "12"
-                  ],
-                  "Eq-Comparison": [
-                    "within 12 months"
-                  ],
-                  "Study": [
-                    "Visit 1"
-                  ]
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Have a history of lacrimal duct obstruction within 12 months of Visit 1;",
+                      "Condition": [
+                        "lacrimal duct obstruction"
+                      ],
+                      "Condition-Name": [
+                        "lacrimal duct obstruction"
+                      ],
+                      "Study": [
+                        "Visit 1"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "months"
+                      ],
+                      "Eq-Value": [
+                        "12"
+                      ],
+                      "Negation": [
+                        "not"
+                      ]
+                    }
+                  }
                 }
               }
             },
             "right": {
-              "raw_text": "- Have an uncontrolled systemic disease;",
-              "Condition": [
-                "systemic disease"
-              ],
-              "Condition-Name": [
-                "systemic disease"
-              ],
-              "Modifier": [
-                "uncontrolled"
-              ]
+              "NOT": {
+                "left": {
+                  "raw_text": "Have an uncontrolled systemic disease;",
+                  "Condition": [
+                    "systemic disease"
+                  ],
+                  "Condition-Name": [
+                    "systemic disease"
+                  ],
+                  "Modifier": [
+                    "uncontrolled"
+                  ],
+                  "Negation": [
+                    "not"
+                  ]
+                }
+              }
             }
           }
         },
         "right": {
-          "OR": {
+          "NOT": {
             "left": {
-              "raw_text": "- Be a woman who is pregnant, nursing or planning a pregnancy;",
-              "Life-Stage-And-Gender": [
-                "woman"
-              ],
-              "Condition": [
-                "pregnant",
-                "nursing",
-                "planning a pregnancy"
-              ],
-              "Condition-Name": [
-                "pregnant",
-                "nursing",
-                "planning a pregnancy"
-              ]
-            },
-            "right": {
-              "raw_text": "- Be a woman of childbearing potential who is not using an acceptable means of birth control;",
-              "Life-Stage-And-Gender": [
-                "woman"
-              ],
-              "Condition": [
-                "childbearing potential"
-              ],
-              "Condition-Name": [
-                "childbearing potential"
-              ],
-              "Modifier": [
-                "not using"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "Be a woman who is pregnant, nursing or planning a pregnancy;",
+                  "Life-Stage-And-Gender": [
+                    "pregnant",
+                    "nursing",
+                    "planning a pregnancy"
+                  ],
+                  "Negation": [
+                    "not"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or Be a woman of childbearing potential who is not using an acceptable means of birth control;",
+                  "Life-Stage-And-Gender": [
+                    "childbearing potential"
+                  ],
+                  "Modifier": [
+                    "not using"
+                  ],
+                  "Negation": [
+                    "not"
+                  ]
+                }
+              }
             }
           }
         }
       }
     },
     "right": {
-      "OR": {
+      "NOT": {
         "left": {
-          "raw_text": "- Have a condition or be in a situation which the investigator feels may put the subject at significant risk, may confound the study results, or may interfere significantly with the subject's participation in the study;",
-          "Condition": [
-            "condition"
-          ],
-          "Condition-Name": [
-            "condition"
-          ],
-          "Modifier": [
-            "significant risk"
-          ]
-        },
-        "right": {
-          "raw_text": "- Be currently enrolled in an investigational drug or device study or have used an investigational drug or device within 45 days prior to Visit 1.",
-          "Study": [
-            "investigational drug or device study"
-          ],
-          "Procedure": [
-            "enrolled",
-            "used"
-          ],
-          "Procedure-Name": [
-            "enrolled",
-            "used"
-          ],
-          "Eq-Temporal-Unit": [
-            "days"
-          ],
-          "Eq-Value": [
-            "45"
-          ],
-          "Eq-Comparison": [
-            "within 45 days"
-          ],
-          "Study": [
-            "Visit 1"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "Have a condition or be in a situation which the investigator feels may put the subject at significant risk, may confound the study results, or may interfere significantly with the subject's participation in the study;",
+              "Condition": [
+                "condition"
+              ],
+              "Condition-Name": [
+                "condition"
+              ],
+              "Study": [
+                "study"
+              ],
+              "Negation": [
+                "not"
+              ]
+            },
+            "right": {
+              "raw_text": "or Be currently enrolled in an investigational drug or device study or have used an investigational drug or device within 45 days prior to Visit 1.",
+              "Study": [
+                "investigational drug or device study"
+              ],
+              "Eq-Temporal-Unit": [
+                "days"
+              ],
+              "Eq-Value": [
+                "45"
+              ],
+              "Study": [
+                "Visit 1"
+              ],
+              "Negation": [
+                "not"
+              ]
+            }
+          }
         }
       }
     }

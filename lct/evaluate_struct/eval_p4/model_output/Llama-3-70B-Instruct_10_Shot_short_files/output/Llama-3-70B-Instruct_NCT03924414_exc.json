@@ -12,7 +12,7 @@
           ]
         },
         "right": {
-          "OR": {
+          "AND": {
             "left": {
               "raw_text": "- Any use of a bisphosphonate drug within the last 12 months",
               "Drug": [
@@ -32,129 +32,115 @@
               ]
             },
             "right": {
-              "raw_text": "- Use of any other osteoporosis treatment (such as SERMs and denosumab) within the last 6 months",
-              "Drug": [
-                "SERMs",
-                "denosumab"
-              ],
-              "Drug-Name": [
-                "SERMs",
-                "denosumab"
-              ],
-              "Eq-Temporal-Unit": [
-                "months"
-              ],
-              "Eq-Value": [
-                "6"
-              ],
-              "Eq-Comparison": [
-                "within the last 6 months"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "OR": {
-            "left": {
-              "raw_text": "- Tooth extraction or invasive dental procedures within the past 30 days",
-              "Procedure": [
-                "Tooth extraction",
-                "invasive dental procedures"
-              ],
-              "Procedure-Name": [
-                "Tooth extraction",
-                "invasive dental procedures"
-              ],
-              "Eq-Temporal-Unit": [
-                "days"
-              ],
-              "Eq-Value": [
-                "30"
-              ],
-              "Eq-Comparison": [
-                "within the past 30 days"
-              ]
-            },
-            "right": {
-              "raw_text": "or planned/scheduled extraction/procedure in the next 12 months",
-              "Procedure": [
-                "extraction",
-                "procedure"
-              ],
-              "Procedure-Name": [
-                "extraction",
-                "procedure"
-              ],
-              "Eq-Temporal-Unit": [
-                "months"
-              ],
-              "Eq-Value": [
-                "12"
-              ],
-              "Eq-Comparison": [
-                "in the next 12 months"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "- Non-ambulatory, i.e., unable to walk without assistance of another person.",
-              "Condition": [
-                "Non-ambulatory"
-              ],
-              "Condition-Name": [
-                "Non-ambulatory"
-              ]
-            },
-            "right": {
               "AND": {
                 "left": {
-                  "raw_text": "- Undergoing kidney dialysis",
-                  "Procedure": [
-                    "kidney dialysis"
+                  "raw_text": "- Use of any other osteoporosis treatment (such as SERMs and denosumab) within the last 6 months",
+                  "Drug": [
+                    "SERMs",
+                    "denosumab"
                   ],
-                  "Procedure-Name": [
-                    "kidney dialysis"
+                  "Drug-Name": [
+                    "SERMs",
+                    "denosumab"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Value": [
+                    "6"
+                  ],
+                  "Eq-Comparison": [
+                    "within the last 6 months"
                   ]
                 },
                 "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "- A diagnosis of multiple myeloma or Paget's disease",
-                      "Condition": [
-                        "multiple myeloma",
-                        "Paget's disease"
+                      "raw_text": "- Tooth extraction or invasive dental procedures within the past 30 days or planned/scheduled extraction/procedure in the next 12 months",
+                      "Procedure": [
+                        "Tooth extraction",
+                        "invasive dental procedures"
                       ],
-                      "Condition-Name": [
-                        "multiple myeloma",
-                        "Paget's disease"
+                      "Procedure-Name": [
+                        "Tooth extraction",
+                        "invasive dental procedures"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "days",
+                        "months"
+                      ],
+                      "Eq-Value": [
+                        "30",
+                        "12"
+                      ],
+                      "Eq-Comparison": [
+                        "within the past 30 days",
+                        "in the next 12 months"
                       ]
                     },
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "- Unable to speak or read English sufficiently to complete informed consent",
-                          "Observation": [
-                            "English"
+                          "raw_text": "- Non-ambulatory, i.e., unable to walk without assistance of another person.",
+                          "Condition": [
+                            "Non-ambulatory"
                           ],
-                          "Observation-Name": [
-                            "English"
+                          "Condition-Name": [
+                            "Non-ambulatory"
+                          ],
+                          "Modifier": [
+                            "unable"
                           ]
                         },
                         "right": {
-                          "raw_text": "- Any other criteria, which would make the patient unsuitable to participate in this study as determined by the study staff (e.g., an uncontrolled drug and/or alcohol addiction)",
-                          "Condition": [
-                            "uncontrolled drug and/or alcohol addiction"
-                          ],
-                          "Condition-Name": [
-                            "uncontrolled drug and/or alcohol addiction"
-                          ]
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Undergoing kidney dialysis",
+                              "Procedure": [
+                                "kidney dialysis"
+                              ],
+                              "Procedure-Name": [
+                                "kidney dialysis"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- A diagnosis of multiple myeloma or Paget's disease",
+                                  "Condition": [
+                                    "multiple myeloma",
+                                    "Paget's disease"
+                                  ],
+                                  "Condition-Name": [
+                                    "multiple myeloma",
+                                    "Paget's disease"
+                                  ]
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "- Unable to speak or read English sufficiently to complete informed consent",
+                                      "Language": [
+                                        "English"
+                                      ],
+                                      "Modifier": [
+                                        "Unable"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "- Any other criteria, which would make the patient unsuitable to participate in this study as determined by the study staff (e.g., an uncontrolled drug and/or alcohol addiction)",
+                                      "Condition": [
+                                        "uncontrolled drug and/or alcohol addiction"
+                                      ],
+                                      "Condition-Name": [
+                                        "uncontrolled drug and/or alcohol addiction"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }

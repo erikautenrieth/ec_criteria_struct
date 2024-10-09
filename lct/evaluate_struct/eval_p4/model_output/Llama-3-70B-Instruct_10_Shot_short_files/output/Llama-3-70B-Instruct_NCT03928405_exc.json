@@ -1,131 +1,124 @@
 {
-  "AND": {
+  "OR": {
     "left": {
-      "AND": {
+      "raw_text": "- Patients diagnosed with dementia (infection, vascular, hematological diseases)",
+      "Condition": [
+        "dementia"
+      ],
+      "Condition-Name": [
+        "dementia"
+      ],
+      "Modifier": [
+        "infection",
+        "vascular",
+        "hematological"
+      ]
+    },
+    "right": {
+      "OR": {
         "left": {
-          "OR": {
-            "left": {
-              "raw_text": "- Patients diagnosed with dementia",
-              "Condition": [
-                "dementia"
-              ],
-              "Condition-Name": [
-                "dementia"
-              ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "- infection, vascular, hematological diseases",
-                  "Condition": [
-                    "infection",
-                    "vascular",
-                    "hematological diseases"
-                  ],
-                  "Condition-Name": [
-                    "infection",
-                    "vascular",
-                    "hematological diseases"
-                  ]
-                },
-                "right": {
-                  "raw_text": "- patients who could not be contacted during the follow-up period or who did not come to control, cardiac and cerebrovascular event",
-                  "Condition": [
-                    "cardiac",
-                    "cerebrovascular event"
-                  ],
-                  "Condition-Name": [
-                    "cardiac",
-                    "cerebrovascular event"
-                  ]
-                }
-              }
-            }
-          }
+          "raw_text": "- patients who could not be contacted during the follow-up period or who did not come to control",
+          "Study": [
+            "follow-up period"
+          ],
+          "Procedure": [
+            "control"
+          ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "- Endocrine disorder, fluid-electrolyte imbalance and infection",
+              "raw_text": "- cardiac and cerebrovascular event",
               "Condition": [
-                "Endocrine disorder",
-                "fluid-electrolyte imbalance",
-                "infection"
+                "cardiac",
+                "cerebrovascular event"
               ],
               "Condition-Name": [
-                "Endocrine disorder",
-                "fluid-electrolyte imbalance",
-                "infection"
+                "cardiac",
+                "cerebrovascular event"
               ]
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "- Patients with malignancy and malignancy, chemotherapy and radiotherapy",
+                  "raw_text": "- Endocrine disorder, fluid-electrolyte imbalance and infection",
                   "Condition": [
-                    "malignancy"
+                    "Endocrine disorder",
+                    "fluid-electrolyte imbalance",
+                    "infection"
                   ],
                   "Condition-Name": [
-                    "malignancy"
-                  ],
-                  "Procedure": [
-                    "chemotherapy",
-                    "radiotherapy"
-                  ],
-                  "Procedure-Name": [
-                    "chemotherapy",
-                    "radiotherapy"
+                    "Endocrine disorder",
+                    "fluid-electrolyte imbalance",
+                    "infection"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "- Patients with delirium or depression",
+                      "raw_text": "- Patients with malignancy and malignancy, chemotherapy and radiotherapy",
                       "Condition": [
-                        "delirium",
-                        "depression"
+                        "malignancy"
                       ],
                       "Condition-Name": [
-                        "delirium",
-                        "depression"
+                        "malignancy"
+                      ],
+                      "Procedure": [
+                        "chemotherapy",
+                        "radiotherapy"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "- Those with protective sensation loss (those with Semmes-Weinstein Monofilament Thickness 4.56 and above)",
+                          "raw_text": "- Patients with delirium or depression",
                           "Condition": [
-                            "protective sensation loss"
+                            "delirium",
+                            "depression"
                           ],
                           "Condition-Name": [
-                            "protective sensation loss"
-                          ],
-                          "Observation": [
-                            "Semmes-Weinstein Monofilament Thickness"
-                          ],
-                          "Observation-Name": [
-                            "Semmes-Weinstein Monofilament Thickness"
-                          ],
-                          "Eq-Value": [
-                            "4.56"
-                          ],
-                          "Eq-Comparison": [
-                            "above"
+                            "delirium",
+                            "depression"
                           ]
                         },
                         "right": {
-                          "raw_text": "- patients with lower or upper extremity amputations at any level",
-                          "Condition": [
-                            "amputations"
-                          ],
-                          "Condition-Name": [
-                            "amputations"
-                          ],
-                          "Modifier": [
-                            "lower",
-                            "upper",
-                            "extremity"
-                          ]
+                          "OR": {
+                            "left": {
+                              "raw_text": "- Those with protective sensation loss (those with Semmes-Weinstein Monofilament Thickness 4.56 and above)",
+                              "Condition": [
+                                "protective sensation loss"
+                              ],
+                              "Condition-Name": [
+                                "protective sensation loss"
+                              ],
+                              "Observation": [
+                                "Semmes-Weinstein Monofilament Thickness"
+                              ],
+                              "Observation-Name": [
+                                "Semmes-Weinstein Monofilament Thickness"
+                              ],
+                              "Eq-Value": [
+                                "4.56"
+                              ],
+                              "Eq-Comparison": [
+                                "above"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- patients with lower or upper extremity amputations at any level",
+                              "Condition": [
+                                "amputations"
+                              ],
+                              "Condition-Name": [
+                                "amputations"
+                              ],
+                              "Modifier": [
+                                "lower",
+                                "upper",
+                                "extremity"
+                              ]
+                            }
+                          }
                         }
                       }
                     }

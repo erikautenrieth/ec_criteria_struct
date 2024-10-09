@@ -1,74 +1,81 @@
 {
-  "OR": {
+  "AND": {
     "left": {
-      "raw_text": "- admitted with transient ischemic attack",
-      "Condition": [
-        "transient ischemic attack"
-      ],
-      "Condition-Name": [
-        "transient ischemic attack"
-      ]
-    },
-    "right": {
       "OR": {
         "left": {
-          "raw_text": "- admitted with an intracerebral hemorrhage",
+          "raw_text": "- admitted with transient ischemic attack",
           "Condition": [
-            "intracerebral hemorrhage"
+            "transient ischemic attack"
           ],
           "Condition-Name": [
-            "intracerebral hemorrhage"
+            "transient ischemic attack"
           ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "- experience an in-hospital ischemic cerebral infarction",
+              "raw_text": "- admitted with an intracerebral hemorrhage",
               "Condition": [
-                "ischemic cerebral infarction"
+                "intracerebral hemorrhage"
               ],
               "Condition-Name": [
-                "ischemic cerebral infarction"
+                "intracerebral hemorrhage"
               ]
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "- hospital to hospital transfer patients",
-                  "Procedure": [
-                    "hospital to hospital transfer"
+                  "raw_text": "- experience an in-hospital ischemic cerebral infarction",
+                  "Condition": [
+                    "ischemic cerebral infarction"
                   ],
-                  "Procedure-Name": [
-                    "hospital to hospital transfer"
+                  "Condition-Name": [
+                    "ischemic cerebral infarction"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "- nursing home as primary residence before or after discharge",
-                      "Location": [
-                        "nursing home"
+                      "raw_text": "- hospital to hospital transfer patients",
+                      "Procedure": [
+                        "hospital to hospital transfer"
+                      ],
+                      "Procedure-Name": [
+                        "hospital to hospital transfer"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "- hospice",
+                          "raw_text": "- nursing home as primary residence before or after discharge",
                           "Location": [
-                            "hospice"
+                            "nursing home"
+                          ],
+                          "Location-Name": [
+                            "nursing home"
                           ]
                         },
                         "right": {
-                          "raw_text": "- inability to comply with post discharge follow up",
-                          "Negation": [
-                            "inability"
-                          ],
-                          "Procedure": [
-                            "post discharge follow up"
-                          ],
-                          "Procedure-Name": [
-                            "post discharge follow up"
-                          ]
+                          "OR": {
+                            "left": {
+                              "raw_text": "- hospice",
+                              "Location": [
+                                "hospice"
+                              ],
+                              "Location-Name": [
+                                "hospice"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- inability to comply with post discharge follow up",
+                              "Condition": [
+                                "inability to comply"
+                              ],
+                              "Condition-Name": [
+                                "inability to comply"
+                              ]
+                            }
+                          }
                         }
                       }
                     }

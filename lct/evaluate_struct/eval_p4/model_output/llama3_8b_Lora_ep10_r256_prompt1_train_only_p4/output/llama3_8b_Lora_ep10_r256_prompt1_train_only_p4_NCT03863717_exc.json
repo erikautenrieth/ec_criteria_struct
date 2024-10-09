@@ -1,0 +1,192 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Age < 18 years old",
+                  "Eq-Operator": [
+                    "<"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "Age"
+                  ],
+                  "Eq-Value": [
+                    "18"
+                  ],
+                  "Eq-Comparison": [
+                    "< 18 years"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Unstable cardiac disease",
+                  "Condition": [
+                    "cardiac disease"
+                  ],
+                  "Condition-Name": [
+                    "cardiac disease"
+                  ],
+                  "Stability": [
+                    "Unstable"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Musculoskeletal",
+                  "Modifier": [
+                    "Musculoskeletal"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "and neurological diseases that could affect exercise performance",
+                      "Condition": [
+                        "diseases"
+                      ],
+                      "Condition-Name": [
+                        "diseases"
+                      ],
+                      "Modifier": [
+                        "neurological"
+                      ],
+                      "Observation": [
+                        "exercise"
+                      ],
+                      "Observation-Name": [
+                        "exercise"
+                      ],
+                      "Stability": [
+                        "affect"
+                      ],
+                      "Assertion": [
+                        "could"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "preclude exercise",
+                              "Observation": [
+                                "exercise"
+                              ],
+                              "Observation-Name": [
+                                "exercise"
+                              ],
+                              "Negation": [
+                                "preclude"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients of COPD final stage",
+              "Condition": [
+                "COPD"
+              ],
+              "Condition-Name": [
+                "COPD"
+              ],
+              "Eq-Comparison": [
+                "final stage"
+              ],
+              "Eq-Unit": [
+                "stage"
+              ],
+              "Eq-Temporal-Period": [
+                "final"
+              ]
+            },
+            "right": {
+              "raw_text": "or other serious disease final stage",
+              "Condition": [
+                "disease"
+              ],
+              "Eq-Comparison": [
+                "final stage"
+              ],
+              "Eq-Unit": [
+                "stage"
+              ],
+              "Other": [
+                "other"
+              ],
+              "Severity": [
+                "serious"
+              ],
+              "Eq-Temporal-Period": [
+                "final"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Significant cognitive",
+          "Modifier": [
+            "cognitive"
+          ],
+          "Severity": [
+            "Significant"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or psychiatric impairment that would lead to an inability to follow simple commands in a group setting",
+              "Condition": [
+                "impairment"
+              ],
+              "Condition-Name": [
+                "impairment"
+              ],
+              "Modifier": [
+                "psychiatric"
+              ],
+              "Assertion": [
+                "would"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "or inability to follow simple commands in a group setting",
+                  "Negation": [
+                    "inability"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

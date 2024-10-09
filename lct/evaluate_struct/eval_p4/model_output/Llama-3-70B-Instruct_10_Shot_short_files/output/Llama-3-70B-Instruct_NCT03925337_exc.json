@@ -3,134 +3,152 @@
     "left": {
       "AND": {
         "left": {
-          "AND": {
-            "left": {
-              "AND": {
-                "left": {
-                  "raw_text": "- Minors aged < 22 years.",
-                  "Age": [
-                    "aged"
-                  ],
-                  "Eq-Operator": [
-                    "<"
-                  ],
-                  "Eq-Value": [
-                    "22"
-                  ],
-                  "Eq-Comparison": [
-                    "< 22 years"
-                  ],
-                  "Eq-Temporal-Unit": [
-                    "years"
-                  ]
-                },
-                "right": {
-                  "raw_text": "- People with diminished cognitive capacity",
-                  "Condition": [
-                    "diminished cognitive capacity"
-                  ],
-                  "Condition-Name": [
-                    "diminished cognitive capacity"
-                  ]
-                }
-              }
-            },
-            "right": {
-              "raw_text": "- Patients undergoing diagnostic colonoscopy (e.g. as an evaluation for active gastrointestinal bleed, referring collectively to the stomach and the small and large intestine).",
-              "Procedure": [
-                "colonoscopy"
-              ],
-              "Procedure-Name": [
-                "colonoscopy"
-              ],
-              "Condition": [
-                "active gastrointestinal bleed"
-              ],
-              "Condition-Name": [
-                "active gastrointestinal bleed"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "- Patients with incomplete colonoscopies (those where endoscopists did not successfully intubate the cecum due to technical difficulties or poor bowel preparation)",
-              "Procedure": [
-                "colonoscopies"
-              ],
-              "Procedure-Name": [
-                "colonoscopies"
-              ],
-              "Condition": [
-                "incomplete colonoscopies"
-              ],
-              "Condition-Name": [
-                "incomplete colonoscopies"
-              ]
-            },
-            "right": {
-              "raw_text": "- Patients that have standard contraindications to colonoscopy in general (e.g. documented acute diverticulitis, fulminant colitis and known or suspected perforation).",
-              "Contraindication": [
-                "contraindications"
-              ],
-              "Condition": [
-                "acute diverticulitis",
-                "fulminant colitis",
-                "perforation"
-              ],
-              "Condition-Name": [
-                "acute diverticulitis",
-                "fulminant colitis",
-                "perforation"
-              ]
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "AND": {
-        "left": {
-          "raw_text": "- Patients with inflammatory bowel disease",
-          "Condition": [
-            "inflammatory bowel disease"
+          "raw_text": "- Minors aged < 22 years.",
+          "Age": [
+            "age"
           ],
-          "Condition-Name": [
-            "inflammatory bowel disease"
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "22"
+          ],
+          "Eq-Comparison": [
+            "< 22 years"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
           ]
         },
         "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "- Patients with any polypoid/ulcerated lesion > 2 cm concerning for invasive cancer on endoscopy",
+              "raw_text": "- People with diminished cognitive capacity",
               "Condition": [
-                "polypoid/ulcerated lesion"
+                "diminished cognitive capacity"
               ],
               "Condition-Name": [
-                "polypoid/ulcerated lesion"
-              ],
-              "Eq-Operator": [
-                ">"
-              ],
-              "Eq-Value": [
-                "2"
-              ],
-              "Eq-Comparison": [
-                "> 2 cm"
-              ],
-              "Eq-Temporal-Unit": [
-                "cm"
+                "diminished cognitive capacity"
               ]
             },
             "right": {
-              "raw_text": "- Patients referred for endoscopic mucosal resection (EMR), which is a procedure to remove early-stage cancer and precancerous growths from the lining of the digestive tract.",
-              "Procedure": [
-                "endoscopic mucosal resection"
-              ],
-              "Procedure-Name": [
-                "endoscopic mucosal resection"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients undergoing diagnostic colonoscopy",
+                  "Procedure": [
+                    "colonoscopy"
+                  ],
+                  "Procedure-Name": [
+                    "colonoscopy"
+                  ],
+                  "Condition": [
+                    "active gastrointestinal bleed"
+                  ],
+                  "Condition-Name": [
+                    "active gastrointestinal bleed"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patients with incomplete colonoscopies",
+                      "Procedure": [
+                        "colonoscopies"
+                      ],
+                      "Procedure-Name": [
+                        "colonoscopies"
+                      ],
+                      "Condition": [
+                        "incomplete colonoscopies"
+                      ],
+                      "Condition-Name": [
+                        "incomplete colonoscopies"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Patients that have standard contraindications to colonoscopy in general",
+                          "Procedure": [
+                            "colonoscopy"
+                          ],
+                          "Procedure-Name": [
+                            "colonoscopy"
+                          ],
+                          "Contraindication": [
+                            "standard contraindications"
+                          ],
+                          "Condition": [
+                            "acute diverticulitis",
+                            "fulminant colitis",
+                            "perforation"
+                          ],
+                          "Condition-Name": [
+                            "acute diverticulitis",
+                            "fulminant colitis",
+                            "perforation"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Patients with inflammatory bowel disease",
+                              "Condition": [
+                                "inflammatory bowel disease"
+                              ],
+                              "Condition-Name": [
+                                "inflammatory bowel disease"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- Patients with any polypoid/ulcerated lesion > 2 cm concerning for invasive cancer on endoscopy",
+                                  "Condition": [
+                                    "polypoid/ulcerated lesion"
+                                  ],
+                                  "Condition-Name": [
+                                    "polypoid/ulcerated lesion"
+                                  ],
+                                  "Eq-Operator": [
+                                    ">"
+                                  ],
+                                  "Eq-Value": [
+                                    "2"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "> 2 cm"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "cm"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "- Patients referred for endoscopic mucosal resection (EMR)",
+                                  "Procedure": [
+                                    "endoscopic mucosal resection"
+                                  ],
+                                  "Procedure-Name": [
+                                    "endoscopic mucosal resection"
+                                  ],
+                                  "Condition": [
+                                    "early-stage cancer",
+                                    "precancerous growths"
+                                  ],
+                                  "Condition-Name": [
+                                    "early-stage cancer",
+                                    "precancerous growths"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }

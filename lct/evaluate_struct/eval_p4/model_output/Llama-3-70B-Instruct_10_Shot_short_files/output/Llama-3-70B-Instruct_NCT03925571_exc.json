@@ -11,22 +11,87 @@
                     "left": {
                       "AND": {
                         "left": {
-                          "raw_text": "-"
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "NOT": {
+                                    "left": {
+                                      "raw_text": "Patients with a long-term taking of anxiolytic or analgesic",
+                                      "Condition": [
+                                        "anxiolytic",
+                                        "analgesic"
+                                      ],
+                                      "Condition-Name": [
+                                        "anxiolytic",
+                                        "analgesic"
+                                      ],
+                                      "Negation": [
+                                        "NOT"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "NOT": {
+                                    "left": {
+                                      "raw_text": "Regular consumer of soft drug (cannabis) or hard drug (opioid)",
+                                      "Condition": [
+                                        "cannabis",
+                                        "opioid"
+                                      ],
+                                      "Condition-Name": [
+                                        "cannabis",
+                                        "opioid"
+                                      ],
+                                      "Negation": [
+                                        "NOT"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "Patient with medical history of psychiatry (mental harm), hearing problem, cognitive and behavioural impairment (claustrophobia), sensory disabilities",
+                                  "Condition": [
+                                    "psychiatry",
+                                    "mental harm",
+                                    "hearing problem",
+                                    "cognitive and behavioural impairment",
+                                    "claustrophobia",
+                                    "sensory disabilities"
+                                  ],
+                                  "Condition-Name": [
+                                    "psychiatry",
+                                    "mental harm",
+                                    "hearing problem",
+                                    "cognitive and behavioural impairment",
+                                    "claustrophobia",
+                                    "sensory disabilities"
+                                  ],
+                                  "Negation": [
+                                    "NOT"
+                                  ]
+                                }
+                              }
+                            }
+                          }
                         },
                         "right": {
                           "NOT": {
                             "left": {
-                              "raw_text": "Patients with a long-term taking of anxiolytic or analgesic",
+                              "raw_text": "Patient with problems of hemostasis",
                               "Condition": [
-                                "anxiolytic",
-                                "analgesic"
+                                "hemostasis"
                               ],
                               "Condition-Name": [
-                                "anxiolytic",
-                                "analgesic"
+                                "hemostasis"
                               ],
-                              "Modifier": [
-                                "long-term"
+                              "Negation": [
+                                "NOT"
                               ]
                             }
                           }
@@ -36,17 +101,17 @@
                     "right": {
                       "NOT": {
                         "left": {
-                          "raw_text": "Regular consumer of soft drug (cannabis) or hard drug (opioid)",
+                          "raw_text": "Majors under trusteeship or guardianship",
                           "Condition": [
-                            "soft drug",
-                            "hard drug"
+                            "trusteeship",
+                            "guardianship"
                           ],
                           "Condition-Name": [
-                            "soft drug",
-                            "hard drug"
+                            "trusteeship",
+                            "guardianship"
                           ],
-                          "Modifier": [
-                            "Regular"
+                          "Negation": [
+                            "NOT"
                           ]
                         }
                       }
@@ -56,23 +121,17 @@
                 "right": {
                   "NOT": {
                     "left": {
-                      "raw_text": "Patient with medical history of psychiatry (mental harm), hearing problem, cognitive and behavioural impairment (claustrophobia), sensory disabilities",
+                      "raw_text": "Pregnant women or lactating",
                       "Condition": [
-                        "psychiatry",
-                        "hearing problem",
-                        "cognitive and behavioural impairment",
-                        "claustrophobia",
-                        "sensory disabilities"
+                        "pregnant",
+                        "lactating"
                       ],
                       "Condition-Name": [
-                        "psychiatry",
-                        "hearing problem",
-                        "cognitive and behavioural impairment",
-                        "claustrophobia",
-                        "sensory disabilities"
+                        "pregnant",
+                        "lactating"
                       ],
-                      "Modifier": [
-                        "medical history"
+                      "Negation": [
+                        "NOT"
                       ]
                     }
                   }
@@ -82,15 +141,15 @@
             "right": {
               "NOT": {
                 "left": {
-                  "raw_text": "Patient with problems of hemostasis",
+                  "raw_text": "Minors",
                   "Condition": [
-                    "hemostasis"
+                    "minors"
                   ],
                   "Condition-Name": [
-                    "hemostasis"
+                    "minors"
                   ],
-                  "Modifier": [
-                    "problems"
+                  "Negation": [
+                    "NOT"
                   ]
                 }
               }
@@ -100,17 +159,19 @@
         "right": {
           "NOT": {
             "left": {
-              "raw_text": "Majors under trusteeship or guardianship",
+              "raw_text": "Protected person, deprived of freedom or under justice safeguard",
               "Condition": [
-                "trusteeship",
-                "guardianship"
+                "protected person",
+                "deprived of freedom",
+                "justice safeguard"
               ],
               "Condition-Name": [
-                "trusteeship",
-                "guardianship"
+                "protected person",
+                "deprived of freedom",
+                "justice safeguard"
               ],
-              "Modifier": [
-                "Majors"
+              "Negation": [
+                "NOT"
               ]
             }
           }
@@ -120,109 +181,98 @@
     "right": {
       "NOT": {
         "left": {
-          "raw_text": "Pregnant women or lactating",
+          "raw_text": "Profiting of a medical help from government (AME)",
           "Condition": [
-            "Pregnant",
-            "lactating"
+            "medical help",
+            "government",
+            "AME"
           ],
           "Condition-Name": [
-            "Pregnant",
-            "lactating"
+            "medical help",
+            "government",
+            "AME"
           ],
-          "Modifier": [
-            "women"
+          "Negation": [
+            "NOT"
           ]
         }
       }
     }
   },
-  "NOT": {
-    "left": {
-      "raw_text": "Minors",
-      "Condition": [
-        "Minors"
-      ],
-      "Condition-Name": [
-        "Minors"
-      ]
-    }
-  },
-  "NOT": {
-    "left": {
-      "raw_text": "Protected person, deprived of freedom or under justice safeguard",
-      "Condition": [
-        "Protected person",
-        "deprived of freedom",
-        "under justice safeguard"
-      ],
-      "Condition-Name": [
-        "Protected person",
-        "deprived of freedom",
-        "under justice safeguard"
-      ]
-    }
-  },
-  "NOT": {
-    "left": {
-      "raw_text": "Profiting of a medical help from government (AME)",
-      "Condition": [
-        "medical help",
-        "government",
-        "AME"
-      ],
-      "Condition-Name": [
-        "medical help",
-        "government",
-        "AME"
-      ]
-    }
-  },
-  "NOT": {
-    "left": {
-      "raw_text": "Not contactable after care",
-      "Condition": [
-        "Not contactable"
-      ],
-      "Condition-Name": [
-        "Not contactable"
-      ]
-    }
-  },
-  "NOT": {
-    "left": {
-      "raw_text": "Patient with hepatic impairment",
-      "Condition": [
-        "hepatic impairment"
-      ],
-      "Condition-Name": [
-        "hepatic impairment"
-      ]
-    }
-  },
-  "NOT": {
-    "left": {
-      "raw_text": "Patient with dry mouth",
-      "Condition": [
-        "dry mouth"
-      ],
-      "Condition-Name": [
-        "dry mouth"
-      ]
-    }
-  },
-  "NOT": {
-    "left": {
-      "raw_text": "Patient relevant a suboptimal hearing incompatible with musicotherapy or inability to use Music-care®",
-      "Condition": [
-        "suboptimal hearing",
-        "musicotherapy",
-        "Music-care"
-      ],
-      "Condition-Name": [
-        "suboptimal hearing",
-        "musicotherapy",
-        "Music-care"
-      ]
+  "right": {
+    "AND": {
+      "left": {
+        "NOT": {
+          "left": {
+            "raw_text": "Not contactable after care",
+            "Condition": [
+              "not contactable"
+            ],
+            "Condition-Name": [
+              "not contactable"
+            ],
+            "Negation": [
+              "NOT"
+            ]
+          }
+        }
+      },
+      "right": {
+        "AND": {
+          "left": {
+            "NOT": {
+              "left": {
+                "raw_text": "Patient with hepatic impairment",
+                "Condition": [
+                  "hepatic impairment"
+                ],
+                "Condition-Name": [
+                  "hepatic impairment"
+                ],
+                "Negation": [
+                  "NOT"
+                ]
+              }
+            }
+          },
+          "right": {
+            "NOT": {
+              "left": {
+                "raw_text": "Patient with dry mouth",
+                "Condition": [
+                  "dry mouth"
+                ],
+                "Condition-Name": [
+                  "dry mouth"
+                ],
+                "Negation": [
+                  "NOT"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "Patient relevant a suboptimal hearing incompatible with musicotherapy or inability to use Music-care®",
+          "Condition": [
+            "suboptimal hearing",
+            "incompatible with musicotherapy",
+            "inability to use Music-care®"
+          ],
+          "Condition-Name": [
+            "suboptimal hearing",
+            "incompatible with musicotherapy",
+            "inability to use Music-care®"
+          ],
+          "Negation": [
+            "NOT"
+          ]
+        }
+      }
     }
   }
 }

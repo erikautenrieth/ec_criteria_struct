@@ -7,6 +7,9 @@
           "Age": [
             "age"
           ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
           "Eq-Value": [
             "18",
             "90"
@@ -14,8 +17,8 @@
           "Eq-Comparison": [
             "18-90"
           ],
-          "Eq-Temporal-Unit": [
-            "years"
+          "Eq-Operator": [
+            "-"
           ]
         },
         "right": {
@@ -36,6 +39,9 @@
           ],
           "Eq-Comparison": [
             "within 30 days"
+          ],
+          "Eq-Operator": [
+            "within"
           ]
         }
       }
@@ -63,7 +69,7 @@
               ]
             },
             "right": {
-              "raw_text": "-signing of informed consent for the participation in the sub-project.",
+              "raw_text": "- signing of informed consent for the participation in the sub-project.",
               "Procedure": [
                 "informed consent"
               ],
@@ -77,26 +83,28 @@
           }
         }
       }
-    }
-  },
-  "OR": {
-    "left": {
-      "raw_text": "Additional inclusion criteria for Epigenetic subproject:",
-      "Study": [
-        "Epigenetic subproject"
-      ]
     },
     "right": {
-      "raw_text": "-signing of informed consent for participation in the subproject.",
-      "Procedure": [
-        "informed consent"
-      ],
-      "Procedure-Name": [
-        "informed consent"
-      ],
-      "Study": [
-        "subproject"
-      ]
+      "OR": {
+        "left": {
+          "raw_text": "Additional inclusion criteria for Epigenetic subproject:",
+          "Study": [
+            "Epigenetic subproject"
+          ]
+        },
+        "right": {
+          "raw_text": "- signing of informed consent for participation in the subproject.",
+          "Procedure": [
+            "informed consent"
+          ],
+          "Procedure-Name": [
+            "informed consent"
+          ],
+          "Study": [
+            "subproject"
+          ]
+        }
+      }
     }
   }
 }
