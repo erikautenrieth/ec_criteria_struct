@@ -49,17 +49,14 @@ def parse_text(text):
         return Node(criteria=text)
 
 def build_tree(data):
-    if not data:
-        return Node(criteria="empty set")
+    if not data: return Node(criteria="empty set")
 
     keys = list(data.keys())
-    if not keys:
-        return Node(criteria="empty set")
+    if not keys: return Node(criteria="empty set")
 
     nodes = [parse_text(data[key]) for key in keys if parse_text(data[key])]
 
-    if len(nodes) == 1:
-        return nodes[0]
+    if len(nodes) == 1: return nodes[0]
 
     root = nodes[0]
     for i in range(1, len(nodes)):
