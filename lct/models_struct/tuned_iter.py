@@ -38,7 +38,7 @@ alpaca_prompt = """Below is an instruction that describes a task, paired with an
 {}"""
 
 
-for i in range(8,10):
+for i in range(18,20):
     model_name = f"llama3_70b_ft_{i}"
     output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}/output/"
     os.makedirs(output_path, exist_ok=True)

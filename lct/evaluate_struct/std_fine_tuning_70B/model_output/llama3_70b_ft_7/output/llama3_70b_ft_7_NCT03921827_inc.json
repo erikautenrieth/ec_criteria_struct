@@ -1,0 +1,160 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "1. Patients with recent stroke/",
+          "Condition": [
+            "stroke"
+          ],
+          "Condition-Name": [
+            "stroke"
+          ],
+          "Eq-Comparison": [
+            "recent"
+          ],
+          "Eq-Temporal-Period": [
+            "recent"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "TIA",
+              "Condition": [
+                "TIA"
+              ],
+              "Condition-Name": [
+                "TIA"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "and severe stenosis of intracranial ICA",
+                  "Condition": [
+                    "stenosis of intracranial",
+                    "stenosis"
+                  ],
+                  "Condition-Name": [
+                    "stenosis of intracranial",
+                    "stenosis"
+                  ],
+                  "Severity": [
+                    "severe"
+                  ],
+                  "Modifier": [
+                    "ICA"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or MCA",
+                      "Modifier": [
+                        "MCA"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "and impaired CVR within previous three months",
+                          "Eq-Operator": [
+                            "within"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "months"
+                          ],
+                          "Condition": [
+                            "impaired CVR"
+                          ],
+                          "Condition-Name": [
+                            "impaired CVR"
+                          ],
+                          "Eq-Comparison": [
+                            "within previous three months"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "previous"
+                          ],
+                          "Eq-Value": [
+                            "three"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "but"
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "not before 3 weeks after acute stroke. This is to differentiate between patients with a long-standing fixed-stenosis from patients with partially recanalized intracranial artery (masquerading as severe stenosis).",
+                                  "Condition": [
+                                    "stroke",
+                                    "long-standing fixed-stenosis",
+                                    "partially recanalized intracranial artery",
+                                    "stenosis"
+                                  ],
+                                  "Condition-Name": [
+                                    "stroke",
+                                    "long-standing fixed-stenosis",
+                                    "partially recanalized intracranial artery",
+                                    "stenosis"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "weeks"
+                                  ],
+                                  "Eq-Value": [
+                                    "3"
+                                  ],
+                                  "Acuteness": [
+                                    "acute"
+                                  ],
+                                  "Severity": [
+                                    "severe"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "3 weeks"
+                                  ],
+                                  "Negation": [
+                                    "not"
+                                  ],
+                                  "Modifier": [
+                                    "intracranial"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "2. Age >21 years",
+      "Eq-Operator": [
+        ">"
+      ],
+      "Eq-Temporal-Unit": [
+        "years"
+      ],
+      "Age": [
+        "Age"
+      ],
+      "Eq-Value": [
+        "21"
+      ],
+      "Eq-Comparison": [
+        ">21 years"
+      ]
+    }
+  }
+}
