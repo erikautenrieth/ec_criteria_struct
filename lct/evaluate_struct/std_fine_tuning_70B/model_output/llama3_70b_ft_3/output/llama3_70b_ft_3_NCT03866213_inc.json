@@ -1,0 +1,107 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- The patient is currently being treated at Queen Elizabeth Central Hospital",
+                  "Eq-Comparison": [
+                    "currently"
+                  ],
+                  "Procedure": [
+                    "treated"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "currently"
+                  ],
+                  "Location": [
+                    "Queen Elizabeth Central Hospital"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or Kamuzu Central Hospital in the neonatal ward.",
+                  "Location": [
+                    "Kamuzu Central Hospital",
+                    "neonatal ward"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- The patient is less than 28 days old (neonate).",
+              "Eq-Comparison": [
+                "less than 28 days"
+              ],
+              "Age": [
+                "old"
+              ],
+              "Eq-Operator": [
+                "less than"
+              ],
+              "Eq-Value": [
+                "28"
+              ],
+              "Eq-Temporal-Unit": [
+                "days"
+              ],
+              "Life-Stage-And-Gender": [
+                "neonate"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- The patient is deemed to be at risk for jaundice",
+              "Risk": [
+                "risk"
+              ],
+              "Condition": [
+                "jaundice"
+              ],
+              "Condition-Name": [
+                "jaundice"
+              ]
+            },
+            "right": {
+              "raw_text": "or the patient is undergoing blue light phototherapy for treatment of jaundice.",
+              "Condition": [
+                "jaundice"
+              ],
+              "Eq-Comparison": [
+                "undergoing"
+              ],
+              "Modifier": [
+                "blue light"
+              ],
+              "Procedure": [
+                "phototherapy",
+                "treatment"
+              ],
+              "Condition-Name": [
+                "jaundice"
+              ],
+              "Eq-Temporal-Period": [
+                "undergoing"
+              ],
+              "Procedure-Name": [
+                "phototherapy"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- The patient's parent or guardian has provided informed consent for their child to participate.",
+      "Family-Member": [
+        "parent",
+        "child"
+      ]
+    }
+  }
+}
