@@ -48,13 +48,10 @@
                             "right": {
                               "raw_text": "or alcohol abuse",
                               "Condition": [
-                                "abuse"
+                                "alcohol abuse"
                               ],
                               "Condition-Name": [
-                                "abuse"
-                              ],
-                              "Modifier": [
-                                "alcohol"
+                                "alcohol abuse"
                               ]
                             }
                           }
@@ -115,33 +112,25 @@
               "AND": {
                 "left": {
                   "raw_text": "or those unable to eat meat, are also",
-                  "Observation": [
-                    "eat meat"
-                  ],
-                  "Observation-Name": [
-                    "eat meat"
-                  ],
-                  "Negation": [
-                    "unable"
+                  "Modifier": [
+                    "unable to eat meat"
                   ]
                 },
                 "right": {
                   "NOT": {
                     "left": {
                       "raw_text": "excluded since the foods for the study contain meat",
-                      "Observation": [
-                        "eat meat",
-                        "food"
-                      ],
-                      "Observation-Name": [
-                        "eat meat",
-                        "food"
-                      ],
                       "Negation": [
                         "excluded"
                       ],
                       "Study": [
                         "study"
+                      ],
+                      "Drug-Name": [
+                        "meat"
+                      ],
+                      "Drug": [
+                        "meat"
                       ]
                     }
                   }
@@ -155,20 +144,23 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "-"
+          "raw_text": "- Unable to refrain from taking medications during the study period",
+          "Study": [
+            "study"
+          ],
+          "Drug": [
+            "medications"
+          ],
+          "Assertion": [
+            "Unable to"
+          ]
         },
         "right": {
           "NOT": {
             "left": {
-              "raw_text": "Unable to refrain from taking medications during the study period",
-              "Drug": [
-                "medications"
-              ],
+              "raw_text": "since it is an unauthorized substance",
               "Negation": [
-                "Unable"
-              ],
-              "Study": [
-                "study"
+                "unauthorized"
               ]
             }
           }

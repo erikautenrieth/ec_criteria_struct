@@ -131,7 +131,7 @@
                                                         "right": {
                                                           "OR": {
                                                             "left": {
-                                                              "raw_text": "cornea guttata, etc….] found to be relevant by the investigators",
+                                                              "raw_text": "cornea guttata, etc….] found to be relevant by the investigator",
                                                               "Condition": [
                                                                 "cornea guttata"
                                                               ],
@@ -183,11 +183,11 @@
                     },
                     "right": {
                       "raw_text": "- Extremely shallow anterior chamber",
-                      "Modifier": [
-                        "anterior chamber"
+                      "Condition": [
+                        "shallow anterior chamber"
                       ],
-                      "Polarity": [
-                        "shallow"
+                      "Condition-Name": [
+                        "shallow anterior chamber"
                       ],
                       "Severity": [
                         "Extremely"
@@ -219,31 +219,51 @@
                           "Procedure": [
                             "operative"
                           ],
-                          "Stability": [
-                            "affect"
-                          ],
                           "Assertion": [
                             "may"
+                          ],
+                          "Stability": [
+                            "affect"
                           ]
                         },
                         "right": {
-                          "raw_text": "or tilt of the lens (e.g. pseudoexfoliation syndrome, uveitis, Marfan's syndrome)",
-                          "Condition": [
-                            "pseudoexfoliation syndrome",
-                            "uveitis",
-                            "Marfan's syndrome"
-                          ],
-                          "Condition-Name": [
-                            "pseudoexfoliation syndrome",
-                            "uveitis",
-                            "Marfan's syndrome"
-                          ],
-                          "Modifier": [
-                            "lens"
-                          ],
-                          "Stability": [
-                            "tilt"
-                          ]
+                          "OR": {
+                            "left": {
+                              "raw_text": "or tilt of the lens (e.g. pseudoexfoliation syndrome,",
+                              "Condition": [
+                                "pseudoexfoliation syndrome"
+                              ],
+                              "Condition-Name": [
+                                "pseudoexfoliation syndrome"
+                              ],
+                              "Modifier": [
+                                "lens",
+                                "tilt"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "uveitis,",
+                                  "Condition": [
+                                    "uveitis"
+                                  ],
+                                  "Condition-Name": [
+                                    "uveitis"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "Marfan's syndrome)",
+                                  "Condition": [
+                                    "Marfan's syndrome"
+                                  ],
+                                  "Condition-Name": [
+                                    "Marfan's syndrome"
+                                  ]
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -256,12 +276,10 @@
                 "left": {
                   "raw_text": "- Pupil abnormalities (non-reactive,",
                   "Condition": [
-                    "Pupil abnormalities",
-                    "abnormalities"
+                    "Pupil abnormalities"
                   ],
                   "Condition-Name": [
-                    "Pupil abnormalities",
-                    "abnormalities"
+                    "Pupil abnormalities"
                   ],
                   "Modifier": [
                     "non-reactive"
@@ -293,10 +311,7 @@
                           "AND": {
                             "left": {
                               "raw_text": "or pupils that do",
-                              "Condition": [
-                                "pupils"
-                              ],
-                              "Condition-Name": [
+                              "Modifier": [
                                 "pupils"
                               ]
                             },
@@ -304,15 +319,22 @@
                               "NOT": {
                                 "left": {
                                   "raw_text": "not dilate under mesopic/ scotopic conditions)",
-                                  "Modifier": [
+                                  "Condition": [
                                     "mesopic",
-                                    "scotopic"
+                                    "scotopic conditions"
+                                  ],
+                                  "Condition-Name": [
+                                    "mesopic",
+                                    "scotopic conditions"
+                                  ],
+                                  "Observation": [
+                                    "dilate"
+                                  ],
+                                  "Observation-Name": [
+                                    "dilate"
                                   ],
                                   "Negation": [
                                     "not"
-                                  ],
-                                  "Condition": [
-                                    "conditions"
                                   ]
                                 }
                               }
@@ -329,15 +351,17 @@
         },
         "right": {
           "raw_text": "- Instability to place the intraocular lens safely at the location planned",
-          "Modifier": [
-            "lens",
-            "location"
+          "Procedure": [
+            "intraocular lens"
           ],
-          "Stability": [
-            "Instability"
+          "Procedure-Name": [
+            "intraocular lens"
           ],
           "Assertion": [
             "planned"
+          ],
+          "Stability": [
+            "Instability"
           ]
         }
       }
@@ -360,7 +384,8 @@
         "operatively"
       ],
       "Life-Stage-And-Gender": [
-        "women"
+        "women",
+        "reproductive age"
       ]
     }
   }

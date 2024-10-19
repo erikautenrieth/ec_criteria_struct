@@ -43,44 +43,80 @@
                   ]
                 },
                 "right": {
-                  "raw_text": "or history of arthrodesis, b) systemic diseases, c) vision, hearing or vestibular problems, d) Severe trauma or traffic accident which has had an impact on the cervical area.",
-                  "Condition": [
-                    "diseases",
-                    "problems"
-                  ],
-                  "Condition-Name": [
-                    "diseases",
-                    "problems"
-                  ],
-                  "Procedure": [
-                    "arthrodesis"
-                  ],
-                  "Procedure-Name": [
-                    "arthrodesis"
-                  ],
-                  "Eq-Comparison": [
-                    "history"
-                  ],
-                  "Eq-Temporal-Period": [
-                    "history"
-                  ],
-                  "Modifier": [
-                    "cervical",
-                    "systemic",
-                    "vestibular"
-                  ],
-                  "Observation": [
-                    "trauma"
-                  ],
-                  "Observation-Name": [
-                    "trauma"
-                  ],
-                  "Severity": [
-                    "Severe"
-                  ],
-                  "Assertion": [
-                    "has had an impact"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "or history of arthrodesis, b) systemic diseases, c) vision,",
+                      "Procedure": [
+                        "arthrodesis"
+                      ],
+                      "Eq-Comparison": [
+                        "history"
+                      ],
+                      "Condition": [
+                        "diseases",
+                        "vision"
+                      ],
+                      "Modifier": [
+                        "systemic"
+                      ],
+                      "Procedure-Name": [
+                        "arthrodesis"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "history"
+                      ],
+                      "Condition-Name": [
+                        "vision"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "hearing",
+                          "Condition": [
+                            "hearing"
+                          ],
+                          "Condition-Name": [
+                            "hearing"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "or vestibular problems, d) Severe trauma",
+                              "Condition": [
+                                "vestibular problems"
+                              ],
+                              "Observation": [
+                                "trauma"
+                              ],
+                              "Condition-Name": [
+                                "vestibular problems"
+                              ],
+                              "Severity": [
+                                "Severe"
+                              ],
+                              "Observation-Name": [
+                                "trauma"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or traffic accident which has had an impact on the cervical area.",
+                              "Observation": [
+                                "traffic accident"
+                              ],
+                              "Modifier": [
+                                "cervical"
+                              ],
+                              "Observation-Name": [
+                                "traffic accident"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }

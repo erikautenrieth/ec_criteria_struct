@@ -18,8 +18,11 @@
                                   "AND": {
                                     "left": {
                                       "raw_text": "- Patients younger than 18 years old.",
-                                      "Eq-Comparison": [
-                                        "younger than 18 years"
+                                      "Eq-Operator": [
+                                        "younger than"
+                                      ],
+                                      "Eq-Temporal-Unit": [
+                                        "years"
                                       ],
                                       "Age": [
                                         "old"
@@ -27,20 +30,14 @@
                                       "Eq-Value": [
                                         "18"
                                       ],
-                                      "Eq-Temporal-Unit": [
-                                        "years"
-                                      ],
-                                      "Eq-Operator": [
-                                        "younger than"
+                                      "Eq-Comparison": [
+                                        "younger than 18 years"
                                       ]
                                     },
                                     "right": {
                                       "raw_text": "- ASA physical status >3.",
                                       "Observation": [
                                         "ASA"
-                                      ],
-                                      "Eq-Comparison": [
-                                        ">3"
                                       ],
                                       "Observation-Name": [
                                         "ASA"
@@ -50,6 +47,9 @@
                                       ],
                                       "Eq-Value": [
                                         "3"
+                                      ],
+                                      "Eq-Comparison": [
+                                        ">3"
                                       ]
                                     }
                                   }
@@ -67,17 +67,17 @@
                                     },
                                     "right": {
                                       "raw_text": "or high risk of infection.",
-                                      "Risk": [
-                                        "risk"
-                                      ],
                                       "Condition": [
                                         "infection"
                                       ],
-                                      "Polarity": [
-                                        "high"
-                                      ],
                                       "Condition-Name": [
                                         "infection"
+                                      ],
+                                      "Risk": [
+                                        "risk"
+                                      ],
+                                      "Polarity": [
+                                        "high"
                                       ]
                                     }
                                   }
@@ -89,23 +89,23 @@
                               "Procedure": [
                                 "spinal anesthesia"
                               ],
+                              "Procedure-Name": [
+                                "spinal anesthesia"
+                              ],
                               "Eq-Comparison": [
+                                "receiving"
+                              ],
+                              "Eq-Temporal-Period": [
                                 "receiving"
                               ],
                               "Condition": [
                                 "coagulation impairment"
                               ],
-                              "Procedure-Name": [
-                                "spinal anesthesia"
-                              ],
-                              "Eq-Temporal-Period": [
-                                "receiving"
+                              "Condition-Name": [
+                                "coagulation impairment"
                               ],
                               "Contraindication": [
                                 "Contraindications"
-                              ],
-                              "Condition-Name": [
-                                "coagulation impairment"
                               ]
                             }
                           }
@@ -123,17 +123,17 @@
                     },
                     "right": {
                       "raw_text": "- Patients with preexisting back pain.",
-                      "Eq-Comparison": [
-                        "preexisting"
-                      ],
                       "Observation": [
                         "pain"
                       ],
-                      "Eq-Temporal-Period": [
-                        "preexisting"
-                      ],
                       "Observation-Name": [
                         "pain"
+                      ],
+                      "Eq-Comparison": [
+                        "preexisting"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "preexisting"
                       ],
                       "Modifier": [
                         "back"
@@ -172,11 +172,11 @@
                     "analgesics",
                     "medication"
                   ],
-                  "Study": [
-                    "study"
-                  ],
                   "Drug-Name": [
                     "analgesics"
+                  ],
+                  "Study": [
+                    "study"
                   ]
                 }
               }
@@ -185,14 +185,14 @@
         },
         "right": {
           "raw_text": "- Patients with chronic regular opioid usage",
-          "Acuteness": [
-            "chronic"
-          ],
           "Drug": [
             "opioid"
           ],
           "Drug-Name": [
             "opioid"
+          ],
+          "Acuteness": [
+            "chronic"
           ]
         }
       }
@@ -202,17 +202,17 @@
       "Eq-Comparison": [
         "preexisting"
       ],
-      "Assertion": [
-        "symptoms"
+      "Eq-Temporal-Period": [
+        "preexisting"
       ],
       "Condition": [
         "neurological"
       ],
-      "Eq-Temporal-Period": [
-        "preexisting"
-      ],
       "Condition-Name": [
         "neurological"
+      ],
+      "Assertion": [
+        "symptoms"
       ]
     }
   }

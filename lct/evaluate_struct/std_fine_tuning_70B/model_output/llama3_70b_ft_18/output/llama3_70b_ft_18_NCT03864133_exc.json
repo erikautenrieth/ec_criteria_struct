@@ -56,14 +56,11 @@
                                             "Optical Coherence Tomography",
                                             "OCT"
                                           ],
+                                          "Assertion": [
+                                            "sit steady and upright"
+                                          ],
                                           "Negation": [
                                             "Inability"
-                                          ],
-                                          "Assertion": [
-                                            "Inability"
-                                          ],
-                                          "Modifier": [
-                                            "sit steady and upright"
                                           ]
                                         }
                                       }
@@ -106,10 +103,10 @@
                                       "OR": {
                                         "left": {
                                           "raw_text": "zonular dialysis,",
-                                          "Procedure": [
+                                          "Condition": [
                                             "zonular dialysis"
                                           ],
-                                          "Procedure-Name": [
+                                          "Condition-Name": [
                                             "zonular dialysis"
                                           ]
                                         },
@@ -218,14 +215,14 @@
               "NOT": {
                 "left": {
                   "raw_text": "Inability to return for follow appointments",
+                  "Assertion": [
+                    "Inability to return"
+                  ],
                   "Negation": [
                     "Inability"
                   ],
-                  "Assertion": [
-                    "Inability"
-                  ],
                   "Encounter": [
-                    "follow appointments"
+                    "appointments"
                   ]
                 }
               }
@@ -235,51 +232,44 @@
       }
     },
     "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "raw_text": "- Female patients",
+          "raw_text": "- Female patients who are pregnant,",
           "Life-Stage-And-Gender": [
             "Female"
+          ],
+          "Condition": [
+            "pregnant"
+          ],
+          "Condition-Name": [
+            "pregnant"
           ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "who are pregnant,",
+              "raw_text": "lactating",
+              "Condition": [
+                "lactating"
+              ],
+              "Condition-Name": [
+                "lactating"
+              ]
+            },
+            "right": {
+              "raw_text": "or planning to become pregnant during the course of treatment.",
+              "Procedure": [
+                "treatment"
+              ],
+              "Assertion": [
+                "planning to become"
+              ],
               "Condition": [
                 "pregnant"
               ],
               "Condition-Name": [
                 "pregnant"
               ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "lactating",
-                  "Condition": [
-                    "lactating"
-                  ],
-                  "Condition-Name": [
-                    "lactating"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or planning to become pregnant during the course of treatment.",
-                  "Procedure": [
-                    "treatment"
-                  ],
-                  "Condition": [
-                    "pregnant"
-                  ],
-                  "Condition-Name": [
-                    "pregnant"
-                  ],
-                  "Assertion": [
-                    "planning to become"
-                  ]
-                }
-              }
             }
           }
         }

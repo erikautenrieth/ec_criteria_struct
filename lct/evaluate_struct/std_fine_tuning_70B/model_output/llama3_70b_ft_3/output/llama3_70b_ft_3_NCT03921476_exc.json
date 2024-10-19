@@ -102,25 +102,22 @@
                   "AND": {
                     "left": {
                       "raw_text": "not able to complete an online survey in English Subjects taking oral isotretinoin for a diagnosis of acne Subjects that are currently pregnant",
-                      "Condition": [
-                        "acne",
-                        "pregnant"
-                      ],
-                      "Condition-Name": [
-                        "acne",
-                        "pregnant"
-                      ],
                       "Eq-Operator": [
                         "to"
                       ],
-                      "Language": [
-                        "English"
-                      ],
                       "Eq-Comparison": [
-                        "currently taking"
+                        "current",
+                        "taking"
                       ],
                       "Eq-Temporal-Period": [
-                        "currently taking"
+                        "current",
+                        "taking"
+                      ],
+                      "Condition": [
+                        "acne"
+                      ],
+                      "Condition-Name": [
+                        "acne"
                       ],
                       "Drug": [
                         "oral isotretinoin"
@@ -128,28 +125,90 @@
                       "Drug-Name": [
                         "oral isotretinoin"
                       ],
+                      "Language": [
+                        "English"
+                      ],
                       "Negation": [
                         "not"
                       ],
-                      "Study": [
+                      "Observation": [
+                        "survey"
+                      ],
+                      "Observation-Name": [
                         "survey"
                       ],
                       "Assertion": [
                         "able to"
+                      ],
+                      "Condition-Type": [
+                        "currently"
                       ]
                     },
                     "right": {
-                      "raw_text": "or are pregnant at the time of enrollment into the study",
-                      "Condition": [
-                        "pregnant"
-                      ],
-                      "Condition-Name": [
-                        "pregnant"
-                      ],
-                      "Study": [
-                        "enrollment",
-                        "study"
-                      ]
+                      "AND": {
+                        "left": {
+                          "raw_text": "not able to complete an online",
+                          "Eq-Operator": [
+                            "to"
+                          ],
+                          "Negation": [
+                            "not"
+                          ],
+                          "Assertion": [
+                            "able to"
+                          ],
+                          "Observation": [
+                            "online"
+                          ],
+                          "Observation-Name": [
+                            "online"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "survey in English Subjects taking oral isotretinoin for a diagnosis of acne Subjects that are currently pregnant",
+                              "Eq-Operator": [
+                                "to"
+                              ],
+                              "Eq-Comparison": [
+                                "current",
+                                "taking"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "current",
+                                "taking"
+                              ],
+                              "Condition": [
+                                "acne",
+                                "pregnant"
+                              ],
+                              "Condition-Name": [
+                                "acne",
+                                "pregnant"
+                              ],
+                              "Drug": [
+                                "oral isotretinoin"
+                              ],
+                              "Drug-Name": [
+                                "oral isotretinoin"
+                              ],
+                              "Language": [
+                                "English"
+                              ],
+                              "Negation": [
+                                "not"
+                              ],
+                              "Observation": [
+                                "survey"
+                              ],
+                              "Observation-Name": [
+                                "survey"
+                              ]
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }

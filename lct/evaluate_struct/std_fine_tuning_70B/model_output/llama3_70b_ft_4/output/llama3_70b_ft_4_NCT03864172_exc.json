@@ -6,11 +6,11 @@
           "OR": {
             "left": {
               "raw_text": "- History of serious medical conditions such as intestinal",
-              "Condition": [
-                "medical conditions"
-              ],
               "Eq-Comparison": [
                 "History"
+              ],
+              "Condition": [
+                "medical conditions"
               ],
               "Modifier": [
                 "intestinal"
@@ -112,11 +112,11 @@
                                               "raw_text": "malignance, chronic malnutrition,",
                                               "Condition": [
                                                 "malignance",
-                                                "chronic malnutrition"
+                                                "malnutrition"
                                               ],
                                               "Condition-Name": [
                                                 "malignance",
-                                                "chronic malnutrition"
+                                                "malnutrition"
                                               ],
                                               "Acuteness": [
                                                 "chronic"
@@ -171,17 +171,20 @@
                 "History",
                 "on"
               ],
+              "Stability": [
+                "interfere"
+              ],
+              "Assertion": [
+                "known to"
+              ],
               "Drug-Name": [
                 "steroids"
               ],
               "Condition-Name": [
                 "bone metabolism"
               ],
-              "Stability": [
-                "interfere"
-              ],
-              "Assertion": [
-                "known to"
+              "Procedure-Name": [
+                "therapy"
               ]
             },
             "right": {
@@ -209,20 +212,20 @@
                     "right": {
                       "raw_text": "cortisone or anti-seizure medication",
                       "Drug": [
-                        "cortisone",
-                        "medication"
-                      ],
-                      "Drug-Name": [
+                        "medication",
                         "cortisone"
                       ],
                       "Condition": [
                         "seizure"
                       ],
+                      "Drug-Name": [
+                        "cortisone"
+                      ],
                       "Condition-Name": [
                         "seizure"
                       ],
-                      "Assertion": [
-                        "known to"
+                      "Modifier": [
+                        "anti"
                       ]
                     }
                   }
@@ -237,17 +240,17 @@
       "AND": {
         "left": {
           "raw_text": "- Taking regularly any nutritional supplements",
-          "Drug": [
-            "nutritional supplements"
-          ],
-          "Drug-Name": [
-            "nutritional supplements"
-          ],
           "Eq-Comparison": [
             "Taking"
           ],
+          "Drug": [
+            "nutritional supplements"
+          ],
           "Eq-Temporal-Period": [
             "Taking"
+          ],
+          "Drug-Name": [
+            "nutritional supplements"
           ]
         },
         "right": {
@@ -272,12 +275,9 @@
                       ]
                     },
                     "right": {
-                      "raw_text": "on",
-                      "Eq-Comparison": [
-                        "on"
-                      ],
-                      "Eq-Temporal-Period": [
-                        "on"
+                      "raw_text": "any double quotes within the raw textual criteria are escaped with a backslash (\\). If there are no restrictions, return an empty JSON FILE {}",
+                      "Negation": [
+                        "no"
                       ]
                     }
                   }

@@ -27,20 +27,18 @@
                 "right": {
                   "raw_text": "- Diagnosis of BCR‐ABL positive CML blast crisis according to the WHO criteria:",
                   "Condition": [
-                    "BCR‐ABL",
                     "CML",
-                    "blast crisis"
+                    "BCR‐ABL"
                   ],
                   "Modifier": [
-                    "positive"
-                  ],
-                  "Condition-Name": [
-                    "BCR‐ABL",
-                    "CML",
                     "blast crisis"
                   ],
                   "Polarity": [
                     "positive"
+                  ],
+                  "Condition-Name": [
+                    "CML",
+                    "BCR‐ABL"
                   ]
                 }
               }
@@ -84,16 +82,23 @@
           }
         },
         "right": {
-          "raw_text": "- Extramedullary blast proliferation or",
-          "Modifier": [
-            "Extramedullary"
-          ],
-          "Condition": [
-            "blast proliferation"
-          ],
-          "Condition-Name": [
-            "blast proliferation"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "- Extramedullary blast proliferation",
+              "Modifier": [
+                "Extramedullary"
+              ],
+              "Condition": [
+                "blast proliferation"
+              ],
+              "Condition-Name": [
+                "blast proliferation"
+              ]
+            },
+            "right": {
+              "raw_text": "or"
+            }
+          }
         }
       }
     },
@@ -103,8 +108,7 @@
         "blasts"
       ],
       "Modifier": [
-        "Large foci",
-        "clusters"
+        "Large foci or clusters"
       ],
       "Observation-Name": [
         "blasts"

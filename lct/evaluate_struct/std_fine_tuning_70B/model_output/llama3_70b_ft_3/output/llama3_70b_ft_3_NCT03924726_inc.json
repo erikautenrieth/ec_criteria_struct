@@ -51,12 +51,10 @@
                                 "Molar relationship"
                               ],
                               "Eq-Unit": [
-                                "Class",
-                                "unit"
+                                "Class"
                               ],
-                              "Eq-Number": [
-                                "I",
-                                "II"
+                              "Eq-Temporal-Unit": [
+                                "unit"
                               ]
                             },
                             "right": {
@@ -64,7 +62,10 @@
                               "Eq-Unit": [
                                 "Class"
                               ],
-                              "Eq-Number": [
+                              "Eq-Comparison": [
+                                "Class III"
+                              ],
+                              "Eq-Value": [
                                 "III"
                               ]
                             }
@@ -73,27 +74,37 @@
                       }
                     },
                     "right": {
-                      "raw_text": "- Extraction of all four first premolar teeth as part of orthodontic treatment.",
-                      "Procedure": [
-                        "orthodontic treatment",
-                        "Extraction"
-                      ],
-                      "Procedure-Name": [
-                        "orthodontic treatment",
-                        "Extraction"
-                      ],
-                      "Modifier": [
-                        "first premolar teeth"
-                      ],
-                      "Eq-Comparison": [
-                        "all four"
-                      ],
-                      "Eq-Value": [
-                        "four"
-                      ],
-                      "Eq-Unit": [
-                        "unit"
-                      ]
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Extraction of all four first premolar teeth",
+                          "Procedure": [
+                            "Extraction"
+                          ],
+                          "Procedure-Name": [
+                            "Extraction"
+                          ],
+                          "Modifier": [
+                            "first premolar",
+                            "four"
+                          ],
+                          "Eq-Comparison": [
+                            "four"
+                          ],
+                          "Eq-Value": [
+                            "four"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "as part of orthodontic treatment.",
+                          "Procedure": [
+                            "orthodontic treatment",
+                            "treatment"
+                          ],
+                          "Procedure-Name": [
+                            "orthodontic treatment"
+                          ]
+                        }
+                      }
                     }
                   }
                 },
@@ -108,8 +119,8 @@
                   "Assertion": [
                     "required"
                   ],
-                  "Eq-Unit": [
-                    "unit"
+                  "Modifier": [
+                    "Maximum anchorage"
                   ]
                 }
               }
@@ -163,14 +174,13 @@
             "left": {
               "raw_text": "No periodontal disease.",
               "Condition": [
-                "disease",
-                "periodontal disease"
+                "disease"
               ],
               "Negation": [
                 "No"
               ],
-              "Condition-Name": [
-                "periodontal disease"
+              "Modifier": [
+                "periodontal"
               ]
             }
           }

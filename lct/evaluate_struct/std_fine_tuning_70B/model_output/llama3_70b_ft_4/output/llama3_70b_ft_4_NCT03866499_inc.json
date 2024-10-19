@@ -154,6 +154,9 @@
           "Modifier": [
             "measurable"
           ],
+          "Negation": [
+            "not"
+          ],
           "Procedure": [
             "irradiated"
           ],
@@ -169,23 +172,16 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "- Prior to enrollment, a central laboratory testing report has confirmed that the tumor has one of two common EGFR mutations positive that are sensitive to EGFR-TKI therapy, accompanied with or",
+          "raw_text": "- Prior to enrollment, a central laboratory testing report has confirmed that the tumor has one of two common EGFR mutations positive that are sensitive to EGFR-TKI therapy, accompanied",
           "Eq-Comparison": [
-            "Prior",
-            "one of two"
+            "Prior"
           ],
           "Observation": [
-            "laboratory testing report",
-            "tumor"
+            "laboratory testing report"
           ],
           "Condition": [
+            "tumor",
             "EGFR mutations"
-          ],
-          "Assertion": [
-            "sensitive to"
-          ],
-          "Procedure": [
-            "EGFR-TKI therapy"
           ],
           "Eq-Operator": [
             "-"
@@ -194,48 +190,57 @@
             "Prior"
           ],
           "Observation-Name": [
-            "laboratory testing report",
-            "tumor"
+            "laboratory testing report"
           ],
           "Condition-Name": [
+            "tumor",
             "EGFR mutations"
           ],
           "Polarity": [
             "positive"
           ],
-          "Procedure-Name": [
+          "Drug": [
             "EGFR-TKI therapy"
           ],
-          "Eq-Value": [
-            "one",
-            "two"
+          "Drug-Name": [
+            "EGFR-TKI therapy"
+          ],
+          "Study": [
+            "enrollment"
           ]
         },
         "right": {
-          "NOT": {
+          "AND": {
             "left": {
-              "raw_text": "not accompanied with other EGFR mutation, with the exception of exon 20 insertion.",
-              "Negation": [
-                "not"
-              ],
-              "Condition": [
-                "EGFR mutation"
-              ],
-              "Exception": [
-                "exception"
-              ],
-              "Observation": [
-                "exon 20 insertion"
-              ],
-              "Condition-Name": [
-                "EGFR mutation"
-              ],
-              "Observation-Name": [
-                "exon 20 insertion"
-              ],
-              "Other": [
-                "other"
-              ]
+              "raw_text": "with or"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not accompanied with other EGFR mutation, with the exception of exon 20 insertion.",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Condition": [
+                    "EGFR mutation"
+                  ],
+                  "Exception": [
+                    "exception"
+                  ],
+                  "Observation": [
+                    "exon 20 insertion"
+                  ],
+                  "Condition-Name": [
+                    "EGFR mutation"
+                  ],
+                  "Observation-Name": [
+                    "exon 20 insertion"
+                  ],
+                  "Other": [
+                    "other"
+                  ]
+                }
+              }
             }
           }
         }

@@ -179,16 +179,27 @@
           }
         },
         "right": {
-          "raw_text": "- It is impossible to provide information about the study to the patient.",
-          "Negation": [
-            "impossible"
-          ],
-          "Study": [
-            "study"
-          ],
-          "Assertion": [
-            "information"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "- Patient for which it is"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "impossible to provide information about the study.",
+                  "Negation": [
+                    "impossible"
+                  ],
+                  "Study": [
+                    "study"
+                  ],
+                  "Assertion": [
+                    "impossible"
+                  ]
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -204,26 +215,15 @@
           ]
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "parturient,",
-              "Condition": [
-                "parturient"
-              ],
-              "Condition-Name": [
-                "parturient"
-              ]
-            },
-            "right": {
-              "raw_text": "or breastfeeding.",
-              "Condition": [
-                "breastfeeding"
-              ],
-              "Condition-Name": [
-                "breastfeeding"
-              ]
-            }
-          }
+          "raw_text": "parturient, or breastfeeding.",
+          "Condition": [
+            "parturient",
+            "breastfeeding"
+          ],
+          "Condition-Name": [
+            "parturient",
+            "breastfeeding"
+          ]
         }
       }
     }

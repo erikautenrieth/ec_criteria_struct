@@ -123,35 +123,48 @@
           }
         },
         "right": {
-          "raw_text": "- Correct spinal levels (ranging L4-S3) to be treated have been confirmed by 1) diagnostic SIJ injection, followed by 2) diagnostic Medial/Lateral Branch Block at the applicable levels.",
-          "Procedure": [
-            "SIJ injection",
-            "Medial/Lateral Branch Block",
-            "treated"
-          ],
-          "Procedure-Name": [
-            "SIJ injection",
-            "Medial/Lateral Branch Block"
-          ],
-          "Eq-Operator": [
-            "-"
-          ],
-          "Condition": [
-            "spinal levels"
-          ],
-          "Condition-Name": [
-            "spinal levels"
-          ],
-          "Eq-Comparison": [
-            "L4-S3"
-          ],
-          "Eq-Value": [
-            "L4",
-            "S3"
-          ],
-          "Modifier": [
-            "applicable levels"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "- Correct spinal levels (ranging L4-S3) to be treated have been confirmed by 1) diagnostic SIJ injection, followed by 2) diagnostic Medial/",
+              "Procedure": [
+                "treated",
+                "injection"
+              ],
+              "Condition": [
+                "spinal levels"
+              ],
+              "Condition-Name": [
+                "spinal levels"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Modifier": [
+                "L4-S3",
+                "SIJ",
+                "Medial"
+              ],
+              "Procedure-Name": [
+                "injection"
+              ],
+              "Eq-Comparison": [
+                "L4-S3"
+              ],
+              "Eq-Value": [
+                "L4",
+                "S3"
+              ]
+            },
+            "right": {
+              "raw_text": "Lateral Branch Block at the applicable levels.",
+              "Procedure": [
+                "Lateral Branch Block"
+              ],
+              "Procedure-Name": [
+                "Lateral Branch Block"
+              ]
+            }
+          }
         }
       }
     },
@@ -163,13 +176,6 @@
       "Eq-Value": [
         "24"
       ],
-      "Eq-Operator": [
-        "-",
-        "at least"
-      ],
-      "Eq-Comparison": [
-        "at least 24 months"
-      ],
       "Encounter": [
         "follow-up"
       ],
@@ -177,7 +183,14 @@
         "operative"
       ],
       "Assertion": [
-        "likely to"
+        "likely"
+      ],
+      "Eq-Comparison": [
+        "at least 24 months"
+      ],
+      "Eq-Operator": [
+        "at least",
+        "-"
       ]
     }
   }

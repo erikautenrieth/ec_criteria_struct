@@ -17,15 +17,15 @@
                               "Eq-Comparison": [
                                 "previous"
                               ],
-                              "Drug": [
-                                "tavilermide",
-                                "MIM-D3"
-                              ],
                               "Study": [
                                 "study"
                               ],
                               "Eq-Temporal-Period": [
                                 "previous"
+                              ],
+                              "Drug": [
+                                "tavilermide",
+                                "MIM-D3"
                               ],
                               "Drug-Name": [
                                 "tavilermide",
@@ -37,19 +37,19 @@
                               "Observation": [
                                 "slit lamp findings"
                               ],
-                              "Eq-Comparison": [
-                                "Visit 1"
-                              ],
-                              "Severity": [
-                                "significant"
-                              ],
                               "Observation-Name": [
                                 "slit lamp findings"
+                              ],
+                              "Eq-Comparison": [
+                                "Visit 1"
                               ],
                               "Eq-Value": [
                                 "1"
                               ],
-                              "Eq-Unit": [
+                              "Severity": [
+                                "significant"
+                              ],
+                              "Encounter": [
                                 "Visit"
                               ]
                             }
@@ -57,31 +57,31 @@
                         },
                         "right": {
                           "raw_text": "- Have a history of lacrimal duct obstruction within 12 months of Visit 1;",
-                          "Eq-Comparison": [
-                            "within 12 months",
-                            "history",
-                            "Visit 1"
-                          ],
                           "Condition": [
+                            "lacrimal duct obstruction"
+                          ],
+                          "Condition-Name": [
                             "lacrimal duct obstruction"
                           ],
                           "Eq-Operator": [
                             "within"
                           ],
+                          "Eq-Temporal-Unit": [
+                            "months"
+                          ],
                           "Eq-Value": [
                             "12",
                             "1"
                           ],
-                          "Eq-Temporal-Unit": [
-                            "months"
-                          ],
-                          "Condition-Name": [
-                            "lacrimal duct obstruction"
+                          "Eq-Comparison": [
+                            "within 12 months",
+                            "history",
+                            "Visit 1"
                           ],
                           "Eq-Temporal-Period": [
                             "history"
                           ],
-                          "Eq-Unit": [
+                          "Encounter": [
                             "Visit"
                           ]
                         }
@@ -133,11 +133,11 @@
                               "Condition": [
                                 "pregnancy"
                               ],
-                              "Assertion": [
-                                "planning"
-                              ],
                               "Condition-Name": [
                                 "pregnancy"
+                              ],
+                              "Assertion": [
+                                "planning"
                               ]
                             }
                           }
@@ -176,14 +176,14 @@
                           "NOT": {
                             "left": {
                               "raw_text": "not using an acceptable means of birth control;",
-                              "Negation": [
-                                "not"
-                              ],
                               "Procedure": [
                                 "birth control"
                               ],
                               "Procedure-Name": [
                                 "birth control"
+                              ],
+                              "Negation": [
+                                "not"
                               ]
                             }
                           }
@@ -205,28 +205,41 @@
               ]
             },
             "right": {
-              "raw_text": "or be in a situation which the investigator feels may put the subject at significant risk, may confound the study results, or may interfere significantly with the subject's participation in the study;",
-              "Condition": [
-                "situation"
-              ],
-              "Assertion": [
-                "may"
-              ],
-              "Risk": [
-                "risk"
-              ],
-              "Study": [
-                "study"
-              ],
-              "Severity": [
-                "significant"
-              ],
-              "Stability": [
-                "confound"
-              ],
-              "Eq-Unit": [
-                "Visit"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "or be in a situation which the investigator feels may put the subject at significant risk, may confound the study results,",
+                  "Study": [
+                    "study"
+                  ],
+                  "Risk": [
+                    "risk"
+                  ],
+                  "Severity": [
+                    "significant"
+                  ],
+                  "Stability": [
+                    "confound"
+                  ],
+                  "Assertion": [
+                    "may"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or may interfere significantly with the subject's participation in the study;",
+                  "Study": [
+                    "study"
+                  ],
+                  "Severity": [
+                    "significant"
+                  ],
+                  "Stability": [
+                    "interfere"
+                  ],
+                  "Assertion": [
+                    "may"
+                  ]
+                }
+              }
             }
           }
         }
@@ -234,25 +247,26 @@
     },
     "right": {
       "raw_text": "- Be currently enrolled in an investigational drug or device study or have used an investigational drug or device within 45 days prior to Visit 1.",
-      "Eq-Comparison": [
-        "within 45 days",
-        "currently"
-      ],
-      "Study": [
-        "study"
-      ],
       "Eq-Operator": [
         "within"
+      ],
+      "Eq-Temporal-Unit": [
+        "days"
       ],
       "Eq-Value": [
         "45",
         "1"
       ],
-      "Eq-Temporal-Unit": [
-        "days"
+      "Eq-Comparison": [
+        "within 45 days",
+        "current",
+        "Visit 1"
       ],
       "Eq-Temporal-Period": [
-        "currently"
+        "current"
+      ],
+      "Study": [
+        "study"
       ],
       "Drug": [
         "drug"
@@ -260,7 +274,10 @@
       "Device": [
         "device"
       ],
-      "Eq-Unit": [
+      "Investigational": [
+        "investigational"
+      ],
+      "Encounter": [
         "Visit"
       ]
     }

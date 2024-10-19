@@ -184,14 +184,17 @@
                     "right": {
                       "raw_text": "- Somatic disorders including central nervous system (CNS) involvement",
                       "Condition": [
-                        "Somatic disorders"
-                      ],
-                      "Condition-Name": [
-                        "Somatic disorders"
-                      ],
-                      "Modifier": [
+                        "Somatic disorders",
                         "central nervous system",
                         "CNS"
+                      ],
+                      "Condition-Name": [
+                        "Somatic disorders",
+                        "central nervous system",
+                        "CNS"
+                      ],
+                      "Modifier": [
+                        "involvement"
                       ]
                     }
                   }
@@ -205,24 +208,18 @@
                       ]
                     },
                     "right": {
-                      "OR": {
+                      "NOT": {
                         "left": {
-                          "raw_text": "or suspected non-compliance,",
-                          "Assertion": [
-                            "suspected"
-                          ],
-                          "Condition": [
-                            "non-compliance"
-                          ],
-                          "Condition-Name": [
-                            "non-compliance"
-                          ]
-                        },
-                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "drug",
-                              "Modifier": [
+                              "raw_text": "or suspected non-compliance, drug",
+                              "Negation": [
+                                "non-compliance"
+                              ],
+                              "Assertion": [
+                                "suspected"
+                              ],
+                              "Drug": [
                                 "drug"
                               ]
                             },
@@ -231,7 +228,7 @@
                               "Condition-Name": [
                                 "abuse"
                               ],
-                              "Modifier": [
+                              "Drug": [
                                 "alcohol"
                               ],
                               "Condition": [
@@ -300,10 +297,13 @@
             "very likely"
           ],
           "Encounter": [
-            "hospitalisation"
+            "psychiatric hospitalisation"
           ],
-          "Modifier": [
-            "psychiatric"
+          "Condition": [
+            "require psychiatric hospitalisation"
+          ],
+          "Condition-Name": [
+            "require psychiatric hospitalisation"
           ]
         }
       }

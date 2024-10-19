@@ -118,16 +118,16 @@
                           "NOT": {
                             "left": {
                               "raw_text": "did not successfully intubate the cecum due to technical difficulties or poor bowel preparation)",
-                              "Condition": [
-                                "technical difficulties",
-                                "poor bowel preparation"
+                              "Procedure": [
+                                "intubate"
                               ],
-                              "Condition-Name": [
-                                "technical difficulties",
-                                "poor bowel preparation"
+                              "Procedure-Name": [
+                                "intubate"
                               ],
                               "Modifier": [
-                                "cecum"
+                                "cecum",
+                                "technical difficulties",
+                                "poor bowel preparation"
                               ],
                               "Negation": [
                                 "did not"
@@ -203,53 +203,47 @@
           }
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- Patients with any polypoid/",
-              "Modifier": [
-                "polypoid"
-              ]
-            },
-            "right": {
-              "raw_text": "ulcerated lesion > 2 cm concerning for invasive cancer on endoscopy",
-              "Eq-Operator": [
-                ">"
-              ],
-              "Eq-Value": [
-                "2"
-              ],
-              "Eq-Comparison": [
-                "> 2 cm"
-              ],
-              "Observation": [
-                "lesion"
-              ],
-              "Observation-Name": [
-                "lesion"
-              ],
-              "Modifier": [
-                "ulcerated"
-              ],
-              "Condition": [
-                "cancer"
-              ],
-              "Condition-Name": [
-                "cancer"
-              ],
-              "Eq-Unit": [
-                "cm"
-              ],
-              "Assertion": [
-                "concerning"
-              ],
-              "Procedure": [
-                "endoscopy"
-              ],
-              "Procedure-Name": [
-                "endoscopy"
-              ]
-            }
-          }
+          "raw_text": "- Patients with any polypoid/ulcerated lesion > 2 cm concerning for invasive cancer on endoscopy",
+          "Procedure": [
+            "endoscopy"
+          ],
+          "Procedure-Name": [
+            "endoscopy"
+          ],
+          "Eq-Operator": [
+            ">"
+          ],
+          "Eq-Unit": [
+            "cm"
+          ],
+          "Eq-Value": [
+            "2"
+          ],
+          "Eq-Comparison": [
+            "> 2 cm"
+          ],
+          "Observation": [
+            "lesion"
+          ],
+          "Observation-Name": [
+            "lesion"
+          ],
+          "Modifier": [
+            "polypoid",
+            "ulcerated"
+          ],
+          "Condition": [
+            "cancer"
+          ],
+          "Condition-Name": [
+            "cancer"
+          ],
+          "Assertion": [
+            "concerning"
+          ],
+          "Modifier2": [
+            "invasive"
+          ]
         }
       }
     },
@@ -269,11 +263,13 @@
       "Condition-Name": [
         "cancer"
       ],
-      "Assertion": [
-        "referred for"
+      "Encounter": [
+        "referred"
       ],
-      "Modifier": [
-        "early-stage",
+      "Assertion": [
+        "early-stage"
+      ],
+      "Modifier2": [
         "digestive tract"
       ]
     }

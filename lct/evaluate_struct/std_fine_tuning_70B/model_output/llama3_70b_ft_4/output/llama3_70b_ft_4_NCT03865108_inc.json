@@ -16,9 +16,6 @@
                   ],
                   "Modifier": [
                     "Singleton"
-                  ],
-                  "Eq-Operator": [
-                    "-"
                   ]
                 },
                 "right": {
@@ -31,12 +28,17 @@
                       "Condition-Name": [
                         "gestation"
                       ],
-                      "Eq-Operator": [
-                        "-"
-                      ],
                       "Modifier": [
-                        "Twin",
                         "singleton",
+                        "Twin"
+                      ],
+                      "Procedure": [
+                        "reduced"
+                      ],
+                      "Procedure-Name": [
+                        "reduced"
+                      ],
+                      "Assertion": [
                         "spontaneously"
                       ]
                     },
@@ -44,7 +46,10 @@
                       "AND": {
                         "left": {
                           "raw_text": "or therapeutically, is",
-                          "Modifier": [
+                          "Procedure": [
+                            "therapeutically"
+                          ],
+                          "Procedure-Name": [
                             "therapeutically"
                           ]
                         },
@@ -66,17 +71,20 @@
                                 "13",
                                 "6"
                               ],
-                              "Observation": [
-                                "gestational age"
+                              "Procedure": [
+                                "reduction"
                               ],
-                              "Observation-Name": [
-                                "gestational age"
+                              "Procedure-Name": [
+                                "reduction"
+                              ],
+                              "Assertion": [
+                                "eligible"
                               ],
                               "Negation": [
                                 "not"
                               ],
-                              "Exception": [
-                                "unless"
+                              "Modifier": [
+                                "project"
                               ],
                               "Eq-Comparison": [
                                 "before 13 weeks 6 days"
@@ -84,8 +92,11 @@
                               "Eq-Operator": [
                                 "before"
                               ],
-                              "Assertion": [
-                                "eligible"
+                              "Observation": [
+                                "gestational age"
+                              ],
+                              "Observation-Name": [
+                                "gestational age"
                               ]
                             }
                           }
@@ -106,23 +117,26 @@
                   "Condition-Name": [
                     "gestation"
                   ],
-                  "Eq-Operator": [
-                    "-"
+                  "Procedure": [
+                    "reduced"
+                  ],
+                  "Procedure-Name": [
+                    "reduced"
                   ],
                   "Modifier": [
-                    "Higher order multifetal",
-                    "singleton"
+                    "singletons",
+                    "Higher order multifetal"
                   ]
                 },
                 "right": {
                   "NOT": {
                     "left": {
                       "raw_text": "not eligible.",
-                      "Negation": [
-                        "not"
-                      ],
                       "Assertion": [
                         "eligible"
+                      ],
+                      "Negation": [
+                        "not"
                       ]
                     }
                   }
@@ -143,10 +157,6 @@
             "23",
             "6"
           ],
-          "Eq-Operator": [
-            "between",
-            "-"
-          ],
           "Observation": [
             "Gestational age"
           ],
@@ -156,14 +166,17 @@
           "Study": [
             "randomization"
           ],
+          "Eq-Comparison": [
+            "between 16 weeks 0 days and 23 weeks 6 days"
+          ],
+          "Eq-Operator": [
+            "between"
+          ],
           "Procedure": [
             "ultrasound"
           ],
           "Procedure-Name": [
             "ultrasound"
-          ],
-          "Eq-Comparison": [
-            "between 16 weeks 0 days and 23 weeks 6 days"
           ]
         }
       }
@@ -172,8 +185,7 @@
       "raw_text": "- Cervical length on transvaginal examination of less than or equal to 20 mm within 10 days prior to randomization by a study certified sonographer. There is no lower cervical length threshold.",
       "Eq-Operator": [
         "less than or equal",
-        "within",
-        "-"
+        "within"
       ],
       "Eq-Temporal-Unit": [
         "days"

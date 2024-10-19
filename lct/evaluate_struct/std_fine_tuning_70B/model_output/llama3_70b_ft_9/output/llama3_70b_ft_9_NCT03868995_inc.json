@@ -4,11 +4,11 @@
       "AND": {
         "left": {
           "raw_text": "1. 20-70 age",
-          "Age": [
-            "age"
-          ],
           "Eq-Operator": [
             "-"
+          ],
+          "Age": [
+            "age"
           ],
           "Eq-Value": [
             "20",
@@ -22,12 +22,14 @@
           "OR": {
             "left": {
               "raw_text": "2. Chronic ankle sprain more than 3months",
+              "Condition": [
+                "ankle sprain"
+              ],
+              "Condition-Name": [
+                "ankle sprain"
+              ],
               "Eq-Temporal-Unit": [
                 "months"
-              ],
-              "Eq-Operator": [
-                "-",
-                "more than"
               ],
               "Eq-Value": [
                 "3"
@@ -35,28 +37,25 @@
               "Acuteness": [
                 "Chronic"
               ],
-              "Condition": [
-                "ankle sprain"
-              ],
-              "Condition-Name": [
-                "ankle sprain"
-              ],
               "Eq-Comparison": [
                 "more than 3months"
+              ],
+              "Eq-Operator": [
+                "more than"
               ]
             },
             "right": {
               "OR": {
                 "left": {
                   "raw_text": "with chronic ankle pain",
+                  "Condition": [
+                    "ankle pain"
+                  ],
+                  "Condition-Name": [
+                    "ankle pain"
+                  ],
                   "Acuteness": [
-                    "Chronic"
-                  ],
-                  "Observation": [
-                    "ankle pain"
-                  ],
-                  "Observation-Name": [
-                    "ankle pain"
+                    "chronic"
                   ]
                 },
                 "right": {
@@ -76,9 +75,6 @@
     },
     "right": {
       "raw_text": "3. Ultrasound diagnosed anterior talofibular ligament sprain",
-      "Eq-Value": [
-        "3"
-      ],
       "Condition": [
         "anterior talofibular ligament sprain",
         "sprain"
@@ -86,6 +82,9 @@
       "Condition-Name": [
         "anterior talofibular ligament sprain",
         "sprain"
+      ],
+      "Eq-Value": [
+        "3"
       ],
       "Procedure": [
         "Ultrasound"

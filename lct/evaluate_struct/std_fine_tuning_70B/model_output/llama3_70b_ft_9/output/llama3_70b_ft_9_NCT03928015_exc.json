@@ -26,60 +26,46 @@
                           ]
                         },
                         "right": {
-                          "AND": {
+                          "OR": {
                             "left": {
-                              "raw_text": "2. Patients who are"
+                              "raw_text": "2. Patients who are nil per os (NPO) at the time of randomization",
+                              "Condition": [
+                                "nil per os",
+                                "NPO"
+                              ],
+                              "Condition-Name": [
+                                "nil per os",
+                                "NPO"
+                              ],
+                              "Study": [
+                                "randomization"
+                              ]
                             },
                             "right": {
-                              "NOT": {
-                                "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "nil per os (NPO) at the time of randomization",
-                                      "Negation": [
-                                        "nil"
-                                      ],
-                                      "Observation": [
-                                        "NPO",
-                                        "nil per os"
-                                      ],
-                                      "Observation-Name": [
-                                        "NPO",
-                                        "nil per os"
-                                      ],
-                                      "Study": [
-                                        "randomization"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "or are expected to be NPO within the next 48 hours",
-                                      "Observation": [
-                                        "NPO",
-                                        "nil per os"
-                                      ],
-                                      "Observation-Name": [
-                                        "NPO",
-                                        "nil per os"
-                                      ],
-                                      "Eq-Operator": [
-                                        "within"
-                                      ],
-                                      "Eq-Value": [
-                                        "48"
-                                      ],
-                                      "Eq-Comparison": [
-                                        "within the next 48 hours"
-                                      ],
-                                      "Eq-Temporal-Unit": [
-                                        "hours"
-                                      ],
-                                      "Assertion": [
-                                        "expected to"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
+                              "raw_text": "or are expected to be NPO within the next 48 hours",
+                              "Condition": [
+                                "NPO",
+                                "nil per os"
+                              ],
+                              "Condition-Name": [
+                                "NPO",
+                                "nil per os"
+                              ],
+                              "Eq-Operator": [
+                                "within"
+                              ],
+                              "Eq-Value": [
+                                "48"
+                              ],
+                              "Eq-Comparison": [
+                                "within the next 48 hours"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "hours"
+                              ],
+                              "Assertion": [
+                                "expected to"
+                              ]
                             }
                           }
                         }

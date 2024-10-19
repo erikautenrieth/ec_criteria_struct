@@ -8,13 +8,10 @@
               "AND": {
                 "left": {
                   "raw_text": "- Singleton gestation.",
-                  "Observation": [
+                  "Condition": [
                     "gestation"
                   ],
-                  "Eq-Operator": [
-                    "-"
-                  ],
-                  "Observation-Name": [
+                  "Condition-Name": [
                     "gestation"
                   ],
                   "Modifier": [
@@ -25,18 +22,15 @@
                   "OR": {
                     "left": {
                       "raw_text": "- Twin gestation reduced to singleton either spontaneously",
-                      "Observation": [
+                      "Condition": [
                         "gestation"
                       ],
-                      "Eq-Operator": [
-                        "-"
-                      ],
-                      "Observation-Name": [
+                      "Condition-Name": [
                         "gestation"
                       ],
                       "Modifier": [
-                        "singleton",
-                        "Twin"
+                        "Twin",
+                        "singleton"
                       ],
                       "Procedure": [
                         "reduced"
@@ -54,48 +48,43 @@
                           "raw_text": "or therapeutically, is",
                           "Procedure": [
                             "therapeutically"
-                          ],
-                          "Procedure-Name": [
-                            "therapeutically"
                           ]
                         },
                         "right": {
                           "NOT": {
                             "left": {
                               "raw_text": "not eligible unless the reduction occurred before 13 weeks 6 days project gestational age.",
-                              "Observation": [
-                                "gestation",
-                                "gestational age"
-                              ],
-                              "Eq-Comparison": [
-                                "before 13 weeks 6 days"
-                              ],
-                              "Observation-Name": [
-                                "gestation",
-                                "gestational age"
-                              ],
-                              "Eq-Temporal-Period": [
-                                "before"
-                              ],
-                              "Eq-Value": [
-                                "13",
-                                "6"
-                              ],
-                              "Eq-Temporal-Unit": [
-                                "weeks",
-                                "days"
-                              ],
-                              "Negation": [
-                                "not"
-                              ],
-                              "Assertion": [
-                                "eligible"
-                              ],
                               "Procedure": [
                                 "reduction"
                               ],
                               "Procedure-Name": [
                                 "reduction"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "weeks",
+                                "days"
+                              ],
+                              "Eq-Value": [
+                                "13",
+                                "6"
+                              ],
+                              "Assertion": [
+                                "eligible"
+                              ],
+                              "Observation": [
+                                "gestational age"
+                              ],
+                              "Observation-Name": [
+                                "gestational age"
+                              ],
+                              "Eq-Comparison": [
+                                "before 13 weeks 6 days"
+                              ],
+                              "Eq-Operator": [
+                                "before"
+                              ],
+                              "Negation": [
+                                "not"
                               ]
                             }
                           }
@@ -110,44 +99,32 @@
               "AND": {
                 "left": {
                   "raw_text": "- Higher order multifetal gestations reduced to singletons are",
-                  "Observation": [
+                  "Condition": [
                     "gestation"
                   ],
-                  "Eq-Operator": [
-                    "-"
-                  ],
-                  "Observation-Name": [
+                  "Condition-Name": [
                     "gestation"
                   ],
                   "Modifier": [
-                    "singleton",
-                    "Higher order multifetal"
+                    "Higher order multifetal",
+                    "singleton"
                   ],
                   "Procedure": [
                     "reduced"
                   ],
                   "Procedure-Name": [
                     "reduced"
-                  ],
-                  "Eq-Comparison": [
-                    "reduced to singletons"
-                  ],
-                  "Eq-Operator": [
-                    "to"
-                  ],
-                  "Eq-Value": [
-                    "singletons"
                   ]
                 },
                 "right": {
                   "NOT": {
                     "left": {
                       "raw_text": "not eligible.",
-                      "Negation": [
-                        "not"
-                      ],
                       "Assertion": [
                         "eligible"
+                      ],
+                      "Negation": [
+                        "not"
                       ]
                     }
                   }
@@ -159,29 +136,20 @@
         "right": {
           "raw_text": "- Gestational age at randomization between 16 weeks 0 days and 23 weeks 6 days based on clinical information and evaluation of the earliest ultrasound as described in Gestational Age.",
           "Observation": [
-            "Gestation",
             "Gestational age"
-          ],
-          "Eq-Comparison": [
-            "between 16 weeks 0 days and 23 weeks 6 days"
-          ],
-          "Eq-Operator": [
-            "-",
-            "between"
           ],
           "Observation-Name": [
-            "Gestation",
             "Gestational age"
+          ],
+          "Eq-Temporal-Unit": [
+            "weeks",
+            "days"
           ],
           "Eq-Value": [
             "16",
             "0",
             "23",
             "6"
-          ],
-          "Eq-Temporal-Unit": [
-            "weeks",
-            "days"
           ],
           "Study": [
             "randomization"
@@ -192,8 +160,11 @@
           "Procedure-Name": [
             "ultrasound"
           ],
-          "Eq-Temporal-Recency": [
-            "earliest"
+          "Eq-Comparison": [
+            "between 16 weeks 0 days and 23 weeks 6 days"
+          ],
+          "Eq-Operator": [
+            "between"
           ]
         }
       }
@@ -203,36 +174,38 @@
       "Observation": [
         "Cervical length"
       ],
-      "Eq-Comparison": [
-        "less than or equal to 20 mm",
-        "within 10 days"
-      ],
-      "Study": [
-        "randomization"
+      "Observation-Name": [
+        "Cervical length"
       ],
       "Eq-Operator": [
-        "-",
         "less than or equal",
         "within"
       ],
-      "Observation-Name": [
-        "Cervical length"
+      "Eq-Temporal-Unit": [
+        "days"
       ],
       "Eq-Value": [
         "20",
         "10"
       ],
+      "Eq-Comparison": [
+        "less than or equal to 20 mm",
+        "within 10 days"
+      ],
       "Eq-Unit": [
         "mm"
       ],
-      "Eq-Temporal-Unit": [
-        "days"
+      "Study": [
+        "randomization"
       ],
       "Procedure": [
         "transvaginal examination"
       ],
       "Procedure-Name": [
         "transvaginal examination"
+      ],
+      "Provider": [
+        "sonographer"
       ]
     }
   }

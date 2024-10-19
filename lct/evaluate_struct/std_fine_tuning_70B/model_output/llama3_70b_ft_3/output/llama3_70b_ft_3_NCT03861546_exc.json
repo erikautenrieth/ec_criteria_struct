@@ -116,23 +116,23 @@
                                     },
                                     "right": {
                                       "raw_text": "with life expectancy of <5 years;",
-                                      "Observation": [
-                                        "life expectancy"
-                                      ],
-                                      "Eq-Comparison": [
-                                        "<5 years"
-                                      ],
-                                      "Observation-Name": [
-                                        "life expectancy"
-                                      ],
                                       "Eq-Operator": [
                                         "<"
+                                      ],
+                                      "Eq-Temporal-Unit": [
+                                        "years"
                                       ],
                                       "Eq-Value": [
                                         "5"
                                       ],
-                                      "Eq-Temporal-Unit": [
-                                        "years"
+                                      "Eq-Comparison": [
+                                        "<5 years"
+                                      ],
+                                      "Observation": [
+                                        "life expectancy"
+                                      ],
+                                      "Observation-Name": [
+                                        "life expectancy"
                                       ]
                                     }
                                   }
@@ -183,25 +183,12 @@
                       }
                     },
                     "right": {
-                      "raw_text": "4."
-                    }
-                  }
-                },
-                "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "inability to perform unsupervised physical activity;",
+                      "raw_text": "4. inability to perform unsupervised physical activity;",
                       "Observation": [
                         "physical activity"
                       ],
-                      "Eq-Comparison": [
-                        "to perform"
-                      ],
                       "Observation-Name": [
                         "physical activity"
-                      ],
-                      "Eq-Temporal-Period": [
-                        "to perform"
                       ],
                       "Negation": [
                         "inability"
@@ -209,44 +196,40 @@
                       "Assertion": [
                         "inability"
                       ]
-                    },
-                    "right": {
-                      "raw_text": "5. pregnancy;",
-                      "Condition": [
-                        "pregnancy"
-                      ],
-                      "Eq-Value": [
-                        "5"
-                      ],
-                      "Condition-Name": [
-                        "pregnancy"
-                      ]
                     }
                   }
+                },
+                "right": {
+                  "raw_text": "5. pregnancy;",
+                  "Condition": [
+                    "pregnancy"
+                  ],
+                  "Condition-Name": [
+                    "pregnancy"
+                  ],
+                  "Eq-Value": [
+                    "5"
+                  ]
                 }
               }
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "6. diagnosed cognitive deficits",
-                  "Condition": [
-                    "cognitive deficits"
-                  ],
-                  "Condition-Name": [
-                    "cognitive deficits"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or limited decision-making capacity;",
-                  "Condition": [
-                    "limited decision-making capacity"
-                  ],
-                  "Condition-Name": [
-                    "limited decision-making capacity"
-                  ]
-                }
-              }
+              "raw_text": "6. diagnosed cognitive deficits or limited decision-making capacity;",
+              "Condition": [
+                "cognitive deficits"
+              ],
+              "Condition-Name": [
+                "cognitive deficits"
+              ],
+              "Observation": [
+                "decision-making capacity"
+              ],
+              "Observation-Name": [
+                "decision-making capacity"
+              ],
+              "Polarity": [
+                "limited"
+              ]
             }
           }
         },
@@ -278,38 +261,21 @@
       "OR": {
         "left": {
           "raw_text": "8. homelessness",
-          "Condition": [
+          "Observation": [
             "homelessness"
           ],
-          "Condition-Name": [
+          "Observation-Name": [
             "homelessness"
           ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "or"
-            },
-            "right": {
-              "NOT": {
-                "left": {
-                  "raw_text": "no fixed address.",
-                  "Negation": [
-                    "no"
-                  ],
-                  "Observation": [
-                    "address"
-                  ],
-                  "Observation-Name": [
-                    "address"
-                  ],
-                  "Modifier": [
-                    "fixed"
-                  ]
-                }
-              }
-            }
-          }
+          "raw_text": "or no fixed address.",
+          "Observation": [
+            "no fixed address"
+          ],
+          "Observation-Name": [
+            "no fixed address"
+          ]
         }
       }
     }

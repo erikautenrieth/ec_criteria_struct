@@ -32,17 +32,17 @@
                                           "Eq-Comparison": [
                                             "current"
                                           ],
+                                          "Eq-Temporal-Period": [
+                                            "current"
+                                          ],
                                           "Procedure": [
+                                            "immunosuppressive therapies"
+                                          ],
+                                          "Procedure-Name": [
                                             "immunosuppressive therapies"
                                           ],
                                           "Drug": [
                                             "corticosteroids"
-                                          ],
-                                          "Eq-Temporal-Period": [
-                                            "current"
-                                          ],
-                                          "Procedure-Name": [
-                                            "immunosuppressive therapies"
                                           ],
                                           "Drug-Name": [
                                             "corticosteroids"
@@ -103,11 +103,11 @@
                               "Procedure": [
                                 "chemotherapy"
                               ],
-                              "Condition": [
-                                "neutropenia"
-                              ],
                               "Procedure-Name": [
                                 "chemotherapy"
+                              ],
+                              "Condition": [
+                                "neutropenia"
                               ],
                               "Condition-Name": [
                                 "neutropenia"
@@ -133,11 +133,11 @@
                           "Condition": [
                             "bacteremia"
                           ],
-                          "Modifier": [
-                            "peripheral"
-                          ],
                           "Condition-Name": [
                             "bacteremia"
+                          ],
+                          "Modifier": [
+                            "peripheral"
                           ]
                         },
                         "right": {
@@ -157,18 +157,59 @@
                   }
                 },
                 "right": {
-                  "raw_text": "- Urinary obstruction",
-                  "Condition": [
-                    "Urinary obstruction"
-                  ],
-                  "Condition-Name": [
-                    "Urinary obstruction"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Urinary",
+                      "Modifier": [
+                        "Urinary"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "obstruction not lifted within the first 24 hours of management",
+                          "Condition": [
+                            "obstruction"
+                          ],
+                          "Condition-Name": [
+                            "obstruction"
+                          ],
+                          "Eq-Operator": [
+                            "within"
+                          ],
+                          "Eq-Value": [
+                            "24"
+                          ],
+                          "Eq-Comparison": [
+                            "within the first 24 hours"
+                          ],
+                          "Eq-Temporal-Recency": [
+                            "first"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "hours"
+                          ],
+                          "Procedure": [
+                            "management"
+                          ],
+                          "Negation": [
+                            "not"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
             "right": {
-              "raw_text": "not lifted within the first 24 hours of management",
+              "raw_text": "- Intra-abdominal infection collected undrained in the first 24 hours of management",
+              "Condition": [
+                "Intra-abdominal infection"
+              ],
+              "Condition-Name": [
+                "Intra-abdominal infection"
+              ],
               "Eq-Operator": [
                 "within"
               ],
@@ -178,69 +219,65 @@
               "Eq-Comparison": [
                 "within the first 24 hours"
               ],
-              "Condition-Name": [
-                "management"
-              ],
               "Eq-Temporal-Recency": [
                 "first"
               ],
               "Eq-Temporal-Unit": [
                 "hours"
               ],
-              "Negation": [
-                "not"
+              "Procedure": [
+                "management"
+              ],
+              "Modifier": [
+                "collected undrained"
               ]
             }
           }
         },
         "right": {
-          "raw_text": "- Intra-abdominal infection collected undrained in the first 24 hours of management",
+          "raw_text": "- primary infectious focus represented by mechanically ventilated pneumonia",
           "Condition": [
-            "Intra-abdominal infection"
-          ],
-          "Eq-Operator": [
-            "within"
-          ],
-          "Eq-Value": [
-            "24"
-          ],
-          "Eq-Comparison": [
-            "within the first 24 hours"
+            "pneumonia"
           ],
           "Condition-Name": [
-            "Intra-abdominal infection"
+            "pneumonia"
           ],
-          "Eq-Temporal-Recency": [
-            "first"
+          "Procedure": [
+            "mechanically ventilated"
           ],
-          "Eq-Temporal-Unit": [
-            "hours"
+          "Procedure-Name": [
+            "mechanically ventilated"
           ],
           "Modifier": [
-            "collected undrained"
+            "primary"
           ]
         }
       }
     },
     "right": {
-      "raw_text": "- primary infectious focus represented by mechanically ventilated pneumonia",
-      "Condition": [
-        "pneumonia",
-        "infectious focus"
-      ],
-      "Procedure": [
-        "mechanically ventilated"
-      ],
-      "Condition-Name": [
-        "pneumonia",
-        "infectious focus"
-      ],
-      "Procedure-Name": [
-        "mechanically ventilated"
-      ],
-      "Modifier": [
-        "primary"
-      ]
+      "OR": {
+        "left": {
+          "raw_text": "- Pregnant",
+          "Condition": [
+            "Pregnant"
+          ],
+          "Condition-Name": [
+            "Pregnant"
+          ]
+        },
+        "right": {
+          "raw_text": "or lactating woman",
+          "Condition": [
+            "lactating"
+          ],
+          "Condition-Name": [
+            "lactating"
+          ],
+          "Life-Stage-And-Gender": [
+            "woman"
+          ]
+        }
+      }
     }
   }
 }

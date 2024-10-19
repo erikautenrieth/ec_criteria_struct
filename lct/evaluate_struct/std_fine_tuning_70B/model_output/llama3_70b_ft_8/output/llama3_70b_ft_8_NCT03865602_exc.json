@@ -15,13 +15,16 @@
                           "Eq-Comparison": [
                             "prior"
                           ],
-                          "Eq-Temporal-Period": [
-                            "prior"
-                          ],
                           "Study": [
                             "randomization"
                           ],
-                          "Modifier": [
+                          "Eq-Temporal-Period": [
+                            "prior"
+                          ],
+                          "Procedure": [
+                            "STAR"
+                          ],
+                          "Procedure-Name": [
                             "STAR"
                           ]
                         },
@@ -30,7 +33,10 @@
                           "Study": [
                             "study"
                           ],
-                          "Modifier": [
+                          "Procedure": [
+                            "usual care"
+                          ],
+                          "Procedure-Name": [
                             "usual care"
                           ]
                         }
@@ -90,11 +96,11 @@
                   "raw_text": "3. the only antibiotic associated with patient is administered in the operating room as this likely represents pre-operative infection prophylaxis and not presumed infection;",
                   "Procedure": [
                     "operative",
-                    "pre-operative"
+                    "pre-operative infection prophylaxis"
                   ],
                   "Procedure-Name": [
                     "operative",
-                    "pre-operative"
+                    "pre-operative infection prophylaxis"
                   ],
                   "Drug": [
                     "antibiotic"
@@ -108,8 +114,15 @@
                   "Condition-Name": [
                     "infection"
                   ],
+                  "Eq-Comparison": [
+                    "only"
+                  ],
+                  "Eq-Value": [
+                    "only"
+                  ],
                   "Assertion": [
-                    "likely"
+                    "likely",
+                    "presumed"
                   ]
                 }
               }
@@ -146,15 +159,6 @@
               ],
               "Assertion": [
                 "do not"
-              ],
-              "Procedure": [
-                "resuscitate"
-              ],
-              "Procedure-Name": [
-                "resuscitate"
-              ],
-              "Negation": [
-                "not"
               ]
             },
             "right": {
@@ -178,20 +182,20 @@
                 "treatment",
                 "intubate"
               ],
-              "Procedure-Name": [
-                "intubate"
-              ],
               "Eq-Temporal-Unit": [
                 "hours"
+              ],
+              "Stability": [
+                "aggressive"
+              ],
+              "Procedure-Name": [
+                "intubate"
               ],
               "Polarity": [
                 "increased"
               ],
               "Risk": [
                 "risk"
-              ],
-              "Negation": [
-                "less"
               ]
             }
           }
@@ -211,9 +215,6 @@
       ],
       "Encounter": [
         "hospitalization"
-      ],
-      "Assertion": [
-        "ruled out"
       ]
     }
   }

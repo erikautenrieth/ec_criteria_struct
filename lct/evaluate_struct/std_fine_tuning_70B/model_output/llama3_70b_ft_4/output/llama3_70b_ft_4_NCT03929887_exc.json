@@ -1,18 +1,12 @@
 {
   "AND": {
     "left": {
-      "raw_text": "- Unwillingness to give informed consent",
-      "Eq-Operator": [
-        "-"
-      ]
+      "raw_text": "- Unwillingness to give informed consent"
     },
     "right": {
       "AND": {
         "left": {
-          "raw_text": "-",
-          "Eq-Operator": [
-            "-"
-          ]
+          "raw_text": "-"
         },
         "right": {
           "NOT": {
@@ -20,6 +14,10 @@
               "AND": {
                 "left": {
                   "raw_text": "Not enough kidney tissue to confirm a diagnosis (adequate tissue: more than 2 cores of kidney tissues (10 x 1.2 mm) including over 10-15 glomerulus each)",
+                  "Eq-Unit": [
+                    "mm",
+                    "cores"
+                  ],
                   "Eq-Operator": [
                     "-",
                     "more than"
@@ -27,31 +25,33 @@
                   "Eq-Value": [
                     "2",
                     "10",
-                    "15",
-                    "1.2"
+                    "15"
+                  ],
+                  "Condition": [
+                    "kidney tissue"
+                  ],
+                  "Condition-Name": [
+                    "kidney tissue"
                   ],
                   "Eq-Comparison": [
-                    "more than 2",
+                    "more than 2 cores",
+                    "10 x 1.2 mm",
                     "10-15"
+                  ],
+                  "Observation": [
+                    "glomerulus"
+                  ],
+                  "Observation-Name": [
+                    "glomerulus"
                   ],
                   "Negation": [
                     "Not"
-                  ],
-                  "Observation": [
-                    "kidney tissue"
-                  ],
-                  "Observation-Name": [
-                    "kidney tissue"
-                  ],
-                  "Eq-Unit": [
-                    "mm",
-                    "cores"
                   ]
                 },
                 "right": {
                   "raw_text": "each)",
-                  "Eq-Operator": [
-                    "-"
+                  "Eq-Comparison": [
+                    "10-15"
                   ]
                 }
               }

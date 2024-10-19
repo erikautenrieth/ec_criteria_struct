@@ -147,22 +147,33 @@
                                           }
                                         },
                                         "right": {
-                                          "raw_text": "- No laboratory abnormalities",
-                                          "Negation": [
-                                            "No"
-                                          ],
-                                          "Observation": [
-                                            "laboratory"
-                                          ],
-                                          "Eq-Operator": [
-                                            "-"
-                                          ],
-                                          "Polarity": [
-                                            "abnormalities"
-                                          ],
-                                          "Observation-Name": [
-                                            "laboratory"
-                                          ]
+                                          "AND": {
+                                            "left": {
+                                              "raw_text": "-",
+                                              "Eq-Operator": [
+                                                "-"
+                                              ]
+                                            },
+                                            "right": {
+                                              "NOT": {
+                                                "left": {
+                                                  "raw_text": "No laboratory abnormalities",
+                                                  "Negation": [
+                                                    "No"
+                                                  ],
+                                                  "Observation": [
+                                                    "laboratory"
+                                                  ],
+                                                  "Polarity": [
+                                                    "abnormalities"
+                                                  ],
+                                                  "Observation-Name": [
+                                                    "laboratory"
+                                                  ]
+                                                }
+                                              }
+                                            }
+                                          }
                                         }
                                       }
                                     },
@@ -208,11 +219,11 @@
                                 },
                                 "right": {
                                   "raw_text": "- Able to use nicotine nasal spray",
-                                  "Drug": [
-                                    "nicotine"
-                                  ],
                                   "Eq-Operator": [
                                     "-"
+                                  ],
+                                  "Drug": [
+                                    "nicotine"
                                   ],
                                   "Drug-Name": [
                                     "nicotine"
@@ -287,19 +298,19 @@
                             "left": {
                               "raw_text": "Not currently receiving a monoamine oxidase inhibitor treatment",
                               "Negation": [
-                                "Not",
-                                "No"
+                                "No",
+                                "Not"
                               ],
                               "Eq-Comparison": [
-                                "current",
-                                "currently receiving"
+                                "currently receiving",
+                                "current"
                               ],
                               "Procedure": [
                                 "treatment"
                               ],
                               "Eq-Temporal-Period": [
-                                "current",
-                                "currently receiving"
+                                "currently receiving",
+                                "current"
                               ],
                               "Drug": [
                                 "monoamine oxidase inhibitor"
@@ -328,7 +339,7 @@
                 "Unable"
               ],
               "Encounter": [
-                "follow-up"
+                "follow-up protocol"
               ]
             }
           }

@@ -185,8 +185,7 @@
                     "right": {
                       "raw_text": "5. loss of vision as a result of other causes;",
                       "Condition": [
-                        "loss of vision",
-                        "causes"
+                        "loss of vision"
                       ],
                       "Other": [
                         "other"
@@ -236,7 +235,7 @@
                 "disease",
                 "diabetes mellitus"
               ],
-              "Exception": [
+              "Other": [
                 "other than"
               ],
               "Severity": [
@@ -247,6 +246,9 @@
               ],
               "Modifier": [
                 "systemic"
+              ],
+              "Exception": [
+                "other than"
               ]
             }
           }
@@ -254,65 +256,81 @@
         "right": {
           "OR": {
             "left": {
-              "raw_text": "8. history of glaucoma",
-              "Eq-Comparison": [
-                "history"
-              ],
+              "raw_text": "8. known coagulation abnormalities",
               "Condition": [
-                "glaucoma"
-              ],
-              "Eq-Operator": [
-                "to"
-              ],
-              "Eq-Temporal-Period": [
-                "history"
+                "coagulation abnormalities"
               ],
               "Condition-Name": [
-                "glaucoma"
+                "coagulation abnormalities"
               ]
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "or ocular hypertension;",
-                  "Condition": [
-                    "ocular hypertension"
-                  ],
-                  "Condition-Name": [
-                    "ocular hypertension"
-                  ]
-                },
-                "right": {
-                  "raw_text": "9. any condition that could affect followup or documentation (including preretinal or vitreous hemorrhage).",
-                  "Condition": [
-                    "condition",
-                    "hemorrhage"
-                  ],
-                  "Assertion": [
-                    "could"
-                  ],
-                  "Stability": [
-                    "affect"
-                  ],
-                  "Encounter": [
-                    "followup"
-                  ],
-                  "Condition-Name": [
-                    "hemorrhage"
-                  ],
-                  "Modifier": [
-                    "preretinal",
-                    "vitreous"
-                  ]
-                }
-              }
+              "raw_text": "or current use of anticoagulative medication other than aspirin",
+              "Eq-Comparison": [
+                "current"
+              ],
+              "Drug": [
+                "anticoagulative medication",
+                "aspirin"
+              ],
+              "Other": [
+                "other than"
+              ],
+              "Eq-Temporal-Period": [
+                "current"
+              ],
+              "Drug-Name": [
+                "anticoagulative medication",
+                "aspirin"
+              ],
+              "Exception": [
+                "other than"
+              ]
             }
           }
         }
       }
     },
     "right": {
-      "raw_text": "10. None of the above."
+      "OR": {
+        "left": {
+          "raw_text": "9. any condition that could affect followup",
+          "Condition": [
+            "condition"
+          ],
+          "Assertion": [
+            "could"
+          ],
+          "Encounter": [
+            "followup"
+          ],
+          "Stability": [
+            "affect"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or documentation (including preretinal",
+              "Modifier": [
+                "preretinal"
+              ]
+            },
+            "right": {
+              "raw_text": "or vitreous hemorrhage).",
+              "Observation": [
+                "hemorrhage"
+              ],
+              "Observation-Name": [
+                "hemorrhage"
+              ],
+              "Modifier": [
+                "vitreous"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -211,75 +211,115 @@
           "Life-Stage-And-Gender": [
             "females",
             "males"
-          ],
-          "Procedure-Name": [
-            "operative"
           ]
         }
       }
     },
     "right": {
-      "raw_text": "- Preoperative use of anticoagulant therapy within five days before surgery, fibrinolytic disorders requiring intraoperative antifibrinolytic treatment, coagulopathy (as identified by a preoperative platelet count of <150,000/mm3, an international normalized ratio of >1.4, or a prolonged partial thromboplastin time [>1.4 times normal]).",
-      "Procedure": [
-        "operative",
-        "surgery"
-      ],
-      "Drug": [
-        "anticoagulant therapy",
-        "fibrinolytic disorders",
-        "antifibrinolytic treatment"
-      ],
-      "Drug-Name": [
-        "anticoagulant therapy",
-        "fibrinolytic disorders",
-        "antifibrinolytic treatment"
-      ],
-      "Eq-Operator": [
-        "within",
-        "<",
-        ">"
-      ],
-      "Eq-Temporal-Unit": [
-        "days"
-      ],
-      "Eq-Value": [
-        "five",
-        "1.4",
-        "150,000"
-      ],
-      "Eq-Comparison": [
-        "within five days",
-        "<150,000/mm3",
-        ">1.4",
-        "1.4 times normal"
-      ],
-      "Condition": [
-        "coagulopathy"
-      ],
-      "Condition-Name": [
-        "coagulopathy"
-      ],
-      "Observation": [
-        "platelet count",
-        "international normalized ratio",
-        "partial thromboplastin time"
-      ],
-      "Observation-Name": [
-        "platelet count",
-        "international normalized ratio",
-        "partial thromboplastin time"
-      ],
-      "Eq-Unit": [
-        "mm3",
-        "g"
-      ],
-      "Procedure-Name": [
-        "operative",
-        "surgery"
-      ],
-      "Polarity": [
-        "normal"
-      ]
+      "OR": {
+        "left": {
+          "raw_text": "- Preoperative use of anticoagulant therapy within five days before surgery, fibrinolytic disorders requiring intraoperative antifibrinolytic treatment,",
+          "Procedure": [
+            "operative",
+            "antifibrinolytic treatment",
+            "surgery"
+          ],
+          "Drug": [
+            "anticoagulant therapy"
+          ],
+          "Drug-Name": [
+            "anticoagulant therapy"
+          ],
+          "Eq-Operator": [
+            "within"
+          ],
+          "Eq-Temporal-Unit": [
+            "days"
+          ],
+          "Eq-Comparison": [
+            "within five days"
+          ],
+          "Condition": [
+            "fibrinolytic disorders"
+          ],
+          "Condition-Name": [
+            "fibrinolytic disorders"
+          ],
+          "Eq-Value": [
+            "five"
+          ],
+          "Procedure-Name": [
+            "antifibrinolytic treatment",
+            "surgery"
+          ],
+          "Assertion": [
+            "requiring"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "coagulopathy (as identified by a preoperative platelet count of <150,000/mm3, an international normalized ratio of >1.4,",
+              "Procedure": [
+                "operative"
+              ],
+              "Condition": [
+                "coagulopathy"
+              ],
+              "Condition-Name": [
+                "coagulopathy"
+              ],
+              "Eq-Operator": [
+                "<",
+                ">"
+              ],
+              "Eq-Comparison": [
+                "<150,000/mm3",
+                ">1.4"
+              ],
+              "Observation": [
+                "platelet count",
+                "international normalized ratio"
+              ],
+              "Observation-Name": [
+                "platelet count",
+                "international normalized ratio"
+              ],
+              "Eq-Value": [
+                "150,000",
+                "1.4"
+              ],
+              "Eq-Unit": [
+                "mm3"
+              ]
+            },
+            "right": {
+              "raw_text": "or a prolonged partial thromboplastin time [>1.4 times normal]).",
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Comparison": [
+                ">1.4 times normal"
+              ],
+              "Observation": [
+                "partial thromboplastin time"
+              ],
+              "Observation-Name": [
+                "partial thromboplastin time"
+              ],
+              "Eq-Value": [
+                "1.4"
+              ],
+              "Polarity": [
+                "normal"
+              ],
+              "Modifier": [
+                "prolonged"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

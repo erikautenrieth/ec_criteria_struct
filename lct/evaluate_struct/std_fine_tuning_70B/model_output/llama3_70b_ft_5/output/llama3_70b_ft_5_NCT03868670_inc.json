@@ -99,10 +99,10 @@
                                     "%"
                                   ],
                                   "Observation-Name": [
-                                    "excess weight lost"
+                                    "excess weight"
                                   ],
                                   "Observation": [
-                                    "excess weight lost"
+                                    "excess weight"
                                   ]
                                 }
                               }
@@ -132,11 +132,11 @@
                           "Assertion": [
                             "able to"
                           ],
-                          "Eq-Operator": [
-                            "-"
-                          ],
                           "Eq-Temporal-Period": [
                             "scheduled"
+                          ],
+                          "Eq-Operator": [
+                            "-"
                           ],
                           "Encounter": [
                             "clinic appointments"
@@ -180,6 +180,9 @@
             },
             "right": {
               "raw_text": "- Subject is able to comply w/ all testing and follow-up requirements defined by the study protocol.",
+              "Study": [
+                "study"
+              ],
               "Assertion": [
                 "able to"
               ],
@@ -191,9 +194,6 @@
               ],
               "Procedure-Name": [
                 "testing"
-              ],
-              "Study": [
-                "study"
               ]
             }
           }
@@ -210,14 +210,17 @@
               "NOT": {
                 "left": {
                   "raw_text": "no immediate plan for relocation beyond 6 hours of the study site.",
+                  "Study": [
+                    "study"
+                  ],
                   "Negation": [
                     "no"
                   ],
                   "Assertion": [
                     "plan for"
                   ],
-                  "Observation": [
-                    "relocation"
+                  "Eq-Comparison": [
+                    "beyond 6 hours"
                   ],
                   "Eq-Operator": [
                     "beyond"
@@ -225,20 +228,14 @@
                   "Eq-Value": [
                     "6"
                   ],
-                  "Study": [
-                    "study"
-                  ],
-                  "Observation-Name": [
-                    "relocation"
-                  ],
-                  "Eq-Comparison": [
-                    "beyond 6 hours"
-                  ],
                   "Eq-Temporal-Unit": [
                     "hours"
                   ],
+                  "Encounter": [
+                    "relocation"
+                  ],
                   "Location": [
-                    "site"
+                    "study site"
                   ]
                 }
               }

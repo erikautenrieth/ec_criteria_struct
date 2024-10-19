@@ -184,14 +184,15 @@
                     "right": {
                       "raw_text": "- Somatic disorders including central nervous system (CNS) involvement",
                       "Condition": [
-                        "Somatic disorders"
+                        "Somatic disorders",
+                        "CNS"
                       ],
                       "Condition-Name": [
-                        "Somatic disorders"
+                        "Somatic disorders",
+                        "CNS"
                       ],
                       "Modifier": [
-                        "central nervous system",
-                        "CNS"
+                        "central nervous system"
                       ]
                     }
                   }
@@ -205,38 +206,45 @@
                       ]
                     },
                     "right": {
-                      "OR": {
+                      "NOT": {
                         "left": {
-                          "raw_text": "or suspected non-compliance,",
-                          "Assertion": [
-                            "suspected"
-                          ],
-                          "Condition": [
-                            "non-compliance"
-                          ],
-                          "Condition-Name": [
-                            "non-compliance"
-                          ]
-                        },
-                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "drug",
-                              "Modifier": [
-                                "drug"
+                              "raw_text": "or suspected non-compliance,",
+                              "Negation": [
+                                "non"
+                              ],
+                              "Assertion": [
+                                "suspected"
+                              ],
+                              "Condition": [
+                                "compliance"
+                              ],
+                              "Condition-Name": [
+                                "compliance"
                               ]
                             },
                             "right": {
-                              "raw_text": "or alcohol abuse",
-                              "Condition-Name": [
-                                "abuse"
-                              ],
-                              "Modifier": [
-                                "alcohol"
-                              ],
-                              "Condition": [
-                                "abuse"
-                              ]
+                              "OR": {
+                                "left": {
+                                  "raw_text": "drug",
+                                  "Modifier": [
+                                    "drug"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or alcohol abuse",
+                                  "Condition-Name": [
+                                    "abuse"
+                                  ],
+                                  "Modifier": [
+                                    "alcohol"
+                                  ],
+                                  "Condition": [
+                                    "abuse"
+                                  ]
+                                }
+                              }
                             }
                           }
                         }
@@ -248,10 +256,10 @@
             },
             "right": {
               "raw_text": "- Metal implants",
-              "Condition": [
+              "Procedure": [
                 "Metal implants"
               ],
-              "Condition-Name": [
+              "Procedure-Name": [
                 "Metal implants"
               ]
             }
@@ -259,23 +267,23 @@
         },
         "right": {
           "raw_text": "- Weight < 42 kg",
-          "Eq-Operator": [
-            "<"
-          ],
-          "Eq-Unit": [
-            "kg"
-          ],
-          "Eq-Value": [
-            "42"
+          "Observation": [
+            "Weight"
           ],
           "Eq-Comparison": [
             "< 42 kg"
           ],
-          "Observation": [
-            "Weight"
-          ],
           "Observation-Name": [
             "Weight"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "42"
+          ],
+          "Eq-Unit": [
+            "kg"
           ]
         }
       }
@@ -296,20 +304,14 @@
         },
         "right": {
           "raw_text": "or very likely to require psychiatric hospitalisation",
-          "Encounter": [
-            "hospitalisation"
-          ],
           "Assertion": [
             "very likely"
           ],
-          "Condition": [
-            "psychiatric"
+          "Procedure": [
+            "psychiatric hospitalisation"
           ],
-          "Condition-Name": [
-            "psychiatric"
-          ],
-          "Eq-Comparison": [
-            "very likely"
+          "Procedure-Name": [
+            "psychiatric hospitalisation"
           ]
         }
       }

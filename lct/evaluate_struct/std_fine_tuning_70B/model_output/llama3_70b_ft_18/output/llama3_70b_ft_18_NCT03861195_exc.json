@@ -128,22 +128,33 @@
               ]
             },
             "right": {
-              "raw_text": "or anatomical criteria that preclude a minimal invasive approach",
-              "Modifier": [
-                "anatomical"
-              ],
-              "Criteria-Count": [
-                "criteria"
-              ],
-              "Procedure": [
-                "minimal invasive approach"
-              ],
-              "Procedure-Name": [
-                "minimal invasive approach"
-              ],
-              "Contraindication": [
-                "preclude"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "or anatomical criteria that",
+                  "Modifier": [
+                    "anatomical"
+                  ],
+                  "Criteria-Count": [
+                    "criteria"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "preclude a minimal invasive approach",
+                      "Procedure": [
+                        "minimal invasive approach"
+                      ],
+                      "Procedure-Name": [
+                        "minimal invasive approach"
+                      ],
+                      "Negation": [
+                        "preclude"
+                      ]
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -151,11 +162,8 @@
     },
     "right": {
       "raw_text": "- inability to understand patient information",
-      "Condition": [
-        "inability to understand"
-      ],
-      "Condition-Name": [
-        "inability to understand"
+      "Negation": [
+        "inability"
       ]
     }
   }

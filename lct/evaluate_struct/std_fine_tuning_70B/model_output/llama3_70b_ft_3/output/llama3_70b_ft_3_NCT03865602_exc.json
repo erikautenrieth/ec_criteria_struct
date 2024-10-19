@@ -39,14 +39,17 @@
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "2."
+                          "raw_text": "2.",
+                          "Eq-Value": [
+                            "2"
+                          ]
                         },
                         "right": {
                           "NOT": {
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "not a North Carolina resident",
+                                  "raw_text": "not a North Carolina Resident",
                                   "Negation": [
                                     "not"
                                   ],
@@ -71,12 +74,11 @@
                                   "Observation-Name": [
                                     "drive time"
                                   ],
+                                  "Location": [
+                                    "hospital"
+                                  ],
                                   "Eq-Temporal-Unit": [
                                     "hour"
-                                  ],
-                                  "Location": [
-                                    "residence",
-                                    "hospital"
                                   ]
                                 }
                               }
@@ -90,10 +92,12 @@
                 "right": {
                   "raw_text": "3. the only antibiotic associated with patient is administered in the operating room as this likely represents pre-operative infection prophylaxis and not presumed infection;",
                   "Procedure": [
-                    "operative"
+                    "operative",
+                    "pre-operative"
                   ],
                   "Procedure-Name": [
-                    "operative"
+                    "operative",
+                    "pre-operative"
                   ],
                   "Drug": [
                     "antibiotic"
@@ -108,7 +112,7 @@
                     "infection"
                   ],
                   "Modifier": [
-                    "pre-operative"
+                    "prophylaxis"
                   ],
                   "Assertion": [
                     "likely"
@@ -150,7 +154,10 @@
                 "likely"
               ],
               "Modifier": [
-                "do not resuscitate"
+                "resuscitate"
+              ],
+              "Negation": [
+                "do not"
               ]
             },
             "right": {
@@ -167,21 +174,27 @@
               "Encounter": [
                 "admission"
               ],
-              "Assertion": [
-                "assumption"
-              ],
-              "Risk": [
-                "risk"
+              "Negation": [
+                "do not"
               ],
               "Procedure": [
+                "intubate",
                 "treatment"
+              ],
+              "Procedure-Name": [
+                "intubate"
               ],
               "Eq-Temporal-Unit": [
                 "hours"
               ],
-              "Modifier": [
-                "do not intubate",
-                "less aggressive"
+              "Risk": [
+                "risk"
+              ],
+              "Polarity": [
+                "increased"
+              ],
+              "Assertion": [
+                "assumption"
               ]
             }
           }
@@ -196,10 +209,13 @@
       "Condition-Name": [
         "infection"
       ],
+      "Location": [
+        "hospital"
+      ],
       "Encounter": [
         "hospitalization"
       ],
-      "Assertion": [
+      "Negation": [
         "ruled out"
       ]
     }

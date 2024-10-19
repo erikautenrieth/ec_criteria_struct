@@ -18,7 +18,10 @@
                           "Eq-Temporal-Period": [
                             "prior"
                           ],
-                          "Study": [
+                          "Procedure": [
+                            "randomization"
+                          ],
+                          "Procedure-Name": [
                             "randomization"
                           ],
                           "Modifier": [
@@ -39,17 +42,14 @@
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "2.",
-                          "Eq-Value": [
-                            "2"
-                          ]
+                          "raw_text": "2."
                         },
                         "right": {
                           "NOT": {
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "not a North Carolina resident",
+                                  "raw_text": "not a North Carolina Resident",
                                   "Negation": [
                                     "not"
                                   ],
@@ -74,11 +74,11 @@
                                   "Observation-Name": [
                                     "drive time"
                                   ],
-                                  "Location": [
-                                    "hospital"
-                                  ],
                                   "Eq-Temporal-Unit": [
                                     "hour"
+                                  ],
+                                  "Location": [
+                                    "hospital"
                                   ]
                                 }
                               }
@@ -92,12 +92,10 @@
                 "right": {
                   "raw_text": "3. the only antibiotic associated with patient is administered in the operating room as this likely represents pre-operative infection prophylaxis and not presumed infection;",
                   "Procedure": [
-                    "operative",
-                    "pre-operative"
+                    "operative"
                   ],
                   "Procedure-Name": [
-                    "operative",
-                    "pre-operative"
+                    "operative"
                   ],
                   "Drug": [
                     "antibiotic"
@@ -112,13 +110,10 @@
                     "infection"
                   ],
                   "Modifier": [
-                    "prophylaxis"
+                    "pre-operative"
                   ],
                   "Assertion": [
                     "likely"
-                  ],
-                  "Negation": [
-                    "not"
                   ]
                 }
               }
@@ -154,13 +149,16 @@
                 "change"
               ],
               "Assertion": [
-                "likely"
+                "do not"
+              ],
+              "Procedure": [
+                "resuscitate"
+              ],
+              "Procedure-Name": [
+                "resuscitate"
               ],
               "Negation": [
                 "not"
-              ],
-              "Modifier": [
-                "resuscitate"
               ]
             },
             "right": {
@@ -178,30 +176,28 @@
                 "admission"
               ],
               "Assertion": [
-                "assumption",
-                "likely"
-              ],
-              "Negation": [
-                "not"
+                "do not",
+                "assumption"
               ],
               "Procedure": [
-                "treatment",
-                "intubate"
-              ],
-              "Modifier": [
-                "aggressive"
-              ],
-              "Eq-Temporal-Unit": [
-                "hours"
+                "intubate",
+                "treatment"
               ],
               "Procedure-Name": [
                 "intubate"
               ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Polarity": [
+                "increased",
+                "less"
+              ],
               "Risk": [
                 "risk"
               ],
-              "Polarity": [
-                "increased"
+              "Negation": [
+                "not"
               ]
             }
           }
@@ -216,14 +212,11 @@
       "Condition-Name": [
         "infection"
       ],
+      "Location": [
+        "hospital"
+      ],
       "Encounter": [
         "hospitalization"
-      ],
-      "Eq-Comparison": [
-        "index"
-      ],
-      "Eq-Temporal-Recency": [
-        "index"
       ],
       "Negation": [
         "ruled out"

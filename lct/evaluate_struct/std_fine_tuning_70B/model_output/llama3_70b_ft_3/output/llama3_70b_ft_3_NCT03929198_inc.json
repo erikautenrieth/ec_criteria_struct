@@ -104,15 +104,15 @@
                                     "<50",
                                     "<40 mg/dL"
                                   ],
+                                  "Eq-Unit": [
+                                    "mg",
+                                    "dL"
+                                  ],
                                   "Observation": [
                                     "HDL"
                                   ],
                                   "Observation-Name": [
                                     "HDL"
-                                  ],
-                                  "Eq-Unit": [
-                                    "mg",
-                                    "dL"
                                   ]
                                 }
                               }
@@ -187,8 +187,7 @@
                         "≥"
                       ],
                       "Eq-Value": [
-                        "5.7",
-                        "5"
+                        "5.7"
                       ],
                       "Eq-Comparison": [
                         "≥5.7%",
@@ -227,9 +226,6 @@
                           "Eq-Temporal-Unit": [
                             "year"
                           ],
-                          "Procedure": [
-                            "treatment"
-                          ],
                           "Negation": [
                             "No"
                           ],
@@ -238,6 +234,9 @@
                           ],
                           "Eq-Temporal-Period": [
                             "past"
+                          ],
+                          "Procedure": [
+                            "treatment"
                           ]
                         }
                       }
@@ -297,31 +296,26 @@
           }
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- Ability to perform daily exercise, including aerobic activity",
-              "Observation": [
-                "daily exercise",
-                "aerobic activity"
-              ],
-              "Observation-Name": [
-                "daily exercise",
-                "aerobic activity"
-              ],
-              "Assertion": [
-                "Ability to"
-              ]
-            },
-            "right": {
-              "raw_text": "and resistance exercise",
-              "Observation": [
-                "resistance exercise"
-              ],
-              "Observation-Name": [
-                "resistance exercise"
-              ]
-            }
-          }
+          "raw_text": "- Ability to perform daily exercise, including aerobic activity and resistance exercise",
+          "Eq-Comparison": [
+            "daily"
+          ],
+          "Eq-Temporal-Unit": [
+            "daily"
+          ],
+          "Observation": [
+            "exercise"
+          ],
+          "Observation-Name": [
+            "exercise"
+          ],
+          "Modifier": [
+            "aerobic activity",
+            "resistance"
+          ],
+          "Assertion": [
+            "Ability to"
+          ]
         }
       }
     },
@@ -338,20 +332,19 @@
                 "year"
               ],
               "Negation": [
-                "Non",
-                "No"
-              ],
-              "Observation": [
-                "smoker"
-              ],
-              "Observation-Name": [
-                "smoker"
+                "Non"
               ],
               "Eq-Comparison": [
                 "past year"
               ],
               "Eq-Temporal-Period": [
                 "past"
+              ],
+              "Observation": [
+                "smoker"
+              ],
+              "Observation-Name": [
+                "smoker"
               ]
             }
           }

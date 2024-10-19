@@ -158,50 +158,39 @@
                   ]
                 },
                 "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "2. antibiotics ordered first, culture ordered within 48 hours (adapted from criteria applied in development of the Third International Consensus Definitions for Sepsis",
-                      "Eq-Comparison": [
-                        "within 48 hours"
-                      ],
-                      "Eq-Operator": [
-                        "within"
-                      ],
-                      "Eq-Value": [
-                        "48"
-                      ],
-                      "Eq-Temporal-Unit": [
-                        "hours"
-                      ],
-                      "Observation": [
-                        "culture"
-                      ],
-                      "Observation-Name": [
-                        "culture"
-                      ],
-                      "Drug": [
-                        "antibiotics"
-                      ],
-                      "Drug-Name": [
-                        "antibiotics"
-                      ],
-                      "Condition": [
-                        "Sepsis"
-                      ],
-                      "Condition-Name": [
-                        "Sepsis"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "and Septic Shock)",
-                      "Condition": [
-                        "Septic Shock"
-                      ],
-                      "Condition-Name": [
-                        "Septic Shock"
-                      ]
-                    }
-                  }
+                  "raw_text": "2. antibiotics ordered first, culture ordered within 48 hours (adapted from criteria applied in development of the Third International Consensus Definitions for Sepsis and Septic Shock)",
+                  "Condition": [
+                    "Sepsis",
+                    "Septic Shock"
+                  ],
+                  "Condition-Name": [
+                    "Sepsis",
+                    "Septic Shock"
+                  ],
+                  "Eq-Comparison": [
+                    "within 48 hours"
+                  ],
+                  "Eq-Operator": [
+                    "within"
+                  ],
+                  "Eq-Value": [
+                    "48"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "hours"
+                  ],
+                  "Observation": [
+                    "culture"
+                  ],
+                  "Observation-Name": [
+                    "culture"
+                  ],
+                  "Drug": [
+                    "antibiotics"
+                  ],
+                  "Drug-Name": [
+                    "antibiotics"
+                  ]
                 }
               }
             }
@@ -226,11 +215,14 @@
               "Encounter": [
                 "readmission"
               ],
-              "Risk": [
+              "Assertion": [
                 "risk"
               ],
               "Polarity": [
                 "high"
+              ],
+              "Eq-Temporal-Unit": [
+                "day"
               ]
             },
             "right": {
@@ -250,7 +242,10 @@
               "Death": [
                 "mortality"
               ],
-              "Risk": [
+              "Eq-Temporal-Unit": [
+                "day"
+              ],
+              "Assertion": [
                 "risk"
               ]
             }
@@ -267,11 +262,14 @@
           "NOT": {
             "left": {
               "raw_text": "not discharged at the time of patient list generation",
+              "Negation": [
+                "not"
+              ],
               "Encounter": [
                 "discharged"
               ],
-              "Negation": [
-                "not"
+              "Assertion": [
+                "patient list generation"
               ]
             }
           }

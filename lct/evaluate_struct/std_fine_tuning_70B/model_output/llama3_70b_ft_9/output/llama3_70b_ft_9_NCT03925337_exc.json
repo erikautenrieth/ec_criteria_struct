@@ -110,21 +110,19 @@
                             "colonoscopy"
                           ],
                           "Modifier": [
-                            "incomplete",
-                            "endoscopists"
+                            "gastrointestinal",
+                            "incomplete"
                           ]
                         },
                         "right": {
                           "NOT": {
                             "left": {
                               "raw_text": "not successfully intubate the cecum due to technical difficulties or poor bowel preparation)",
-                              "Condition": [
-                                "technical difficulties",
-                                "poor bowel preparation"
+                              "Procedure": [
+                                "intubate"
                               ],
-                              "Condition-Name": [
-                                "technical difficulties",
-                                "poor bowel preparation"
+                              "Procedure-Name": [
+                                "intubate"
                               ],
                               "Modifier": [
                                 "cecum"
@@ -132,8 +130,13 @@
                               "Negation": [
                                 "not"
                               ],
-                              "Assertion": [
-                                "successfully intubate"
+                              "Condition": [
+                                "technical difficulties",
+                                "poor bowel preparation"
+                              ],
+                              "Condition-Name": [
+                                "technical difficulties",
+                                "poor bowel preparation"
                               ]
                             }
                           }
@@ -196,6 +199,9 @@
             },
             "right": {
               "raw_text": "- Patients with inflammatory bowel disease",
+              "Eq-Unit": [
+                "mm"
+              ],
               "Condition": [
                 "inflammatory bowel disease"
               ],
@@ -275,12 +281,21 @@
       "Condition-Name": [
         "cancer"
       ],
-      "Assertion": [
-        "referred for"
-      ],
       "Modifier": [
         "early-stage",
         "digestive tract"
+      ],
+      "Observation": [
+        "growths"
+      ],
+      "Observation-Name": [
+        "growths"
+      ],
+      "Condition-Type": [
+        "precancerous"
+      ],
+      "Encounter": [
+        "referred"
       ]
     }
   }

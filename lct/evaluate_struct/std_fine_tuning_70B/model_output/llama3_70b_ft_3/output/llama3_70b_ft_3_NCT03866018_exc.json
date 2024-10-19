@@ -151,24 +151,52 @@
           }
         },
         "right": {
-          "raw_text": "- Subject under guardianship, curatorship or safeguard of justice",
-          "Observation": [
-            "under guardianship"
-          ],
-          "Observation-Name": [
-            "under guardianship"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "- Subject under guardianship,",
+              "Observation": [
+                "under guardianship"
+              ],
+              "Observation-Name": [
+                "under guardianship"
+              ]
+            },
+            "right": {
+              "raw_text": "curatorship or safeguard of justice",
+              "Observation": [
+                "curatorship",
+                "safeguard of justice"
+              ],
+              "Observation-Name": [
+                "curatorship",
+                "safeguard of justice"
+              ]
+            }
+          }
         }
       }
     },
     "right": {
-      "raw_text": "- Persons deprived of their liberty (administrative or judicial)",
-      "Observation": [
-        "deprived of their liberty"
-      ],
-      "Observation-Name": [
-        "deprived of their liberty"
-      ]
+      "OR": {
+        "left": {
+          "raw_text": "- Persons deprived of their liberty (administrative",
+          "Observation": [
+            "deprived of their liberty"
+          ],
+          "Observation-Name": [
+            "deprived of their liberty"
+          ],
+          "Modifier": [
+            "administrative"
+          ]
+        },
+        "right": {
+          "raw_text": "or judicial)",
+          "Modifier": [
+            "judicial"
+          ]
+        }
+      }
     }
   }
 }

@@ -18,20 +18,20 @@
                                   "AND": {
                                     "left": {
                                       "raw_text": "- Patients younger than 18 years old.",
-                                      "Eq-Comparison": [
-                                        "younger than 18 years"
-                                      ],
                                       "Eq-Operator": [
                                         "younger than"
-                                      ],
-                                      "Eq-Value": [
-                                        "18"
                                       ],
                                       "Eq-Temporal-Unit": [
                                         "years"
                                       ],
                                       "Age": [
                                         "old"
+                                      ],
+                                      "Eq-Value": [
+                                        "18"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "younger than 18 years"
                                       ]
                                     },
                                     "right": {
@@ -39,11 +39,11 @@
                                       "Observation": [
                                         "ASA"
                                       ],
-                                      "Eq-Comparison": [
-                                        ">3"
-                                      ],
                                       "Observation-Name": [
                                         "ASA"
+                                      ],
+                                      "Eq-Comparison": [
+                                        ">3"
                                       ],
                                       "Eq-Operator": [
                                         ">"
@@ -67,17 +67,17 @@
                                     },
                                     "right": {
                                       "raw_text": "or high risk of infection.",
-                                      "Risk": [
-                                        "risk"
-                                      ],
                                       "Condition": [
                                         "infection"
                                       ],
-                                      "Polarity": [
-                                        "high"
-                                      ],
                                       "Condition-Name": [
                                         "infection"
+                                      ],
+                                      "Risk": [
+                                        "risk"
+                                      ],
+                                      "Polarity": [
+                                        "high"
                                       ]
                                     }
                                   }
@@ -89,23 +89,17 @@
                               "Procedure": [
                                 "spinal anesthesia"
                               ],
-                              "Eq-Comparison": [
-                                "receiving"
+                              "Procedure-Name": [
+                                "spinal anesthesia"
+                              ],
+                              "Contraindication": [
+                                "Contraindications"
                               ],
                               "Condition": [
                                 "coagulation impairment"
                               ],
-                              "Procedure-Name": [
-                                "spinal anesthesia"
-                              ],
-                              "Eq-Temporal-Period": [
-                                "receiving"
-                              ],
                               "Condition-Name": [
                                 "coagulation impairment"
-                              ],
-                              "Contraindication": [
-                                "Contraindications"
                               ]
                             }
                           }
@@ -126,17 +120,20 @@
                       "Observation": [
                         "pain"
                       ],
-                      "Eq-Comparison": [
-                        "preexisting"
-                      ],
                       "Observation-Name": [
                         "pain"
                       ],
-                      "Eq-Temporal-Period": [
+                      "Condition": [
+                        "back pain"
+                      ],
+                      "Condition-Name": [
+                        "back pain"
+                      ],
+                      "Eq-Comparison": [
                         "preexisting"
                       ],
-                      "Modifier": [
-                        "back"
+                      "Eq-Temporal-Period": [
+                        "preexisting"
                       ]
                     }
                   }
@@ -172,11 +169,11 @@
                     "analgesics",
                     "medication"
                   ],
-                  "Study": [
-                    "study"
-                  ],
                   "Drug-Name": [
                     "analgesics"
+                  ],
+                  "Study": [
+                    "study"
                   ]
                 }
               }
@@ -191,12 +188,6 @@
           "Drug-Name": [
             "opioid"
           ],
-          "Eq-Comparison": [
-            "regular"
-          ],
-          "Eq-Temporal-Unit": [
-            "regular"
-          ],
           "Acuteness": [
             "chronic"
           ]
@@ -205,20 +196,20 @@
     },
     "right": {
       "raw_text": "- Presence of preexisting neurological symptoms.",
-      "Eq-Comparison": [
-        "preexisting"
-      ],
       "Condition": [
+        "neurological"
+      ],
+      "Condition-Name": [
         "neurological"
       ],
       "Assertion": [
         "symptoms"
       ],
-      "Eq-Temporal-Period": [
+      "Eq-Comparison": [
         "preexisting"
       ],
-      "Condition-Name": [
-        "neurological"
+      "Eq-Temporal-Period": [
+        "preexisting"
       ]
     }
   }

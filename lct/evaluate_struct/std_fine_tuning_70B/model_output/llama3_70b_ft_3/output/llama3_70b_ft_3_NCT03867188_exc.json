@@ -89,8 +89,9 @@
                                     "Liver Metabolism Disorders"
                                   ],
                                   "Modifier": [
+                                    "renal",
                                     "kidneys",
-                                    "Renal"
+                                    "Liver"
                                   ],
                                   "Drug": [
                                     "EXPAREL"
@@ -99,13 +100,10 @@
                                     "EXPAREL"
                                   ],
                                   "Stability": [
-                                    "cleared"
+                                    "lead to"
                                   ],
                                   "Assertion": [
                                     "could"
-                                  ],
-                                  "Eq-Temporal-Unit": [
-                                    "h"
                                   ]
                                 }
                               }
@@ -121,25 +119,27 @@
                     "left": {
                       "raw_text": "- Medical condition(s)",
                       "Condition": [
-                        "Medical condition(s"
+                        "Medical condition(s)"
                       ]
                     },
                     "right": {
                       "raw_text": "or concurrent surgery that may have required analgesic treatment in the postoperative period for pain that was not strictly related to the study surgery.",
-                      "Eq-Assertion": [
-                        "may have"
-                      ],
                       "Procedure": [
                         "surgery",
                         "operative",
                         "treatment"
                       ],
                       "Procedure-Name": [
-                        "surgery",
-                        "operative"
+                        "surgery"
                       ],
                       "Modifier": [
                         "concurrent"
+                      ],
+                      "Assertion": [
+                        "may have"
+                      ],
+                      "Study": [
+                        "study"
                       ],
                       "Drug": [
                         "analgesic"
@@ -152,12 +152,6 @@
                       ],
                       "Observation-Name": [
                         "pain"
-                      ],
-                      "Study": [
-                        "study"
-                      ],
-                      "Eq-Temporal-Unit": [
-                        "h"
                       ]
                     }
                   }
@@ -181,52 +175,44 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "or condition",
+                      "raw_text": "or condition discovered during surgery that may have complicated the patient's post surgical course such as vascular",
+                      "Procedure": [
+                        "surgery",
+                        "operative"
+                      ],
+                      "Procedure-Name": [
+                        "surgery"
+                      ],
                       "Condition": [
                         "condition"
+                      ],
+                      "Assertion": [
+                        "may have"
+                      ],
+                      "Modifier": [
+                        "vascular"
+                      ],
+                      "Stability": [
+                        "complicated"
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "discovered during surgery that may have complicated the patient's post surgical course such as vascular",
-                          "Procedure": [
-                            "surgery",
-                            "surgical"
-                          ],
-                          "Procedure-Name": [
-                            "surgery",
-                            "surgical"
-                          ],
-                          "Assertion": [
-                            "may have"
-                          ],
-                          "Modifier": [
-                            "vascular"
-                          ],
-                          "Stability": [
-                            "complicated"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or nerve involvement that was unknown before surgery.",
-                          "Procedure": [
-                            "surgery"
-                          ],
-                          "Procedure-Name": [
-                            "surgery"
-                          ],
-                          "Condition": [
-                            "nerve involvement"
-                          ],
-                          "Condition-Name": [
-                            "nerve involvement"
-                          ],
-                          "Modifier": [
-                            "unknown"
-                          ]
-                        }
-                      }
+                      "raw_text": "or nerve involvement that was unknown before surgery.",
+                      "Procedure": [
+                        "surgery"
+                      ],
+                      "Procedure-Name": [
+                        "surgery"
+                      ],
+                      "Condition": [
+                        "nerve involvement"
+                      ],
+                      "Condition-Name": [
+                        "nerve involvement"
+                      ],
+                      "Modifier": [
+                        "unknown"
+                      ]
                     }
                   }
                 }
@@ -250,10 +236,6 @@
           ],
           "Drug-Name": [
             "liposomal bupivacaine"
-          ],
-          "Modifier": [
-            "chemical",
-            "biologic"
           ]
         }
       }
@@ -262,14 +244,14 @@
       "AND": {
         "left": {
           "raw_text": "- Pregnant women",
+          "Life-Stage-And-Gender": [
+            "women"
+          ],
           "Condition": [
             "Pregnant"
           ],
           "Condition-Name": [
             "Pregnant"
-          ],
-          "Life-Stage-And-Gender": [
-            "women"
           ]
         },
         "right": {
@@ -288,10 +270,7 @@
               "Assertion": [
                 "potential for"
               ],
-              "Condition": [
-                "teratogenic"
-              ],
-              "Condition-Name": [
+              "Modifier": [
                 "teratogenic"
               ]
             },
@@ -306,43 +285,31 @@
                     "EXPAREL"
                   ],
                   "Assertion": [
-                    "potential risk",
-                    "potential"
+                    "potential",
+                    "risk"
+                  ],
+                  "Observation": [
+                    "adverse events"
+                  ],
+                  "Observation-Name": [
+                    "adverse events"
+                  ],
+                  "Modifier": [
+                    "abortifacient",
+                    "unknown"
                   ],
                   "Condition": [
-                    "abortifacient effects",
-                    "adverse events"
+                    "nursing"
                   ],
                   "Condition-Name": [
-                    "abortifacient effects",
-                    "adverse events"
+                    "nursing"
                   ],
-                  "Life-Stage-And-Gender": [
+                  "Family-Member": [
                     "infants",
                     "mother"
                   ],
                   "Procedure": [
                     "treatment"
-                  ],
-                  "Eq-Temporal-Unit": [
-                    "h"
-                  ]
-                },
-                "right": {
-                  "raw_text": "and / or HIV. Illness, [OR] or injury.",
-                  "Condition": [
-                    "HIV",
-                    "Illness"
-                  ],
-                  "Condition-Name": [
-                    "HIV",
-                    "Illness"
-                  ],
-                  "Observation": [
-                    "injury"
-                  ],
-                  "Observation-Name": [
-                    "injury"
                   ]
                 }
               }

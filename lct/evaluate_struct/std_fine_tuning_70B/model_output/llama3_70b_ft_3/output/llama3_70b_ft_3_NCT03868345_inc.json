@@ -111,42 +111,22 @@
                       }
                     },
                     "right": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "5. willingness",
-                          "Assertion": [
-                            "willingness"
-                          ]
-                        },
-                        "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "and medical ability to comply with scheduled visits",
-                              "Encounter": [
-                                "visits"
-                              ],
-                              "Eq-Comparison": [
-                                "scheduled"
-                              ],
-                              "Assertion": [
-                                "ability to"
-                              ],
-                              "Eq-Temporal-Period": [
-                                "scheduled"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "and study procedures,",
-                              "Study": [
-                                "study"
-                              ],
-                              "Procedure": [
-                                "procedures"
-                              ]
-                            }
-                          }
-                        }
-                      }
+                      "raw_text": "5. willingness and medical ability to comply with scheduled visits and study procedures,",
+                      "Assertion": [
+                        "willingness and medical ability"
+                      ],
+                      "Study": [
+                        "study"
+                      ],
+                      "Eq-Comparison": [
+                        "scheduled"
+                      ],
+                      "Procedure": [
+                        "procedures"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "scheduled"
+                      ]
                     }
                   }
                 },
@@ -154,9 +134,6 @@
                   "raw_text": "6. ability to understand the purpose and risks of the study and provide signed and dated informed consent and authorization to use protected health information (PHI) in accordance with national and local subject privacy regulations,",
                   "Study": [
                     "study"
-                  ],
-                  "Assertion": [
-                    "ability to"
                   ]
                 }
               }
@@ -183,15 +160,15 @@
             "right": {
               "NOT": {
                 "left": {
-                  "raw_text": "NO noted symptoms of frontotemporal cognitive dysfunction, and",
-                  "Condition": [
-                    "frontotemporal cognitive dysfunction"
+                  "raw_text": "NO noted symptoms of frontotemporal cognitive dysfunction,",
+                  "Negation": [
+                    "NO"
                   ],
                   "Assertion": [
                     "symptoms"
                   ],
-                  "Negation": [
-                    "NO"
+                  "Condition": [
+                    "frontotemporal cognitive dysfunction"
                   ],
                   "Condition-Name": [
                     "frontotemporal cognitive dysfunction"
@@ -204,25 +181,35 @@
       }
     },
     "right": {
-      "raw_text": "9. for the 25 participants in Group 2, MUST have cognitive symptoms as noted either by themselves or a caregiver.",
-      "Assertion": [
-        "symptoms"
-      ],
-      "Eq-Comparison": [
-        "25"
-      ],
-      "Condition": [
-        "cognitive"
-      ],
-      "Modifier": [
-        "caregiver"
-      ],
-      "Eq-Value": [
-        "25"
-      ],
-      "Condition-Name": [
-        "cognitive"
-      ]
+      "OR": {
+        "left": {
+          "raw_text": "9. for the 25 participants in Group 2, MUST have cognitive symptoms as noted either by themselves",
+          "Eq-Comparison": [
+            "25"
+          ],
+          "Assertion": [
+            "symptoms"
+          ],
+          "Condition": [
+            "cognitive"
+          ],
+          "Modifier": [
+            "themselves"
+          ],
+          "Eq-Value": [
+            "25"
+          ],
+          "Condition-Name": [
+            "cognitive"
+          ]
+        },
+        "right": {
+          "raw_text": "or a caregiver.",
+          "Modifier": [
+            "caregiver"
+          ]
+        }
+      }
     }
   }
 }

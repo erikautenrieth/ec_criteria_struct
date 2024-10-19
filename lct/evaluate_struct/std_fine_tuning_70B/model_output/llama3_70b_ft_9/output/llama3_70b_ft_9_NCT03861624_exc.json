@@ -102,11 +102,11 @@
                             "spinal cord",
                             "lower extremity"
                           ],
-                          "Severity": [
-                            "severe"
-                          ],
                           "Condition": [
                             "paresis"
+                          ],
+                          "Severity": [
+                            "severe"
                           ],
                           "Observation-Name": [
                             "injury"
@@ -132,18 +132,14 @@
                   "OR": {
                     "left": {
                       "raw_text": "6. Sustained severe burns (>10% total body surface area (TBSA)",
+                      "Eq-Comparison": [
+                        ">10%"
+                      ],
                       "Severity": [
                         "severe"
                       ],
                       "Condition": [
                         "burns"
-                      ],
-                      "Eq-Comparison": [
-                        ">10%"
-                      ],
-                      "Observation": [
-                        "total body surface area",
-                        "TBSA"
                       ],
                       "Eq-Operator": [
                         ">"
@@ -151,26 +147,21 @@
                       "Eq-Value": [
                         "10"
                       ],
+                      "Eq-Unit": [
+                        "%",
+                        "TBSA",
+                        "total body surface area"
+                      ],
                       "Condition-Name": [
                         "burns"
-                      ],
-                      "Observation-Name": [
-                        "total body surface area",
-                        "TBSA"
-                      ],
-                      "Eq-Unit": [
-                        "%"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "or >5% TBSA with full thickness",
+                          "raw_text": "or >5% TBSA",
                           "Eq-Comparison": [
                             ">5%"
-                          ],
-                          "Observation": [
-                            "TBSA"
                           ],
                           "Eq-Operator": [
                             ">"
@@ -179,26 +170,31 @@
                             "5"
                           ],
                           "Eq-Unit": [
-                            "%"
-                          ],
-                          "Observation-Name": [
+                            "%",
                             "TBSA"
-                          ],
-                          "Modifier": [
-                            "full thickness"
                           ]
                         },
                         "right": {
-                          "raw_text": "or circumferential injury)",
-                          "Observation": [
-                            "injury"
-                          ],
-                          "Modifier": [
-                            "circumferential"
-                          ],
-                          "Observation-Name": [
-                            "injury"
-                          ]
+                          "OR": {
+                            "left": {
+                              "raw_text": "with full thickness",
+                              "Modifier": [
+                                "full thickness"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or circumferential injury)",
+                              "Observation": [
+                                "injury"
+                              ],
+                              "Modifier": [
+                                "circumferential"
+                              ],
+                              "Observation-Name": [
+                                "injury"
+                              ]
+                            }
+                          }
                         }
                       }
                     }
@@ -208,11 +204,11 @@
             },
             "right": {
               "raw_text": "7. Prior ipsilateral leg injury requiring surgery",
-              "Observation": [
-                "injury"
-              ],
               "Eq-Comparison": [
                 "Prior"
+              ],
+              "Observation": [
+                "injury"
               ],
               "Assertion": [
                 "requiring"
@@ -298,6 +294,9 @@
               ],
               "Encounter": [
                 "visits"
+              ],
+              "Modifier": [
+                "follow-up"
               ]
             }
           }

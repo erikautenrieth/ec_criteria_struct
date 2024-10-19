@@ -1,51 +1,62 @@
 {
   "AND": {
     "left": {
-      "raw_text": "- Unwillingness to give informed consent"
+      "raw_text": "- Unwillingness to give informed consent",
+      "Eq-Operator": [
+        "-"
+      ]
     },
     "right": {
       "AND": {
         "left": {
-          "raw_text": "-"
+          "raw_text": "-",
+          "Eq-Operator": [
+            "-"
+          ]
         },
         "right": {
           "NOT": {
             "left": {
-              "raw_text": "Not enough kidney tissue to confirm a diagnosis (adequate tissue: more than 2 cores of kidney tissues (10 x 1.2 mm) including over 10-15 glomerulus each)",
-              "Eq-Unit": [
-                "mm",
-                "cores"
-              ],
-              "Eq-Value": [
-                "2",
-                "10",
-                "15",
-                "1.2"
-              ],
-              "Condition": [
-                "kidney tissue"
-              ],
-              "Condition-Name": [
-                "kidney tissue"
-              ],
-              "Eq-Comparison": [
-                "more than 2 cores",
-                "10 x 1.2 mm",
-                "10-15"
-              ],
-              "Eq-Operator": [
-                "more than",
-                "-"
-              ],
-              "Observation-Name": [
-                "glomerulus"
-              ],
-              "Observation": [
-                "glomerulus"
-              ],
-              "Negation": [
-                "Not"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "Not enough kidney tissue to confirm a diagnosis (adequate tissue: more than 2 cores of kidney tissues (10 x 1.2 mm) including over 10-15 glomerulus each)",
+                  "Eq-Operator": [
+                    "-",
+                    "more than"
+                  ],
+                  "Eq-Value": [
+                    "2",
+                    "10",
+                    "15",
+                    "1.2"
+                  ],
+                  "Eq-Comparison": [
+                    "more than 2",
+                    "10-15"
+                  ],
+                  "Observation-Name": [
+                    "kidney tissue",
+                    "glomerulus"
+                  ],
+                  "Observation": [
+                    "kidney tissue",
+                    "glomerulus"
+                  ],
+                  "Eq-Unit": [
+                    "mm",
+                    "cores"
+                  ],
+                  "Negation": [
+                    "Not"
+                  ]
+                },
+                "right": {
+                  "raw_text": "each)",
+                  "Eq-Operator": [
+                    "-"
+                  ]
+                }
+              }
             }
           }
         }

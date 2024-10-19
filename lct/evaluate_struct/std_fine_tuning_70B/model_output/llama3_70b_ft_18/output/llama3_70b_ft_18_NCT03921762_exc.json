@@ -183,14 +183,17 @@
                     },
                     "right": {
                       "raw_text": "- Extremely shallow anterior chamber",
-                      "Condition": [
-                        "shallow anterior chamber"
-                      ],
-                      "Condition-Name": [
-                        "shallow anterior chamber"
+                      "Modifier": [
+                        "anterior chamber"
                       ],
                       "Severity": [
                         "Extremely"
+                      ],
+                      "Condition": [
+                        "shallow"
+                      ],
+                      "Condition-Name": [
+                        "shallow"
                       ]
                     }
                   }
@@ -207,23 +210,29 @@
                       "OR": {
                         "left": {
                           "raw_text": "or zonular abnormalities that may affect postoperative centration",
-                          "Condition": [
-                            "abnormalities"
-                          ],
-                          "Condition-Name": [
-                            "abnormalities"
-                          ],
                           "Modifier": [
                             "zonular"
                           ],
-                          "Procedure": [
-                            "operative"
+                          "Condition": [
+                            "abnormalities"
                           ],
                           "Assertion": [
                             "may"
                           ],
+                          "Procedure": [
+                            "operative"
+                          ],
                           "Stability": [
                             "affect"
+                          ],
+                          "Condition-Name": [
+                            "abnormalities"
+                          ],
+                          "Procedure-Name": [
+                            "operative"
+                          ],
+                          "Modifier": [
+                            "centration"
                           ]
                         },
                         "right": {
@@ -233,12 +242,12 @@
                               "Condition": [
                                 "pseudoexfoliation syndrome"
                               ],
-                              "Condition-Name": [
-                                "pseudoexfoliation syndrome"
-                              ],
                               "Modifier": [
                                 "lens",
                                 "tilt"
+                              ],
+                              "Condition-Name": [
+                                "pseudoexfoliation syndrome"
                               ]
                             },
                             "right": {
@@ -288,56 +297,50 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "tonic pupils,",
+                      "raw_text": "tonic pupils, abnormally shaped pupils",
                       "Condition": [
-                        "tonic pupils"
+                        "tonic pupils",
+                        "pupils"
                       ],
                       "Condition-Name": [
-                        "tonic pupils"
+                        "tonic pupils",
+                        "pupils"
+                      ],
+                      "Modifier": [
+                        "abnormally shaped"
                       ]
                     },
                     "right": {
-                      "OR": {
+                      "AND": {
                         "left": {
-                          "raw_text": "abnormally shaped pupils",
+                          "raw_text": "or pupils that do",
                           "Condition": [
-                            "abnormally shaped pupils"
+                            "pupils"
                           ],
                           "Condition-Name": [
-                            "abnormally shaped pupils"
+                            "pupils"
                           ]
                         },
                         "right": {
-                          "AND": {
+                          "NOT": {
                             "left": {
-                              "raw_text": "or pupils that do",
-                              "Condition": [
-                                "pupils"
+                              "raw_text": "not dilate under mesopic/ scotopic conditions)",
+                              "Modifier": [
+                                "mesopic",
+                                "scotopic"
                               ],
-                              "Condition-Name": [
-                                "pupils"
+                              "Negation": [
+                                "not"
+                              ],
+                              "Condition": [
+                                "conditions"
+                              ],
+                              "Observation": [
+                                "dilate"
+                              ],
+                              "Observation-Name": [
+                                "dilate"
                               ]
-                            },
-                            "right": {
-                              "NOT": {
-                                "left": {
-                                  "raw_text": "not dilate under mesopic/ scotopic conditions)",
-                                  "Negation": [
-                                    "not"
-                                  ],
-                                  "Condition": [
-                                    "mesopic",
-                                    "scotopic conditions"
-                                  ],
-                                  "Condition-Name": [
-                                    "mesopic",
-                                    "scotopic conditions"
-                                  ],
-                                  "Assertion": [
-                                    "dilate"
-                                  ]
-                                }
-                              }
                             }
                           }
                         }
@@ -351,11 +354,9 @@
         },
         "right": {
           "raw_text": "- Instability to place the intraocular lens safely at the location planned",
-          "Procedure": [
-            "intraocular lens"
-          ],
-          "Procedure-Name": [
-            "intraocular lens"
+          "Modifier": [
+            "intraocular",
+            "lens"
           ],
           "Assertion": [
             "planned"
@@ -371,17 +372,17 @@
       "Condition": [
         "Pregnancy"
       ],
-      "Condition-Name": [
-        "Pregnancy"
-      ],
       "Observation": [
-        "pregnancy test"
-      ],
-      "Observation-Name": [
         "pregnancy test"
       ],
       "Procedure": [
         "operatively"
+      ],
+      "Condition-Name": [
+        "Pregnancy"
+      ],
+      "Observation-Name": [
+        "pregnancy test"
       ],
       "Life-Stage-And-Gender": [
         "women",

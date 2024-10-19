@@ -119,16 +119,13 @@
                                     },
                                     "right": {
                                       "raw_text": "- The patient is allergic to latex bandages.",
+                                      "Allergy": [
+                                        "allergic"
+                                      ],
                                       "Condition": [
-                                        "allergic"
-                                      ],
-                                      "Condition-Name": [
-                                        "allergic"
-                                      ],
-                                      "Procedure": [
                                         "latex bandages"
                                       ],
-                                      "Procedure-Name": [
+                                      "Condition-Name": [
                                         "latex bandages"
                                       ]
                                     }
@@ -138,10 +135,10 @@
                                   "OR": {
                                     "left": {
                                       "raw_text": "- The subject has contralateral amputation,",
-                                      "Procedure": [
+                                      "Condition": [
                                         "contralateral amputation"
                                       ],
-                                      "Procedure-Name": [
+                                      "Condition-Name": [
                                         "contralateral amputation"
                                       ]
                                     },
@@ -197,18 +194,25 @@
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "or deep or detected by postoperative Doppler).",
-                                                      "Modifier": [
-                                                        "deep"
-                                                      ],
-                                                      "Procedure": [
-                                                        "operative",
-                                                        "Doppler"
-                                                      ],
-                                                      "Procedure-Name": [
-                                                        "Doppler",
-                                                        "operative"
-                                                      ]
+                                                      "OR": {
+                                                        "left": {
+                                                          "raw_text": "or deep",
+                                                          "Modifier": [
+                                                            "deep"
+                                                          ]
+                                                        },
+                                                        "right": {
+                                                          "raw_text": "or detected by postoperative Doppler).",
+                                                          "Procedure": [
+                                                            "operative",
+                                                            "Doppler"
+                                                          ],
+                                                          "Procedure-Name": [
+                                                            "Doppler",
+                                                            "operative"
+                                                          ]
+                                                        }
+                                                      }
                                                     }
                                                   }
                                                 }
@@ -251,14 +255,14 @@
                                       "OR": {
                                         "left": {
                                           "raw_text": "or any cause that hinders normal rehabilitation",
-                                          "Procedure": [
-                                            "rehabilitation"
-                                          ],
-                                          "Procedure-Name": [
-                                            "rehabilitation"
-                                          ],
                                           "Condition": [
                                             "cause"
+                                          ],
+                                          "Observation": [
+                                            "rehabilitation"
+                                          ],
+                                          "Observation-Name": [
+                                            "rehabilitation"
                                           ],
                                           "Polarity": [
                                             "normal"
@@ -402,7 +406,4 @@
                         "cerebellar syndrome"
                       ]
                     },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text
+                    "

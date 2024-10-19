@@ -133,52 +133,35 @@
           }
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "- According to RECIST1.1 criteria, there is at least 1 measurable lesion that has",
-              "Eq-Comparison": [
-                "at least 1"
-              ],
-              "Observation": [
-                "lesion"
-              ],
-              "Eq-Operator": [
-                "-",
-                "at least"
-              ],
-              "Eq-Value": [
-                "1"
-              ],
-              "Observation-Name": [
-                "lesion"
-              ],
-              "Modifier": [
-                "measurable"
-              ]
-            },
-            "right": {
-              "NOT": {
-                "left": {
-                  "raw_text": "not been previously irradiated.",
-                  "Eq-Comparison": [
-                    "previously"
-                  ],
-                  "Procedure": [
-                    "irradiated"
-                  ],
-                  "Eq-Temporal-Period": [
-                    "previously"
-                  ],
-                  "Procedure-Name": [
-                    "irradiated"
-                  ],
-                  "Negation": [
-                    "not"
-                  ]
-                }
-              }
-            }
-          }
+          "raw_text": "- According to RECIST1.1 criteria, there is at least 1 measurable lesion that has not been previously irradiated.",
+          "Eq-Comparison": [
+            "at least 1"
+          ],
+          "Observation": [
+            "lesion"
+          ],
+          "Eq-Operator": [
+            "-",
+            "at least"
+          ],
+          "Eq-Value": [
+            "1"
+          ],
+          "Observation-Name": [
+            "lesion"
+          ],
+          "Modifier": [
+            "measurable"
+          ],
+          "Procedure": [
+            "irradiated"
+          ],
+          "Procedure-Name": [
+            "irradiated"
+          ],
+          "Eq-Temporal-Period": [
+            "previously"
+          ]
         }
       }
     },
@@ -189,12 +172,15 @@
           "Procedure": [
             "EGFR-TKI therapy"
           ],
-          "Eq-Comparison": [
-            "one of two"
-          ],
           "Condition": [
             "tumor",
             "EGFR mutations"
+          ],
+          "Eq-Comparison": [
+            "one of two"
+          ],
+          "Polarity": [
+            "positive"
           ],
           "Study": [
             "enrollment"
@@ -205,19 +191,13 @@
           "Procedure-Name": [
             "EGFR-TKI therapy"
           ],
-          "Eq-Value": [
-            "one",
-            "two"
-          ],
           "Condition-Name": [
             "tumor",
             "EGFR mutations"
           ],
-          "Polarity": [
-            "positive"
-          ],
-          "Assertion": [
-            "sensitive"
+          "Eq-Value": [
+            "one",
+            "two"
           ]
         },
         "right": {
@@ -232,20 +212,20 @@
                   "Condition": [
                     "EGFR mutation"
                   ],
-                  "Negation": [
-                    "not"
-                  ],
                   "Other": [
                     "other"
                   ],
-                  "Exception": [
-                    "exception"
+                  "Negation": [
+                    "not"
                   ],
                   "Condition-Name": [
                     "EGFR mutation"
                   ],
                   "Modifier": [
                     "exon 20 insertion"
+                  ],
+                  "Exception": [
+                    "exception"
                   ]
                 }
               }

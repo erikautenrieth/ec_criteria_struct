@@ -115,19 +115,19 @@
                               "Condition": [
                                 "radiation pneumonia"
                               ],
-                              "Assertion": [
-                                "requiring"
+                              "Condition-Name": [
+                                "radiation pneumonia"
                               ],
                               "Procedure": [
                                 "hormonal therapy",
                                 "therapy"
                               ],
-                              "Condition-Name": [
-                                "radiation pneumonia"
-                              ],
                               "Procedure-Name": [
                                 "hormonal therapy",
                                 "therapy"
+                              ],
+                              "Assertion": [
+                                "requiring"
                               ]
                             },
                             "right": {
@@ -135,11 +135,11 @@
                               "Condition": [
                                 "interstitial lung disease"
                               ],
-                              "Eq-Comparison": [
-                                "active"
-                              ],
                               "Condition-Name": [
                                 "interstitial lung disease"
+                              ],
+                              "Eq-Comparison": [
+                                "active"
                               ],
                               "Eq-Temporal-Period": [
                                 "active"
@@ -157,19 +157,19 @@
               "OR": {
                 "left": {
                   "raw_text": "- Known active infections such as hepatitis B,",
-                  "Eq-Comparison": [
-                    "active"
-                  ],
                   "Condition": [
                     "infections",
                     "hepatitis B"
                   ],
-                  "Eq-Temporal-Period": [
-                    "active"
-                  ],
                   "Condition-Name": [
                     "infections",
                     "hepatitis B"
+                  ],
+                  "Eq-Comparison": [
+                    "active"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "active"
                   ],
                   "Eq-Operator": [
                     "-"
@@ -207,15 +207,13 @@
               "raw_text": "- Local radiation therapy is carried out within 1 week; more than 30% bone marrow radiation therapy",
               "Procedure": [
                 "radiation therapy",
-                "bone marrow radiation therapy"
-              ],
-              "Eq-Comparison": [
-                "within 1 week",
-                "more than 30%"
+                "bone marrow radiation therapy",
+                "therapy"
               ],
               "Procedure-Name": [
                 "radiation therapy",
-                "bone marrow radiation therapy"
+                "bone marrow radiation therapy",
+                "therapy"
               ],
               "Eq-Operator": [
                 "within",
@@ -223,8 +221,13 @@
                 "-"
               ],
               "Eq-Value": [
-                "1",
-                "30"
+                "30",
+                "0",
+                "1"
+              ],
+              "Eq-Comparison": [
+                "within 1 week",
+                "more than 30%"
               ],
               "Eq-Temporal-Unit": [
                 "week"
@@ -239,19 +242,21 @@
             "right": {
               "raw_text": "or extensive radiation therapy is performed within 4 weeks.",
               "Procedure": [
-                "radiation therapy"
-              ],
-              "Eq-Comparison": [
-                "within 4 weeks"
+                "radiation therapy",
+                "therapy"
               ],
               "Procedure-Name": [
-                "radiation therapy"
+                "radiation therapy",
+                "therapy"
               ],
               "Eq-Operator": [
                 "within"
               ],
               "Eq-Temporal-Unit": [
                 "weeks"
+              ],
+              "Eq-Comparison": [
+                "within 4 weeks"
               ],
               "Eq-Value": [
                 "4"
@@ -268,10 +273,10 @@
       "OR": {
         "left": {
           "raw_text": "- ≤ 4 weeks from major surgery",
-          "Eq-Comparison": [
-            "≤ 4 weeks"
-          ],
           "Procedure": [
+            "surgery"
+          ],
+          "Procedure-Name": [
             "surgery"
           ],
           "Eq-Operator": [
@@ -281,22 +286,22 @@
           "Eq-Temporal-Unit": [
             "weeks"
           ],
+          "Eq-Comparison": [
+            "≤ 4 weeks"
+          ],
           "Eq-Value": [
             "4"
           ],
-          "Procedure-Name": [
-            "surgery"
-          ],
-          "Modifier": [
+          "Severity": [
             "major"
           ]
         },
         "right": {
           "raw_text": "or ≤ 2 weeks from minor surgery.",
-          "Eq-Comparison": [
-            "≤ 2 weeks"
-          ],
           "Procedure": [
+            "surgery"
+          ],
+          "Procedure-Name": [
             "surgery"
           ],
           "Eq-Operator": [
@@ -305,13 +310,13 @@
           "Eq-Temporal-Unit": [
             "weeks"
           ],
+          "Eq-Comparison": [
+            "≤ 2 weeks"
+          ],
           "Eq-Value": [
             "2"
           ],
-          "Procedure-Name": [
-            "surgery"
-          ],
-          "Modifier": [
+          "Severity": [
             "minor"
           ]
         }

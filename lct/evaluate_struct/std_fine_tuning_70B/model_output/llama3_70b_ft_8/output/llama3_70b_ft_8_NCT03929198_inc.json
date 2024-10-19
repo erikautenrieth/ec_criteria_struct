@@ -104,15 +104,15 @@
                                     "<50",
                                     "<40 mg/dL"
                                   ],
-                                  "Eq-Unit": [
-                                    "mg",
-                                    "dL"
-                                  ],
                                   "Observation": [
                                     "HDL"
                                   ],
                                   "Observation-Name": [
                                     "HDL"
+                                  ],
+                                  "Eq-Unit": [
+                                    "mg",
+                                    "dL"
                                   ]
                                 }
                               }
@@ -130,7 +130,8 @@
                                 "mmHg"
                               ],
                               "Eq-Value": [
-                                "130"
+                                "130",
+                                "3"
                               ],
                               "Eq-Comparison": [
                                 "≥130 mmHg"
@@ -183,13 +184,16 @@
                     "right": {
                       "raw_text": "- HbA1c ≥5.7% or higher",
                       "Eq-Operator": [
-                        "≥"
+                        "≥",
+                        "or higher"
                       ],
                       "Eq-Value": [
-                        "5.7"
+                        "5.7",
+                        "5"
                       ],
                       "Eq-Comparison": [
-                        "≥5.7%"
+                        "≥5.7%",
+                        "or higher"
                       ],
                       "Observation": [
                         "HbA1c"
@@ -219,7 +223,8 @@
                             "cancer"
                           ],
                           "Eq-Temporal-Period": [
-                            "past"
+                            "past",
+                            "year"
                           ],
                           "Procedure": [
                             "treatment"
@@ -229,9 +234,6 @@
                           ],
                           "Eq-Comparison": [
                             "past year"
-                          ],
-                          "Eq-Temporal-Unit": [
-                            "year"
                           ]
                         }
                       }
@@ -266,20 +268,18 @@
                         },
                         "right": {
                           "raw_text": "or dementia in the past year",
+                          "Eq-Temporal-Period": [
+                            "past",
+                            "year"
+                          ],
                           "Condition": [
                             "dementia"
                           ],
                           "Condition-Name": [
                             "dementia"
                           ],
-                          "Eq-Temporal-Period": [
-                            "past"
-                          ],
                           "Eq-Comparison": [
                             "past year"
-                          ],
-                          "Eq-Temporal-Unit": [
-                            "year"
                           ]
                         }
                       }
@@ -291,38 +291,26 @@
           }
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- Ability to perform daily exercise, including aerobic activity",
-              "Observation": [
-                "daily exercise"
-              ],
-              "Observation-Name": [
-                "daily exercise"
-              ],
-              "Modifier": [
-                "aerobic activity"
-              ],
-              "Eq-Comparison": [
-                "daily"
-              ],
-              "Eq-Temporal-Unit": [
-                "daily"
-              ]
-            },
-            "right": {
-              "raw_text": "and resistance exercise",
-              "Observation": [
-                "exercise"
-              ],
-              "Observation-Name": [
-                "exercise"
-              ],
-              "Modifier": [
-                "resistance"
-              ]
-            }
-          }
+          "raw_text": "- Ability to perform daily exercise, including aerobic activity and resistance exercise",
+          "Eq-Comparison": [
+            "daily"
+          ],
+          "Eq-Temporal-Unit": [
+            "daily"
+          ],
+          "Observation": [
+            "exercise"
+          ],
+          "Observation-Name": [
+            "exercise"
+          ],
+          "Modifier": [
+            "aerobic activity",
+            "resistance"
+          ],
+          "Assertion": [
+            "Ability to"
+          ]
         }
       }
     },
@@ -336,7 +324,8 @@
             "left": {
               "raw_text": "Non-smoker in the past year",
               "Eq-Temporal-Period": [
-                "past"
+                "past",
+                "year"
               ],
               "Observation": [
                 "smoker"
@@ -349,9 +338,6 @@
               ],
               "Eq-Comparison": [
                 "past year"
-              ],
-              "Eq-Temporal-Unit": [
-                "year"
               ]
             }
           }

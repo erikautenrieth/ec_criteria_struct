@@ -40,23 +40,26 @@
                                   }
                                 },
                                 "right": {
-                                  "raw_text": "- Inability to sit steady and upright for the Optical Coherence Tomography (OCT).",
+                                  "raw_text": "- Inability to sit steady and upright for the optical coherence tomography (OCT).",
                                   "Procedure": [
-                                    "Optical Coherence Tomography",
+                                    "optical coherence tomography",
                                     "OCT"
                                   ],
                                   "Procedure-Name": [
-                                    "Optical Coherence Tomography",
+                                    "optical coherence tomography",
                                     "OCT"
                                   ],
-                                  "Assertion": [
-                                    "Inability"
+                                  "Observation": [
+                                    "sit steady and upright"
+                                  ],
+                                  "Observation-Name": [
+                                    "sit steady and upright"
                                   ],
                                   "Negation": [
                                     "Inability"
                                   ],
-                                  "Modifier": [
-                                    "sit steady and upright"
+                                  "Assertion": [
+                                    "Inability"
                                   ]
                                 }
                               }
@@ -150,17 +153,17 @@
                     },
                     "right": {
                       "raw_text": "- Currently taking a prostaglandin analogue",
-                      "Drug": [
-                        "prostaglandin analogue"
-                      ],
-                      "Drug-Name": [
-                        "prostaglandin analogue"
-                      ],
                       "Eq-Comparison": [
                         "Currently taking"
                       ],
                       "Eq-Temporal-Period": [
                         "Currently taking"
+                      ],
+                      "Drug": [
+                        "prostaglandin analogue"
+                      ],
+                      "Drug-Name": [
+                        "prostaglandin analogue"
                       ]
                     }
                   }
@@ -190,23 +193,20 @@
                 "operative"
               ],
               "Condition": [
-                "lens fragment"
+                "Retained lens fragment"
               ],
               "Condition-Name": [
-                "lens fragment"
-              ],
-              "Modifier": [
-                "Retained"
+                "Retained lens fragment"
               ]
             }
           }
         },
         "right": {
           "raw_text": "- Inability to return for follow appointments",
-          "Assertion": [
+          "Negation": [
             "Inability"
           ],
-          "Negation": [
+          "Assertion": [
             "Inability"
           ],
           "Encounter": [
@@ -216,51 +216,44 @@
       }
     },
     "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "raw_text": "- Female patients",
+          "raw_text": "- Female patients who are pregnant,",
           "Life-Stage-And-Gender": [
             "Female"
+          ],
+          "Condition": [
+            "pregnant"
+          ],
+          "Condition-Name": [
+            "pregnant"
           ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "who are pregnant,",
+              "raw_text": "lactating",
+              "Condition": [
+                "lactating"
+              ],
+              "Condition-Name": [
+                "lactating"
+              ]
+            },
+            "right": {
+              "raw_text": "or planning to become pregnant during the course of treatment.",
+              "Procedure": [
+                "treatment"
+              ],
               "Condition": [
                 "pregnant"
               ],
               "Condition-Name": [
                 "pregnant"
+              ],
+              "Assertion": [
+                "planning to become"
               ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "lactating",
-                  "Condition": [
-                    "lactating"
-                  ],
-                  "Condition-Name": [
-                    "lactating"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or planning to become pregnant during the course of treatment.",
-                  "Procedure": [
-                    "treatment"
-                  ],
-                  "Assertion": [
-                    "planning to become"
-                  ],
-                  "Condition": [
-                    "pregnant"
-                  ],
-                  "Condition-Name": [
-                    "pregnant"
-                  ]
-                }
-              }
             }
           }
         }

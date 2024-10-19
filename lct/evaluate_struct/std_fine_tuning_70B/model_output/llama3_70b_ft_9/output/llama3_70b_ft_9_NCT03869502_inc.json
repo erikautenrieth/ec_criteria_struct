@@ -8,36 +8,39 @@
               "AND": {
                 "left": {
                   "raw_text": "- Age >18 years",
-                  "Age": [
-                    "Age"
-                  ],
-                  "Eq-Comparison": [
-                    ">18 years"
-                  ],
                   "Eq-Operator": [
                     ">"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "Age"
                   ],
                   "Eq-Value": [
                     "18"
                   ],
-                  "Eq-Temporal-Unit": [
-                    "years"
+                  "Eq-Comparison": [
+                    ">18 years"
                   ]
                 },
                 "right": {
                   "raw_text": "- Diagnosis of BCR‐ABL positive CML blast crisis according to the WHO criteria:",
                   "Condition": [
                     "CML",
-                    "BCR‐ABL"
-                  ],
-                  "Modifier": [
                     "blast crisis"
+                  ],
+                  "Condition-Name": [
+                    "CML",
+                    "blast crisis"
+                  ],
+                  "Eq-Unit": [
+                    "L"
                   ],
                   "Polarity": [
                     "positive"
                   ],
-                  "Condition-Name": [
-                    "CML",
+                  "Modifier": [
                     "BCR‐ABL"
                   ]
                 }
@@ -47,21 +50,22 @@
               "OR": {
                 "left": {
                   "raw_text": "- Blasts 20% or more of peripheral blood white cells",
+                  "Eq-Value": [
+                    "20"
+                  ],
                   "Eq-Comparison": [
                     "20% or more"
+                  ],
+                  "Eq-Unit": [
+                    "%",
+                    "L"
+                  ],
+                  "Eq-Operator": [
+                    "or more"
                   ],
                   "Observation": [
                     "Blasts",
                     "peripheral blood white cells"
-                  ],
-                  "Eq-Value": [
-                    "20"
-                  ],
-                  "Eq-Unit": [
-                    "%"
-                  ],
-                  "Eq-Operator": [
-                    "or more"
                   ],
                   "Observation-Name": [
                     "Blasts",
@@ -69,13 +73,20 @@
                   ]
                 },
                 "right": {
-                  "raw_text": "or bone marrow cells or",
-                  "Observation": [
-                    "bone marrow cells"
-                  ],
-                  "Observation-Name": [
-                    "bone marrow cells"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "or bone marrow cells",
+                      "Observation": [
+                        "bone marrow cells"
+                      ],
+                      "Observation-Name": [
+                        "bone marrow cells"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or"
+                    }
+                  }
                 }
               }
             }
@@ -85,14 +96,17 @@
           "OR": {
             "left": {
               "raw_text": "- Extramedullary blast proliferation",
-              "Modifier": [
-                "Extramedullary"
-              ],
               "Condition": [
                 "blast proliferation"
               ],
               "Condition-Name": [
                 "blast proliferation"
+              ],
+              "Eq-Unit": [
+                "L"
+              ],
+              "Modifier": [
+                "Extramedullary"
               ]
             },
             "right": {
@@ -112,8 +126,15 @@
         "bone marrow biopsy",
         "blasts"
       ],
+      "Eq-Unit": [
+        "L"
+      ],
+      "Polarity": [
+        "Large"
+      ],
       "Modifier": [
-        "Large foci or clusters"
+        "foci",
+        "clusters"
       ]
     }
   }

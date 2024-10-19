@@ -107,11 +107,11 @@
                                     "within",
                                     "to"
                                   ],
-                                  "Procedure-Name": [
-                                    "surgery"
-                                  ],
                                   "Eq-Temporal-Unit": [
                                     "months"
+                                  ],
+                                  "Procedure-Name": [
+                                    "surgery"
                                   ],
                                   "Severity": [
                                     "major"
@@ -185,7 +185,8 @@
                     "right": {
                       "raw_text": "5. loss of vision as a result of other causes;",
                       "Condition": [
-                        "loss of vision"
+                        "loss of vision",
+                        "causes"
                       ],
                       "Other": [
                         "other"
@@ -220,11 +221,11 @@
                     "6",
                     "3"
                   ],
-                  "Modifier": [
-                    "systemic"
-                  ],
                   "Eq-Temporal-Unit": [
                     "months"
+                  ],
+                  "Modifier": [
+                    "systemic"
                   ]
                 }
               }
@@ -237,9 +238,6 @@
               ],
               "Exception": [
                 "other than"
-              ],
-              "Eq-Operator": [
-                "to"
               ],
               "Severity": [
                 "severe"
@@ -257,12 +255,12 @@
         "right": {
           "OR": {
             "left": {
-              "raw_text": "8. history of coagulation abnormalities",
+              "raw_text": "8. history of glaucoma",
               "Eq-Comparison": [
                 "history"
               ],
               "Condition": [
-                "coagulation abnormalities"
+                "glaucoma"
               ],
               "Eq-Operator": [
                 "to"
@@ -271,73 +269,61 @@
                 "history"
               ],
               "Condition-Name": [
-                "coagulation abnormalities"
+                "glaucoma"
               ]
             },
             "right": {
-              "raw_text": "or current use of anticoagulative medication other than aspirin",
-              "Eq-Comparison": [
-                "current"
-              ],
-              "Drug": [
-                "anticoagulative medication",
-                "aspirin"
-              ],
-              "Exception": [
-                "other than"
-              ],
-              "Eq-Temporal-Period": [
-                "current"
-              ],
-              "Drug-Name": [
-                "anticoagulative medication",
-                "aspirin"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "or ocular hypertension;",
+                  "Condition": [
+                    "ocular hypertension"
+                  ],
+                  "Condition-Name": [
+                    "ocular hypertension"
+                  ]
+                },
+                "right": {
+                  "raw_text": "9. any condition that could affect followup or documentation (including preretinal or vitreous hemorrhage).",
+                  "Condition": [
+                    "condition",
+                    "preretinal hemorrhage",
+                    "vitreous hemorrhage"
+                  ],
+                  "Assertion": [
+                    "could"
+                  ],
+                  "Study": [
+                    "documentation"
+                  ],
+                  "Eq-Operator": [
+                    "to"
+                  ],
+                  "Stability": [
+                    "affect"
+                  ],
+                  "Condition-Name": [
+                    "preretinal hemorrhage",
+                    "vitreous hemorrhage"
+                  ]
+                }
+              }
             }
           }
         }
       }
     },
     "right": {
-      "OR": {
-        "left": {
-          "raw_text": "9. any condition that could affect followup",
-          "Encounter": [
-            "followup"
-          ],
-          "Condition": [
-            "condition"
-          ],
-          "Assertion": [
-            "could"
-          ],
-          "Stability": [
-            "affect"
-          ]
-        },
-        "right": {
-          "OR": {
-            "left": {
-              "raw_text": "or documentation (including preretinal",
-              "Modifier": [
-                "preretinal"
-              ]
-            },
-            "right": {
-              "raw_text": "or vitreous hemorrhage).",
-              "Observation": [
-                "hemorrhage"
-              ],
-              "Observation-Name": [
-                "hemorrhage"
-              ],
-              "Modifier": [
-                "vitreous"
-              ]
-            }
-          }
-        }
-      }
+      "raw_text": "10. Participants with contraindications for PN administration",
+      "Procedure": [
+        "PN administration"
+      ],
+      "Procedure-Name": [
+        "PN administration"
+      ],
+      "Contraindication": [
+        "contraindications"
+      ]
     }
   }
 }

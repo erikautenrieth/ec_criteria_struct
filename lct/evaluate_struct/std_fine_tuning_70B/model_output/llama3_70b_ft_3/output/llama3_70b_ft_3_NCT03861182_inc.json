@@ -29,20 +29,22 @@
                             },
                             "right": {
                               "raw_text": "- Over 18 years of age",
-                              "Eq-Comparison": [
-                                "Over 18 years"
+                              "Eq-Temporal-Unit": [
+                                "years",
+                                "year"
                               ],
                               "Age": [
                                 "age"
                               ],
+                              "Eq-Value": [
+                                "18",
+                                "1"
+                              ],
+                              "Eq-Comparison": [
+                                "Over 18 years"
+                              ],
                               "Eq-Operator": [
                                 "Over"
-                              ],
-                              "Eq-Value": [
-                                "18"
-                              ],
-                              "Eq-Temporal-Unit": [
-                                "years"
                               ]
                             }
                           }
@@ -60,85 +62,64 @@
                     },
                     "right": {
                       "raw_text": "- Aged between 1h of life and 28 days of life",
-                      "Age": [
-                        "Aged"
-                      ],
-                      "Eq-Comparison": [
-                        "between 1h of life and 28 days"
-                      ],
-                      "Eq-Operator": [
-                        "between"
-                      ],
-                      "Eq-Value": [
-                        "1",
-                        "28",
-                        "2"
-                      ],
                       "Eq-Temporal-Unit": [
                         "days",
                         "h"
                       ],
-                      "Modifier": [
-                        "of life"
+                      "Age": [
+                        "Aged"
+                      ],
+                      "Eq-Value": [
+                        "28",
+                        "1"
+                      ],
+                      "Eq-Comparison": [
+                        "between 1h of life and 28 days of life"
+                      ],
+                      "Eq-Operator": [
+                        "between"
                       ]
                     }
                   }
                 },
                 "right": {
-                  "AND": {
-                    "left": {
-                      "raw_text": "- Born beyond 33 Week of Amenorrhea",
-                      "Birth": [
-                        "Born"
-                      ],
-                      "Eq-Comparison": [
-                        "beyond 33 Week"
-                      ],
-                      "Condition": [
-                        "Amenorrhea"
-                      ],
-                      "Eq-Operator": [
-                        "beyond"
-                      ],
-                      "Eq-Value": [
-                        "33",
-                        "3"
-                      ],
-                      "Eq-Temporal-Unit": [
-                        "Week"
-                      ],
-                      "Condition-Name": [
-                        "Amenorrhea"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "+ 1day and 2kg of birth weight",
-                      "Birth": [
-                        "birth"
-                      ],
-                      "Eq-Comparison": [
-                        "1day",
-                        "2kg"
-                      ],
-                      "Observation": [
-                        "weight"
-                      ],
-                      "Eq-Value": [
-                        "1",
-                        "2"
-                      ],
-                      "Eq-Temporal-Unit": [
-                        "day",
-                        "h"
-                      ],
-                      "Observation-Name": [
-                        "weight"
-                      ],
-                      "Eq-Unit": [
-                        "kg"
-                      ]
-                    }
-                  }
+                  "raw_text": "- Born beyond 33 Week of Amenorrhea + 1day and 2kg of birth weight",
+                  "Eq-Operator": [
+                    "beyond"
+                  ],
+                  "Eq-Value": [
+                    "33",
+                    "2",
+                    "1"
+                  ],
+                  "Eq-Comparison": [
+                    "beyond 33 Week",
+                    "+ 1day",
+                    "2kg"
+                  ],
+                  "Birth": [
+                    "Born"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "Week",
+                    "day",
+                    "h"
+                  ],
+                  "Condition": [
+                    "Amenorrhea"
+                  ],
+                  "Condition-Name": [
+                    "Amenorrhea"
+                  ],
+                  "Observation": [
+                    "birth weight"
+                  ],
+                  "Observation-Name": [
+                    "birth weight"
+                  ],
+                  "Eq-Unit": [
+                    "kg"
+                  ]
                 }
               }
             },
@@ -148,8 +129,7 @@
                 "Hospitalized"
               ],
               "Location": [
-                "medical-surgical centre",
-                "Pediatrics",
+                "medical-surgical centre of Pediatrics",
                 "hospital of Strasbourg"
               ]
             }
@@ -157,28 +137,41 @@
         },
         "right": {
           "raw_text": "- For whom a blood sample was prescribed as part of their routine care",
-          "Observation": [
-            "blood sample"
-          ],
-          "Observation-Name": [
-            "sample"
-          ],
-          "Specimen": [
-            "blood"
-          ],
-          "Assertion": [
-            "prescribed"
-          ],
           "Eq-Temporal-Unit": [
             "h"
+          ],
+          "Specimen": [
+            "blood sample"
+          ],
+          "Procedure": [
+            "routine care"
+          ],
+          "Procedure-Name": [
+            "routine care"
           ]
         }
       }
     },
     "right": {
-      "raw_text": "of life",
+      "raw_text": "3. The subject is currently being treated at QECH in the neonatal or KMC ward.",
+      "Eq-Value": [
+        "3"
+      ],
+      "Eq-Temporal-Unit": [
+        "h"
+      ],
+      "Location": [
+        "QECH"
+      ],
+      "Procedure": [
+        "treated"
+      ],
+      "Encounter": [
+        "ward"
+      ],
       "Modifier": [
-        "of life"
+        "neonatal",
+        "KMC"
       ]
     }
   }

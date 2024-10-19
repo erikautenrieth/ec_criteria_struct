@@ -3,112 +3,116 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "- Ulcerative colitis with confirmed diagnosis by histology",
+          "raw_text": "- Ulcerative colitis",
           "Condition": [
             "Ulcerative colitis"
           ],
           "Condition-Name": [
             "Ulcerative colitis"
-          ],
-          "Procedure": [
-            "histology"
-          ],
-          "Procedure-Name": [
-            "histology"
           ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "and endoscopy",
+              "raw_text": "with confirmed diagnosis by histology",
               "Procedure": [
-                "endoscopy"
+                "histology"
               ],
               "Procedure-Name": [
-                "endoscopy"
+                "histology"
               ]
             },
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "AND in stable remission for 3 months or more",
-                  "Eq-Temporal-Unit": [
-                    "months"
+                  "raw_text": "and endoscopy",
+                  "Procedure": [
+                    "endoscopy"
                   ],
-                  "Eq-Value": [
-                    "3"
-                  ],
-                  "Condition": [
-                    "remission"
-                  ],
-                  "Condition-Name": [
-                    "remission"
-                  ],
-                  "Stability": [
-                    "stable"
-                  ],
-                  "Eq-Comparison": [
-                    "3 months or more"
-                  ],
-                  "Eq-Operator": [
-                    "or more"
+                  "Procedure-Name": [
+                    "endoscopy"
                   ]
                 },
                 "right": {
-                  "NOT": {
+                  "AND": {
                     "left": {
-                      "OR": {
+                      "raw_text": "AND in stable remission for 3 months or more",
+                      "Eq-Temporal-Unit": [
+                        "months"
+                      ],
+                      "Eq-Value": [
+                        "3"
+                      ],
+                      "Condition": [
+                        "stable remission"
+                      ],
+                      "Condition-Name": [
+                        "stable remission"
+                      ],
+                      "Eq-Comparison": [
+                        "3 months or more"
+                      ],
+                      "Eq-Operator": [
+                        "or more"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
                         "left": {
-                          "raw_text": "without therapy",
-                          "Procedure": [
-                            "therapy"
-                          ],
-                          "Procedure-Name": [
-                            "therapy"
-                          ],
-                          "Negation": [
-                            "without"
-                          ]
-                        },
-                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "or with a maintenance therapy (except steroids",
+                              "raw_text": "without therapy",
                               "Procedure": [
-                                "maintenance therapy",
                                 "therapy"
                               ],
                               "Procedure-Name": [
-                                "maintenance therapy",
                                 "therapy"
                               ],
-                              "Drug": [
-                                "steroids"
-                              ],
-                              "Drug-Name": [
-                                "steroids"
-                              ],
-                              "Exception": [
-                                "except"
+                              "Negation": [
+                                "without"
                               ]
                             },
                             "right": {
-                              "raw_text": "and antibiotics for 3 months)",
-                              "Eq-Temporal-Unit": [
-                                "months"
-                              ],
-                              "Eq-Value": [
-                                "3"
-                              ],
-                              "Drug": [
-                                "antibiotics"
-                              ],
-                              "Drug-Name": [
-                                "antibiotics"
-                              ],
-                              "Eq-Comparison": [
-                                "3 months"
-                              ]
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or with a maintenance therapy (except steroids",
+                                  "Procedure": [
+                                    "maintenance therapy",
+                                    "therapy"
+                                  ],
+                                  "Procedure-Name": [
+                                    "maintenance therapy",
+                                    "therapy"
+                                  ],
+                                  "Drug": [
+                                    "steroids"
+                                  ],
+                                  "Drug-Name": [
+                                    "steroids"
+                                  ],
+                                  "Exception": [
+                                    "except"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "and antibiotics for 3 months)",
+                                  "Eq-Temporal-Unit": [
+                                    "months"
+                                  ],
+                                  "Eq-Value": [
+                                    "3"
+                                  ],
+                                  "Drug": [
+                                    "antibiotics"
+                                  ],
+                                  "Drug-Name": [
+                                    "antibiotics"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "3 months"
+                                  ]
+                                }
+                              }
                             }
                           }
                         }

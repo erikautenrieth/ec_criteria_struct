@@ -8,20 +8,20 @@
               "AND": {
                 "left": {
                   "raw_text": "- Age < 18 years old",
-                  "Age": [
-                    "Age"
-                  ],
-                  "Eq-Comparison": [
-                    "< 18 years"
-                  ],
                   "Eq-Operator": [
                     "<"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "Age"
                   ],
                   "Eq-Value": [
                     "18"
                   ],
-                  "Eq-Temporal-Unit": [
-                    "years"
+                  "Eq-Comparison": [
+                    "< 18 years"
                   ]
                 },
                 "right": {
@@ -29,11 +29,11 @@
                   "Condition": [
                     "cardiac disease"
                   ],
-                  "Stability": [
-                    "Unstable"
-                  ],
                   "Condition-Name": [
                     "cardiac disease"
+                  ],
+                  "Stability": [
+                    "Unstable"
                   ]
                 }
               }
@@ -53,26 +53,23 @@
                       "Condition": [
                         "diseases"
                       ],
+                      "Condition-Name": [
+                        "diseases"
+                      ],
                       "Modifier": [
                         "neurological"
-                      ],
-                      "Assertion": [
-                        "could"
                       ],
                       "Observation": [
                         "exercise"
                       ],
-                      "Condition-Name": [
-                        "diseases"
+                      "Observation-Name": [
+                        "exercise"
                       ],
                       "Stability": [
                         "affect"
                       ],
-                      "Eq-Operator": [
-                        "to"
-                      ],
-                      "Observation-Name": [
-                        "exercise"
+                      "Assertion": [
+                        "could"
                       ]
                     },
                     "right": {
@@ -87,11 +84,11 @@
                               "Observation": [
                                 "exercise"
                               ],
-                              "Negation": [
-                                "preclude"
-                              ],
                               "Observation-Name": [
                                 "exercise"
+                              ],
+                              "Negation": [
+                                "preclude"
                               ]
                             }
                           }
@@ -107,20 +104,23 @@
         "right": {
           "OR": {
             "left": {
-              "raw_text": "- Patients of COPD",
+              "raw_text": "- Patients of COPD final stage",
               "Condition": [
                 "COPD"
               ],
               "Condition-Name": [
                 "COPD"
+              ],
+              "Modifier": [
+                "final stage"
               ]
             },
             "right": {
-              "raw_text": "final stage or other serious disease final stage",
+              "raw_text": "or other serious disease final stage",
               "Condition": [
                 "disease"
               ],
-              "Eq-Comparison": [
+              "Modifier": [
                 "final stage"
               ],
               "Other": [
@@ -128,12 +128,6 @@
               ],
               "Severity": [
                 "serious"
-              ],
-              "Eq-Unit": [
-                "stage"
-              ],
-              "Eq-Temporal-Period": [
-                "final"
               ]
             }
           }
@@ -155,20 +149,17 @@
           "AND": {
             "left": {
               "raw_text": "or psychiatric impairment that would lead to an",
-              "Modifier": [
-                "psychiatric"
-              ],
               "Condition": [
                 "impairment"
-              ],
-              "Assertion": [
-                "would"
               ],
               "Condition-Name": [
                 "impairment"
               ],
-              "Stability": [
-                "lead to"
+              "Modifier": [
+                "psychiatric"
+              ],
+              "Assertion": [
+                "would"
               ]
             },
             "right": {

@@ -96,29 +96,29 @@
                             },
                             "right": {
                               "raw_text": "or bacterial culture order within 24 hours of emergency department presentation and",
+                              "Eq-Comparison": [
+                                "within 24 hours"
+                              ],
                               "Eq-Operator": [
                                 "within"
                               ],
                               "Eq-Value": [
                                 "24"
                               ],
-                              "Eq-Comparison": [
-                                "within 24 hours"
-                              ],
-                              "Observation": [
-                                "culture"
-                              ],
-                              "Observation-Name": [
-                                "culture"
-                              ],
-                              "Modifier": [
-                                "bacterial"
-                              ],
                               "Eq-Temporal-Unit": [
                                 "hours"
                               ],
                               "Encounter": [
-                                "emergency department presentation"
+                                "emergency"
+                              ],
+                              "Procedure": [
+                                "culture"
+                              ],
+                              "Procedure-Name": [
+                                "culture"
+                              ],
+                              "Modifier": [
+                                "bacterial"
                               ]
                             }
                           }
@@ -130,65 +130,50 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "1. culture drawn first, antibiotics ordered within 48 hours",
+                      "raw_text": "1. culture drawn first, antibiotics ordered within 48 hours or",
+                      "Eq-Comparison": [
+                        "within 48 hours"
+                      ],
                       "Eq-Operator": [
                         "within"
                       ],
                       "Eq-Value": [
                         "48"
                       ],
-                      "Eq-Comparison": [
-                        "within 48 hours"
-                      ],
-                      "Observation": [
-                        "culture"
-                      ],
-                      "Observation-Name": [
-                        "culture"
-                      ],
-                      "Drug": [
-                        "antibiotics"
-                      ],
-                      "Drug-Name": [
-                        "antibiotics"
-                      ],
                       "Eq-Temporal-Unit": [
                         "hours"
+                      ],
+                      "Procedure": [
+                        "culture",
+                        "antibiotics"
+                      ],
+                      "Procedure-Name": [
+                        "culture",
+                        "antibiotics"
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "or"
-                        },
-                        "right": {
-                          "raw_text": "antibiotics ordered first, culture ordered within 48 hours (adapted from criteria applied in development of the Third International Consensus Definitions for Sepsis and Septic Shock)",
-                          "Eq-Operator": [
-                            "within"
-                          ],
-                          "Eq-Value": [
-                            "48"
-                          ],
-                          "Eq-Comparison": [
-                            "within 48 hours"
-                          ],
-                          "Drug": [
-                            "antibiotics"
-                          ],
-                          "Drug-Name": [
-                            "antibiotics"
-                          ],
-                          "Observation": [
-                            "culture"
-                          ],
-                          "Observation-Name": [
-                            "culture"
-                          ],
-                          "Eq-Temporal-Unit": [
-                            "hours"
-                          ]
-                        }
-                      }
+                      "raw_text": "2. antibiotics ordered first, culture ordered within 48 hours (adapted from criteria applied in development of the Third International Consensus Definitions for Sepsis and Septic Shock)",
+                      "Eq-Comparison": [
+                        "within 48 hours"
+                      ],
+                      "Eq-Operator": [
+                        "within"
+                      ],
+                      "Eq-Value": [
+                        "48"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "hours"
+                      ],
+                      "Procedure": [
+                        "culture",
+                        "antibiotics"
+                      ],
+                      "Procedure-Name": [
+                        "culture",
+                        "antibiotics"
+                      ]
                     }
                   }
                 }
@@ -198,15 +183,17 @@
               "OR": {
                 "left": {
                   "raw_text": "4. deemed as high-risk for 30-day readmission (i.e., ≥ 20%)",
+                  "Eq-Comparison": [
+                    "≥ 20%"
+                  ],
                   "Eq-Operator": [
                     "≥"
                   ],
                   "Eq-Value": [
-                    "30",
                     "20"
                   ],
-                  "Eq-Comparison": [
-                    "≥ 20%"
+                  "Eq-Unit": [
+                    "%"
                   ],
                   "Encounter": [
                     "readmission"
@@ -217,36 +204,29 @@
                   "Polarity": [
                     "high"
                   ],
-                  "Eq-Unit": [
-                    "%"
-                  ],
-                  "Assertion": [
-                    "deemed as"
+                  "Eq-Temporal-Unit": [
+                    "day"
                   ]
                 },
                 "right": {
                   "raw_text": "or 30-day mortality (i.e., ≥ 10%) using risk-scoring models",
+                  "Eq-Comparison": [
+                    "≥ 10%"
+                  ],
                   "Eq-Operator": [
                     "≥"
                   ],
                   "Eq-Value": [
-                    "30",
                     "10"
-                  ],
-                  "Eq-Comparison": [
-                    "≥ 10%"
-                  ],
-                  "Death": [
-                    "mortality"
-                  ],
-                  "Risk": [
-                    "risk"
                   ],
                   "Eq-Unit": [
                     "%"
                   ],
-                  "Assertion": [
-                    "using"
+                  "Death": [
+                    "mortality"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "day"
                   ]
                 }
               }
@@ -267,9 +247,6 @@
                   ],
                   "Encounter": [
                     "discharged"
-                  ],
-                  "Assertion": [
-                    "at the time of"
                   ]
                 }
               }
@@ -279,10 +256,7 @@
       }
     },
     "right": {
-      "raw_text": "List of patients meeting above criteria:",
-      "Assertion": [
-        "above"
-      ]
+      "raw_text": "6. Additional exclusion criteria may apply"
     }
   }
 }

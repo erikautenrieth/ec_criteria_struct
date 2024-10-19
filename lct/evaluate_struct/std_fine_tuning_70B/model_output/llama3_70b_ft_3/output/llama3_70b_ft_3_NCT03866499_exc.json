@@ -115,12 +115,12 @@
                               "Condition": [
                                 "pneumonia"
                               ],
+                              "Condition-Name": [
+                                "pneumonia"
+                              ],
                               "Procedure": [
                                 "radiation",
                                 "hormonal therapy"
-                              ],
-                              "Condition-Name": [
-                                "pneumonia"
                               ],
                               "Procedure-Name": [
                                 "radiation",
@@ -206,26 +206,27 @@
             "left": {
               "raw_text": "- Local radiation therapy is carried out within 1 week; more than 30% bone marrow radiation therapy",
               "Procedure": [
-                "radiation therapy",
-                "bone marrow radiation therapy"
+                "radiation",
+                "bone marrow radiation therapy",
+                "therapy"
               ],
               "Eq-Comparison": [
                 "within 1 week",
                 "more than 30%"
               ],
-              "Procedure-Name": [
-                "radiation therapy",
-                "bone marrow radiation therapy"
-              ],
               "Eq-Operator": [
+                "-",
                 "within",
-                "more than",
-                "-"
+                "more than"
+              ],
+              "Procedure-Name": [
+                "radiation",
+                "bone marrow radiation therapy",
+                "therapy"
               ],
               "Eq-Value": [
                 "1",
-                "30",
-                "0"
+                "30"
               ],
               "Eq-Temporal-Unit": [
                 "week"
@@ -240,22 +241,24 @@
             "right": {
               "raw_text": "or extensive radiation therapy is performed within 4 weeks.",
               "Procedure": [
-                "radiation therapy"
+                "radiation",
+                "therapy"
               ],
               "Eq-Comparison": [
                 "within 4 weeks"
               ],
-              "Procedure-Name": [
-                "radiation therapy"
-              ],
               "Eq-Operator": [
                 "within"
               ],
-              "Eq-Temporal-Unit": [
-                "weeks"
+              "Procedure-Name": [
+                "radiation",
+                "therapy"
               ],
               "Eq-Value": [
                 "4"
+              ],
+              "Eq-Temporal-Unit": [
+                "weeks"
               ],
               "Modifier": [
                 "extensive"
@@ -276,19 +279,19 @@
             "surgery"
           ],
           "Eq-Operator": [
-            "≤",
-            "-"
-          ],
-          "Eq-Temporal-Unit": [
-            "weeks"
+            "-",
+            "≤"
           ],
           "Eq-Value": [
             "4"
           ],
+          "Eq-Temporal-Unit": [
+            "weeks"
+          ],
           "Procedure-Name": [
             "surgery"
           ],
-          "Modifier": [
+          "Severity": [
             "major"
           ]
         },
@@ -306,13 +309,13 @@
           "Eq-Temporal-Unit": [
             "weeks"
           ],
-          "Eq-Value": [
-            "2"
-          ],
           "Procedure-Name": [
             "surgery"
           ],
-          "Modifier": [
+          "Eq-Value": [
+            "2"
+          ],
+          "Severity": [
             "minor"
           ]
         }

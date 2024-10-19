@@ -58,6 +58,11 @@
                     "≥ 18.5",
                     "≤ 27.0 kg/m2"
                   ],
+                  "Observation-Name": [
+                    "Weight",
+                    "body mass index",
+                    "BMI"
+                  ],
                   "Eq-Operator": [
                     "≥",
                     "≤"
@@ -66,11 +71,6 @@
                     "50",
                     "18.5",
                     "27.0"
-                  ],
-                  "Observation-Name": [
-                    "Weight",
-                    "body mass index",
-                    "BMI"
                   ],
                   "Eq-Unit": [
                     "kg",
@@ -90,12 +90,11 @@
                       "OR": {
                         "left": {
                           "raw_text": "no congenital chronic disease",
+                          "Condition": [
+                            "congenital chronic disease"
+                          ],
                           "Negation": [
                             "no"
-                          ],
-                          "Condition": [
-                            "congenital chronic disease",
-                            "disease"
                           ],
                           "Condition-Name": [
                             "congenital chronic disease"
@@ -106,8 +105,7 @@
                             "left": {
                               "raw_text": "or chronic disease requiring treatment",
                               "Condition": [
-                                "chronic disease",
-                                "disease"
+                                "chronic disease"
                               ],
                               "Assertion": [
                                 "requiring"
@@ -138,16 +136,13 @@
                                               "Assertion": [
                                                 "symptoms"
                                               ],
-                                              "Condition": [
-                                                "pathological"
-                                              ],
-                                              "Condition-Name": [
+                                              "Modifier": [
                                                 "pathological"
                                               ]
                                             },
                                             "right": {
                                               "raw_text": "or findings",
-                                              "Observation": [
+                                              "Assertion": [
                                                 "findings"
                                               ]
                                             }
@@ -175,8 +170,7 @@
             "eligible for"
           ],
           "Study": [
-            "clinical trials",
-            "screening"
+            "clinical trials"
           ],
           "Observation": [
             "laboratory",
@@ -185,6 +179,12 @@
           "Observation-Name": [
             "laboratory",
             "ECG"
+          ],
+          "Procedure": [
+            "screening tests"
+          ],
+          "Procedure-Name": [
+            "screening tests"
           ]
         }
       }

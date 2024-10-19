@@ -114,9 +114,6 @@
                                       "Condition": [
                                         "Myocardial infarction"
                                       ],
-                                      "Eq-Operator": [
-                                        "within"
-                                      ],
                                       "Eq-Value": [
                                         "6"
                                       ],
@@ -126,6 +123,9 @@
                                       ],
                                       "Condition-Name": [
                                         "Myocardial infarction"
+                                      ],
+                                      "Eq-Operator": [
+                                        "within"
                                       ]
                                     }
                                   }
@@ -138,9 +138,6 @@
                                   "Condition": [
                                     "Peripheral artery disease"
                                   ],
-                                  "Eq-Operator": [
-                                    "within"
-                                  ],
                                   "Eq-Value": [
                                     "6"
                                   ],
@@ -150,6 +147,9 @@
                                   ],
                                   "Condition-Name": [
                                     "Peripheral artery disease"
+                                  ],
+                                  "Eq-Operator": [
+                                    "within"
                                   ]
                                 }
                               }
@@ -288,32 +288,20 @@
           }
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- According to the opinion of the researcher, those who have",
-              "Eq-Comparison": [
-                "have"
-              ],
-              "Eq-Temporal-Period": [
-                "have"
-              ]
-            },
-            "right": {
-              "raw_text": "or may have a disease that may interfere with the completion of the study",
-              "Condition": [
-                "disease"
-              ],
-              "Assertion": [
-                "may"
-              ],
-              "Study": [
-                "study"
-              ],
-              "Stability": [
-                "interfere"
-              ]
-            }
-          }
+          "raw_text": "- According to the opinion of the researcher, those who have or may have a disease that may interfere with the completion of the study",
+          "Condition": [
+            "disease"
+          ],
+          "Assertion": [
+            "may",
+            "opinion"
+          ],
+          "Study": [
+            "study"
+          ],
+          "Stability": [
+            "interfere"
+          ]
         }
       }
     },
@@ -327,7 +315,7 @@
           "Eq-Temporal-Period": [
             "History"
           ],
-          "Drug": [
+          "Modifier": [
             "drug"
           ]
         },
@@ -339,17 +327,18 @@
           "Condition": [
             "dependence"
           ],
-          "Eq-Operator": [
-            "within"
-          ],
           "Eq-Value": [
             "6"
           ],
           "Eq-Temporal-Unit": [
-            "months"
+            "months",
+            "month"
           ],
           "Condition-Name": [
             "dependence"
+          ],
+          "Eq-Operator": [
+            "within"
           ],
           "Modifier": [
             "alcohol"

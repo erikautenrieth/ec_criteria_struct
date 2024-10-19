@@ -134,11 +134,24 @@
         },
         "right": {
           "raw_text": "- According to RECIST1.1 criteria, there is at least 1 measurable lesion that has not been previously irradiated.",
+          "Eq-Comparison": [
+            "at least 1"
+          ],
           "Observation": [
             "lesion"
           ],
-          "Eq-Comparison": [
-            "at least 1"
+          "Eq-Operator": [
+            "-",
+            "at least"
+          ],
+          "Eq-Value": [
+            "1"
+          ],
+          "Observation-Name": [
+            "lesion"
+          ],
+          "Modifier": [
+            "measurable"
           ],
           "Negation": [
             "not"
@@ -146,24 +159,11 @@
           "Procedure": [
             "irradiated"
           ],
-          "Eq-Operator": [
-            "-",
-            "at least"
-          ],
-          "Observation-Name": [
-            "lesion"
-          ],
-          "Eq-Value": [
-            "1"
-          ],
-          "Modifier": [
-            "measurable"
+          "Procedure-Name": [
+            "irradiated"
           ],
           "Eq-Temporal-Period": [
             "previously"
-          ],
-          "Procedure-Name": [
-            "irradiated"
           ]
         }
       }
@@ -171,28 +171,26 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "- Prior to enrollment, a central laboratory testing report has confirmed that the tumor has one of two common EGFR mutations positive that are sensitive to EGFR-TKI therapy, accompanied",
-          "Procedure": [
-            "EGFR-TKI therapy"
+          "raw_text": "- Prior to enrollment, a central laboratory testing report has confirmed that the tumor has one of two common EGFR mutations positive that are sensitive to EGFR-TKI therapy, accompanied with or",
+          "Eq-Comparison": [
+            "Prior",
+            "one of two"
+          ],
+          "Observation": [
+            "laboratory testing report"
           ],
           "Condition": [
             "tumor",
             "EGFR mutations"
           ],
-          "Eq-Comparison": [
-            "one of two"
-          ],
-          "Polarity": [
-            "positive"
-          ],
-          "Study": [
-            "enrollment"
-          ],
           "Eq-Operator": [
             "-"
           ],
-          "Procedure-Name": [
-            "EGFR-TKI therapy"
+          "Eq-Temporal-Period": [
+            "Prior"
+          ],
+          "Observation-Name": [
+            "laboratory testing report"
           ],
           "Condition-Name": [
             "tumor",
@@ -201,35 +199,37 @@
           "Eq-Value": [
             "one",
             "two"
+          ],
+          "Polarity": [
+            "positive"
+          ],
+          "Drug": [
+            "EGFR-TKI therapy"
+          ],
+          "Drug-Name": [
+            "EGFR-TKI therapy"
           ]
         },
         "right": {
-          "AND": {
+          "NOT": {
             "left": {
-              "raw_text": "with or"
-            },
-            "right": {
-              "NOT": {
-                "left": {
-                  "raw_text": "not accompanied with other EGFR mutation, with the exception of exon 20 insertion.",
-                  "Negation": [
-                    "not"
-                  ],
-                  "Condition": [
-                    "EGFR mutation"
-                  ],
-                  "Exception": [
-                    "exception"
-                  ],
-                  "Condition-Name": [
-                    "EGFR mutation"
-                  ],
-                  "Modifier": [
-                    "other",
-                    "exon 20 insertion"
-                  ]
-                }
-              }
+              "raw_text": "not accompanied by other EGFR mutation, with the exception of exon 20 insertion.",
+              "Negation": [
+                "not"
+              ],
+              "Condition": [
+                "EGFR mutation"
+              ],
+              "Exception": [
+                "exception"
+              ],
+              "Condition-Name": [
+                "EGFR mutation"
+              ],
+              "Modifier": [
+                "other",
+                "exon 20 insertion"
+              ]
             }
           }
         }

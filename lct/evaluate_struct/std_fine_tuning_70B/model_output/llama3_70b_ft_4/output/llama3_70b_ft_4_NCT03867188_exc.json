@@ -104,7 +104,7 @@
                                   "Assertion": [
                                     "could"
                                   ],
-                                  "Adverse-Event": [
+                                  "Reaction": [
                                     "adverse reaction"
                                   ]
                                 }
@@ -172,45 +172,55 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "or condition discovered during surgery that may have complicated the patient's post surgical course such as vascular",
-                      "Procedure": [
-                        "surgery",
-                        "surgical"
-                      ],
-                      "Procedure-Name": [
-                        "surgery",
-                        "surgical"
-                      ],
+                      "raw_text": "or condition",
                       "Condition": [
                         "condition"
-                      ],
-                      "Assertion": [
-                        "may have"
-                      ],
-                      "Modifier": [
-                        "vascular"
-                      ],
-                      "Stability": [
-                        "complicated"
                       ]
                     },
                     "right": {
-                      "raw_text": "or nerve involvement that was unknown before surgery.",
-                      "Procedure": [
-                        "surgery"
-                      ],
-                      "Procedure-Name": [
-                        "surgery"
-                      ],
-                      "Condition": [
-                        "nerve involvement"
-                      ],
-                      "Condition-Name": [
-                        "nerve involvement"
-                      ],
-                      "Modifier": [
-                        "unknown"
-                      ]
+                      "OR": {
+                        "left": {
+                          "raw_text": "discovered during surgery that may have complicated the patient's post surgical course such as vascular",
+                          "Procedure": [
+                            "surgery",
+                            "surgical"
+                          ],
+                          "Procedure-Name": [
+                            "surgery",
+                            "surgical"
+                          ],
+                          "Assertion": [
+                            "may have"
+                          ],
+                          "Modifier": [
+                            "vascular"
+                          ],
+                          "Condition": [
+                            "complicated"
+                          ],
+                          "Condition-Name": [
+                            "complicated"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or nerve involvement that was unknown before surgery.",
+                          "Procedure": [
+                            "surgery"
+                          ],
+                          "Procedure-Name": [
+                            "surgery"
+                          ],
+                          "Modifier": [
+                            "nerve"
+                          ],
+                          "Condition": [
+                            "involvement"
+                          ],
+                          "Condition-Name": [
+                            "involvement"
+                          ]
+                        }
+                      }
                     }
                   }
                 }
@@ -234,10 +244,6 @@
           ],
           "Drug-Name": [
             "liposomal bupivacaine"
-          ],
-          "Modifier": [
-            "chemical",
-            "biologic"
           ]
         }
       }
@@ -245,10 +251,7 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "- Pregnant women are excluded from this study because EXPAREL has the potential for teratogenic",
-          "Study": [
-            "study"
-          ],
+          "raw_text": "- Pregnant women are",
           "Condition": [
             "Pregnant"
           ],
@@ -257,24 +260,18 @@
           ],
           "Life-Stage-And-Gender": [
             "women"
-          ],
-          "Drug": [
-            "EXPAREL"
-          ],
-          "Drug-Name": [
-            "EXPAREL"
-          ],
-          "Assertion": [
-            "potential for"
-          ],
-          "Modifier": [
-            "teratogenic"
           ]
         },
         "right": {
-          "AND": {
+          "OR": {
             "left": {
-              "raw_text": "or abortifacient effects. Because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with EXPAREL, breastfeeding should be discontinued if the mother is treated with EXPAREL.",
+              "raw_text": "excluded from this study because EXPAREL has the potential for teratogenic",
+              "Study": [
+                "study"
+              ],
+              "Negation": [
+                "excluded"
+              ],
               "Drug": [
                 "EXPAREL"
               ],
@@ -282,49 +279,52 @@
                 "EXPAREL"
               ],
               "Assertion": [
-                "potential",
-                "should be"
-              ],
-              "Risk": [
-                "risk"
-              ],
-              "Adverse-Event": [
-                "adverse events"
-              ],
-              "Procedure": [
-                "treatment"
-              ],
-              "Modifier": [
-                "abortifacient",
-                "unknown"
+                "potential for"
               ],
               "Condition": [
-                "nursing"
+                "teratogenic"
               ],
               "Condition-Name": [
-                "nursing"
-              ],
-              "Family-Member": [
-                "infants",
-                "mother"
+                "teratogenic"
               ]
             },
             "right": {
-              "raw_text": "and / or HIV. Illness, [OR] or injury.",
-              "Condition": [
-                "HIV",
-                "Illness"
-              ],
-              "Condition-Name": [
-                "HIV",
-                "Illness"
-              ],
-              "Observation": [
-                "injury"
-              ],
-              "Observation-Name": [
-                "injury"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "or abortifacient effects. Because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with EXPAREL, breastfeeding should be discontinued if the mother is treated with EXPAREL.",
+                  "Drug": [
+                    "EXPAREL"
+                  ],
+                  "Drug-Name": [
+                    "EXPAREL"
+                  ],
+                  "Assertion": [
+                    "potential risk",
+                    "potential"
+                  ],
+                  "Condition": [
+                    "abortifacient effects",
+                    "adverse events"
+                  ],
+                  "Condition-Name": [
+                    "abortifacient effects",
+                    "adverse events"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "infants",
+                    "mother"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Observation": [
+                    "breastfeeding"
+                  ],
+                  "Observation-Name": [
+                    "breastfeeding"
+                  ]
+                }
+              }
             }
           }
         }

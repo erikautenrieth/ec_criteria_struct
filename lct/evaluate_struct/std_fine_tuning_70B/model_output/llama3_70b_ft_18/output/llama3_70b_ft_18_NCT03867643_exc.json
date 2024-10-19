@@ -116,19 +116,24 @@
                                     },
                                     "right": {
                                       "raw_text": "or oral administration of cortisone or cancer chemotherapy;",
-                                      "Procedure": [
-                                        "cancer chemotherapy",
-                                        "chemotherapy"
-                                      ],
-                                      "Procedure-Name": [
-                                        "cancer chemotherapy",
-                                        "chemotherapy"
-                                      ],
                                       "Drug": [
                                         "cortisone"
                                       ],
                                       "Drug-Name": [
                                         "cortisone"
+                                      ],
+                                      "Procedure": [
+                                        "chemotherapy",
+                                        "therapy"
+                                      ],
+                                      "Procedure-Name": [
+                                        "chemotherapy"
+                                      ],
+                                      "Condition": [
+                                        "cancer"
+                                      ],
+                                      "Condition-Name": [
+                                        "cancer"
                                       ],
                                       "Modifier": [
                                         "oral administration"
@@ -166,14 +171,11 @@
                                   "Drug": [
                                     "drug"
                                   ],
-                                  "Procedure": [
-                                    "vaccinated"
-                                  ],
-                                  "Procedure-Name": [
-                                    "vaccinated"
-                                  ],
-                                  "Assertion": [
+                                  "Observation": [
                                     "observation"
+                                  ],
+                                  "Immunization": [
+                                    "vaccinated"
                                   ]
                                 }
                               }
@@ -210,11 +212,11 @@
                                   "Drug-Name": [
                                     "antibiotic"
                                   ],
-                                  "Assertion": [
-                                    "requiring"
-                                  ],
                                   "Other": [
                                     "other"
+                                  ],
+                                  "Assertion": [
+                                    "requiring"
                                   ]
                                 },
                                 "right": {
@@ -249,22 +251,19 @@
                     },
                     "right": {
                       "raw_text": "- Fever symptoms occurred in the past week ( axillary temperature ≥ 38 ℃ )",
-                      "Eq-Operator": [
-                        "≥",
-                        "-"
-                      ],
-                      "Eq-Value": [
-                        "38"
-                      ],
                       "Eq-Comparison": [
-                        "≥ 38 ℃",
-                        "past week"
+                        "past week",
+                        "≥ 38 ℃"
                       ],
-                      "Eq-Temporal-Unit": [
-                        "week"
+                      "Eq-Operator": [
+                        "-",
+                        "≥"
                       ],
                       "Eq-Temporal-Period": [
                         "past"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "week"
                       ],
                       "Condition": [
                         "Fever"
@@ -280,6 +279,9 @@
                       ],
                       "Observation-Name": [
                         "axillary temperature"
+                      ],
+                      "Eq-Value": [
+                        "38"
                       ],
                       "Eq-Unit": [
                         "℃"
@@ -305,20 +307,19 @@
               "OR": {
                 "left": {
                   "raw_text": "- Has a history of more serious infectious diseases ( five types of hepatitis,",
-                  "Condition": [
-                    "infectious diseases",
-                    "disease",
-                    "hepatitis"
-                  ],
                   "Eq-Comparison": [
                     "history",
                     "five types"
                   ],
-                  "Eq-Temporal-Period": [
-                    "history"
+                  "Condition": [
+                    "infectious diseases",
+                    "hepatitis"
                   ],
                   "Eq-Operator": [
                     "-"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "history"
                   ],
                   "Severity": [
                     "serious"
@@ -374,35 +375,21 @@
           }
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- Hepatitis B infection",
-              "Condition": [
-                "Hepatitis B"
-              ],
-              "Condition-Name": [
-                "Hepatitis B"
-              ],
-              "Eq-Operator": [
-                "-"
-              ],
-              "Modifier": [
-                "infection"
-              ]
-            },
-            "right": {
-              "raw_text": "or carriers(lineal relationship);",
-              "Condition": [
-                "carriers"
-              ],
-              "Condition-Name": [
-                "carriers"
-              ],
-              "Modifier": [
-                "linear relationship"
-              ]
-            }
-          }
+          "raw_text": "- Hepatitis B infection or carriers(lineal relationship);",
+          "Condition": [
+            "Hepatitis B infection",
+            "Hepatitis B"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Condition-Name": [
+            "Hepatitis B infection",
+            "Hepatitis B"
+          ],
+          "Modifier": [
+            "carriers"
+          ]
         }
       }
     },
@@ -411,14 +398,14 @@
       "Procedure": [
         "physical examination"
       ],
-      "Procedure-Name": [
-        "physical examination"
-      ],
       "Eq-Operator": [
         "-"
       ],
       "Polarity": [
         "Abnormal"
+      ],
+      "Procedure-Name": [
+        "physical examination"
       ]
     }
   }

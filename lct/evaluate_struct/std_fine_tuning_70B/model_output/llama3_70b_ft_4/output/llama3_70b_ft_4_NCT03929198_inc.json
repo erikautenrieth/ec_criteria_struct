@@ -104,15 +104,15 @@
                                     "<50",
                                     "<40 mg/dL"
                                   ],
+                                  "Eq-Unit": [
+                                    "mg",
+                                    "dL"
+                                  ],
                                   "Observation": [
                                     "HDL"
                                   ],
                                   "Observation-Name": [
                                     "HDL"
-                                  ],
-                                  "Eq-Unit": [
-                                    "mg",
-                                    "dL"
                                   ]
                                 }
                               }
@@ -131,7 +131,7 @@
                               ],
                               "Eq-Value": [
                                 "130",
-                                "3"
+                                "30"
                               ],
                               "Eq-Comparison": [
                                 "≥130 mmHg"
@@ -226,11 +226,11 @@
                             "past",
                             "year"
                           ],
-                          "Procedure": [
-                            "treatment"
-                          ],
                           "Negation": [
                             "No"
+                          ],
+                          "Procedure": [
+                            "treatment"
                           ],
                           "Eq-Comparison": [
                             "past year"
@@ -268,15 +268,15 @@
                         },
                         "right": {
                           "raw_text": "or dementia in the past year",
-                          "Eq-Temporal-Period": [
-                            "past",
-                            "year"
-                          ],
                           "Condition": [
                             "dementia"
                           ],
                           "Condition-Name": [
                             "dementia"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "past",
+                            "year"
                           ],
                           "Eq-Comparison": [
                             "past year"
@@ -291,41 +291,26 @@
           }
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- Ability to perform daily exercise, including aerobic activity",
-              "Observation": [
-                "exercise"
-              ],
-              "Observation-Name": [
-                "exercise"
-              ],
-              "Modifier": [
-                "aerobic activity"
-              ],
-              "Eq-Comparison": [
-                "daily"
-              ],
-              "Eq-Temporal-Unit": [
-                "daily"
-              ],
-              "Assertion": [
-                "Ability to"
-              ]
-            },
-            "right": {
-              "raw_text": "and resistance exercise",
-              "Observation": [
-                "exercise"
-              ],
-              "Observation-Name": [
-                "exercise"
-              ],
-              "Modifier": [
-                "resistance"
-              ]
-            }
-          }
+          "raw_text": "- Ability to perform daily exercise, including aerobic activity and resistance exercise",
+          "Observation": [
+            "aerobic activity",
+            "resistance exercise",
+            "exercise"
+          ],
+          "Observation-Name": [
+            "aerobic activity",
+            "resistance exercise",
+            "exercise"
+          ],
+          "Eq-Comparison": [
+            "daily"
+          ],
+          "Eq-Temporal-Unit": [
+            "daily"
+          ],
+          "Assertion": [
+            "Ability to"
+          ]
         }
       }
     },
@@ -343,7 +328,8 @@
                 "year"
               ],
               "Negation": [
-                "Non"
+                "Non",
+                "No"
               ],
               "Observation": [
                 "smoker"

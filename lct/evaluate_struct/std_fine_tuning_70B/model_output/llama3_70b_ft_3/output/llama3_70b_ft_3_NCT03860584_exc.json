@@ -126,17 +126,17 @@
                                           "Eq-Value": [
                                             "1"
                                           ],
-                                          "Eq-Comparison": [
-                                            "within past 1-mo"
-                                          ],
-                                          "Eq-Temporal-Period": [
-                                            "past"
-                                          ],
                                           "Drug": [
                                             "probiotics"
                                           ],
                                           "Drug-Name": [
                                             "probiotics"
+                                          ],
+                                          "Eq-Comparison": [
+                                            "within past 1-mo"
+                                          ],
+                                          "Eq-Temporal-Period": [
+                                            "past"
                                           ],
                                           "Eq-Temporal-Unit": [
                                             "mo",
@@ -192,15 +192,15 @@
                                           "Eq-Value": [
                                             "6"
                                           ],
+                                          "Stability": [
+                                            "changes"
+                                          ],
                                           "Eq-Comparison": [
                                             "within 6-mo"
                                           ],
                                           "Eq-Temporal-Unit": [
                                             "mo",
                                             "d"
-                                          ],
-                                          "Stability": [
-                                            "changes"
                                           ]
                                         }
                                       }
@@ -237,11 +237,11 @@
                           "Eq-Operator": [
                             "-"
                           ],
-                          "Eq-Temporal-Unit": [
-                            "d"
-                          ],
                           "Acuteness": [
                             "Chronic"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "d"
                           ]
                         }
                       }
@@ -266,7 +266,8 @@
                 "right": {
                   "raw_text": "- Excess alcohol (>2 drinks/d)",
                   "Eq-Operator": [
-                    ">"
+                    ">",
+                    "-"
                   ],
                   "Eq-Value": [
                     "2"
@@ -274,17 +275,17 @@
                   "Eq-Comparison": [
                     ">2 drinks/d"
                   ],
-                  "Eq-Temporal-Unit": [
-                    "d"
-                  ],
-                  "Drug": [
+                  "Observation": [
                     "alcohol"
                   ],
-                  "Drug-Name": [
+                  "Observation-Name": [
                     "alcohol"
                   ],
                   "Eq-Unit": [
                     "drinks"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "d"
                   ],
                   "Polarity": [
                     "Excess"
@@ -295,7 +296,8 @@
             "right": {
               "raw_text": "- Excess aerobic exercise (>5 h/wk)",
               "Eq-Operator": [
-                ">"
+                ">",
+                "-"
               ],
               "Eq-Value": [
                 "5"
@@ -303,16 +305,18 @@
               "Eq-Comparison": [
                 ">5 h/wk"
               ],
-              "Eq-Temporal-Unit": [
-                "d",
-                "h",
-                "wk"
-              ],
               "Observation": [
                 "aerobic exercise"
               ],
               "Observation-Name": [
                 "aerobic exercise"
+              ],
+              "Eq-Unit": [
+                "h"
+              ],
+              "Eq-Temporal-Unit": [
+                "wk",
+                "d"
               ],
               "Polarity": [
                 "Excess"
@@ -380,6 +384,9 @@
       ],
       "Observation-Name": [
         "BP"
+      ],
+      "Eq-Temporal-Unit": [
+        "d"
       ]
     }
   }

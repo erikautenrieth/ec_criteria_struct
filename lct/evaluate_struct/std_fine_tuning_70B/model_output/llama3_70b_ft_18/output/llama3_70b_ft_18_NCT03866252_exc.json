@@ -121,14 +121,14 @@
                                       "NOT": {
                                         "left": {
                                           "raw_text": "Unable or unwilling to discontinue antidepressant medication",
+                                          "Negation": [
+                                            "Unable or unwilling"
+                                          ],
                                           "Drug": [
                                             "antidepressant medication"
                                           ],
                                           "Drug-Name": [
                                             "antidepressant medication"
-                                          ],
-                                          "Negation": [
-                                            "Unable or unwilling"
                                           ],
                                           "Assertion": [
                                             "Unable or unwilling"
@@ -184,14 +184,17 @@
                     "right": {
                       "raw_text": "- Somatic disorders including central nervous system (CNS) involvement",
                       "Condition": [
-                        "Somatic disorders"
-                      ],
-                      "Condition-Name": [
-                        "Somatic disorders"
-                      ],
-                      "Modifier": [
+                        "Somatic disorders",
                         "central nervous system",
                         "CNS"
+                      ],
+                      "Condition-Name": [
+                        "Somatic disorders",
+                        "central nervous system",
+                        "CNS"
+                      ],
+                      "Modifier": [
+                        "involvement"
                       ]
                     }
                   }
@@ -205,38 +208,42 @@
                       ]
                     },
                     "right": {
-                      "OR": {
+                      "NOT": {
                         "left": {
-                          "raw_text": "or suspected non-compliance,",
-                          "Assertion": [
-                            "suspected"
-                          ],
-                          "Condition": [
-                            "non-compliance"
-                          ],
-                          "Condition-Name": [
-                            "non-compliance"
-                          ]
-                        },
-                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "drug",
-                              "Modifier": [
-                                "drug"
+                              "raw_text": "or suspected non-compliance,",
+                              "Negation": [
+                                "non-compliance"
+                              ],
+                              "Assertion": [
+                                "suspected"
+                              ],
+                              "Condition-Name": [
+                                "non-compliance"
                               ]
                             },
                             "right": {
-                              "raw_text": "or alcohol abuse",
-                              "Condition-Name": [
-                                "abuse"
-                              ],
-                              "Modifier": [
-                                "alcohol"
-                              ],
-                              "Condition": [
-                                "abuse"
-                              ]
+                              "OR": {
+                                "left": {
+                                  "raw_text": "drug",
+                                  "Modifier": [
+                                    "drug"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or alcohol abuse",
+                                  "Condition-Name": [
+                                    "abuse"
+                                  ],
+                                  "Modifier": [
+                                    "alcohol"
+                                  ],
+                                  "Condition": [
+                                    "abuse"
+                                  ]
+                                }
+                              }
                             }
                           }
                         }
@@ -248,10 +255,10 @@
             },
             "right": {
               "raw_text": "- Metal implants",
-              "Procedure": [
+              "Condition": [
                 "Metal implants"
               ],
-              "Procedure-Name": [
+              "Condition-Name": [
                 "Metal implants"
               ]
             }
@@ -259,23 +266,23 @@
         },
         "right": {
           "raw_text": "- Weight < 42 kg",
-          "Eq-Operator": [
-            "<"
-          ],
-          "Eq-Unit": [
-            "kg"
-          ],
-          "Eq-Value": [
-            "42"
+          "Observation": [
+            "Weight"
           ],
           "Eq-Comparison": [
             "< 42 kg"
           ],
-          "Observation": [
-            "Weight"
-          ],
           "Observation-Name": [
             "Weight"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "42"
+          ],
+          "Eq-Unit": [
+            "kg"
           ]
         }
       }
@@ -296,17 +303,11 @@
         },
         "right": {
           "raw_text": "or very likely to require psychiatric hospitalisation",
+          "Assertion": [
+            "very likely"
+          ],
           "Encounter": [
             "hospitalisation"
-          ],
-          "Condition": [
-            "psychiatric"
-          ],
-          "Condition-Name": [
-            "psychiatric"
-          ],
-          "Assertion": [
-            "likely"
           ],
           "Modifier": [
             "psychiatric"

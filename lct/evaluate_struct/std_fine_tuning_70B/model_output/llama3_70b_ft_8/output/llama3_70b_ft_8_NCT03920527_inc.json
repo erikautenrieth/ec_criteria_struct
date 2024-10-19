@@ -131,19 +131,14 @@
                         "on"
                       ],
                       "Condition": [
-                        "cavities"
+                        "radiological findings"
                       ],
                       "Condition-Name": [
-                        "cavities"
+                        "radiological findings"
                       ],
                       "Modifier": [
-                        "persistent"
-                      ],
-                      "Procedure": [
-                        "radiological findings"
-                      ],
-                      "Procedure-Name": [
-                        "radiological findings"
+                        "persistent",
+                        "cavities"
                       ],
                       "Eq-Temporal-Period": [
                         "on"
@@ -199,14 +194,14 @@
                                           "OR": {
                                             "left": {
                                               "raw_text": "without fungal ball",
+                                              "Negation": [
+                                                "without"
+                                              ],
                                               "Condition": [
                                                 "fungal ball"
                                               ],
                                               "Condition-Name": [
                                                 "fungal ball"
-                                              ],
-                                              "Negation": [
-                                                "without"
                                               ]
                                             },
                                             "right": {
@@ -220,22 +215,19 @@
                                                 "CT"
                                               ],
                                               "Condition": [
-                                                "pleural thickening"
+                                                "progressive pleural thickening"
                                               ],
                                               "Condition-Name": [
-                                                "pleural thickening"
+                                                "progressive pleural thickening"
                                               ],
                                               "Modifier": [
-                                                "progressive"
+                                                "thorax"
                                               ],
                                               "Eq-Comparison": [
                                                 "on"
                                               ],
                                               "Eq-Temporal-Period": [
                                                 "on"
-                                              ],
-                                              "Negation": [
-                                                "no"
                                               ]
                                             }
                                           }
@@ -294,12 +286,10 @@
                 "left": {
                   "raw_text": "or positive Aspergillus precipitins) or microbiological evidence of Aspergillus infection (growth of Aspergillus in respiratory secretions",
                   "Condition": [
-                    "Aspergillus infection",
-                    "Aspergillus"
+                    "Aspergillus infection"
                   ],
                   "Condition-Name": [
-                    "Aspergillus infection",
-                    "Aspergillus"
+                    "Aspergillus infection"
                   ],
                   "Observation": [
                     "precipitins"
@@ -307,18 +297,17 @@
                   "Observation-Name": [
                     "precipitins"
                   ],
+                  "Modifier": [
+                    "respiratory"
+                  ],
                   "Polarity": [
                     "positive"
                   ],
-                  "Modifier": [
-                    "respiratory",
-                    "microbiological"
+                  "Organism": [
+                    "Aspergillus"
                   ],
-                  "Eq-Comparison": [
-                    "on"
-                  ],
-                  "Eq-Temporal-Period": [
-                    "on"
+                  "Specimen": [
+                    "secretions"
                   ]
                 },
                 "right": {
@@ -340,12 +329,15 @@
                       "Observation-Name": [
                         "galactomannan index"
                       ],
+                      "Eq-Unit": [
+                        "L"
+                      ],
                       "Modifier": [
                         "serum"
                       ]
                     },
                     "right": {
-                      "raw_text": "or BALF galactomannan index >1) and,",
+                      "raw_text": "or BALF galactomannan index >1)",
                       "Eq-Operator": [
                         ">"
                       ],
@@ -377,9 +369,6 @@
       "AND": {
         "left": {
           "raw_text": "- exclusion of other pulmonary disorders",
-          "Other": [
-            "other"
-          ],
           "Condition": [
             "pulmonary disorders"
           ],
@@ -388,6 +377,9 @@
           ],
           "Negation": [
             "exclusion"
+          ],
+          "Other": [
+            "other"
           ]
         },
         "right": {

@@ -27,13 +27,13 @@
                                                     "left": {
                                                       "raw_text": "- Living donor transplant",
                                                       "Procedure": [
-                                                        "Living donor transplant"
+                                                        "donor transplant"
                                                       ],
                                                       "Procedure-Name": [
-                                                        "Living donor transplant"
+                                                        "donor transplant"
                                                       ],
-                                                      "Eq-Unit": [
-                                                        "L"
+                                                      "Modifier": [
+                                                        "Living"
                                                       ]
                                                     },
                                                     "right": {
@@ -44,31 +44,28 @@
                                                       "Procedure-Name": [
                                                         "peritoneal dialysis"
                                                       ],
+                                                      "Stability": [
+                                                        "change"
+                                                      ],
                                                       "Eq-Comparison": [
                                                         "planned"
                                                       ],
                                                       "Eq-Temporal-Period": [
                                                         "planned"
-                                                      ],
-                                                      "Stability": [
-                                                        "change"
                                                       ]
                                                     }
                                                   }
                                                 },
                                                 "right": {
                                                   "raw_text": "- Physical assessments contraindicated for the following clinical reasons",
+                                                  "Contraindication": [
+                                                    "contraindicated"
+                                                  ],
                                                   "Procedure": [
                                                     "Physical assessments"
                                                   ],
                                                   "Procedure-Name": [
                                                     "Physical assessments"
-                                                  ],
-                                                  "Contraindication": [
-                                                    "contraindicated"
-                                                  ],
-                                                  "Eq-Unit": [
-                                                    "L"
                                                   ]
                                                 }
                                               }
@@ -106,11 +103,11 @@
                                                   "Modifier": [
                                                     "chest"
                                                   ],
-                                                  "Eq-Temporal-Period": [
-                                                    "last"
-                                                  ],
                                                   "Acuteness": [
                                                     "Acute"
+                                                  ],
+                                                  "Eq-Temporal-Period": [
+                                                    "last"
                                                   ]
                                                 },
                                                 "right": {
@@ -171,7 +168,9 @@
                                                 "pain"
                                               ],
                                               "Modifier": [
-                                                "chest",
+                                                "chest"
+                                              ],
+                                              "Stability": [
                                                 "uncontrolled"
                                               ],
                                               "Assertion": [
@@ -296,6 +295,9 @@
                               "Condition-Name": [
                                 "pulmonary infarction"
                               ],
+                              "Eq-Operator": [
+                                "within"
+                              ],
                               "Eq-Temporal-Unit": [
                                 "months"
                               ],
@@ -303,7 +305,7 @@
                                 "3"
                               ],
                               "Eq-Comparison": [
-                                "last 3 months"
+                                "within the last 3 months"
                               ],
                               "Eq-Temporal-Period": [
                                 "last"
@@ -416,7 +418,3 @@
           ],
           "Condition-Name": [
             "Pregnancy"
-          ]
-        }
-      }
-    },

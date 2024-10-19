@@ -29,25 +29,41 @@
               ]
             },
             "right": {
-              "OR": {
+              "AND": {
                 "left": {
                   "raw_text": "or"
                 },
                 "right": {
-                  "raw_text": "in remission attending the the outpatient clinics and inpatient of gastroenterology units",
-                  "Encounter": [
-                    "outpatient clinics",
-                    "inpatient"
-                  ],
-                  "Condition-Name": [
-                    "remission"
-                  ],
-                  "Condition": [
-                    "remission"
-                  ],
-                  "Provider": [
-                    "gastroenterology units"
-                  ]
+                  "NOT": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "in remission attending the the outpatient clinics",
+                          "Eq-Comparison": [
+                            "remission"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "remission"
+                          ],
+                          "Location": [
+                            "outpatient clinics"
+                          ],
+                          "Negation": [
+                            "no"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "and inpatient of gastroenterology units",
+                          "Provider": [
+                            "gastroenterology"
+                          ],
+                          "Location": [
+                            "inpatient"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -58,7 +74,7 @@
     "right": {
       "raw_text": "of Internal medicine department",
       "Provider": [
-        "Internal medicine department"
+        "Internal medicine"
       ]
     }
   }

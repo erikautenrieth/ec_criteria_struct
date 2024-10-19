@@ -32,6 +32,9 @@
                           ],
                           "Eq-Operator": [
                             "or older"
+                          ],
+                          "Ethnicity": [
+                            "race"
                           ]
                         }
                       }
@@ -47,14 +50,14 @@
                               "OR": {
                                 "left": {
                                   "raw_text": "No symptoms of ALS",
-                                  "Negation": [
-                                    "No"
-                                  ],
                                   "Assertion": [
                                     "symptoms"
                                   ],
                                   "Condition": [
                                     "ALS"
+                                  ],
+                                  "Negation": [
+                                    "No"
                                   ],
                                   "Condition-Name": [
                                     "ALS"
@@ -65,11 +68,11 @@
                                   "Condition": [
                                     "fronto-temporal dementia"
                                   ],
-                                  "Condition-Name": [
-                                    "fronto-temporal dementia"
-                                  ],
                                   "Study": [
                                     "enrollment"
+                                  ],
+                                  "Condition-Name": [
+                                    "fronto-temporal dementia"
                                   ]
                                 }
                               }
@@ -90,8 +93,14 @@
                       "Family-Member": [
                         "first degree relative"
                       ],
+                      "Eq-Comparison": [
+                        "had"
+                      ],
                       "Condition-Name": [
                         "ALS"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "had"
                       ],
                       "Modifier": [
                         "spectrum"
@@ -102,23 +111,29 @@
                       "Condition": [
                         "ALS"
                       ],
-                      "Modifier": [
-                        "spectrum"
+                      "Procedure": [
+                        "genetic testing"
                       ],
                       "Condition-Name": [
                         "ALS"
                       ],
-                      "Procedure": [
-                        "genetic testing"
+                      "Modifier": [
+                        "spectrum"
                       ],
                       "Procedure-Name": [
                         "genetic testing"
                       ],
-                      "Condition-Type": [
-                        "gene mutation"
+                      "Eq-Comparison": [
+                        "already"
                       ],
                       "Polarity": [
                         "positive"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "already"
+                      ],
+                      "Condition-Type": [
+                        "gene mutation"
                       ]
                     }
                   }
@@ -126,31 +141,37 @@
               }
             },
             "right": {
-              "raw_text": "- Willing to undergo genetic testing with option of whether or not to learn results",
-              "Procedure": [
-                "genetic testing"
-              ],
-              "Procedure-Name": [
-                "genetic testing"
-              ],
-              "Assertion": [
-                "Willing to"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "- Willing to undergo genetic testing",
+                  "Procedure": [
+                    "genetic testing"
+                  ],
+                  "Procedure-Name": [
+                    "genetic testing"
+                  ],
+                  "Assertion": [
+                    "Willing to"
+                  ],
+                  "Eq-Comparison": [
+                    "undergo"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "undergo"
+                  ]
+                },
+                "right": {
+                  "raw_text": "with option of whether or not to learn results",
+                  "Assertion": [
+                    "whether or not"
+                  ]
+                }
+              }
             }
           }
         },
         "right": {
           "raw_text": "- Willing to travel to Columbia University Irving Medical Center (CUIMC) every 6-24 months for study procedures",
-          "Eq-Temporal-Unit": [
-            "months"
-          ],
-          "Eq-Operator": [
-            "-"
-          ],
-          "Eq-Value": [
-            "6",
-            "24"
-          ],
           "Eq-Comparison": [
             "6-24 months"
           ],
@@ -159,6 +180,16 @@
           ],
           "Procedure": [
             "procedures"
+          ],
+          "Eq-Value": [
+            "6",
+            "24"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
           ],
           "Assertion": [
             "Willing to"

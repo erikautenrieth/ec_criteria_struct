@@ -89,8 +89,9 @@
                                     "Liver Metabolism Disorders"
                                   ],
                                   "Modifier": [
+                                    "renal",
                                     "kidneys",
-                                    "Renal"
+                                    "Liver"
                                   ],
                                   "Drug": [
                                     "EXPAREL"
@@ -104,8 +105,8 @@
                                   "Assertion": [
                                     "could"
                                   ],
-                                  "Reaction": [
-                                    "adverse reaction"
+                                  "Stability": [
+                                    "cleared"
                                   ]
                                 }
                               }
@@ -133,6 +134,7 @@
                       ],
                       "Procedure-Name": [
                         "surgery",
+                        "operative",
                         "analgesic treatment"
                       ],
                       "Modifier": [
@@ -175,11 +177,11 @@
                       "raw_text": "or condition discovered during surgery that may have complicated the patient's post surgical course such as vascular",
                       "Procedure": [
                         "surgery",
-                        "surgical"
+                        "operative"
                       ],
                       "Procedure-Name": [
                         "surgery",
-                        "surgical"
+                        "operative"
                       ],
                       "Condition": [
                         "condition"
@@ -197,19 +199,18 @@
                     "right": {
                       "raw_text": "or nerve involvement that was unknown before surgery.",
                       "Procedure": [
-                        "surgery"
+                        "surgery",
+                        "operative"
                       ],
                       "Procedure-Name": [
-                        "surgery"
+                        "surgery",
+                        "operative"
                       ],
                       "Condition": [
                         "nerve involvement"
                       ],
                       "Condition-Name": [
                         "nerve involvement"
-                      ],
-                      "Modifier": [
-                        "unknown"
                       ]
                     }
                   }
@@ -234,10 +235,6 @@
           ],
           "Drug-Name": [
             "liposomal bupivacaine"
-          ],
-          "Modifier": [
-            "chemical",
-            "biologic"
           ]
         }
       }
@@ -245,10 +242,7 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "- Pregnant women are excluded from this study because EXPAREL has the potential for teratogenic",
-          "Study": [
-            "study"
-          ],
+          "raw_text": "- Pregnant women are",
           "Condition": [
             "Pregnant"
           ],
@@ -257,57 +251,67 @@
           ],
           "Life-Stage-And-Gender": [
             "women"
-          ],
-          "Drug": [
-            "EXPAREL"
-          ],
-          "Drug-Name": [
-            "EXPAREL"
-          ],
-          "Assertion": [
-            "potential for"
-          ],
-          "Modifier": [
-            "teratogenic"
           ]
         },
         "right": {
-          "raw_text": "or abortifacient effects. Because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with EXPAREL, breastfeeding should be discontinued if the mother is treated with EXPAREL.",
-          "Drug": [
-            "EXPAREL"
-          ],
-          "Drug-Name": [
-            "EXPAREL"
-          ],
-          "Assertion": [
-            "potential",
-            "should be"
-          ],
-          "Risk": [
-            "risk"
-          ],
-          "Condition": [
-            "adverse events"
-          ],
-          "Procedure": [
-            "treatment"
-          ],
-          "Modifier": [
-            "abortifacient",
-            "unknown"
-          ],
-          "Condition-Name": [
-            "adverse events"
-          ],
-          "Family-Member": [
-            "mother"
-          ],
-          "Organism": [
-            "infants"
-          ],
-          "Condition-Type": [
-            "secondary"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "excluded from this study because EXPAREL has the potential for teratogenic",
+              "Study": [
+                "study"
+              ],
+              "Drug": [
+                "EXPAREL"
+              ],
+              "Drug-Name": [
+                "EXPAREL"
+              ],
+              "Assertion": [
+                "potential for"
+              ],
+              "Modifier": [
+                "teratogenic"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or abortifacient effects. Because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with EXPAREL, breastfeeding should be discontinued if the mother is treated with EXPAREL.",
+                  "Drug": [
+                    "EXPAREL"
+                  ],
+                  "Drug-Name": [
+                    "EXPAREL"
+                  ],
+                  "Assertion": [
+                    "potential",
+                    "should be"
+                  ],
+                  "Risk": [
+                    "risk"
+                  ],
+                  "Condition": [
+                    "adverse events",
+                    "breastfeeding"
+                  ],
+                  "Condition-Name": [
+                    "adverse events",
+                    "breastfeeding"
+                  ],
+                  "Family-Member": [
+                    "mother",
+                    "infants"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Modifier": [
+                    "abortifacient"
+                  ]
+                }
+              }
+            }
+          }
         }
       }
     }

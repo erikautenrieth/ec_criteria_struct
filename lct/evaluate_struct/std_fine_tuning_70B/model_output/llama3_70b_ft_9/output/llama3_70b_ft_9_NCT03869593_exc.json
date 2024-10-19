@@ -118,15 +118,10 @@
                         "right": {
                           "raw_text": "- Congenital immune deficiency",
                           "Condition": [
-                            "Constitutional immune deficiency",
-                            "immune deficiency"
+                            "Congenital immune deficiency"
                           ],
                           "Condition-Name": [
-                            "Constitutional immune deficiency",
-                            "immune deficiency"
-                          ],
-                          "Modifier": [
-                            "Congenital"
+                            "Congenital immune deficiency"
                           ]
                         }
                       }
@@ -164,44 +159,20 @@
                 "right": {
                   "AND": {
                     "left": {
-                      "raw_text": "- Urinary obstruction",
-                      "Condition": [
-                        "Urinary obstruction"
-                      ],
-                      "Condition-Name": [
-                        "Urinary obstruction"
-                      ]
+                      "raw_text": "-"
                     },
                     "right": {
                       "NOT": {
                         "left": {
-                          "raw_text": "not lifted within the first 24 hours of management",
-                          "Eq-Operator": [
-                            "within"
-                          ],
-                          "Eq-Value": [
-                            "24"
-                          ],
-                          "Eq-Comparison": [
-                            "within the first 24 hours"
+                          "raw_text": "Urinary obstruction",
+                          "Condition": [
+                            "Urinary obstruction"
                           ],
                           "Condition-Name": [
                             "Urinary obstruction"
                           ],
-                          "Eq-Temporal-Recency": [
-                            "first"
-                          ],
-                          "Eq-Temporal-Unit": [
-                            "hours"
-                          ],
-                          "Condition": [
-                            "Urinary obstruction"
-                          ],
                           "Negation": [
-                            "not"
-                          ],
-                          "Procedure": [
-                            "management"
+                            "no"
                           ]
                         }
                       }
@@ -211,24 +182,18 @@
               }
             },
             "right": {
-              "raw_text": "- Intra-abdominal infection collected undrained in the first 24 hours of management",
-              "Eq-Value": [
-                "24"
-              ],
+              "raw_text": "not lifted within the first 24 hours of management",
               "Eq-Operator": [
                 "within"
+              ],
+              "Eq-Value": [
+                "24"
               ],
               "Eq-Comparison": [
                 "within the first 24 hours"
               ],
-              "Condition": [
-                "Intra-abdominal infection"
-              ],
-              "Modifier": [
-                "collected undrained"
-              ],
               "Condition-Name": [
-                "Intra-abdominal infection"
+                "management"
               ],
               "Eq-Temporal-Recency": [
                 "first"
@@ -236,51 +201,60 @@
               "Eq-Temporal-Unit": [
                 "hours"
               ],
-              "Procedure": [
-                "management"
+              "Negation": [
+                "no"
               ]
             }
           }
         },
         "right": {
-          "raw_text": "- primary infectious focus represented by mechanically ventilated pneumonia",
+          "raw_text": "- Intra-abdominal infection collected undrained in the first 24 hours of management",
           "Condition": [
-            "pneumonia"
+            "Intra-abdominal infection"
           ],
-          "Modifier": [
-            "primary infectious focus",
-            "mechanically ventilated"
+          "Eq-Operator": [
+            "within"
+          ],
+          "Eq-Value": [
+            "24"
+          ],
+          "Eq-Comparison": [
+            "within the first 24 hours"
           ],
           "Condition-Name": [
-            "pneumonia"
+            "Intra-abdominal infection"
+          ],
+          "Eq-Temporal-Recency": [
+            "first"
+          ],
+          "Eq-Temporal-Unit": [
+            "hours"
+          ],
+          "Modifier": [
+            "collected undrained"
           ]
         }
       }
     },
     "right": {
-      "OR": {
-        "left": {
-          "raw_text": "- Pregnant",
-          "Condition": [
-            "Pregnant"
-          ],
-          "Condition-Name": [
-            "Pregnant"
-          ]
-        },
-        "right": {
-          "raw_text": "or lactating woman",
-          "Condition": [
-            "lactating"
-          ],
-          "Condition-Name": [
-            "lactating"
-          ],
-          "Life-Stage-And-Gender": [
-            "woman"
-          ]
-        }
-      }
+      "raw_text": "- primary infectious focus represented by mechanically ventilated pneumonia",
+      "Condition": [
+        "pneumonia",
+        "infectious focus"
+      ],
+      "Procedure": [
+        "mechanically ventilated"
+      ],
+      "Condition-Name": [
+        "pneumonia",
+        "infectious focus"
+      ],
+      "Procedure-Name": [
+        "mechanically ventilated"
+      ],
+      "Modifier": [
+        "primary"
+      ]
     }
   }
 }

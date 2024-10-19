@@ -7,135 +7,147 @@
             "left": {
               "AND": {
                 "left": {
-                  "raw_text": "- Children",
-                  "Life-Stage-And-Gender": [
-                    "Children"
-                  ],
-                  "Eq-Operator": [
-                    "-"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Children",
+                      "Life-Stage-And-Gender": [
+                        "Children"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "who are 6-12 years old，in Chongqing",
+                      "Eq-Comparison": [
+                        "6-12 years"
+                      ],
+                      "Age": [
+                        "old"
+                      ],
+                      "Eq-Value": [
+                        "6",
+                        "12"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "years"
+                      ],
+                      "Location": [
+                        "Chongqing"
+                      ]
+                    }
+                  }
                 },
                 "right": {
-                  "raw_text": "who are 6-12 years old，in Chongqing",
-                  "Eq-Temporal-Unit": [
-                    "years"
+                  "raw_text": "- After birth, three injections of Hep B were inoculated in time according to the procedure of 0, 1 and 6 months（The vaccination certificate record）",
+                  "Birth": [
+                    "birth"
                   ],
-                  "Age": [
-                    "old"
+                  "Eq-Comparison": [
+                    "0, 1 and 6 months",
+                    "three"
+                  ],
+                  "Procedure": [
+                    "injections",
+                    "vaccination"
                   ],
                   "Eq-Operator": [
                     "-"
                   ],
                   "Eq-Value": [
+                    "0",
+                    "1",
                     "6",
-                    "12"
+                    "three"
                   ],
-                  "Eq-Comparison": [
-                    "6-12 years"
+                  "Eq-Temporal-Unit": [
+                    "months"
                   ],
-                  "Location": [
-                    "Chongqing"
+                  "Procedure-Name": [
+                    "injections",
+                    "vaccination"
+                  ],
+                  "Drug": [
+                    "Hep B"
+                  ],
+                  "Drug-Name": [
+                    "Hep B"
                   ]
                 }
               }
             },
             "right": {
-              "raw_text": "- After birth, three injections of Hep B were inoculated in time according to the procedure of 0, 1 and 6 months（The vaccination certificate record）",
-              "Birth": [
-                "birth"
-              ],
-              "Eq-Operator": [
-                "-"
-              ],
-              "Eq-Value": [
-                "0",
-                "1",
-                "6"
-              ],
-              "Drug": [
-                "Hep B"
-              ],
-              "Drug-Name": [
-                "Hep B"
-              ],
-              "Eq-Comparison": [
-                "0, 1 and 6 months"
-              ],
-              "Eq-Temporal-Unit": [
-                "months"
-              ],
-              "Procedure": [
-                "injections"
-              ],
-              "Procedure-Name": [
-                "injections"
-              ],
-              "Eq-Unit": [
-                "three"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "-",
+                  "Eq-Operator": [
+                    "-"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "No HBV booster vaccine given since primary HBV immunization",
+                      "Negation": [
+                        "No"
+                      ],
+                      "Drug": [
+                        "HBV booster vaccine",
+                        "HBV immunization"
+                      ],
+                      "Drug-Name": [
+                        "HBV booster vaccine",
+                        "HBV immunization"
+                      ],
+                      "Eq-Comparison": [
+                        "given"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "given"
+                      ],
+                      "Modifier": [
+                        "primary"
+                      ]
+                    }
+                  }
+                }
+              }
             }
           }
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "-",
-              "Eq-Operator": [
-                "-"
-              ]
-            },
-            "right": {
-              "NOT": {
-                "left": {
-                  "raw_text": "No HBV booster vaccine given since primary HBV immunization",
-                  "Negation": [
-                    "No"
-                  ],
-                  "Drug": [
-                    "HBV booster vaccine",
-                    "HBV immunization"
-                  ],
-                  "Drug-Name": [
-                    "HBV booster vaccine",
-                    "HBV immunization"
-                  ],
-                  "Eq-Comparison": [
-                    "given"
-                  ],
-                  "Eq-Temporal-Period": [
-                    "given"
-                  ],
-                  "Modifier": [
-                    "primary"
-                  ]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "right": {
-      "OR": {
-        "left": {
-          "raw_text": "- Children",
+          "raw_text": "- Children or guardian knew and agreed to accept the study",
+          "Study": [
+            "study"
+          ],
           "Life-Stage-And-Gender": [
             "Children"
           ],
           "Eq-Operator": [
             "-"
           ]
-        },
-        "right": {
-          "raw_text": "or guardian knew and agreed to accept the study",
-          "Study": [
-            "study"
-          ],
-          "Assertion": [
-            "agreed to"
-          ]
         }
       }
+    },
+    "right": {
+      "raw_text": "- Follow - up study and blood collection after vaccination can be accepted",
+      "Study": [
+        "study"
+      ],
+      "Eq-Operator": [
+        "-"
+      ],
+      "Procedure": [
+        "vaccination",
+        "blood collection"
+      ],
+      "Procedure-Name": [
+        "vaccination",
+        "blood collection"
+      ],
+      "Assertion": [
+        "can be"
+      ]
     }
   }
 }

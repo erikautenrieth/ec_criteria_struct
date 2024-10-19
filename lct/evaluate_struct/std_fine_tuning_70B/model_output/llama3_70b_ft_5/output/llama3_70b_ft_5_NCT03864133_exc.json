@@ -50,7 +50,7 @@
                                     "OCT"
                                   ],
                                   "Assertion": [
-                                    "sit steady and upright"
+                                    "to sit steady and upright"
                                   ],
                                   "Negation": [
                                     "Inability"
@@ -73,8 +73,8 @@
                                     "posterior capsular rupture"
                                   ],
                                   "Condition-Name": [
-                                    "Complications",
-                                    "posterior capsular rupture"
+                                    "posterior capsular rupture",
+                                    "Complications"
                                   ]
                                 },
                                 "right": {
@@ -169,8 +169,8 @@
                     "OCT"
                   ],
                   "Procedure-Name": [
-                    "OCT",
-                    "operative"
+                    "operative",
+                    "OCT"
                   ],
                   "Condition": [
                     "epiretinal membrane"
@@ -187,70 +187,85 @@
                 "operative"
               ],
               "Condition": [
-                "lens fragment"
+                "Retained lens fragment"
               ],
               "Condition-Name": [
-                "lens fragment"
-              ],
-              "Modifier": [
-                "Retained"
+                "Retained lens fragment"
               ]
             }
           }
         },
         "right": {
-          "raw_text": "- Inability to return for follow appointments",
-          "Negation": [
-            "Inability"
-          ],
-          "Assertion": [
-            "return"
-          ],
-          "Encounter": [
-            "appointments"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "-"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Inability to return for follow appointments",
+                  "Negation": [
+                    "Inability"
+                  ],
+                  "Assertion": [
+                    "to return"
+                  ],
+                  "Encounter": [
+                    "appointments"
+                  ]
+                }
+              }
+            }
+          }
         }
       }
     },
     "right": {
-      "OR": {
+      "AND": {
         "left": {
-          "raw_text": "- Female patients who are pregnant,",
+          "raw_text": "- Female patients",
           "Life-Stage-And-Gender": [
             "Female"
-          ],
-          "Condition": [
-            "pregnant"
-          ],
-          "Condition-Name": [
-            "pregnant"
           ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "lactating",
+              "raw_text": "who are pregnant,",
               "Condition": [
-                "lactating"
+                "pregnant"
               ],
               "Condition-Name": [
-                "lactating"
+                "pregnant"
               ]
             },
             "right": {
-              "raw_text": "or planning to become pregnant during the course of treatment.",
-              "Procedure": [
-                "treatment"
-              ],
-              "Condition": [
-                "pregnant"
-              ],
-              "Condition-Name": [
-                "pregnant"
-              ],
-              "Assertion": [
-                "planning to become"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "lactating",
+                  "Condition": [
+                    "lactating"
+                  ],
+                  "Condition-Name": [
+                    "lactating"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or planning to become pregnant during the course of treatment.",
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Assertion": [
+                    "planning to"
+                  ],
+                  "Condition": [
+                    "pregnant"
+                  ],
+                  "Condition-Name": [
+                    "pregnant"
+                  ]
+                }
+              }
             }
           }
         }

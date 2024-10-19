@@ -200,43 +200,47 @@
                   "OR": {
                     "left": {
                       "raw_text": "- Known",
-                      "Negation": [
-                        "no"
+                      "Modifier": [
+                        "Known"
                       ]
                     },
                     "right": {
-                      "OR": {
+                      "NOT": {
                         "left": {
-                          "raw_text": "or suspected non-compliance,",
-                          "Assertion": [
-                            "suspected"
-                          ],
-                          "Condition": [
-                            "non-compliance"
-                          ],
-                          "Condition-Name": [
-                            "non-compliance"
-                          ]
-                        },
-                        "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "drug",
-                              "Modifier": [
-                                "drug"
+                              "raw_text": "or suspected non-compliance,",
+                              "Negation": [
+                                "non-compliance"
+                              ],
+                              "Assertion": [
+                                "suspected"
+                              ],
+                              "Condition-Name": [
+                                "non-compliance"
                               ]
                             },
                             "right": {
-                              "raw_text": "or alcohol abuse",
-                              "Condition-Name": [
-                                "abuse"
-                              ],
-                              "Modifier": [
-                                "alcohol"
-                              ],
-                              "Condition": [
-                                "abuse"
-                              ]
+                              "OR": {
+                                "left": {
+                                  "raw_text": "drug",
+                                  "Modifier": [
+                                    "drug"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or alcohol abuse",
+                                  "Condition-Name": [
+                                    "abuse"
+                                  ],
+                                  "Modifier": [
+                                    "alcohol"
+                                  ],
+                                  "Condition": [
+                                    "abuse"
+                                  ]
+                                }
+                              }
                             }
                           }
                         }
@@ -300,16 +304,10 @@
             "hospitalisation"
           ],
           "Assertion": [
-            "likely to"
-          ],
-          "Condition": [
-            "psychiatric"
-          ],
-          "Condition-Name": [
-            "psychiatric"
+            "very likely"
           ],
           "Modifier": [
-            "drug"
+            "psychiatric"
           ]
         }
       }

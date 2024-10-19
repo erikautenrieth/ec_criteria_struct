@@ -14,22 +14,22 @@
                           "AND": {
                             "left": {
                               "raw_text": "- Have participated in a previous tavilermide (MIM-D3) study;",
-                              "Drug": [
-                                "tavilermide",
-                                "MIM-D3"
+                              "Eq-Comparison": [
+                                "previous"
                               ],
-                              "Drug-Name": [
+                              "Drug": [
                                 "tavilermide",
                                 "MIM-D3"
                               ],
                               "Study": [
                                 "study"
                               ],
-                              "Eq-Comparison": [
-                                "previous"
-                              ],
                               "Eq-Temporal-Period": [
                                 "previous"
+                              ],
+                              "Drug-Name": [
+                                "tavilermide",
+                                "MIM-D3"
                               ]
                             },
                             "right": {
@@ -37,95 +37,110 @@
                               "Observation": [
                                 "slit lamp findings"
                               ],
-                              "Observation-Name": [
-                                "slit lamp findings"
+                              "Eq-Comparison": [
+                                "Visit 1"
                               ],
                               "Severity": [
                                 "significant"
                               ],
+                              "Observation-Name": [
+                                "slit lamp findings"
+                              ],
+                              "Eq-Value": [
+                                "1"
+                              ],
                               "Study": [
-                                "Visit 1"
+                                "Visit"
                               ]
                             }
                           }
                         },
                         "right": {
                           "raw_text": "- Have a history of lacrimal duct obstruction within 12 months of Visit 1;",
-                          "Condition": [
-                            "lacrimal duct obstruction"
+                          "Eq-Comparison": [
+                            "within 12 months",
+                            "history",
+                            "Visit 1"
                           ],
-                          "Condition-Name": [
+                          "Condition": [
                             "lacrimal duct obstruction"
                           ],
                           "Eq-Operator": [
                             "within"
                           ],
+                          "Eq-Value": [
+                            "12",
+                            "1"
+                          ],
                           "Eq-Temporal-Unit": [
                             "months"
                           ],
-                          "Eq-Value": [
-                            "12"
-                          ],
-                          "Eq-Comparison": [
-                            "within 12 months",
-                            "history"
+                          "Condition-Name": [
+                            "lacrimal duct obstruction"
                           ],
                           "Eq-Temporal-Period": [
                             "history"
                           ],
                           "Study": [
-                            "Visit 1"
+                            "Visit"
                           ]
                         }
                       }
                     },
                     "right": {
                       "raw_text": "- Have an uncontrolled systemic disease;",
-                      "Condition": [
-                        "disease"
-                      ],
                       "Modifier": [
                         "uncontrolled systemic"
+                      ],
+                      "Condition": [
+                        "disease"
                       ]
                     }
                   }
                 },
                 "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "- Be a woman who is pregnant,",
+                      "raw_text": "- Be a woman",
                       "Life-Stage-And-Gender": [
                         "woman"
-                      ],
-                      "Condition": [
-                        "pregnant"
-                      ],
-                      "Condition-Name": [
-                        "pregnant"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "nursing",
+                          "raw_text": "who is pregnant,",
                           "Condition": [
-                            "nursing"
+                            "pregnant"
                           ],
                           "Condition-Name": [
-                            "nursing"
+                            "pregnant"
                           ]
                         },
                         "right": {
-                          "raw_text": "or planning a pregnancy;",
-                          "Condition": [
-                            "pregnancy"
-                          ],
-                          "Condition-Name": [
-                            "pregnancy"
-                          ],
-                          "Assertion": [
-                            "planning"
-                          ]
+                          "OR": {
+                            "left": {
+                              "raw_text": "nursing",
+                              "Condition": [
+                                "nursing"
+                              ],
+                              "Condition-Name": [
+                                "nursing"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or planning a pregnancy;",
+                              "Assertion": [
+                                "planning"
+                              ],
+                              "Condition": [
+                                "pregnancy"
+                              ],
+                              "Condition-Name": [
+                                "pregnancy"
+                              ]
+                            }
+                          }
                         }
                       }
                     }
@@ -193,20 +208,20 @@
               "AND": {
                 "left": {
                   "raw_text": "or be in a situation which the investigator feels may put the subject at significant risk, may confound the study results,",
+                  "Study": [
+                    "study"
+                  ],
                   "Risk": [
                     "risk"
                   ],
                   "Severity": [
                     "significant"
                   ],
-                  "Study": [
-                    "study"
+                  "Stability": [
+                    "confound"
                   ],
                   "Assertion": [
                     "may"
-                  ],
-                  "Condition": [
-                    "situation"
                   ]
                 },
                 "right": {
@@ -214,11 +229,11 @@
                   "Study": [
                     "study"
                   ],
-                  "Severity": [
-                    "significant"
-                  ],
                   "Assertion": [
                     "may"
+                  ],
+                  "Severity": [
+                    "significant"
                   ],
                   "Stability": [
                     "interfere"
@@ -232,23 +247,23 @@
     },
     "right": {
       "raw_text": "- Be currently enrolled in an investigational drug or device study or have used an investigational drug or device within 45 days prior to Visit 1.",
-      "Eq-Operator": [
-        "within"
-      ],
-      "Eq-Temporal-Unit": [
-        "days"
-      ],
-      "Eq-Value": [
-        "45"
-      ],
       "Eq-Comparison": [
         "within 45 days",
         "currently"
       ],
       "Study": [
         "study",
-        "investigational drug or device study",
-        "Visit 1"
+        "Visit"
+      ],
+      "Eq-Operator": [
+        "within"
+      ],
+      "Eq-Value": [
+        "45",
+        "1"
+      ],
+      "Eq-Temporal-Unit": [
+        "days"
       ],
       "Eq-Temporal-Period": [
         "currently"

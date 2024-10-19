@@ -98,11 +98,11 @@
                                                       "Modifier": [
                                                         "technically inadequate"
                                                       ],
-                                                      "Procedure": [
+                                                      "Condition-Name": [
                                                         "CDUS"
                                                       ],
-                                                      "Procedure-Name": [
-                                                        "CDUS"
+                                                      "Eq-Operator": [
+                                                        "to"
                                                       ]
                                                     }
                                                   }
@@ -117,14 +117,18 @@
                                 },
                                 "right": {
                                   "raw_text": "- Delay from onset of symptoms to inclusion of more than 10 days",
-                                  "Eq-Comparison": [
-                                    "more than 10 days"
-                                  ],
                                   "Assertion": [
                                     "symptoms"
                                   ],
+                                  "Eq-Comparison": [
+                                    "onset",
+                                    "more than 10 days"
+                                  ],
                                   "Study": [
                                     "inclusion"
+                                  ],
+                                  "Eq-Temporal-Recency": [
+                                    "onset"
                                   ],
                                   "Eq-Operator": [
                                     "more than"
@@ -135,10 +139,10 @@
                                   "Eq-Temporal-Unit": [
                                     "days"
                                   ],
-                                  "Condition-Type": [
+                                  "Condition-Name": [
                                     "Delay"
                                   ],
-                                  "Condition-Name": [
+                                  "Condition": [
                                     "Delay"
                                   ]
                                 }
@@ -252,10 +256,11 @@
                         "protocol"
                       ],
                       "Encounter": [
-                        "visits"
+                        "visits",
+                        "contacts"
                       ],
-                      "Other": [
-                        "other"
+                      "Eq-Operator": [
+                        "to"
                       ]
                     }
                   }
@@ -297,12 +302,12 @@
       "Study": [
         "enrolled"
       ],
-      "Modifier": [
-        "diagnostic"
-      ],
       "Condition-Name": [
         "deep vein thrombosis",
         "DVT"
+      ],
+      "Eq-Operator": [
+        "to"
       ]
     }
   }

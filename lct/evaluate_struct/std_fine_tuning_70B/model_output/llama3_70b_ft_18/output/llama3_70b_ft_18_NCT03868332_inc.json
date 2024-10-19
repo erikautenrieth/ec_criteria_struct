@@ -29,54 +29,36 @@
               ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "or"
-                },
-                "right": {
-                  "NOT": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "in remission attending the the outpatient clinics",
-                          "Encounter": [
-                            "attending"
-                          ],
-                          "Location": [
-                            "outpatient clinics"
-                          ],
-                          "Condition-Name": [
-                            "remission"
-                          ],
-                          "Condition": [
-                            "remission"
-                          ],
-                          "Negation": [
-                            "not"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "and inpatient of gastroenterology units",
-                          "Location": [
-                            "inpatient",
-                            "gastroenterology units"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "or"
             }
           }
         }
       }
     },
     "right": {
-      "raw_text": "of Internal medicine department",
-      "Provider": [
-        "Internal medicine department"
-      ]
+      "OR": {
+        "left": {
+          "raw_text": "in remission attending the the outpatient clinics",
+          "Encounter": [
+            "outpatient clinics"
+          ],
+          "Condition-Name": [
+            "remission"
+          ],
+          "Condition": [
+            "remission"
+          ]
+        },
+        "right": {
+          "raw_text": "and inpatient of gastroenterology units",
+          "Encounter": [
+            "inpatient"
+          ],
+          "Provider": [
+            "gastroenterology"
+          ]
+        }
+      }
     }
   }
 }

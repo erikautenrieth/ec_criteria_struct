@@ -100,10 +100,10 @@
                                                     "cognitive"
                                                   ],
                                                   "Eq-Comparison": [
-                                                    "medical history"
+                                                    "history"
                                                   ],
                                                   "Eq-Temporal-Period": [
-                                                    "medical history"
+                                                    "history"
                                                   ]
                                                 },
                                                 "right": {
@@ -141,10 +141,13 @@
                                       "OR": {
                                         "left": {
                                           "raw_text": "- Majors under trusteeship",
-                                          "Observation": [
-                                            "under trusteeship"
+                                          "Eq-Temporal-Unit": [
+                                            "M"
                                           ],
                                           "Observation-Name": [
+                                            "under trusteeship"
+                                          ],
+                                          "Observation": [
                                             "under trusteeship"
                                           ]
                                         },
@@ -191,6 +194,9 @@
                             "right": {
                               "raw_text": "- Minors,",
                               "Eq-Temporal-Unit": [
+                                "M"
+                              ],
+                              "Life-Stage-And-Gender": [
                                 "Minors"
                               ]
                             }
@@ -236,24 +242,24 @@
                     "right": {
                       "raw_text": "- Profiting of a medical help from government (AME),",
                       "Eq-Temporal-Unit": [
-                        "medical help"
+                        "M"
                       ]
                     }
                   }
                 },
                 "right": {
                   "raw_text": "- Not contactable after care,",
-                  "Eq-Comparison": [
-                    "after care"
+                  "Eq-Temporal-Unit": [
+                    "c"
                   ],
-                  "Eq-Temporal-Period": [
-                    "after care"
+                  "Negation": [
+                    "Not"
                   ],
-                  "Condition": [
-                    "Not contactable"
+                  "Assertion": [
+                    "contactable"
                   ],
-                  "Condition-Name": [
-                    "Not contactable"
+                  "Encounter": [
+                    "care"
                   ]
                 }
               }
@@ -299,20 +305,15 @@
             "left": {
               "raw_text": "incompatible with musicotherapy or inability to use Music-care®.",
               "Procedure": [
-                "musicotherapy"
-              ],
-              "Procedure-Name": [
-                "musicotherapy"
-              ],
-              "Drug": [
+                "musicotherapy",
                 "Music-care"
               ],
-              "Drug-Name": [
+              "Procedure-Name": [
+                "musicotherapy",
                 "Music-care"
               ],
               "Negation": [
-                "incompatible",
-                "inability"
+                "incompatible"
               ],
               "Assertion": [
                 "inability"

@@ -140,10 +140,10 @@
                     "right": {
                       "raw_text": "6. Psychiatric history",
                       "Condition": [
-                        "Psychiatric"
+                        "Psychiatric history"
                       ],
                       "Condition-Name": [
-                        "Psychiatric"
+                        "Psychiatric history"
                       ],
                       "Eq-Comparison": [
                         "history"
@@ -163,19 +163,21 @@
                     "surgery"
                   ],
                   "Condition": [
+                    "brain tumour",
                     "tumour"
                   ],
                   "Condition-Name": [
+                    "brain tumour",
                     "tumour"
-                  ],
-                  "Modifier": [
-                    "brain"
                   ],
                   "Eq-Comparison": [
                     "Previous"
                   ],
                   "Eq-Temporal-Period": [
                     "Previous"
+                  ],
+                  "Modifier": [
+                    "brain"
                   ]
                 }
               }
@@ -188,14 +190,14 @@
               "Condition-Name": [
                 "glioma"
               ],
-              "Polarity": [
-                "low-grade"
-              ],
               "Eq-Comparison": [
                 "Previous"
               ],
               "Eq-Temporal-Period": [
                 "Previous"
+              ],
+              "Polarity": [
+                "low-grade"
               ]
             }
           }
@@ -210,64 +212,65 @@
               "Condition-Name": [
                 "malignancy"
               ],
-              "Modifier": [
-                "primary"
-              ],
               "Eq-Comparison": [
-                "Second"
+                "Second primary"
               ],
-              "Eq-Temporal-Period": [
-                "Second"
+              "Eq-Temporal-Recency": [
+                "Second primary"
               ]
             },
             "right": {
-              "OR": {
+              "NOT": {
                 "left": {
-                  "raw_text": "within the past 5 years with the exception of adequately treated in situ carcinoma of any organ",
-                  "Eq-Operator": [
-                    "within"
-                  ],
-                  "Eq-Temporal-Unit": [
-                    "years"
-                  ],
-                  "Eq-Value": [
-                    "5"
-                  ],
-                  "Eq-Comparison": [
-                    "within the past 5 years"
-                  ],
-                  "Eq-Temporal-Period": [
-                    "past"
-                  ],
-                  "Condition": [
-                    "carcinoma"
-                  ],
-                  "Condition-Name": [
-                    "carcinoma"
-                  ],
-                  "Modifier": [
-                    "in situ",
-                    "organs"
-                  ],
-                  "Exception": [
-                    "exception"
-                  ],
-                  "Procedure": [
-                    "treated"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or basal cell carcinoma of the skin.",
-                  "Condition": [
-                    "carcinoma"
-                  ],
-                  "Condition-Name": [
-                    "carcinoma"
-                  ],
-                  "Modifier": [
-                    "basal cell",
-                    "skin"
-                  ]
+                  "OR": {
+                    "left": {
+                      "raw_text": "within the past 5 years with the exception of adequately treated in situ carcinoma of any organ",
+                      "Eq-Operator": [
+                        "within"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "years"
+                      ],
+                      "Eq-Value": [
+                        "5"
+                      ],
+                      "Eq-Comparison": [
+                        "within the past 5 years"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "past"
+                      ],
+                      "Condition": [
+                        "carcinoma"
+                      ],
+                      "Condition-Name": [
+                        "carcinoma"
+                      ],
+                      "Modifier": [
+                        "in situ",
+                        "organ"
+                      ],
+                      "Procedure": [
+                        "treated"
+                      ],
+                      "Exception": [
+                        "exception"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or basal cell carcinoma of the skin.",
+                      "Condition": [
+                        "carcinoma"
+                      ],
+                      "Condition-Name": [
+                        "carcinoma"
+                      ],
+                      "Modifier": [
+                        "basal cell",
+                        "skin"
+                      ]
+                    }
+                  }
                 }
               }
             }

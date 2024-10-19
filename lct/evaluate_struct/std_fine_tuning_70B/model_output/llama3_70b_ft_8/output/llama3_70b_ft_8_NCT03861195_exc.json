@@ -120,30 +120,44 @@
           "OR": {
             "left": {
               "raw_text": "- other internal",
-              "Modifier": [
-                "internal"
-              ],
               "Other": [
                 "other"
+              ],
+              "Modifier": [
+                "internal"
               ]
             },
             "right": {
-              "raw_text": "or anatomical criteria that preclude a minimal invasive approach",
-              "Modifier": [
-                "anatomical"
-              ],
-              "Criteria-Count": [
-                "criteria"
-              ],
-              "Contraindication": [
-                "preclude"
-              ],
-              "Procedure": [
-                "minimal invasive approach"
-              ],
-              "Procedure-Name": [
-                "minimal invasive approach"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "or anatomical criteria that",
+                  "Modifier": [
+                    "anatomical"
+                  ],
+                  "Criteria-Count": [
+                    "criteria"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "preclude a minimal invasive approach",
+                      "Procedure": [
+                        "invasive approach"
+                      ],
+                      "Procedure-Name": [
+                        "invasive approach"
+                      ],
+                      "Negation": [
+                        "preclude"
+                      ],
+                      "Modifier": [
+                        "minimal"
+                      ]
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -151,7 +165,7 @@
     },
     "right": {
       "raw_text": "- inability to understand patient information",
-      "Assertion": [
+      "Negation": [
         "inability"
       ]
     }

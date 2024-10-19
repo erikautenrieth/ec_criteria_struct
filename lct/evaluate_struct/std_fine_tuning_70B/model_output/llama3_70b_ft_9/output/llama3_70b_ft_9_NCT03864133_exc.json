@@ -40,16 +40,19 @@
                                   }
                                 },
                                 "right": {
-                                  "raw_text": "- Inability to sit steady and upright for the Optical Coherence Tomography (OCT).",
+                                  "raw_text": "- Inability to sit steady and upright for the Optical Coherence tomography (OCT).",
                                   "Procedure": [
-                                    "Optical Coherence Tomography",
+                                    "Optical Coherence tomography",
                                     "OCT"
                                   ],
                                   "Procedure-Name": [
-                                    "Optical Coherence Tomography",
+                                    "Optical Coherence tomography",
                                     "OCT"
                                   ],
                                   "Assertion": [
+                                    "Inability"
+                                  ],
+                                  "Negation": [
                                     "Inability"
                                   ],
                                   "Modifier": [
@@ -221,51 +224,44 @@
       }
     },
     "right": {
-      "AND": {
+      "OR": {
         "left": {
-          "raw_text": "- Female patients",
+          "raw_text": "- Female patients who are pregnant,",
           "Life-Stage-And-Gender": [
             "Female"
+          ],
+          "Condition": [
+            "pregnant"
+          ],
+          "Condition-Name": [
+            "pregnant"
           ]
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "who are pregnant,",
+              "raw_text": "lactating",
+              "Condition": [
+                "lactating"
+              ],
+              "Condition-Name": [
+                "lactating"
+              ]
+            },
+            "right": {
+              "raw_text": "or planning to become pregnant during the course of treatment.",
               "Condition": [
                 "pregnant"
               ],
               "Condition-Name": [
                 "pregnant"
+              ],
+              "Assertion": [
+                "planning to become"
+              ],
+              "Procedure": [
+                "treatment"
               ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "lactating",
-                  "Condition": [
-                    "lactating"
-                  ],
-                  "Condition-Name": [
-                    "lactating"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or planning to become pregnant during the course of treatment.",
-                  "Procedure": [
-                    "treatment"
-                  ],
-                  "Condition": [
-                    "pregnant"
-                  ],
-                  "Condition-Name": [
-                    "pregnant"
-                  ],
-                  "Assertion": [
-                    "planning to become"
-                  ]
-                }
-              }
             }
           }
         }

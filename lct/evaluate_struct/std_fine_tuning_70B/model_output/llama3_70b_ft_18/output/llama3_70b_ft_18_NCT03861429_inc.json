@@ -95,15 +95,16 @@
                                                     "right": {
                                                       "raw_text": "- Makes Self Understood = <1 (MDS B0700)/present in medical record",
                                                       "Eq-Comparison": [
-                                                        "= <1"
+                                                        "<1",
+                                                        "= 1"
                                                       ],
                                                       "Observation": [
                                                         "Makes Self Understood"
                                                       ],
                                                       "Eq-Operator": [
                                                         "=",
-                                                        "<",
-                                                        "-"
+                                                        "-",
+                                                        "<"
                                                       ],
                                                       "Eq-Value": [
                                                         "1"
@@ -120,15 +121,16 @@
                                                 "right": {
                                                   "raw_text": "- Understood By Others = <1 (MDS B0800)/present in medical record",
                                                   "Eq-Comparison": [
-                                                    "= <1"
+                                                    "<1",
+                                                    "= 1"
                                                   ],
                                                   "Observation": [
                                                     "Understood By Others"
                                                   ],
                                                   "Eq-Operator": [
                                                     "=",
-                                                    "<",
-                                                    "-"
+                                                    "-",
+                                                    "<"
                                                   ],
                                                   "Eq-Value": [
                                                     "1"
@@ -147,12 +149,9 @@
                                               "Eq-Comparison": [
                                                 "at least 2 weeks"
                                               ],
-                                              "Residence": [
-                                                "Reside"
-                                              ],
                                               "Eq-Operator": [
-                                                "at least",
-                                                "-"
+                                                "-",
+                                                "at least"
                                               ],
                                               "Eq-Value": [
                                                 "2"
@@ -163,11 +162,11 @@
                                               "Location": [
                                                 "facility"
                                               ],
-                                              "Observation": [
-                                                "long-term resident"
+                                              "Encounter": [
+                                                "Reside"
                                               ],
-                                              "Observation-Name": [
-                                                "long-term resident"
+                                              "Assertion": [
+                                                "identified as"
                                               ]
                                             }
                                           }
@@ -181,17 +180,15 @@
                                             ">65 years"
                                           ],
                                           "Eq-Operator": [
+                                            "-",
                                             ">"
-                                          ],
-                                          "Eq-Value": [
-                                            "65",
-                                            "6"
                                           ],
                                           "Eq-Temporal-Unit": [
                                             "years"
                                           ],
-                                          "Eq-Unit": [
-                                            "g"
+                                          "Eq-Value": [
+                                            "65",
+                                            "6"
                                           ]
                                         }
                                       }
@@ -203,9 +200,6 @@
                                       ],
                                       "Eq-Operator": [
                                         "-"
-                                      ],
-                                      "Eq-Unit": [
-                                        "g"
                                       ]
                                     }
                                   }
@@ -222,9 +216,6 @@
                               ],
                               "Eq-Operator": [
                                 "-"
-                              ],
-                              "Eq-Unit": [
-                                "g"
                               ]
                             }
                           }
@@ -237,15 +228,6 @@
                           "Assertion": [
                             "Willing and able",
                             "Willing"
-                          ],
-                          "Observation": [
-                            "watch the videos"
-                          ],
-                          "Observation-Name": [
-                            "watch the videos"
-                          ],
-                          "Eq-Unit": [
-                            "g"
                           ]
                         }
                       }
@@ -257,9 +239,6 @@
                           "Eq-Operator": [
                             "-"
                           ],
-                          "Eq-Unit": [
-                            "g"
-                          ],
                           "Assertion": [
                             "Being"
                           ]
@@ -268,22 +247,16 @@
                           "NOT": {
                             "left": {
                               "raw_text": "unable to attend care conference to view the video (e.g. due to distance) will not exclude family from participating.",
-                              "Observation": [
-                                "video"
-                              ],
                               "Negation": [
                                 "unable"
                               ],
                               "Assertion": [
                                 "unable"
                               ],
-                              "Eq-Unit": [
-                                "g"
+                              "Procedure": [
+                                "care conference"
                               ],
-                              "Observation-Name": [
-                                "video"
-                              ],
-                              "Encounter": [
+                              "Procedure-Name": [
                                 "care conference"
                               ]
                             }
@@ -305,9 +278,6 @@
               ],
               "Eq-Operator": [
                 "-"
-              ],
-              "Eq-Unit": [
-                "g"
               ]
             }
           }
@@ -319,15 +289,6 @@
           ],
           "Assertion": [
             "Willing"
-          ],
-          "Observation": [
-            "watch the videos"
-          ],
-          "Observation-Name": [
-            "watch the videos"
-          ],
-          "Eq-Unit": [
-            "g"
           ]
         }
       }
@@ -339,15 +300,6 @@
       ],
       "Assertion": [
         "Willing"
-      ],
-      "Observation": [
-        "short surveys"
-      ],
-      "Eq-Unit": [
-        "g"
-      ],
-      "Observation-Name": [
-        "short surveys"
       ]
     }
   }

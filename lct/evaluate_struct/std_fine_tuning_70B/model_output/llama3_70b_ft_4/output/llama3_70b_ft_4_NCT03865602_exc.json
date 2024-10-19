@@ -47,11 +47,17 @@
                               "OR": {
                                 "left": {
                                   "raw_text": "not a North Carolina resident",
+                                  "Location": [
+                                    "North Carolina"
+                                  ],
                                   "Negation": [
                                     "not"
                                   ],
-                                  "Location": [
-                                    "North Carolina"
+                                  "Observation": [
+                                    "resident"
+                                  ],
+                                  "Observation-Name": [
+                                    "resident"
                                   ]
                                 },
                                 "right": {
@@ -66,9 +72,11 @@
                                     ">2.5-hour"
                                   ],
                                   "Observation": [
+                                    "residence",
                                     "drive time"
                                   ],
                                   "Observation-Name": [
+                                    "residence",
                                     "drive time"
                                   ],
                                   "Location": [
@@ -89,10 +97,12 @@
                 "right": {
                   "raw_text": "3. the only antibiotic associated with patient is administered in the operating room as this likely represents pre-operative infection prophylaxis and not presumed infection;",
                   "Procedure": [
-                    "operative"
+                    "operative",
+                    "pre-operative infection prophylaxis"
                   ],
                   "Procedure-Name": [
-                    "operative"
+                    "operative",
+                    "pre-operative infection prophylaxis"
                   ],
                   "Drug": [
                     "antibiotic"
@@ -105,10 +115,6 @@
                   ],
                   "Condition-Name": [
                     "infection"
-                  ],
-                  "Modifier": [
-                    "pre-operative",
-                    "prophylaxis"
                   ],
                   "Assertion": [
                     "likely",
@@ -129,85 +135,96 @@
                 "transferred"
               ],
               "Location": [
+                "acute care hospitals",
                 "hospital"
               ],
               "Other": [
                 "other"
-              ],
-              "Acuteness": [
-                "acute"
               ]
             }
           }
         },
         "right": {
-          "raw_text": "5. patients with a change in code status (i.e., do not resuscitate, do not intubate) within 24 hours after admission due to the general assumption of increased risk of exposure to less aggressive treatment;",
-          "Eq-Operator": [
-            "within"
-          ],
-          "Eq-Value": [
-            "24"
-          ],
-          "Eq-Comparison": [
-            "within 24 hours"
-          ],
-          "Encounter": [
-            "admission"
-          ],
-          "Observation": [
-            "code status"
-          ],
-          "Observation-Name": [
-            "code status"
-          ],
-          "Stability": [
-            "change"
-          ],
-          "Assertion": [
-            "assumption"
-          ],
-          "Procedure": [
-            "treatment"
-          ],
-          "Eq-Temporal-Unit": [
-            "hours"
-          ],
-          "Polarity": [
-            "increased"
-          ],
-          "Risk": [
-            "risk"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "5. patients with a change in code status (i.e., do not resuscitate,",
+              "Observation": [
+                "code status"
+              ],
+              "Observation-Name": [
+                "code status"
+              ],
+              "Stability": [
+                "change"
+              ],
+              "Assertion": [
+                "do not"
+              ],
+              "Modifier": [
+                "resuscitate"
+              ]
+            },
+            "right": {
+              "raw_text": "do not intubate) within 24 hours after admission due to the general assumption of increased risk of exposure to less aggressive treatment;",
+              "Procedure": [
+                "treatment",
+                "intubate"
+              ],
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Value": [
+                "24"
+              ],
+              "Eq-Comparison": [
+                "within 24 hours",
+                "less"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Encounter": [
+                "admission"
+              ],
+              "Assertion": [
+                "do not",
+                "general assumption"
+              ],
+              "Procedure-Name": [
+                "intubate"
+              ],
+              "Polarity": [
+                "increased",
+                "less"
+              ],
+              "Risk": [
+                "risk"
+              ]
+            }
+          }
         }
       }
     },
     "right": {
-      "AND": {
-        "left": {
-          "raw_text": "6. patients with infection ruled out during the index hospitalization.",
-          "Condition": [
-            "infection"
-          ],
-          "Condition-Name": [
-            "infection"
-          ],
-          "Encounter": [
-            "hospitalization"
-          ],
-          "Negation": [
-            "ruled out"
-          ]
-        },
-        "right": {
-          "raw_text": "The index hospitalization is the hospitalization during which the patient is enrolled in the study.",
-          "Study": [
-            "study"
-          ],
-          "Encounter": [
-            "hospitalization"
-          ]
-        }
-      }
+      "raw_text": "6. patients with infection ruled out during the index hospitalization.",
+      "Condition": [
+        "infection"
+      ],
+      "Condition-Name": [
+        "infection"
+      ],
+      "Encounter": [
+        "hospitalization"
+      ],
+      "Eq-Comparison": [
+        "index"
+      ],
+      "Eq-Temporal-Recency": [
+        "index"
+      ],
+      "Negation": [
+        "ruled out"
+      ]
     }
   }
 }

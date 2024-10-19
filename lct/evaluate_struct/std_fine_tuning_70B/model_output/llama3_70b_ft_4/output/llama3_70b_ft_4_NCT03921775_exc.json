@@ -185,15 +185,15 @@
           "Eq-Value": [
             "3"
           ],
-          "Eq-Comparison": [
-            "within the 3 months"
-          ],
           "Study": [
             "clinical trial",
             "randomization"
           ],
           "Other": [
             "other"
+          ],
+          "Eq-Comparison": [
+            "within the 3 months"
           ]
         }
       }
@@ -201,16 +201,23 @@
     "right": {
       "AND": {
         "left": {
-          "raw_text": "8. Any patient judged by the Principal Investigator (PI)",
+          "raw_text": "8. Any patient judged by the Principal Investigator (PI) or Sub-Investigator to be",
           "Eq-Value": [
             "8"
           ]
         },
         "right": {
-          "raw_text": "or Sub-Investigator to be inappropriate for the subject for any other reason",
-          "Other": [
-            "other"
-          ]
+          "NOT": {
+            "left": {
+              "raw_text": "inappropriate for the subject for any other reason",
+              "Negation": [
+                "inappropriate"
+              ],
+              "Other": [
+                "other"
+              ]
+            }
+          }
         }
       }
     }

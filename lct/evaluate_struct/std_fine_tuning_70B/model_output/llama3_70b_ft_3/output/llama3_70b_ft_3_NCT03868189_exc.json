@@ -124,7 +124,7 @@
                     "right": {
                       "raw_text": "- Patient in an exclusion period determined by another study.",
                       "Negation": [
-                        "not"
+                        "no"
                       ],
                       "Study": [
                         "study"
@@ -139,13 +139,10 @@
                   "OR": {
                     "left": {
                       "raw_text": "- Patient under the protection of justice,",
-                      "Eq-Operator": [
-                        "under"
-                      ],
-                      "Observation-Name": [
+                      "Observation": [
                         "under the protection of justice"
                       ],
-                      "Observation": [
+                      "Observation-Name": [
                         "under the protection of justice"
                       ]
                     },
@@ -153,9 +150,6 @@
                       "OR": {
                         "left": {
                           "raw_text": "under guardianship",
-                          "Eq-Operator": [
-                            "under"
-                          ],
                           "Observation": [
                             "under guardianship"
                           ],
@@ -185,6 +179,9 @@
         },
         "right": {
           "raw_text": "- Patient for which it is impossible to provide information about the study.",
+          "Negation": [
+            "no"
+          ],
           "Study": [
             "study"
           ]
@@ -203,26 +200,15 @@
           ]
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "parturient,",
-              "Condition": [
-                "parturient"
-              ],
-              "Condition-Name": [
-                "parturient"
-              ]
-            },
-            "right": {
-              "raw_text": "or breastfeeding.",
-              "Condition": [
-                "breastfeeding"
-              ],
-              "Condition-Name": [
-                "breastfeeding"
-              ]
-            }
-          }
+          "raw_text": "parturient, or breastfeeding.",
+          "Condition": [
+            "parturient",
+            "breastfeeding"
+          ],
+          "Condition-Name": [
+            "parturient",
+            "breastfeeding"
+          ]
         }
       }
     }

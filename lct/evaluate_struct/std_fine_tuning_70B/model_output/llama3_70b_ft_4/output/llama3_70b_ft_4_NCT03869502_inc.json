@@ -28,17 +28,17 @@
                   "raw_text": "- Diagnosis of BCR‐ABL positive CML blast crisis according to the WHO criteria:",
                   "Condition": [
                     "CML",
-                    "BCR‐ABL"
+                    "blast crisis"
                   ],
                   "Condition-Name": [
                     "CML",
+                    "blast crisis"
+                  ],
+                  "Modifier": [
                     "BCR‐ABL"
                   ],
                   "Polarity": [
                     "positive"
-                  ],
-                  "Modifier": [
-                    "blast crisis"
                   ]
                 }
               }
@@ -50,8 +50,9 @@
                   "Eq-Comparison": [
                     "20% or more"
                   ],
-                  "Observation-Name": [
-                    "white cells"
+                  "Observation": [
+                    "Blasts",
+                    "peripheral blood white cells"
                   ],
                   "Eq-Value": [
                     "20"
@@ -62,31 +63,19 @@
                   "Eq-Operator": [
                     "or more"
                   ],
-                  "Observation": [
-                    "white cells"
-                  ],
-                  "Modifier": [
-                    "peripheral blood"
+                  "Observation-Name": [
+                    "Blasts",
+                    "peripheral blood white cells"
                   ]
                 },
                 "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "or bone marrow cells",
-                      "Observation": [
-                        "cells"
-                      ],
-                      "Observation-Name": [
-                        "cells"
-                      ],
-                      "Modifier": [
-                        "bone marrow"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "or"
-                    }
-                  }
+                  "raw_text": "or bone marrow cells or",
+                  "Observation": [
+                    "bone marrow cells"
+                  ],
+                  "Observation-Name": [
+                    "bone marrow cells"
+                  ]
                 }
               }
             }
@@ -96,15 +85,14 @@
           "OR": {
             "left": {
               "raw_text": "- Extramedullary blast proliferation",
-              "Modifier": [
-                "blast",
-                "Extramedullary"
-              ],
               "Condition": [
-                "proliferation"
+                "blast proliferation"
               ],
               "Condition-Name": [
-                "proliferation"
+                "blast proliferation"
+              ],
+              "Modifier": [
+                "Extramedullary"
               ]
             },
             "right": {
@@ -115,31 +103,22 @@
       }
     },
     "right": {
-      "OR": {
-        "left": {
-          "raw_text": "- Large foci",
-          "Modifier": [
-            "foci"
-          ],
-          "Severity": [
-            "Large"
-          ]
-        },
-        "right": {
-          "raw_text": "or clusters of blasts in bone marrow biopsy",
-          "Modifier": [
-            "bone marrow",
-            "blast",
-            "clusters"
-          ],
-          "Procedure": [
-            "biopsy"
-          ],
-          "Procedure-Name": [
-            "biopsy"
-          ]
-        }
-      }
+      "raw_text": "- Large foci or clusters of blasts in bone marrow biopsy",
+      "Observation": [
+        "blasts"
+      ],
+      "Modifier": [
+        "Large foci or clusters"
+      ],
+      "Observation-Name": [
+        "blasts"
+      ],
+      "Procedure": [
+        "bone marrow biopsy"
+      ],
+      "Procedure-Name": [
+        "bone marrow biopsy"
+      ]
     }
   }
 }

@@ -116,23 +116,23 @@
                                     },
                                     "right": {
                                       "raw_text": "with life expectancy of <5 years;",
-                                      "Eq-Operator": [
-                                        "<"
-                                      ],
-                                      "Eq-Temporal-Unit": [
-                                        "years"
-                                      ],
-                                      "Eq-Value": [
-                                        "5"
+                                      "Observation": [
+                                        "life expectancy"
                                       ],
                                       "Eq-Comparison": [
                                         "<5 years"
                                       ],
-                                      "Observation": [
-                                        "life expectancy"
-                                      ],
                                       "Observation-Name": [
                                         "life expectancy"
+                                      ],
+                                      "Eq-Operator": [
+                                        "<"
+                                      ],
+                                      "Eq-Value": [
+                                        "5"
+                                      ],
+                                      "Eq-Temporal-Unit": [
+                                        "years"
                                       ]
                                     }
                                   }
@@ -183,19 +183,30 @@
                       }
                     },
                     "right": {
-                      "raw_text": "4. inability to perform unsupervised physical activity;",
-                      "Observation": [
-                        "physical activity"
-                      ],
-                      "Observation-Name": [
-                        "physical activity"
-                      ],
-                      "Negation": [
-                        "inability"
-                      ],
-                      "Assertion": [
-                        "inability"
-                      ]
+                      "AND": {
+                        "left": {
+                          "raw_text": "4."
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "inability to perform unsupervised physical activity;",
+                              "Negation": [
+                                "inability"
+                              ],
+                              "Observation": [
+                                "physical activity"
+                              ],
+                              "Observation-Name": [
+                                "physical activity"
+                              ],
+                              "Assertion": [
+                                "inability"
+                              ]
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 },
@@ -214,22 +225,26 @@
               }
             },
             "right": {
-              "raw_text": "6. diagnosed cognitive deficits or limited decision-making capacity;",
-              "Condition": [
-                "cognitive deficits"
-              ],
-              "Condition-Name": [
-                "cognitive deficits"
-              ],
-              "Observation": [
-                "decision-making capacity"
-              ],
-              "Observation-Name": [
-                "decision-making capacity"
-              ],
-              "Polarity": [
-                "limited"
-              ]
+              "OR": {
+                "left": {
+                  "raw_text": "6. diagnosed cognitive deficits",
+                  "Condition": [
+                    "cognitive deficits"
+                  ],
+                  "Condition-Name": [
+                    "cognitive deficits"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or limited decision-making capacity;",
+                  "Condition": [
+                    "limited decision-making capacity"
+                  ],
+                  "Condition-Name": [
+                    "limited decision-making capacity"
+                  ]
+                }
+              }
             }
           }
         },
@@ -261,24 +276,38 @@
       "OR": {
         "left": {
           "raw_text": "8. homelessness",
-          "Observation": [
+          "Condition": [
             "homelessness"
           ],
-          "Observation-Name": [
+          "Condition-Name": [
             "homelessness"
           ]
         },
         "right": {
-          "raw_text": "or no fixed address.",
-          "Observation": [
-            "fixed address"
-          ],
-          "Observation-Name": [
-            "fixed address"
-          ],
-          "Negation": [
-            "no"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "or"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "no fixed address.",
+                  "Negation": [
+                    "no"
+                  ],
+                  "Observation": [
+                    "fixed address"
+                  ],
+                  "Observation-Name": [
+                    "fixed address"
+                  ],
+                  "Assertion": [
+                    "no"
+                  ]
+                }
+              }
+            }
+          }
         }
       }
     }

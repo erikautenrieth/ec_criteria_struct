@@ -17,81 +17,52 @@
                           ],
                           "Observation-Name": [
                             "pain"
-                          ],
-                          "Eq-Comparison": [
-                            "on"
-                          ],
-                          "Eq-Temporal-Period": [
-                            "on"
                           ]
                         },
                         "right": {
-                          "AND": {
+                          "OR": {
                             "left": {
-                              "raw_text": "2. Patients who are",
-                              "Eq-Comparison": [
-                                "on"
+                              "raw_text": "2. Patients who are nil per os (NPO) at the time of randomization",
+                              "Procedure": [
+                                "randomization"
                               ],
-                              "Eq-Temporal-Period": [
-                                "on"
+                              "Procedure-Name": [
+                                "randomization"
+                              ],
+                              "Condition": [
+                                "nil per os",
+                                "NPO"
+                              ],
+                              "Condition-Name": [
+                                "nil per os",
+                                "NPO"
                               ]
                             },
                             "right": {
-                              "NOT": {
-                                "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "nil per os (NPO) at the time of randomization",
-                                      "Negation": [
-                                        "nil"
-                                      ],
-                                      "Procedure": [
-                                        "randomization"
-                                      ],
-                                      "Procedure-Name": [
-                                        "randomization"
-                                      ],
-                                      "Condition": [
-                                        "NPO",
-                                        "nil per os"
-                                      ],
-                                      "Condition-Name": [
-                                        "NPO",
-                                        "nil per os"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "or are expected to be NPO within the next 48 hours",
-                                      "Condition": [
-                                        "NPO",
-                                        "nil per os"
-                                      ],
-                                      "Condition-Name": [
-                                        "NPO",
-                                        "nil per os"
-                                      ],
-                                      "Eq-Operator": [
-                                        "within"
-                                      ],
-                                      "Eq-Value": [
-                                        "48"
-                                      ],
-                                      "Eq-Comparison": [
-                                        "within the next 48 hours"
-                                      ],
-                                      "Eq-Temporal-Unit": [
-                                        "hours"
-                                      ],
-                                      "Assertion": [
-                                        "expected to"
-                                      ],
-                                      "Negation": [
-                                        "nil"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
+                              "raw_text": "or are expected to be NPO within the next 48 hours",
+                              "Condition": [
+                                "NPO",
+                                "nil per os"
+                              ],
+                              "Condition-Name": [
+                                "NPO",
+                                "nil per os"
+                              ],
+                              "Eq-Operator": [
+                                "within"
+                              ],
+                              "Eq-Value": [
+                                "48"
+                              ],
+                              "Eq-Comparison": [
+                                "within the next 48 hours"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "hours"
+                              ],
+                              "Assertion": [
+                                "expected to"
+                              ]
                             }
                           }
                         }
@@ -121,12 +92,6 @@
                             },
                             "right": {
                               "raw_text": "locoregional blocks for pain within the next 48 hours",
-                              "Observation": [
-                                "pain"
-                              ],
-                              "Observation-Name": [
-                                "pain"
-                              ],
                               "Eq-Operator": [
                                 "within"
                               ],
@@ -138,6 +103,12 @@
                               ],
                               "Eq-Temporal-Unit": [
                                 "hours"
+                              ],
+                              "Observation": [
+                                "pain"
+                              ],
+                              "Observation-Name": [
+                                "pain"
                               ],
                               "Procedure": [
                                 "blocks"
@@ -164,38 +135,22 @@
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "or previous hypersensitivity reaction to dronabinol",
-                          "Condition": [
-                            "hypersensitivity"
-                          ],
-                          "Condition-Name": [
-                            "hypersensitivity"
-                          ],
-                          "Drug": [
-                            "dronabinol"
-                          ],
-                          "Drug-Name": [
-                            "dronabinol"
-                          ],
-                          "Eq-Comparison": [
-                            "previous"
-                          ],
-                          "Eq-Temporal-Period": [
-                            "previous"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or sesame oil",
-                          "Drug": [
-                            "sesame oil"
-                          ],
-                          "Drug-Name": [
-                            "sesame oil"
-                          ]
-                        }
-                      }
+                      "raw_text": "or previous hypersensitivity reaction to dronabinol or sesame oil",
+                      "Condition": [
+                        "hypersensitivity"
+                      ],
+                      "Condition-Name": [
+                        "hypersensitivity"
+                      ],
+                      "Drug": [
+                        "dronabinol"
+                      ],
+                      "Drug-Name": [
+                        "dronabinol"
+                      ],
+                      "Allergy-Name": [
+                        "sesame oil"
+                      ]
                     }
                   }
                 }
@@ -203,26 +158,19 @@
             },
             "right": {
               "raw_text": "5. Patients prescribed dronabinol between arrival and prior to screening/randomization",
+              "Procedure": [
+                "randomization",
+                "screening"
+              ],
+              "Procedure-Name": [
+                "randomization",
+                "screening"
+              ],
               "Drug": [
                 "dronabinol"
               ],
               "Drug-Name": [
                 "dronabinol"
-              ],
-              "Study": [
-                "screening"
-              ],
-              "Procedure": [
-                "randomization"
-              ],
-              "Procedure-Name": [
-                "randomization"
-              ],
-              "Eq-Comparison": [
-                "on"
-              ],
-              "Eq-Temporal-Period": [
-                "on"
               ],
               "Encounter": [
                 "arrival"

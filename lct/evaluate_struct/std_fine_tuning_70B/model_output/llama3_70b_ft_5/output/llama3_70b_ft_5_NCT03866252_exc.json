@@ -121,14 +121,14 @@
                                       "NOT": {
                                         "left": {
                                           "raw_text": "Unable or unwilling to discontinue antidepressant medication",
-                                          "Negation": [
-                                            "Unable or unwilling"
-                                          ],
                                           "Drug": [
                                             "antidepressant medication"
                                           ],
                                           "Drug-Name": [
                                             "antidepressant medication"
+                                          ],
+                                          "Negation": [
+                                            "Unable or unwilling"
                                           ],
                                           "Assertion": [
                                             "Unable or unwilling"
@@ -169,14 +169,14 @@
                           "Condition": [
                             "hypersensitivity"
                           ],
+                          "Condition-Name": [
+                            "hypersensitivity"
+                          ],
                           "Drug": [
                             "LSD"
                           ],
                           "Drug-Name": [
                             "LSD"
-                          ],
-                          "Condition-Name": [
-                            "hypersensitivity"
                           ]
                         }
                       }
@@ -184,15 +184,13 @@
                     "right": {
                       "raw_text": "- Somatic disorders including central nervous system (CNS) involvement",
                       "Condition": [
-                        "Somatic disorders",
-                        "CNS"
+                        "Somatic disorders"
+                      ],
+                      "Condition-Name": [
+                        "Somatic disorders"
                       ],
                       "Modifier": [
                         "central nervous system",
-                        "CNS"
-                      ],
-                      "Condition-Name": [
-                        "Somatic disorders",
                         "CNS"
                       ]
                     }
@@ -211,39 +209,44 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "or suspected non-compliance,",
-                              "Negation": [
-                                "non"
-                              ],
+                              "raw_text": "or suspected",
                               "Assertion": [
                                 "suspected"
-                              ],
-                              "Condition": [
-                                "compliance"
-                              ],
-                              "Condition-Name": [
-                                "compliance"
                               ]
                             },
                             "right": {
-                              "OR": {
+                              "NOT": {
                                 "left": {
-                                  "raw_text": "drug",
-                                  "Modifier": [
-                                    "drug"
-                                  ]
-                                },
-                                "right": {
-                                  "raw_text": "or alcohol abuse",
-                                  "Condition-Name": [
-                                    "abuse"
-                                  ],
-                                  "Modifier": [
-                                    "alcohol"
-                                  ],
-                                  "Condition": [
-                                    "abuse"
-                                  ]
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "non-compliance,",
+                                      "Negation": [
+                                        "non-compliance"
+                                      ]
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "drug",
+                                          "Modifier": [
+                                            "drug"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "or alcohol abuse",
+                                          "Condition-Name": [
+                                            "abuse"
+                                          ],
+                                          "Modifier": [
+                                            "alcohol"
+                                          ],
+                                          "Condition": [
+                                            "abuse"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
                                 }
                               }
                             }
@@ -271,20 +274,20 @@
           "Observation": [
             "Weight"
           ],
-          "Eq-Comparison": [
-            "< 42 kg"
-          ],
           "Observation-Name": [
             "Weight"
           ],
-          "Eq-Operator": [
-            "<"
+          "Eq-Comparison": [
+            "< 42 kg"
           ],
           "Eq-Value": [
             "42"
           ],
           "Eq-Unit": [
             "kg"
+          ],
+          "Eq-Operator": [
+            "<"
           ]
         }
       }
@@ -305,11 +308,17 @@
         },
         "right": {
           "raw_text": "or very likely to require psychiatric hospitalisation",
-          "Assertion": [
-            "very likely"
-          ],
           "Encounter": [
             "hospitalisation"
+          ],
+          "Condition": [
+            "psychiatric"
+          ],
+          "Condition-Name": [
+            "psychiatric"
+          ],
+          "Assertion": [
+            "likely to"
           ],
           "Modifier": [
             "psychiatric"

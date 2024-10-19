@@ -19,9 +19,6 @@
                       "Condition": [
                         "diseases"
                       ],
-                      "Condition-Name": [
-                        "diseases"
-                      ],
                       "Acuteness": [
                         "acute"
                       ]
@@ -30,11 +27,11 @@
                       "OR": {
                         "left": {
                           "raw_text": "food allergies,",
+                          "Food": [
+                            "food"
+                          ],
                           "Allergy": [
                             "allergies"
-                          ],
-                          "Allergy-Name": [
-                            "food"
                           ]
                         },
                         "right": {
@@ -68,31 +65,43 @@
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "- Use of illicit drugs; regular consumption of medications,",
-                  "Drug": [
-                    "medications",
+                  "raw_text": "- Use of illicit drugs;",
+                  "Condition": [
                     "illicit drugs"
                   ],
-                  "Drug-Name": [
+                  "Condition-Name": [
                     "illicit drugs"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "micronutrient supplements,",
+                      "raw_text": "regular consumption of medications,",
                       "Drug": [
-                        "micronutrient supplements"
+                        "medications"
                       ],
-                      "Drug-Name": [
-                        "micronutrient supplements"
+                      "Assertion": [
+                        "regular consumption"
                       ]
                     },
                     "right": {
-                      "raw_text": "or both",
-                      "Other": [
-                        "both"
-                      ]
+                      "OR": {
+                        "left": {
+                          "raw_text": "micronutrient supplements,",
+                          "Drug": [
+                            "micronutrient supplements"
+                          ],
+                          "Drug-Name": [
+                            "micronutrient supplements"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or both",
+                          "Other": [
+                            "both"
+                          ]
+                        }
+                      }
                     }
                   }
                 }
@@ -104,42 +113,33 @@
           "AND": {
             "left": {
               "raw_text": "- Vegetarians,",
-              "Observation": [
-                "Vegetarians"
-              ],
-              "Observation-Name": [
+              "Life-Stage-And-Gender": [
                 "Vegetarians"
               ]
             },
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "or those unable to eat meat, are also",
-                  "Observation": [
-                    "eat meat"
-                  ],
-                  "Observation-Name": [
-                    "eat meat"
-                  ],
-                  "Negation": [
-                    "unable"
-                  ]
+                  "raw_text": "or those"
                 },
                 "right": {
                   "NOT": {
                     "left": {
-                      "raw_text": "excluded since the foods for the study contain meat",
-                      "Observation": [
-                        "eat meat"
-                      ],
-                      "Observation-Name": [
-                        "eat meat"
-                      ],
+                      "raw_text": "unable to eat meat, are also excluded since the foods for the study contain meat",
                       "Negation": [
-                        "excluded"
+                        "unable"
+                      ],
+                      "Condition": [
+                        "eat meat"
+                      ],
+                      "Condition-Name": [
+                        "eat meat"
                       ],
                       "Study": [
                         "study"
+                      ],
+                      "Other": [
+                        "both"
                       ]
                     }
                   }
@@ -159,14 +159,14 @@
           "NOT": {
             "left": {
               "raw_text": "Unable to refrain from taking medications during the study period",
-              "Study": [
-                "study"
+              "Negation": [
+                "Unable"
               ],
               "Drug": [
                 "medications"
               ],
-              "Negation": [
-                "Unable"
+              "Study": [
+                "study"
               ],
               "Assertion": [
                 "Unable"

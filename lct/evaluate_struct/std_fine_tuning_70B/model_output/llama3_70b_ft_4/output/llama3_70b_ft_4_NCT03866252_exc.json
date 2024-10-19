@@ -166,17 +166,17 @@
                         },
                         "right": {
                           "raw_text": "- Known hypersensitivity to LSD",
-                          "Drug": [
-                            "LSD"
-                          ],
-                          "Drug-Name": [
-                            "LSD"
-                          ],
                           "Condition": [
                             "hypersensitivity"
                           ],
                           "Condition-Name": [
                             "hypersensitivity"
+                          ],
+                          "Drug": [
+                            "LSD"
+                          ],
+                          "Drug-Name": [
+                            "LSD"
                           ]
                         }
                       }
@@ -184,17 +184,14 @@
                     "right": {
                       "raw_text": "- Somatic disorders including central nervous system (CNS) involvement",
                       "Condition": [
-                        "Somatic disorders",
-                        "central nervous system",
-                        "CNS"
+                        "Somatic disorders"
                       ],
                       "Condition-Name": [
-                        "Somatic disorders",
-                        "central nervous system",
-                        "CNS"
+                        "Somatic disorders"
                       ],
                       "Modifier": [
-                        "involvement"
+                        "central nervous system",
+                        "CNS"
                       ]
                     }
                   }
@@ -212,44 +209,39 @@
                         "left": {
                           "OR": {
                             "left": {
-                              "raw_text": "or suspected",
+                              "raw_text": "or suspected non-compliance,",
+                              "Negation": [
+                                "non"
+                              ],
                               "Assertion": [
                                 "suspected"
+                              ],
+                              "Condition": [
+                                "non-compliance"
+                              ],
+                              "Condition-Name": [
+                                "non-compliance"
                               ]
                             },
                             "right": {
-                              "NOT": {
+                              "OR": {
                                 "left": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "non-compliance,",
-                                      "Negation": [
-                                        "non-compliance"
-                                      ]
-                                    },
-                                    "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "drug",
-                                          "Modifier": [
-                                            "drug"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": "or alcohol abuse",
-                                          "Condition-Name": [
-                                            "abuse"
-                                          ],
-                                          "Modifier": [
-                                            "alcohol"
-                                          ],
-                                          "Condition": [
-                                            "abuse"
-                                          ]
-                                        }
-                                      }
-                                    }
-                                  }
+                                  "raw_text": "drug",
+                                  "Modifier": [
+                                    "drug"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or alcohol abuse",
+                                  "Condition-Name": [
+                                    "abuse"
+                                  ],
+                                  "Modifier": [
+                                    "alcohol"
+                                  ],
+                                  "Condition": [
+                                    "abuse"
+                                  ]
                                 }
                               }
                             }
@@ -263,10 +255,10 @@
             },
             "right": {
               "raw_text": "- Metal implants",
-              "Procedure": [
+              "Condition": [
                 "Metal implants"
               ],
-              "Procedure-Name": [
+              "Condition-Name": [
                 "Metal implants"
               ]
             }
@@ -274,23 +266,23 @@
         },
         "right": {
           "raw_text": "- Weight < 42 kg",
-          "Observation": [
-            "Weight"
-          ],
-          "Eq-Comparison": [
-            "< 42 kg"
-          ],
-          "Observation-Name": [
-            "Weight"
-          ],
           "Eq-Operator": [
             "<"
+          ],
+          "Eq-Unit": [
+            "kg"
           ],
           "Eq-Value": [
             "42"
           ],
-          "Eq-Unit": [
-            "kg"
+          "Eq-Comparison": [
+            "< 42 kg"
+          ],
+          "Observation": [
+            "Weight"
+          ],
+          "Observation-Name": [
+            "Weight"
           ]
         }
       }
@@ -311,17 +303,20 @@
         },
         "right": {
           "raw_text": "or very likely to require psychiatric hospitalisation",
-          "Assertion": [
-            "very likely"
-          ],
           "Encounter": [
             "hospitalisation"
           ],
-          "Modifier": [
-            "psychiatric"
+          "Assertion": [
+            "likely to"
           ],
           "Condition": [
-            "require"
+            "psychiatric"
+          ],
+          "Condition-Name": [
+            "psychiatric"
+          ],
+          "Polarity": [
+            "very"
           ]
         }
       }

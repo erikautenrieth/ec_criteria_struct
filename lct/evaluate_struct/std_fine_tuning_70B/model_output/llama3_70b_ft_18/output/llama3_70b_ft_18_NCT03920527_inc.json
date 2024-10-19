@@ -117,7 +117,7 @@
                   ]
                 },
                 "right": {
-                  "AND": {
+                  "OR": {
                     "left": {
                       "raw_text": "or persistent radiological findings (one or more cavities",
                       "Eq-Value": [
@@ -149,10 +149,13 @@
                         "left": {
                           "raw_text": "and surrounding fibrosis,",
                           "Condition": [
-                            "surrounding fibrosis"
+                            "fibrosis"
                           ],
                           "Condition-Name": [
-                            "surrounding fibrosis"
+                            "fibrosis"
+                          ],
+                          "Modifier": [
+                            "surrounding"
                           ]
                         },
                         "right": {
@@ -200,12 +203,6 @@
                                             },
                                             "right": {
                                               "raw_text": "or progressive pleural thickening) on computed tomography (CT) of the thorax",
-                                              "Condition": [
-                                                "progressive pleural thickening"
-                                              ],
-                                              "Condition-Name": [
-                                                "progressive pleural thickening"
-                                              ],
                                               "Procedure": [
                                                 "computed tomography",
                                                 "CT"
@@ -214,7 +211,14 @@
                                                 "computed tomography",
                                                 "CT"
                                               ],
+                                              "Condition": [
+                                                "pleural thickening"
+                                              ],
+                                              "Condition-Name": [
+                                                "pleural thickening"
+                                              ],
                                               "Modifier": [
+                                                "progressive",
                                                 "thorax"
                                               ]
                                             }
@@ -272,72 +276,79 @@
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "or positive Aspergillus precipitins)",
+                  "raw_text": "or positive Aspergillus precipitins) or microbiological evidence of Aspergillus infection (growth of Aspergillus in respiratory secretions",
                   "Condition": [
-                    "Aspergillus precipitins"
+                    "Aspergillus infection"
                   ],
                   "Condition-Name": [
-                    "Aspergillus precipitins"
+                    "Aspergillus infection"
+                  ],
+                  "Observation": [
+                    "precipitins"
+                  ],
+                  "Observation-Name": [
+                    "precipitins"
+                  ],
+                  "Modifier": [
+                    "respiratory",
+                    "Aspergillus"
                   ],
                   "Polarity": [
                     "positive"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "on"
+                  ],
+                  "Eq-Comparison": [
+                    "on"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "growth of Aspergillus in respiratory secretions",
-                      "Condition": [
-                        "Aspergillus",
-                        "respiratory secretions"
+                      "raw_text": "or serum galactomannan index >0.5",
+                      "Eq-Operator": [
+                        ">"
                       ],
-                      "Condition-Name": [
-                        "Aspergillus",
-                        "respiratory secretions"
+                      "Eq-Value": [
+                        "0.5"
+                      ],
+                      "Eq-Comparison": [
+                        ">0.5"
+                      ],
+                      "Observation": [
+                        "galactomannan index"
+                      ],
+                      "Observation-Name": [
+                        "galactomannan index"
+                      ],
+                      "Eq-Unit": [
+                        "L"
+                      ],
+                      "Modifier": [
+                        "serum"
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "or serum galactomannan index >0.5",
-                          "Eq-Operator": [
-                            ">"
-                          ],
-                          "Eq-Value": [
-                            "0.5"
-                          ],
-                          "Eq-Comparison": [
-                            ">0.5"
-                          ],
-                          "Observation": [
-                            "serum galactomannan index"
-                          ],
-                          "Observation-Name": [
-                            "serum galactomannan index"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or BALF galactomannan index >1) and,",
-                          "Eq-Operator": [
-                            ">"
-                          ],
-                          "Eq-Value": [
-                            "1"
-                          ],
-                          "Eq-Comparison": [
-                            ">1"
-                          ],
-                          "Observation": [
-                            "galactomannan index"
-                          ],
-                          "Observation-Name": [
-                            "galactomannan index"
-                          ],
-                          "Modifier": [
-                            "BALF"
-                          ]
-                        }
-                      }
+                      "raw_text": "or BALF galactomannan index >1) and,",
+                      "Eq-Operator": [
+                        ">"
+                      ],
+                      "Eq-Value": [
+                        "1"
+                      ],
+                      "Eq-Comparison": [
+                        ">1"
+                      ],
+                      "Observation": [
+                        "galactomannan index"
+                      ],
+                      "Observation-Name": [
+                        "galactomannan index"
+                      ],
+                      "Modifier": [
+                        "BALF"
+                      ]
                     }
                   }
                 }
@@ -368,7 +379,7 @@
               "Other": [
                 "other"
               ],
-              "Modifier": [
+              "Assertion": [
                 "similar presentation"
               ]
             }

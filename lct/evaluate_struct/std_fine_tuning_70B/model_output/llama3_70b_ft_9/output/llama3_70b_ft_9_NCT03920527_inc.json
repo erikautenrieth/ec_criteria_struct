@@ -188,13 +188,7 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "with or",
-                                      "Eq-Comparison": [
-                                        "on"
-                                      ],
-                                      "Eq-Temporal-Period": [
-                                        "on"
-                                      ]
+                                      "raw_text": "with or"
                                     },
                                     "right": {
                                       "NOT": {
@@ -202,24 +196,18 @@
                                           "OR": {
                                             "left": {
                                               "raw_text": "without fungal ball",
-                                              "Negation": [
-                                                "without"
-                                              ],
                                               "Condition": [
                                                 "fungal ball"
                                               ],
                                               "Condition-Name": [
                                                 "fungal ball"
+                                              ],
+                                              "Negation": [
+                                                "without"
                                               ]
                                             },
                                             "right": {
                                               "raw_text": "or progressive pleural thickening) on computed tomography (CT) of the thorax",
-                                              "Condition": [
-                                                "progressive pleural thickening"
-                                              ],
-                                              "Condition-Name": [
-                                                "progressive pleural thickening"
-                                              ],
                                               "Procedure": [
                                                 "computed tomography",
                                                 "CT"
@@ -228,13 +216,19 @@
                                                 "computed tomography",
                                                 "CT"
                                               ],
-                                              "Modifier": [
-                                                "thorax"
+                                              "Condition": [
+                                                "pleural thickening"
                                               ],
-                                              "Eq-Comparison": [
-                                                "on"
+                                              "Condition-Name": [
+                                                "pleural thickening"
+                                              ],
+                                              "Modifier": [
+                                                "progressive"
                                               ],
                                               "Eq-Temporal-Period": [
+                                                "on"
+                                              ],
+                                              "Eq-Comparison": [
                                                 "on"
                                               ]
                                             }
@@ -307,41 +301,75 @@
                   "OR": {
                     "left": {
                       "raw_text": ") and,",
-                      "Eq-Comparison": [
+                      "Eq-Temporal-Period": [
                         "on"
                       ],
-                      "Eq-Temporal-Period": [
+                      "Eq-Comparison": [
                         "on"
                       ]
                     },
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "- exclusion of other pulmonary disorders",
-                          "Other": [
-                            "other"
-                          ],
+                          "raw_text": "- growth of Aspergillus in respiratory secretions",
                           "Condition": [
-                            "pulmonary disorders"
+                            "Aspergillus"
                           ],
                           "Condition-Name": [
-                            "pulmonary disorders"
+                            "Aspergillus"
                           ],
-                          "Negation": [
-                            "exclusion"
+                          "Observation": [
+                            "respiratory secretions"
+                          ],
+                          "Observation-Name": [
+                            "respiratory secretions"
+                          ],
+                          "Modifier": [
+                            "growth"
                           ]
                         },
                         "right": {
-                          "raw_text": "with similar presentation.",
-                          "Condition": [
-                            "presentation"
-                          ],
-                          "Condition-Name": [
-                            "presentation"
-                          ],
-                          "Modifier": [
-                            "similar"
-                          ]
+                          "OR": {
+                            "left": {
+                              "raw_text": "or serum galactomannan index >0.5",
+                              "Eq-Operator": [
+                                ">"
+                              ],
+                              "Eq-Value": [
+                                "0.5"
+                              ],
+                              "Eq-Comparison": [
+                                ">0.5"
+                              ],
+                              "Observation": [
+                                "serum galactomannan index"
+                              ],
+                              "Observation-Name": [
+                                "serum galactomannan index"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or BALF galactomannan index >1) and,",
+                              "Eq-Operator": [
+                                ">"
+                              ],
+                              "Eq-Value": [
+                                "1"
+                              ],
+                              "Eq-Comparison": [
+                                ">1"
+                              ],
+                              "Observation": [
+                                "galactomannan index"
+                              ],
+                              "Observation-Name": [
+                                "galactomannan index"
+                              ],
+                              "Modifier": [
+                                "BALF"
+                              ]
+                            }
+                          }
                         }
                       }
                     }
@@ -354,8 +382,35 @@
       }
     },
     "right": {
-      "raw_text": "- the lists for the entity's should only be appended if one or more entities have been found. Otherwise, omit the arrays completely.
-
+      "AND": {
+        "left": {
+          "raw_text": "- exclusion of other pulmonary disorders",
+          "Other": [
+            "other"
+          ],
+          "Condition": [
+            "pulmonary disorders"
+          ],
+          "Condition-Name": [
+            "pulmonary disorders"
+          ],
+          "Negation": [
+            "exclusion"
+          ]
+        },
+        "right": {
+          "raw_text": "with similar presentation.",
+          "Condition": [
+            "presentation"
+          ],
+          "Condition-Name": [
+            "presentation"
+          ],
+          "Modifier": [
+            "similar"
+          ]
+        }
+      }
     }
   }
 }

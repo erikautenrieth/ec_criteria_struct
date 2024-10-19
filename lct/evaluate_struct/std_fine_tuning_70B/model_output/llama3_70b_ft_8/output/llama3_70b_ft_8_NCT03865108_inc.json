@@ -14,6 +14,9 @@
                   "Condition-Name": [
                     "gestation"
                   ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
                   "Modifier": [
                     "Singleton"
                   ]
@@ -28,17 +31,12 @@
                       "Condition-Name": [
                         "gestation"
                       ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
                       "Modifier": [
                         "Twin",
-                        "singleton"
-                      ],
-                      "Procedure": [
-                        "reduced"
-                      ],
-                      "Procedure-Name": [
-                        "reduced"
-                      ],
-                      "Assertion": [
+                        "singleton",
                         "spontaneously"
                       ]
                     },
@@ -57,11 +55,11 @@
                           "NOT": {
                             "left": {
                               "raw_text": "not eligible unless the reduction occurred before 13 weeks 6 days project gestational age.",
-                              "Observation": [
-                                "gestational age"
+                              "Condition": [
+                                "gestation"
                               ],
-                              "Observation-Name": [
-                                "gestational age"
+                              "Condition-Name": [
+                                "gestation"
                               ],
                               "Eq-Temporal-Unit": [
                                 "weeks",
@@ -71,23 +69,26 @@
                                 "13",
                                 "6"
                               ],
-                              "Negation": [
-                                "not"
+                              "Eq-Operator": [
+                                "before"
                               ],
-                              "Assertion": [
-                                "eligible"
+                              "Observation": [
+                                "gestational age"
                               ],
-                              "Procedure": [
-                                "reduction"
-                              ],
-                              "Procedure-Name": [
-                                "reduction"
+                              "Observation-Name": [
+                                "gestational age"
                               ],
                               "Eq-Comparison": [
                                 "before 13 weeks 6 days"
                               ],
-                              "Eq-Operator": [
-                                "before"
+                              "Negation": [
+                                "not"
+                              ],
+                              "Exception": [
+                                "unless"
+                              ],
+                              "Modifier": [
+                                "reduction"
                               ]
                             }
                           }
@@ -108,15 +109,18 @@
                   "Condition-Name": [
                     "gestation"
                   ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Modifier": [
+                    "Higher order multifetal",
+                    "singleton"
+                  ],
                   "Procedure": [
                     "reduced"
                   ],
                   "Procedure-Name": [
                     "reduced"
-                  ],
-                  "Modifier": [
-                    "singleton",
-                    "Higher order multifetal"
                   ]
                 },
                 "right": {
@@ -125,9 +129,6 @@
                       "raw_text": "not eligible.",
                       "Negation": [
                         "not"
-                      ],
-                      "Assertion": [
-                        "eligible"
                       ]
                     }
                   }
@@ -154,20 +155,24 @@
             "23",
             "6"
           ],
+          "Eq-Operator": [
+            "between",
+            "-"
+          ],
+          "Eq-Comparison": [
+            "between 16 weeks 0 days and 23 weeks 6 days"
+          ],
           "Study": [
             "randomization"
+          ],
+          "Modifier": [
+            "earliest"
           ],
           "Procedure": [
             "ultrasound"
           ],
           "Procedure-Name": [
             "ultrasound"
-          ],
-          "Eq-Comparison": [
-            "between 16 weeks 0 days and 23 weeks 6 days"
-          ],
-          "Eq-Operator": [
-            "between"
           ]
         }
       }
@@ -182,10 +187,8 @@
       ],
       "Eq-Operator": [
         "less than or equal",
-        "within"
-      ],
-      "Eq-Temporal-Unit": [
-        "days"
+        "within",
+        "-"
       ],
       "Eq-Value": [
         "20",
@@ -198,17 +201,14 @@
       "Eq-Unit": [
         "mm"
       ],
+      "Eq-Temporal-Unit": [
+        "days"
+      ],
       "Study": [
         "randomization"
       ],
-      "Procedure": [
+      "Modifier": [
         "transvaginal examination"
-      ],
-      "Procedure-Name": [
-        "transvaginal examination"
-      ],
-      "Negation": [
-        "no"
       ]
     }
   }

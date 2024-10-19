@@ -19,14 +19,13 @@
                             "≥18 years"
                           ],
                           "Eq-Operator": [
-                            "≥18",
                             "≥"
+                          ],
+                          "Eq-Value": [
+                            "18"
                           ],
                           "Eq-Temporal-Unit": [
                             "years"
-                          ],
-                          "Eq-Value": [
-                            "1"
                           ]
                         },
                         "right": {
@@ -44,8 +43,7 @@
                             "≤"
                           ],
                           "Eq-Value": [
-                            "40",
-                            "4"
+                            "40"
                           ],
                           "Eq-Unit": [
                             "kg",
@@ -58,14 +56,14 @@
                       "OR": {
                         "left": {
                           "raw_text": "- indication for hysterectomy for benign disease",
-                          "Indication": [
-                            "indication"
-                          ],
                           "Procedure": [
                             "hysterectomy"
                           ],
                           "Condition": [
                             "benign disease"
+                          ],
+                          "Indication": [
+                            "indication"
                           ],
                           "Procedure-Name": [
                             "hysterectomy"
@@ -114,33 +112,25 @@
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "and/or pelvic-",
-                          "Modifier": [
-                            "pelvic"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "(sentinel-node) lymphadenectomy for cervical cancer",
-                          "Procedure": [
-                            "lymphadenectomy"
-                          ],
-                          "Condition": [
-                            "cancer"
-                          ],
-                          "Procedure-Name": [
-                            "lymphadenectomy"
-                          ],
-                          "Condition-Name": [
-                            "cancer"
-                          ],
-                          "Modifier": [
-                            "cervical",
-                            "sentinel-node"
-                          ]
-                        }
-                      }
+                      "raw_text": "and/or pelvic-/para-aortic (sentinel-node) lymphadenectomy for cervical cancer",
+                      "Condition": [
+                        "cancer"
+                      ],
+                      "Procedure": [
+                        "lymphadenectomy"
+                      ],
+                      "Modifier": [
+                        "cervical",
+                        "pelvic",
+                        "para-aortic",
+                        "sentinel-node"
+                      ],
+                      "Condition-Name": [
+                        "cancer"
+                      ],
+                      "Procedure-Name": [
+                        "lymphadenectomy"
+                      ]
                     }
                   }
                 }
@@ -165,87 +155,52 @@
                   ]
                 },
                 "right": {
-                  "OR": {
-                    "left": {
-                      "raw_text": "and/or pelvic-",
-                      "Modifier": [
-                        "pelvic"
-                      ]
-                    },
-                    "right": {
-                      "raw_text": "(sentinel-node) lymphadenectomy for endometrial cancer",
-                      "Procedure": [
-                        "lymphadenectomy"
-                      ],
-                      "Condition": [
-                        "cancer"
-                      ],
-                      "Procedure-Name": [
-                        "lymphadenectomy"
-                      ],
-                      "Condition-Name": [
-                        "cancer"
-                      ],
-                      "Modifier": [
-                        "endometrial",
-                        "sentinel-node"
-                      ]
-                    }
-                  }
+                  "raw_text": "and/or pelvic-/para-aortic (sentinel-node) lymphadenectomy for endometrial cancer",
+                  "Condition": [
+                    "cancer"
+                  ],
+                  "Procedure": [
+                    "lymphadenectomy"
+                  ],
+                  "Modifier": [
+                    "cervical",
+                    "pelvic",
+                    "para-aortic",
+                    "sentinel-node",
+                    "endometrial"
+                  ],
+                  "Condition-Name": [
+                    "cancer"
+                  ],
+                  "Procedure-Name": [
+                    "lymphadenectomy"
+                  ]
                 }
               }
             }
           }
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "- size of uterus",
-              "Observation": [
-                "size"
-              ],
-              "Observation-Name": [
-                "size"
-              ],
-              "Modifier": [
-                "uterus"
-              ]
-            },
-            "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "and vagina allows for retrieval by the vaginal route in cancer patients",
-                  "Condition": [
-                    "cancer"
-                  ],
-                  "Assertion": [
-                    "allows for"
-                  ],
-                  "Procedure": [
-                    "retrieval by the vaginal route"
-                  ],
-                  "Condition-Name": [
-                    "cancer"
-                  ],
-                  "Procedure-Name": [
-                    "retrieval by the vaginal route"
-                  ],
-                  "Modifier": [
-                    "vagina",
-                    "vaginal"
-                  ]
-                },
-                "right": {
-                  "raw_text": "- written informed consent"
-                }
-              }
-            }
-          }
+          "raw_text": "- size of uterus and vagina allows for retrieval by the vaginal route in cancer patients",
+          "Condition": [
+            "cancer"
+          ],
+          "Assertion": [
+            "allows for"
+          ],
+          "Modifier": [
+            "uterus",
+            "vagina",
+            "vaginal route"
+          ],
+          "Condition-Name": [
+            "cancer"
+          ]
         }
       }
     },
     "right": {
-      "raw_text": "- the entire text of the eligibility criteria must be included and separated by the logical operators, without omitting any words or information."
+      "raw_text": "- written informed consent"
     }
   }
 }

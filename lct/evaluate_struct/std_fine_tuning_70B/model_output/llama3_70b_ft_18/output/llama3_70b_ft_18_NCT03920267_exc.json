@@ -8,6 +8,9 @@
               "raw_text": "- Any disease",
               "Condition": [
                 "disease"
+              ],
+              "Eq-Operator": [
+                "-"
               ]
             },
             "right": {
@@ -23,18 +26,35 @@
                   "Study": [
                     "study"
                   ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
                   "Stability": [
                     "interfere"
                   ]
                 },
                 "right": {
-                  "raw_text": "or study results, or considered unsuitable by the investigator for any other reason",
-                  "Study": [
-                    "study"
-                  ],
-                  "Assertion": [
-                    "considered"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "or study results, or considered unsuitable by the investigator for any other reason",
+                      "Study": [
+                        "study"
+                      ],
+                      "Assertion": [
+                        "considered"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Other protocol defined inclusion/exclusion criteria could apply",
+                          "Negation": [
+                            "no"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -55,6 +75,9 @@
           ],
           "Eq-Temporal-Period": [
             "active"
+          ],
+          "Eq-Operator": [
+            "-"
           ]
         }
       }

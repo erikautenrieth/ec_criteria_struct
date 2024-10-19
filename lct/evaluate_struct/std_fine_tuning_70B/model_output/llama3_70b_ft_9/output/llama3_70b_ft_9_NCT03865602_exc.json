@@ -18,7 +18,10 @@
                           "Eq-Temporal-Period": [
                             "prior"
                           ],
-                          "Study": [
+                          "Procedure": [
+                            "randomization"
+                          ],
+                          "Procedure-Name": [
                             "randomization"
                           ],
                           "Modifier": [
@@ -28,7 +31,7 @@
                         "right": {
                           "raw_text": "or usual care study arms;",
                           "Study": [
-                            "study arms"
+                            "study"
                           ],
                           "Modifier": [
                             "usual care"
@@ -92,12 +95,10 @@
                 "right": {
                   "raw_text": "3. the only antibiotic associated with patient is administered in the operating room as this likely represents pre-operative infection prophylaxis and not presumed infection;",
                   "Procedure": [
-                    "operative",
-                    "pre-operative infection prophylaxis"
+                    "operative"
                   ],
                   "Procedure-Name": [
-                    "operative",
-                    "pre-operative infection prophylaxis"
+                    "operative"
                   ],
                   "Drug": [
                     "antibiotic"
@@ -111,11 +112,11 @@
                   "Condition-Name": [
                     "infection"
                   ],
-                  "Eq-Comparison": [
-                    "only"
+                  "Modifier": [
+                    "pre-operative"
                   ],
-                  "Eq-Value": [
-                    "only"
+                  "Assertion": [
+                    "likely"
                   ]
                 }
               }
@@ -126,63 +127,65 @@
                 "transferred"
               ],
               "Location": [
-                "hospital"
+                "hospital",
+                "acute care hospitals"
               ],
               "Other": [
                 "other"
-              ],
-              "Acuteness": [
-                "acute"
               ]
             }
           }
         },
         "right": {
-          "raw_text": "5. patients with a change in code status (i.e., do not resuscitate, do not intubate) within 24 hours after admission due to the general assumption of increased risk of exposure to less aggressive treatment;",
-          "Eq-Operator": [
-            "within"
-          ],
-          "Eq-Value": [
-            "24"
-          ],
-          "Eq-Comparison": [
-            "within 24 hours"
-          ],
-          "Eq-Temporal-Unit": [
-            "hours"
-          ],
-          "Encounter": [
-            "admission"
-          ],
-          "Assertion": [
-            "assumption"
-          ],
-          "Risk": [
-            "risk"
-          ],
-          "Polarity": [
-            "increased"
-          ],
-          "Procedure": [
-            "treatment"
-          ],
-          "Observation": [
-            "code status"
-          ],
-          "Observation-Name": [
-            "code status"
-          ],
-          "Modifier": [
-            "less aggressive"
-          ],
-          "Condition": [
-            "do not resuscitate",
-            "do not intubate"
-          ],
-          "Condition-Name": [
-            "do not resuscitate",
-            "do not intubate"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "5. patients with a change in code status (i.e., do not resuscitate,",
+              "Observation": [
+                "code status"
+              ],
+              "Observation-Name": [
+                "code status"
+              ],
+              "Stability": [
+                "change"
+              ],
+              "Assertion": [
+                "do not resuscitate"
+              ]
+            },
+            "right": {
+              "raw_text": "do not intubate) within 24 hours after admission due to the general assumption of increased risk of exposure to less aggressive treatment;",
+              "Procedure": [
+                "treatment",
+                "intubate"
+              ],
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Value": [
+                "24"
+              ],
+              "Eq-Comparison": [
+                "within 24 hours"
+              ],
+              "Encounter": [
+                "admission"
+              ],
+              "Assertion": [
+                "do not",
+                "increased risk"
+              ],
+              "Procedure-Name": [
+                "intubate"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Modifier": [
+                "less aggressive"
+              ]
+            }
+          }
         }
       }
     },
@@ -199,9 +202,6 @@
       ],
       "Encounter": [
         "hospitalization"
-      ],
-      "Assertion": [
-        "ruled out"
       ]
     }
   }

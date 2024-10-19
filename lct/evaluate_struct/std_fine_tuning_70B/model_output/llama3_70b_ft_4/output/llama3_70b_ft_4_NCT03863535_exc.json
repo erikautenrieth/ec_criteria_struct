@@ -113,12 +113,12 @@
                                   "Eq-Temporal-Unit": [
                                     "months"
                                   ],
+                                  "Severity": [
+                                    "major"
+                                  ],
                                   "Eq-Value": [
                                     "6",
                                     "3"
-                                  ],
-                                  "Severity": [
-                                    "major"
                                   ],
                                   "Eq-Temporal-Period": [
                                     "prior"
@@ -221,11 +221,11 @@
                     "6",
                     "3"
                   ],
-                  "Eq-Temporal-Unit": [
-                    "months"
-                  ],
                   "Modifier": [
                     "systemic"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
                   ]
                 }
               }
@@ -233,21 +233,23 @@
             "right": {
               "raw_text": "7. severe systemic disease other than diabetes mellitus;",
               "Condition": [
-                "systemic disease",
+                "disease",
                 "diabetes mellitus"
               ],
-              "Exception": [
+              "Other": [
                 "other than"
               ],
               "Severity": [
                 "severe"
               ],
               "Condition-Name": [
-                "systemic disease",
                 "diabetes mellitus"
               ],
               "Modifier": [
                 "systemic"
+              ],
+              "Exception": [
+                "other than"
               ]
             }
           }
@@ -255,12 +257,12 @@
         "right": {
           "OR": {
             "left": {
-              "raw_text": "8. history of glaucoma",
+              "raw_text": "8. history of coagulation abnormalities",
               "Eq-Comparison": [
                 "history"
               ],
               "Condition": [
-                "glaucoma"
+                "coagulation abnormalities"
               ],
               "Eq-Operator": [
                 "to"
@@ -269,62 +271,76 @@
                 "history"
               ],
               "Condition-Name": [
-                "glaucoma"
+                "coagulation abnormalities"
               ]
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "or ocular hypertension;",
-                  "Condition": [
-                    "ocular hypertension"
-                  ],
-                  "Condition-Name": [
-                    "ocular hypertension"
-                  ]
-                },
-                "right": {
-                  "raw_text": "9. any condition that could affect followup or documentation (including preretinal or vitreous hemorrhage).",
-                  "Condition": [
-                    "condition",
-                    "preretinal hemorrhage",
-                    "vitreous hemorrhage"
-                  ],
-                  "Assertion": [
-                    "could"
-                  ],
-                  "Stability": [
-                    "affect"
-                  ],
-                  "Observation": [
-                    "followup or documentation"
-                  ],
-                  "Modifier": [
-                    "preretinal",
-                    "vitreous"
-                  ],
-                  "Condition-Name": [
-                    "preretinal hemorrhage",
-                    "vitreous hemorrhage"
-                  ]
-                }
-              }
+              "raw_text": "or current use of anticoagulative medication other than aspirin",
+              "Other": [
+                "other than"
+              ],
+              "Drug": [
+                "anticoagulative medication",
+                "aspirin"
+              ],
+              "Eq-Comparison": [
+                "current"
+              ],
+              "Exception": [
+                "other than"
+              ],
+              "Drug-Name": [
+                "anticoagulative medication",
+                "aspirin"
+              ],
+              "Eq-Temporal-Period": [
+                "current"
+              ]
             }
           }
         }
       }
     },
     "right": {
-      "raw_text": "10. Participants with contraindications for PDT should not be enrolled.",
-      "Procedure": [
-        "PDT"
-      ],
-      "Contraindication": [
-        "contraindications"
-      ],
-      "Procedure-Name": [
-        "PDT"
-      ]
+      "OR": {
+        "left": {
+          "raw_text": "9. any condition that could affect followup",
+          "Condition": [
+            "condition"
+          ],
+          "Assertion": [
+            "could"
+          ],
+          "Encounter": [
+            "followup"
+          ],
+          "Stability": [
+            "affect"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or documentation (including preretinal",
+              "Modifier": [
+                "preretinal"
+              ]
+            },
+            "right": {
+              "raw_text": "or vitreous hemorrhage).",
+              "Condition": [
+                "hemorrhage"
+              ],
+              "Condition-Name": [
+                "hemorrhage"
+              ],
+              "Modifier": [
+                "vitreous"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

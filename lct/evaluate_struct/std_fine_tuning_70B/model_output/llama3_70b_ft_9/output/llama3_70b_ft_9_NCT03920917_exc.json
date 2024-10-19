@@ -101,7 +101,7 @@
                                                     "CT imaging",
                                                     "contrast media"
                                                   ],
-                                                  "Assertion": [
+                                                  "Modifier": [
                                                     "difficulty"
                                                   ]
                                                 }
@@ -113,23 +113,23 @@
                                           "OR": {
                                             "left": {
                                               "raw_text": "- 4. Patients with a past history of radiofrequency ablation for atrial fibrillation",
-                                              "Eq-Comparison": [
-                                                "past history"
+                                              "Condition": [
+                                                "atrial fibrillation"
+                                              ],
+                                              "Condition-Name": [
+                                                "atrial fibrillation"
                                               ],
                                               "Procedure": [
                                                 "radiofrequency ablation"
                                               ],
-                                              "Condition": [
-                                                "atrial fibrillation"
-                                              ],
-                                              "Eq-Temporal-Period": [
-                                                "past history"
-                                              ],
                                               "Procedure-Name": [
                                                 "radiofrequency ablation"
                                               ],
-                                              "Condition-Name": [
-                                                "atrial fibrillation"
+                                              "Eq-Comparison": [
+                                                "past history"
+                                              ],
+                                              "Eq-Temporal-Period": [
+                                                "past history"
                                               ]
                                             },
                                             "right": {
@@ -168,33 +168,33 @@
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "- 6. Patients with contraindications for anticoagulation therapy(for prevention of cerebral infarction)",
+                                      "raw_text": "- 6. Patients with contraindications for anticoagulation therapy",
                                       "Procedure": [
                                         "anticoagulation therapy"
-                                      ],
-                                      "Contraindication": [
-                                        "contraindications"
-                                      ],
-                                      "Condition": [
-                                        "cerebral infarction"
                                       ],
                                       "Procedure-Name": [
                                         "anticoagulation therapy"
                                       ],
-                                      "Condition-Name": [
-                                        "cerebral infarction"
-                                      ],
-                                      "Assertion": [
-                                        "prevention"
+                                      "Contraindication": [
+                                        "contraindications"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "and antiarrhythmic drugs",
+                                      "raw_text": "(for prevention of cerebral infarction) and antiarrhythmic drugs",
+                                      "Condition": [
+                                        "cerebral infarction"
+                                      ],
+                                      "Condition-Name": [
+                                        "cerebral infarction"
+                                      ],
                                       "Drug": [
                                         "antiarrhythmic drugs"
                                       ],
                                       "Drug-Name": [
                                         "antiarrhythmic drugs"
+                                      ],
+                                      "Assertion": [
+                                        "prevention"
                                       ]
                                     }
                                   }
@@ -209,27 +209,24 @@
                                     "atrial fibrillation",
                                     "mitral stenosis"
                                   ],
-                                  "Procedure": [
-                                    "mechanical valve"
-                                  ],
-                                  "Eq-Comparison": [
-                                    ">grade 2"
-                                  ],
                                   "Condition-Name": [
                                     "atrial fibrillation",
                                     "mitral stenosis"
                                   ],
-                                  "Procedure-Name": [
-                                    "mechanical valve"
-                                  ],
                                   "Eq-Operator": [
                                     ">"
                                   ],
-                                  "Eq-Unit": [
-                                    "grade"
-                                  ],
                                   "Eq-Value": [
                                     "2"
+                                  ],
+                                  "Eq-Comparison": [
+                                    ">grade 2"
+                                  ],
+                                  "Procedure": [
+                                    "mechanical valve"
+                                  ],
+                                  "Procedure-Name": [
+                                    "mechanical valve"
                                   ],
                                   "Modifier": [
                                     "valvular"
@@ -253,31 +250,31 @@
                           "Condition": [
                             "comorbid disease"
                           ],
-                          "Severity": [
-                            "severe"
-                          ],
                           "Condition-Name": [
                             "comorbid disease"
+                          ],
+                          "Severity": [
+                            "severe"
                           ]
                         }
                       }
                     },
                     "right": {
                       "raw_text": "- 9. Expected survival < 1 year",
-                      "Observation": [
-                        "Expected survival"
-                      ],
-                      "Eq-Comparison": [
-                        "< 1 year"
-                      ],
-                      "Observation-Name": [
-                        "Expected survival"
-                      ],
                       "Eq-Operator": [
                         "<"
                       ],
                       "Eq-Value": [
                         "1"
+                      ],
+                      "Eq-Comparison": [
+                        "< 1 year"
+                      ],
+                      "Observation": [
+                        "Expected survival"
+                      ],
+                      "Observation-Name": [
+                        "Expected survival"
                       ],
                       "Eq-Temporal-Unit": [
                         "year"
@@ -332,17 +329,17 @@
           "raw_text": "- 12. Other patients who are judged by the principal or sub-investigator to be ineligible for participation in this clinical study",
           "Study": [
             "study"
-          ],
-          "Other": [
-            "Other"
           ]
         }
       }
     },
     "right": {
-      "raw_text": "End of eligibility criteria",
-      "Assertion": [
-        "for"
+      "raw_text": "End of eligibility criteria. Beginning of protocol.",
+      "Eq-Comparison": [
+        "on"
+      ],
+      "Eq-Temporal-Period": [
+        "on"
       ]
     }
   }

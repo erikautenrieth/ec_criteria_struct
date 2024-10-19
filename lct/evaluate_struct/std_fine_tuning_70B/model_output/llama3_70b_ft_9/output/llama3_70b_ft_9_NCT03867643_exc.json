@@ -115,35 +115,30 @@
                                       ]
                                     },
                                     "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "or oral administration of cortisone",
-                                          "Drug": [
-                                            "cortisone"
-                                          ],
-                                          "Drug-Name": [
-                                            "cortisone"
-                                          ],
-                                          "Modifier": [
-                                            "oral administration"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": "or cancer chemotherapy;",
-                                          "Procedure": [
-                                            "chemotherapy"
-                                          ],
-                                          "Condition": [
-                                            "cancer"
-                                          ],
-                                          "Procedure-Name": [
-                                            "chemotherapy"
-                                          ],
-                                          "Condition-Name": [
-                                            "cancer"
-                                          ]
-                                        }
-                                      }
+                                      "raw_text": "or oral administration of cortisone or cancer chemotherapy;",
+                                      "Drug": [
+                                        "cortisone"
+                                      ],
+                                      "Modifier": [
+                                        "oral administration"
+                                      ],
+                                      "Procedure": [
+                                        "chemotherapy",
+                                        "therapy"
+                                      ],
+                                      "Condition": [
+                                        "cancer"
+                                      ],
+                                      "Drug-Name": [
+                                        "cortisone"
+                                      ],
+                                      "Procedure-Name": [
+                                        "chemotherapy",
+                                        "therapy"
+                                      ],
+                                      "Condition-Name": [
+                                        "cancer"
+                                      ]
                                     }
                                   }
                                 }
@@ -168,6 +163,9 @@
                                   "Drug": [
                                     "drug"
                                   ],
+                                  "Observation": [
+                                    "observation"
+                                  ],
                                   "Eq-Temporal-Period": [
                                     "past"
                                   ],
@@ -176,9 +174,6 @@
                                   ],
                                   "Eq-Temporal-Unit": [
                                     "weeks"
-                                  ],
-                                  "Study": [
-                                    "observation"
                                   ]
                                 }
                               }
@@ -215,11 +210,11 @@
                                   "Drug-Name": [
                                     "antibiotic"
                                   ],
-                                  "Other": [
-                                    "other"
-                                  ],
                                   "Assertion": [
                                     "requiring"
+                                  ],
+                                  "Other": [
+                                    "other"
                                   ]
                                 },
                                 "right": {
@@ -308,7 +303,7 @@
                   "raw_text": "- Has a history of more serious infectious diseases ( five types of hepatitis,",
                   "Eq-Comparison": [
                     "history",
-                    "five"
+                    "five types"
                   ],
                   "Condition": [
                     "infectious diseases",
@@ -320,15 +315,18 @@
                   "Eq-Temporal-Period": [
                     "history"
                   ],
-                  "Severity": [
-                    "serious"
-                  ],
                   "Condition-Name": [
                     "infectious diseases",
                     "hepatitis"
                   ],
+                  "Severity": [
+                    "serious"
+                  ],
                   "Eq-Value": [
                     "five"
+                  ],
+                  "Eq-Unit": [
+                    "types"
                   ]
                 },
                 "right": {
@@ -373,15 +371,13 @@
         "right": {
           "raw_text": "- Hepatitis B infection or carriers(lineal relationship);",
           "Condition": [
-            "Hepatitis B infection",
-            "Hepatitis B"
+            "Hepatitis B infection"
           ],
           "Eq-Operator": [
             "-"
           ],
           "Condition-Name": [
-            "Hepatitis B infection",
-            "Hepatitis B"
+            "Hepatitis B infection"
           ]
         }
       }

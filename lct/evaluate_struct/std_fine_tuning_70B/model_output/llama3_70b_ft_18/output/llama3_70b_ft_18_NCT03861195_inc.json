@@ -21,11 +21,11 @@
                           "Eq-Operator": [
                             "≥"
                           ],
-                          "Eq-Temporal-Unit": [
-                            "years"
-                          ],
                           "Eq-Value": [
                             "18"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "years"
                           ]
                         },
                         "right": {
@@ -112,25 +112,33 @@
                       ]
                     },
                     "right": {
-                      "raw_text": "and/or pelvic-/para-aortic (sentinel-node) lymphadenectomy for cervical cancer",
-                      "Procedure": [
-                        "lymphadenectomy"
-                      ],
-                      "Condition": [
-                        "cancer"
-                      ],
-                      "Modifier": [
-                        "cervical",
-                        "pelvic",
-                        "para-aortic",
-                        "sentinel-node"
-                      ],
-                      "Procedure-Name": [
-                        "lymphadenectomy"
-                      ],
-                      "Condition-Name": [
-                        "cancer"
-                      ]
+                      "OR": {
+                        "left": {
+                          "raw_text": "and/or pelvic-",
+                          "Modifier": [
+                            "pelvic"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "(sentinel-node) lymphadenectomy for cervical cancer",
+                          "Condition": [
+                            "cancer"
+                          ],
+                          "Procedure": [
+                            "lymphadenectomy"
+                          ],
+                          "Modifier": [
+                            "sentinel-node",
+                            "cervical"
+                          ],
+                          "Condition-Name": [
+                            "cancer"
+                          ],
+                          "Procedure-Name": [
+                            "lymphadenectomy"
+                          ]
+                        }
+                      }
                     }
                   }
                 }
@@ -157,29 +165,28 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "and/or pelvic-/",
+                      "raw_text": "and/or pelvic-",
                       "Modifier": [
                         "pelvic"
                       ]
                     },
                     "right": {
-                      "raw_text": "para-aortic (sentinel-node) lymphadenectomy for endometrial cancer",
-                      "Procedure": [
-                        "lymphadenectomy"
-                      ],
+                      "raw_text": "(sentinel-node) lymphadenectomy for endometrial cancer",
                       "Condition": [
                         "cancer"
                       ],
+                      "Procedure": [
+                        "lymphadenectomy"
+                      ],
                       "Modifier": [
-                        "para-aortic",
                         "sentinel-node",
                         "endometrial"
                       ],
-                      "Procedure-Name": [
-                        "lymphadenectomy"
-                      ],
                       "Condition-Name": [
                         "cancer"
+                      ],
+                      "Procedure-Name": [
+                        "lymphadenectomy"
                       ]
                     }
                   }
@@ -198,11 +205,16 @@
           ],
           "Modifier": [
             "vaginal",
-            "uterus",
-            "vagina"
+            "uterus and vagina"
           ],
           "Condition-Name": [
             "cancer"
+          ],
+          "Procedure": [
+            "retrieval"
+          ],
+          "Procedure-Name": [
+            "retrieval"
           ]
         }
       }

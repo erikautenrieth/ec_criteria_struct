@@ -147,46 +147,33 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "- Systemic neurological disorders",
+                      "raw_text": "- Systemic neurological disorders with mobility limitations (e.g. advanced Parkinson's disease",
                       "Condition": [
-                        "neurological disorders"
+                        "Parkinson's disease",
+                        "neurological disorders",
+                        "mobility limitations"
                       ],
                       "Condition-Name": [
-                        "neurological disorders"
+                        "Parkinson's disease",
+                        "neurological disorders",
+                        "mobility limitations"
                       ],
                       "Eq-Operator": [
                         "-"
                       ],
                       "Modifier": [
-                        "Systemic"
+                        "Systemic",
+                        "advanced"
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "with mobility limitations (e.g. advanced Parkinson's disease",
-                          "Condition": [
-                            "Parkinson's disease",
-                            "mobility limitations"
-                          ],
-                          "Condition-Name": [
-                            "Parkinson's disease",
-                            "mobility limitations"
-                          ],
-                          "Severity": [
-                            "advanced"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "or multiple sclerosis)",
-                          "Condition": [
-                            "multiple sclerosis"
-                          ],
-                          "Condition-Name": [
-                            "multiple sclerosis"
-                          ]
-                        }
-                      }
+                      "raw_text": "or multiple sclerosis)",
+                      "Condition": [
+                        "multiple sclerosis"
+                      ],
+                      "Condition-Name": [
+                        "multiple sclerosis"
+                      ]
                     }
                   }
                 }
@@ -207,9 +194,12 @@
                   ]
                 },
                 "right": {
-                  "AND": {
+                  "NOT": {
                     "left": {
-                      "raw_text": "or known limitations that make participation",
+                      "raw_text": "or known limitations that make participation impossible",
+                      "Negation": [
+                        "impossible"
+                      ],
                       "Condition": [
                         "limitations"
                       ],
@@ -219,22 +209,12 @@
                       "Study": [
                         "participation"
                       ],
-                      "Stability": [
+                      "Assertion": [
                         "make"
+                      ],
+                      "Modifier": [
+                        "known"
                       ]
-                    },
-                    "right": {
-                      "NOT": {
-                        "left": {
-                          "raw_text": "impossible",
-                          "Negation": [
-                            "impossible"
-                          ],
-                          "Assertion": [
-                            "impossible"
-                          ]
-                        }
-                      }
                     }
                   }
                 }

@@ -101,54 +101,44 @@
                                         "Immunosuppressive treatment",
                                         "treatment"
                                       ],
-                                      "Procedure-Name": [
-                                        "Immunosuppressive treatment"
-                                      ],
                                       "Eq-Operator": [
                                         "-"
                                       ],
                                       "Drug": [
-                                        "injection"
+                                        "jection"
                                       ],
                                       "Drug-Name": [
-                                        "injection"
+                                        "jection"
+                                      ],
+                                      "Procedure-Name": [
+                                        "Immunosuppressive treatment"
                                       ]
                                     },
                                     "right": {
-                                      "OR": {
-                                        "left": {
-                                          "raw_text": "or oral administration of cortisone",
-                                          "Drug": [
-                                            "cortisone"
-                                          ],
-                                          "Drug-Name": [
-                                            "cortisone"
-                                          ],
-                                          "Procedure": [
-                                            "oral administration"
-                                          ],
-                                          "Procedure-Name": [
-                                            "oral administration"
-                                          ]
-                                        },
-                                        "right": {
-                                          "raw_text": "or cancer chemotherapy;",
-                                          "Procedure": [
-                                            "chemotherapy",
-                                            "therapy"
-                                          ],
-                                          "Procedure-Name": [
-                                            "chemotherapy",
-                                            "therapy"
-                                          ],
-                                          "Condition": [
-                                            "cancer"
-                                          ],
-                                          "Condition-Name": [
-                                            "cancer"
-                                          ]
-                                        }
-                                      }
+                                      "raw_text": "or oral administration of cortisone or cancer chemotherapy;",
+                                      "Drug": [
+                                        "cortisone"
+                                      ],
+                                      "Modifier": [
+                                        "oral administration"
+                                      ],
+                                      "Condition": [
+                                        "cancer"
+                                      ],
+                                      "Procedure": [
+                                        "chemotherapy",
+                                        "therapy"
+                                      ],
+                                      "Drug-Name": [
+                                        "cortisone"
+                                      ],
+                                      "Condition-Name": [
+                                        "cancer"
+                                      ],
+                                      "Procedure-Name": [
+                                        "chemotherapy",
+                                        "therapy"
+                                      ]
                                     }
                                   }
                                 }
@@ -158,17 +148,23 @@
                               "OR": {
                                 "left": {
                                   "raw_text": "- Any kind of vaccine",
-                                  "Immunization": [
-                                    "vaccine"
-                                  ],
                                   "Eq-Operator": [
                                     "-"
+                                  ],
+                                  "Immunization": [
+                                    "vaccine"
                                   ]
                                 },
                                 "right": {
                                   "raw_text": "or any kind of observation drug has been vaccinated in the past four weeks;",
                                   "Eq-Comparison": [
                                     "past four weeks"
+                                  ],
+                                  "Drug": [
+                                    "drug"
+                                  ],
+                                  "Observation": [
+                                    "observation"
                                   ],
                                   "Eq-Temporal-Period": [
                                     "past"
@@ -178,12 +174,6 @@
                                   ],
                                   "Eq-Temporal-Unit": [
                                     "weeks"
-                                  ],
-                                  "Drug": [
-                                    "drug"
-                                  ],
-                                  "Observation": [
-                                    "observation"
                                   ]
                                 }
                               }
@@ -211,14 +201,17 @@
                                   "Condition": [
                                     "infection"
                                   ],
-                                  "Condition-Name": [
-                                    "infection"
-                                  ],
                                   "Drug": [
                                     "antibiotic"
                                   ],
+                                  "Condition-Name": [
+                                    "infection"
+                                  ],
                                   "Drug-Name": [
                                     "antibiotic"
+                                  ],
+                                  "Assertion": [
+                                    "requiring"
                                   ],
                                   "Other": [
                                     "other"
@@ -229,6 +222,12 @@
                                   "Eq-Comparison": [
                                     "past four weeks"
                                   ],
+                                  "Procedure": [
+                                    "treatment"
+                                  ],
+                                  "Drug": [
+                                    "antiviral"
+                                  ],
                                   "Eq-Temporal-Period": [
                                     "past"
                                   ],
@@ -237,12 +236,6 @@
                                   ],
                                   "Eq-Temporal-Unit": [
                                     "weeks"
-                                  ],
-                                  "Procedure": [
-                                    "treatment"
-                                  ],
-                                  "Drug": [
-                                    "antiviral"
                                   ],
                                   "Drug-Name": [
                                     "antiviral"
@@ -260,13 +253,11 @@
                         "past week",
                         "≥ 38 ℃"
                       ],
-                      "Condition": [
-                        "Fever"
-                      ],
                       "Assertion": [
                         "symptoms"
                       ],
                       "Observation": [
+                        "Fever",
                         "axillary temperature"
                       ],
                       "Eq-Operator": [
@@ -279,10 +270,8 @@
                       "Eq-Temporal-Unit": [
                         "week"
                       ],
-                      "Condition-Name": [
-                        "Fever"
-                      ],
                       "Observation-Name": [
+                        "Fever",
                         "axillary temperature"
                       ],
                       "Eq-Value": [
@@ -299,11 +288,11 @@
                   "Procedure": [
                     "Blood transfusion"
                   ],
-                  "Procedure-Name": [
-                    "Blood transfusion"
-                  ],
                   "Eq-Operator": [
                     "-"
+                  ],
+                  "Procedure-Name": [
+                    "Blood transfusion"
                   ]
                 }
               }
@@ -318,7 +307,6 @@
                   ],
                   "Condition": [
                     "infectious diseases",
-                    "disease",
                     "hepatitis"
                   ],
                   "Eq-Operator": [
@@ -327,12 +315,12 @@
                   "Eq-Temporal-Period": [
                     "history"
                   ],
-                  "Severity": [
-                    "serious"
-                  ],
                   "Condition-Name": [
                     "infectious diseases",
                     "hepatitis"
+                  ],
+                  "Severity": [
+                    "serious"
                   ],
                   "Eq-Value": [
                     "five"
@@ -381,18 +369,35 @@
           }
         },
         "right": {
-          "raw_text": "- Hepatitis B infection or carriers(lineal relationship);",
-          "Condition": [
-            "Hepatitis B infection",
-            "Hepatitis B"
-          ],
-          "Condition-Name": [
-            "Hepatitis B infection",
-            "Hepatitis B"
-          ],
-          "Eq-Operator": [
-            "-"
-          ]
+          "OR": {
+            "left": {
+              "raw_text": "- Hepatitis B infection",
+              "Condition": [
+                "Hepatitis B"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Condition-Name": [
+                "Hepatitis B"
+              ],
+              "Modifier": [
+                "infection"
+              ]
+            },
+            "right": {
+              "raw_text": "or carriers(lineal relationship);",
+              "Condition": [
+                "carriers"
+              ],
+              "Condition-Name": [
+                "carriers"
+              ],
+              "Modifier": [
+                "linear relationship"
+              ]
+            }
+          }
         }
       }
     },
@@ -401,14 +406,14 @@
       "Procedure": [
         "physical examination"
       ],
-      "Procedure-Name": [
-        "physical examination"
-      ],
       "Eq-Operator": [
         "-"
       ],
       "Polarity": [
         "Abnormal"
+      ],
+      "Procedure-Name": [
+        "physical examination"
       ]
     }
   }

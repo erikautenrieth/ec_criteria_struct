@@ -15,7 +15,8 @@
                     "cardiorespiratory exacerbation"
                   ],
                   "Eq-Operator": [
-                    "<"
+                    "<",
+                    "-"
                   ],
                   "Eq-Temporal-Unit": [
                     "weeks"
@@ -33,17 +34,20 @@
                 },
                 "right": {
                   "raw_text": "- Pulmonary rehabilitation program during the last 2 months",
-                  "Procedure": [
-                    "Pulmonary rehabilitation program"
-                  ],
-                  "Procedure-Name": [
-                    "Pulmonary rehabilitation program"
-                  ],
                   "Eq-Temporal-Unit": [
                     "months"
                   ],
                   "Eq-Value": [
                     "2"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Procedure": [
+                    "Pulmonary rehabilitation program"
+                  ],
+                  "Procedure-Name": [
+                    "Pulmonary rehabilitation program"
                   ],
                   "Eq-Comparison": [
                     "last 2 months"
@@ -58,24 +62,22 @@
               "OR": {
                 "left": {
                   "raw_text": "- Continuous LTOT (24 hours)",
+                  "Eq-Value": [
+                    "2",
+                    "24"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
                   "Procedure": [
                     "LTOT"
                   ],
                   "Procedure-Name": [
                     "LTOT"
                   ],
-                  "Eq-Comparison": [
+                  "Modifier": [
                     "Continuous",
                     "24 hours"
-                  ],
-                  "Eq-Temporal-Period": [
-                    "Continuous"
-                  ],
-                  "Eq-Value": [
-                    "24"
-                  ],
-                  "Eq-Temporal-Unit": [
-                    "hours"
                   ]
                 },
                 "right": {
@@ -93,6 +95,9 @@
         },
         "right": {
           "raw_text": "- Anticoagulant drugs",
+          "Eq-Operator": [
+            "-"
+          ],
           "Drug": [
             "Anticoagulant drugs"
           ],
@@ -104,12 +109,6 @@
     },
     "right": {
       "raw_text": "- Hematocrit outside the normal range (35-50%)",
-      "Observation": [
-        "Hematocrit"
-      ],
-      "Observation-Name": [
-        "Hematocrit"
-      ],
       "Eq-Operator": [
         "-"
       ],
@@ -120,11 +119,14 @@
       "Eq-Comparison": [
         "35-50%"
       ],
+      "Observation": [
+        "Hematocrit"
+      ],
+      "Observation-Name": [
+        "Hematocrit"
+      ],
       "Eq-Unit": [
         "%"
-      ],
-      "Polarity": [
-        "normal"
       ]
     }
   }

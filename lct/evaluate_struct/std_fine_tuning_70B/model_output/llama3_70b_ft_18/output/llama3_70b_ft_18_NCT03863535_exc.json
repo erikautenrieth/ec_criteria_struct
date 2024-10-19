@@ -113,12 +113,12 @@
                                   "Eq-Temporal-Unit": [
                                     "months"
                                   ],
-                                  "Severity": [
-                                    "major"
-                                  ],
                                   "Eq-Value": [
                                     "6",
                                     "3"
+                                  ],
+                                  "Severity": [
+                                    "major"
                                   ],
                                   "Eq-Temporal-Period": [
                                     "prior"
@@ -233,23 +233,21 @@
             "right": {
               "raw_text": "7. severe systemic disease other than diabetes mellitus;",
               "Condition": [
-                "disease",
+                "systemic disease",
                 "diabetes mellitus"
               ],
-              "Other": [
+              "Exception": [
                 "other than"
               ],
               "Severity": [
                 "severe"
               ],
               "Condition-Name": [
+                "systemic disease",
                 "diabetes mellitus"
               ],
               "Modifier": [
                 "systemic"
-              ],
-              "Exception": [
-                "other than"
               ]
             }
           }
@@ -257,9 +255,18 @@
         "right": {
           "OR": {
             "left": {
-              "raw_text": "8. known coagulation abnormalities",
+              "raw_text": "8. history of coagulation abnormalities",
+              "Eq-Comparison": [
+                "history"
+              ],
               "Condition": [
                 "coagulation abnormalities"
+              ],
+              "Eq-Operator": [
+                "to"
+              ],
+              "Eq-Temporal-Period": [
+                "history"
               ],
               "Condition-Name": [
                 "coagulation abnormalities"
@@ -267,15 +274,15 @@
             },
             "right": {
               "raw_text": "or current use of anticoagulative medication other than aspirin",
-              "Eq-Comparison": [
-                "current"
+              "Exception": [
+                "other than"
               ],
               "Drug": [
                 "anticoagulative medication",
                 "aspirin"
               ],
-              "Other": [
-                "other than"
+              "Eq-Comparison": [
+                "current"
               ],
               "Eq-Temporal-Period": [
                 "current"
@@ -283,9 +290,6 @@
               "Drug-Name": [
                 "anticoagulative medication",
                 "aspirin"
-              ],
-              "Exception": [
-                "other than"
               ]
             }
           }
@@ -296,14 +300,14 @@
       "OR": {
         "left": {
           "raw_text": "9. any condition that could affect followup",
+          "Encounter": [
+            "followup"
+          ],
           "Condition": [
             "condition"
           ],
           "Assertion": [
             "could"
-          ],
-          "Encounter": [
-            "followup"
           ],
           "Stability": [
             "affect"

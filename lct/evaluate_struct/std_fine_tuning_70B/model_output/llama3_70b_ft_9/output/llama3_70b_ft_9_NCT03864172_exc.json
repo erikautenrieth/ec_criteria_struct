@@ -10,9 +10,7 @@
                 "History"
               ],
               "Condition": [
-                "medical conditions"
-              ],
-              "Modifier": [
+                "medical conditions",
                 "intestinal"
               ],
               "Eq-Temporal-Period": [
@@ -20,129 +18,112 @@
               ],
               "Severity": [
                 "serious"
+              ],
+              "Modifier": [
+                "intestinal"
               ]
             },
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "or severe metabolic diseases,",
+                  "raw_text": "or severe metabolic diseases, disorders such as diabetes, renal,",
                   "Condition": [
-                    "diseases"
+                    "diseases",
+                    "disorders",
+                    "diabetes"
                   ],
                   "Condition-Name": [
-                    "diseases"
-                  ],
-                  "Modifier": [
-                    "metabolic"
+                    "diseases",
+                    "disorders",
+                    "diabetes"
                   ],
                   "Severity": [
                     "severe"
+                  ],
+                  "Modifier": [
+                    "metabolic",
+                    "renal"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "disorders such as diabetes,",
-                      "Condition": [
-                        "disorders",
-                        "diabetes"
-                      ],
-                      "Condition-Name": [
-                        "disorders",
-                        "diabetes"
+                      "raw_text": "hepatic",
+                      "Modifier": [
+                        "hepatic"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "renal,",
+                          "raw_text": "or pancreatic diseases,",
+                          "Condition": [
+                            "diseases"
+                          ],
+                          "Condition-Name": [
+                            "diseases"
+                          ],
                           "Modifier": [
-                            "renal"
+                            "pancreatic"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "hepatic",
-                              "Modifier": [
-                                "hepatic"
+                              "raw_text": "disorders,",
+                              "Condition": [
+                                "disorders"
+                              ],
+                              "Condition-Name": [
+                                "disorders"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "or pancreatic diseases,",
+                                  "raw_text": "ulcer,",
                                   "Condition": [
-                                    "diseases"
+                                    "ulcer"
                                   ],
                                   "Condition-Name": [
-                                    "diseases"
-                                  ],
-                                  "Modifier": [
-                                    "pancreatic"
+                                    "ulcer"
                                   ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "disorders,",
+                                      "raw_text": "hyperthyroidism,",
                                       "Condition": [
-                                        "disorders"
+                                        "hyperthyroidism"
                                       ],
                                       "Condition-Name": [
-                                        "disorders"
+                                        "hyperthyroidism"
                                       ]
                                     },
                                     "right": {
                                       "OR": {
                                         "left": {
-                                          "raw_text": "ulcer,",
+                                          "raw_text": "malignance, chronic malnutrition,",
                                           "Condition": [
-                                            "ulcer"
+                                            "malignance",
+                                            "malnutrition"
                                           ],
                                           "Condition-Name": [
-                                            "ulcer"
+                                            "malignance",
+                                            "malnutrition"
+                                          ],
+                                          "Acuteness": [
+                                            "chronic"
                                           ]
                                         },
                                         "right": {
-                                          "OR": {
-                                            "left": {
-                                              "raw_text": "hyperthyroidism,",
-                                              "Condition": [
-                                                "hyperthyroidism"
-                                              ],
-                                              "Condition-Name": [
-                                                "hyperthyroidism"
-                                              ]
-                                            },
-                                            "right": {
-                                              "OR": {
-                                                "left": {
-                                                  "raw_text": "malignance, chronic malnutrition,",
-                                                  "Condition": [
-                                                    "malignance",
-                                                    "malnutrition"
-                                                  ],
-                                                  "Condition-Name": [
-                                                    "malignance",
-                                                    "malnutrition"
-                                                  ],
-                                                  "Acuteness": [
-                                                    "chronic"
-                                                  ]
-                                                },
-                                                "right": {
-                                                  "raw_text": "anaemia",
-                                                  "Condition": [
-                                                    "anaemia"
-                                                  ],
-                                                  "Condition-Name": [
-                                                    "anaemia"
-                                                  ]
-                                                }
-                                              }
-                                            }
-                                          }
+                                          "raw_text": "anaemia",
+                                          "Condition": [
+                                            "anaemia"
+                                          ],
+                                          "Condition-Name": [
+                                            "anaemia"
+                                          ]
                                         }
                                       }
                                     }
@@ -175,27 +156,24 @@
                 "medication",
                 "steroids"
               ],
-              "Assertion": [
-                "known to"
-              ],
-              "Condition": [
-                "bone metabolism"
-              ],
               "Eq-Temporal-Period": [
                 "History",
                 "on"
               ],
-              "Procedure-Name": [
-                "therapy"
-              ],
               "Drug-Name": [
                 "steroids"
+              ],
+              "Condition": [
+                "bone metabolism"
               ],
               "Condition-Name": [
                 "bone metabolism"
               ],
               "Stability": [
                 "interfere"
+              ],
+              "Assertion": [
+                "known to"
               ]
             },
             "right": {
@@ -235,8 +213,8 @@
                       "Condition-Name": [
                         "seizure"
                       ],
-                      "Modifier": [
-                        "anti"
+                      "Assertion": [
+                        "known to"
                       ]
                     }
                   }
@@ -251,38 +229,49 @@
       "AND": {
         "left": {
           "raw_text": "- Taking regularly any nutritional supplements",
-          "Eq-Comparison": [
-            "Taking"
-          ],
           "Drug": [
             "nutritional supplements"
           ],
-          "Eq-Temporal-Period": [
-            "Taking"
-          ],
           "Drug-Name": [
             "nutritional supplements"
+          ],
+          "Eq-Comparison": [
+            "Taking"
+          ],
+          "Eq-Temporal-Period": [
+            "Taking"
           ]
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "and unwilling to stop for the study",
-              "Assertion": [
-                "unwilling"
-              ],
-              "Study": [
-                "study"
-              ]
+              "raw_text": "and"
             },
             "right": {
-              "raw_text": "on",
-              "Eq-Comparison": [
-                "on"
-              ],
-              "Eq-Temporal-Period": [
-                "on"
-              ]
+              "NOT": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "unwilling to stop for the study",
+                      "Assertion": [
+                        "unwilling"
+                      ],
+                      "Study": [
+                        "study"
+                      ],
+                      "Negation": [
+                        "stop"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "any double quotes within the raw textual criteria are escaped with a backslash (").
+                      "Eq-Operator": [
+                        "to"
+                      ]
+                    }
+                  }
+                }
+              }
             }
           }
         }

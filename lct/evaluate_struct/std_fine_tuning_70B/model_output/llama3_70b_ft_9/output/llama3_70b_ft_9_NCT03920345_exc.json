@@ -125,14 +125,14 @@
                             },
                             "right": {
                               "raw_text": "or patients who plan a pregnancy while participating in the study",
+                              "Study": [
+                                "study"
+                              ],
                               "Condition": [
                                 "pregnancy"
                               ],
                               "Condition-Name": [
                                 "pregnancy"
-                              ],
-                              "Study": [
-                                "study"
                               ],
                               "Assertion": [
                                 "plan"
@@ -149,19 +149,20 @@
                     "left": {
                       "raw_text": "- Systemic neurological disorders with mobility limitations (e.g. advanced Parkinson's disease",
                       "Condition": [
+                        "Parkinson's disease",
                         "neurological disorders",
-                        "Parkinson's disease"
+                        "mobility limitations"
                       ],
                       "Condition-Name": [
+                        "Parkinson's disease",
                         "neurological disorders",
-                        "Parkinson's disease"
+                        "mobility limitations"
                       ],
                       "Eq-Operator": [
                         "-"
                       ],
                       "Modifier": [
                         "Systemic",
-                        "mobility limitations",
                         "advanced"
                       ]
                     },
@@ -179,53 +180,77 @@
               }
             },
             "right": {
-              "raw_text": "- Patients with incompatibilities or known limitations that make participation impossible",
-              "Eq-Operator": [
-                "-"
-              ],
-              "Condition": [
-                "incompatibilities",
-                "limitations"
-              ],
-              "Condition-Name": [
-                "incompatibilities",
-                "limitations"
-              ],
-              "Assertion": [
-                "make participation"
-              ],
-              "Modifier": [
-                "impossible"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients with incompatibilities",
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Condition": [
+                    "incompatibilities"
+                  ],
+                  "Condition-Name": [
+                    "incompatibilities"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or known limitations that make participation",
+                      "Condition": [
+                        "limitations"
+                      ],
+                      "Condition-Name": [
+                        "limitations"
+                      ],
+                      "Study": [
+                        "participation"
+                      ],
+                      "Stability": [
+                        "make"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "impossible",
+                          "Negation": [
+                            "impossible"
+                          ],
+                          "Assertion": [
+                            "impossible"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         },
         "right": {
           "OR": {
             "left": {
-              "raw_text": "- Inability to provide informed consent without a legally authorized representative.",
+              "raw_text": "- Patients after stabilization with implants on thoracic",
+              "Procedure": [
+                "stabilization with implants"
+              ],
+              "Procedure-Name": [
+                "stabilization with implants"
+              ],
               "Eq-Operator": [
                 "-"
               ],
-              "Negation": [
-                "Inability"
+              "Modifier": [
+                "thoracic"
               ]
             },
             "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "Thoracic",
-                  "Modifier": [
-                    "Thoracic"
-                  ]
-                },
-                "right": {
-                  "raw_text": "or lumbar spine.",
-                  "Modifier": [
-                    "lumbar spine"
-                  ]
-                }
-              }
+              "raw_text": "or lumbar spine.",
+              "Modifier": [
+                "lumbar spine"
+              ]
             }
           }
         }
@@ -235,9 +260,6 @@
       "raw_text": "- Inability to provide informed consent without a legally authorized representative.",
       "Eq-Operator": [
         "-"
-      ],
-      "Negation": [
-        "Inability"
       ]
     }
   }

@@ -190,7 +190,7 @@
                                     "ml"
                                   ],
                                   "Study": [
-                                    "baseline screening"
+                                    "screening"
                                   ]
                                 }
                               }
@@ -213,6 +213,9 @@
                           "OR": {
                             "left": {
                               "raw_text": "- Chemical",
+                              "Eq-Value": [
+                                "C"
+                              ],
                               "Modifier": [
                                 "Chemical"
                               ]
@@ -251,42 +254,50 @@
                   "OR": {
                     "left": {
                       "raw_text": "3. Other acute",
-                      "Acuteness": [
-                        "acute"
-                      ],
                       "Eq-Value": [
                         "3"
+                      ],
+                      "Acuteness": [
+                        "acute"
                       ],
                       "Other": [
                         "Other"
                       ]
                     },
                     "right": {
-                      "raw_text": "or chronic medical conditions that, in the opinion of the investigator, may increase the risks associated with study participation or HB-adMSC administration",
-                      "Condition": [
-                        "medical conditions"
-                      ],
-                      "Acuteness": [
-                        "chronic"
-                      ],
-                      "Study": [
-                        "study"
-                      ],
-                      "Assertion": [
-                        "may"
-                      ],
-                      "Risk": [
-                        "risks"
-                      ],
-                      "Polarity": [
-                        "increase"
-                      ],
-                      "Procedure": [
-                        "HB-adMSC administration"
-                      ],
-                      "Procedure-Name": [
-                        "HB-adMSC administration"
-                      ]
+                      "OR": {
+                        "left": {
+                          "raw_text": "or chronic medical conditions that, in the opinion of the investigator, may increase the risks associated with study participation",
+                          "Condition": [
+                            "medical conditions",
+                            "conditions"
+                          ],
+                          "Acuteness": [
+                            "chronic"
+                          ],
+                          "Study": [
+                            "study"
+                          ],
+                          "Risk": [
+                            "risks"
+                          ],
+                          "Stability": [
+                            "increase"
+                          ],
+                          "Assertion": [
+                            "may"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or HB-adMSC administration",
+                          "Procedure": [
+                            "HB-adMSC administration"
+                          ],
+                          "Procedure-Name": [
+                            "HB-adMSC administration"
+                          ]
+                        }
+                      }
                     }
                   }
                 }
@@ -300,31 +311,45 @@
               ],
               "Other": [
                 "other"
-              ],
-              "Procedure": [
-                "interventional"
               ]
             }
           }
         },
         "right": {
-          "raw_text": "5. Unwillingness to return for follow-up visits",
-          "Encounter": [
-            "visits"
-          ],
-          "Assertion": [
-            "Unwillingness"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "5."
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Unwillingness to return for follow-up visits",
+                  "Encounter": [
+                    "visits"
+                  ],
+                  "Assertion": [
+                    "Unwillingness"
+                  ],
+                  "Negation": [
+                    "Unwillingness"
+                  ]
+                }
+              }
+            }
+          }
         }
       }
     },
     "right": {
-      "raw_text": "6. Pregnancy",
+      "raw_text": "6. Pregnant women",
       "Condition": [
-        "Pregnancy"
+        "Pregnant"
       ],
       "Condition-Name": [
-        "Pregnancy"
+        "Pregnant"
+      ],
+      "Eq-Value": [
+        "6"
       ]
     }
   }

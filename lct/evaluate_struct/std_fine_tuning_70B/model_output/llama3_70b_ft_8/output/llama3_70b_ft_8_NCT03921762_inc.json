@@ -17,6 +17,7 @@
                         "old"
                       ],
                       "Eq-Operator": [
+                        "-",
                         ">"
                       ],
                       "Eq-Value": [
@@ -34,6 +35,9 @@
                       "Condition": [
                         "cataract"
                       ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
                       "Condition-Name": [
                         "cataract"
                       ]
@@ -45,26 +49,27 @@
                   "Modifier": [
                     "bilateral"
                   ],
+                  "Assertion": [
+                    "Qualify for"
+                  ],
                   "Procedure": [
                     "implantation"
                   ],
                   "Eq-Comparison": [
                     "within 1 month"
                   ],
+                  "Eq-Operator": [
+                    "-",
+                    "within"
+                  ],
                   "Procedure-Name": [
                     "implantation"
-                  ],
-                  "Eq-Operator": [
-                    "within"
                   ],
                   "Eq-Value": [
                     "1"
                   ],
                   "Eq-Temporal-Unit": [
                     "month"
-                  ],
-                  "Assertion": [
-                    "Qualify for"
                   ]
                 }
               }
@@ -72,7 +77,10 @@
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "-"
+                  "raw_text": "-",
+                  "Eq-Operator": [
+                    "-"
+                  ]
                 },
                 "right": {
                   "NOT": {
@@ -118,20 +126,21 @@
           "Eq-Comparison": [
             "18 to 27D"
           ],
-          "Observation-Name": [
-            "IOL"
+          "Eq-Operator": [
+            "-",
+            "to"
           ],
           "Eq-Value": [
             "18",
             "27"
           ],
-          "Eq-Operator": [
-            "to"
-          ],
           "Eq-Unit": [
             "D"
           ],
           "Observation": [
+            "IOL"
+          ],
+          "Observation-Name": [
             "IOL"
           ]
         }
@@ -139,20 +148,21 @@
     },
     "right": {
       "raw_text": "- Expected postoperative astigmatism ≤ 0.75D",
-      "Eq-Comparison": [
-        "≤ 0.75D"
-      ],
-      "Observation": [
-        "astigmatism"
+      "Assertion": [
+        "Expected"
       ],
       "Procedure": [
         "operative"
       ],
-      "Eq-Operator": [
-        "≤"
+      "Observation": [
+        "astigmatism"
       ],
-      "Eq-Value": [
-        "0.75"
+      "Eq-Comparison": [
+        "≤ 0.75D"
+      ],
+      "Eq-Operator": [
+        "-",
+        "≤"
       ],
       "Eq-Unit": [
         "D"
@@ -160,8 +170,8 @@
       "Observation-Name": [
         "astigmatism"
       ],
-      "Assertion": [
-        "Expected"
+      "Eq-Value": [
+        "0.75"
       ]
     }
   }

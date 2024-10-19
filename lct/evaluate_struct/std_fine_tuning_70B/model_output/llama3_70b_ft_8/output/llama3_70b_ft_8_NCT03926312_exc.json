@@ -130,7 +130,7 @@
                         "would"
                       ],
                       "Eq-Operator": [
-                        "to"
+                        "-"
                       ]
                     },
                     "right": {
@@ -165,21 +165,32 @@
                               ]
                             },
                             "right": {
-                              "raw_text": "or other significant psychiatric disorder, cognitive impairment) - at the discretion of the physician",
-                              "Condition": [
-                                "psychiatric disorder",
-                                "cognitive impairment"
-                              ],
-                              "Condition-Name": [
-                                "cognitive impairment",
-                                "psychiatric disorder"
-                              ],
-                              "Severity": [
-                                "significant"
-                              ],
-                              "Other": [
-                                "other"
-                              ]
+                              "OR": {
+                                "left": {
+                                  "raw_text": "or other significant psychiatric disorder,",
+                                  "Condition": [
+                                    "psychiatric disorder"
+                                  ],
+                                  "Condition-Name": [
+                                    "psychiatric disorder"
+                                  ],
+                                  "Severity": [
+                                    "significant"
+                                  ],
+                                  "Other": [
+                                    "other"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "cognitive impairment) - at the discretion of the physician",
+                                  "Condition": [
+                                    "cognitive impairment"
+                                  ],
+                                  "Condition-Name": [
+                                    "cognitive impairment"
+                                  ]
+                                }
+                              }
                             }
                           }
                         }
@@ -226,6 +237,9 @@
     },
     "right": {
       "raw_text": "8. Inability to operate the smart-watch",
+      "Eq-Value": [
+        "I"
+      ],
       "Negation": [
         "Inability"
       ],

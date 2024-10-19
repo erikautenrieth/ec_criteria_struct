@@ -92,22 +92,21 @@
                   "raw_text": "and/or femtosecond assisted cataract surgery. Well-controlled diabetes,",
                   "Procedure": [
                     "cataract surgery",
+                    "femtosecond assisted cataract surgery",
                     "surgery"
-                  ],
-                  "Modifier": [
-                    "femtosecond assisted"
                   ],
                   "Condition": [
                     "diabetes"
                   ],
                   "Procedure-Name": [
                     "cataract surgery",
+                    "femtosecond assisted cataract surgery",
                     "surgery"
                   ],
                   "Condition-Name": [
                     "diabetes"
                   ],
-                  "Stability": [
+                  "Modifier": [
                     "Well-controlled"
                   ]
                 },
@@ -145,32 +144,36 @@
                 "childbearing potential"
               ],
               "Assertion": [
-                "agree to"
+                "must agree to"
               ],
               "Procedure": [
                 "birth control",
+                "oral contraceptives",
+                "intrauterine device",
+                "IUD",
                 "DepoProvera",
                 "tubal ligation"
               ],
               "Study": [
                 "study"
               ],
+              "Eq-Operator": [
+                "-"
+              ],
               "Condition-Name": [
                 "childbearing potential"
               ],
               "Procedure-Name": [
                 "birth control",
-                "DepoProvera",
-                "tubal ligation"
-              ],
-              "Modifier": [
                 "oral contraceptives",
                 "intrauterine device",
-                "IUD"
+                "IUD",
+                "DepoProvera",
+                "tubal ligation"
               ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
                   "raw_text": "or vasectomy of the partner (with confirmed negative sperm counts) in monogamous relationship (same partner). An acceptable, although less reliable, method involves the careful use of condoms",
                   "Procedure": [
@@ -200,7 +203,10 @@
                   "OR": {
                     "left": {
                       "raw_text": "and spermicidal foam",
-                      "Modifier": [
+                      "Observation": [
+                        "spermicidal foam"
+                      ],
+                      "Observation-Name": [
                         "spermicidal foam"
                       ]
                     },
@@ -208,7 +214,10 @@
                       "OR": {
                         "left": {
                           "raw_text": "or gel",
-                          "Modifier": [
+                          "Observation": [
+                            "gel"
+                          ],
+                          "Observation-Name": [
                             "gel"
                           ]
                         },
@@ -216,7 +225,10 @@
                           "OR": {
                             "left": {
                               "raw_text": "and/or cervical cap",
-                              "Modifier": [
+                              "Procedure": [
+                                "cervical cap"
+                              ],
+                              "Procedure-Name": [
                                 "cervical cap"
                               ]
                             },
@@ -232,6 +244,9 @@
                               "Eq-Comparison": [
                                 "at least 10 days",
                                 "last"
+                              ],
+                              "Assertion": [
+                                "sexually active"
                               ],
                               "Condition-Name": [
                                 "childbearing potential",
@@ -252,11 +267,11 @@
                               "Eq-Temporal-Period": [
                                 "last"
                               ],
-                              "Modifier": [
-                                "sponge"
-                              ],
                               "Life-Stage-And-Gender": [
                                 "female"
+                              ],
+                              "Modifier": [
+                                "sponge"
                               ]
                             }
                           }

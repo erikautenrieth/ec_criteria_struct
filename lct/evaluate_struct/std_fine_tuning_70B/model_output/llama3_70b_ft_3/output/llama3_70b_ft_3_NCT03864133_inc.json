@@ -92,21 +92,22 @@
                   "raw_text": "and/or femtosecond assisted cataract surgery. Well-controlled diabetes,",
                   "Procedure": [
                     "cataract surgery",
-                    "femtosecond assisted cataract surgery",
                     "surgery"
+                  ],
+                  "Modifier": [
+                    "femtosecond assisted"
                   ],
                   "Condition": [
                     "diabetes"
                   ],
                   "Procedure-Name": [
                     "cataract surgery",
-                    "femtosecond assisted cataract surgery",
                     "surgery"
                   ],
                   "Condition-Name": [
                     "diabetes"
                   ],
-                  "Modifier": [
+                  "Stability": [
                     "Well-controlled"
                   ]
                 },
@@ -129,17 +130,17 @@
       "AND": {
         "left": {
           "raw_text": "- Females",
-          "Eq-Operator": [
-            "-"
-          ],
           "Life-Stage-And-Gender": [
             "Females"
+          ],
+          "Eq-Operator": [
+            "-"
           ]
         },
         "right": {
           "AND": {
             "left": {
-              "raw_text": "of childbearing potential must agree to use a reliable method of birth control while participating in this study. Reliable methods of birth control are: abstinence, oral contraceptives, intrauterine device (IUD), DepoProvera, tubal ligation",
+              "raw_text": "of childbearing potential must agree to use a reliable method of birth control while participating in this study. Reliable methods of birth control are: abstinence, oral contraceptives, intrauterine device (IUD), DepoProvera,",
               "Condition": [
                 "childbearing potential"
               ],
@@ -147,13 +148,7 @@
                 "agree to"
               ],
               "Procedure": [
-                "birth control",
-                "abstinence",
-                "oral contraceptives",
-                "intrauterine device",
-                "IUD",
-                "DepoProvera",
-                "tubal ligation"
+                "birth control"
               ],
               "Study": [
                 "study"
@@ -162,112 +157,121 @@
                 "childbearing potential"
               ],
               "Procedure-Name": [
-                "birth control",
+                "birth control"
+              ],
+              "Modifier": [
                 "abstinence",
                 "oral contraceptives",
                 "intrauterine device",
                 "IUD",
-                "DepoProvera",
-                "tubal ligation"
+                "DepoProvera"
               ]
             },
             "right": {
-              "AND": {
+              "OR": {
                 "left": {
-                  "raw_text": "or vasectomy of the partner (with confirmed negative sperm counts) in monogamous relationship (same partner). An acceptable, although less reliable, method involves the careful use of condoms",
+                  "raw_text": "tubal ligation",
                   "Procedure": [
-                    "vasectomy"
-                  ],
-                  "Observation": [
-                    "sperm counts"
-                  ],
-                  "Assertion": [
-                    "less reliable"
+                    "tubal ligation"
                   ],
                   "Procedure-Name": [
-                    "vasectomy"
-                  ],
-                  "Observation-Name": [
-                    "sperm counts"
-                  ],
-                  "Modifier": [
-                    "partner"
-                  ],
-                  "Polarity": [
-                    "negative"
+                    "tubal ligation"
                   ]
                 },
                 "right": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "and spermicidal foam",
+                      "raw_text": "or vasectomy of the partner (with confirmed negative sperm counts) in monogamous relationship (same partner). An acceptable, although less reliable, method involves the careful use of condoms",
+                      "Procedure": [
+                        "vasectomy"
+                      ],
                       "Observation": [
-                        "spermicidal"
+                        "sperm counts"
+                      ],
+                      "Assertion": [
+                        "less reliable"
+                      ],
+                      "Procedure-Name": [
+                        "vasectomy"
                       ],
                       "Observation-Name": [
-                        "spermicidal"
+                        "sperm counts"
+                      ],
+                      "Polarity": [
+                        "negative"
                       ],
                       "Modifier": [
-                        "foam"
+                        "monogamous relationship",
+                        "same partner"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "or gel",
+                          "raw_text": "and spermicidal foam",
                           "Modifier": [
-                            "gel"
+                            "spermicidal foam"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "and/or cervical cap",
-                              "Procedure": [
-                                "cervical cap"
-                              ],
-                              "Procedure-Name": [
-                                "cervical cap"
+                              "raw_text": "or gel",
+                              "Modifier": [
+                                "gel"
                               ]
                             },
                             "right": {
-                              "raw_text": "or sponge. A pregnancy test is required at least 10 days from the last normal menstrual period, if the patient is a sexually active female of childbearing potential.",
-                              "Condition": [
-                                "childbearing potential",
-                                "menstrual"
-                              ],
-                              "Observation": [
-                                "pregnancy test"
-                              ],
-                              "Eq-Comparison": [
-                                "at least 10 days",
-                                "last"
-                              ],
-                              "Condition-Name": [
-                                "childbearing potential",
-                                "menstrual"
-                              ],
-                              "Observation-Name": [
-                                "pregnancy test"
-                              ],
-                              "Eq-Operator": [
-                                "at least"
-                              ],
-                              "Eq-Value": [
-                                "10"
-                              ],
-                              "Eq-Temporal-Unit": [
-                                "days"
-                              ],
-                              "Eq-Temporal-Period": [
-                                "last"
-                              ],
-                              "Modifier": [
-                                "sponge"
-                              ],
-                              "Life-Stage-And-Gender": [
-                                "female"
-                              ]
+                              "OR": {
+                                "left": {
+                                  "raw_text": "and/or cervical cap",
+                                  "Modifier": [
+                                    "cervical cap"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or sponge. A pregnancy test is required at least 10 days from the last normal menstrual period, if the patient is a sexually active female of childbearing potential.",
+                                  "Condition": [
+                                    "childbearing potential",
+                                    "menstrual"
+                                  ],
+                                  "Assertion": [
+                                    "agree to"
+                                  ],
+                                  "Observation": [
+                                    "pregnancy test"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "at least 10 days",
+                                    "last"
+                                  ],
+                                  "Condition-Name": [
+                                    "childbearing potential",
+                                    "menstrual"
+                                  ],
+                                  "Observation-Name": [
+                                    "pregnancy test"
+                                  ],
+                                  "Eq-Operator": [
+                                    "at least"
+                                  ],
+                                  "Eq-Value": [
+                                    "10"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "days"
+                                  ],
+                                  "Life-Stage-And-Gender": [
+                                    "female"
+                                  ],
+                                  "Eq-Temporal-Period": [
+                                    "last"
+                                  ],
+                                  "Modifier": [
+                                    "sponge"
+                                  ]
+                                }
+                              }
                             }
                           }
                         }

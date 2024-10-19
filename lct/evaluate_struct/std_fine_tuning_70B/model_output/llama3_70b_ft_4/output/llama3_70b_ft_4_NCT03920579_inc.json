@@ -42,6 +42,9 @@
                       ],
                       "Eq-Comparison": [
                         "≤45 years"
+                      ],
+                      "Modifier": [
+                        "old"
                       ]
                     }
                   }
@@ -91,13 +94,16 @@
                         "left": {
                           "raw_text": "no congenital chronic disease",
                           "Condition": [
-                            "congenital chronic disease"
+                            "disease"
                           ],
                           "Condition-Name": [
-                            "congenital chronic disease"
+                            "disease"
                           ],
                           "Negation": [
                             "no"
+                          ],
+                          "Modifier": [
+                            "congenital chronic"
                           ]
                         },
                         "right": {
@@ -105,16 +111,19 @@
                             "left": {
                               "raw_text": "or chronic disease requiring treatment",
                               "Condition": [
-                                "chronic disease"
+                                "disease"
                               ],
                               "Condition-Name": [
-                                "chronic disease"
+                                "disease"
                               ],
-                              "Procedure": [
-                                "treatment"
+                              "Modifier": [
+                                "chronic"
                               ],
                               "Assertion": [
                                 "requiring"
+                              ],
+                              "Procedure": [
+                                "treatment"
                               ]
                             },
                             "right": {
@@ -122,36 +131,25 @@
                                 "left": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "and who have"
+                                      "raw_text": "and who have no pathological symptoms",
+                                      "Condition": [
+                                        "pathological"
+                                      ],
+                                      "Condition-Name": [
+                                        "pathological"
+                                      ],
+                                      "Negation": [
+                                        "no"
+                                      ],
+                                      "Assertion": [
+                                        "symptoms"
+                                      ]
                                     },
                                     "right": {
-                                      "NOT": {
-                                        "left": {
-                                          "OR": {
-                                            "left": {
-                                              "raw_text": "no pathological symptoms",
-                                              "Condition": [
-                                                "pathological"
-                                              ],
-                                              "Condition-Name": [
-                                                "pathological"
-                                              ],
-                                              "Assertion": [
-                                                "symptoms"
-                                              ],
-                                              "Negation": [
-                                                "no"
-                                              ]
-                                            },
-                                            "right": {
-                                              "raw_text": "or findings",
-                                              "Condition": [
-                                                "findings"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
+                                      "raw_text": "or findings",
+                                      "Observation": [
+                                        "findings"
+                                      ]
                                     }
                                   }
                                 }
@@ -172,8 +170,7 @@
             "left": {
               "raw_text": "4. Those who are judged to be eligible for clinical trials based on laboratory",
               "Study": [
-                "clinical trials",
-                "trial"
+                "clinical trials"
               ],
               "Assertion": [
                 "eligible for"
@@ -193,6 +190,9 @@
               "Procedure-Name": [
                 "ECG"
               ],
+              "Observation": [
+                "results"
+              ],
               "Study": [
                 "screening tests"
               ]
@@ -204,8 +204,7 @@
     "right": {
       "raw_text": "5. Those who voluntarily decide to participate and agree to comply with the cautions after hearing and fully understanding the detailed description of this clinical trial",
       "Study": [
-        "clinical trial",
-        "trial"
+        "clinical trial"
       ]
     }
   }

@@ -46,7 +46,7 @@
                             "left": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "not a North Carolina resident",
+                                  "raw_text": "not a North Carolina Resident",
                                   "Negation": [
                                     "not"
                                   ],
@@ -90,11 +90,11 @@
                   "raw_text": "3. the only antibiotic associated with patient is administered in the operating room as this likely represents pre-operative infection prophylaxis and not presumed infection;",
                   "Procedure": [
                     "operative",
-                    "pre-operative infection prophylaxis"
+                    "pre-operative"
                   ],
                   "Procedure-Name": [
-                    "pre-operative infection prophylaxis",
-                    "operative"
+                    "operative",
+                    "pre-operative"
                   ],
                   "Drug": [
                     "antibiotic"
@@ -108,8 +108,14 @@
                   "Condition-Name": [
                     "infection"
                   ],
+                  "Modifier": [
+                    "prophylaxis"
+                  ],
                   "Eq-Temporal-Unit": [
                     "room"
+                  ],
+                  "Assertion": [
+                    "likely"
                   ]
                 }
               }
@@ -120,7 +126,8 @@
                 "transferred"
               ],
               "Location": [
-                "hospital"
+                "hospital",
+                "hospitals"
               ],
               "Other": [
                 "other"
@@ -145,27 +152,14 @@
                 "change"
               ],
               "Assertion": [
-                "do not"
+                "likely"
               ],
-              "Procedure": [
-                "resuscitate"
-              ],
-              "Procedure-Name": [
-                "resuscitate"
-              ],
-              "Negation": [
-                "not"
+              "Modifier": [
+                "do not resuscitate"
               ]
             },
             "right": {
               "raw_text": "do not intubate) within 24 hours after admission due to the general assumption of increased risk of exposure to less aggressive treatment;",
-              "Procedure": [
-                "intubate",
-                "treatment"
-              ],
-              "Procedure-Name": [
-                "intubate"
-              ],
               "Eq-Operator": [
                 "within"
               ],
@@ -179,19 +173,25 @@
                 "admission"
               ],
               "Assertion": [
-                "do not"
+                "assumption",
+                "likely"
               ],
-              "Negation": [
-                "not"
+              "Procedure": [
+                "treatment"
+              ],
+              "Modifier": [
+                "do not intubate",
+                "aggressive"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
               ],
               "Risk": [
                 "risk"
               ],
               "Polarity": [
-                "increased"
-              ],
-              "Eq-Temporal-Unit": [
-                "hours"
+                "increased",
+                "less"
               ]
             }
           }
@@ -206,11 +206,11 @@
       "Condition-Name": [
         "infection"
       ],
-      "Location": [
-        "hospital"
-      ],
       "Encounter": [
         "hospitalization"
+      ],
+      "Eq-Temporal-Unit": [
+        "index"
       ]
     }
   }

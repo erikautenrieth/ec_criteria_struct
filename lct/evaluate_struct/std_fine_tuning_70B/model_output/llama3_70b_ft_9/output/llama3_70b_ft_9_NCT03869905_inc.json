@@ -3,61 +3,61 @@
     "left": {
       "AND": {
         "left": {
-          "raw_text": "- Ulcerative colitis",
+          "raw_text": "- Ulcerative colitis with confirmed diagnosis by histology",
           "Condition": [
             "Ulcerative colitis"
           ],
           "Condition-Name": [
             "Ulcerative colitis"
+          ],
+          "Procedure": [
+            "histology"
+          ],
+          "Procedure-Name": [
+            "histology"
           ]
         },
         "right": {
-          "OR": {
+          "AND": {
             "left": {
-              "raw_text": "with confirmed diagnosis by histology",
+              "raw_text": "and endoscopy",
               "Procedure": [
-                "histology"
+                "endoscopy"
               ],
               "Procedure-Name": [
-                "histology"
+                "endoscopy"
               ]
             },
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "and endoscopy",
-                  "Procedure": [
-                    "endoscopy"
+                  "raw_text": "AND in stable remission for 3 months or more",
+                  "Eq-Temporal-Unit": [
+                    "months"
                   ],
-                  "Procedure-Name": [
-                    "endoscopy"
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Condition": [
+                    "remission"
+                  ],
+                  "Condition-Name": [
+                    "remission"
+                  ],
+                  "Eq-Comparison": [
+                    "3 months or more"
+                  ],
+                  "Eq-Operator": [
+                    "or more"
+                  ],
+                  "Stability": [
+                    "stable"
                   ]
                 },
                 "right": {
-                  "OR": {
+                  "NOT": {
                     "left": {
-                      "raw_text": "AND in stable remission for 3 months or more",
-                      "Eq-Temporal-Unit": [
-                        "months"
-                      ],
-                      "Eq-Value": [
-                        "3"
-                      ],
-                      "Condition": [
-                        "stable remission"
-                      ],
-                      "Condition-Name": [
-                        "stable remission"
-                      ],
-                      "Eq-Comparison": [
-                        "3 months or more"
-                      ],
-                      "Eq-Operator": [
-                        "or more"
-                      ]
-                    },
-                    "right": {
-                      "AND": {
+                      "OR": {
                         "left": {
                           "raw_text": "without therapy",
                           "Procedure": [

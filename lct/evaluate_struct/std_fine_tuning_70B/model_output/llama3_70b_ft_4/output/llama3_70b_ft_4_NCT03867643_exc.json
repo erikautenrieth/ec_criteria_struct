@@ -155,11 +155,11 @@
                               "OR": {
                                 "left": {
                                   "raw_text": "- Any kind of vaccine",
-                                  "Immunization": [
-                                    "vaccine"
-                                  ],
                                   "Eq-Operator": [
                                     "-"
+                                  ],
+                                  "Immunization": [
+                                    "vaccine"
                                   ]
                                 },
                                 "right": {
@@ -179,13 +179,7 @@
                                   "Drug": [
                                     "drug"
                                   ],
-                                  "Procedure": [
-                                    "vaccinated"
-                                  ],
-                                  "Procedure-Name": [
-                                    "vaccinated"
-                                  ],
-                                  "Modifier": [
+                                  "Observation": [
                                     "observation"
                                   ]
                                 }
@@ -223,6 +217,9 @@
                                   "Drug-Name": [
                                     "antibiotic"
                                   ],
+                                  "Assertion": [
+                                    "requiring"
+                                  ],
                                   "Other": [
                                     "other"
                                   ]
@@ -232,6 +229,9 @@
                                   "Eq-Comparison": [
                                     "past four weeks"
                                   ],
+                                  "Procedure": [
+                                    "treatment"
+                                  ],
                                   "Eq-Temporal-Period": [
                                     "past"
                                   ],
@@ -240,9 +240,6 @@
                                   ],
                                   "Eq-Temporal-Unit": [
                                     "weeks"
-                                  ],
-                                  "Procedure": [
-                                    "treatment"
                                   ],
                                   "Drug": [
                                     "antiviral"
@@ -263,6 +260,15 @@
                         "past week",
                         "≥ 38 ℃"
                       ],
+                      "Condition": [
+                        "Fever"
+                      ],
+                      "Assertion": [
+                        "symptoms"
+                      ],
+                      "Observation": [
+                        "axillary temperature"
+                      ],
                       "Eq-Operator": [
                         "-",
                         "≥"
@@ -273,17 +279,8 @@
                       "Eq-Temporal-Unit": [
                         "week"
                       ],
-                      "Condition": [
-                        "Fever"
-                      ],
                       "Condition-Name": [
                         "Fever"
-                      ],
-                      "Assertion": [
-                        "symptoms"
-                      ],
-                      "Observation": [
-                        "axillary temperature"
                       ],
                       "Observation-Name": [
                         "axillary temperature"
@@ -321,6 +318,7 @@
                   ],
                   "Condition": [
                     "infectious diseases",
+                    "disease",
                     "hepatitis"
                   ],
                   "Eq-Operator": [
@@ -383,35 +381,18 @@
           }
         },
         "right": {
-          "OR": {
-            "left": {
-              "raw_text": "- Hepatitis B infection",
-              "Condition": [
-                "Hepatitis B"
-              ],
-              "Condition-Name": [
-                "Hepatitis B"
-              ],
-              "Eq-Operator": [
-                "-"
-              ],
-              "Modifier": [
-                "infection"
-              ]
-            },
-            "right": {
-              "raw_text": "or carriers(lineal relationship);",
-              "Condition": [
-                "carriers"
-              ],
-              "Condition-Name": [
-                "carriers"
-              ],
-              "Modifier": [
-                "linear relationship"
-              ]
-            }
-          }
+          "raw_text": "- Hepatitis B infection or carriers(lineal relationship);",
+          "Condition": [
+            "Hepatitis B infection",
+            "Hepatitis B"
+          ],
+          "Condition-Name": [
+            "Hepatitis B infection",
+            "Hepatitis B"
+          ],
+          "Eq-Operator": [
+            "-"
+          ]
         }
       }
     },

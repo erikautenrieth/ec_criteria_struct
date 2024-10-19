@@ -30,14 +30,14 @@
                                                 },
                                                 "right": {
                                                   "raw_text": "or permanent atrial fibrillation",
-                                                  "Modifier": [
-                                                    "permanent"
-                                                  ],
                                                   "Condition": [
                                                     "atrial fibrillation"
                                                   ],
                                                   "Condition-Name": [
                                                     "atrial fibrillation"
+                                                  ],
+                                                  "Modifier": [
+                                                    "permanent"
                                                   ]
                                                 }
                                               }
@@ -60,15 +60,15 @@
                                                 },
                                                 "right": {
                                                   "raw_text": "or a structural heart disease that is hemodynamically affected",
-                                                  "Modifier": [
-                                                    "structural",
-                                                    "hemodynamically affected"
-                                                  ],
                                                   "Condition": [
                                                     "heart disease"
                                                   ],
                                                   "Condition-Name": [
                                                     "heart disease"
+                                                  ],
+                                                  "Modifier": [
+                                                    "structural",
+                                                    "hemodynamically affected"
                                                   ]
                                                 }
                                               }
@@ -92,15 +92,22 @@
                                             "right": {
                                               "raw_text": "or CT imaging difficulty using contrast media",
                                               "Procedure": [
-                                                "CT imaging",
-                                                "contrast media"
+                                                "CT imaging"
                                               ],
                                               "Procedure-Name": [
-                                                "CT imaging",
+                                                "CT imaging"
+                                              ],
+                                              "Condition": [
+                                                "difficulty"
+                                              ],
+                                              "Condition-Name": [
+                                                "difficulty"
+                                              ],
+                                              "Drug": [
                                                 "contrast media"
                                               ],
-                                              "Modifier": [
-                                                "difficulty"
+                                              "Drug-Name": [
+                                                "contrast media"
                                               ]
                                             }
                                           }
@@ -111,11 +118,11 @@
                                       "OR": {
                                         "left": {
                                           "raw_text": "- 4. Patients with a past history of radiofrequency ablation for atrial fibrillation",
-                                          "Eq-Comparison": [
-                                            "past history"
+                                          "Procedure": [
+                                            "radiofrequency ablation"
                                           ],
-                                          "Eq-Temporal-Period": [
-                                            "past history"
+                                          "Procedure-Name": [
+                                            "radiofrequency ablation"
                                           ],
                                           "Condition": [
                                             "atrial fibrillation"
@@ -123,11 +130,11 @@
                                           "Condition-Name": [
                                             "atrial fibrillation"
                                           ],
-                                          "Procedure": [
-                                            "radiofrequency ablation"
+                                          "Eq-Comparison": [
+                                            "past history"
                                           ],
-                                          "Procedure-Name": [
-                                            "radiofrequency ablation"
+                                          "Eq-Temporal-Period": [
+                                            "past history"
                                           ]
                                         },
                                         "right": {
@@ -220,9 +227,14 @@
                               "Eq-Comparison": [
                                 ">grade 2"
                               ],
-                              "Modifier": [
-                                "valvular",
+                              "Procedure": [
                                 "mechanical valve"
+                              ],
+                              "Procedure-Name": [
+                                "mechanical valve"
+                              ],
+                              "Modifier": [
+                                "valvular"
                               ],
                               "Eq-Unit": [
                                 "grade"
@@ -303,7 +315,21 @@
           }
         },
         "right": {
-          "raw_text": "- 11. Patients who cannot read the consent form (illiterates, foreigners, etc.)"
+          "AND": {
+            "left": {
+              "raw_text": "- 11. Patients who"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "cannot read the consent form (illiterates, foreigners, etc.)",
+                  "Negation": [
+                    "cannot"
+                  ]
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -311,9 +337,6 @@
       "raw_text": "- 12. Other patients who are judged by the principal or sub-investigator to be ineligible for participation in this clinical study",
       "Study": [
         "study"
-      ],
-      "Other": [
-        "Other"
       ]
     }
   }

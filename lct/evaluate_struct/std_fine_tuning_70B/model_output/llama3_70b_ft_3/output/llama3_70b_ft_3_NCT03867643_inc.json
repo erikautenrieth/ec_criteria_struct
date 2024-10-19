@@ -51,17 +51,11 @@
                     "0",
                     "1"
                   ],
-                  "Drug": [
-                    "Hep B"
-                  ],
-                  "Drug-Name": [
-                    "Hep B"
-                  ],
                   "Procedure": [
-                    "injections"
+                    "injections of Hep B"
                   ],
                   "Procedure-Name": [
-                    "injections"
+                    "injections of Hep B"
                   ],
                   "Eq-Comparison": [
                     "0, 1 and 6 months"
@@ -75,10 +69,7 @@
             "right": {
               "AND": {
                 "left": {
-                  "raw_text": "-",
-                  "Eq-Operator": [
-                    "-"
-                  ]
+                  "raw_text": "-"
                 },
                 "right": {
                   "NOT": {
@@ -112,42 +103,62 @@
           }
         },
         "right": {
-          "raw_text": "- Children or guardian knew and agreed to accept the study",
+          "OR": {
+            "left": {
+              "raw_text": "- Children",
+              "Life-Stage-And-Gender": [
+                "Children"
+              ],
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "raw_text": "or guardian knew and agreed to accept the study",
+              "Study": [
+                "study"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Follow - up study",
           "Eq-Operator": [
             "-"
           ],
           "Study": [
             "study"
           ],
-          "Life-Stage-And-Gender": [
-            "Children"
+          "Encounter": [
+            "Follow - up"
+          ]
+        },
+        "right": {
+          "raw_text": "and blood collection after vaccination can be accepted",
+          "Study": [
+            "vaccination"
+          ],
+          "Observation": [
+            "blood collection"
+          ],
+          "Observation-Name": [
+            "blood collection"
+          ],
+          "Procedure": [
+            "vaccination"
+          ],
+          "Procedure-Name": [
+            "vaccination"
+          ],
+          "Assertion": [
+            "can be"
           ]
         }
       }
-    },
-    "right": {
-      "raw_text": "- Follow - up study and blood collection after vaccination can be accepted",
-      "Procedure": [
-        "vaccination"
-      ],
-      "Procedure-Name": [
-        "vaccination"
-      ],
-      "Eq-Operator": [
-        "-"
-      ],
-      "Study": [
-        "study"
-      ],
-      "Observation": [
-        "blood collection"
-      ],
-      "Observation-Name": [
-        "blood collection"
-      ],
-      "Encounter": [
-        "Follow - up"
-      ]
     }
   }
 }

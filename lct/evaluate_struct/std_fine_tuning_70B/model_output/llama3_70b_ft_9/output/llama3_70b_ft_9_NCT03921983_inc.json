@@ -137,40 +137,64 @@
               }
             },
             "right": {
-              "raw_text": "- LTOT+ group: long term oxygenotherapy prescribed for more than 3 months, with daily use between 12 and 15 hours.",
-              "Eq-Temporal-Unit": [
-                "months",
-                "hours"
-              ],
-              "Eq-Value": [
-                "3",
-                "12",
-                "15",
-                "2"
-              ],
-              "Eq-Operator": [
-                "more than",
-                "-",
-                "between"
-              ],
-              "Procedure": [
-                "LTOT",
-                "oxygenotherapy"
-              ],
-              "Procedure-Name": [
-                "LTOT",
-                "oxygenotherapy"
-              ],
-              "Eq-Comparison": [
-                "more than 3 months",
-                "between 12 and 15 hours"
-              ],
-              "Polarity": [
-                "-"
-              ],
-              "Modifier": [
-                "long term"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "- LTOT+ group: long term oxygenotherapy prescribed for more than 3 months,",
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Eq-Operator": [
+                    "more than",
+                    "-"
+                  ],
+                  "Eq-Comparison": [
+                    "more than 3 months"
+                  ],
+                  "Condition": [
+                    "LTOT"
+                  ],
+                  "Condition-Name": [
+                    "LTOT"
+                  ],
+                  "Procedure": [
+                    "LTOT",
+                    "oxygenotherapy"
+                  ],
+                  "Procedure-Name": [
+                    "LTOT",
+                    "oxygenotherapy"
+                  ],
+                  "Polarity": [
+                    "-"
+                  ],
+                  "Modifier": [
+                    "long term"
+                  ]
+                },
+                "right": {
+                  "raw_text": "with daily use between 12 and 15 hours.",
+                  "Eq-Value": [
+                    "12",
+                    "15",
+                    "2"
+                  ],
+                  "Eq-Comparison": [
+                    "between 12 and 15 hours"
+                  ],
+                  "Eq-Operator": [
+                    "between"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "hours"
+                  ],
+                  "Study": [
+                    "use"
+                  ]
+                }
+              }
             }
           }
         },
@@ -198,6 +222,9 @@
           "Observation-Name": [
             "sex",
             "physical activity"
+          ],
+          "Eq-Unit": [
+            "g"
           ]
         }
       }
@@ -209,19 +236,25 @@
       ],
       "Eq-Value": [
         "15",
-        "2"
+        "5"
       ],
       "Eq-Comparison": [
-        "± 15%"
-      ],
-      "Observation": [
-        "GPAQ questionnaire"
+        "± 15% Mets.min/week"
       ],
       "Observation-Name": [
         "GPAQ questionnaire"
       ],
       "Eq-Unit": [
-        "%"
+        "%",
+        "Mets",
+        "min",
+        "g"
+      ],
+      "Eq-Temporal-Unit": [
+        "week"
+      ],
+      "Observation": [
+        "GPAQ questionnaire"
       ]
     }
   }

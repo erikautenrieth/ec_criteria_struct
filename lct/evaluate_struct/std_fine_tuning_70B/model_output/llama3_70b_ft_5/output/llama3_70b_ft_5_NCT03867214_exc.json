@@ -118,14 +118,16 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "- Patients with any cardiovascular problems (such as myocardiac infarction history,",
+                      "raw_text": "- Patients with any cardiovascular problems (such as myocardiac infarction history, atrial fibrillation,",
                       "Condition": [
                         "cardiovascular problems",
-                        "myocardiac infarction"
+                        "myocardiac infarction",
+                        "atrial fibrillation"
                       ],
                       "Condition-Name": [
                         "cardiovascular problems",
-                        "myocardiac infarction"
+                        "myocardiac infarction",
+                        "atrial fibrillation"
                       ],
                       "Eq-Comparison": [
                         "history"
@@ -135,26 +137,13 @@
                       ]
                     },
                     "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "atrial fibrillation,",
-                          "Condition": [
-                            "atrial fibrillation"
-                          ],
-                          "Condition-Name": [
-                            "atrial fibrillation"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "angina);",
-                          "Condition": [
-                            "angina"
-                          ],
-                          "Condition-Name": [
-                            "angina"
-                          ]
-                        }
-                      }
+                      "raw_text": "angina);",
+                      "Condition": [
+                        "angina"
+                      ],
+                      "Condition-Name": [
+                        "angina"
+                      ]
                     }
                   }
                 }
@@ -188,7 +177,10 @@
           }
         },
         "right": {
-          "raw_text": "- Preoperative anemia (a hemoglobin value of <11 g/dL in females",
+          "raw_text": "- Preoperative anemia (a hemoglobin value of <11 g/dL in females and <12 g/dL in males), refusal of blood products;",
+          "Procedure": [
+            "operative"
+          ],
           "Condition": [
             "anemia"
           ],
@@ -198,14 +190,9 @@
           "Eq-Operator": [
             "<"
           ],
-          "Eq-Value": [
-            "11"
-          ],
           "Eq-Comparison": [
-            "<11 g/dL"
-          ],
-          "Procedure": [
-            "operative"
+            "<11 g/dL",
+            "<12 g/dL"
           ],
           "Observation": [
             "hemoglobin"
@@ -213,40 +200,133 @@
           "Observation-Name": [
             "hemoglobin"
           ],
+          "Eq-Value": [
+            "11",
+            "12"
+          ],
           "Eq-Unit": [
             "g",
             "dL"
           ],
           "Life-Stage-And-Gender": [
-            "females"
+            "females",
+            "males"
           ]
         }
       }
     },
     "right": {
-      "raw_text": "and <12 g/dL in males), refusal of blood products;",
-      "Eq-Operator": [
-        "<"
-      ],
-      "Eq-Value": [
-        "12"
-      ],
-      "Eq-Comparison": [
-        "<12 g/dL"
-      ],
-      "Eq-Unit": [
-        "g",
-        "dL"
-      ],
-      "Life-Stage-And-Gender": [
-        "males"
-      ],
-      "Procedure": [
-        "blood products"
-      ],
-      "Procedure-Name": [
-        "blood products"
-      ]
+      "OR": {
+        "left": {
+          "raw_text": "- Preoperative use of anticoagulant therapy within five days before surgery, fibrinolytic disorders requiring intraoperative antifibrinolytic treatment,",
+          "Procedure": [
+            "operative",
+            "surgery"
+          ],
+          "Drug": [
+            "anticoagulant therapy",
+            "fibrinolytic",
+            "antifibrinolytic"
+          ],
+          "Drug-Name": [
+            "anticoagulant therapy",
+            "fibrinolytic",
+            "antifibrinolytic"
+          ],
+          "Eq-Operator": [
+            "within"
+          ],
+          "Eq-Temporal-Unit": [
+            "days"
+          ],
+          "Eq-Comparison": [
+            "within five days"
+          ],
+          "Condition": [
+            "fibrinolytic disorders"
+          ],
+          "Condition-Name": [
+            "fibrinolytic disorders"
+          ],
+          "Assertion": [
+            "requiring"
+          ],
+          "Eq-Unit": [
+            "g"
+          ],
+          "Eq-Value": [
+            "five"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "coagulopathy (as identified by a preoperative platelet count of <150,000/mm3, an international normalized ratio of >1.4,",
+              "Procedure": [
+                "operative"
+              ],
+              "Condition": [
+                "coagulopathy"
+              ],
+              "Condition-Name": [
+                "coagulopathy"
+              ],
+              "Eq-Operator": [
+                "<",
+                ">"
+              ],
+              "Eq-Comparison": [
+                "<150,000/mm3",
+                ">1.4"
+              ],
+              "Observation": [
+                "platelet count",
+                "international normalized ratio"
+              ],
+              "Observation-Name": [
+                "platelet count",
+                "international normalized ratio"
+              ],
+              "Eq-Value": [
+                "150,000",
+                "1.4"
+              ],
+              "Eq-Unit": [
+                "mm3",
+                "g"
+              ]
+            },
+            "right": {
+              "raw_text": "or a prolonged partial thromboplastin time [>1.4 times normal]).",
+              "Eq-Operator": [
+                ">",
+                "to"
+              ],
+              "Eq-Comparison": [
+                ">1.4 times normal"
+              ],
+              "Observation": [
+                "partial thromboplastin time"
+              ],
+              "Observation-Name": [
+                "partial thromboplastin time"
+              ],
+              "Eq-Unit": [
+                "g"
+              ],
+              "Eq-Value": [
+                "1.4"
+              ],
+              "Polarity": [
+                "normal"
+              ],
+              "Stability": [
+                "prolonged"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

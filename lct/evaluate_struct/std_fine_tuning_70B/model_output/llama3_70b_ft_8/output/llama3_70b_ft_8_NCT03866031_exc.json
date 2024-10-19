@@ -10,23 +10,28 @@
           "Procedure-Name": [
             "radiotherapy"
           ],
-          "Modifier": [
-            "head"
-          ],
           "Eq-Comparison": [
             "received"
           ],
           "Eq-Temporal-Period": [
             "received"
+          ],
+          "Modifier": [
+            "head"
           ]
         },
         "right": {
           "raw_text": "or neck region for tumors. (2) a history of chemotherapy. (3) patients on long-term steroids, or bisphosphonates. (4) heavy smokers.",
-          "Procedure": [
-            "chemotherapy"
+          "Eq-Comparison": [
+            "history",
+            "on"
           ],
-          "Procedure-Name": [
-            "chemotherapy"
+          "Eq-Temporal-Period": [
+            "history",
+            "on"
+          ],
+          "Modifier": [
+            "neck region"
           ],
           "Condition": [
             "tumors"
@@ -34,16 +39,11 @@
           "Condition-Name": [
             "tumors"
           ],
-          "Modifier": [
-            "neck region"
+          "Procedure": [
+            "chemotherapy"
           ],
-          "Eq-Comparison": [
-            "history",
-            "on"
-          ],
-          "Eq-Temporal-Period": [
-            "history",
-            "on"
+          "Procedure-Name": [
+            "chemotherapy"
           ],
           "Drug": [
             "steroids",
@@ -53,14 +53,14 @@
             "steroids",
             "bisphosphonates"
           ],
+          "Severity": [
+            "heavy"
+          ],
           "Observation": [
             "smokers"
           ],
           "Observation-Name": [
             "smokers"
-          ],
-          "Severity": [
-            "heavy"
           ]
         }
       }
@@ -76,7 +76,7 @@
         "right": {
           "AND": {
             "left": {
-              "raw_text": "and mental dis -abilities that interfere with the maintenance of implants.",
+              "raw_text": "and mental dis -abilities that interfere",
               "Condition": [
                 "dis -abilities"
               ],
@@ -86,56 +86,18 @@
               "Modifier": [
                 "mental"
               ],
+              "Stability": [
+                "interfere"
+              ]
+            },
+            "right": {
+              "raw_text": "with the maintenance of implants.",
               "Procedure": [
                 "implants"
               ],
               "Procedure-Name": [
                 "implants"
-              ],
-              "Stability": [
-                "interfere"
-              ],
-              "Assertion": [
-                "maintenance"
               ]
-            },
-            "right": {
-              "OR": {
-                "left": {
-                  "raw_text": "(6) uncontrolled systematic disease that could compromise implant surgery. (7) extreme bruxism. (8) infectious disease. (9) temporomandibular joint dysfunction.",
-                  "Condition": [
-                    "disease",
-                    "bruxism",
-                    "infectious disease",
-                    "temporomandibular joint dysfunction"
-                  ],
-                  "Condition-Name": [
-                    "disease",
-                    "bruxism",
-                    "infectious disease",
-                    "temporomandibular joint dysfunction"
-                  ],
-                  "Modifier": [
-                    "systematic",
-                    "uncontrolled"
-                  ],
-                  "Procedure": [
-                    "implant surgery"
-                  ],
-                  "Procedure-Name": [
-                    "implant surgery"
-                  ],
-                  "Severity": [
-                    "extreme"
-                  ],
-                  "Stability": [
-                    "compromise"
-                  ],
-                  "Assertion": [
-                    "could"
-                  ]
-                }
-              }
             }
           }
         }

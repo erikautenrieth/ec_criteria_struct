@@ -25,7 +25,7 @@
             "right": {
               "OR": {
                 "left": {
-                  "raw_text": "or severe metabolic diseases, disorders such as diabetes, renal,",
+                  "raw_text": "or severe metabolic diseases, disorders such as diabetes,",
                   "Condition": [
                     "diseases",
                     "disorders",
@@ -37,8 +37,7 @@
                     "diabetes"
                   ],
                   "Modifier": [
-                    "metabolic",
-                    "renal"
+                    "metabolic"
                   ],
                   "Severity": [
                     "severe"
@@ -47,73 +46,80 @@
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "hepatic",
+                      "raw_text": "renal,",
                       "Modifier": [
-                        "hepatic"
+                        "renal"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "or pancreatic diseases, disorders,",
-                          "Condition": [
-                            "diseases",
-                            "disorders"
-                          ],
-                          "Condition-Name": [
-                            "diseases",
-                            "disorders"
-                          ],
+                          "raw_text": "hepatic",
                           "Modifier": [
-                            "pancreatic"
+                            "hepatic"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "ulcer,",
+                              "raw_text": "or pancreatic diseases, disorders,",
                               "Condition": [
-                                "ulcer"
+                                "diseases",
+                                "disorders"
                               ],
                               "Condition-Name": [
-                                "ulcer"
+                                "diseases",
+                                "disorders"
+                              ],
+                              "Modifier": [
+                                "pancreatic"
                               ]
                             },
                             "right": {
                               "OR": {
                                 "left": {
-                                  "raw_text": "hyperthyroidism,",
+                                  "raw_text": "ulcer,",
                                   "Condition": [
-                                    "hyperthyroidism"
+                                    "ulcer"
                                   ],
                                   "Condition-Name": [
-                                    "hyperthyroidism"
+                                    "ulcer"
                                   ]
                                 },
                                 "right": {
                                   "OR": {
                                     "left": {
-                                      "raw_text": "malignance, chronic malnutrition,",
+                                      "raw_text": "hyperthyroidism,",
                                       "Condition": [
-                                        "malignance",
-                                        "malnutrition"
+                                        "hyperthyroidism"
                                       ],
                                       "Condition-Name": [
-                                        "malignance",
-                                        "malnutrition"
-                                      ],
-                                      "Acuteness": [
-                                        "chronic"
+                                        "hyperthyroidism"
                                       ]
                                     },
                                     "right": {
-                                      "raw_text": "anaemia",
-                                      "Condition": [
-                                        "anaemia"
-                                      ],
-                                      "Condition-Name": [
-                                        "anaemia"
-                                      ]
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "malignance, chronic malnutrition,",
+                                          "Condition": [
+                                            "malignance",
+                                            "chronic malnutrition"
+                                          ],
+                                          "Condition-Name": [
+                                            "malignance",
+                                            "chronic malnutrition"
+                                          ]
+                                        },
+                                        "right": {
+                                          "raw_text": "anaemia",
+                                          "Condition": [
+                                            "anaemia"
+                                          ],
+                                          "Condition-Name": [
+                                            "anaemia"
+                                          ]
+                                        }
+                                      }
                                     }
                                   }
                                 }
@@ -160,6 +166,9 @@
               "Drug-Name": [
                 "steroids"
               ],
+              "Condition-Name": [
+                "bone metabolism"
+              ],
               "Stability": [
                 "interfere"
               ]
@@ -189,20 +198,12 @@
                     "right": {
                       "raw_text": "cortisone or anti-seizure medication",
                       "Drug": [
-                        "medication",
-                        "cortisone"
-                      ],
-                      "Condition": [
-                        "seizure"
+                        "cortisone",
+                        "anti-seizure medication"
                       ],
                       "Drug-Name": [
-                        "cortisone"
-                      ],
-                      "Condition-Name": [
-                        "seizure"
-                      ],
-                      "Modifier": [
-                        "anti"
+                        "cortisone",
+                        "anti-seizure medication"
                       ]
                     }
                   }
@@ -236,11 +237,18 @@
               "raw_text": "and unwilling to stop for the study",
               "Assertion": [
                 "unwilling"
+              ],
+              "Study": [
+                "study"
               ]
             },
             "right": {
-              "Study": [
-                "study"
+              "raw_text": "on",
+              "Eq-Comparison": [
+                "on"
+              ],
+              "Eq-Temporal-Period": [
+                "on"
               ]
             }
           }

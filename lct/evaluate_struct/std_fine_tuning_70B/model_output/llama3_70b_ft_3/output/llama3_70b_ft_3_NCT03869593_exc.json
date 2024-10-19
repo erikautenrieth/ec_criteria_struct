@@ -29,20 +29,20 @@
                                       "OR": {
                                         "left": {
                                           "raw_text": "- current immunosuppressive therapies: corticosteroids,",
-                                          "Eq-Comparison": [
-                                            "current"
-                                          ],
                                           "Procedure": [
                                             "immunosuppressive therapies"
+                                          ],
+                                          "Eq-Comparison": [
+                                            "current"
                                           ],
                                           "Drug": [
                                             "corticosteroids"
                                           ],
-                                          "Eq-Temporal-Period": [
-                                            "current"
-                                          ],
                                           "Procedure-Name": [
                                             "immunosuppressive therapies"
+                                          ],
+                                          "Eq-Temporal-Period": [
+                                            "current"
                                           ],
                                           "Drug-Name": [
                                             "corticosteroids"
@@ -118,15 +118,10 @@
                         "right": {
                           "raw_text": "- Congenital immune deficiency",
                           "Condition": [
-                            "Constitutional immune deficiency",
-                            "immune deficiency"
+                            "Congenital immune deficiency"
                           ],
                           "Condition-Name": [
-                            "Constitutional immune deficiency",
-                            "immune deficiency"
-                          ],
-                          "Modifier": [
-                            "Congenital"
+                            "Congenital immune deficiency"
                           ]
                         }
                       }
@@ -162,88 +157,115 @@
                   }
                 },
                 "right": {
-                  "raw_text": "- Urinary obstruction not lifted within the first 24 hours of management",
-                  "Condition": [
-                    "Urinary obstruction"
-                  ],
-                  "Eq-Comparison": [
-                    "within the first 24 hours"
-                  ],
-                  "Condition-Name": [
-                    "Urinary obstruction"
-                  ],
-                  "Eq-Operator": [
-                    "within"
-                  ],
-                  "Eq-Temporal-Recency": [
-                    "first"
-                  ],
-                  "Eq-Value": [
-                    "24"
-                  ],
-                  "Eq-Temporal-Unit": [
-                    "hours"
-                  ],
-                  "Procedure": [
-                    "management"
-                  ],
-                  "Modifier": [
-                    "not lifted"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Urinary obstruction",
+                      "Condition": [
+                        "Urinary obstruction"
+                      ],
+                      "Condition-Name": [
+                        "Urinary obstruction"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "not lifted within the first 24 hours of management",
+                          "Eq-Operator": [
+                            "within"
+                          ],
+                          "Eq-Value": [
+                            "24"
+                          ],
+                          "Eq-Comparison": [
+                            "within the first 24 hours"
+                          ],
+                          "Condition-Name": [
+                            "management"
+                          ],
+                          "Eq-Temporal-Recency": [
+                            "first"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "hours"
+                          ],
+                          "Stability": [
+                            "lifted"
+                          ],
+                          "Negation": [
+                            "not"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
             "right": {
-              "raw_text": "- Intra-abdominal infection collected undrained in the first 24 hours of management",
-              "Modifier": [
-                "Intra-abdominal",
-                "undrained"
-              ],
-              "Condition": [
-                "infection"
-              ],
-              "Eq-Comparison": [
-                "within the first 24 hours"
-              ],
-              "Procedure": [
-                "management"
-              ],
-              "Condition-Name": [
-                "infection"
-              ],
-              "Eq-Operator": [
-                "within"
-              ],
-              "Eq-Temporal-Recency": [
-                "first"
-              ],
-              "Eq-Value": [
-                "24"
-              ],
-              "Eq-Temporal-Unit": [
-                "hours"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "- Intra-abdominal infection collected",
+                  "Condition": [
+                    "Intra-abdominal infection"
+                  ],
+                  "Condition-Name": [
+                    "Intra-abdominal infection"
+                  ],
+                  "Modifier": [
+                    "collected"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "undrained in the first 24 hours of management",
+                      "Eq-Operator": [
+                        "within"
+                      ],
+                      "Eq-Value": [
+                        "24"
+                      ],
+                      "Eq-Comparison": [
+                        "within the first 24 hours"
+                      ],
+                      "Condition-Name": [
+                        "management"
+                      ],
+                      "Eq-Temporal-Recency": [
+                        "first"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "hours"
+                      ],
+                      "Negation": [
+                        "undrained"
+                      ]
+                    }
+                  }
+                }
+              }
             }
           }
         },
         "right": {
           "raw_text": "- primary infectious focus represented by mechanically ventilated pneumonia",
-          "Modifier": [
-            "primary"
-          ],
           "Condition": [
-            "infectious focus",
-            "pneumonia"
+            "pneumonia",
+            "infectious focus"
           ],
           "Procedure": [
             "mechanically ventilated"
           ],
           "Condition-Name": [
-            "infectious focus",
-            "pneumonia"
+            "pneumonia",
+            "infectious focus"
           ],
           "Procedure-Name": [
             "mechanically ventilated"
+          ],
+          "Modifier": [
+            "primary"
           ]
         }
       }

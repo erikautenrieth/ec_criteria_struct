@@ -144,10 +144,13 @@
                                       "OR": {
                                         "left": {
                                           "raw_text": "- Majors under trusteeship",
-                                          "Observation": [
-                                            "under trusteeship"
+                                          "Eq-Temporal-Unit": [
+                                            "M"
                                           ],
                                           "Observation-Name": [
+                                            "under trusteeship"
+                                          ],
+                                          "Observation": [
                                             "under trusteeship"
                                           ]
                                         },
@@ -168,14 +171,14 @@
                                   "OR": {
                                     "left": {
                                       "raw_text": "- Pregnant women",
+                                      "Life-Stage-And-Gender": [
+                                        "women"
+                                      ],
                                       "Condition": [
                                         "Pregnant"
                                       ],
                                       "Condition-Name": [
                                         "Pregnant"
-                                      ],
-                                      "Life-Stage-And-Gender": [
-                                        "women"
                                       ]
                                     },
                                     "right": {
@@ -206,6 +209,9 @@
                           "OR": {
                             "left": {
                               "raw_text": "- Protected person,",
+                              "Eq-Temporal-Unit": [
+                                "M"
+                              ],
                               "Observation": [
                                 "Protected person"
                               ],
@@ -227,10 +233,10 @@
                                 "right": {
                                   "raw_text": "or under justice safeguard,",
                                   "Observation": [
-                                    "justice safeguard"
+                                    "under justice safeguard"
                                   ],
                                   "Observation-Name": [
-                                    "justice safeguard"
+                                    "under justice safeguard"
                                   ]
                                 }
                               }
@@ -243,34 +249,38 @@
                       "raw_text": "- Profiting of a medical help from government (AME),",
                       "Eq-Temporal-Unit": [
                         "M"
-                      ],
-                      "Insurance": [
-                        "medical help from government",
-                        "AME"
                       ]
                     }
                   }
                 },
                 "right": {
-                  "raw_text": "- Not contactable after care,",
-                  "Eq-Temporal-Unit": [
-                    "M"
-                  ],
-                  "Assertion": [
-                    "Not"
-                  ],
-                  "Observation": [
-                    "contactable"
-                  ],
-                  "Observation-Name": [
-                    "contactable"
-                  ],
-                  "Negation": [
-                    "Not"
-                  ],
-                  "Encounter": [
-                    "care"
-                  ]
+                  "AND": {
+                    "left": {
+                      "raw_text": "-"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Not contactable after care,",
+                          "Eq-Temporal-Unit": [
+                            "M"
+                          ],
+                          "Observation": [
+                            "contactable"
+                          ],
+                          "Observation-Name": [
+                            "contactable"
+                          ],
+                          "Negation": [
+                            "Not"
+                          ],
+                          "Encounter": [
+                            "care"
+                          ]
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
@@ -319,6 +329,9 @@
               ],
               "Procedure-Name": [
                 "musicotherapy"
+              ],
+              "Eq-Temporal-Unit": [
+                "M"
               ],
               "Negation": [
                 "incompatible"

@@ -117,15 +117,18 @@
                                 },
                                 "right": {
                                   "raw_text": "- Delay from onset of symptoms to inclusion of more than 10 days",
-                                  "Eq-Comparison": [
-                                    "more than 10 days",
-                                    "onset"
-                                  ],
                                   "Assertion": [
                                     "symptoms"
                                   ],
+                                  "Eq-Comparison": [
+                                    "onset",
+                                    "more than 10 days"
+                                  ],
                                   "Study": [
                                     "inclusion"
+                                  ],
+                                  "Eq-Temporal-Recency": [
+                                    "onset"
                                   ],
                                   "Eq-Operator": [
                                     "more than"
@@ -136,8 +139,11 @@
                                   "Eq-Temporal-Unit": [
                                     "days"
                                   ],
-                                  "Eq-Temporal-Recency": [
-                                    "onset"
+                                  "Condition": [
+                                    "Delay"
+                                  ],
+                                  "Condition-Name": [
+                                    "Delay"
                                   ]
                                 }
                               }
@@ -163,7 +169,8 @@
                               ],
                               "Eq-Temporal-Unit": [
                                 "hours",
-                                "days"
+                                "days",
+                                "day"
                               ]
                             }
                           }
@@ -189,7 +196,8 @@
                           ],
                           "Eq-Temporal-Unit": [
                             "hours",
-                            "days"
+                            "days",
+                            "day"
                           ]
                         }
                       }
@@ -248,13 +256,6 @@
                       ],
                       "Study": [
                         "protocol"
-                      ],
-                      "Encounter": [
-                        "visits",
-                        "contacts"
-                      ],
-                      "Modifier": [
-                        "follow-up"
                       ]
                     }
                   }
@@ -276,10 +277,10 @@
             },
             "right": {
               "raw_text": "or incapacitation",
-              "Condition": [
+              "Observation": [
                 "incapacitation"
               ],
-              "Condition-Name": [
+              "Observation-Name": [
                 "incapacitation"
               ]
             }
@@ -294,11 +295,14 @@
         "DVT"
       ],
       "Study": [
-        "research"
+        "enrolled"
       ],
       "Condition-Name": [
         "deep vein thrombosis",
         "DVT"
+      ],
+      "Modifier": [
+        "diagnostic"
       ]
     }
   }

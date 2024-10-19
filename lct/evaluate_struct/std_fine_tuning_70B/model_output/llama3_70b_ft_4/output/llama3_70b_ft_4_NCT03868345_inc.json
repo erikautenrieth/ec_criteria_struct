@@ -119,32 +119,25 @@
                           ]
                         },
                         "right": {
-                          "AND": {
-                            "left": {
-                              "raw_text": "and medical ability to comply with scheduled visits",
-                              "Encounter": [
-                                "visits"
-                              ],
-                              "Eq-Comparison": [
-                                "scheduled"
-                              ],
-                              "Assertion": [
-                                "ability to"
-                              ],
-                              "Eq-Temporal-Period": [
-                                "scheduled"
-                              ]
-                            },
-                            "right": {
-                              "raw_text": "and study procedures,",
-                              "Study": [
-                                "study"
-                              ],
-                              "Procedure": [
-                                "procedures"
-                              ]
-                            }
-                          }
+                          "raw_text": "and medical ability to comply with scheduled visits and study procedures,",
+                          "Encounter": [
+                            "visits"
+                          ],
+                          "Study": [
+                            "study"
+                          ],
+                          "Procedure": [
+                            "procedures"
+                          ],
+                          "Assertion": [
+                            "ability to"
+                          ],
+                          "Eq-Comparison": [
+                            "scheduled"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "scheduled"
+                          ]
                         }
                       }
                     }
@@ -166,11 +159,11 @@
               "Study": [
                 "study"
               ],
-              "Assertion": [
-                "accessibility"
+              "Observation": [
+                "geographic accessibility"
               ],
-              "Modifier": [
-                "geographic"
+              "Observation-Name": [
+                "geographic accessibility"
               ]
             }
           }
@@ -189,7 +182,7 @@
             "right": {
               "NOT": {
                 "left": {
-                  "raw_text": "NO noted symptoms of frontotemporal cognitive dysfunction, and",
+                  "raw_text": "NO noted symptoms of frontotemporal cognitive dysfunction,",
                   "Negation": [
                     "NO"
                   ],
@@ -210,22 +203,32 @@
       }
     },
     "right": {
-      "raw_text": "9. for the 25 participants in Group 2, MUST have cognitive symptoms as noted either by themselves or a caregiver.",
-      "Eq-Comparison": [
-        "25"
-      ],
-      "Assertion": [
-        "symptoms"
-      ],
-      "Condition": [
-        "cognitive"
-      ],
-      "Eq-Value": [
-        "25"
-      ],
-      "Condition-Name": [
-        "cognitive"
-      ]
+      "AND": {
+        "left": {
+          "raw_text": "9. for the 25 participants in Group 2, MUST have cognitive symptoms as noted either by themselves",
+          "Eq-Comparison": [
+            "25"
+          ],
+          "Assertion": [
+            "symptoms"
+          ],
+          "Condition": [
+            "cognitive"
+          ],
+          "Eq-Value": [
+            "25"
+          ],
+          "Condition-Name": [
+            "cognitive"
+          ]
+        },
+        "right": {
+          "raw_text": "or a caregiver.",
+          "Family-Member": [
+            "caregiver"
+          ]
+        }
+      }
     }
   }
 }

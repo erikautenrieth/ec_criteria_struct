@@ -157,16 +157,14 @@
                               "Condition": [
                                 "disease",
                                 "illness",
-                                "congestive heart failure"
+                                "congestive heart failure",
+                                "renal disease"
                               ],
                               "Modifier": [
                                 "end-stage"
                               ],
                               "Severity": [
                                 "serious"
-                              ],
-                              "Condition-Name": [
-                                "congestive heart failure"
                               ],
                               "Eq-Comparison": [
                                 "class IV"
@@ -176,6 +174,13 @@
                               ],
                               "Eq-Value": [
                                 "IV"
+                              ],
+                              "Condition-Name": [
+                                "congestive heart failure",
+                                "renal disease"
+                              ],
+                              "Study": [
+                                "participation"
                               ]
                             }
                           }
@@ -183,19 +188,30 @@
                       }
                     },
                     "right": {
-                      "raw_text": "4. inability to perform unsupervised physical activity;",
-                      "Observation": [
-                        "physical activity"
-                      ],
-                      "Observation-Name": [
-                        "physical activity"
-                      ],
-                      "Negation": [
-                        "inability"
-                      ],
-                      "Assertion": [
-                        "inability"
-                      ]
+                      "AND": {
+                        "left": {
+                          "raw_text": "4."
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "inability to perform unsupervised physical activity;",
+                              "Observation": [
+                                "physical activity"
+                              ],
+                              "Observation-Name": [
+                                "physical activity"
+                              ],
+                              "Negation": [
+                                "inability"
+                              ],
+                              "Assertion": [
+                                "inability"
+                              ]
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 },
@@ -269,13 +285,27 @@
           ]
         },
         "right": {
-          "raw_text": "or no fixed address.",
-          "Observation": [
-            "no fixed address"
-          ],
-          "Observation-Name": [
-            "no fixed address"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "or"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "no fixed address.",
+                  "Negation": [
+                    "no"
+                  ],
+                  "Observation": [
+                    "fixed address"
+                  ],
+                  "Observation-Name": [
+                    "fixed address"
+                  ]
+                }
+              }
+            }
+          }
         }
       }
     }

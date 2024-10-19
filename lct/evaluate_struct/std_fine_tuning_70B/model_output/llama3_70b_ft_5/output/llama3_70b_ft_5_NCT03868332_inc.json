@@ -29,53 +29,37 @@
               ]
             },
             "right": {
-              "AND": {
-                "left": {
-                  "raw_text": "or"
-                },
-                "right": {
-                  "NOT": {
-                    "left": {
-                      "AND": {
-                        "left": {
-                          "raw_text": "in remission attending the the outpatient clinics",
-                          "Eq-Comparison": [
-                            "remission"
-                          ],
-                          "Eq-Temporal-Period": [
-                            "remission"
-                          ],
-                          "Encounter": [
-                            "outpatient clinics"
-                          ],
-                          "Negation": [
-                            "not"
-                          ]
-                        },
-                        "right": {
-                          "raw_text": "and inpatient of gastroenterology units",
-                          "Provider": [
-                            "gastroenterology"
-                          ],
-                          "Encounter": [
-                            "inpatient"
-                          ]
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "raw_text": "or"
             }
           }
         }
       }
     },
     "right": {
-      "raw_text": "of Internal medicine department",
-      "Provider": [
-        "Internal medicine"
-      ]
+      "AND": {
+        "left": {
+          "raw_text": "in remission attending the the outpatient clinics",
+          "Encounter": [
+            "attending"
+          ],
+          "Location": [
+            "outpatient clinics"
+          ],
+          "Condition-Name": [
+            "remission"
+          ],
+          "Condition": [
+            "remission"
+          ]
+        },
+        "right": {
+          "raw_text": "and inpatient of gastroenterology units",
+          "Location": [
+            "inpatient",
+            "gastroenterology units"
+          ]
+        }
+      }
     }
   }
 }

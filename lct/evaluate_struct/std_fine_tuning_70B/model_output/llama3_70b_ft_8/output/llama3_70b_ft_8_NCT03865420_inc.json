@@ -14,30 +14,24 @@
                           "raw_text": "- Men",
                           "Life-Stage-And-Gender": [
                             "Men"
-                          ],
-                          "Eq-Operator": [
-                            "-"
                           ]
                         },
                         "right": {
                           "raw_text": "or women of any race or ethnicity aged 18 or older",
-                          "Life-Stage-And-Gender": [
-                            "women"
-                          ],
-                          "Eq-Operator": [
-                            "or older"
-                          ],
                           "Age": [
                             "aged"
-                          ],
-                          "Eq-Value": [
-                            "18"
                           ],
                           "Eq-Comparison": [
                             "18 or older"
                           ],
-                          "Ethnicity": [
-                            "race"
+                          "Life-Stage-And-Gender": [
+                            "women"
+                          ],
+                          "Eq-Value": [
+                            "18"
+                          ],
+                          "Eq-Operator": [
+                            "or older"
                           ]
                         }
                       }
@@ -45,10 +39,7 @@
                     "right": {
                       "AND": {
                         "left": {
-                          "raw_text": "-",
-                          "Eq-Operator": [
-                            "-"
-                          ]
+                          "raw_text": "-"
                         },
                         "right": {
                           "NOT": {
@@ -56,17 +47,17 @@
                               "OR": {
                                 "left": {
                                   "raw_text": "No symptoms of ALS",
+                                  "Negation": [
+                                    "No"
+                                  ],
+                                  "Assertion": [
+                                    "symptoms"
+                                  ],
                                   "Condition": [
                                     "ALS"
                                   ],
                                   "Condition-Name": [
                                     "ALS"
-                                  ],
-                                  "Assertion": [
-                                    "symptoms"
-                                  ],
-                                  "Negation": [
-                                    "No"
                                   ]
                                 },
                                 "right": {
@@ -96,20 +87,11 @@
                       "Condition": [
                         "ALS"
                       ],
-                      "Condition-Name": [
-                        "ALS"
-                      ],
-                      "Eq-Operator": [
-                        "-"
-                      ],
                       "Family-Member": [
                         "first degree relative"
                       ],
-                      "Eq-Comparison": [
-                        "had"
-                      ],
-                      "Eq-Temporal-Period": [
-                        "had"
+                      "Condition-Name": [
+                        "ALS"
                       ],
                       "Modifier": [
                         "spectrum"
@@ -120,31 +102,23 @@
                       "Condition": [
                         "ALS"
                       ],
-                      "Condition-Name": [
-                        "ALS"
-                      ],
-                      "Observation": [
-                        "genetic testing",
-                        "tested"
-                      ],
-                      "Observation-Name": [
-                        "genetic testing",
-                        "tested"
-                      ],
                       "Modifier": [
                         "spectrum"
                       ],
-                      "Condition-Type": [
-                        "gene mutation"
+                      "Condition-Name": [
+                        "ALS"
+                      ],
+                      "Procedure": [
+                        "genetic testing"
+                      ],
+                      "Procedure-Name": [
+                        "genetic testing"
                       ],
                       "Polarity": [
                         "positive"
                       ],
-                      "Eq-Comparison": [
-                        "already"
-                      ],
-                      "Eq-Temporal-Period": [
-                        "already"
+                      "Condition-Type": [
+                        "gene mutation"
                       ]
                     }
                   }
@@ -152,22 +126,26 @@
               }
             },
             "right": {
-              "raw_text": "- Willing to undergo genetic testing with option of whether or not to learn results",
-              "Eq-Operator": [
-                "-"
-              ],
-              "Observation": [
-                "genetic testing"
-              ],
-              "Observation-Name": [
-                "genetic testing"
-              ],
-              "Assertion": [
-                "Willing to"
-              ],
-              "Modifier": [
-                "spectrum"
-              ]
+              "AND": {
+                "left": {
+                  "raw_text": "- Willing to undergo genetic testing",
+                  "Procedure": [
+                    "genetic testing"
+                  ],
+                  "Procedure-Name": [
+                    "genetic testing"
+                  ],
+                  "Assertion": [
+                    "Willing to"
+                  ]
+                },
+                "right": {
+                  "raw_text": "with option of whether or not to learn results",
+                  "Assertion": [
+                    "option of whether or not"
+                  ]
+                }
+              }
             }
           }
         },

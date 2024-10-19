@@ -90,7 +90,7 @@
                                   ],
                                   "Modifier": [
                                     "kidneys",
-                                    "renal"
+                                    "Renal"
                                   ],
                                   "Drug": [
                                     "EXPAREL"
@@ -104,8 +104,8 @@
                                   "Assertion": [
                                     "could"
                                   ],
-                                  "Polarity": [
-                                    "adverse"
+                                  "Eq-Temporal-Unit": [
+                                    "h"
                                   ]
                                 }
                               }
@@ -132,8 +132,7 @@
                         "treatment"
                       ],
                       "Procedure-Name": [
-                        "surgery",
-                        "operative"
+                        "surgery"
                       ],
                       "Modifier": [
                         "concurrent"
@@ -155,6 +154,9 @@
                       ],
                       "Study": [
                         "study"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "h"
                       ]
                     }
                   }
@@ -180,12 +182,10 @@
                     "left": {
                       "raw_text": "or condition discovered during surgery that may have complicated the patient's post surgical course such as vascular",
                       "Procedure": [
-                        "surgery",
-                        "operative"
+                        "surgery"
                       ],
                       "Procedure-Name": [
-                        "surgery",
-                        "operative"
+                        "surgery"
                       ],
                       "Condition": [
                         "condition"
@@ -203,12 +203,10 @@
                     "right": {
                       "raw_text": "or nerve involvement that was unknown before surgery.",
                       "Procedure": [
-                        "surgery",
-                        "operative"
+                        "surgery"
                       ],
                       "Procedure-Name": [
-                        "surgery",
-                        "operative"
+                        "surgery"
                       ],
                       "Condition": [
                         "nerve involvement"
@@ -247,17 +245,17 @@
       "AND": {
         "left": {
           "raw_text": "- Pregnant women are excluded from this study because EXPAREL has the potential for teratogenic",
+          "Study": [
+            "study"
+          ],
+          "Life-Stage-And-Gender": [
+            "women"
+          ],
           "Condition": [
             "Pregnant"
           ],
           "Condition-Name": [
             "Pregnant"
-          ],
-          "Life-Stage-And-Gender": [
-            "women"
-          ],
-          "Study": [
-            "study"
           ],
           "Drug": [
             "EXPAREL"
@@ -273,46 +271,33 @@
           ]
         },
         "right": {
-          "AND": {
-            "left": {
-              "raw_text": "or abortifacient effects. Because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with EXPAREL, breastfeeding should be discontinued if the mother is treated with EXPAREL.",
-              "Drug": [
-                "EXPAREL"
-              ],
-              "Drug-Name": [
-                "EXPAREL"
-              ],
-              "Assertion": [
-                "potential risk",
-                "potential"
-              ],
-              "Condition": [
-                "adverse events"
-              ],
-              "Modifier": [
-                "abortifacient",
-                "unknown"
-              ],
-              "Family-Member": [
-                "mother"
-              ],
-              "Organism": [
-                "infants"
-              ],
-              "Observation": [
-                "breastfeeding"
-              ],
-              "Observation-Name": [
-                "breastfeeding"
-              ],
-              "Polarity": [
-                "adverse"
-              ],
-              "Procedure": [
-                "treatment"
-              ]
-            }
-          }
+          "raw_text": "or abortifacient effects. Because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with EXPAREL, breastfeeding should be discontinued if the mother is treated with EXPAREL.",
+          "Drug": [
+            "EXPAREL"
+          ],
+          "Drug-Name": [
+            "EXPAREL"
+          ],
+          "Assertion": [
+            "potential risk",
+            "potential"
+          ],
+          "Condition": [
+            "adverse events"
+          ],
+          "Modifier": [
+            "abortifacient",
+            "infants"
+          ],
+          "Family-Member": [
+            "mother"
+          ],
+          "Procedure": [
+            "treatment"
+          ],
+          "Condition-Name": [
+            "adverse events"
+          ]
         }
       }
     }

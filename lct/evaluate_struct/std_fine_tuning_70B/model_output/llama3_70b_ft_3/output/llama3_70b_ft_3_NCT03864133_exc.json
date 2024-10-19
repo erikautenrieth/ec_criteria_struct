@@ -40,24 +40,38 @@
                                   }
                                 },
                                 "right": {
-                                  "raw_text": "- Inability to sit steady and upright for the Optical Coherence Tomography (OCT).",
-                                  "Procedure": [
-                                    "Optical Coherence Tomography",
-                                    "OCT"
-                                  ],
-                                  "Procedure-Name": [
-                                    "Optical Coherence Tomography",
-                                    "OCT"
-                                  ],
-                                  "Assertion": [
-                                    "Inability"
-                                  ],
-                                  "Negation": [
-                                    "Inability"
-                                  ],
-                                  "Modifier": [
-                                    "sit steady and upright"
-                                  ]
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "-",
+                                      "Eq-Operator": [
+                                        "-"
+                                      ]
+                                    },
+                                    "right": {
+                                      "NOT": {
+                                        "left": {
+                                          "raw_text": "Inability to sit steady and upright for the Optical Coherence Tomography (OCT).",
+                                          "Procedure": [
+                                            "Optical Coherence Tomography",
+                                            "OCT"
+                                          ],
+                                          "Procedure-Name": [
+                                            "Optical Coherence Tomography",
+                                            "OCT"
+                                          ],
+                                          "Negation": [
+                                            "Inability"
+                                          ],
+                                          "Assertion": [
+                                            "Inability"
+                                          ],
+                                          "Modifier": [
+                                            "sit steady and upright"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
                                 }
                               }
                             },
@@ -78,6 +92,9 @@
                                   "Condition-Name": [
                                     "Complications",
                                     "posterior capsular rupture"
+                                  ],
+                                  "Eq-Operator": [
+                                    "-"
                                   ]
                                 },
                                 "right": {
@@ -134,7 +151,8 @@
                             "above 300 microns"
                           ],
                           "Eq-Operator": [
-                            "above"
+                            "above",
+                            "-"
                           ],
                           "Eq-Value": [
                             "300"
@@ -161,6 +179,9 @@
                       ],
                       "Drug-Name": [
                         "prostaglandin analogue"
+                      ],
+                      "Eq-Operator": [
+                        "-"
                       ]
                     }
                   }
@@ -172,6 +193,7 @@
                     "OCT"
                   ],
                   "Procedure-Name": [
+                    "operative",
                     "OCT"
                   ],
                   "Condition": [
@@ -179,6 +201,9 @@
                   ],
                   "Condition-Name": [
                     "epiretinal membrane"
+                  ],
+                  "Eq-Operator": [
+                    "-"
                   ]
                 }
               }
@@ -189,25 +214,45 @@
                 "operative"
               ],
               "Condition": [
-                "Retained lens fragment"
+                "lens fragment"
               ],
               "Condition-Name": [
-                "Retained lens fragment"
+                "lens fragment"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Modifier": [
+                "Retained"
               ]
             }
           }
         },
         "right": {
-          "raw_text": "- Inability to return for follow appointments",
-          "Assertion": [
-            "Inability"
-          ],
-          "Negation": [
-            "Inability"
-          ],
-          "Encounter": [
-            "follow appointments"
-          ]
+          "AND": {
+            "left": {
+              "raw_text": "-",
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Inability to return for follow appointments",
+                  "Negation": [
+                    "Inability"
+                  ],
+                  "Assertion": [
+                    "Inability"
+                  ],
+                  "Encounter": [
+                    "appointments"
+                  ]
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -223,6 +268,9 @@
           ],
           "Condition-Name": [
             "pregnant"
+          ],
+          "Eq-Operator": [
+            "-"
           ]
         },
         "right": {
@@ -238,17 +286,17 @@
             },
             "right": {
               "raw_text": "or planning to become pregnant during the course of treatment.",
-              "Procedure": [
-                "treatment"
-              ],
-              "Assertion": [
-                "planning to become"
-              ],
               "Condition": [
                 "pregnant"
               ],
               "Condition-Name": [
                 "pregnant"
+              ],
+              "Assertion": [
+                "planning to become"
+              ],
+              "Procedure": [
+                "treatment"
               ]
             }
           }

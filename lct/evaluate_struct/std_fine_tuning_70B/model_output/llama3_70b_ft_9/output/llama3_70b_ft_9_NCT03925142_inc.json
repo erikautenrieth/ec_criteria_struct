@@ -108,8 +108,7 @@
                                                           "Eq-Value": [
                                                             "260",
                                                             "3",
-                                                            "2",
-                                                            "6"
+                                                            "2"
                                                           ],
                                                           "Eq-Comparison": [
                                                             "<260 mg/dL"
@@ -136,8 +135,7 @@
                                                       "Eq-Value": [
                                                         "190",
                                                         "3",
-                                                        "2",
-                                                        "6"
+                                                        "2"
                                                       ],
                                                       "Eq-Comparison": [
                                                         "<190 mg/dL"
@@ -164,8 +162,7 @@
                                                   "Eq-Value": [
                                                     "110",
                                                     "3",
-                                                    "2",
-                                                    "6"
+                                                    "2"
                                                   ],
                                                   "Eq-Comparison": [
                                                     "<110 mg/dL"
@@ -193,8 +190,7 @@
                                                 "140",
                                                 "90",
                                                 "3",
-                                                "2",
-                                                "6"
+                                                "2"
                                               ],
                                               "Eq-Comparison": [
                                                 "< 140/90"
@@ -218,13 +214,10 @@
                                           ],
                                           "Eq-Operator": [
                                             "-",
-                                            "stable",
                                             "±"
                                           ],
                                           "Eq-Value": [
-                                            "3",
-                                            "prior",
-                                            "±3"
+                                            "3"
                                           ],
                                           "Observation": [
                                             "Body weight"
@@ -236,8 +229,8 @@
                                             "stable for 3 months prior",
                                             "±3 kg"
                                           ],
-                                          "Eq-Temporal-Period": [
-                                            "prior"
+                                          "Stability": [
+                                            "stable"
                                           ]
                                         }
                                       }
@@ -248,12 +241,10 @@
                                         "months"
                                       ],
                                       "Eq-Operator": [
-                                        "-",
-                                        "Stable"
+                                        "-"
                                       ],
                                       "Eq-Value": [
-                                        "3",
-                                        "prior"
+                                        "3"
                                       ],
                                       "Observation": [
                                         "physical activity"
@@ -262,11 +253,10 @@
                                         "physical activity"
                                       ],
                                       "Eq-Comparison": [
-                                        "3 months prior",
-                                        "Stable"
+                                        "3 months prior"
                                       ],
-                                      "Eq-Temporal-Period": [
-                                        "prior"
+                                      "Stability": [
+                                        "Stable"
                                       ]
                                     }
                                   }
@@ -277,162 +267,178 @@
                                     "months"
                                   ],
                                   "Eq-Operator": [
-                                    "-",
-                                    "stable"
+                                    "-"
                                   ],
                                   "Eq-Value": [
-                                    "6",
-                                    "prior"
+                                    "6"
                                   ],
                                   "Drug": [
                                     "Medication"
                                   ],
                                   "Eq-Comparison": [
-                                    "6 months prior",
-                                    "stable"
+                                    "6 months prior"
                                   ],
-                                  "Eq-Temporal-Period": [
-                                    "prior"
+                                  "Stability": [
+                                    "stable"
                                   ]
                                 }
                               }
                             },
                             "right": {
-                              "raw_text": "- Non-smoking",
-                              "Eq-Operator": [
-                                "-"
-                              ],
-                              "Observation": [
-                                "smoking"
-                              ],
-                              "Observation-Name": [
-                                "smoking"
-                              ],
-                              "Negation": [
-                                "Non"
-                              ]
+                              "AND": {
+                                "left": {
+                                  "raw_text": "-",
+                                  "Eq-Operator": [
+                                    "-"
+                                  ]
+                                },
+                                "right": {
+                                  "NOT": {
+                                    "left": {
+                                      "raw_text": "Non-smoking",
+                                      "Negation": [
+                                        "Non"
+                                      ],
+                                      "Observation": [
+                                        "smoking"
+                                      ],
+                                      "Observation-Name": [
+                                        "smoking"
+                                      ],
+                                      "Eq-Unit": [
+                                        "g"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
                             }
                           }
                         },
                         "right": {
-                          "raw_text": "- Not drinking more than 2 alcoholic drinks per day",
-                          "Eq-Operator": [
-                            "-",
-                            "more than"
-                          ],
-                          "Eq-Value": [
-                            "2"
-                          ],
-                          "Drug": [
-                            "alcoholic drinks"
-                          ],
-                          "Drug-Name": [
-                            "alcoholic drinks"
-                          ],
-                          "Eq-Comparison": [
-                            "more than 2 alcoholic drinks per day"
-                          ],
-                          "Eq-Temporal-Unit": [
-                            "day"
-                          ],
-                          "Negation": [
-                            "Not"
-                          ]
+                          "AND": {
+                            "left": {
+                              "raw_text": "-",
+                              "Eq-Operator": [
+                                "-"
+                              ]
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "Not drinking more than 2 alcoholic drinks per day",
+                                  "Eq-Comparison": [
+                                    "more than 2 alcoholic drinks per day"
+                                  ],
+                                  "Eq-Operator": [
+                                    "more than"
+                                  ],
+                                  "Eq-Value": [
+                                    "2"
+                                  ],
+                                  "Observation": [
+                                    "drinking"
+                                  ],
+                                  "Observation-Name": [
+                                    "drinking"
+                                  ],
+                                  "Eq-Unit": [
+                                    "alcoholic drinks",
+                                    "g"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "day"
+                                  ],
+                                  "Negation": [
+                                    "Not"
+                                  ]
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     },
                     "right": {
-                      "raw_text": "- Non-diabetic",
-                      "Condition": [
-                        "diabetic"
-                      ],
-                      "Condition-Name": [
-                        "diabetic"
-                      ],
-                      "Eq-Operator": [
-                        "-"
-                      ],
-                      "Negation": [
-                        "Non"
-                      ]
+                      "AND": {
+                        "left": {
+                          "raw_text": "-",
+                          "Eq-Operator": [
+                            "-"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "Non-diabetic",
+                              "Negation": [
+                                "Non"
+                              ],
+                              "Condition": [
+                                "diabetic"
+                              ],
+                              "Condition-Name": [
+                                "diabetic"
+                              ],
+                              "Eq-Unit": [
+                                "g"
+                              ]
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 },
                 "right": {
-                  "raw_text": "- Not lactose-intolerant",
-                  "Condition": [
-                    "lactose-intolerant"
-                  ],
-                  "Condition-Name": [
-                    "lactose-intolerant"
-                  ],
-                  "Eq-Operator": [
-                    "-"
-                  ],
-                  "Negation": [
-                    "Not"
-                  ]
-                }
-              }
-            },
-            "right": {
-              "raw_text": "- Non-acutely ill",
-              "Condition": [
-                "ill"
-              ],
-              "Condition-Name": [
-                "ill"
-              ],
-              "Eq-Operator": [
-                "-"
-              ],
-              "Negation": [
-                "Non"
-              ],
-              "Acuteness": [
-                "acutely"
-              ]
-            }
-          }
-        },
-        "right": {
-          "AND": {
-            "left": {
-              "raw_text": "-",
-              "Eq-Operator": [
-                "-"
-              ]
-            },
-            "right": {
-              "NOT": {
-                "left": {
-                  "OR": {
+                  "AND": {
                     "left": {
-                      "raw_text": "Non-pregnant",
-                      "Condition": [
-                        "pregnant"
-                      ],
-                      "Condition-Name": [
-                        "pregnant"
-                      ],
-                      "Negation": [
-                        "Non"
+                      "raw_text": "-",
+                      "Eq-Operator": [
+                        "-"
                       ]
                     },
                     "right": {
-                      "raw_text": "and not lactating.",
-                      "Condition": [
-                        "lactating"
-                      ],
-                      "Condition-Name": [
-                        "lactating"
-                      ],
-                      "Negation": [
-                        "Not"
-                      ]
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Not lactose-intolerant",
+                          "Negation": [
+                            "Not"
+                          ],
+                          "Condition": [
+                            "lactose-intolerant"
+                          ],
+                          "Condition-Name": [
+                            "lactose-intolerant"
+                          ],
+                          "Eq-Unit": [
+                            "g"
+                          ]
+                        }
+                      }
                     }
                   }
                 }
               }
-            }
-          }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "-",
+                  "Eq-Operator": [
+                    "-"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Non-acutely ill",
+                      "Negation": [
+                        "Non"
+                      ],
+                      "Condition": [
+                        "ill"
+                      ],
+                      "Condition-Name": [
+                        "ill"
+                      ],

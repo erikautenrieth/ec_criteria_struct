@@ -194,18 +194,25 @@
                                                       ]
                                                     },
                                                     "right": {
-                                                      "raw_text": "or deep or detected by postoperative Doppler).",
-                                                      "Modifier": [
-                                                        "deep"
-                                                      ],
-                                                      "Procedure": [
-                                                        "operative",
-                                                        "Doppler"
-                                                      ],
-                                                      "Procedure-Name": [
-                                                        "Doppler",
-                                                        "operative"
-                                                      ]
+                                                      "OR": {
+                                                        "left": {
+                                                          "raw_text": "or deep",
+                                                          "Modifier": [
+                                                            "deep"
+                                                          ]
+                                                        },
+                                                        "right": {
+                                                          "raw_text": "or detected by postoperative Doppler).",
+                                                          "Procedure": [
+                                                            "operative",
+                                                            "Doppler"
+                                                          ],
+                                                          "Procedure-Name": [
+                                                            "Doppler",
+                                                            "operative"
+                                                          ]
+                                                        }
+                                                      }
                                                     }
                                                   }
                                                 }
@@ -284,7 +291,7 @@
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "- patient with a stroke/",
+                              "raw_text": "- patient with a stroke",
                               "Condition": [
                                 "stroke"
                               ],
@@ -293,17 +300,22 @@
                               ]
                             },
                             "right": {
-                              "raw_text": "Disabling Neurological Pathology, Chronic Immunological Pathology / Systemic Disease.",
+                              "raw_text": "/ Disabling Neurological Pathology, Chronic Immunological Pathology / Systemic Disease.",
                               "Condition": [
                                 "Disabling Neurological Pathology",
                                 "Chronic Immunological Pathology",
-                                "Systemic Disease",
                                 "Disease"
                               ],
                               "Condition-Name": [
                                 "Disabling Neurological Pathology",
                                 "Chronic Immunological Pathology",
-                                "Systemic Disease"
+                                "Disease"
+                              ],
+                              "Modifier": [
+                                "Systemic"
+                              ],
+                              "Acuteness": [
+                                "Chronic"
                               ]
                             }
                           }
@@ -332,12 +344,12 @@
                   "Eq-Comparison": [
                     "stages 3 and 4"
                   ],
+                  "Eq-Unit": [
+                    "stages"
+                  ],
                   "Eq-Value": [
                     "3",
                     "4"
-                  ],
-                  "Eq-Unit": [
-                    "stages"
                   ]
                 }
               }
@@ -394,13 +406,4 @@
                         "cerebellar syndrome"
                       ]
                     },
-                    "right": {
-                      "OR": {
-                        "left": {
-                          "raw_text": "opposition,",
-                          "Condition": [
-                            "opposition"
-                          ],
-                          "Condition-Name": [
-                            "opposition"
-                          ]
+                    "right":

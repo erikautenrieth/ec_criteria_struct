@@ -116,13 +116,10 @@
                         "right": {
                           "raw_text": "or altered cognitive status",
                           "Condition": [
-                            "cognitive status"
+                            "altered cognitive status"
                           ],
                           "Condition-Name": [
-                            "cognitive status"
-                          ],
-                          "Stability": [
-                            "altered"
+                            "altered cognitive status"
                           ]
                         }
                       }
@@ -228,10 +225,10 @@
             "left": {
               "raw_text": "- current use of the following medications",
               "Eq-Comparison": [
-                "current use"
+                "current"
               ],
               "Eq-Temporal-Period": [
-                "current use"
+                "current"
               ],
               "Drug": [
                 "medications"
@@ -241,6 +238,9 @@
               "OR": {
                 "left": {
                   "raw_text": "or use of substances which are known to lower the seizure threshold: amitriptyline (Elavil), nortriptyline (Pamelor), imipramine (Tofranil), doxepin (Sinequan), clozapine (Clozaril), chlorpromazine (Thorazine), amphetamines",
+                  "Eq-Operator": [
+                    "to"
+                  ],
                   "Drug": [
                     "amitriptyline",
                     "nortriptyline",
@@ -266,98 +266,73 @@
                     "lower"
                   ],
                   "Condition-Name": [
-                    "substances"
+                    "substance"
                   ],
                   "Assertion": [
                     "known to"
-                  ],
-                  "Eq-Operator": [
-                    "to"
                   ]
                 },
                 "right": {
                   "OR": {
                     "left": {
-                      "raw_text": "or methamphetamine,",
+                      "raw_text": "or methamphetamine, Ecstasy,",
                       "Drug": [
-                        "methamphetamine"
+                        "methamphetamine",
+                        "Ecstasy"
                       ],
                       "Drug-Name": [
-                        "methamphetamine"
+                        "methamphetamine",
+                        "Ecstasy"
                       ]
                     },
                     "right": {
                       "OR": {
                         "left": {
-                          "raw_text": "Ecstasy,",
+                          "raw_text": "Ketamine, Angel Dust/",
                           "Drug": [
-                            "Ecstasy"
+                            "Ketamine",
+                            "Angel Dust"
                           ],
                           "Drug-Name": [
-                            "Ecstasy"
+                            "Ketamine",
+                            "Angel Dust"
                           ]
                         },
                         "right": {
                           "OR": {
                             "left": {
-                              "raw_text": "Ketamine,",
+                              "raw_text": "phencyclidine (PCP), cocaine,",
                               "Drug": [
-                                "Ketamine"
+                                "phencyclidine",
+                                "cocaine",
+                                "PCP"
                               ],
                               "Drug-Name": [
-                                "Ketamine"
+                                "phencyclidine",
+                                "cocaine",
+                                "PCP"
                               ]
                             },
                             "right": {
-                              "OR": {
-                                "left": {
-                                  "raw_text": "Angel Dust/",
-                                  "Drug": [
-                                    "Angel Dust"
-                                  ],
-                                  "Drug-Name": [
-                                    "Angel Dust"
-                                  ]
-                                },
-                                "right": {
-                                  "OR": {
-                                    "left": {
-                                      "raw_text": "phencyclidine (PCP), cocaine,",
-                                      "Drug": [
-                                        "phencyclidine",
-                                        "PCP",
-                                        "cocaine"
-                                      ],
-                                      "Drug-Name": [
-                                        "phencyclidine",
-                                        "PCP",
-                                        "cocaine"
-                                      ]
-                                    },
-                                    "right": {
-                                      "raw_text": "or 3 or more alcoholic drinks per day",
-                                      "Eq-Comparison": [
-                                        "3 or more"
-                                      ],
-                                      "Eq-Value": [
-                                        "3"
-                                      ],
-                                      "Eq-Operator": [
-                                        "or more"
-                                      ],
-                                      "Drug": [
-                                        "alcoholic drinks"
-                                      ],
-                                      "Drug-Name": [
-                                        "alcoholic drinks"
-                                      ],
-                                      "Eq-Unit": [
-                                        "day"
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
+                              "raw_text": "or 3 or more alcoholic drinks per day",
+                              "Eq-Comparison": [
+                                "3 or more"
+                              ],
+                              "Eq-Value": [
+                                "3"
+                              ],
+                              "Eq-Operator": [
+                                "or more"
+                              ],
+                              "Drug": [
+                                "alcoholic drinks"
+                              ],
+                              "Drug-Name": [
+                                "alcoholic drinks"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "day"
+                              ]
                             }
                           }
                         }

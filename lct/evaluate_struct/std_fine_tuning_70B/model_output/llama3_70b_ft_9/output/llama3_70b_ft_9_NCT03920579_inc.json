@@ -13,35 +13,35 @@
                       "Condition": [
                         "Healthy"
                       ],
-                      "Age": [
-                        "aged"
-                      ],
-                      "Eq-Comparison": [
-                        "≥20"
-                      ],
                       "Condition-Name": [
                         "Healthy"
                       ],
                       "Eq-Operator": [
                         "≥"
                       ],
+                      "Age": [
+                        "aged"
+                      ],
                       "Eq-Value": [
                         "20"
+                      ],
+                      "Eq-Comparison": [
+                        "≥20"
                       ]
                     },
                     "right": {
                       "raw_text": "and ≤45 years old",
-                      "Eq-Comparison": [
-                        "≤45 years"
-                      ],
                       "Eq-Operator": [
                         "≤"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "years"
                       ],
                       "Eq-Value": [
                         "45"
                       ],
-                      "Eq-Temporal-Unit": [
-                        "years"
+                      "Eq-Comparison": [
+                        "≤45 years"
                       ]
                     }
                   }
@@ -53,28 +53,28 @@
                     "body mass index",
                     "BMI"
                   ],
-                  "Eq-Comparison": [
-                    "≥ 50 kg",
-                    "≥ 18.5",
-                    "≤ 27.0 kg/m2"
+                  "Observation-Name": [
+                    "Weight",
+                    "body mass index",
+                    "BMI"
                   ],
                   "Eq-Operator": [
                     "≥",
                     "≤"
+                  ],
+                  "Eq-Unit": [
+                    "kg",
+                    "m2"
                   ],
                   "Eq-Value": [
                     "50",
                     "18.5",
                     "27.0"
                   ],
-                  "Observation-Name": [
-                    "Weight",
-                    "body mass index",
-                    "BMI"
-                  ],
-                  "Eq-Unit": [
-                    "kg",
-                    "m2"
+                  "Eq-Comparison": [
+                    "≥ 50 kg",
+                    "≥ 18.5",
+                    "≤ 27.0 kg/m2"
                   ]
                 }
               }
@@ -90,15 +90,14 @@
                       "OR": {
                         "left": {
                           "raw_text": "no congenital chronic disease",
-                          "Negation": [
-                            "no"
-                          ],
                           "Condition": [
-                            "congenital chronic disease",
-                            "disease"
+                            "congenital chronic disease"
                           ],
                           "Condition-Name": [
                             "congenital chronic disease"
+                          ],
+                          "Negation": [
+                            "no"
                           ]
                         },
                         "right": {
@@ -106,17 +105,16 @@
                             "left": {
                               "raw_text": "or chronic disease requiring treatment",
                               "Condition": [
-                                "chronic disease",
-                                "disease"
+                                "chronic disease"
                               ],
-                              "Assertion": [
-                                "requiring"
+                              "Condition-Name": [
+                                "chronic disease"
                               ],
                               "Procedure": [
                                 "treatment"
                               ],
-                              "Condition-Name": [
-                                "chronic disease"
+                              "Assertion": [
+                                "requiring"
                               ]
                             },
                             "right": {
@@ -132,22 +130,22 @@
                                           "OR": {
                                             "left": {
                                               "raw_text": "no pathological symptoms",
-                                              "Negation": [
-                                                "no"
-                                              ],
-                                              "Assertion": [
-                                                "symptoms"
-                                              ],
                                               "Condition": [
                                                 "pathological"
                                               ],
                                               "Condition-Name": [
                                                 "pathological"
+                                              ],
+                                              "Negation": [
+                                                "no"
+                                              ],
+                                              "Assertion": [
+                                                "symptoms"
                                               ]
                                             },
                                             "right": {
                                               "raw_text": "or findings",
-                                              "Condition": [
+                                              "Assertion": [
                                                 "findings"
                                               ]
                                             }
@@ -173,11 +171,11 @@
           "OR": {
             "left": {
               "raw_text": "4. Those who are judged to be eligible for clinical trials based on laboratory",
-              "Assertion": [
-                "eligible for"
-              ],
               "Study": [
                 "clinical trials"
+              ],
+              "Assertion": [
+                "eligible for"
               ],
               "Observation": [
                 "laboratory"
@@ -191,13 +189,10 @@
               "Procedure": [
                 "ECG"
               ],
-              "Observation": [
-                "screening tests"
-              ],
               "Procedure-Name": [
                 "ECG"
               ],
-              "Observation-Name": [
+              "Study": [
                 "screening tests"
               ]
             }
@@ -208,8 +203,7 @@
     "right": {
       "raw_text": "5. Those who voluntarily decide to participate and agree to comply with the cautions after hearing and fully understanding the detailed description of this clinical trial",
       "Study": [
-        "clinical trial",
-        "trial"
+        "clinical trial"
       ]
     }
   }
