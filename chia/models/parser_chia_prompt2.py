@@ -27,30 +27,23 @@ def naive_greedy_match(criteria_text: str) -> str:
     # Apply OR patterns
     for pattern in or_patterns:
         criteria_text = re.sub(pattern, r' [OR] \g<0>', criteria_text)
-    
     # Apply OR pattern after comma and after slash
     criteria_text = re.sub(r',\s(?!or\b)', r', [OR] ', criteria_text)
     criteria_text = re.sub(r'\/', r'/ [OR] ', criteria_text)
-    
     # Apply AND patterns
     for pattern in and_patterns:
         criteria_text = re.sub(pattern, r'[AND] \g<0>', criteria_text)
-    
     # Apply AND after "history of"
     criteria_text = re.sub(r'history of', r'history of [AND]', criteria_text)
-    
     # Apply NOT patterns
     for pattern in not_patterns:
         criteria_text = re.sub(pattern, r'[NOT] \g<0>', criteria_text)
-    
     # Clean up multiple occurrences and conflicts
     criteria_text = re.sub(r'\s(\[OR\]\s)+', ' [OR] ', criteria_text)
     criteria_text = re.sub(r'\s*(\[OR\]\s*)+', ' [OR] ', criteria_text)
     criteria_text = re.sub(r'\[OR\]\s*\[AND\]', '[AND]', criteria_text)
-    
     # Remove operators before line breaks
     criteria_text = re.sub(r'\[(AND|OR|NOT)\]\s*\n', r'\n', criteria_text)
-    
     return criteria_text.strip()
 
 
@@ -62,8 +55,6 @@ def parser():
         output = naive_greedy_match(test_file)
         print(output)
         save_txt(output, f"{output_path}{file_name}.txt")
-
-
 
 parser()
 

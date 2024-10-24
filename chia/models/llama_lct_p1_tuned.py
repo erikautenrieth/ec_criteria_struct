@@ -1,13 +1,11 @@
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
 import transformers
 from helper_functions import *
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
 
-batch_path = "eval_full_chia" 
-
+batch_path = "eval_full_chia"
 model_id = "tuned_models/llama3_70b_Lora_ep10_r256_prompt6"   
 model_name = "llama3_70b_Lora_ep10_r256_prompt6"
 transform ="/work/eauten2s/ec_criteria_struct/chia"
@@ -42,9 +40,7 @@ first_call = True
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
-    
     test_file = read_text_file(study_path+file)
-
     inputs = tokenizer(
     [
         alpaca_prompt.format(

@@ -1,5 +1,6 @@
 import os
 import transformers
+import torch
 from helper_functions import *
 
 batch_path = "eval_full_chia" 
@@ -11,10 +12,7 @@ transform ="/work/eauten2s/ec_criteria_struct/chia"
 study_path = f"{transform}/input/chia_text_full/"
 output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_0_shot_lct_prompt/output/"
 os.makedirs(output_path, exist_ok=True)
-
 study_files = os.listdir(study_path)
-
-
 model_desc = read_text_file(f"{transform}/input/prompt/lct_p2.txt") # lct_p2.txt # chia_p2.txt
 messages = []
 
@@ -31,9 +29,7 @@ first_call = True
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
-    
     test_file = read_text_file(study_path+file)
-
     messages = [
     {"role": "system", "content": f"{model_desc}"},
     {"role": "user", "content": f"{model_desc} {test_file}"},
