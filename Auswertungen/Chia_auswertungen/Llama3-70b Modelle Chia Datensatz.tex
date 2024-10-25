@@ -1,0 +1,19 @@
+\begin{table}[ht]
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Model & Precision & Recall & F1 & Halluzination (%) \\
+\midrule
+PubMedBERT (SOTA) & \textbf{60.6} & 63.9 & \textbf{62.2} & - \\
+ Naive greedy match (CHIA Prompt) & 22.2 & \textbf{65.0} & 30.8 & 2.5 \\
+ Naive greedy match (LCT Prompt 2) & 21.2 & 47.1 & 28.6 & 2.3 \\
+Llama-3-70B-Instruct-0-shot-chia-prompt & 23.1 & 51.5 & 31.4 & 4.5 \\
+Llama-3-70B-Instruct-0-shot-lct-prompt & 23.5 & 48.3 & 31.4 & 4.3 \\
+Llama-3-70B-Instruct-5-shot-chia-prompt2 & 34.9 & 41.9 & 37.9 & 3.7 \\
+Llama-3-70B-Instruct-5-shot-lct-prompt2 & 35.6 & 42.2 & 38.5 & 3.6 \\
+llama3-70b-Lora-ep10-r256-prompt6-lct-model-lct2-prompt & 28.7 & 54.4 & 36.8 & 0.6 \\
+\bottomrule
+\end{tabular}
+\caption{Average Model Performance Metrics and Zuviel Percentage for Llama3-70b Modelle Chia Datensatz}
+\label{tab:avg_model_metrics}
+\end{table}

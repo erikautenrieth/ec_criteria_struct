@@ -1,0 +1,18 @@
+\begin{table}[h]
+\centering
+\begin{tabular}{lccccccccc}
+\toprule
+Model & \multicolumn{3}{c}{AND} & \multicolumn{3}{c}{OR} & \multicolumn{3}{c}{NOT} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} 
+ & P & R & F & P & R & F & P & R & F \\
+\midrule
+SciBERT (SOTA) & \textbf{54.1} & \textbf{60.0} & \textbf{56.9} & 85.1 & \textbf{93.2} & 89.0 & 74.3 & \textbf{91.0} & \textbf{81.8} \\
+R-BERT + SciBERT & 53.8 & 53.8 & 53.8 & \textbf{88.4} & 92.2 & \textbf{90.2} & \textbf{74.5} & 88.7 & 81.0 \\
+Llama-3-70B-Instruct-5-shot-chia-prompt2 & 10.0 & 25.9 & 14.5 & 52.6 & 76.2 & 62.2 & 34.8 & 52.2 & 41.8 \\
+llama3-70b-Lora-ep10-r256-prompt6-lct-model-chia2-prompt & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+llama3-70b-Lora-ep10-r256-prompt6-prompt-lct2 & 13.4 & 11.3 & 12.3 & 39.4 & 83.5 & 53.6 & 30.0 & 63.6 & 40.8 \\
+\bottomrule
+\end{tabular}
+\caption{Model Performance Metrics}
+\label{tab:model_metrics}
+\end{table}
