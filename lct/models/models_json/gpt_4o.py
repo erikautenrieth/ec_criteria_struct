@@ -2,11 +2,10 @@ import tiktoken
 from helper_functions import *
 from openai import OpenAI
 
+batch_path = "eval/evaluate_json"
+n_shot = 5
 
-batch_path = "eval_p4"
-n_shot = 25
-model_name = f"GPT-4o_{n_shot}_shot_short_files"
-
+model_name = f"GPT-4o_{n_shot}_shot"
 
 client = OpenAI(
   api_key='INSERT_API_KEY_HERE',

@@ -3,7 +3,7 @@ import torch
 from helper_functions import *
 import re
 
-batch_path = "modelle_prompt2"
+batch_path = "eval/evaluate_txt"
 model_name = "Gemma-27b"
 model_id = "google/gemma-2-27b-it"
 dtype = torch.bfloat16

@@ -2,7 +2,7 @@ from helper_functions import *
 from openai import OpenAI
 import time  
 
-batch_path = "modelle_prompt2" 
+batch_path = "eval/evaluate_txt"
 model_name = "GPT-4o"
 
 client = OpenAI(
@@ -20,7 +20,6 @@ messages = []
 messages.append({"role": "system", "content": f"{command}"})
 first_call = True
 
-# Startzeit messen
 start_time = time.time()
 for file in study_files:
     file_name = file.split(".")[0]
@@ -41,7 +40,6 @@ for file in study_files:
     print(gen_output)
     save_txt(gen_output, f"{output_path}{model_name}_{file_name}_0_shot.txt")
 
-# Endzeit messen und benötigte Zeit berechnen
 end_time = time.time()
 elapsed_time = end_time - start_time
 print(f"Benötigte Zeit: {elapsed_time / 3600:.2f} Stunden")

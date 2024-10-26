@@ -5,7 +5,7 @@ from datetime import timedelta
 
 start_time = time.time()
 
-batch_path = "modelle_prompt2"
+batch_path = "eval/evaluate_txt"
 model_id =  "Qwen/Qwen2-72B-Instruct"
 model_name = "Qwen2-72B"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"

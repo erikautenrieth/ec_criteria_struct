@@ -5,7 +5,7 @@ from helper_functions import *
 from unsloth import FastLanguageModel
 
 
-batch_path = "std_fine_tuning_70B"
+batch_path = "eval/evaluate_json"
 model_id = "tuned_models/llama3_70b_Lora_ep10_r256_prompt1_train_only_p4"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 command = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt1.txt")

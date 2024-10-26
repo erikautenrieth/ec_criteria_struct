@@ -1,12 +1,9 @@
-import os
-import tiktoken
 import transformers
 from helper_functions import *
-from openai import OpenAI
 import torch
 
-batch_path = "eval_p4"
-n_shot = 10
+batch_path = "eval/evaluate_json"
+n_shot = 5
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"

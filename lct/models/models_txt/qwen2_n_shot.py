@@ -2,7 +2,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from helper_functions import *
 
 
-batch_path = "eval_p4"
+batch_path = "eval/evaluate_txt"
 n_shot = 15
 model_id =  "Qwen/Qwen2-72B-Instruct"
 model_name = "Qwen2-72B"

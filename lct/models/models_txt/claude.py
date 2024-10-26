@@ -1,12 +1,10 @@
 import anthropic
 from helper_functions import *
 import os
-import time
 
-batch_path = "modelle_prompt2"
+batch_path = "eval/evaluate_txt"
 n_prompt = 6
 n_shot = 10
-
 model_name = "Claude-3.5-Sonnet"
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
@@ -17,8 +15,7 @@ os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 
 client = anthropic.Anthropic(
-    api_key="INSERT_API_KEY",
-    #os.getenv("ANTHROPIC_API_KEY"), #os.environ.get("ANTHROPIC_API_KEY"),
+    api_key="INSERT_API_KEY", #os.getenv("ANTHROPIC_API_KEY")
 )
 
 for file in study_files:
@@ -43,5 +40,3 @@ for file in study_files:
     )
     print(message.content[0].text)
     save_txt(message.content[0].text, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")
-    # Wait for 10 seconds after each request
-    time.sleep(10)

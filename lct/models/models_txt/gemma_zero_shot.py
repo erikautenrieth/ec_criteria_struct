@@ -3,10 +3,9 @@ import torch
 from helper_functions import *
 import re
 
-batch_path = "modelle_prompt2"
+batch_path = "eval/evaluate_txt"
 model_name = "Gemma-27b"
 model_id = "google/gemma-2-27b-it"
-dtype = torch.bfloat16
 n_prompt = 6
 n_shot = 0
 
@@ -23,7 +22,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
     device_map="cuda",
-    torch_dtype=dtype,
+    torch_dtype=torch.bfloat16,
 )
 
 

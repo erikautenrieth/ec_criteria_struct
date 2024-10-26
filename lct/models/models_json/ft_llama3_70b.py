@@ -4,8 +4,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 from helper_functions import *
 from unsloth import FastLanguageModel
 
-
-batch_path = "std_fine_tuning_70B"
+batch_path = "eval/evaluate_json"
 model_id = "tuned_models/llama3_70b_Lora_ep10_r256_prompt1_train_only_p4"
 model_name = "llama3_70b_Lora_ep10_r256_prompt1_train_only_p4"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
@@ -44,9 +43,9 @@ for file in study_files:
     inputs = tokenizer(
     [
         alpaca_prompt.format(
-            f"{command}", # instruction
-            f"{test_file}", # input
-            "", # output - leave this blank for generation!
+            f"{command}",
+            f"{test_file}",
+            "",
         )
     ], return_tensors = "pt").to("cuda")
 
@@ -56,7 +55,6 @@ for file in study_files:
     response = response.replace("<|eot_id|>", "")
     save_json(response, f"{output_path}{model_name}_{file_name}.json")
 
-# Print Time
 end_time = time.time()  
 total_time = end_time - start_time
 total_time_str = str(timedelta(seconds=total_time))

@@ -3,7 +3,7 @@ from openai import OpenAI
 import time  
 
 
-batch_path = "modelle_prompt2" 
+batch_path = "eval/evaluate_txt"
 n_shot = 5
 model_name = "GPT-4o"
 

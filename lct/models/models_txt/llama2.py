@@ -3,7 +3,7 @@ import torch
 import transformers
 from helper_functions import *
 
-batch_path = "modelle_prompt2"
+batch_path = "eval/evaluate_txt"
 n_prompt = 6
 n_shot = 3
 model_id =  "meta-llama/Llama-2-70b-chat-hf"
@@ -15,9 +15,7 @@ output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{mode
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 
-
-## Nur 3- Shot möglich
-shot_list = [
+shot_list = [ ## Nur 3- Shot möglich
     "NCT03865433.txt",
     "NCT03860324.txt",
     "NCT03860233.txt",
@@ -25,8 +23,6 @@ shot_list = [
     "NCT03930121.txt"
 ]
 
-
-# Load n-shot Data
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
 study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)

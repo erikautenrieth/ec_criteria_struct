@@ -6,9 +6,9 @@ from unsloth import FastLanguageModel
 # pip install transformers==4.38.0
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-batch_path = "lora_8b_prompt2"
-model_id = "tuned_models_8b/llama3_8b_Lora_ep10_r128_a256_b182"  # baseline/llama3_8b_Lora_baseline
-model_name = "llama3_8b_Lora_ep10_r128_a256_b182"
+batch_path = "eval/evaluate_txt"
+model_id = "tuned_models_70b/llama3_70b_Lora_ep10_r256_5pct_20step" 
+model_name = "llama3_70b_Lora_ep10_r256_5pct_20step"
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}/output/"
@@ -24,7 +24,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 FastLanguageModel.for_inference(model)
 
 
-alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+llama_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
 
 ### Instruction:
 {}
@@ -38,10 +38,12 @@ alpaca_prompt = """Below is an instruction that describes a task, paired with an
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
+    
     test_file = read_text_file(study_path+file)
+
     inputs = tokenizer(
     [
-        alpaca_prompt.format(
+        llama_prompt.format(
             f"{command}", # instruction
             f"{test_file}", # input
             "", # output - leave this blank for generation!

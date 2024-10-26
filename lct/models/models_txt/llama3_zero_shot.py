@@ -7,7 +7,7 @@ import torch
 
 start_time = time.time()
 
-batch_path = "0_shot_prompt1_prompting"
+batch_path = "eval/evaluate_txt"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
 

@@ -2,7 +2,7 @@ from helper_functions import *
 import os
 import re
 
-batch_path = "modelle_prompt2"
+batch_path = "eval/evaluate_txt"
 model_name = " Naive greedy match (Prompt 2)"
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
 study_path = f"{transform_lct}/input/dataset/test/input/"
