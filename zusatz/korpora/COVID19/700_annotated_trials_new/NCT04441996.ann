@@ -1,0 +1,31 @@
+T4	Observation 64 161	at Emory University Hospital, Emory University Hospital Midtown, or Emory Saint Joseph's Hospital
+T15	Competing_trial 857 935	Patients participating in another clinical trial that prohibits the use of TPE
+T17	Observation 951 960	Prisoners
+T16	Condition 936 944	Pregnant
+R6	has_value Arg1:T11 Arg2:T12	
+T7	Measurement 461 477	Plasma viscosity
+R1	has_value Arg1:T1 Arg2:T2	
+T5	Condition 175 193	COVID-19 infection
+T8	Value 478 507	>2.3 and <3.5 centipoise (cp)
+T1	Person 21 24	Age
+T9	Measurement 511 521	Fibrinogen
+T3	Visit 44 63	admitted to the ICU
+T2	Value 26 34	18 years
+R4	has_value Arg1:T9 Arg2:T10	
+T11	Measurement 569 585	plasma viscosity
+R3	has_context Arg1:T5 Arg2:T6	
+T13	Condition 595 603	Moribund
+T6	Observation 194 225	documented by a laboratory test
+T10	Value 522 532	>800 mg/dL
+R5	has_value Arg1:T7 Arg2:T8	
+T14	Non-query-able 669 856	Patients with any condition that, in the opinion of the clinical team or investigator, could increase the subject's risk by participating in the study or confound the outcome of the study
+R2	has_context Arg1:T3 Arg2:T4	
+*	OR T7 T9
+T12	Value 586 594	> 3.5 cp
+T18	Non-query-able 418 458	Medical records from outside institution
+T19	Measurement 322 414	serological test for severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) antibodies
+T20	Value 313 321	Positive
+R7	has_value Arg1:T19 Arg2:T20	
+T21	Observation 240 309	diagnostic test (e.g., nasopharyngeal swab, tracheal aspirate, other)
+R8	subsumes Arg1:T6 Arg2:T21	
+*	OR T21 T19

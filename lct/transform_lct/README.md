@@ -3,23 +3,6 @@
 
 
 
-
-
-## Indirekte Strukturierung
-
-
-
-
-
-
-
-
-
-## Direkte Strukturierung 
-
-
-
-
 Modell Ausgabe: im Ordern llm_output 
 
 Ordner: eval_functions

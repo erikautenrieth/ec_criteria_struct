@@ -1,0 +1,80 @@
+T10_DdMmlC2Q	Drug 403 415	procainamide
+T44_DdMmlC2Q	Condition 678 687	Pregnancy
+T40_DdMmlC2Q	Drug 662 674	moxifloxacin
+R20	has_negation Arg1:T14 Arg2:T13	
+T53_DdMmlC2Q	Condition 951 965	cardiac arrest
+T23_DdMmlC2Q	Drug 417 426	quinidine
+T43_DdMmlC2Q	Observation 75 108	symptoms consistent with COVID-19
+T7_DdMmlC2Q	Drug 343 353	amiodarone
+T13	Negation 997 1000	Non
+T13_DdMmlC2Q	Drug 508 518	Droperidol
+T9	Condition 846 866	Allergy to adhesives
+T14	Observation 1001 1017	English-speaking
+T20_DdMmlC2Q	Temporal 109 136	within 1 week of enrollment
+T5	Value 141 143	20
+R11	subsumes Arg1:T36_DdMmlC2Q Arg2:T10_DdMmlC2Q	
+T36_DdMmlC2Q	Observation 389 401	Class 1A AAD
+T8	Drug 616 631	Fluroquinolones
+R8	has_mood Arg1:T32_DdMmlC2Q Arg2:T6	
+T51_DdMmlC2Q	Drug 368 378	dofetilide
+T18_DdMmlC2Q	Value 880 890	> 450 mSEC
+T6	Mood 292 301	receiving
+T16_DdMmlC2Q	Drug 355 366	dronaderone
+T30_DdMmlC2Q	Condition 969 996	congenital long QT interval
+T4_DdMmlC2Q	Drug 541 560	Ondansetron(Zofran)
+T37_DdMmlC2Q	Condition 32 52	SARS-CoV-2 infection
+T11	Condition 939 941	VT
+T12	Temporal 945 950	prior
+T1_DdMmlC2Q	Drug 602 614	erythromycin
+T3	Reference_point 123 136	of enrollment
+T22_DdMmlC2Q	Value 276 288	stage 4 or 5
+T11_DdMmlC2Q	Drug 380 387	sotalol
+T21_DdMmlC2Q	Drug 428 440	disopyramide
+R5	has_temporal Arg1:T43_DdMmlC2Q Arg2:T20_DdMmlC2Q	
+T12_DdMmlC2Q	Condition 920 938	Torsade de Pointes
+T49_DdMmlC2Q	Drug 442 452	Flecainide
+R3	AND Arg1:T37_DdMmlC2Q Arg2:T43_DdMmlC2Q	
+T15_DdMmlC2Q	Drug 648 660	levofloxacin
+R1	has_index Arg1:T20_DdMmlC2Q Arg2:T3	
+R19	has_temporal Arg1:T53_DdMmlC2Q Arg2:T12	
+T32_DdMmlC2Q	Procedure 302 310	dialysis
+R4	has_negation Arg1:T43_DdMmlC2Q Arg2:T2	
+T2	Negation 67 74	without
+T55_DdMmlC2Q	Drug 488 507	Donepezil (Aricept)
+T1	Observation 21 31;53 66	Documented by qPCR assay
+R2	has_context Arg1:T37_DdMmlC2Q Arg2:T1	
+T4	Person 137 140	Age
+R6	has_value Arg1:T4 Arg2:T5	
+T10	Condition 166 185	Retinal eye disease
+T15	Condition 192 245	glucose-6 phosphate dehydrogenase (G-6-PD) deficiency
+T16	Condition 252 274	chronic kidney disease
+R7	has_value Arg1:T16 Arg2:T22_DdMmlC2Q	
+*	OR T16 T32_DdMmlC2Q
+T7	Observation 329 340	Class 3 AAD
+R9	subsumes Arg1:T7 Arg2:T7_DdMmlC2Q	
+*	OR T10_DdMmlC2Q T23_DdMmlC2Q T21_DdMmlC2Q
+*	OR T7_DdMmlC2Q T16_DdMmlC2Q T51_DdMmlC2Q T11_DdMmlC2Q
+T17	Drug 453 467	chlorpromazine
+T18	Drug 468 487	Cilostazol (Pletal)
+T19	Drug 519 530	Fluconazole
+T20	Drug 531 540	Methadone
+T21	Drug 561 573	Thioridazine
+T22	Drug 586 600	clarithromycin
+T23	Drug 574 584	Macrolides
+R10	subsumes Arg1:T23 Arg2:T22	
+*	OR T22 T1_DdMmlC2Q
+T24	Drug 633 646	ciprofloxacin
+R12	subsumes Arg1:T8 Arg2:T24	
+*	OR T24 T15_DdMmlC2Q T40_DdMmlC2Q
+T25	Observation 705 719	breast feeding
+*	OR T44_DdMmlC2Q T25
+T26	Non-query-able 720 758	Inability to tolerate oral medications
+T27	Condition 759 795;803 815	Allergy or prior adverse reaction to azithromycin
+T28	Condition 759 795;819 845	Allergy or prior adverse reaction to hydroxychloroquine sulfate
+*	OR T27 T28
+T29	Measurement 867 879	QTc interval
+R13	has_value Arg1:T29 Arg2:T18_DdMmlC2Q	
+T30	Observation 909 919	History of
+R14	has_temporal Arg1:T12_DdMmlC2Q Arg2:T30	
+*	OR T12_DdMmlC2Q T11 T53_DdMmlC2Q T30_DdMmlC2Q
+R15	has_temporal Arg1:T11 Arg2:T30	

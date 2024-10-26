@@ -1,0 +1,36 @@
+T9	Condition 237 256	shortness of breath
+T13_DdMmlC2Q	Temporal 604 623	in the past 30 days
+T15	Condition 677 716	reactions to transfusion blood products
+R4	has_mood Arg1:T7 Arg2:T6	
+T4_DdMmlC2Q	Observation 660 670	history of
+R10	has_temporal Arg1:T15 Arg2:T4_DdMmlC2Q	
+T7	Visit 104 119	hospitalization
+*	OR T12_DdMmlC2Q T8
+T9_DdMmlC2Q	Condition 203 208	cough
+T16_DdMmlC2Q	Temporal 299 322	within the past 10 days
+T5	Visit 66 86	emergency department
+R6	subsumes Arg1:T10_DdMmlC2Q Arg2:T12_DdMmlC2Q	
+T12_DdMmlC2Q	Value 217 225	> 37.5 C
+R3	AND Arg1:T5 Arg2:T7	
+T8	Value 217 218;228 234	> 99.5 F
+*	OR T9_DdMmlC2Q T10_DdMmlC2Q T9
+T2	Value 25 33	18 years
+T6	Mood 92 103	anticipated
+T10_DdMmlC2Q	Condition 210 215	fever
+T1	Person 21 24	Age
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Visit 44 56	hospitalized
+*	OR T3 T5
+T4	Observation 121 160	Symptoms of acute respiratory infection
+T10	Condition 278 298	SARS-CoV-2 infection
+T11	Observation 257 277	Laboratory-confirmed
+R2	has_context Arg1:T10 Arg2:T11	
+R5	has_temporal Arg1:T10 Arg2:T16_DdMmlC2Q	
+T12	Observation 345 353	Prisoner
+T13	Non-query-able 354 440	Unable to randomize within 14 days after onset of acute respiratory infection symptoms
+T14	Non-query-able 441 499	Unable to randomize within 48 hours after hospital arrival
+T16	Non-query-able 500 570	Inability to be contacted on Day 29-36 for clinical outcome assessment
+T17	Drug 582 603	pooled immunoglobulin
+R7	has_temporal Arg1:T17 Arg2:T13_DdMmlC2Q	
+T18	Non-query-able 717 750	Previous enrollment in this trial
+R8	subsumes Arg1:T4 Arg2:T9_DdMmlC2Q	

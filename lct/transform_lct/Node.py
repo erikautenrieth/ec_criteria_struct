@@ -1,7 +1,4 @@
-import json
 import re
-
-
 class Node:
     def __init__(self, operator=None, criteria=None):
         self.operator = operator
@@ -50,14 +47,10 @@ def parse_text(text):
 
 def build_tree(data):
     if not data: return Node(criteria="empty set")
-
     keys = list(data.keys())
     if not keys: return Node(criteria="empty set")
-
     nodes = [parse_text(data[key]) for key in keys if parse_text(data[key])]
-
     if len(nodes) == 1: return nodes[0]
-
     root = nodes[0]
     for i in range(1, len(nodes)):
         new_node = nodes[i]
@@ -65,5 +58,4 @@ def build_tree(data):
         temp.left = root
         temp.right = new_node
         root = temp
-
     return root

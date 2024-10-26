@@ -1,0 +1,22 @@
+T1	Person 35 39	ages
+T2	Value 23 30;43 52	Between 13 and 21
+R1	has_value Arg1:T1 Arg2:T2	
+T3	Condition 80 90	depression
+T4	Qualifier 54 76	Self-reported symptoms
+R2	has_qualifier Arg1:T3 Arg2:T4	
+T5	Post-eligibility 92 156	Will be residing in the USA for the duration of the 5-week study
+T6	Informed_consent 551 669	Willing to provide informed e-consent/assent and have legal guardian willing to provide informed e-consent if under 18
+T7	Non-query-able 439 549	Access to a smartphone (iPhone 5s or later or running Android 4.4 KitKat or later) and regular internet access
+T8	Non-query-able 353 437	English fluency and literacy of adolescent and consenting legal guardian if under 18
+T9	Post-eligibility 158 351	Under the care of a US-based primary care and/or licensed mental healthcare provider and willing and able to provide the name and contact information of the provider during consent appointment.
+T10	Condition 720 735	suicide attempt
+T11	Condition 746 755	self-harm
+T12	Condition 766 783	suicidal ideation
+*	OR T10 T11 T12
+T13	Condition 832 848	bipolar disorder
+T14	Condition 850 873	substance use disorder,
+T15	Condition 881 899	psychotic disorder
+T16	Condition 910 923	schizophrenia
+*	OR T13 T14 T15
+R3	subsumes Arg1:T15 Arg2:T16	
+T17	Non-query-able 925 1108	Incapable of understanding or completing study procedures and digital intervention as determined by participant, patient/legal guardian, healthcare provider, or clinical research team

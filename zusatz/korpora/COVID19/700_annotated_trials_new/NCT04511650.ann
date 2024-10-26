@@ -1,0 +1,143 @@
+T1	Informed_consent 23 74	Ability to understand and provide informed consent;
+T2	Person 119 122	age
+T3	Person 76 81	Males
+T4	Person 99 106	females
+T5	Condition 90 98	pregnant
+T6	Negation 86 89	non
+R1	has_negation Arg1:T5 Arg2:T6	
+R2	AND Arg1:T4 Arg2:T5	
+*	OR T3 T4
+T7	Value 107 118	18 years of
+R3	has_value Arg1:T2 Arg2:T7	
+R4	AND Arg1:T4 Arg2:T2	
+T8	Temporal 132 156	at the time of Screening
+R5	has_temporal Arg1:T2 Arg2:T8	
+T9	Post-eligibility 1345 1414	Inability to initiate study drug within 12 hours after randomization;
+T10	Pregnancy_considerations 1416 1515	Female of childbearing potential who is unable or unwilling to forego breastfeeding through Day 28;
+T11	Measurement 1517 1540	Systolic blood pressure
+T12	Value 1541 1550	<100 mmHg
+R6	has_value Arg1:T11 Arg2:T12	
+T13	Condition 1556 1561	shock
+T14	Drug 1575 1582	pressor
+T15	Mood 1565 1574	requiring
+R7	has_mood Arg1:T14 Arg2:T15	
+*	OR T13 T14
+T16	Measurement 2156 2186	Alanine aminotransferase (ALT)
+T17	Measurement 2190 2222	aspartate aminotransferase (AST)
+T18	Value 2223 2258	>3  the upper limit of normal (ULN)
+*	OR T16 T17
+R8	has_value Arg1:T17 Arg2:T18	
+T19	Measurement 2261 2276	Total bilirubin
+T20	Value 2277 2284	>2  ULN
+R9	has_value Arg1:T19 Arg2:T20	
+T21	Measurement 2287 2323	Estimated glomerular filtration rate
+T22	Value 2324 2334	<30 mL/min
+R10	has_value Arg1:T21 Arg2:T22	
+T23	Procedure 2348 2360	hemodialysis
+T24	Procedure 2364 2378	hemofiltration
+*	OR T23 T24 T21
+T25	Temporal 2338 2347	receiving
+R11	has_temporal Arg1:T23 Arg2:T25	
+T26	Non-query-able 2381 2476	Moribund subject not expected to survive 24 hours in the opinion of the treating clinical team;
+T27	Drug 3109 3126	CYP2C8 inhibitors
+T28	Drug 3132 3143	gemfibrozil
+T29	Drug 3145 3156	fluvoxamine
+T30	Drug 3161 3173	ketoconazole
+R12	subsumes Arg1:T27 Arg2:T28	
+*	OR T28 T29 T30
+T31	Competing_trial 3177 3284	Participation in another investigational study during the present study through the last visit (Day 28); or
+T32	Competing_trial 3286 3322	Previous randomization in this study
+T33	Drug 2857 2893	cytochrome P450 (CYP) 2C8 substrates
+T34	Drug 2899 2910	repaglinide
+T35	Drug 2912 2922	paclitaxel
+T36	Drug 2927 2939	cerivastatin
+R13	subsumes Arg1:T33 Arg2:T34	
+*	OR T34 T35 T36
+T37	Drug 2944 2961	CYP3A4 substrates
+T38	Drug 2967 2977	amlodipine
+T39	Drug 2979 2989	budesonide
+T40	Drug 2991 3000	dasabuvir
+T41	Drug 3002 3014	enzalutamide
+T42	Drug 3016 3024	imatinib
+T43	Drug 3026 3035	lopinavir
+T44	Drug 3037 3047	loperamide
+T45	Drug 3049 3059	saquinavir
+T46	Drug 3061 3071	sildenafil
+T47	Drug 3073 3082	midazolam
+T48	Drug 3087 3098	montelukast
+R14	subsumes Arg1:T37 Arg2:T38	
+*	OR T40 T41 T38 T39 T42 T43 T44 T45 T46 T47 T48
+T49	Condition 2531 2543	malignancies
+T50	Procedure 2547 2559	chemotherapy
+T51	Qualifier 2524 2530	active
+R15	has_qualifier Arg1:T49 Arg2:T51	
+R16	AND Arg1:T49 Arg2:T50	
+T52	Procedure 2572 2582	transplant
+T53	Temporal 2561 2565	post
+R17	has_temporal Arg1:T52 Arg2:T53	
+T54	Condition 2584 2618	end stage congestive heart failure
+T55	Non-query-able 2660 2848	Decision to withhold life-sustaining treatment; Note: In the event of cardiac arrest, the decision to withhold cardiopulmonary resuscitation only does not fulfill this exclusion criterion.
+T56	Condition 1593 1612	Respiratory failure
+T57	Procedure 1645 1667	mechanical ventilation
+T58	Procedure 1703 1726	high-flow nasal cannula
+T59	Observation 1728 1869	heated, humidified, oxygen delivered via reinforced nasal cannula at flow rates >20 L/min with fraction of delivered oxygen of 0.5 or greater
+R18	has_context Arg1:T58 Arg2:T59	
+T60	Procedure 1872 1913	noninvasive positive pressure ventilation
+T61	Procedure 1918 1960	extracorporeal membrane oxygenation (ECMO)
+T62	Condition 1994 2013	respiratory failure
+T63	Observation 2019 2152	clinical need for 1 of the preceding therapies, but preceding therapies not able to be administered in setting of resource limitation
+R19	has_context Arg1:T62 Arg2:T63	
+*	OR T57 T58 T60 T61 T62
+R20	subsumes Arg1:T56 Arg2:T57	
+T64	Condition 187 197	SARS-CoV-2
+T65	Temporal 208 246	within 72 hours prior to randomization
+T66	Observation 159 179	Laboratory-confirmed
+R21	has_context Arg1:T64 Arg2:T66	
+R22	has_temporal Arg1:T64 Arg2:T65	
+T67	Reference_point 224 246	prior to randomization
+R23	has_index Arg1:T65 Arg2:T67	
+T68	Pregnancy_considerations 371 576	Females of childbearing potential must be willing to completely abstain or agree to use a highly effective method of contraception through Day 28; and have a negative urine pregnancy test during Screening;
+T69	Visit 588 600	hospitalized
+T70	Condition 697 705	COVID-19
+T71	Qualifier 678 686	moderate
+R24	has_qualifier Arg1:T70 Arg2:T71	
+T72	Qualifier 690 696	severe
+R25	has_qualifier Arg1:T70 Arg2:T72	
+T73	Observation 730 772	symptoms of moderate illness with COVID-19
+T74	Observation 794 821	any symptom of mild illness
+T75	Condition 825 858	shortness of breath with exertion
+T76	Measurement 868 884	respiratory rate
+T77	Value 888 913	20 or greater breaths/min
+R26	has_value Arg1:T76 Arg2:T77	
+*	OR T75 T76 T74 T78 T81
+T78	Measurement 915 919	SpO2
+T79	Value 920 924	>93%
+T80	Observation 925 948	on room air at sea leve
+R27	has_value Arg1:T78 Arg2:T79	
+R28	has_context Arg1:T78 Arg2:T80	
+R29	subsumes Arg1:T71 Arg2:T73	
+R30	subsumes Arg1:T73 Arg2:T74	
+T81	Measurement 954 964	heart rate
+T82	Value 965 991	at 90 or greater beats/min
+R31	has_value Arg1:T81 Arg2:T82	
+T83	Observation 1084 1115	any symptom of moderate illness
+T84	Condition 1117 1136	shortness of breath
+T85	Observation 1137 1144	at rest
+R32	has_context Arg1:T84 Arg2:T85	
+T86	Condition 1149 1169	respiratory distress
+T87	Measurement 1175 1191	respiratory rate
+T88	Value 1192 1220	at 30 or greater breaths/min
+R33	has_value Arg1:T87 Arg2:T88	
+T89	Measurement 1222 1232	heart rate
+T90	Value 1236 1260	125 or greater beats/min
+T91	Measurement 1265 1269	SpO2
+T92	Value 1270 1274	>93%
+T93	Observation 1275 1299	on room air at sea level
+T94	Measurement 1303 1312	PaO2:FiO2
+T95	Value 1313 1317	<300
+R34	has_value Arg1:T89 Arg2:T90	
+R35	has_value Arg1:T91 Arg2:T92	
+R36	has_context Arg1:T91 Arg2:T93	
+R37	has_value Arg1:T94 Arg2:T95	
+*	OR T83 T84 T86 T87 T89 T91 T94
+R38	subsumes Arg1:T72 Arg2:T83	
