@@ -12,7 +12,3 @@ module load cuda
 export CUDA_VISIBLE_DEVICES=0 
 
 python finetune_llama3_8b_p4.py #finetune_llama3_70b_p1_train.py #finetune_llama3_70b_p4.py
-
-
-
-  ##SBATCH --nodelist=wr24          # Specify the node 20 (fail), 21, (geht) 22 (geht), 23 (geht), 24 (fail) ,25 (geht) !

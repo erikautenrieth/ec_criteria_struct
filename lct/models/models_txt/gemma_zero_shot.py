@@ -8,28 +8,16 @@ model_name = "Gemma-27b"
 model_id = "google/gemma-2-27b-it"
 dtype = torch.bfloat16
 n_prompt = 6
-n_shot = 5
+n_shot = 0
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-study_path = f"{transform_lct}/input/dataset/test/input/"
+study_path = f"{transform_lct}/input/lct_txt/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/" 
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
-
-shot_list = [
-    "NCT03865433.txt",
-    "NCT03860324.txt",
-    "NCT03860233.txt",
-    "NCT03923231.txt",
-    "NCT03930121.txt"
-]
-
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
-study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
-studies = dict(zip(study_filenames, study_contents))
-labels = dict(zip(label_filenames, label_contents))
-command = read_text_file(f"{transform_lct}/input/prompt/claude_prompt6.txt")
+command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 model = AutoModelForCausalLM.from_pretrained(
@@ -37,6 +25,7 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="cuda",
     torch_dtype=dtype,
 )
+
 
 first_call = True
 for file in study_files:

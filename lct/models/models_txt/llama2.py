@@ -1,25 +1,18 @@
 import os
+import torch
 import transformers
 from helper_functions import *
 
 batch_path = "modelle_prompt2"
 n_prompt = 6
 n_shot = 3
-
 model_id =  "meta-llama/Llama-2-70b-chat-hf"
 model_name = "Llama-2-70B"
-
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-
-
-model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt") 
-
+model_desc = read_text_file(f"{transform_lct}/input/prompt/p{n_prompt}.txt")
 study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}_{n_shot}_shot/output/"
-
 os.makedirs(output_path, exist_ok=True)
-
-
 study_files = os.listdir(study_path)
 
 
@@ -37,7 +30,6 @@ shot_list = [
 study_folder = f"{transform_lct}/input/lct_txt/"
 label_folder = f'{transform_lct}/input/lct_p1'
 study_filenames, study_contents, label_filenames, label_contents = read_matching_txt_files(study_folder, label_folder, shot_list)
-
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
@@ -61,15 +53,12 @@ first_call = True
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
-    
     test_file = read_text_file(study_path+file)
-
     if first_call:
         messages.append({"role": "user", "content": f"{command} {test_file}"})
         first_call = False
     else:
         messages[-1] = {"role": "user", "content": f"{command} {test_file}"} 
-
 
     prompt = pipeline.tokenizer.apply_chat_template(
                 messages, 
@@ -81,7 +70,6 @@ for file in study_files:
     max_length = 4096
     max_new_tokens = min(2048, max_length - input_ids.shape[1])
     print("Max Tokens:", max_new_tokens)
-
     outputs = pipeline(
             prompt,
             max_new_tokens=max_new_tokens,
@@ -90,7 +78,5 @@ for file in study_files:
             temperature=0.5,
             top_p=0.95,
     )
-
     gen_output = outputs[0]["generated_text"][len(prompt):]
-
     save_txt(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")

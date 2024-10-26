@@ -1,21 +1,15 @@
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
-import transformers
 from helper_functions import *
-from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
 
 # pip install transformers==4.38.0
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-
 batch_path = "lora_70b_prompt2"
 model_id = "tuned_models_70b/llama3_70b_Lora_ep10_r256_5pct_20step" 
 model_name = "llama3_70b_Lora_ep10_r256_5pct_20step"
-
 command = read_text_file(f"{transform_lct}/input/prompt/p6.txt")
-
 study_path = f"{transform_lct}/input/dataset/test/input/"
 output_path = f"{transform_lct}/evaluate_parse_1/{batch_path}/model_output/{model_name}/output/"
 os.makedirs(output_path, exist_ok=True)
@@ -27,7 +21,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
         dtype = None,
         load_in_4bit = True,
     )
-FastLanguageModel.for_inference(model) # Enable native 2x faster inference
+FastLanguageModel.for_inference(model)
 
 
 alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.

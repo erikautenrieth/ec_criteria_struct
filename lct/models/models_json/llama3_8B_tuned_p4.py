@@ -1,27 +1,18 @@
 import os
-import time
 from datetime import timedelta
-
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 from helper_functions import *
-from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
 
 
 batch_path = "eval_p4"
-
 model_id = "tuned_models/llama3_8b_Lora_ep10_r256_prompt1_train_only_p4"
 model_name = "llama3_8b_Lora_ep10_r256_prompt1_train_only_p4"
-
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"
-
 command = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt1.txt")
-
 study_path = f"{transform_lct}/input/dataset_p4_prompt1_new/test/input/"
 output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}/output/"
-
 os.makedirs(output_path, exist_ok=True)
-
 study_files = os.listdir(study_path)
 
 model, tokenizer = FastLanguageModel.from_pretrained(

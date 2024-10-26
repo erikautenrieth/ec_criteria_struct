@@ -1,10 +1,7 @@
 import os
-import time
 from datetime import timedelta
-
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 from helper_functions import *
-from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from unsloth import FastLanguageModel
 
 
