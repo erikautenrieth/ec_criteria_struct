@@ -1,0 +1,45 @@
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llcc}
+\toprule
+\textbf{Category} & \textbf{Entity} & \textbf{SciBERT} & \textbf{llama3_70b_ft_10} \\
+\midrule
+\multirow{6}{*}{Clinical} & Condition & 78.4/83.3/80.8 & 90.6/88.6/89.6 \\
+ & Contraindication & 100.0/96.6/98.3 & 94.1/94.1/94.1 \\
+ & Drug & 73.4/80.9/77.0 & 85.8/91.4/88.5 \\
+ & Encounter & 58.3/74.4/65.4 & 83.1/81.9/82.5 \\
+ & Observation & 72.1/77.6/74.7 & 86.2/82.6/84.4 \\
+ & Procedure & 71.3/79.4/75.1 & 90.4/83.8/87.0 \\
+\midrule
+\multirow{5}{*}{Demographic} & Age & 99.1/98.3/98.7 & 100.0/94.8/97.3 \\
+ & Birth & 100.0/62.5/76.9 & 85.7/85.7/85.7 \\
+ & Death & 100.0/20.0/33.3 & 100.0/80.0/88.9 \\
+ & Family-Member & 44.9/61.1/51.7 & 97.6/97.6/97.6 \\
+ & Language & 96.6/93.5/95.0 & 100.0/92.9/96.3 \\
+\midrule
+Logical & Negation & 73.5/82.9/77.9 & 85.9/81.0/83.3 \\
+\midrule
+\multirow{6}{*}{Qualifier} & Assertion & 62.1/65.8/63.9 & 75.1/75.1/75.1 \\
+ & Modifier & 58.5/65.4/61.8 & 83.8/82.7/83.2 \\
+ & Polarity & 81.4/79.5/80.4 & 86.6/74.4/80.0 \\
+ & Risk & 95.4/91.3/93.3 & 100.0/76.0/86.4 \\
+ & Severity & 86.5/94.1/90.2 & 93.8/90.9/92.3 \\
+ & Stability & 75.3/84.7/79.7 & 86.3/71.0/77.9 \\
+\midrule
+\multirow{6}{*}{Temporal and Comparative} & Eq-Comparison & 85.3/89.3/87.3 & 93.2/90.4/91.7 \\
+ & Criteria-Count & 12.5/20.0/15.5 & 0.0/0.0/0.0 \\
+ & Eq-Temporal-Period & 82.6/86.3/84.4 & 93.2/87.7/90.3 \\
+ & Eq-Temporal-Recency & 50.0/66.6/57.1 & 91.7/91.7/91.7 \\
+ & Eq-Temporal-Unit & 98.2/99.4/98.8 & 97.7/94.7/96.2 \\
+ & Eq-Value & 96.4/97.1/96.7 & 96.8/94.1/95.5 \\
+\midrule
+Other & Location & 73.4/78.3/75.8 & 85.7/89.7/87.6 \\
+\midrule
+-- & Total & 79.0/83.7/81.3 & 90.7/87.4/89.0 \\
+\bottomrule
+\end{tabular}
+\caption{Leistungsvergleich der Metriken auf dem LCT Korpus: SciBERT vs llama3_70b_ft_10 (\%, Precision/Recall/F1). Die Gesamtauswertung umfasst 50 Entitätskategorien.}
+\label{tab:metrics_comparison}
+\end{table}
+    
