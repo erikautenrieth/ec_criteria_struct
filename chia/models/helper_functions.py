@@ -1,9 +1,9 @@
 import os
 import json
 import time
-import psutil
 import re
 import random
+
 def save_json(data, file_path):
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(data)
@@ -23,7 +23,6 @@ def read_text_file(file_path):
         return "Die Datei wurde nicht gefunden."
     except Exception as e:
         return f"Ein Fehler ist aufgetreten: {e}"
-
 
 def parse_json(text):
     try:

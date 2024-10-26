@@ -1,8 +1,8 @@
-import os
 import transformers
+import torch
 from helper_functions import *
 
-batch_path = "eval_full_chia" 
+batch_path = "evaluate/eval_full_chia"
 n_prompt = 2
 n_shot = 5
 
@@ -15,25 +15,6 @@ output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_{n_s
 command = "Insert the logical operators [AND], [OR], [NOT] into the following eligibility criteria and return the text in full without deleting/replacing anything."
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
-
-shot_list_first = [
-    "NCT00050349_exc.txt",
-    "NCT00050349_inc.txt",
-    "NCT00061308_exc.txt",
-    "NCT00061308_inc.txt",
-]
-
-shot_list_best = [
-    "NCT01320579_exc.txt",
-    "NCT01320579_inc.txt",
-    "NCT01491763_exc.txt",
-    "NCT01669369_inc.txt",
-    "NCT01700790_exc.txt",
-    "NCT01700790_inc.txt",
-    "NCT01709981_exc.txt",
-    "NCT02056288_exc.txt",
-    "NCT02202369_exc.txt"
-]
 
 shot_list = [
     "NCT01320579.txt",
@@ -50,7 +31,6 @@ study_filenames, study_contents, label_filenames, label_contents = read_matching
 studies = dict(zip(study_filenames, study_contents))
 labels = dict(zip(label_filenames, label_contents))
 messages = []
-
 messages.append({"role": "system", "content": f"{model_desc}"})
 
 for i in range(n_shot):
@@ -66,13 +46,10 @@ pipeline = transformers.pipeline(
         )
 
 first_call = True
-
 for file in study_files:
     file_name = file.split(".")[0]
     print("File:", file_name, "\n")
-    
     test_file = read_text_file(study_path+file)
-
     if first_call:
         messages.append({"role": "user", "content": f"{command} {test_file}"})
         first_call = False
@@ -101,5 +78,4 @@ for file in study_files:
     )
  
     gen_output = outputs[0]["generated_text"][len(prompt):]
-
     save_txt(gen_output, f"{output_path}{model_name}_{file_name}_{n_shot}_shot.txt")

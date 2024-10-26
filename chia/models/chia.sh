@@ -11,6 +11,8 @@
 
 module load cuda
 python llama_p1_0_shot.py
-#llama_p1_0_shot.py  llama_p1.py  llama_lct_p1_tuned.py
+
+
+
 
 

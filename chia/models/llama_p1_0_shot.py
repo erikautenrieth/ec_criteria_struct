@@ -3,11 +3,9 @@ import transformers
 import torch
 from helper_functions import *
 
-batch_path = "eval_full_chia" 
-
+batch_path = "evaluate/eval_full_chia"
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
-
 transform ="/work/eauten2s/ec_criteria_struct/chia"
 study_path = f"{transform}/input/chia_text_full/"
 output_path = f"{transform}/evaluate/{batch_path}/model_output/{model_name}_0_shot_lct_prompt/output/"
@@ -58,6 +56,4 @@ for file in study_files:
     )
 
     gen_output = outputs[0]["generated_text"][len(prompt):]
-
-    
     save_txt(gen_output, f"{output_path}{model_name}_{file_name}_0_shot.txt")
