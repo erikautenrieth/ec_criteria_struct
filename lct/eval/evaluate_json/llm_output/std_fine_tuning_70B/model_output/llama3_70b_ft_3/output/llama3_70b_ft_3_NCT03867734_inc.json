@@ -1,0 +1,83 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "- Persons diagnosed with pharyngeal gonorrhea",
+      "Condition": [
+        "gonorrhea"
+      ],
+      "Condition-Name": [
+        "gonorrhea"
+      ],
+      "Eq-Operator": [
+        "-"
+      ],
+      "Modifier": [
+        "pharyngeal"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "or gonococcal urethritis",
+          "Modifier": [
+            "gonococcal"
+          ],
+          "Condition": [
+            "urethritis"
+          ],
+          "Condition-Name": [
+            "urethritis"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "who are undergoing pharyngeal gonorrhea testing,",
+              "Condition": [
+                "gonorrhea"
+              ],
+              "Eq-Comparison": [
+                "undergoing"
+              ],
+              "Procedure": [
+                "pharyngeal gonorrhea testing"
+              ],
+              "Condition-Name": [
+                "gonorrhea"
+              ],
+              "Eq-Temporal-Period": [
+                "undergoing"
+              ],
+              "Procedure-Name": [
+                "pharyngeal gonorrhea testing"
+              ],
+              "Modifier": [
+                "pharyngeal"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "who are"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not yet treated.",
+                      "Negation": [
+                        "not"
+                      ],
+                      "Procedure": [
+                        "treated"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

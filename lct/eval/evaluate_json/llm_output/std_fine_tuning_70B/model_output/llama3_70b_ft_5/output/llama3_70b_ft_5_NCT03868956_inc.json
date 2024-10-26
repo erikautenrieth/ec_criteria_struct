@@ -1,0 +1,157 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Age >= 18 years",
+                  "Age": [
+                    "Age"
+                  ],
+                  "Eq-Comparison": [
+                    ">= 18 years"
+                  ],
+                  "Eq-Operator": [
+                    ">="
+                  ],
+                  "Eq-Value": [
+                    "18"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Known history of objectively documented deep vein thrombosis of the lower limb (with or",
+                      "Eq-Comparison": [
+                        "history"
+                      ],
+                      "Condition": [
+                        "deep vein thrombosis"
+                      ],
+                      "Modifier": [
+                        "lower limb"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "history"
+                      ],
+                      "Condition-Name": [
+                        "deep vein thrombosis"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "without pulmonary embolism)",
+                          "Negation": [
+                            "without"
+                          ],
+                          "Condition": [
+                            "pulmonary embolism"
+                          ],
+                          "Condition-Name": [
+                            "pulmonary embolism"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Out-patients referred for clinically suspected acute recurrent ipsilateral DVT of the lower limb i.e. the occurrence of new symptoms",
+                  "Modifier": [
+                    "lower limb",
+                    "recurrent ipsilateral"
+                  ],
+                  "Assertion": [
+                    "suspected",
+                    "symptoms"
+                  ],
+                  "Condition": [
+                    "DVT"
+                  ],
+                  "Eq-Comparison": [
+                    "current",
+                    "new"
+                  ],
+                  "Acuteness": [
+                    "acute"
+                  ],
+                  "Condition-Name": [
+                    "DVT"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "current"
+                  ],
+                  "Encounter": [
+                    "Out-patients"
+                  ],
+                  "Eq-Temporal-Recency": [
+                    "new"
+                  ],
+                  "Coreference": [
+                    "symptoms"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "and signs of DVT",
+                      "Condition": [
+                        "DVT"
+                      ],
+                      "Assertion": [
+                        "signs"
+                      ],
+                      "Condition-Name": [
+                        "DVT"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or the increase of symptoms and signs in patients with post-thrombotic syndrome",
+                      "Assertion": [
+                        "symptoms",
+                        "signs"
+                      ],
+                      "Condition": [
+                        "post-thrombotic syndrome"
+                      ],
+                      "Eq-Comparison": [
+                        "increase"
+                      ],
+                      "Condition-Name": [
+                        "post-thrombotic syndrome"
+                      ],
+                      "Eq-Operator": [
+                        "increase"
+                      ],
+                      "Coreference": [
+                        "symptoms",
+                        "signs"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patients covered by social security or equivalent regimen"
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Signed and dated informed consent"
+    }
+  }
+}
