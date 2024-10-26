@@ -70,7 +70,7 @@ def formatting_prompts_func(examples):
 pass
 
 
-dataset_path = 'dataset/dataset_p1_prompt6'
+dataset_path = 'dataset/dataset_p1_prompt2'
 dataset = load_from_disk(dataset_path)
 train_test_split = dataset['train'].train_test_split(test_size=0.1, seed=42)
 train = train_test_split['train'] # 723 Files

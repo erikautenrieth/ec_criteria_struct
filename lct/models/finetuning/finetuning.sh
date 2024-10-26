@@ -11,4 +11,4 @@
 module load cuda
 export CUDA_VISIBLE_DEVICES=0 
 
-python finetune_llama3_8b_p4.py #finetune_llama3_70b_p1_train.py #finetune_llama3_70b_p4.py
+python ft_llama3_8b_json.py
