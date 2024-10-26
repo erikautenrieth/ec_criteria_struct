@@ -4,14 +4,10 @@ from transformers import TrainingArguments
 import torch
 import os
 from datasets import load_from_disk
-from datasets import load_dataset
-
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
 load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
-
-
 r = 256
 epoch = 10
 
@@ -20,15 +16,15 @@ os.makedirs(output_dir, exist_ok=True)
 
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = "meta-llama/Meta-Llama-3-8B-Instruct", #"unsloth/llama-3-8b-Instruct-bnb-4bit",   # meta-llama/Meta-Llama-3-8B-Instruct
+    model_name = "meta-llama/Meta-Llama-3-8B-Instruct",
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
-    token = "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"# token = "hf_...", # use one if using gated models like meta-llama/Llama-2-7b-hf
+    token = "INSERT_HUGGINGFACE_TOKEN"
 )
 model = FastLanguageModel.get_peft_model(
     model,
-    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096 (zu groß)
+    r = r, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128, 256, 512, 1024, 2048
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 256, # 256 (default),
@@ -89,7 +85,7 @@ trainer = SFTTrainer(
         bf16 = torch.cuda.is_bf16_supported(),
         optim = "adamw_8bit",
         weight_decay = 0.05,  
-        lr_scheduler_type = "cosine",  # cosine (default)
+        lr_scheduler_type = "cosine",
         seed = 42, 
         output_dir = output_dir,
         logging_steps = 20,  
@@ -106,10 +102,7 @@ start_gpu_memory = round(torch.cuda.max_memory_reserved() / 1024 / 1024 / 1024, 
 max_memory = round(gpu_stats.total_memory / 1024 / 1024 / 1024, 3)
 print(f"GPU = {gpu_stats.name}. Max memory = {max_memory} GB.")
 print(f"{start_gpu_memory} GB of memory reserved.")
-
-
 trainer_stats = trainer.train()
-
 used_memory = round(torch.cuda.max_memory_reserved() / 1024 / 1024 / 1024, 3)
 used_memory_for_lora = round(used_memory - start_gpu_memory, 3)
 used_percentage = round(used_memory         /max_memory*100, 3)

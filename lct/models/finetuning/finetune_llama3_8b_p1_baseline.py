@@ -1,6 +1,3 @@
-#pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
-#pip install --no-deps xformers "trl<0.9.0" peft accelerate bitsandbytes
-
 
 # pip install transformers==4.38.0
 import torch
@@ -8,17 +5,11 @@ import os
 from unsloth import FastLanguageModel
 from trl import SFTTrainer
 from transformers import TrainingArguments
-from datasets import load_from_disk, DatasetDict
-
-
-if torch.cuda.device_count() > 1:
-        print(f"Using {torch.cuda.device_count()} GPUs")
-
+from datasets import load_from_disk
 
 
 output_dir  = "outputs/outputs_base"
 os.makedirs(output_dir, exist_ok=True)
-
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
 dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
 load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
@@ -31,8 +22,6 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     load_in_4bit = load_in_4bit,
     token = "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"
 )
-
-
 
 model = FastLanguageModel.get_peft_model(
         model               = model,
@@ -53,9 +42,6 @@ model = FastLanguageModel.get_peft_model(
         loftq_config        = {},
         temporary_location  = "_unsloth_temporary_saved_buffers",
     )
-
-## Try to use 2 GPUs
-#model = torch.nn.DataParallel(model, device_ids=[0,1])
 
 ## 80/20 Training 904 Dokumente Training, 202 Test Set [Random]
 llama3_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
@@ -91,8 +77,6 @@ train = train_test_split['train'] # 723 Files
 test = train_test_split['test'] # 81 Files
 train = train.map(formatting_prompts_func, batched=True)
 test = test.map(formatting_prompts_func, batched=True)
-
-
 
 
 trainer = SFTTrainer(
@@ -133,17 +117,12 @@ trainer = SFTTrainer(
 )
 
 
-
-
-
-
 #@title Show current memory stats
 gpu_stats = torch.cuda.get_device_properties(0)
 start_gpu_memory = round(torch.cuda.max_memory_reserved() / 1024 / 1024 / 1024, 3)
 max_memory = round(gpu_stats.total_memory / 1024 / 1024 / 1024, 3)
 print(f"GPU = {gpu_stats.name}. Max memory = {max_memory} GB.")
 print(f"{start_gpu_memory} GB of memory reserved.")
-
 
 trainer_stats = trainer.train()
 
@@ -157,8 +136,6 @@ print(f"Peak reserved memory = {used_memory} GB.")
 print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
-
 model.save_pretrained(f"8b_prompt2_finetuned_models/llama3_8b_Lora_baseline_ep10")
 
 
-# model.push_to_hub("your_name/lora_model", token = "...") # Online saving
