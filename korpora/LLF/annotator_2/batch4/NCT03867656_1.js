@@ -1,7 +1,0 @@
-'INC'
-
-'-  Male'
-
-'-  male()'
-
-male()

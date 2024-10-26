@@ -1,7 +1,0 @@
-'EXC'
-
-'-  Males'
-
-'-  male()'
-
-male()
