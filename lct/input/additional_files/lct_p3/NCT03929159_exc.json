@@ -1,0 +1,44 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Inability to give informed consent or a person who has power of attorney for medical decision is not available"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Being moribund (for patients in emergency center) or",
+              "Condition": [
+                "moribund"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "cancellation of surgery (for patients in POEM)"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Active \"Do Not Resuscitate\"",
+          "Observation": [
+            "Do Not Resuscitate"
+          ]
+        },
+        "right": {
+          "raw_text": "or \"Do Not Intubate\" order",
+          "Observation": [
+            "Do Not Intubate"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "-"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Non-obese (BMI < 30)",
+                      "Condition": [
+                        "obese"
+                      ],
+                      "Observation": [
+                        "BMI"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Non-smokers"
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "-"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Free of any systemic diseases including hypertension,",
+                      "Condition": [
+                        "hypertension",
+                        "diseases"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "diabetes,",
+                          "Condition": [
+                            "diabetes"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "coronary artery disease,",
+                              "Condition": [
+                                "coronary artery disease"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "neurologic disease,",
+                                  "Condition": [
+                                    "neurologic disease"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or any other major medical co-morbidity",
+                                  "Condition": [
+                                    "medical co-morbidity"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Women will be either surgically sterilized"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "non-pregnant as determined by a urine pregnancy test",
+                  "Condition": [
+                    "pregnant"
+                  ],
+                  "Observation": [
+                    "urine pregnancy test"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

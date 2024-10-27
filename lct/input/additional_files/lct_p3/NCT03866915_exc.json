@@ -1,0 +1,69 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients undergoing emergency surgery"
+                },
+                "right": {
+                  "raw_text": "- Patients under 18 years of age"
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patients who refuse to participate"
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "unable to perform the 6MWT",
+                  "Observation": [
+                    "6MWT"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Claudication of the lower extremities",
+          "Condition": [
+            "Claudication"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "and"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "inability to maintain a constant pace of walking on level ground",
+                  "Observation": [
+                    "pace of walking"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

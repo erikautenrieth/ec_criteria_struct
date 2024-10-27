@@ -1,0 +1,98 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. OHCA: 1)The"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "out-of-hospital cardiac arrest patients who were taken to the hospital by their family members; 2) Bystanders suspected cardiac arrest, but the ROSC was achieved",
+                  "Condition": [
+                    "cardiac arrest"
+                  ],
+                  "Condition-Name": [
+                    "cardiac arrest"
+                  ],
+                  "Location": [
+                    "hospital"
+                  ],
+                  "Assertion": [
+                    "suspected"
+                  ],
+                  "Negation": [
+                    "out-of"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "without defibrillation",
+                          "Procedure": [
+                            "defibrillation"
+                          ],
+                          "Procedure-Name": [
+                            "defibrillation"
+                          ],
+                          "Negation": [
+                            "without"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or resuscitation by EMS.",
+                          "Procedure": [
+                            "resuscitation"
+                          ],
+                          "Procedure-Name": [
+                            "resuscitation"
+                          ],
+                          "Provider": [
+                            "EMS"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "2. IHCA: The patient who suffered a cardiac arrest that occurred",
+          "Condition": [
+            "cardiac arrest"
+          ],
+          "Condition-Name": [
+            "cardiac arrest"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "out-of-hospital and then transferred to the hospital.",
+              "Location": [
+                "hospital"
+              ],
+              "Negation": [
+                "out-of"
+              ],
+              "Encounter": [
+                "transferred"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

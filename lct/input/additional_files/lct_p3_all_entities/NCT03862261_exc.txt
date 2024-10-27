@@ -1,0 +1,65 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Children",
+      "Life-Stage-And-Gender": [
+        "Children"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "who are TB",
+          "Condition": [
+            "TB"
+          ],
+          "Condition-Name": [
+            "TB"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "contacts but"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "without symptoms",
+                      "Assertion": [
+                        "symptoms"
+                      ],
+                      "Negation": [
+                        "without"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or signs of active TB",
+                      "Condition": [
+                        "TB"
+                      ],
+                      "Assertion": [
+                        "signs"
+                      ],
+                      "Eq-Comparison": [
+                        "active"
+                      ],
+                      "Condition-Name": [
+                        "TB"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "active"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

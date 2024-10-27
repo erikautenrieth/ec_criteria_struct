@@ -1,0 +1,56 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Patients screened within the last year. In addition, individuals who",
+      "Eq-Operator": [
+        "within"
+      ],
+      "Eq-Temporal-Period": [
+        "last"
+      ],
+      "Procedure": [
+        "screened"
+      ],
+      "Procedure-Name": [
+        "screened"
+      ],
+      "Eq-Comparison": [
+        "within the last year"
+      ],
+      "Eq-Temporal-Unit": [
+        "year"
+      ]
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "cannot speak English will be",
+              "Language": [
+                "English"
+              ],
+              "Negation": [
+                "no",
+                "cannot"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "excluded from the study to minimize additional workload placed on administrative staff.",
+                  "Study": [
+                    "study"
+                  ],
+                  "Negation": [
+                    "excluded"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

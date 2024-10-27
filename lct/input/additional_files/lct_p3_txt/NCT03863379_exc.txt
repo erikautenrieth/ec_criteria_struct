@@ -1,0 +1,82 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "Persons with"
+                },
+                "right": {
+                  "raw_text": "- heterotopic ossifications,",
+                  "Condition": [
+                    "heterotopic ossifications"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- chronic administration of drugs, which promote fat increase",
+              "Drug": [
+                "drugs"
+              ],
+              "Condition": [
+                "fat"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- chronic administration of drugs, which promote bone",
+              "Drug": [
+                "drugs"
+              ]
+            },
+            "right": {
+              "raw_text": "or muscle loss",
+              "Condition": [
+                "loss"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- co-existing other diseases such as: endocrinopathies,",
+          "Condition": [
+            "diseases",
+            "endocrinopathies"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "muscular dystrophies,",
+              "Condition": [
+                "muscular dystrophies"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "non-alcoholic fatty liver disease.",
+                  "Condition": [
+                    "fatty liver disease",
+                    "fat"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

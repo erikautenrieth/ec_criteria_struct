@@ -1,0 +1,163 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- prior immunotherapy",
+                  "Eq-Comparison": [
+                    "prior"
+                  ],
+                  "Procedure": [
+                    "immunotherapy"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "prior"
+                  ],
+                  "Procedure-Name": [
+                    "immunotherapy"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or treatment with another anti PD-1 agent besides nivolumab",
+                  "Age": [
+                    "age"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Other": [
+                    "another"
+                  ],
+                  "Drug": [
+                    "anti PD-1 agent",
+                    "nivolumab"
+                  ],
+                  "Drug-Name": [
+                    "anti PD-1 agent",
+                    "nivolumab"
+                  ],
+                  "Exception": [
+                    "besides"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- prior chemotherapy including cetuximab",
+                  "Eq-Comparison": [
+                    "prior"
+                  ],
+                  "Procedure": [
+                    "chemotherapy"
+                  ],
+                  "Drug": [
+                    "cetuximab"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "prior"
+                  ],
+                  "Procedure-Name": [
+                    "chemotherapy"
+                  ],
+                  "Drug-Name": [
+                    "cetuximab"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or radiation therapy",
+                  "Procedure": [
+                    "radiation therapy"
+                  ],
+                  "Procedure-Name": [
+                    "radiation therapy"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- concomitant malignancies except cutaneous squamous cell carcinoma",
+              "Condition": [
+                "carcinoma",
+                "malignancies"
+              ],
+              "Exception": [
+                "except"
+              ],
+              "Modifier": [
+                "cutaneous squamous cell",
+                "concomitant"
+              ],
+              "Condition-Name": [
+                "carcinoma",
+                "malignancies"
+              ]
+            },
+            "right": {
+              "raw_text": "or basal cell carcinoma",
+              "Condition": [
+                "carcinoma"
+              ],
+              "Modifier": [
+                "basal cell"
+              ],
+              "Condition-Name": [
+                "carcinoma"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- unresectable primary tumor",
+          "Modifier": [
+            "unresectable primary"
+          ],
+          "Condition": [
+            "tumor"
+          ],
+          "Condition-Name": [
+            "tumor"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or regional disease",
+              "Condition": [
+                "regional disease"
+              ],
+              "Condition-Name": [
+                "regional disease"
+              ]
+            },
+            "right": {
+              "raw_text": "or distant metastases",
+              "Modifier": [
+                "distant"
+              ],
+              "Observation": [
+                "metastases"
+              ],
+              "Observation-Name": [
+                "metastases"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

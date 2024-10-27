@@ -1,0 +1,180 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "1. Female (mandatory)",
+                          "Life-Stage-And-Gender": [
+                            "Female"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "2.",
+                              "Eq-Value": [
+                                "2"
+                              ]
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "Not currently pregnant",
+                                      "Condition": [
+                                        "pregnant"
+                                      ],
+                                      "Condition-Name": [
+                                        "pregnant"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "currently"
+                                      ],
+                                      "Eq-Temporal-Period": [
+                                        "currently"
+                                      ],
+                                      "Negation": [
+                                        "Not"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "or nursing (mandatory)",
+                                      "Condition": [
+                                        "nursing"
+                                      ],
+                                      "Condition-Name": [
+                                        "nursing"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "3. Aged 21-45 (advanced age can hinder hormone levels)",
+                      "Age": [
+                        "Aged"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Eq-Value": [
+                        "21",
+                        "45",
+                        "2"
+                      ],
+                      "Eq-Comparison": [
+                        "21-45"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "4."
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Not be diagnosed as sub fertile (infertility causes inconsistent hormone levels)",
+                          "Condition": [
+                            "sub fertile"
+                          ],
+                          "Condition-Name": [
+                            "sub fertile"
+                          ],
+                          "Negation": [
+                            "Not"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "5."
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Not have used any form of hormonal birth control in the past 2 months (mandatory)",
+                      "Procedure": [
+                        "hormonal birth control"
+                      ],
+                      "Procedure-Name": [
+                        "hormonal birth control"
+                      ],
+                      "Eq-Operator": [
+                        "the past"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "months"
+                      ],
+                      "Eq-Value": [
+                        "2"
+                      ],
+                      "Eq-Comparison": [
+                        "the past 2 months"
+                      ],
+                      "Negation": [
+                        "Not"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "6. Currently trying to conceive (ideal but not required)",
+          "Condition": [
+            "conceive"
+          ],
+          "Condition-Name": [
+            "conceive"
+          ],
+          "Assertion": [
+            "trying to"
+          ],
+          "Eq-Comparison": [
+            "Currently"
+          ],
+          "Eq-Temporal-Period": [
+            "Currently"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "7. Currently reside in the US (mandatory, this study is for US residents only)",
+      "Eq-Comparison": [
+        "Currently"
+      ],
+      "Eq-Temporal-Period": [
+        "Currently"
+      ],
+      "Location": [
+        "US"
+      ]
+    }
+  }
+}

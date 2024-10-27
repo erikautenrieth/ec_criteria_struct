@@ -1,0 +1,75 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "Subjects with clotting disorders,",
+      "Condition": [
+        "clotting disorders"
+      ],
+      "Condition-Name": [
+        "clotting disorders"
+      ]
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "dyslipidemia",
+          "Condition": [
+            "dyslipidemia"
+          ],
+          "Condition-Name": [
+            "dyslipidemia"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or being on medication (i.e. statins)",
+              "Drug": [
+                "medication",
+                "statins"
+              ],
+              "Eq-Comparison": [
+                "on"
+              ],
+              "Eq-Temporal-Period": [
+                "on"
+              ],
+              "Drug-Name": [
+                "statins"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or other supplements during the study will be",
+                  "Other": [
+                    "other"
+                  ],
+                  "Drug": [
+                    "supplements"
+                  ],
+                  "Study": [
+                    "study"
+                  ],
+                  "Drug-Name": [
+                    "supplements"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "excluded.",
+                      "Negation": [
+                        "excluded"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

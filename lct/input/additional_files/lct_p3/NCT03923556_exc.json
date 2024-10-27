@@ -1,0 +1,122 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patients unable to sign the informed consent"
+                    },
+                    "right": {
+                      "raw_text": "- Pregnant women",
+                      "Condition": [
+                        "Pregnant"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Body Mass Index (BMI) > 40 kg/m2",
+                  "Observation": [
+                    "Body Mass Index",
+                    "BMI"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Pre-existing oxygen"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or ventilatory dependency (24h use of oxygen",
+                      "Condition": [
+                        "dependency"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or other noninvasive"
+                        },
+                        "right": {
+                          "raw_text": "or invasive ventilatory support)"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients with any pulmonary,"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "neuromuscular"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or other disease that severely limits their respiratory functional status (e.g.",
+                      "Condition": [
+                        "disease",
+                        "respiratory functional"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "unable to achieve 4 Metabolic Equivalent of Tasks,",
+                              "Observation": [
+                                "Metabolic Equivalent of Tasks"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "METs, such as climbing up 1 flight of stairs)",
+                              "Observation": [
+                                "METs",
+                                "climbing up 1 flight of stairs"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Presence of any contraindication for any of the study-related medications",
+          "Drug": [
+            "medications"
+          ]
+        },
+        "right": {
+          "raw_text": "or interventions."
+        }
+      }
+    }
+  }
+}

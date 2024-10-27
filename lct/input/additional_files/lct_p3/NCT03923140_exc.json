@@ -1,0 +1,64 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients will not be included if meets any of the following criteria:"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "1. Being treated with IL-1 inhibitor, other biological agents",
+                  "Drug": [
+                    "biological agents",
+                    "IL-1 inhibitor"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and immunosuppressants",
+                  "Drug": [
+                    "immunosuppressants"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "2. Pregnant",
+              "Condition": [
+                "Pregnant"
+              ]
+            },
+            "right": {
+              "raw_text": "and lactating women",
+              "Condition": [
+                "lactating"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "3. Serious organ function failure,",
+          "Condition": [
+            "organ function failure"
+          ]
+        },
+        "right": {
+          "raw_text": "expected life time less than 6 months",
+          "Observation": [
+            "expected life time"
+          ]
+        }
+      }
+    }
+  }
+}

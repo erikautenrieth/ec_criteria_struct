@@ -1,0 +1,142 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients who are in pregnancy",
+                      "Condition": [
+                        "pregnancy"
+                      ],
+                      "Condition-Name": [
+                        "pregnancy"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or have plan to conception.",
+                      "Condition": [
+                        "conception"
+                      ],
+                      "Condition-Name": [
+                        "conception"
+                      ],
+                      "Assertion": [
+                        "plan to"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients who have vertebra surgery",
+                      "Procedure": [
+                        "vertebra surgery",
+                        "surgery"
+                      ],
+                      "Procedure-Name": [
+                        "vertebra surgery",
+                        "surgery"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or have plan of surgery.",
+                      "Procedure": [
+                        "surgery"
+                      ],
+                      "Procedure-Name": [
+                        "surgery"
+                      ],
+                      "Assertion": [
+                        "plan of"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patients who are inappropriate to join this trial judged by the radiologists or specialists."
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- AIDS, Active Hepatitis,",
+              "Condition": [
+                "AIDS",
+                "Hepatitis"
+              ],
+              "Eq-Comparison": [
+                "Active"
+              ],
+              "Condition-Name": [
+                "AIDS",
+                "Hepatitis"
+              ],
+              "Eq-Temporal-Period": [
+                "Active"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Tuberculosis,",
+                  "Condition": [
+                    "Tuberculosis"
+                  ],
+                  "Condition-Name": [
+                    "Tuberculosis"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Syphilis",
+                  "Condition": [
+                    "Syphilis"
+                  ],
+                  "Condition-Name": [
+                    "Syphilis"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients who regularly take anticoagulants,",
+          "Eq-Comparison": [
+            "regularly take"
+          ],
+          "Drug": [
+            "anticoagulants"
+          ],
+          "Drug-Name": [
+            "anticoagulants"
+          ],
+          "Eq-Temporal-Period": [
+            "regularly take"
+          ]
+        },
+        "right": {
+          "raw_text": "antiplatelet drugs",
+          "Drug": [
+            "antiplatelet drugs"
+          ],
+          "Drug-Name": [
+            "antiplatelet drugs"
+          ]
+        }
+      }
+    }
+  }
+}

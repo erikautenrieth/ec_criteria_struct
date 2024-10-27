@@ -1,0 +1,183 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "1. Positive hepatitis b surface antigen",
+                      "Observation": [
+                        "hepatitis b surface antigen"
+                      ],
+                      "Observation-Name": [
+                        "hepatitis b surface antigen"
+                      ],
+                      "Polarity": [
+                        "Positive"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or hepatitis b virus DNA > 0.5 year;",
+                      "Eq-Operator": [
+                        ">"
+                      ],
+                      "Eq-Value": [
+                        "0.5"
+                      ],
+                      "Eq-Comparison": [
+                        "> 0.5 year"
+                      ],
+                      "Observation": [
+                        "hepatitis b virus DNA"
+                      ],
+                      "Observation-Name": [
+                        "hepatitis b virus DNA"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "year"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "2. Age from 18 to 55 years old;",
+                  "Eq-Temporal-Unit": [
+                    "years",
+                    "year"
+                  ],
+                  "Age": [
+                    "Age"
+                  ],
+                  "Eq-Operator": [
+                    "to"
+                  ],
+                  "Eq-Value": [
+                    "18",
+                    "55"
+                  ],
+                  "Eq-Comparison": [
+                    "18 to 55 years"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "3. Serum total bilirubin level > 10 times upper limit of normal;",
+              "Eq-Operator": [
+                ">",
+                "to"
+              ],
+              "Eq-Value": [
+                "10"
+              ],
+              "Eq-Comparison": [
+                "> 10 times upper limit of normal"
+              ],
+              "Observation": [
+                "Serum total bilirubin level"
+              ],
+              "Observation-Name": [
+                "Serum total bilirubin level"
+              ],
+              "Eq-Unit": [
+                "upper limit of normal"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "4. Prothrombin time activity < 40%",
+              "Eq-Operator": [
+                "<"
+              ],
+              "Eq-Value": [
+                "40"
+              ],
+              "Eq-Comparison": [
+                "< 40%"
+              ],
+              "Observation": [
+                "Prothrombin time activity"
+              ],
+              "Observation-Name": [
+                "Prothrombin time activity"
+              ]
+            },
+            "right": {
+              "raw_text": "or prothrombin time international ratio > 1.5；",
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Value": [
+                "1.5"
+              ],
+              "Eq-Comparison": [
+                "> 1.5"
+              ],
+              "Observation": [
+                "prothrombin time international ratio"
+              ],
+              "Observation-Name": [
+                "prothrombin time international ratio"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "5. Do"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "not receive nucleotide/",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Modifier": [
+                    "nucleotide"
+                  ]
+                },
+                "right": {
+                  "raw_text": "nucleoside analogues treatment in the past half year.",
+                  "Eq-Temporal-Unit": [
+                    "year"
+                  ],
+                  "Procedure": [
+                    "analogues treatment"
+                  ],
+                  "Procedure-Name": [
+                    "analogues treatment"
+                  ],
+                  "Eq-Comparison": [
+                    "past half year"
+                  ],
+                  "Eq-Value": [
+                    "half"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "past"
+                  ],
+                  "Modifier": [
+                    "nucleoside"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

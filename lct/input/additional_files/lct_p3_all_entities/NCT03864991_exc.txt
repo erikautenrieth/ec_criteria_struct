@@ -1,0 +1,100 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patient on insulin pump",
+              "Eq-Comparison": [
+                "on"
+              ],
+              "Eq-Temporal-Period": [
+                "on"
+              ],
+              "Drug-Name": [
+                "insulin"
+              ],
+              "Drug": [
+                "insulin"
+              ],
+              "Modifier": [
+                "pump"
+              ]
+            },
+            "right": {
+              "raw_text": "- Pregnant females,",
+              "Condition": [
+                "Pregnant"
+              ],
+              "Condition-Name": [
+                "Pregnant"
+              ],
+              "Life-Stage-And-Gender": [
+                "females"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patient with neurodevelopmental delay",
+              "Condition": [
+                "neurodevelopmental delay"
+              ],
+              "Condition-Name": [
+                "neurodevelopmental delay"
+              ]
+            },
+            "right": {
+              "raw_text": "or thalassemia",
+              "Condition": [
+                "thalassemia"
+              ],
+              "Condition-Name": [
+                "thalassemia"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patient currently using any kind of authentic e-device for step count",
+          "Eq-Comparison": [
+            "currently",
+            "using"
+          ],
+          "Procedure": [
+            "e-device"
+          ],
+          "Observation": [
+            "step count"
+          ],
+          "Eq-Temporal-Period": [
+            "using",
+            "currently"
+          ],
+          "Procedure-Name": [
+            "e-device"
+          ],
+          "Observation-Name": [
+            "step count"
+          ]
+        },
+        "right": {
+          "raw_text": "or physical activity.",
+          "Observation": [
+            "physical activity"
+          ],
+          "Observation-Name": [
+            "physical activity"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Other active malignancy in past 5 years prior to entry into the study, except for treated",
+                  "Other": [
+                    "Other"
+                  ],
+                  "Eq-Comparison": [
+                    "active",
+                    "past 5 years"
+                  ],
+                  "Condition": [
+                    "malignancy"
+                  ],
+                  "Study": [
+                    "study"
+                  ],
+                  "Exception": [
+                    "except"
+                  ],
+                  "Procedure": [
+                    "treated"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "active",
+                    "past"
+                  ],
+                  "Condition-Name": [
+                    "malignancy"
+                  ],
+                  "Eq-Value": [
+                    "5"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "non-melanoma skin cancer.",
+                      "Modifier": [
+                        "melanoma skin"
+                      ],
+                      "Condition": [
+                        "cancer"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Condition-Name": [
+                        "cancer"
+                      ],
+                      "Negation": [
+                        "non"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Any known severe infection like HIV,",
+                  "Condition": [
+                    "infection",
+                    "HIV"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Severity": [
+                    "severe"
+                  ],
+                  "Condition-Name": [
+                    "infection",
+                    "HIV"
+                  ],
+                  "Modifier": [
+                    "A"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "hepatitis A,",
+                      "Condition": [
+                        "hepatitis"
+                      ],
+                      "Condition-Name": [
+                        "hepatitis"
+                      ],
+                      "Modifier": [
+                        "A"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "B",
+                          "Modifier": [
+                            "B"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "and C.",
+                          "Modifier": [
+                            "C"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Receiving immune suppressive treatment.",
+          "Procedure": [
+            "treatment",
+            "immune suppressive treatment"
+          ],
+          "Eq-Comparison": [
+            "Receiving"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Eq-Temporal-Period": [
+            "Receiving"
+          ],
+          "Procedure-Name": [
+            "immune suppressive treatment"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Medical",
+          "Modifier": [
+            "Medical"
+          ],
+          "Eq-Operator": [
+            "-"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or psychological condition which in the opinion of the investigator would",
+              "Modifier": [
+                "psychological"
+              ],
+              "Condition": [
+                "condition"
+              ],
+              "Condition-Name": [
+                "condition"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not permit the patient to complete the study or sign meaningful informed consent.",
+                  "Study": [
+                    "study"
+                  ],
+                  "Negation": [
+                    "not"
+                  ],
+                  "Assertion": [
+                    "not"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
