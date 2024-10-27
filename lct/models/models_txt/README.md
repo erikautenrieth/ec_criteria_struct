@@ -1,11 +1,12 @@
-# Modell Inferenz 
-
-## Direkte Strukturierung von Eignungskriterien
-### Strukturierung von Eignunskriterien als AST-Struktur im JSON-Format
+# Modell Inferenz
 
 
+## Indirekte Strukturierung von Eignungskriterien
+### Einfügen von logischen Operatoren in Eignungskriterientexte 
 
-- Die Open-Source Modelle llama3, qwen2 können über die gleichnamige Python-Datei über das Bash-Skript `lct_p4.sh` aufgerufen werden.
+
+
+- Die Open-Source Modelle llama3, qwen2, gemma2 können über die gleichnamige Python-Datei über das Bash-Skript `lct_p4.sh` aufgerufen werden.
   - Dabei muss das Huggingface-Token spezifiziert werden.
   - Die Input-Pfade müssen für eine Nutzung angepasst werden.
   

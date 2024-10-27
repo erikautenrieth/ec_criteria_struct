@@ -25,15 +25,12 @@ def naive_greedy_match(criteria_text):
         'AND': [r'\b(?:with|who|in addition|plus|and|but|that|despite|having)\b'],
         'NOT': [r'\b(?:no|not|none|don\'t|free|prevent|Inability|lack|impossible|off|without|unable|naive|excluded|absence)\b']
     }
-
     for op, pattern_list in patterns.items():
         for pattern in pattern_list:
             criteria_text = re.sub(pattern, f'[{op}] \g<0>', criteria_text)
-
     # Apply OR pattern after comma and slash
     criteria_text = re.sub(r',\s(?!or\b)', r', [OR] ', criteria_text)
     criteria_text = re.sub(r'\/', r'/ [OR] ', criteria_text)
-
     # Clean up wrong OR occurrences
     criteria_text = re.sub(r'\s*(\[OR\]\s*)+', ' [OR] ', criteria_text)
     criteria_text = re.sub(r'\[OR\]\s*\[AND\]', '[AND]', criteria_text)
@@ -49,16 +46,9 @@ def parser():
         output = naive_greedy_match(test_file)
         print(output)
         save_txt(output, f"{output_path}{file_name}.txt")
-
     end_time = time.time()
     elapsed_time = end_time - start_time
     print(f"Total time for all calls: {elapsed_time:.2f} seconds")
-
-
-
-
-
-
 
 
 
@@ -66,28 +56,22 @@ def measure_average_runtime(num_runs=1000):
     import time
     import statistics
     total_times = []
-    
     for _ in range(num_runs):
         start_time = time.time()
-        
         for file in study_files:
             file_name = file.split(".")[0]
             test_file = read_text_file(study_path + file)
             output = naive_greedy_match(test_file)
             save_txt(output, f"{output_path}{file_name}.txt")
-        
         end_time = time.time()
         elapsed_time = end_time - start_time
         total_times.append(elapsed_time)
-    
     average_time = statistics.mean(total_times)
     median_time = statistics.median(total_times)
     std_dev = statistics.stdev(total_times)
-    
     print(f"Number of runs: {num_runs}")
     print(f"Average time per run: {average_time:.4f} seconds")
     print(f"Median time per run: {median_time:.4f} seconds")
     print(f"Standard deviation: {std_dev:.4f} seconds")
     print(f"Total time for all runs: {sum(total_times):.2f} seconds")
 
-measure_average_runtime(1000)
