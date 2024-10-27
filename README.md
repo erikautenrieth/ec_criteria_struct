@@ -14,11 +14,9 @@ Die Struktur der chia-Ordner ist analog zu den lct-Ordnern.
 
 
 
-
-
 1. chia  (nur für die indirekte Strukturierung)
    - evaluate: Modellausgaben und Evaluierungsfunktionen
-   - input: Chia-Testdaten 
+   - input: Chia-Testdaten, Prompts 
    - models: LCT-Modelle 
    - transform_chia: Preprocessing der Chia-Daten
 
@@ -37,3 +35,6 @@ Die Struktur der chia-Ordner ist analog zu den lct-Ordnern.
     - JSON_Parser: Fügt die AST-Strukturen von Ein- und Ausschlusskriterien als ein Baum über ein AND-Knoten zusammen. 
 
 
+4. zusatz
+   - auswertungen: Ergänzende Evaluationen der Modelle in Latex-Tabellen.
+   - korpora: alle öffentlich verfügbaren Korporas mit Eignungskriterien. 
