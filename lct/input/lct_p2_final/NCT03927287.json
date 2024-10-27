@@ -1,0 +1,120 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "For the two retrospective cohorts:"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "1. All patients that older than 18 treated for localized adenocarcinoma of the prostate between 2000 and 2017 with either radical prostatectomy"
+                        },
+                        "right": {
+                          "raw_text": "or radiotherapy"
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "2. All treated patients had a rising post-treatment PSA,"
+                    },
+                    "right": {
+                      "raw_text": "with at least one post-treatment free PSA blood test."
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "For the biobank validation cohort:"
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "1. All patients treated"
+            },
+            "right": {
+              "raw_text": "with radical prostatectomy for localized prostate cancer between 2000 and 2017 who had biobank samples taken when developing biochemical recurrence."
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "1. Patients that were younger than 18,"
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "2. Patients with prostate cancer other than adenocarcinoma, such as small cell"
+                        },
+                        "right": {
+                          "raw_text": "and neuroendocrine cancer"
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "3. Patients with prostate adenocarcinoma"
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "that did"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "not develop biochemical recurrence."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "4. In the retrospective cohorts - patients that did"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not have at least one post-treatment free PSA blood test."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

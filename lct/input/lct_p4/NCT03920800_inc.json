@@ -1,0 +1,78 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients followed within the CHU Brugmann Hospital (",
+          "Encounter": [
+            "followed"
+          ],
+          "Location": [
+            "CHU Brugmann Hospital"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "no private practices).",
+              "Location": [
+                "private practices"
+              ],
+              "Negation": [
+                "no"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- HSIL lesions confirmed by anatomopathologic analysis on cervical biopsies",
+          "Condition": [
+            "HSIL lesions"
+          ],
+          "Condition-Name": [
+            "HSIL lesions"
+          ],
+          "Procedure": [
+            "cervical biopsies"
+          ],
+          "Procedure-Name": [
+            "cervical biopsies"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "or cone specimen",
+              "Observation": [
+                "cone specimen"
+              ],
+              "Specimen": [
+                "cone specimen"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "without evidence of invasive lesions",
+                  "Condition": [
+                    "invasive lesions"
+                  ],
+                  "Condition-Name": [
+                    "invasive lesions"
+                  ],
+                  "Negation": [
+                    "without"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

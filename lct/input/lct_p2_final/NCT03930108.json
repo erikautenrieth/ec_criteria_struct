@@ -1,0 +1,35 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- adult patients (age 18 and above)"
+        },
+        "right": {
+          "raw_text": "who admitted to burn unit during sampling period"
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- patients discharged"
+                },
+                "right": {
+                  "raw_text": "or deceased less than 24 hours of admission"
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- patients referred to other hospital within 30 days admission"
+            }
+          }
+        }
+      }
+    }
+  }
+}

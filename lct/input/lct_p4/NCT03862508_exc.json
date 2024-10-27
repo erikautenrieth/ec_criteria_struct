@@ -1,0 +1,58 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Present medical diagnosis of musculoskeletal pathology",
+          "Modifier": [
+            "musculoskeletal"
+          ],
+          "Condition": [
+            "pathology"
+          ],
+          "Condition-Name": [
+            "pathology"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Who have"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not had musculoskeletal injuries in the last month",
+                  "Modifier": [
+                    "musculoskeletal"
+                  ],
+                  "Negation": [
+                    "not"
+                  ],
+                  "Condition": [
+                    "injuries"
+                  ],
+                  "Eq-Comparison": [
+                    "last month"
+                  ],
+                  "Condition-Name": [
+                    "injuries"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "last"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "month"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Not signed the informed consent document."
+    }
+  }
+}

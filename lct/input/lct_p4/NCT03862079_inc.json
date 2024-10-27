@@ -1,0 +1,215 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients who are day -10 pre- to day +30 post-allogeneic hematopoietic cell transplant (AHCT) from any donor",
+                      "Eq-Comparison": [
+                        "day -10 pre- to day +30"
+                      ],
+                      "Procedure": [
+                        "allogeneic hematopoietic cell transplant",
+                        "AHCT"
+                      ],
+                      "Modifier": [
+                        "donor"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "day"
+                      ],
+                      "Eq-Value": [
+                        "30",
+                        "-10"
+                      ],
+                      "Procedure-Name": [
+                        "allogeneic hematopoietic cell transplant",
+                        "AHCT"
+                      ],
+                      "Eq-Operator": [
+                        "to"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or graft source",
+                          "Modifier": [
+                            "graft source"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "and for any conditioning regimen",
+                          "Procedure": [
+                            "conditioning regimen"
+                          ],
+                          "Condition": [
+                            "condition"
+                          ],
+                          "Procedure-Name": [
+                            "conditioning regimen"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients who have received treatment with meropenem",
+                      "Eq-Comparison": [
+                        "received"
+                      ],
+                      "Procedure": [
+                        "treatment"
+                      ],
+                      "Drug": [
+                        "meropenem"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "received"
+                      ],
+                      "Drug-Name": [
+                        "meropenem"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or piperacillin-tazobactam (pip-tazo) intravenously (IV) (of at least 24 hours duration) in past 7 days",
+                      "Drug": [
+                        "piperacillin-tazobactam",
+                        "pip-tazo"
+                      ],
+                      "Modifier": [
+                        "IV",
+                        "intravenously"
+                      ],
+                      "Eq-Comparison": [
+                        "at least 24 hours duration",
+                        "past 7 days"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "day",
+                        "hours",
+                        "days"
+                      ],
+                      "Drug-Name": [
+                        "piperacillin-tazobactam",
+                        "pip-tazo"
+                      ],
+                      "Eq-Operator": [
+                        "at least"
+                      ],
+                      "Eq-Value": [
+                        "24",
+                        "7",
+                        "2"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "past"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Controlled infection defined as hemodynamically stable",
+                  "Modifier": [
+                    "Controlled"
+                  ],
+                  "Condition": [
+                    "infection",
+                    "hemodynamically"
+                  ],
+                  "Condition-Name": [
+                    "infection",
+                    "hemodynamically"
+                  ],
+                  "Stability": [
+                    "stable"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "and"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "not requiring supplemental oxygen of more than 2 liters via nasal cannula",
+                          "Negation": [
+                            "not"
+                          ],
+                          "Assertion": [
+                            "requiring"
+                          ],
+                          "Eq-Comparison": [
+                            "more than 2 liters via"
+                          ],
+                          "Eq-Operator": [
+                            "more than"
+                          ],
+                          "Eq-Value": [
+                            "2"
+                          ],
+                          "Eq-Unit": [
+                            "liters"
+                          ],
+                          "Observation-Name": [
+                            "supplemental oxygen"
+                          ],
+                          "Modifier": [
+                            "nasal cannula"
+                          ],
+                          "Observation": [
+                            "supplemental oxygen"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patients who are able to take oral medications in suspension form",
+          "Assertion": [
+            "able to"
+          ],
+          "Drug": [
+            "oral medications"
+          ],
+          "Drug-Name": [
+            "oral medications"
+          ],
+          "Eq-Operator": [
+            "to"
+          ],
+          "Modifier": [
+            "suspension form"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Patients who are able to provide informed consent (IC) and comply with all study visits and procedures",
+      "Assertion": [
+        "able to"
+      ],
+      "Eq-Operator": [
+        "to"
+      ]
+    }
+  }
+}

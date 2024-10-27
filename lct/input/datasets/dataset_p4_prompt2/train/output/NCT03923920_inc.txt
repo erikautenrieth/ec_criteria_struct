@@ -1,0 +1,82 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Age ≥50 years",
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Age": [
+            "Age"
+          ],
+          "Eq-Value": [
+            "50"
+          ],
+          "Eq-Comparison": [
+            "≥50 years"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Undergoing surgical intervention for",
+              "Procedure": [
+                "surgical intervention"
+              ],
+              "Procedure-Name": [
+                "surgical intervention"
+              ],
+              "Eq-Comparison": [
+                "Undergoing"
+              ],
+              "Eq-Temporal-Period": [
+                "Undergoing"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "non-congenital spinal stenosis",
+                      "Condition": [
+                        "spinal stenosis",
+                        "congenital spinal stenosis"
+                      ],
+                      "Condition-Name": [
+                        "spinal stenosis",
+                        "congenital spinal stenosis"
+                      ],
+                      "Modifier": [
+                        "congenital"
+                      ],
+                      "Negation": [
+                        "non"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and/or spondyloarthropathy",
+                      "Condition": [
+                        "spondyloarthropathy"
+                      ],
+                      "Condition-Name": [
+                        "spondyloarthropathy"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Able to consent"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. OHCA: Every patient who suffered a cardiac arrest that occurred in any location other than a hospital,"
+                },
+                "right": {
+                  "raw_text": "and was attended and/or treated by an EMS."
+                }
+              }
+            },
+            "right": {
+              "raw_text": "2. IHCA: Every patient who suffered a cardiac arrest in hospital."
+            }
+          }
+        },
+        "right": {
+          "raw_text": "3. the representative population-based survey: Every patient who suffered a cardiac arrest in the selected cities or suburbs."
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. OHCA: 1)The"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "out-of-hospital cardiac arrest patients who were taken to the hospital by their family members; 2) Bystanders suspected cardiac arrest, but the ROSC was achieved"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "without defibrillation"
+                                },
+                                "right": {
+                                  "raw_text": "or resuscitation by EMS."
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "2. IHCA: The patient who suffered a cardiac arrest that occurred"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "out-of-hospital and then transferred to the hospital."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

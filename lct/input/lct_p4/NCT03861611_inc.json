@@ -1,0 +1,238 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "- Men",
+                                  "Life-Stage-And-Gender": [
+                                    "Men"
+                                  ],
+                                  "Eq-Operator": [
+                                    "-"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or women age 18-64.",
+                                  "Age": [
+                                    "age"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "18-64"
+                                  ],
+                                  "Life-Stage-And-Gender": [
+                                    "women"
+                                  ],
+                                  "Eq-Value": [
+                                    "18",
+                                    "64"
+                                  ],
+                                  "Eq-Operator": [
+                                    "-"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "- Present to ED primary for management of Low Back Pain (LBP)",
+                              "Age": [
+                                "age"
+                              ],
+                              "Condition": [
+                                "Low Back Pain",
+                                "LBP"
+                              ],
+                              "Observation": [
+                                "Pain"
+                              ],
+                              "Eq-Operator": [
+                                "-"
+                              ],
+                              "Condition-Name": [
+                                "Low Back Pain",
+                                "LBP"
+                              ],
+                              "Observation-Name": [
+                                "Pain"
+                              ],
+                              "Encounter": [
+                                "ED"
+                              ],
+                              "Condition-Type": [
+                                "Present"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Functionally impairing back pain: A baseline score of greater than 5 on the Roland-Morris Disability Questionnaire",
+                          "Condition": [
+                            "back pain"
+                          ],
+                          "Eq-Comparison": [
+                            "greater than 5"
+                          ],
+                          "Observation": [
+                            "Roland-Morris Disability Questionnaire",
+                            "pain"
+                          ],
+                          "Eq-Operator": [
+                            "-",
+                            "greater than"
+                          ],
+                          "Condition-Name": [
+                            "back pain"
+                          ],
+                          "Eq-Value": [
+                            "5"
+                          ],
+                          "Observation-Name": [
+                            "pain",
+                            "Roland-Morris Disability Questionnaire"
+                          ],
+                          "Modifier": [
+                            "Functionally impairing"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Musculoskeletal etiology of low back.",
+                      "Condition": [
+                        "Musculoskeletal etiology"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Condition-Name": [
+                        "Musculoskeletal etiology"
+                      ],
+                      "Modifier": [
+                        "low back"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "-",
+                      "Eq-Operator": [
+                        "-"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Non-radicular pain.",
+                          "Modifier": [
+                            "radicular"
+                          ],
+                          "Observation": [
+                            "pain"
+                          ],
+                          "Eq-Operator": [
+                            "-"
+                          ],
+                          "Observation-Name": [
+                            "pain"
+                          ],
+                          "Negation": [
+                            "Non"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Pain duration <2 weeks (336 hours).",
+              "Observation": [
+                "Pain"
+              ],
+              "Eq-Comparison": [
+                "<2 weeks",
+                "336 hours"
+              ],
+              "Eq-Operator": [
+                "-",
+                "<"
+              ],
+              "Observation-Name": [
+                "Pain"
+              ],
+              "Eq-Value": [
+                "2",
+                "336"
+              ],
+              "Eq-Temporal-Unit": [
+                "weeks",
+                "hours"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "-",
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Non-traumatic LBP",
+                  "Condition": [
+                    "LBP"
+                  ],
+                  "Modifier": [
+                    "traumatic"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Condition-Name": [
+                    "LBP"
+                  ],
+                  "Negation": [
+                    "Non"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Participant is to be discharged home.",
+      "Encounter": [
+        "discharged"
+      ],
+      "Eq-Operator": [
+        "-"
+      ],
+      "Location": [
+        "home"
+      ],
+      "Assertion": [
+        "to be"
+      ]
+    }
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "AND": {
+                                    "left": {
+                                      "AND": {
+                                        "left": {
+                                          "AND": {
+                                            "left": {
+                                              "raw_text": "Category 1: Patients who live at home and meet the following criteria:",
+                                              "Location": [
+                                                "home"
+                                              ],
+                                              "Criteria-Count": [
+                                                "the following criteria"
+                                              ]
+                                            },
+                                            "right": {
+                                              "OR": {
+                                                "left": {
+                                                  "raw_text": "- CDC-defined CRE isolated during hospitalization",
+                                                  "Organism": [
+                                                    "CRE isolated"
+                                                  ],
+                                                  "Organism-Name": [
+                                                    "CRE isolated"
+                                                  ],
+                                                  "Encounter": [
+                                                    "hospitalization"
+                                                  ]
+                                                },
+                                                "right": {
+                                                  "raw_text": "or outpatient visit",
+                                                  "Encounter": [
+                                                    "outpatient visit"
+                                                  ]
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "right": {
+                                          "raw_text": "- Home origin"
+                                        }
+                                      }
+                                    },
+                                    "right": {
+                                      "raw_text": "- First positive CRE culture within 48 hours of admission (in case of hospitalization)",
+                                      "Eq-Operator": [
+                                        "within"
+                                      ],
+                                      "Eq-Value": [
+                                        "48"
+                                      ],
+                                      "Eq-Comparison": [
+                                        "within 48 hours",
+                                        "First"
+                                      ],
+                                      "Encounter": [
+                                        "hospitalization",
+                                        "admission"
+                                      ],
+                                      "Organism": [
+                                        "CRE culture"
+                                      ],
+                                      "Organism-Name": [
+                                        "CRE culture"
+                                      ],
+                                      "Polarity": [
+                                        "positive"
+                                      ],
+                                      "Eq-Temporal-Recency": [
+                                        "First"
+                                      ],
+                                      "Eq-Temporal-Unit": [
+                                        "hours"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "right": {
+                                  "AND": {
+                                    "left": {
+                                      "raw_text": "Category 2: Hospitalized patients",
+                                      "Encounter": [
+                                        "Hospitalized"
+                                      ]
+                                    },
+                                    "right": {
+                                      "AND": {
+                                        "left": {
+                                          "raw_text": "with CDC-defined CRE isolated during hospitalization",
+                                          "Organism": [
+                                            "CRE isolated"
+                                          ],
+                                          "Organism-Name": [
+                                            "CRE isolated"
+                                          ],
+                                          "Encounter": [
+                                            "hospitalization"
+                                          ]
+                                        },
+                                        "right": {
+                                          "AND": {
+                                            "left": {
+                                              "raw_text": "who are"
+                                            },
+                                            "right": {
+                                              "NOT": {
+                                                "left": {
+                                                  "raw_text": "not discharged home and who meet any of the following criteria:",
+                                                  "Encounter": [
+                                                    "discharged"
+                                                  ],
+                                                  "Negation": [
+                                                    "not"
+                                                  ],
+                                                  "Location": [
+                                                    "home"
+                                                  ],
+                                                  "Criteria-Count": [
+                                                    "the following criteria"
+                                                  ]
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "- Admitted from other care facility (not home origin)",
+                              "Negation": [
+                                "not"
+                              ],
+                              "Location": [
+                                "home",
+                                "facility"
+                              ],
+                              "Encounter": [
+                                "Admitted"
+                              ],
+                              "Other": [
+                                "other"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Do"
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "not have first positive CRE culture within 48 hours of admission",
+                                  "Eq-Operator": [
+                                    "within"
+                                  ],
+                                  "Eq-Value": [
+                                    "48"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "within 48 hours",
+                                    "first"
+                                  ],
+                                  "Organism": [
+                                    "CRE culture"
+                                  ],
+                                  "Organism-Name": [
+                                    "CRE culture"
+                                  ],
+                                  "Polarity": [
+                                    "positive"
+                                  ],
+                                  "Encounter": [
+                                    "admission"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "hours"
+                                  ],
+                                  "Negation": [
+                                    "not"
+                                  ],
+                                  "Eq-Temporal-Recency": [
+                                    "first"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Category 3: Patients with CDC-defined CRE isolated during hospitalization or outpatient visit",
+                          "Organism": [
+                            "CRE isolated"
+                          ],
+                          "Organism-Name": [
+                            "CRE isolated"
+                          ],
+                          "Encounter": [
+                            "hospitalization",
+                            "outpatient visit"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "who are discharged home and who meet any of the following criteria:",
+                          "Encounter": [
+                            "discharged"
+                          ],
+                          "Location": [
+                            "home"
+                          ],
+                          "Criteria-Count": [
+                            "the following criteria"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Admitted from other care facility (not home origin)",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Location": [
+                    "home",
+                    "facility"
+                  ],
+                  "Encounter": [
+                    "Admitted"
+                  ],
+                  "Other": [
+                    "other"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Do"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not have first positive CRE culture within 48 hours of admission (in case of hospitalization)",
+                      "Eq-Operator": [
+                        "within"
+                      ],
+                      "Eq-Value": [
+                        "48"
+                      ],
+                      "Eq-Comparison": [
+                        "within 48 hours",
+                        "first"
+                      ],
+                      "Encounter": [
+                        "hospitalization",
+                        "admission"
+                      ],
+                      "Organism": [
+                        "CRE culture"
+                      ],
+                      "Organism-Name": [
+                        "CRE culture"
+                      ],
+                      "Polarity": [
+                        "positive"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "hours"
+                      ],
+                      "Negation": [
+                        "not"
+                      ],
+                      "Eq-Temporal-Recency": [
+                        "first"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Category 4: Participants who meet the following criteria:",
+          "Criteria-Count": [
+            "the following criteria"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "• Community contact of a participant in Category 1 and/or 3."
+    }
+  }
+}

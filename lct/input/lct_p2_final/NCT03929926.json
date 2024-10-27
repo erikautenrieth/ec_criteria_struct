@@ -1,0 +1,35 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Had a recent office visit with a primary care physician in one of the study practices."
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- History of smoking (current"
+            },
+            "right": {
+              "raw_text": "or former) in the electronic health record (EHR)."
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- LDCT performed in the 12 months prior to study initiation according to EHR."
+            },
+            "right": {
+              "raw_text": "- Diagnosis of lung cancer indicated in problem list in the EHR."
+            }
+          }
+        }
+      }
+    }
+  }
+}

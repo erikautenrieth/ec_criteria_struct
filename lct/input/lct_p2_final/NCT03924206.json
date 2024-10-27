@@ -1,0 +1,35 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- All surgical procedures with a planned duration of more than 1 hour"
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients with a contraindication for electrocautery use"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients with Pacemaker"
+                    },
+                    "right": {
+                      "raw_text": "or implantable cardioverter-defibrillator (ICD)"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patients with an implanted neurostimulator device"
+            }
+          }
+        }
+      }
+    }
+  }
+}

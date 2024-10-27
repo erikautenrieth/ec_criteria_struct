@@ -1,0 +1,164 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Informed Consent as documented by signature"
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Diagnosis of non-invasive (stage 0)",
+                      "Eq-Value": [
+                        "0"
+                      ],
+                      "Eq-Unit": [
+                        "stage"
+                      ],
+                      "Modifier": [
+                        "invasive",
+                        "non-invasive"
+                      ],
+                      "Eq-Comparison": [
+                        "stage 0"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or invasive (stage 1, 2 and 3A) breast adenocarcinoma",
+                      "Eq-Value": [
+                        "1",
+                        "2",
+                        "3A"
+                      ],
+                      "Condition": [
+                        "breast adenocarcinoma"
+                      ],
+                      "Condition-Name": [
+                        "breast adenocarcinoma"
+                      ],
+                      "Eq-Comparison": [
+                        "stage 1, 2 and 3A"
+                      ],
+                      "Eq-Unit": [
+                        "stage"
+                      ],
+                      "Modifier": [
+                        "invasive"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Treatment with primary breast-sparing surgery (lumpectomy)",
+                  "Procedure": [
+                    "breast-sparing surgery",
+                    "lumpectomy",
+                    "Treatment"
+                  ],
+                  "Procedure-Name": [
+                    "breast-sparing surgery",
+                    "lumpectomy"
+                  ],
+                  "Modifier": [
+                    "primary"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "and/or neoadjuvant (preoperative) or adjuvant (postoperative) chemotherapy",
+                      "Procedure": [
+                        "chemotherapy",
+                        "operative"
+                      ],
+                      "Procedure-Name": [
+                        "chemotherapy"
+                      ],
+                      "Modifier": [
+                        "preoperative",
+                        "neoadjuvant",
+                        "adjuvant",
+                        "postoperative"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or hormonal therapy",
+                      "Procedure": [
+                        "hormonal therapy"
+                      ],
+                      "Procedure-Name": [
+                        "hormonal therapy"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Scheduled for postoperative radiotherapy at Ziekenhuis Oost-Limburg, Genk:",
+          "Procedure": [
+            "radiotherapy",
+            "operative"
+          ],
+          "Procedure-Name": [
+            "radiotherapy"
+          ],
+          "Modifier": [
+            "postoperative"
+          ],
+          "Eq-Comparison": [
+            "Scheduled"
+          ],
+          "Eq-Temporal-Period": [
+            "Scheduled"
+          ],
+          "Location": [
+            "Ziekenhuis Oost-Limburg, Genk"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Hypofractionated radiotherapy regimen (i.e. 16 daily fractions of 2.66 Gray to the whole breast followed by a boost of 5 fractions of 2.66 Gray to the tumor bed, 5x/week)",
+      "Procedure": [
+        "Hypofractionated radiotherapy",
+        "radiotherapy",
+        "2.66 Gray"
+      ],
+      "Procedure-Name": [
+        "Hypofractionated radiotherapy",
+        "radiotherapy",
+        "2.66 Gray"
+      ],
+      "Eq-Value": [
+        "1",
+        "2",
+        "16",
+        "5"
+      ],
+      "Eq-Comparison": [
+        "16 daily",
+        "5",
+        "5x/week"
+      ],
+      "Eq-Temporal-Unit": [
+        "daily",
+        "week"
+      ],
+      "Modifier": [
+        "whole breast",
+        "tumor bed"
+      ]
+    }
+  }
+}

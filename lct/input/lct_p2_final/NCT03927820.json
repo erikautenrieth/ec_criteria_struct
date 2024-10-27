@@ -1,0 +1,74 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Adult patient admitted to Vanderbilt University Medical Center (VUMC) (excluding surgery services)"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- on a long acting inhaler"
+            },
+            "right": {
+              "raw_text": "or prescribed a long acting inhaler during admission."
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Diagnosis of cystic fibrosis"
+                        },
+                        "right": {
+                          "raw_text": "- Diagnosis of graft versus host disease (GVHD)"
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "-"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "no medication insurance"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- discharge to any post-acute care facility"
+                    },
+                    "right": {
+                      "raw_text": "or inpatient hospice"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- death during hospitalization"
+            }
+          }
+        }
+      }
+    }
+  }
+}

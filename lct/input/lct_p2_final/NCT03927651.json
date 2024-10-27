@@ -1,0 +1,49 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients attending a preoperative visit at the Center for Comprehensive Gynecology"
+        },
+        "right": {
+          "raw_text": "who will undergo surgery."
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Not able to comprehend and sign a written consent"
+                },
+                "right": {
+                  "raw_text": "- Patients with a history of allergy to iodides"
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Patients history of renal failure"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or uremia,"
+                    },
+                    "right": {
+                      "raw_text": "and those on dialysis"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Present a medical diagnosis of musculoskeletal injury at the time of beginning the study",
+                  "Observation": [
+                    "injury"
+                  ],
+                  "Observation-Name": [
+                    "injury"
+                  ],
+                  "Modifier": [
+                    "musculoskeletal"
+                  ],
+                  "Study": [
+                    "study"
+                  ],
+                  "Eq-Comparison": [
+                    "beginning"
+                  ],
+                  "Eq-Temporal-Recency": [
+                    "beginning"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Receive a physiotherapy treatment",
+                      "Procedure": [
+                        "physiotherapy treatment"
+                      ],
+                      "Procedure-Name": [
+                        "physiotherapy treatment"
+                      ],
+                      "Eq-Comparison": [
+                        "Receive"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "Receive"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "unrelated to the study",
+                          "Eq-Operator": [
+                            "to"
+                          ],
+                          "Study": [
+                            "study"
+                          ],
+                          "Negation": [
+                            "unrelated"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Have suffered neurological pathology in the last 6 months",
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Value": [
+                "6"
+              ],
+              "Condition": [
+                "neurological pathology"
+              ],
+              "Eq-Comparison": [
+                "suffered",
+                "last 6 months"
+              ],
+              "Eq-Temporal-Period": [
+                "suffered",
+                "last"
+              ],
+              "Condition-Name": [
+                "neurological pathology"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Have some type of auditory",
+              "Eq-Operator": [
+                "to"
+              ],
+              "Modifier": [
+                "auditory"
+              ]
+            },
+            "right": {
+              "raw_text": "or vestibular disorder",
+              "Condition": [
+                "disorder"
+              ],
+              "Condition-Name": [
+                "disorder"
+              ],
+              "Modifier": [
+                "vestibular"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Not signed the informed consent."
+    }
+  }
+}

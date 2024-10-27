@@ -1,0 +1,235 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- modified Rankin scale > 4 at the time of enrollment (severe disability)",
+                          "Eq-Operator": [
+                            ">"
+                          ],
+                          "Eq-Value": [
+                            "4"
+                          ],
+                          "Eq-Comparison": [
+                            "> 4"
+                          ],
+                          "Observation": [
+                            "modified Rankin scale"
+                          ],
+                          "Observation-Name": [
+                            "modified Rankin scale"
+                          ],
+                          "Study": [
+                            "enrollment"
+                          ],
+                          "Condition": [
+                            "disability"
+                          ],
+                          "Condition-Name": [
+                            "disability"
+                          ],
+                          "Severity": [
+                            "severe"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- life expectancy < 1 year",
+                              "Eq-Operator": [
+                                "<"
+                              ],
+                              "Eq-Value": [
+                                "1"
+                              ],
+                              "Eq-Comparison": [
+                                "< 1 year"
+                              ],
+                              "Observation": [
+                                "life expectancy"
+                              ],
+                              "Observation-Name": [
+                                "life expectancy"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "year"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or terminal illness,",
+                              "Condition": [
+                                "terminal illness"
+                              ],
+                              "Condition-Name": [
+                                "terminal illness"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- eGFR < 30 at time of discharge",
+                      "Eq-Operator": [
+                        "<"
+                      ],
+                      "Eq-Value": [
+                        "30"
+                      ],
+                      "Eq-Comparison": [
+                        "< 30"
+                      ],
+                      "Encounter": [
+                        "discharge"
+                      ],
+                      "Observation": [
+                        "eGFR"
+                      ],
+                      "Observation-Name": [
+                        "eGFR"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- pregnancy",
+                  "Condition": [
+                    "pregnancy"
+                  ],
+                  "Condition-Name": [
+                    "pregnancy"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- symptomatic flow limiting carotid stenosis",
+                  "Condition": [
+                    "carotid stenosis",
+                    "symptomatic flow"
+                  ],
+                  "Condition-Name": [
+                    "carotid stenosis",
+                    "symptomatic flow"
+                  ],
+                  "Stability": [
+                    "limiting"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "without plan for intervention",
+                      "Procedure": [
+                        "intervention"
+                      ],
+                      "Procedure-Name": [
+                        "intervention"
+                      ],
+                      "Negation": [
+                        "without"
+                      ],
+                      "Assertion": [
+                        "plan"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- urine toxicology positive for cocaine",
+              "Observation": [
+                "urine toxicology"
+              ],
+              "Observation-Name": [
+                "toxicology"
+              ],
+              "Specimen": [
+                "urine"
+              ],
+              "Polarity": [
+                "positive"
+              ],
+              "Drug": [
+                "cocaine"
+              ],
+              "Drug-Name": [
+                "cocaine"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "or methamphetamine",
+                  "Drug": [
+                    "methamphetamine"
+                  ],
+                  "Drug-Name": [
+                    "methamphetamine"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or recent use",
+                  "Eq-Comparison": [
+                    "recent"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "recent"
+                  ],
+                  "Coreference": [
+                    "use"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- long-term BP goal ≥ 130/80 mmHg according to clinical team",
+      "Eq-Operator": [
+        "≥"
+      ],
+      "Eq-Unit": [
+        "mmHg"
+      ],
+      "Eq-Value": [
+        "1",
+        "30",
+        "130",
+        "80"
+      ],
+      "Eq-Comparison": [
+        "≥ 130/80 mmHg"
+      ],
+      "Observation": [
+        "BP"
+      ],
+      "Observation-Name": [
+        "BP"
+      ],
+      "Assertion": [
+        "goal"
+      ],
+      "Acuteness": [
+        "long-term"
+      ]
+    }
+  }
+}

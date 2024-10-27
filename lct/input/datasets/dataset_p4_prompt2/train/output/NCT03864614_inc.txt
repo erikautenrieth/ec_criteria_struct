@@ -1,0 +1,106 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. Subject has a diagnosis of MDD as diagnosed by SCID-5-CT,",
+          "Condition": [
+            "MDD"
+          ],
+          "Negation": [
+            "no"
+          ],
+          "Condition-Name": [
+            "MDD"
+          ]
+        },
+        "right": {
+          "raw_text": "with symptoms that have been present for at least a 4-week period.",
+          "Coreference": [
+            "symptoms"
+          ],
+          "Eq-Comparison": [
+            "at least a 4-week"
+          ],
+          "Eq-Operator": [
+            "at least"
+          ],
+          "Eq-Value": [
+            "4"
+          ],
+          "Eq-Temporal-Unit": [
+            "week"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "2. Subject is in good physical health",
+          "Condition": [
+            "good physical health"
+          ],
+          "Condition-Name": [
+            "good physical health"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "and has"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "no clinically significant findings, as determined by the Investigator, on physical examination,",
+                      "Negation": [
+                        "no"
+                      ],
+                      "Condition": [
+                        "findings"
+                      ],
+                      "Procedure": [
+                        "physical examination"
+                      ],
+                      "Severity": [
+                        "significant"
+                      ],
+                      "Procedure-Name": [
+                        "physical examination"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "12-lead ECG,",
+                          "Procedure": [
+                            "12-lead ECG"
+                          ],
+                          "Procedure-Name": [
+                            "12-lead ECG"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or clinical laboratory tests.",
+                          "Observation": [
+                            "laboratory tests"
+                          ],
+                          "Observation-Name": [
+                            "laboratory tests"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

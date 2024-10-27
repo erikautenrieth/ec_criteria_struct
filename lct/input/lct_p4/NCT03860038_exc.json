@@ -1,0 +1,192 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. Subject has received anti-CD38 monoclonal antibody treatment previously;",
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Drug": [
+                    "anti-CD38 monoclonal antibody"
+                  ],
+                  "Drug-Name": [
+                    "anti-CD38 monoclonal antibody"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Eq-Comparison": [
+                    "previously"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "previously"
+                  ]
+                },
+                "right": {
+                  "raw_text": "2. Subject has received CAR-T cell therapy previously;",
+                  "Procedure": [
+                    "CAR-T cell therapy",
+                    "therapy"
+                  ],
+                  "Procedure-Name": [
+                    "CAR-T cell therapy",
+                    "therapy"
+                  ],
+                  "Eq-Value": [
+                    "2"
+                  ],
+                  "Eq-Comparison": [
+                    "previously"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "previously"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "3. Subject has previously received allogenic stem cell transplant,",
+                  "Procedure": [
+                    "stem cell transplant"
+                  ],
+                  "Procedure-Name": [
+                    "stem cell transplant"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Modifier": [
+                    "allogenic"
+                  ],
+                  "Eq-Comparison": [
+                    "previously"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "previously"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or subject has received autologous stem cell transplant within 3 months before administration of the study agent;",
+                  "Procedure": [
+                    "stem cell transplant"
+                  ],
+                  "Procedure-Name": [
+                    "stem cell transplant"
+                  ],
+                  "Eq-Operator": [
+                    "within"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Eq-Comparison": [
+                    "within 3 months"
+                  ],
+                  "Modifier": [
+                    "autologous"
+                  ],
+                  "Study": [
+                    "study"
+                  ],
+                  "Drug": [
+                    "agent"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "4. Primary refractory multiple myeloma (subject failed to generate any minimal response or any degree of response to any therapy);",
+          "Procedure": [
+            "therapy"
+          ],
+          "Procedure-Name": [
+            "therapy"
+          ],
+          "Eq-Value": [
+            "4"
+          ],
+          "Condition": [
+            "multiple myeloma"
+          ],
+          "Condition-Name": [
+            "multiple myeloma"
+          ],
+          "Modifier": [
+            "Primary refractory"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "5. Subject has received anti-myeloma treatment (radiotherapy is excluded) within 4 weeks",
+          "Procedure": [
+            "radiotherapy",
+            "therapy",
+            "anti-myeloma treatment",
+            "treatment"
+          ],
+          "Procedure-Name": [
+            "radiotherapy",
+            "therapy",
+            "anti-myeloma treatment"
+          ],
+          "Eq-Operator": [
+            "within"
+          ],
+          "Eq-Temporal-Unit": [
+            "weeks"
+          ],
+          "Eq-Value": [
+            "4",
+            "5"
+          ],
+          "Eq-Comparison": [
+            "within 4 weeks"
+          ],
+          "Exception": [
+            "excluded"
+          ]
+        },
+        "right": {
+          "raw_text": "or 5 PK half-lives of the treatment, whichever longer, before the first study agent administration.",
+          "Eq-Value": [
+            "5"
+          ],
+          "Study": [
+            "study"
+          ],
+          "Eq-Unit": [
+            "PK half-lives"
+          ],
+          "Procedure": [
+            "treatment"
+          ],
+          "Drug": [
+            "agent"
+          ],
+          "Eq-Comparison": [
+            "5 PK half-lives",
+            "first"
+          ],
+          "Eq-Temporal-Recency": [
+            "first"
+          ]
+        }
+      }
+    }
+  }
+}

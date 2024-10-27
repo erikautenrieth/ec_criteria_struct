@@ -1,0 +1,202 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Clinically gross recurrent tumor",
+                          "Eq-Operator": [
+                            "-"
+                          ],
+                          "Eq-Unit": [
+                            "g"
+                          ],
+                          "Condition": [
+                            "tumor"
+                          ],
+                          "Condition-Name": [
+                            "tumor"
+                          ],
+                          "Modifier": [
+                            "gross recurrent"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "- Presence of distant metastasis",
+                          "Eq-Operator": [
+                            "-"
+                          ],
+                          "Condition": [
+                            "metastasis"
+                          ],
+                          "Condition-Name": [
+                            "metastasis"
+                          ],
+                          "Eq-Comparison": [
+                            "Presence"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "Presence"
+                          ],
+                          "Modifier": [
+                            "distant"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "raw_text": "- Presence of pelvic LN metastasis",
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Condition": [
+                        "metastasis"
+                      ],
+                      "Condition-Name": [
+                        "metastasis"
+                      ],
+                      "Eq-Comparison": [
+                        "Presence"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "Presence"
+                      ],
+                      "Modifier": [
+                        "pelvic LN",
+                        "pelvic"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- History of pelvic irradiation",
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Procedure": [
+                    "irradiation"
+                  ],
+                  "Procedure-Name": [
+                    "irradiation"
+                  ],
+                  "Eq-Comparison": [
+                    "History"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "History"
+                  ],
+                  "Modifier": [
+                    "pelvic"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- History of cryotherapy",
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Procedure": [
+                    "cryotherapy"
+                  ],
+                  "Procedure-Name": [
+                    "cryotherapy"
+                  ],
+                  "Eq-Comparison": [
+                    "History"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "History"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or brachytherapy for prostate cancer",
+                  "Condition": [
+                    "cancer"
+                  ],
+                  "Condition-Name": [
+                    "cancer"
+                  ],
+                  "Procedure": [
+                    "brachytherapy"
+                  ],
+                  "Procedure-Name": [
+                    "brachytherapy"
+                  ],
+                  "Modifier": [
+                    "prostate"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Double primary cancer other than skin/",
+              "Eq-Operator": [
+                "-"
+              ],
+              "Condition": [
+                "cancer"
+              ],
+              "Condition-Name": [
+                "cancer"
+              ],
+              "Eq-Comparison": [
+                "Double"
+              ],
+              "Eq-Value": [
+                "Double"
+              ],
+              "Modifier": [
+                "skin",
+                "primary"
+              ],
+              "Exception": [
+                "other than"
+              ]
+            },
+            "right": {
+              "raw_text": "thyroid cancer",
+              "Condition": [
+                "cancer"
+              ],
+              "Condition-Name": [
+                "cancer"
+              ],
+              "Modifier": [
+                "thyroid"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Combined serious morbidity",
+      "Eq-Operator": [
+        "-"
+      ],
+      "Condition": [
+        "morbidity"
+      ],
+      "Condition-Name": [
+        "morbidity"
+      ],
+      "Severity": [
+        "serious"
+      ]
+    }
+  }
+}

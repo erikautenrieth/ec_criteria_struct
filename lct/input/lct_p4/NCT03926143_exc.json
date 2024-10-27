@@ -1,0 +1,116 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- For on-treatment participants: a positive serum pregnancy test.",
+          "Procedure": [
+            "treatment"
+          ],
+          "Eq-Comparison": [
+            "on"
+          ],
+          "Eq-Temporal-Period": [
+            "on"
+          ],
+          "Observation": [
+            "serum pregnancy test"
+          ],
+          "Observation-Name": [
+            "serum pregnancy test"
+          ],
+          "Polarity": [
+            "positive"
+          ]
+        },
+        "right": {
+          "raw_text": "- For on-treatment participants: use of one or more of the prohibited medications listed in the respective parent study protocol.",
+          "Study": [
+            "study"
+          ],
+          "Procedure": [
+            "treatment"
+          ],
+          "Eq-Comparison": [
+            "on",
+            "one or more"
+          ],
+          "Eq-Temporal-Period": [
+            "on"
+          ],
+          "Drug": [
+            "medications"
+          ],
+          "Eq-Value": [
+            "one"
+          ],
+          "Eq-Operator": [
+            "or more"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Participants who are receiving standard-of-care agent(s)",
+          "Eq-Comparison": [
+            "receiving"
+          ],
+          "Eq-Temporal-Period": [
+            "receiving"
+          ],
+          "Drug": [
+            "agent(s)",
+            "agent"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "but"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "not anetumab ravtansine in the parent study,",
+                      "Drug": [
+                        "anetumab ravtansine"
+                      ],
+                      "Drug-Name": [
+                        "anetumab ravtansine"
+                      ],
+                      "Study": [
+                        "study"
+                      ],
+                      "Negation": [
+                        "not"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and are able to receive standard-of-care agent outside of the clinical study.",
+                      "Study": [
+                        "study"
+                      ],
+                      "Other": [
+                        "outside"
+                      ],
+                      "Drug": [
+                        "agent"
+                      ],
+                      "Assertion": [
+                        "able to"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

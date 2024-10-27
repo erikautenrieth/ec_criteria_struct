@@ -1,0 +1,205 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Any reported condition",
+                      "Condition": [
+                        "condition"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or behaviour deemed either to pose undue personal risk",
+                          "Risk": [
+                            "risk"
+                          ],
+                          "Condition": [
+                            "behaviour"
+                          ],
+                          "Stability": [
+                            "pose"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "to the participant or introduce bias",
+                          "Stability": [
+                            "introduce"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Any diagnosed metabolic disease (e.g. type 1",
+                      "Condition": [
+                        "metabolic disease"
+                      ],
+                      "Modifier": [
+                        "type 1"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Condition-Name": [
+                        "metabolic disease"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or type 2 diabetes)",
+                      "Condition": [
+                        "diabetes"
+                      ],
+                      "Condition-Name": [
+                        "diabetes"
+                      ],
+                      "Modifier": [
+                        "type 2"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Any reported use of substances which may pose undue personal risk",
+                  "Risk": [
+                    "risk"
+                  ],
+                  "Drug": [
+                    "substances"
+                  ],
+                  "Assertion": [
+                    "may"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Stability": [
+                    "pose"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "to the participants or introduce bias into the experiment (e.g. smoking/",
+                      "Study": [
+                        "experiment"
+                      ],
+                      "Observation": [
+                        "smoking"
+                      ],
+                      "Stability": [
+                        "introduce"
+                      ],
+                      "Observation-Name": [
+                        "smoking"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "substance abuse)",
+                      "Condition": [
+                        "substance abuse"
+                      ],
+                      "Condition-Name": [
+                        "substance abuse"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Lifestyle",
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not conforming to standard sleep-wake cycle (e.g. shift worker)",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Condition": [
+                    "sleep-wake cycle"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Condition-Name": [
+                    "sleep-wake cycle"
+                  ],
+                  "Observation-Name": [
+                    "shift worker"
+                  ],
+                  "Polarity": [
+                    "standard"
+                  ],
+                  "Observation": [
+                    "shift worker"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Any reported recent (<6 months) change in body mass (± 3%)",
+      "Eq-Comparison": [
+        "recent",
+        "<6 months",
+        "± 3%"
+      ],
+      "Observation": [
+        "body mass"
+      ],
+      "Eq-Operator": [
+        "-",
+        "<",
+        "±"
+      ],
+      "Eq-Temporal-Period": [
+        "recent"
+      ],
+      "Eq-Value": [
+        "6",
+        "3"
+      ],
+      "Eq-Temporal-Unit": [
+        "months"
+      ],
+      "Observation-Name": [
+        "body mass"
+      ],
+      "Eq-Unit": [
+        "%"
+      ],
+      "Stability": [
+        "change"
+      ]
+    }
+  }
+}

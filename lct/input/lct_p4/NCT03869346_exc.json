@@ -1,0 +1,146 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Difficult airway",
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Condition": [
+                    "Difficult airway"
+                  ],
+                  "Condition-Name": [
+                    "Difficult airway"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- upper respiratory tract infection within 2 weeks",
+                  "Condition": [
+                    "upper respiratory tract infection"
+                  ],
+                  "Eq-Comparison": [
+                    "within 2 weeks"
+                  ],
+                  "Eq-Operator": [
+                    "-",
+                    "within"
+                  ],
+                  "Condition-Name": [
+                    "upper respiratory tract infection"
+                  ],
+                  "Eq-Value": [
+                    "2"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "weeks"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- history of allergy",
+                  "Eq-Comparison": [
+                    "history"
+                  ],
+                  "Allergy": [
+                    "allergy"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "history"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or long-term use of propofol",
+                      "Acuteness": [
+                        "long-term"
+                      ],
+                      "Drug": [
+                        "propofol"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Drug-Name": [
+                        "propofol"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and opioids",
+                      "Drug": [
+                        "opioids"
+                      ],
+                      "Drug-Name": [
+                        "opioids"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- self-rating anxiety scale before operation indicates anxiety",
+          "Observation": [
+            "self-rating anxiety scale"
+          ],
+          "Procedure": [
+            "operation"
+          ],
+          "Condition": [
+            "anxiety"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Observation-Name": [
+            "self-rating anxiety scale"
+          ],
+          "Condition-Name": [
+            "anxiety"
+          ],
+          "Procedure-Name": [
+            "operation"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- pregnancy",
+          "Condition": [
+            "pregnancy"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Condition-Name": [
+            "pregnancy"
+          ]
+        },
+        "right": {
+          "raw_text": "or lactation.",
+          "Condition": [
+            "lactation"
+          ],
+          "Condition-Name": [
+            "lactation"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients less than 18 years of age",
+                  "Eq-Operator": [
+                    "less than"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Age": [
+                    "age"
+                  ],
+                  "Eq-Value": [
+                    "18"
+                  ],
+                  "Eq-Comparison": [
+                    "less than 18 years"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Adults who lack the capacity to consent",
+                  "Life-Stage-And-Gender": [
+                    "Adults"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Pregnant women",
+              "Condition": [
+                "Pregnant"
+              ],
+              "Condition-Name": [
+                "Pregnant"
+              ],
+              "Life-Stage-And-Gender": [
+                "women"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Prisoners",
+          "Observation": [
+            "Prisoners"
+          ],
+          "Observation-Name": [
+            "Prisoners"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Non-English speakers.",
+              "Language": [
+                "English"
+              ],
+              "Negation": [
+                "Non"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

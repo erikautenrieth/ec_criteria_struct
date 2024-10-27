@@ -1,0 +1,92 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient <18 years of age",
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Age": [
+            "age"
+          ],
+          "Eq-Value": [
+            "18",
+            "8"
+          ],
+          "Eq-Comparison": [
+            "<18 years"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Presence of osteomyelitis of poor surgical candidates due to comorbidities such as diabetics",
+              "Condition": [
+                "osteomyelitis",
+                "comorbidities",
+                "diabetics"
+              ],
+              "Condition-Name": [
+                "osteomyelitis",
+                "diabetics"
+              ]
+            },
+            "right": {
+              "raw_text": "with an HbA1c of >8%",
+              "Eq-Operator": [
+                ">"
+              ],
+              "Eq-Value": [
+                "8"
+              ],
+              "Eq-Comparison": [
+                ">8%"
+              ],
+              "Observation": [
+                "HbA1c"
+              ],
+              "Observation-Name": [
+                "HbA1c"
+              ],
+              "Eq-Unit": [
+                "%"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patient with previous foot",
+          "Modifier": [
+            "foot"
+          ],
+          "Eq-Comparison": [
+            "previous"
+          ],
+          "Eq-Temporal-Period": [
+            "previous"
+          ]
+        },
+        "right": {
+          "raw_text": "and ankle surgeries that may interfere with future outcomes",
+          "Procedure-Name": [
+            "surgeries"
+          ],
+          "Procedure": [
+            "surgeries"
+          ],
+          "Modifier": [
+            "ankle"
+          ]
+        }
+      }
+    }
+  }
+}

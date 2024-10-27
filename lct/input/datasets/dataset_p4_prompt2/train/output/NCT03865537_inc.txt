@@ -1,0 +1,116 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Any patient ≥18",
+          "Eq-Comparison": [
+            "≥18"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Age": [
+            "18"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "who presents for a colonoscopy",
+              "Procedure": [
+                "colonoscopy"
+              ],
+              "Procedure-Name": [
+                "colonoscopy"
+              ],
+              "Eq-Comparison": [
+                "presents for"
+              ],
+              "Eq-Temporal-Period": [
+                "presents for"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "and who does"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "not have criteria for",
+                          "Condition": [
+                            "criteria"
+                          ],
+                          "Negation": [
+                            "not"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "exclusion",
+                              "Negation": [
+                                "exclusion"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients with a ≥20mm",
+          "Eq-Comparison": [
+            "≥20mm"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Unit": [
+            "mm"
+          ],
+          "Eq-Value": [
+            "20",
+            "2"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "non-pedunculated colorectal polyp",
+              "Modifier": [
+                "pedunculated",
+                "colorectal"
+              ],
+              "Observation": [
+                "polyp"
+              ],
+              "Observation-Name": [
+                "polyp"
+              ],
+              "Negation": [
+                "non"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

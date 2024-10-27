@@ -1,0 +1,324 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. History of anti-cancer therapy for MBC（with the exception of one prior hormonal regimen for MBC）.",
+                  "Condition": [
+                    "cancer",
+                    "MBC"
+                  ],
+                  "Eq-Comparison": [
+                    "History",
+                    "prior",
+                    "one"
+                  ],
+                  "Procedure": [
+                    "therapy",
+                    "hormonal regimen"
+                  ],
+                  "Exception": [
+                    "exception",
+                    "except"
+                  ],
+                  "Condition-Name": [
+                    "cancer",
+                    "MBC"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "History",
+                    "prior"
+                  ],
+                  "Procedure-Name": [
+                    "therapy",
+                    "hormonal regimen"
+                  ],
+                  "Eq-Value": [
+                    "one",
+                    "1"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "2. History of HER tyrosine kinase inhibitors",
+                      "Eq-Comparison": [
+                        "History"
+                      ],
+                      "Drug": [
+                        "tyrosine kinase inhibitors"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "History"
+                      ],
+                      "Drug-Name": [
+                        "tyrosine kinase inhibitors"
+                      ],
+                      "Modifier": [
+                        "HER"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or monoclonal antibody for breast cancer in any treatment setting，except trastuzumab used in the neo-adjuvant",
+                          "Condition": [
+                            "cancer"
+                          ],
+                          "Drug": [
+                            "monoclonal antibody",
+                            "trastuzumab"
+                          ],
+                          "Modifier": [
+                            "breast",
+                            "neo-adjuvant",
+                            "adjuvant"
+                          ],
+                          "Procedure": [
+                            "treatment"
+                          ],
+                          "Condition-Name": [
+                            "cancer"
+                          ],
+                          "Drug-Name": [
+                            "monoclonal antibody",
+                            "trastuzumab"
+                          ],
+                          "Exception": [
+                            "except"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or adjuvant setting.",
+                          "Modifier": [
+                            "adjuvant"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "3. Assessed by the investigator to be"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "unable receive systemic chemotherapy.",
+                      "Procedure": [
+                        "therapy",
+                        "chemotherapy"
+                      ],
+                      "Modifier": [
+                        "systemic"
+                      ],
+                      "Other": [
+                        "other"
+                      ],
+                      "Procedure-Name": [
+                        "therapy",
+                        "chemotherapy"
+                      ],
+                      "Negation": [
+                        "unable"
+                      ],
+                      "Assertion": [
+                        "unable"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "4. History of other malignancy within the last 5 years，except for carcinoma in situ of cervix，basal cell carcinoma",
+              "Eq-Comparison": [
+                "History",
+                "within the last 5 years",
+                "last"
+              ],
+              "Other": [
+                "other"
+              ],
+              "Condition": [
+                "malignancy",
+                "carcinoma"
+              ],
+              "Modifier": [
+                "basal cell carcinoma",
+                "situ of cervix"
+              ],
+              "Eq-Temporal-Period": [
+                "History",
+                "last"
+              ],
+              "Condition-Name": [
+                "malignancy",
+                "carcinoma"
+              ],
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Value": [
+                "5"
+              ],
+              "Eq-Temporal-Recency": [
+                "last"
+              ],
+              "Exception": [
+                "except"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ]
+            },
+            "right": {
+              "raw_text": "or squamous cell carcinoma of the skin that has been previously treated with curative intent.",
+              "Condition": [
+                "carcinoma"
+              ],
+              "Modifier": [
+                "squamous cell",
+                "skin",
+                "curative intent"
+              ],
+              "Eq-Comparison": [
+                "previously"
+              ],
+              "Procedure": [
+                "treated"
+              ],
+              "Condition-Name": [
+                "carcinoma"
+              ],
+              "Eq-Temporal-Period": [
+                "previously"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "5. Pregnant",
+          "Condition": [
+            "Pregnant"
+          ],
+          "Eq-Value": [
+            "5"
+          ],
+          "Condition-Name": [
+            "Pregnant"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or lactating women，",
+              "Condition": [
+                "lactating"
+              ],
+              "Condition-Name": [
+                "lactating"
+              ],
+              "Life-Stage-And-Gender": [
+                "women"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or for women of childbearing potential",
+                  "Condition": [
+                    "childbearing"
+                  ],
+                  "Assertion": [
+                    "potential"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "women"
+                  ],
+                  "Condition-Name": [
+                    "childbearing"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "unwilling to use a highly-effective contraception during of the study treatment",
+                          "Study": [
+                            "study"
+                          ],
+                          "Procedure": [
+                            "treatment",
+                            "contraception"
+                          ],
+                          "Assertion": [
+                            "unwilling to"
+                          ],
+                          "Modifier": [
+                            "highly-effective"
+                          ],
+                          "Procedure-Name": [
+                            "contraception"
+                          ],
+                          "Negation": [
+                            "unwilling to"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "and for at least 7 months after the last dose of study treatment.",
+                          "Study": [
+                            "study"
+                          ],
+                          "Procedure": [
+                            "treatment"
+                          ],
+                          "Eq-Comparison": [
+                            "at least 7 months",
+                            "last"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "last"
+                          ],
+                          "Eq-Operator": [
+                            "at least"
+                          ],
+                          "Eq-Value": [
+                            "7"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "months"
+                          ],
+                          "Eq-Temporal-Recency": [
+                            "last"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Clinical NSCLC stage> II",
+                              "Eq-Operator": [
+                                ">"
+                              ],
+                              "Condition": [
+                                "NSCLC"
+                              ],
+                              "Condition-Name": [
+                                "NSCLC"
+                              ],
+                              "Eq-Comparison": [
+                                "stage> II"
+                              ],
+                              "Eq-Unit": [
+                                "stage"
+                              ],
+                              "Eq-Value": [
+                                "II"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "- History of Neoadjuvant chemotherapy",
+                                  "Procedure": [
+                                    "Neoadjuvant chemotherapy"
+                                  ],
+                                  "Procedure-Name": [
+                                    "Neoadjuvant chemotherapy"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "History"
+                                  ],
+                                  "Eq-Temporal-Period": [
+                                    "History"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or radiotherapy",
+                                  "Procedure": [
+                                    "radiotherapy"
+                                  ],
+                                  "Procedure-Name": [
+                                    "radiotherapy"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Radiologic evidence of extensive pleural adhesions.",
+                          "Condition": [
+                            "pleural adhesions"
+                          ],
+                          "Condition-Name": [
+                            "pleural adhesions"
+                          ],
+                          "Severity": [
+                            "extensive"
+                          ],
+                          "Procedure": [
+                            "Radiologic"
+                          ],
+                          "Procedure-Name": [
+                            "Radiologic"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Age <18",
+                          "Eq-Operator": [
+                            "<"
+                          ],
+                          "Age": [
+                            "Age"
+                          ],
+                          "Eq-Value": [
+                            "18"
+                          ],
+                          "Eq-Comparison": [
+                            "<18"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or >80 years.",
+                          "Eq-Operator": [
+                            ">"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "years"
+                          ],
+                          "Eq-Value": [
+                            "80"
+                          ],
+                          "Eq-Comparison": [
+                            ">80 years"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients with previous pleurodesis",
+                      "Procedure": [
+                        "pleurodesis"
+                      ],
+                      "Procedure-Name": [
+                        "pleurodesis"
+                      ],
+                      "Eq-Comparison": [
+                        "previous"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "previous"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or thoracotomy in the affected hemithorax.",
+                      "Procedure": [
+                        "thoracotomy"
+                      ],
+                      "Procedure-Name": [
+                        "thoracotomy"
+                      ],
+                      "Modifier": [
+                        "affected hemithorax"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patients who will undergo surgical lung resection other than lobectomy.",
+              "Procedure": [
+                "surgical lung resection",
+                "lobectomy"
+              ],
+              "Procedure-Name": [
+                "surgical lung resection",
+                "lobectomy"
+              ],
+              "Eq-Comparison": [
+                "will undergo"
+              ],
+              "Eq-Temporal-Period": [
+                "will undergo"
+              ],
+              "Exception": [
+                "other than"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patients with severe comorbidity contraindicating lobectomy.",
+          "Procedure": [
+            "lobectomy"
+          ],
+          "Procedure-Name": [
+            "lobectomy"
+          ],
+          "Condition": [
+            "comorbidity"
+          ],
+          "Contraindication": [
+            "contraindicating"
+          ],
+          "Severity": [
+            "severe"
+          ],
+          "Condition-Name": [
+            "comorbidity"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "refusal",
+                  "Negation": [
+                    "refusal"
+                  ],
+                  "Assertion": [
+                    "refusal"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "noncompliance to general surgery",
+                              "Procedure": [
+                                "general surgery"
+                              ],
+                              "Procedure-Name": [
+                                "general surgery"
+                              ],
+                              "Negation": [
+                                "noncompliance"
+                              ],
+                              "Assertion": [
+                                "noncompliance"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "and one-lung ventilation.",
+                              "Procedure": [
+                                "ventilation"
+                              ],
+                              "Procedure-Name": [
+                                "ventilation"
+                              ],
+                              "Modifier": [
+                                "one-lung"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

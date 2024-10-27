@@ -1,0 +1,46 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Inpatient \u226518 y.o."
+        },
+        "right": {
+          "raw_text": "who are scheduled elective colonoscopy during hospitalization irrespective of the indication."
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Urgent colonoscopy"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients who are"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "not hospitalized when taking bowel preparation"
+                        },
+                        "right": {
+                          "raw_text": "or when undergoing colonoscopy"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

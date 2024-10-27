@@ -1,0 +1,53 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Registered patients at Eric Williams Medical Sciences Complex in any of the cardiology outpatient clinics. This was confirmed by matching patients with their registration numbers on the cardiology outpatient clinic appointment listings. These lists are made prior to each cardiology clinic that is scheduled every week on Mondays, Tuesdays, Wednesdays, Thursdays and Fridays."
+        },
+        "right": {
+          "raw_text": "- Patients who were 18 years old"
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patients less than 18 years old"
+                    },
+                    "right": {
+                      "raw_text": "- Those who did not give informed consent to participate in the study"
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patients who were"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "not registered patients of the cardiology outpatient clinics at Eric Williams Medical Sciences Complex along"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patients who were acutely unwell requiring hospital admission"
+            }
+          }
+        }
+      }
+    }
+  }
+}

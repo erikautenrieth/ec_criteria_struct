@@ -1,0 +1,79 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Diabetes group: 1) Age between 30-70 years of old, 2) type 2 diabetes.",
+      "Age": [
+        "Age"
+      ],
+      "Eq-Comparison": [
+        "between 30-70 years"
+      ],
+      "Condition": [
+        "diabetes"
+      ],
+      "Eq-Operator": [
+        "between",
+        "-"
+      ],
+      "Eq-Value": [
+        "30",
+        "70"
+      ],
+      "Eq-Temporal-Unit": [
+        "years"
+      ],
+      "Condition-Name": [
+        "diabetes"
+      ],
+      "Modifier": [
+        "type 2"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Healthy control group: 1) Age between 30-70 years of old, 2)",
+          "Age": [
+            "Age"
+          ],
+          "Eq-Comparison": [
+            "between 30-70 years"
+          ],
+          "Condition": [
+            "Healthy"
+          ],
+          "Eq-Operator": [
+            "between",
+            "-"
+          ],
+          "Eq-Value": [
+            "30",
+            "70"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Condition-Name": [
+            "Healthy"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "without diabetes",
+              "Condition": [
+                "diabetes"
+              ],
+              "Negation": [
+                "without"
+              ],
+              "Condition-Name": [
+                "diabetes"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

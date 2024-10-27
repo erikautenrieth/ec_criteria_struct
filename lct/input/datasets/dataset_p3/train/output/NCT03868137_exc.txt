@@ -1,0 +1,45 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Contraindications to IUD insertion (active pelvic infection, current pregnancy)",
+          "Condition": [
+            "infection",
+            "pregnancy"
+          ]
+        },
+        "right": {
+          "raw_text": "- Contraindications to NSAIDs (allergy, history of asthma, history of aspirin allergy, history of kidney disease, history of stomach ulcer, history of active GI bleeding, history of liver disease)",
+          "Drug": [
+            "NSAIDs",
+            "aspirin"
+          ],
+          "Condition": [
+            "asthma",
+            "kidney disease",
+            "ulcer",
+            "liver disease"
+          ],
+          "Observation": [
+            "bleeding"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Not undergoing any other concurrent office procedures"
+            }
+          }
+        }
+      }
+    }
+  }
+}

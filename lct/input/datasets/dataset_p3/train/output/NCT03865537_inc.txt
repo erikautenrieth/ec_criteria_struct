@@ -1,0 +1,63 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Any patient \u226518"
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "who presents for a colonoscopy"
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "and who does"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "not have criteria for",
+                          "Condition": [
+                            "criteria"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "exclusion"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients with a \u226520mm"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "non-pedunculated colorectal polyp",
+              "Observation": [
+                "polyp"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

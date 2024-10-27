@@ -1,0 +1,181 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients admitted to the department of endocrinology",
+              "Encounter": [
+                "admitted"
+              ],
+              "Provider": [
+                "endocrinology"
+              ],
+              "Drug-Name": [
+                "-"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "with the diagnose hypothyroidism because of persistent hypothyroid symptoms despite treatment",
+                  "Condition": [
+                    "hypothyroidism",
+                    "hypothyroid"
+                  ],
+                  "Condition-Name": [
+                    "hypothyroidism",
+                    "hypothyroid"
+                  ],
+                  "Modifier": [
+                    "persistent"
+                  ],
+                  "Assertion": [
+                    "symptoms"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "with L-thyroxine mono-therapy",
+                      "Drug": [
+                        "L-thyroxine"
+                      ],
+                      "Drug-Name": [
+                        "-",
+                        "L-thyroxine"
+                      ],
+                      "Procedure": [
+                        "mono-therapy"
+                      ],
+                      "Procedure-Name": [
+                        "mono-therapy"
+                      ],
+                      "Eq-Unit": [
+                        "L"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "and normal",
+                          "Polarity": [
+                            "normal"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "and stable TSH (for at least 6 months).",
+                          "Eq-Value": [
+                            "6"
+                          ],
+                          "Observation": [
+                            "TSH"
+                          ],
+                          "Observation-Name": [
+                            "TSH"
+                          ],
+                          "Stability": [
+                            "stable"
+                          ],
+                          "Eq-Comparison": [
+                            "at least 6 months"
+                          ],
+                          "Eq-Operator": [
+                            "at least"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Started in combination therapy with L-thyroxine",
+              "Drug": [
+                "L-thyroxine"
+              ],
+              "Drug-Name": [
+                "-",
+                "L-thyroxine"
+              ],
+              "Procedure": [
+                "combination therapy"
+              ],
+              "Procedure-Name": [
+                "combination therapy"
+              ],
+              "Eq-Unit": [
+                "L"
+              ]
+            },
+            "right": {
+              "raw_text": "and Liothyronine in an approximately 17/1 ratio",
+              "Drug": [
+                "Liothyronine"
+              ],
+              "Drug-Name": [
+                "Liothyronine"
+              ],
+              "Eq-Comparison": [
+                "17/1 ratio"
+              ],
+              "Eq-Value": [
+                "17"
+              ],
+              "Eq-Unit": [
+                "1",
+                "ratio",
+                "L"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-",
+          "Drug-Name": [
+            "-"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Exclusion of an alternative explanation for persistent hypothyroid symptoms",
+              "Condition": [
+                "hypothyroid",
+                "explanation"
+              ],
+              "Condition-Name": [
+                "hypothyroid"
+              ],
+              "Modifier": [
+                "persistent"
+              ],
+              "Assertion": [
+                "symptoms"
+              ],
+              "Other": [
+                "alternative"
+              ],
+              "Negation": [
+                "Exclusion"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

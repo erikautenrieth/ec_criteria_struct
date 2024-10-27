@@ -1,0 +1,67 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Patients aged from 18 to 80 years"
+                    },
+                    "right": {
+                      "raw_text": "- Obese (BMI \u2265 30kg/m\u00b2)",
+                      "Condition": [
+                        "Obese"
+                      ],
+                      "Observation": [
+                        "BMI"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Referred by GPs to the medical analysis laboratory for usual biological assessment",
+                  "Observation": [
+                    "biological assessment"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients with"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "no respiratory follow-up already in place",
+                      "Condition": [
+                        "respiratory"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Bicarbonate - Concentration \u2265 27 mmol/L",
+          "Observation": [
+            "Bicarbonate - Concentration"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- STOP-BANG score \u2265 3",
+      "Observation": [
+        "STOP-BANG"
+      ]
+    }
+  }
+}

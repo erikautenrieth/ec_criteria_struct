@@ -1,0 +1,147 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "-"
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "No CF diagnosis",
+                          "Condition": [
+                            "CF"
+                          ],
+                          "Condition-Name": [
+                            "CF"
+                          ],
+                          "Negation": [
+                            "No"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Men",
+                      "Life-Stage-And-Gender": [
+                        "Men"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "or women",
+                          "Life-Stage-And-Gender": [
+                            "women"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "without osteoporosis",
+                              "Condition": [
+                                "osteoporosis"
+                              ],
+                              "Condition-Name": [
+                                "osteoporosis"
+                              ],
+                              "Negation": [
+                                "without"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Less than 18 years of age",
+              "Eq-Operator": [
+                "Less than"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Age": [
+                "age"
+              ],
+              "Eq-Value": [
+                "18"
+              ],
+              "Eq-Comparison": [
+                "Less than 18 years"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Unwilling to return annually for study visits for up to 5 years",
+          "Eq-Operator": [
+            "up to"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Eq-Value": [
+            "5"
+          ],
+          "Eq-Comparison": [
+            "up to 5 years"
+          ],
+          "Study": [
+            "study"
+          ],
+          "Assertion": [
+            "Unwilling"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Unwilling",
+          "Assertion": [
+            "Unwilling"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "and/or medically"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "unable to take denosumab",
+                  "Drug": [
+                    "denosumab"
+                  ],
+                  "Drug-Name": [
+                    "denosumab"
+                  ],
+                  "Negation": [
+                    "unable"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

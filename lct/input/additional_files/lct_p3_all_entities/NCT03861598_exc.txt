@@ -1,0 +1,186 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Current use of another beta blocker that",
+                  "Eq-Comparison": [
+                    "Current"
+                  ],
+                  "Other": [
+                    "another"
+                  ],
+                  "Drug": [
+                    "beta blocker"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "Current"
+                  ],
+                  "Drug-Name": [
+                    "beta blocker"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "cannot be switched to carvedilol at the onset of the trial.",
+                      "Assertion": [
+                        "cannot"
+                      ],
+                      "Drug": [
+                        "carvedilol"
+                      ],
+                      "Study": [
+                        "trial"
+                      ],
+                      "Drug-Name": [
+                        "carvedilol"
+                      ],
+                      "Eq-Temporal-Recency": [
+                        "onset"
+                      ],
+                      "Eq-Comparison": [
+                        "onset"
+                      ],
+                      "Stability": [
+                        "switched to"
+                      ],
+                      "Negation": [
+                        "cannot"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Systolic blood pressure <90 mmHg",
+                  "Observation": [
+                    "Systolic blood pressure"
+                  ],
+                  "Eq-Comparison": [
+                    "<90 mmHg"
+                  ],
+                  "Observation-Name": [
+                    "Systolic blood pressure"
+                  ],
+                  "Eq-Operator": [
+                    "<"
+                  ],
+                  "Eq-Value": [
+                    "90"
+                  ],
+                  "Eq-Unit": [
+                    "mmHg"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "and/or heart rate <60 bpm",
+                      "Observation": [
+                        "heart rate"
+                      ],
+                      "Eq-Comparison": [
+                        "<60 bpm"
+                      ],
+                      "Eq-Operator": [
+                        "<"
+                      ],
+                      "Observation-Name": [
+                        "heart rate"
+                      ],
+                      "Eq-Value": [
+                        "60"
+                      ],
+                      "Eq-Unit": [
+                        "bpm"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "without hypertensive medications",
+                          "Negation": [
+                            "without"
+                          ],
+                          "Condition": [
+                            "hypertensive"
+                          ],
+                          "Drug": [
+                            "medications"
+                          ],
+                          "Condition-Name": [
+                            "hypertensive"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Allergy to beta blockers",
+          "Drug": [
+            "beta blocker",
+            "beta blockers"
+          ],
+          "Allergy": [
+            "Allergy"
+          ],
+          "Drug-Name": [
+            "beta blocker",
+            "beta blockers"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Severe",
+          "Severity": [
+            "Severe"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or uncontrolled asthma",
+              "Modifier": [
+                "uncontrolled"
+              ],
+              "Condition": [
+                "asthma"
+              ],
+              "Condition-Name": [
+                "asthma"
+              ]
+            },
+            "right": {
+              "raw_text": "or COPD (chronic obstructive pulmonary disease)",
+              "Condition": [
+                "disease",
+                "COPD",
+                "chronic obstructive pulmonary disease"
+              ],
+              "Condition-Name": [
+                "COPD",
+                "chronic obstructive pulmonary disease"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "1. no access to computer, electronic device (e.g., tablet, smartphone), and/or internet connection for virtual clinic visit,"
+                    },
+                    "right": {
+                      "raw_text": "2. primary care received outside of VUMC network,",
+                      "Location": [
+                        "VUMC"
+                      ],
+                      "Encounter": [
+                        "primary care"
+                      ],
+                      "Eq-Comparison": [
+                        "received"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "received"
+                      ],
+                      "Other": [
+                        "outside"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "3. hospice care at discharge,",
+                  "Location": [
+                    "hospice care"
+                  ],
+                  "Encounter": [
+                    "discharge"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "4. substance abuse",
+                  "Condition": [
+                    "substance abuse"
+                  ],
+                  "Condition-Name": [
+                    "substance abuse"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "or psychiatric disorder that",
+                      "Condition": [
+                        "psychiatric disorder"
+                      ],
+                      "Condition-Name": [
+                        "psychiatric disorder"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "prevents independent living,",
+                          "Observation": [
+                            "independent living"
+                          ],
+                          "Observation-Name": [
+                            "independent living"
+                          ],
+                          "Negation": [
+                            "prevents"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "5. blind,",
+              "Condition": [
+                "blind"
+              ],
+              "Condition-Name": [
+                "blind"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "deaf,",
+                  "Condition": [
+                    "deaf"
+                  ],
+                  "Condition-Name": [
+                    "deaf"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "unable to speak English,",
+                          "Language": [
+                            "English"
+                          ],
+                          "Negation": [
+                            "unable"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "6. severe dementia prior to index hospitalization",
+      "Condition": [
+        "dementia"
+      ],
+      "Condition-Name": [
+        "dementia"
+      ],
+      "Encounter": [
+        "hospitalization"
+      ],
+      "Severity": [
+        "severe"
+      ]
+    }
+  }
+}

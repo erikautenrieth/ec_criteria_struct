@@ -1,0 +1,275 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- intention to quit smoking in the next 30 days",
+                                  "Assertion": [
+                                    "intention to"
+                                  ],
+                                  "Observation": [
+                                    "quit smoking"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "next 30 days"
+                                  ],
+                                  "Eq-Temporal-Unit": [
+                                    "day",
+                                    "days"
+                                  ],
+                                  "Observation-Name": [
+                                    "quit smoking"
+                                  ],
+                                  "Eq-Temporal-Period": [
+                                    "next"
+                                  ],
+                                  "Eq-Value": [
+                                    "30"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "- currently using pharmacotherapy for smoking cessation",
+                                  "Eq-Comparison": [
+                                    "currently using"
+                                  ],
+                                  "Procedure": [
+                                    "pharmacotherapy",
+                                    "smoking cessation"
+                                  ],
+                                  "Eq-Temporal-Period": [
+                                    "currently using"
+                                  ],
+                                  "Procedure-Name": [
+                                    "smoking cessation",
+                                    "pharmacotherapy"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "raw_text": "- currently using electronic cigarettes more than 2 days/week",
+                              "Eq-Comparison": [
+                                "currently using",
+                                "more than 2 days/week"
+                              ],
+                              "Eq-Unit": [
+                                "cigarettes"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "day",
+                                "days",
+                                "week"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "currently using"
+                              ],
+                              "Eq-Operator": [
+                                "more than"
+                              ],
+                              "Eq-Value": [
+                                "2"
+                              ],
+                              "Drug": [
+                                "cigarettes"
+                              ],
+                              "Drug-Name": [
+                                "cigarettes"
+                              ],
+                              "Modifier": [
+                                "electronic"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- unstable medical",
+                              "Modifier": [
+                                "medical"
+                              ],
+                              "Stability": [
+                                "unstable"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or psychiatric condition (defined as hospitalization)",
+                              "Modifier": [
+                                "psychiatric"
+                              ],
+                              "Condition": [
+                                "condition"
+                              ],
+                              "Encounter": [
+                                "hospitalization"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- medical contraindications to nicotine (unstable angina, uncontrolled hypertension,",
+                          "Modifier": [
+                            "medical"
+                          ],
+                          "Contraindication": [
+                            "contraindications"
+                          ],
+                          "Drug": [
+                            "nicotine"
+                          ],
+                          "Condition": [
+                            "angina",
+                            "hypertension"
+                          ],
+                          "Stability": [
+                            "unstable",
+                            "uncontrolled"
+                          ],
+                          "Drug-Name": [
+                            "nicotine"
+                          ],
+                          "Condition-Name": [
+                            "angina",
+                            "hypertension"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or recent cardiovascular event, including hospitalization)",
+                          "Eq-Comparison": [
+                            "recent"
+                          ],
+                          "Condition": [
+                            "cardiovascular event"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "recent"
+                          ],
+                          "Condition-Name": [
+                            "cardiovascular event"
+                          ],
+                          "Encounter": [
+                            "hospitalization"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- psychotic symptoms",
+                  "Condition": [
+                    "psychotic"
+                  ],
+                  "Assertion": [
+                    "symptoms"
+                  ],
+                  "Condition-Name": [
+                    "psychotic"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- substance use disorder other than nicotine dependence",
+              "Drug": [
+                "nicotine"
+              ],
+              "Condition": [
+                "substance use disorder",
+                "nicotine dependence"
+              ],
+              "Exception": [
+                "other than"
+              ],
+              "Drug-Name": [
+                "nicotine"
+              ],
+              "Condition-Name": [
+                "substance use disorder",
+                "nicotine dependence"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- past-month suicidal ideation",
+              "Eq-Comparison": [
+                "past-month"
+              ],
+              "Condition": [
+                "suicidal ideation"
+              ],
+              "Eq-Temporal-Period": [
+                "past"
+              ],
+              "Eq-Temporal-Unit": [
+                "month"
+              ],
+              "Condition-Name": [
+                "suicidal ideation"
+              ]
+            },
+            "right": {
+              "raw_text": "or past-year suicide attempt",
+              "Eq-Comparison": [
+                "past-year"
+              ],
+              "Condition": [
+                "suicide attempt"
+              ],
+              "Eq-Temporal-Period": [
+                "past"
+              ],
+              "Eq-Temporal-Unit": [
+                "year"
+              ],
+              "Condition-Name": [
+                "suicide attempt"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- pregnant",
+          "Condition": [
+            "pregnant"
+          ],
+          "Condition-Name": [
+            "pregnant"
+          ]
+        },
+        "right": {
+          "raw_text": "or nursing.",
+          "Condition": [
+            "nursing"
+          ],
+          "Condition-Name": [
+            "nursing"
+          ]
+        }
+      }
+    }
+  }
+}

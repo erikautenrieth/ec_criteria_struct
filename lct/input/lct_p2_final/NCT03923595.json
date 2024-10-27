@@ -1,0 +1,49 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- all consecutive patients from SERD of 18 yrs or older either naive"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or previously treated including HBsAg positive"
+            },
+            "right": {
+              "raw_text": "and HIV positive."
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- GFR < 50 ml/min, pregnancy,"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "breast-feeding,"
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "cirrhosis"
+                    },
+                    "right": {
+                      "raw_text": "of CHILD-PUGH-TURCOTTE B7 o >."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
