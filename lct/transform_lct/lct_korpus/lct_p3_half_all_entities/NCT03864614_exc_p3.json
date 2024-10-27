@@ -1,0 +1,126 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. Subject has attempted suicide associated with the current episode of MDD.",
+          "Condition": [
+            "MDD",
+            "attempted suicide"
+          ],
+          "Eq-Comparison": [
+            "current"
+          ],
+          "Condition-Name": [
+            "MDD",
+            "attempted suicide"
+          ],
+          "Eq-Temporal-Period": [
+            "current"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "2. Subject has a medical history of bipolar disorder,",
+              "Eq-Comparison": [
+                "history"
+              ],
+              "Condition": [
+                "bipolar disorder"
+              ],
+              "Eq-Temporal-Period": [
+                "history"
+              ],
+              "Condition-Name": [
+                "bipolar disorder"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "schizophrenia,",
+                  "Condition": [
+                    "schizophrenia"
+                  ],
+                  "Condition-Name": [
+                    "schizophrenia"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and/or schizoaffective disorder.",
+                  "Condition": [
+                    "schizoaffective disorder"
+                  ],
+                  "Condition-Name": [
+                    "schizoaffective disorder"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "3. Subject has had vagus nerve stimulation,",
+          "Procedure": [
+            "vagus nerve stimulation"
+          ],
+          "Procedure-Name": [
+            "vagus nerve stimulation"
+          ],
+          "Eq-Comparison": [
+            "had"
+          ],
+          "Eq-Temporal-Period": [
+            "had"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "electroconvulsive therapy,",
+              "Procedure": [
+                "electroconvulsive therapy"
+              ],
+              "Procedure-Name": [
+                "electroconvulsive therapy"
+              ]
+            },
+            "right": {
+              "raw_text": "or has taken ketamine (including esketamine) within the current major depressive episode.",
+              "Eq-Comparison": [
+                "current",
+                "taken"
+              ],
+              "Drug": [
+                "ketamine",
+                "esketamine"
+              ],
+              "Condition": [
+                "depressive episode"
+              ],
+              "Eq-Temporal-Period": [
+                "current",
+                "taken"
+              ],
+              "Drug-Name": [
+                "ketamine",
+                "esketamine"
+              ],
+              "Condition-Name": [
+                "depressive episode"
+              ],
+              "Severity": [
+                "major"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

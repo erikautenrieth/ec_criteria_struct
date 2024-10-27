@@ -1,0 +1,184 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Deterioration of neurological symptomatology within 60 day before enrollment ;",
+                  "Eq-Operator": [
+                    "within",
+                    "to"
+                  ],
+                  "Eq-Value": [
+                    "60",
+                    "0",
+                    "6"
+                  ],
+                  "Eq-Comparison": [
+                    "within 60 day"
+                  ],
+                  "Condition": [
+                    "neurological symptomatology"
+                  ],
+                  "Condition-Name": [
+                    "neurological symptomatology"
+                  ],
+                  "Stability": [
+                    "Deterioration"
+                  ],
+                  "Study": [
+                    "enrollment"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "day"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Changes brought to the multiple sclerosis treatment within 6 months before enrollment ;",
+                  "Condition": [
+                    "multiple sclerosis"
+                  ],
+                  "Condition-Name": [
+                    "multiple sclerosis"
+                  ],
+                  "Eq-Operator": [
+                    "within",
+                    "to"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Comparison": [
+                    "within 6 months"
+                  ],
+                  "Study": [
+                    "enrollment"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Stability": [
+                    "Changes"
+                  ],
+                  "Eq-Value": [
+                    "6"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Introduction of a treatment acting on spasticity",
+                  "Eq-Comparison": [
+                    "Introduction"
+                  ],
+                  "Eq-Temporal-Recency": [
+                    "Introduction"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Condition": [
+                    "spasticity"
+                  ],
+                  "Condition-Name": [
+                    "spasticity"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or fatigue within 30 day before enrollment",
+                  "Eq-Operator": [
+                    "within"
+                  ],
+                  "Eq-Value": [
+                    "30",
+                    "0",
+                    "3"
+                  ],
+                  "Eq-Comparison": [
+                    "within 30 day",
+                    "3"
+                  ],
+                  "Study": [
+                    "enrollment"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "day"
+                  ],
+                  "Condition": [
+                    "fatigue"
+                  ],
+                  "Condition-Name": [
+                    "fatigue"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Changes brought to reeducation protocol throughout the duration of the study",
+          "Eq-Operator": [
+            "to"
+          ],
+          "Stability": [
+            "Changes"
+          ],
+          "Procedure": [
+            "reeducation protocol"
+          ],
+          "Procedure-Name": [
+            "reeducation protocol"
+          ],
+          "Study": [
+            "study"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "unable to provide an effort equivalent to 3 times the resting metabolic value = 3 Metabolic Equivalent of Task (METs).",
+              "Eq-Operator": [
+                "to"
+              ],
+              "Observation": [
+                "resting metabolic value",
+                "Metabolic Equivalent of Task",
+                "METs"
+              ],
+              "Observation-Name": [
+                "resting metabolic value",
+                "Metabolic Equivalent of Task",
+                "METs"
+              ],
+              "Eq-Comparison": [
+                "3 times",
+                "3"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Unit": [
+                "times"
+              ],
+              "Negation": [
+                "unable"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

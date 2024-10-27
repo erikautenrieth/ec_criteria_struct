@@ -3,16 +3,13 @@
 
 
 
-Modell Ausgabe: im Ordern llm_output 
 
-Ordner: eval_functions
+- `0_extract_operators.ipynb`: Fügt AND, OR NOT Operatoren in die LCT-Korpusdateien ein.
+- `1_parse_p1.ipynb`: Parst angereicherte LCT-Daten in ein JSON-Format.
+- `2_parse_p2.ipynb`: Parst die p1-Dateien in eine AST-Struktur im JSON-Format.
+- `3_parse_p3.ipynb`: Fügt Enititäten in die AST-Struktur ein.
 
 
-eval_json_output.ipynb
-
-1) Prozessiert die Ausgabe aller Modelle in 3 Ordner: failure, structure_failure und ready
-2) Precision-, Recall- und F1-Scores werden für die Entitäten berechnet 
-   - Latex ausgabe: für alle Entitäten
-   - Latex ausgabe: für totale Scores und vergleich mit ausgewählten LCT Entitäten
-3) Precision-, Recall- und F1-Scores für Operatoren AND, AND*, OR, NOT werden berechnet
-   - Latex ausgabe: für alle Operatoren mit Durchschnittswerte und vergleich zum SOTA 
+- `Node.py`: Klasse für die AST-Struktur.
+- `preprocessing_functions.py`: Hilfsfunktionen für die Preprocessing-Schritte.
+- `lct_korpus`: Ergebnisse der Parsing-Prozesse.

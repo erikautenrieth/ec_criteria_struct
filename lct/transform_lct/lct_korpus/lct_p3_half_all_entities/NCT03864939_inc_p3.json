@@ -1,0 +1,75 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- patients with localized prostate cancer",
+              "Condition": [
+                "cancer"
+              ],
+              "Condition-Name": [
+                "cancer"
+              ],
+              "Modifier": [
+                "localized prostate",
+                "prostate"
+              ]
+            },
+            "right": {
+              "raw_text": "- indication for radical prostatectomy",
+              "Procedure": [
+                "radical prostatectomy"
+              ],
+              "Procedure-Name": [
+                "radical prostatectomy"
+              ],
+              "Indication": [
+                "indication"
+              ],
+              "Modifier": [
+                "prostate"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "-"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "no other treatment of prostate cancer",
+                  "Condition": [
+                    "cancer"
+                  ],
+                  "Condition-Name": [
+                    "cancer"
+                  ],
+                  "Procedure": [
+                    "treatment"
+                  ],
+                  "Negation": [
+                    "no"
+                  ],
+                  "Other": [
+                    "other"
+                  ],
+                  "Modifier": [
+                    "prostate"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- availability to informed consent"
+    }
+  }
+}

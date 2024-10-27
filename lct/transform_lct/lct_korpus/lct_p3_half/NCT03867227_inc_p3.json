@@ -1,0 +1,55 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patient with paroxysmal/"
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "persistent/"
+                },
+                "right": {
+                  "raw_text": "permanent atrial fibrillation",
+                  "Condition": [
+                    "atrial fibrillation"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- CHA2DS2VASc score ≥2 for male",
+              "Observation": [
+                "CHA2DS2VASc"
+              ]
+            },
+            "right": {
+              "raw_text": "and ≥3 for female"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Without contraindications to anticoagulation therapy"
+            }
+          }
+        }
+      }
+    }
+  }
+}

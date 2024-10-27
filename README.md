@@ -2,14 +2,17 @@
 
 
 Zur Strukturierung von Eignungskriterien wurden zwei Korpora analysiert.
-LCT-Korpus und Chia-Korpus. Zudem wurden zwei Methodische Ansätze verfolgt.
+LCT-Korpus und Chia-Korpus. Zudem wurden zwei methodische Ansätze verfolgt.
 
 1. Indirekte Strukturierung: LLMs fügen die logischen Operatoren in die Eignungskriterientexte ein.
 2. Direkte Strukturierung: LLMs strukturieren die Eignungskriterientexte in eine AST-Struktur im JSON-Format.
 
 
 Die Ordnerstruktur der Arbeit ist wie folgt aufgebaut. 
-Jeder Ordner enthält eine README.md Datei, die die Funktionalität des Ordners beschreibt.
+Jeder lct-Ordner enthält eine README.md Datei, die die Funktionalität des Ordners beschreibt.
+Die Struktur der chia-Ordner ist analog zu den lct-Ordnern.
+
+
 
 
 
@@ -18,11 +21,14 @@ Jeder Ordner enthält eine README.md Datei, die die Funktionalität des Ordners 
    - input: Chia-Testdaten 
    - models: LCT-Modelle 
    - transform_chia: Preprocessing der Chia-Daten
+
+
 2. lct (direkte und indirekte Strukturierung)
    - evaluate: Modellausgaben und Evaluierungsfunktionen
    - input: Trainings- Testdaten, Prompts 
    - models: Fine-Tuning Funktionen, Verwendetet LLMs 
    - transform_lct: Preprocessing der LCT-Daten
+
 
 3. parser
     - AST_Parser: Verarbeitet die Ausgaben der indirekten Strukturierung als AST-Stuktur im JSON-Format.

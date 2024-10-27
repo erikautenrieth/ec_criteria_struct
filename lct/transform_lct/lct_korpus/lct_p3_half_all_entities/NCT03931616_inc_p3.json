@@ -1,0 +1,140 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "1. Suspected acute stroke according to the dispatcher stroke identification algorithm during STEMO hours (7am-11pm, Monday-Sunday) and within the STEMO catchment area Inclusion criteria for primary study population:",
+              "Condition": [
+                "stroke"
+              ],
+              "Condition-Name": [
+                "stroke"
+              ],
+              "Eq-Operator": [
+                "within"
+              ],
+              "Eq-Value": [
+                "1"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Acuteness": [
+                "acute"
+              ],
+              "Study": [
+                "study"
+              ],
+              "Assertion": [
+                "Suspected"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "2. Final diagnosis of ischemic stroke (ICD 10: I63)",
+                  "Condition": [
+                    "ischemic stroke",
+                    "stroke"
+                  ],
+                  "Condition-Name": [
+                    "ischemic stroke",
+                    "stroke"
+                  ],
+                  "Eq-Value": [
+                    "3",
+                    "1"
+                  ],
+                  "Condition-Type": [
+                    "Final"
+                  ],
+                  "Code": [
+                    "ICD 10: I63"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or TIA (Transient Ischemic Attack, ICD 10: G45 except G45.4)",
+                  "Condition": [
+                    "Transient Ischemic Attack",
+                    "TIA",
+                    "G45.4"
+                  ],
+                  "Condition-Name": [
+                    "Transient Ischemic Attack",
+                    "TIA"
+                  ],
+                  "Eq-Value": [
+                    "4",
+                    "1"
+                  ],
+                  "Code": [
+                    "G45.4",
+                    "ICD 10: G45"
+                  ],
+                  "Exception": [
+                    "except"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "3. Confirmed onset-to-alarm time ≤ 4 hours at dispatch",
+          "Eq-Operator": [
+            "≤"
+          ],
+          "Eq-Value": [
+            "4",
+            "3"
+          ],
+          "Eq-Comparison": [
+            "≤ 4 hours"
+          ],
+          "Eq-Temporal-Unit": [
+            "hours"
+          ],
+          "Observation": [
+            "onset-to-alarm time"
+          ],
+          "Observation-Name": [
+            "onset-to-alarm time"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "4. Pre-stroke modified Rankin scale ≤ 3 (being able to ambulate, in routine clinical care, patients with mRS up to 3 are usually deemed suitable for tissue plasminogen activator treatment)",
+      "Condition": [
+        "stroke",
+        "able to ambulate"
+      ],
+      "Condition-Name": [
+        "stroke",
+        "able to ambulate"
+      ],
+      "Observation": [
+        "mRS",
+        "modified Rankin scale"
+      ],
+      "Observation-Name": [
+        "mRS",
+        "modified Rankin scale"
+      ],
+      "Eq-Operator": [
+        "≤",
+        "up to"
+      ],
+      "Eq-Value": [
+        "4",
+        "3"
+      ],
+      "Eq-Comparison": [
+        "≤ 3",
+        "up to 3"
+      ]
+    }
+  }
+}

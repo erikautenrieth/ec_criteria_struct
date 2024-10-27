@@ -1,0 +1,150 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Bleeding diathesis",
+                      "Condition": [
+                        "Bleeding diathesis"
+                      ],
+                      "Condition-Name": [
+                        "Bleeding diathesis"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "- Receiving anticoagulant treatment",
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Drug": [
+                        "anticoagulant"
+                      ],
+                      "Drug-Name": [
+                        "anticoagulant"
+                      ],
+                      "Procedure": [
+                        "treatment"
+                      ],
+                      "Eq-Comparison": [
+                        "Receiving"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "Receiving"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Known local anesthetics",
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Allergy-Name": [
+                        "local anesthetics"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and opioid allergy",
+                      "Drug": [
+                        "opioid"
+                      ],
+                      "Drug-Name": [
+                        "opioid"
+                      ],
+                      "Allergy": [
+                        "allergy"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Infection of the skin at the site of the needle puncture",
+              "Eq-Value": [
+                "I"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Condition": [
+                "Infection"
+              ],
+              "Condition-Name": [
+                "Infection"
+              ],
+              "Modifier": [
+                "skin at the site of the needle puncture"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Pregnancy",
+              "Condition": [
+                "Pregnancy"
+              ],
+              "Condition-Name": [
+                "Pregnancy"
+              ],
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "raw_text": "or lactation",
+              "Condition": [
+                "lactation"
+              ],
+              "Condition-Name": [
+                "lactation"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patients who do",
+          "Eq-Operator": [
+            "-"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "not accept the procedure",
+              "Procedure": [
+                "procedure"
+              ],
+              "Procedure-Name": [
+                "procedure"
+              ],
+              "Negation": [
+                "not"
+              ],
+              "Assertion": [
+                "accept"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

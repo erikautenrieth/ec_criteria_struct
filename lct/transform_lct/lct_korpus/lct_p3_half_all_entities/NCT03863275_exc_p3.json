@@ -1,0 +1,85 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients who have had previous orthopedic treatment",
+              "Eq-Comparison": [
+                "previous"
+              ],
+              "Procedure": [
+                "orthopedic treatment"
+              ],
+              "Eq-Temporal-Period": [
+                "previous"
+              ],
+              "Procedure-Name": [
+                "orthopedic treatment"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patients with signs of condyle injuries",
+              "Assertion": [
+                "signs"
+              ],
+              "Modifier": [
+                "condyle"
+              ],
+              "Condition": [
+                "injuries"
+              ],
+              "Condition-Name": [
+                "injuries"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients of Pierre Robin",
+              "Provider": [
+                "Pierre Robin"
+              ]
+            },
+            "right": {
+              "raw_text": "or any form of cleft",
+              "Condition": [
+                "cleft"
+              ],
+              "Condition-Name": [
+                "cleft"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients with syndromes that associate craniofacial anomalies",
+          "Condition": [
+            "syndromes",
+            "craniofacial anomalies"
+          ],
+          "Condition-Name": [
+            "syndromes",
+            "craniofacial anomalies"
+          ]
+        },
+        "right": {
+          "raw_text": "and muscle alterations.",
+          "Condition": [
+            "muscle alterations"
+          ],
+          "Condition-Name": [
+            "muscle alterations"
+          ]
+        }
+      }
+    }
+  }
+}

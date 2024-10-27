@@ -1,0 +1,75 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- patient is home schooled",
+              "Observation": [
+                "home schooled"
+              ],
+              "Observation-Name": [
+                "home schooled"
+              ]
+            },
+            "right": {
+              "raw_text": "or in non-traditional school setting (ie. school for special needs)",
+              "Observation": [
+                "non-traditional school setting",
+                "school for special needs"
+              ],
+              "Observation-Name": [
+                "non-traditional school setting",
+                "school for special needs"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- concomitant additional ligament surgery",
+          "Procedure": [
+            "ligament surgery",
+            "surgery"
+          ],
+          "Procedure-Name": [
+            "ligament surgery",
+            "surgery"
+          ],
+          "Modifier": [
+            "concomitant additional"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- surgery occurs",
+          "Procedure": [
+            "surgery"
+          ],
+          "Procedure-Name": [
+            "surgery"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "outside of the school year or on a scheduled break from school",
+              "Observation": [
+                "school year"
+              ],
+              "Observation-Name": [
+                "school year"
+              ],
+              "Negation": [
+                "outside"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

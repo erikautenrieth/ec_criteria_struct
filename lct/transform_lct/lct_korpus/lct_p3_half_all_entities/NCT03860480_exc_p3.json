@@ -1,0 +1,90 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Perioperative conversion to thoracotomy",
+              "Procedure": [
+                "thoracotomy",
+                "operative"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Procedure-Name": [
+                "thoracotomy",
+                "operative"
+              ],
+              "Modifier": [
+                "conversion"
+              ]
+            },
+            "right": {
+              "raw_text": "- Severe intra- or postoperative bleeding",
+              "Procedure": [
+                "operative"
+              ],
+              "Observation": [
+                "bleeding"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Severity": [
+                "Severe"
+              ],
+              "Observation-Name": [
+                "bleeding"
+              ],
+              "Procedure-Name": [
+                "operative"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Patients requiring postoperative mechanical ventilation",
+          "Procedure": [
+            "operative",
+            "mechanical ventilation"
+          ],
+          "Assertion": [
+            "requiring"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Procedure-Name": [
+            "mechanical ventilation",
+            "operative"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Technical",
+          "Eq-Operator": [
+            "-"
+          ]
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "inability to proceed with the blocks",
+              "Assertion": [
+                "inability"
+              ],
+              "Negation": [
+                "inability"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Childhood cancer survivors age 1-18 years old",
+                  "Condition": [
+                    "cancer"
+                  ],
+                  "Age": [
+                    "age"
+                  ],
+                  "Eq-Comparison": [
+                    "1-18 years"
+                  ],
+                  "Assertion": [
+                    "can"
+                  ],
+                  "Condition-Name": [
+                    "cancer"
+                  ],
+                  "Eq-Value": [
+                    "1",
+                    "18"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "years"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "Childhood"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "who received intensive treatment which included anthracycline",
+                      "Eq-Comparison": [
+                        "received"
+                      ],
+                      "Procedure": [
+                        "treatment"
+                      ],
+                      "Drug": [
+                        "anthracycline"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "received"
+                      ],
+                      "Drug-Name": [
+                        "anthracycline"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and/or alkylating agent chemotherapy.",
+                      "Age": [
+                        "age"
+                      ],
+                      "Drug": [
+                        "alkylating agent"
+                      ],
+                      "Procedure": [
+                        "chemotherapy"
+                      ],
+                      "Drug-Name": [
+                        "alkylating agent"
+                      ],
+                      "Procedure-Name": [
+                        "chemotherapy"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Diseases which will be eligible include, high risk",
+                  "Condition": [
+                    "Diseases"
+                  ],
+                  "Risk": [
+                    "risk"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Polarity": [
+                    "high"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "or very high risk acute lymphoblastic leukemia, acute myeloid leukemia,",
+                      "Risk": [
+                        "risk"
+                      ],
+                      "Condition": [
+                        "lymphoblastic leukemia",
+                        "myeloid leukemia"
+                      ],
+                      "Polarity": [
+                        "high"
+                      ],
+                      "Acuteness": [
+                        "acute"
+                      ],
+                      "Condition-Name": [
+                        "lymphoblastic leukemia",
+                        "myeloid leukemia"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Hodgkin lymphoma,",
+                          "Condition": [
+                            "Hodgkin lymphoma",
+                            "lymphoma"
+                          ],
+                          "Modifier": [
+                            "Hodgkin"
+                          ],
+                          "Condition-Name": [
+                            "Hodgkin lymphoma",
+                            "lymphoma"
+                          ]
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "non-Hodgkin lymphoma,",
+                                  "Condition": [
+                                    "Hodgkin lymphoma",
+                                    "lymphoma"
+                                  ],
+                                  "Modifier": [
+                                    "Hodgkin"
+                                  ],
+                                  "Eq-Operator": [
+                                    "-"
+                                  ],
+                                  "Condition-Name": [
+                                    "Hodgkin lymphoma",
+                                    "lymphoma"
+                                  ],
+                                  "Negation": [
+                                    "non"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "sarcomas.",
+                                  "Condition": [
+                                    "sarcomas"
+                                  ],
+                                  "Condition-Name": [
+                                    "sarcomas"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Healthy controls:",
+          "Condition": [
+            "Healthy"
+          ],
+          "Condition-Name": [
+            "Healthy"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "• Healthy controls are defined as children ages 1-18 years old",
+          "Age": [
+            "age",
+            "ages"
+          ],
+          "Eq-Comparison": [
+            "1-18 years"
+          ],
+          "Condition": [
+            "Healthy"
+          ],
+          "Eq-Value": [
+            "1",
+            "18"
+          ],
+          "Eq-Operator": [
+            "-"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Condition-Name": [
+            "Healthy"
+          ],
+          "Life-Stage-And-Gender": [
+            "children"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "who are"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "free from diseases",
+                      "Condition": [
+                        "diseases",
+                        "disease"
+                      ],
+                      "Condition-Name": [
+                        "diseases"
+                      ],
+                      "Negation": [
+                        "free from"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "or medical conditions that might be affected by",
+                          "Condition": [
+                            "medical conditions"
+                          ],
+                          "Assertion": [
+                            "might be"
+                          ],
+                          "Stability": [
+                            "affected",
+                            "affect"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or have an impact on this research study. Healthy controls will be matched with patients for age, sex, ethnicity, geographic region, and tanner stage, since it is known that these factors can affect the epigenetic signature of an individual. Controls will already be having blood drawn as part of their routine care.",
+                          "Age": [
+                            "age"
+                          ],
+                          "Condition": [
+                            "Healthy"
+                          ],
+                          "Study": [
+                            "study"
+                          ],
+                          "Assertion": [
+                            "can"
+                          ],
+                          "Observation": [
+                            "epigenetic signature",
+                            "blood"
+                          ],
+                          "Procedure": [
+                            "routine care"
+                          ],
+                          "Condition-Name": [
+                            "Healthy"
+                          ],
+                          "Stability": [
+                            "impact",
+                            "affect"
+                          ],
+                          "Specimen": [
+                            "blood"
+                          ],
+                          "Observation-Name": [
+                            "epigenetic signature"
+                          ],
+                          "Procedure-Name": [
+                            "routine care"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
