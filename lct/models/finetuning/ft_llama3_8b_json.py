@@ -114,4 +114,7 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
-model.save_pretrained(f"70b_p4/llama3_8b_Lora_ep{epoch}_r{r}_prompt1_train_only_p4") 
+model.save_pretrained(f"70b_p4/llama3_8b_Lora_ep{epoch}_r{r}_prompt1_train_only_p4")
+
+# model.push_to_hub("your_name/lora_model", token = "...") # Online saving
+# tokenizer.push_to_hub("your_name/lora_model", token = "...") # Online saving

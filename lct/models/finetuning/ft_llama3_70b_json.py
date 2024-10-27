@@ -9,10 +9,14 @@ max_seq_length = 2048
 dtype = None
 load_in_4bit = True
 
+model_path = "tuned_models/llama3_70b/"
+
+
 r = 256
 epoch = 10
-output_dir  = "outputs/outputs_70b_p4_4" # outputs_70b_p4_5
-os.makedirs(output_dir, exist_ok=True)
+output_dir  = "output/70b"
+os.makedirs(model_path, exist_ok=True)
+os.makedirs(model_path + output_dir, exist_ok=True)
 
 
 model, tokenizer = FastLanguageModel.from_pretrained(
@@ -65,7 +69,6 @@ dataset = load_from_disk(dataset_path)
 dataset = dataset['train']
 dataset = dataset.map(formatting_prompts_func, batched=True)
 
-
 trainer = SFTTrainer(
     model = model,
     tokenizer = tokenizer,
@@ -85,16 +88,15 @@ trainer = SFTTrainer(
         bf16 = torch.cuda.is_bf16_supported(),
         optim = "adamw_8bit",
         weight_decay = 0.05,  
-        lr_scheduler_type = "cosine",  # cosine (default)
+        lr_scheduler_type = "cosine",
         seed = 42, 
         output_dir = output_dir,
         logging_steps = 20,  
         save_strategy = 'steps',  
-        save_steps = 20,  # 100
+        save_steps = 20,
         max_grad_norm = 1.0,  
     ),
 )
-
 
 #@title Show current memory stats
 gpu_stats = torch.cuda.get_device_properties(0)
@@ -115,4 +117,7 @@ print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
 
-model.save_pretrained(f"70b_p4/llama3_70b_Lora_ep{epoch}_r{r}_prompt1_train_only_p4") 
+model.save_pretrained(f"{model_path}/llama3_70b_ep{epoch}_r{r}_prompt1_json")
+
+# model.push_to_hub("your_name/lora_model", token = "...") # Online saving
+# tokenizer.push_to_hub("your_name/lora_model", token = "...") # Online saving
