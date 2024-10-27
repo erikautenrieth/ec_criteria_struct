@@ -8,38 +8,26 @@ LCT-Korpus und Chia-Korpus. Zudem wurden zwei Methodische Ansätze verfolgt.
 2. Direkte Strukturierung: LLMs strukturieren die Eignungskriterientexte in eine AST-Struktur im JSON-Format.
 
 
-Die Ordnerstruktur der Arbeit ist wie folgt aufgebaut:
-
-1. chia  
-   - evaluate
-   - input 
-   - models 
-   - transform_chia
-- lct
-   - evaluate
-   - input 
-   - models 
-   - transform_lct
+Die Ordnerstruktur der Arbeit ist wie folgt aufgebaut. 
+Jeder Ordner enthält eine README.md Datei, die die Funktionalität des Ordners beschreibt.
 
 
 
-## Preprocessing
+1. chia  (nur für die indirekte Strukturierung)
+   - evaluate: Modellausgaben und Evaluierungsfunktionen
+   - input: Chia-Testdaten 
+   - models: LCT-Modelle 
+   - transform_chia: Preprocessing der Chia-Daten
+2. lct (direkte und indirekte Strukturierung)
+   - evaluate: Modellausgaben und Evaluierungsfunktionen
+   - input: Trainings- Testdaten, Prompts 
+   - models: Fine-Tuning Funktionen, Verwendetet LLMs 
+   - transform_lct: Preprocessing der LCT-Daten
 
-
-
-
-
-## Indirekte Strukturierung
-
-
-
-
-
-
-
-
-
-## Direkte Strukturierung 
-
+3. parser
+    - AST_Parser: Verarbeitet die Ausgaben der indirekten Strukturierung als AST-Stuktur im JSON-Format.
+    - AST_Plotter: Plottet AST-Strukturen von Eignungskriterien.
+    - Fhir_Parser: Zukünftige Implementierung eines Parsers von JSON-Dateien mit AST-Struktur in ein FHIR-Format.
+    - JSON_Parser: Fügt die AST-Strukturen von Ein- und Ausschlusskriterien als ein Baum über ein AND-Knoten zusammen. 
 
 
