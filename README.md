@@ -37,4 +37,5 @@ Die Struktur der chia-Ordner ist analog zu den lct-Ordnern.
 
 4. zusatz
    - auswertungen: Ergänzende Evaluationen der Modelle in Latex-Tabellen.
+   - code: Wichtige Funktionen der Arbeit.
    - korpora: alle öffentlich verfügbaren Korporas mit Eignungskriterien. 
