@@ -1,0 +1,92 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- Evidence of Crohn's disease",
+          "Condition": [
+            "Crohn's disease"
+          ],
+          "Condition-Name": [
+            "Crohn's disease"
+          ],
+          "Observation": [
+            "Evidence"
+          ],
+          "Observation-Name": [
+            "Evidence"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "indeterminate colitis",
+              "Condition": [
+                "colitis"
+              ],
+              "Condition-Name": [
+                "colitis"
+              ],
+              "Modifier": [
+                "indeterminate"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "or presence of bacterial or parasitic infection.",
+                  "Condition": [
+                    "bacterial infection",
+                    "parasitic infection"
+                  ],
+                  "Condition-Name": [
+                    "bacterial infection",
+                    "parasitic infection"
+                  ],
+                  "Modifier": [
+                    "presence"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients receiving biologic agents",
+              "Condition": [
+                "receiving"
+              ],
+              "Condition-Name": [
+                "receiving"
+              ],
+              "Drug": [
+                "biologic agents"
+              ],
+              "Drug-Name": [
+                "biologic agents"
+              ]
+            },
+            "right": {
+              "raw_text": "and experimental agents are excluded.",
+              "Condition": [
+                "agents"
+              ],
+              "Condition-Name": [
+                "agents"
+              ],
+              "Modifier": [
+                "experimental"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

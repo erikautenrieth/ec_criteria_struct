@@ -1,0 +1,162 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Patients under tutorship",
+          "Condition": [
+            "tutorship"
+          ],
+          "Condition-Name": [
+            "tutorship"
+          ],
+          "Condition-Type": [
+            "under"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "or curatorship",
+              "Condition": [
+                "curatorship"
+              ],
+              "Condition-Name": [
+                "curatorship"
+              ],
+              "Condition-Type": [
+                "under"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "inability to give informed consent",
+                  "Condition": [
+                    "inability"
+                  ],
+                  "Condition-Name": [
+                    "inability"
+                  ],
+                  "Condition-Type": [
+                    "to give informed consent"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Patients receiving an anti-osteoporotic treatment",
+          "Condition": [
+            "receiving an anti-osteoporotic treatment"
+          ],
+          "Condition-Name": [
+            "anti-osteoporotic treatment"
+          ],
+          "Condition-Type": [
+            "receiving"
+          ],
+          "Drug": [
+            "anti-osteoporotic"
+          ],
+          "Drug-Name": [
+            "anti-osteoporotic"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Patients requiring an anti-osteoporotic baseline treatment (T-score ⩽ -3DS on at least 1 site or FRAX score above the therapeutic intervention threshold)",
+              "Condition": [
+                "requiring an anti-osteoporotic baseline treatment"
+              ],
+              "Condition-Name": [
+                "anti-osteoporotic baseline treatment"
+              ],
+              "Condition-Type": [
+                "requiring"
+              ],
+              "Eq-Operator": [
+                "⩽",
+                "above"
+              ],
+              "Eq-Comparison": [
+                "⩽ -3DS",
+                "above the therapeutic intervention threshold"
+              ],
+              "Eq-Value": [
+                "-3",
+                "1"
+              ],
+              "Eq-Temporal-Unit": [
+                "DS"
+              ],
+              "Observation": [
+                "T-score",
+                "FRAX score"
+              ],
+              "Observation-Name": [
+                "T-score",
+                "FRAX score"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Patients with one or more major risk factors for osteoporosis",
+                  "Condition": [
+                    "with one or more major risk factors"
+                  ],
+                  "Condition-Name": [
+                    "major risk factors"
+                  ],
+                  "Condition-Type": [
+                    "for osteoporosis"
+                  ],
+                  "Risk": [
+                    "major risk factors"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Patients who have received topical corticosteroids in less than 3 months",
+                  "Condition": [
+                    "received topical corticosteroids"
+                  ],
+                  "Condition-Name": [
+                    "topical corticosteroids"
+                  ],
+                  "Condition-Type": [
+                    "received"
+                  ],
+                  "Drug": [
+                    "topical corticosteroids"
+                  ],
+                  "Drug-Name": [
+                    "topic cal corticosteroids"
+                  ],
+                  "Eq-Operator": [
+                    "less than"
+                  ],
+                  "Eq-Comparison": [
+                    "less than 3 months"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Heart failure NYHA IIIB-IV",
+      "Condition": [
+        "Heart failure"
+      ],
+      "Condition-Name": [
+        "Heart failure"
+      ],
+      "Modifier": [
+        "NYHA IIIB-IV"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Planned coronary revascularization",
+          "Procedure": [
+            "coronary revascularization"
+          ],
+          "Procedure-Name": [
+            "coronary revascularization"
+          ],
+          "Polarity": [
+            "planned"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Planned major surgery within the next 12 months",
+              "Procedure": [
+                "major surgery"
+              ],
+              "Procedure-Name": [
+                "major surgery"
+              ],
+              "Eq-Operator": [
+                "within"
+              ],
+              "Time": [
+                "the next 12 months"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Value": [
+                "12"
+              ],
+              "Polarity": [
+                "planned"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Inability to walk for any reason",
+                      "Condition": [
+                        "Inability to walk"
+                      ],
+                      "Condition-Name": [
+                        "Inability to walk"
+                      ],
+                      "Modifier": [
+                        "for any reason"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Comorbidities that would preclude adherence to the rehabilitation program (e.g. arthrosis, active malignancy, major depression or other significant psychiatric disorder, cognitive impairment) - at the discretion of the physician",
+                          "Condition": [
+                            "Comorbidities"
+                          ],
+                          "Condition-Name": [
+                            "Comorbidities"
+                          ],
+                          "Modifier": [
+                            "that would preclude adherence to the rehabilitation program",
+                            "at the discretion of the physician"
+                          ],
+                          "Exception": [
+                            "e.g. arthrosis",
+                            "active malignancy",
+                            "major depression",
+                            "other significant psychiatric disorder",
+                            "cognitive impairment"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "Life expectancy less than 12 months",
+                              "Condition": [
+                                "Life expectancy"
+                              ],
+                              "Condition-Name": [
+                                "Life expectancy"
+                              ],
+                              "Modifier": [
+                                "less than 12 months"
+                              ],
+                              "Eq-Operator": [
+                                "less than"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "months"
+                              ],
+                              "Eq-Value": [
+                                "12"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "Pregnancy",
+                                  "Condition": [
+                                    "Pregnancy"
+                                  ],
+                                  "Condition-Name": [
+                                    "Pregnancy"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "Inability to operate the smart-watch",
+                                  "Condition": [
+                                    "Inability to operate the smart-watch"
+                                  ],
+                                  "Condition-Name": [
+                                    "Inability to operate the smart-watch"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

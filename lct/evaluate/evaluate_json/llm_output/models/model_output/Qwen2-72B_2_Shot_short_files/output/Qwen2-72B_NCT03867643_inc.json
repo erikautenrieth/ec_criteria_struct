@@ -1,0 +1,104 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "-  Children who are 6-12 years old，in Chongqing",
+      "Life-Stage-And-Gender": [
+        "Children"
+      ],
+      "Age": [
+        "6-12 years old"
+      ],
+      "Eq-Value": [
+        "6",
+        "12"
+      ],
+      "Eq-Temporal-Unit": [
+        "years"
+      ],
+      "Location": [
+        "Chongqing"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-  After birth, three injections of Hep B were inoculated in time according to the procedure of 0, 1 and 6 months（The vaccination certificate record）",
+          "Procedure": [
+            "three injections of Hep B",
+            "inoculated",
+            "procedure"
+          ],
+          "Procedure-Name": [
+            "Hep B",
+            "inoculated",
+            "procedure"
+          ],
+          "Condition": [
+            "After birth"
+          ],
+          "Condition-Name": [
+            "birth"
+          ],
+          "Eq-Value": [
+            "0",
+            "1",
+            "6"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "-  No HBV booster vaccine given since primary HBV immunization",
+                  "Condition": [
+                    "HBV booster vaccine given",
+                    "primary HBV immunization"
+                  ],
+                  "Condition-Name": [
+                    "HBV booster vaccine",
+                    "primary HBV immunization"
+                  ],
+                  "Negation": [
+                    "No"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "-  Children or guardian knew and agreed to accept the study",
+                  "Condition": [
+                    "knew and agreed to accept the study"
+                  ],
+                  "Condition-Name": [
+                    "knew and agreed to accept the study"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "Children",
+                    "guardian"
+                  ]
+                },
+                "right": {
+                  "raw_text": "-  Follow - up study and blood collection after vaccination can be accepted",
+                  "Condition": [
+                    "Follow - up study",
+                    "blood collection after vaccination"
+                  ],
+                  "Condition-Name": [
+                    "Follow - up study",
+                    "blood collection after vaccination"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

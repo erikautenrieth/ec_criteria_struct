@@ -1,0 +1,233 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "1. Admitted from the emergency department to inpatient or observation status at one of: Carolinas Medical Center, Carolinas Medical Center - Mercy, or Atrium Health Northeast;",
+      "Condition": [
+        "Admitted"
+      ],
+      "Condition-Type": [
+        "inpatient",
+        "observation"
+      ],
+      "Location": [
+        "emergency department",
+        "Carolinas Medical Center",
+        "Carolinas Medical Center - Mercy",
+        "Atrium Health Northeast"
+      ],
+      "Encounter": [
+        "Admitted"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "2. ≥18 years of age upon admission;",
+          "Age": [
+            "≥18 years"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Eq-Comparison": [
+            "≥18 years"
+          ],
+          "Condition": [
+            "upon admission"
+          ],
+          "Encounter": [
+            "upon admission"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "3. oral/parenteral antibiotic or bacterial culture order within 24 hours of emergency department presentation and",
+                  "Condition": [
+                    "oral/parenteral antibiotic order",
+                    "bacterial culture order"
+                  ],
+                  "Condition-Name": [
+                    "oral/parenteral antibiotic",
+                    "bacterial culture"
+                  ],
+                  "Eq-Value": [
+                    "24"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "hours"
+                  ],
+                  "Eq-Comparison": [
+                    "within 24 hours"
+                  ],
+                  "Location": [
+                    "emergency department"
+                  ],
+                  "Observation": [
+                    "oral/parenteral antibiotic",
+                    "bacterial culture"
+                  ],
+                  "Observation-Name": [
+                    "oral/parenteral antibiotic",
+                    "bacterial culture"
+                  ],
+                  "Procedure": [
+                    "presentation"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "1. culture drawn first, antibiotics ordered within 48 hours",
+                          "Condition": [
+                            "culture drawn",
+                            "antibiotics ordered"
+                          ],
+                          "Condition-Name": [
+                            "culture",
+                            "antibiotics"
+                          ],
+                          "Eq-Value": [
+                            "48"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "hours"
+                          ],
+                          "Eq-Comparison": [
+                            "within 48 hours"
+                          ],
+                          "Observation": [
+                            "culture",
+                            "antibiotics"
+                          ],
+                          "Observation-Name": [
+                            "culture",
+                            "antibiotics"
+                          ],
+                          "Procedure": [
+                            "drawn"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or"
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "2. antibiotics ordered first, culture ordered within 48 hours",
+                          "Condition": [
+                            "antibiotics ordered",
+                            "culture ordered"
+                          ],
+                          "Condition-Name": [
+                            "antibiotics",
+                            "culture"
+                          ],
+                          "Eq-Value": [
+                            "48"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "hours"
+                          ],
+                          "Eq-Comparison": [
+                            "within 48 hours"
+                          ],
+                          "Observation": [
+                            "antibiotics",
+                            "culture"
+                          ],
+                          "Observation-Name": [
+                            "antibiotics",
+                            "culture"
+                          ],
+                          "Procedure": [
+                            "ordered"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "4. deemed as high-risk for 30-day readmission (i.e., ≥ 20%) or 30-day mortality (i.e., ≥ 10%) using risk-scoring models",
+                  "Condition": [
+                    "deemed as high-risk"
+                  ],
+                  "Condition-Name": [
+                    "high-risk"
+                  ],
+                  "Eq-Value": [
+                    "30",
+                    "≥ 20%",
+                    "30",
+                    "≥ 10%"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "day",
+                    "day"
+                  ],
+                  "Eq-Operator": [
+                    "≥"
+                  ],
+                  "Eq-Comparison": [
+                    "for 30-day readmission",
+                    "for 30-day mortality"
+                  ],
+                  "Observation": [
+                    "readmission",
+                    "mortality"
+                  ],
+                  "Observation-Name": [
+                    "readmission",
+                    "mortality"
+                  ],
+                  "Procedure": [
+                    "using"
+                  ],
+                  "Study": [
+                    "risk-scoring models"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "5. not discharged at the time of patient list generation",
+                      "Condition": [
+                        "discharged"
+                      ],
+                      "Negation": [
+                        "not"
+                      ],
+                      "Condition-Name": [
+                        "discharged"
+                      ],
+                      "Procedure": [
+                        "generation"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

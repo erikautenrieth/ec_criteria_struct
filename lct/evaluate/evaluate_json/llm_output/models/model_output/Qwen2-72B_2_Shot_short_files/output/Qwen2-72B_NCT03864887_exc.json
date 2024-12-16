@@ -1,0 +1,213 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "Patients who are in pregnancy",
+              "Condition": [
+                "pregnancy"
+              ],
+              "Condition-Name": [
+                "pregnancy"
+              ],
+              "Polarity": [
+                "positive"
+              ]
+            },
+            "right": {
+              "raw_text": "have plan to conception",
+              "Condition": [
+                "conception"
+              ],
+              "Condition-Name": [
+                "conception"
+              ],
+              "Polarity": [
+                "planned"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Patients who have vertebra surgery",
+              "Condition": [
+                "vertebra surgery"
+              ],
+              "Condition-Name": [
+                "vertebra surgery"
+              ],
+              "Polarity": [
+                "positive"
+              ]
+            },
+            "right": {
+              "raw_text": "have plan of surgery",
+              "Condition": [
+                "surgery"
+              ],
+              "Condition-Name": [
+                "surgery"
+              ],
+              "Polarity": [
+                "planned"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Patients who are inappropriate to join this trial judged by the radiologists or specialists",
+                  "Condition": [
+                    "inappropriate to join this trial"
+                  ],
+                  "Condition-Name": [
+                    "inappropriate to join this trial"
+                  ],
+                  "Provider": [
+                    "radiologists",
+                    "specialists"
+                  ],
+                  "Polarity": [
+                    "negative"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "AIDS",
+                  "Condition": [
+                    "AIDS"
+                  ],
+                  "Condition-Name": [
+                    "AIDS"
+                  ],
+                  "Polarity": [
+                    "negative"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Active Hepatitis",
+                  "Condition": [
+                    "Active Hepatitis"
+                  ],
+                  "Condition-Name": [
+                    "Active Hepatitis"
+                  ],
+                  "Polarity": [
+                    "negative"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Tuberculosis",
+                      "Condition": [
+                        "Tuberculosis"
+                      ],
+                      "Condition-Name": [
+                        "Tuberculosis"
+                      ],
+                      "Polarity": [
+                        "negative"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Syphilis",
+                      "Condition": [
+                        "Syphilis"
+                      ],
+                      "Condition-Name": [
+                        "Syphilis"
+                      ],
+                      "Polarity": [
+                        "negative"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "Patients who regularly take anticoagulants",
+          "Condition": [
+            "take anticoagulants"
+          ],
+          "Condition-Name": [
+            "take anticoagulants"
+          ],
+          "Frequency": [
+            "regularly"
+          ],
+          "Drug": [
+            "anticoagulants"
+          ],
+          "Drug-Name": [
+            "anticoagulants"
+          ],
+          "Polarity": [
+            "negative"
+          ]
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "antiplatelet drugs",
+          "Condition": [
+            "antiplatelet drugs"
+          ],
+          "Condition-Name": [
+            "antiplatelet drugs"
+          ],
+          "Drug": [
+            "antiplatelet drugs"
+          ],
+          "Drug-Name": [
+            "antiplatelet drugs"
+          ],
+          "Polarity": [
+            "negative"
+          ]
+        }
+      }
+    }
+  }
+}

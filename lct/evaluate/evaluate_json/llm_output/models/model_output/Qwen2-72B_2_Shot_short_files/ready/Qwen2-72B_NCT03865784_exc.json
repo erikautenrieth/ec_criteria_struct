@@ -1,0 +1,100 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "- Federated boxers with lumbar injury with medical diagnosis",
+      "Condition": [
+        "lumbar injury"
+      ],
+      "Condition-Name": [
+        "lumbar injury"
+      ],
+      "Encounter": [
+        "medical diagnosis"
+      ],
+      "Condition-Type": [
+        "injury"
+      ],
+      "Location": [
+        "lumbar"
+      ],
+      "Condition": [
+        "Federated boxers"
+      ],
+      "Condition-Name": [
+        "boxers"
+      ],
+      "Modifier": [
+        "Federated"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Who are or have been treated by pharmacological or physiotherapy in the last 6 months",
+          "Procedure": [
+            "treated"
+          ],
+          "Procedure-Name": [
+            "pharmacological",
+            "physiotherapy"
+          ],
+          "Eq-Comparison": [
+            "in the last 6 months"
+          ],
+          "Eq-Temporal-Period": [
+            "6 months"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Eq-Temporal-Recency": [
+            "last"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Presenting allergies or alterations of the skin",
+              "Condition": [
+                "allergies",
+                "alterations of the skin"
+              ],
+              "Condition-Name": [
+                "allergies",
+                "alterations of the skin"
+              ],
+              "Location": [
+                "skin"
+              ],
+              "Modifier": [
+                "presenting"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Not sign the informed consent document.",
+                  "Negation": [
+                    "Not"
+                  ],
+                  "Procedure": [
+                    "sign"
+                  ],
+                  "Procedure-Name": [
+                    "sign"
+                  ],
+                  "Condition": [
+                    "the informed consent document"
+                  ],
+                  "Condition-Name": [
+                    "informed consent document"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "-  Dysfunctional lipids, blood pressure and glycemic control determined at a screening visit:"
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "-  Triglycerides > 150 mg/dL",
+                  "Observation": [
+                    "Triglycerides"
+                  ],
+                  "Observation-Name": [
+                    "Triglycerides"
+                  ],
+                  "Eq-Operator": [
+                    ">"
+                  ],
+                  "Eq-Value": [
+                    "150"
+                  ],
+                  "Eq-Unit": [
+                    "mg/dL"
+                  ],
+                  "Eq-Comparison": [
+                    "> 150 mg/dL"
+                  ]
+                },
+                "right": {
+                  "raw_text": "OR HDL <50 in females, <40 mg/dL in males",
+                  "Observation": [
+                    "HDL"
+                  ],
+                  "Observation-Name": [
+                    "HDL"
+                  ],
+                  "Eq-Operator": [
+                    "<",
+                    "<"
+                  ],
+                  "Eq-Value": [
+                    "50",
+                    "40"
+                  ],
+                  "Eq-Unit": [
+                    "mg/dL",
+                    "mg/dL"
+                  ],
+                  "Life-Stage-And-Gender": [
+                    "females",
+                    "males"
+                  ],
+                  "Eq-Comparison": [
+                    "<50 in females",
+                    "<40 mg/dL in males"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "-  Systolic blood pressure ≥130 mmHg OR diastolic blood pressure ≥80 mmHg (or on hypertension medication)",
+                      "Observation": [
+                        "Systolic blood pressure",
+                        "diastolic blood pressure"
+                      ],
+                      "Observation-Name": [
+                        "Systolic blood pressure",
+                        "diastolic blood pressure"
+                      ],
+                      "Eq-Operator": [
+                        "≥",
+                        "≥"
+                      ],
+                      "Eq-Value": [
+                        "130",
+                        "80"
+                      ],
+                      "Eq-Unit": [
+                        "mmHg",
+                        "mmHg"
+                      ],
+                      "Condition": [
+                        "hypertension"
+                      ],
+                      "Condition-Name": [
+                        "hypertension"
+                      ],
+                      "Eq-Comparison": [
+                        "≥130 mmHg",
+                        "≥80 mmHg"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "(or on hypertension medication)"
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "-  HbA1c ≥5.7% or higher",
+                  "Observation": [
+                    "HbA1c"
+                  ],
+                  "Observation-Name": [
+                    "HbA1c"
+                  ],
+                  "Eq-Operator": [
+                    "≥",
+                    "higher"
+                  ],
+                  "Eq-Value": [
+                    "5.7"
+                  ],
+                  "Eq-Unit": [
+                    "%"
+                  ],
+                  "Eq-Comparison": [
+                    "≥5.7%",
+                    "higher"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "-  No diagnosis or treatment for cancer in the past year",
+                      "Condition": [
+                        "cancer"
+                      ],
+                      "Condition-Name": [
+                        "cancer"
+                      ],
+                      "Eq-Temporal-Recency": [
+                        "in the past year"
+                      ],
+                      "Negation": [
+                        "No"
+                      ],
+                      "Procedure": [
+                        "treatment"
+                      ],
+                      "Procedure-Name": [
+                        "treatment"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "-  No diagnosis of mild cognitive impairment or dementia in the past year",
+                      "Condition": [
+                        "mild cognitive impairment",
+                        "dementia"
+                      ],
+                      "Condition-Name": [
+                        "mild cognitive impairment",
+                        "dementia"
+                      ],
+                      "Eq-Temporal-Recency": [
+                        "in the past year"
+                      ],
+                      "Negation": [
+                        "No"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "-  Ability to perform daily exercise, including aerobic activity and resistance exercise",
+                  "Condition": [
+                    "Ability to perform daily exercise"
+                  ],
+                  "Condition-Name": [
+                    "Ability to perform daily exercise"
+                  ],
+                  "Observation": [
+                    "aerobic activity",
+                    "resistance exercise"
+                  ],
+                  "Observation-Name": [
+                    "aerobic activity",
+                    "resistance exercise"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "-  Non-smoker in the past year",
+                      "Condition": [
+                        "smoker"
+                      ],
+                      "Condition-Name": [
+                        "smoker"
+                      ],
+                      "Eq-Temporal-Recency": [
+                        "in the past year"
+                      ],
+                      "Negation": [
+                        "Non"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

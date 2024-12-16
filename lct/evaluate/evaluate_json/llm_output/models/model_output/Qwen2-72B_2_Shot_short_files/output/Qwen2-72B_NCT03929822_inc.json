@@ -1,0 +1,144 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "-  Women called back from a screening mammography by either FFDM or tomosynthesis with soft tissue abnormalities including masses, asymmetries, focal asymmetries or architectural distortion with or without calcifications.",
+      "Condition": [
+        "Women called back from a screening mammography"
+      ],
+      "Procedure": [
+        "screening mammography"
+      ],
+      "Procedure-Name": [
+        "mammography"
+      ],
+      "Condition": [
+        "soft tissue abnormalities",
+        "masses",
+        "asymmetries",
+        "focal asymmetries",
+        "architectural distortion",
+        "calcifications"
+      ],
+      "Condition-Name": [
+        "soft tissue abnormalities",
+        "masses",
+        "asymmetries",
+        "focal asymmetries",
+        "architectural distortion",
+        "calcifications"
+      ],
+      "Life-Stage-And-Gender": [
+        "Women"
+      ],
+      "Observation": [
+        "FFDM",
+        "tomosynthesis"
+      ],
+      "Observation-Name": [
+        "FFDM",
+        "tomosynthesis"
+      ],
+      "OR": {
+        "left": {
+          "raw_text": "FFDM"
+        },
+        "right": {
+          "raw_text": "tomosynthesis"
+        }
+      },
+      "OR": {
+        "left": {
+          "raw_text": "masses"
+        },
+        "right": {
+          "raw_text": "asymmetries"
+        }
+      },
+      "OR": {
+        "left": {
+          "raw_text": "focal asymmetries"
+        },
+        "right": {
+          "raw_text": "architectural distortion"
+        }
+      },
+      "OR": {
+        "left": {
+          "raw_text": "with calcifications"
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "without calcifications"
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Patients will be questioned regarding the possibility of pregnancy",
+          "Condition": [
+            "pregnancy"
+          ],
+          "Condition-Name": [
+            "pregnancy"
+          ],
+          "Procedure": [
+            "questioned"
+          ],
+          "Procedure-Name": [
+            "questioned"
+          ],
+          "Condition": [
+            "possibility of pregnancy"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "and will need a negative pregnancy test",
+              "Condition": [
+                "negative pregnancy test"
+              ],
+              "Condition-Name": [
+                "negative pregnancy test"
+              ],
+              "Observation": [
+                "pregnancy test"
+              ],
+              "Observation-Name": [
+                "pregnancy test"
+              ],
+              "Eq-Operator": [
+                "negative"
+              ],
+              "Eq-Value": [
+                "negative"
+              ]
+            },
+            "right": {
+              "raw_text": "prior the study intervention.",
+              "Condition": [
+                "study intervention"
+              ],
+              "Condition-Name": [
+                "study intervention"
+              ],
+              "Procedure": [
+                "study intervention"
+              ],
+              "Procedure-Name": [
+                "study intervention"
+              ],
+              "Modifier": [
+                "prior"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

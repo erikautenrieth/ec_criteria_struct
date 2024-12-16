@@ -1,0 +1,88 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "Patient not eligible for deep brain stimulation surgery",
+          "Condition": [
+            "Patient not eligible"
+          ],
+          "Procedure": [
+            "deep brain stimulation surgery"
+          ],
+          "Procedure-Name": [
+            "deep brain stimulation surgery"
+          ],
+          "Negation": [
+            "not eligible"
+          ]
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Pregnant women or nursing mothers",
+          "Condition": [
+            "Pregnant women",
+            "nursing mothers"
+          ],
+          "Life-Stage-And-Gender": [
+            "women",
+            "mothers"
+          ],
+          "Condition-Type": [
+            "Pregnant",
+            "nursing"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Persons deprived of liberty by judicial or administrative decision",
+              "Condition": [
+                "Persons deprived of liberty"
+              ],
+              "Modifier": [
+                "judicial",
+                "administrative"
+              ],
+              "Condition-Type": [
+                "deprived of liberty"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Persons unable to express their consent or legally protected",
+                      "Condition": [
+                        "Persons unable to express their consent"
+                      ],
+                      "Negation": [
+                        "unable"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Persons in period of disqualification for another interventional research",
+                  "Condition": [
+                    "Persons in period of disqualification"
+                  ],
+                  "Condition-Type": [
+                    "disqualification"
+                  ],
+                  "Modifier": [
+                    "another interventional research"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

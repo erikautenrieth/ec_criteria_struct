@@ -1,0 +1,88 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "History of any Axis I psychiatric diagnosis other than nicotine dependence",
+          "Condition": [
+            "Axis I psychiatric diagnosis"
+          ],
+          "Condition-Name": [
+            "Axis I psychiatric diagnosis"
+          ],
+          "Negation": [
+            "other than"
+          ],
+          "Exception": [
+            "nicotine dependence"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "Medical conditions that might affect brain function",
+          "Condition": [
+            "Medical conditions"
+          ],
+          "Condition-Name": [
+            "Medical conditions"
+          ],
+          "Modifier": [
+            "that might affect brain function"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Current use of medications that could alter brain function",
+              "Condition": [
+                "use of medications"
+              ],
+              "Condition-Name": [
+                "use of medications"
+              ],
+              "Modifier": [
+                "Current",
+                "that could alter brain function"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Pregnancy",
+                  "Condition": [
+                    "Pregnancy"
+                  ],
+                  "Condition-Name": [
+                    "Pregnancy"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Current illicit drug use other than occasional use of marijuana",
+                      "Condition": [
+                        "Current illicit drug use"
+                      ],
+                      "Condition-Name": [
+                        "Current illicit drug use"
+                      ],
+                      "Negation": [
+                        "other than"
+                      ],
+                      "Exception": [
+                        "occasional use of marijuana"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

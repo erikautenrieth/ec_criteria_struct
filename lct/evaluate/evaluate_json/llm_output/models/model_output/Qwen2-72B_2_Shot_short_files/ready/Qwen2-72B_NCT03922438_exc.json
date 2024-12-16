@@ -1,0 +1,82 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "Patient with syndromic cleft lip",
+      "Condition": [
+        "syndromic cleft lip"
+      ],
+      "Condition-Name": [
+        "cleft lip"
+      ],
+      "Modifier": [
+        "syndromic"
+      ]
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Previous operated cases",
+          "Condition": [
+            "Previous operated cases"
+          ],
+          "Procedure": [
+            "operated"
+          ],
+          "Procedure-Name": [
+            "operated"
+          ],
+          "Modifier": [
+            "Previous"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Incomplete cleft lip",
+              "Condition": [
+                "Incomplete cleft lip"
+              ],
+              "Condition-Name": [
+                "cleft lip"
+              ],
+              "Modifier": [
+                "Incomplete"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Patient older than six months",
+                  "Age": [
+                    "six months"
+                  ],
+                  "Eq-Operator": [
+                    "older than"
+                  ],
+                  "Eq-Value": [
+                    "six"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ]
+                },
+                "right": {
+                  "raw_text": "Patients with any systemic condition",
+                  "Condition": [
+                    "any systemic condition"
+                  ],
+                  "Condition-Type": [
+                    "systemic"
+                  ],
+                  "Modifier": [
+                    "any"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

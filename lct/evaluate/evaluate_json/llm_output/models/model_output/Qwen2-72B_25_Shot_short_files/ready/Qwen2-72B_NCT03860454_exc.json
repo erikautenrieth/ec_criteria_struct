@@ -1,0 +1,100 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Needle-phobia that would preclude blood-letting",
+                  "Condition": [
+                    "Needle-phobia"
+                  ],
+                  "Condition-Name": [
+                    "Needle-phobia"
+                  ],
+                  "Negation": [
+                    "preclude"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Participants unwilling to consent",
+                  "Negation": [
+                    "unwilling"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Patients that have a conventional contraindication for cardiac magnetic resonance imaging (MRI).",
+              "Condition": [
+                "conventional contraindication"
+              ],
+              "Condition-Name": [
+                "conventional contraindication"
+              ],
+              "Negation": [
+                "have"
+              ],
+              "Procedure": [
+                "cardiac magnetic resonance imaging",
+                "MRI"
+              ],
+              "Procedure-Name": [
+                "cardiac magnetic resonance imaging",
+                "MRI"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients that have had a blood transfusion within the last month",
+              "Condition": [
+                "blood transfusion"
+              ],
+              "Condition-Name": [
+                "blood transfusion"
+              ],
+              "Negation": [
+                "had"
+              ],
+              "Eq-Comparison": [
+                "within the last month"
+              ],
+              "Eq-Temporal-Period": [
+                "within the last month"
+              ]
+            },
+            "right": {
+              "raw_text": "and patients having haemodialysis will be excluded.",
+              "Condition": [
+                "haemodialysis"
+              ],
+              "Condition-Name": [
+                "haemodialysis"
+              ],
+              "Negation": [
+                "having"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

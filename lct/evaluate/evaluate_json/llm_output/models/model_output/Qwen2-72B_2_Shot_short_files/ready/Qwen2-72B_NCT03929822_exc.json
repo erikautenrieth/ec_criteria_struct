@@ -1,0 +1,161 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "-  Age <30 years old",
+      "Age": [
+        "Age"
+      ],
+      "Eq-Operator": [
+        "<"
+      ],
+      "Eq-Value": [
+        "30"
+      ],
+      "Eq-Temporal-Unit": [
+        "years"
+      ],
+      "Eq-Comparison": [
+        "< 30 years"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "-  Screening mammography with only calcifications abnormalities",
+          "Procedure": [
+            "Screening mammography"
+          ],
+          "Procedure-Name": [
+            "mammography"
+          ],
+          "Condition": [
+            "calcifications abnormalities"
+          ],
+          "Condition-Name": [
+            "calcifications",
+            "abnormalities"
+          ],
+          "Modifier": [
+            "only"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "-  Male patients",
+                  "Life-Stage-And-Gender": [
+                    "Male"
+                  ],
+                  "Gender": [
+                    "Male"
+                  ],
+                  "Negation": [
+                    "not"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "-  Pregnant or lactating patients",
+                      "Condition": [
+                        "Pregnant",
+                        "lactating"
+                      ],
+                      "Condition-Name": [
+                        "Pregnant",
+                        "lactating"
+                      ],
+                      "Negation": [
+                        "not"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "-  Patients with any allergy to iodinated contrast",
+                          "Condition": [
+                            "allergy to iodinated contrast"
+                          ],
+                          "Condition-Name": [
+                            "allergy"
+                          ],
+                          "Drug": [
+                            "iodinated contrast"
+                          ],
+                          "Drug-Name": [
+                            "iodinated contrast"
+                          ],
+                          "Negation": [
+                            "not"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "-  Patients with eGFR < 45",
+                              "Condition": [
+                                "eGFR < 45"
+                              ],
+                              "Condition-Name": [
+                                "eGFR"
+                              ],
+                              "Negation": [
+                                "not"
+                              ],
+                              "Eq-Operator": [
+                                "<"
+                              ],
+                              "Eq-Value": [
+                                "45"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "-  Patients that may be treated with radioactive iodine",
+                              "Condition": [
+                                "may be treated with radioactive iodine"
+                              ],
+                              "Condition-Name": [
+                                "treated"
+                              ],
+                              "Drug": [
+                                "radioactive iodine"
+                              ],
+                              "Drug-Name": [
+                                "radioactive iodine"
+                              ],
+                              "Negation": [
+                                "not"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
