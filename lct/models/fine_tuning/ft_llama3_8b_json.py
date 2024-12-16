@@ -6,20 +6,20 @@ import os
 from datasets import load_from_disk
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
-dtype = None # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
-load_in_4bit = True # Use 4bit quantization to reduce memory usage. Can be False.
+# LoRA Params
 r = 256
 epoch = 10
 
+# Output Directory for
 output_dir  = "outputs/outputs_8b"
 os.makedirs(output_dir, exist_ok=True)
 
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = "meta-llama/Meta-Llama-3-8B-Instruct",
-    max_seq_length = max_seq_length,
-    dtype = dtype,
-    load_in_4bit = load_in_4bit,
+    max_seq_length = max_seq_length, # Choose any! We auto support RoPE Scaling internally!
+    dtype = None, # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
+    load_in_4bit = True, # Use 4bit quantization to reduce memory usage. Can be False.
     token = "INSERT_HUGGINGFACE_TOKEN"
 )
 model = FastLanguageModel.get_peft_model(
@@ -28,7 +28,7 @@ model = FastLanguageModel.get_peft_model(
     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
                       "gate_proj", "up_proj", "down_proj",],
     lora_alpha = 256, # 256 (default),
-    lora_dropout=0.05,
+    lora_dropout= 0.05,
     bias = "none",    # Supports any, but = "none" is optimized
     use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context  # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
     random_state = 3407,
@@ -114,6 +114,9 @@ print(f"Peak reserved memory for training = {used_memory_for_lora} GB.")
 print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.")
 
+
+# Change Output Directory and Model Name
+# Save Model
 model.save_pretrained(f"70b_p4/llama3_8b_Lora_ep{epoch}_r{r}_prompt1_train_only_p4")
 
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
