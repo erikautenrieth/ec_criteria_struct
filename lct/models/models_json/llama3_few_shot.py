@@ -2,7 +2,7 @@ import transformers
 from helper_functions import *
 import torch
 
-batch_path = "eval/evaluate_json"
+batch_path = "evaluate/evaluate_json"
 n_shot = 5
 model_id =  "meta-llama/Meta-Llama-3-70B-Instruct"
 model_name = "Llama-3-70B-Instruct"
@@ -13,7 +13,7 @@ model_desc = read_text_file(f"{transform_lct}/input/prompt/all_entitys_prompt1.t
 command = "Structure the eligibility criteria based on the system input in JSON and extract the entities."
 
 study_path = f"{transform_lct}/input/dataset_p4_prompt1_new/test/input/"
-output_path = f"{transform_lct}/evaluate_struct/{batch_path}/model_output/{model_name}_{str(n_shot)}_Shot_files/output/"
+output_path = f"{transform_lct}/{batch_path}/model_output/{model_name}_{str(n_shot)}_Shot_files/output/"
 os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 

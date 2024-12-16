@@ -64,6 +64,7 @@ def formatting_prompts_func(examples):
     return { "text" : texts, }
 pass
 
+# Load Dataset
 dataset_path = 'dataset/dataset_p4_prompt1'
 dataset = load_from_disk(dataset_path)
 dataset = dataset['train']
@@ -104,7 +105,11 @@ start_gpu_memory = round(torch.cuda.max_memory_reserved() / 1024 / 1024 / 1024, 
 max_memory = round(gpu_stats.total_memory / 1024 / 1024 / 1024, 3)
 print(f"GPU = {gpu_stats.name}. Max memory = {max_memory} GB.")
 print(f"{start_gpu_memory} GB of memory reserved.")
+
+# Train Model
 trainer_stats = trainer.train()
+
+# Show Memory Stats
 used_memory = round(torch.cuda.max_memory_reserved() / 1024 / 1024 / 1024, 3)
 used_memory_for_lora = round(used_memory - start_gpu_memory, 3)
 used_percentage = round(used_memory         /max_memory*100, 3)
@@ -119,5 +124,6 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 
 model.save_pretrained(f"{model_path}/llama3_70b_ep{epoch}_r{r}_prompt1_json")
 
+## Model Push to Huggingface Hub
 # model.push_to_hub("your_name/lora_model", token = "...") # Online saving
 # tokenizer.push_to_hub("your_name/lora_model", token = "...") # Online saving
