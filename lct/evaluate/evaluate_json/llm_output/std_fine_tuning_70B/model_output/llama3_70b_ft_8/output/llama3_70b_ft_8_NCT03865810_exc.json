@@ -1,0 +1,82 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients undergoing emergency surgery",
+              "Eq-Comparison": [
+                "undergoing"
+              ],
+              "Procedure": [
+                "surgery"
+              ],
+              "Eq-Temporal-Period": [
+                "undergoing"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Procedure-Name": [
+                "surgery"
+              ],
+              "Modifier": [
+                "emergency"
+              ]
+            },
+            "right": {
+              "raw_text": "- Endoscopic procedures",
+              "Procedure": [
+                "Endoscopic procedures"
+              ],
+              "Eq-Operator": [
+                "-"
+              ],
+              "Procedure-Name": [
+                "Endoscopic procedures"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "-",
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Non-oncological gastric surgery",
+                  "Procedure": [
+                    "surgery",
+                    "oncological gastric surgery"
+                  ],
+                  "Negation": [
+                    "Non"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Procedure-Name": [
+                    "surgery",
+                    "oncological gastric surgery"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Patients who refuse to participate",
+      "Eq-Operator": [
+        "-"
+      ]
+    }
+  }
+}

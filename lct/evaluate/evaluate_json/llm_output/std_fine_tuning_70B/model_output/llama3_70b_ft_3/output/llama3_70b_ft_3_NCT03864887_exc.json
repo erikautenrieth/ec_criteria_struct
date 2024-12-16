@@ -1,0 +1,160 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients who are in pregnancy",
+                      "Condition": [
+                        "pregnancy"
+                      ],
+                      "Condition-Name": [
+                        "pregnancy"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or have plan to conception.",
+                      "Condition": [
+                        "conception"
+                      ],
+                      "Condition-Name": [
+                        "conception"
+                      ],
+                      "Assertion": [
+                        "plan to"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Patients who have vertebra surgery",
+                      "Procedure": [
+                        "surgery"
+                      ],
+                      "Procedure-Name": [
+                        "surgery"
+                      ],
+                      "Modifier": [
+                        "vertebra"
+                      ],
+                      "Eq-Comparison": [
+                        "have"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "have"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or have plan of surgery.",
+                      "Procedure": [
+                        "surgery"
+                      ],
+                      "Procedure-Name": [
+                        "surgery"
+                      ],
+                      "Assertion": [
+                        "plan of"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Patients who are inappropriate to join this trial judged by the radiologists or specialists."
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- AIDS,",
+              "Condition": [
+                "AIDS"
+              ],
+              "Condition-Name": [
+                "AIDS"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Active Hepatitis,",
+                  "Condition": [
+                    "Hepatitis"
+                  ],
+                  "Condition-Name": [
+                    "Hepatitis"
+                  ],
+                  "Eq-Comparison": [
+                    "Active"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "Active"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Tuberculosis,",
+                      "Condition": [
+                        "Tuberculosis"
+                      ],
+                      "Condition-Name": [
+                        "Tuberculosis"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "Syphilis",
+                      "Condition": [
+                        "Syphilis"
+                      ],
+                      "Condition-Name": [
+                        "Syphilis"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Patients who regularly take anticoagulants,",
+          "Drug": [
+            "anticoagulants"
+          ],
+          "Drug-Name": [
+            "anticoagulants"
+          ],
+          "Eq-Comparison": [
+            "regularly"
+          ],
+          "Eq-Temporal-Period": [
+            "regularly"
+          ]
+        },
+        "right": {
+          "raw_text": "antiplatelet drugs",
+          "Drug": [
+            "antiplatelet drugs"
+          ],
+          "Drug-Name": [
+            "antiplatelet drugs"
+          ]
+        }
+      }
+    }
+  }
+}

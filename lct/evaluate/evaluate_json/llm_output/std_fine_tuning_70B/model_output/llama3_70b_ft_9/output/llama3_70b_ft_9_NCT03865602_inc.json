@@ -1,0 +1,274 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "1. Admitted from the emergency department to inpatient",
+                                  "Encounter": [
+                                    "Admitted",
+                                    "inpatient",
+                                    "emergency"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or observation status at one of:",
+                                  "Encounter": [
+                                    "observation"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "Carolinas Medical Center, Carolinas Medical Center - Mercy,",
+                                  "Location": [
+                                    "Carolinas Medical Center",
+                                    "Carolinas Medical Center - Mercy"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or Atrium Health Northeast;",
+                                  "Location": [
+                                    "Atrium Health Northeast"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "2. ≥18 years of age upon admission;",
+                          "Eq-Comparison": [
+                            "≥18 years"
+                          ],
+                          "Eq-Operator": [
+                            "≥"
+                          ],
+                          "Eq-Value": [
+                            "18"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "years"
+                          ],
+                          "Age": [
+                            "age"
+                          ],
+                          "Encounter": [
+                            "admission"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "3. oral/",
+                          "Modifier": [
+                            "oral"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "parenteral antibiotic",
+                              "Modifier": [
+                                "parenteral"
+                              ],
+                              "Drug": [
+                                "antibiotic"
+                              ],
+                              "Drug-Name": [
+                                "antibiotic"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or bacterial culture order within 24 hours of emergency department presentation and",
+                              "Eq-Comparison": [
+                                "within 24 hours"
+                              ],
+                              "Eq-Operator": [
+                                "within"
+                              ],
+                              "Eq-Value": [
+                                "24"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "hours"
+                              ],
+                              "Encounter": [
+                                "emergency"
+                              ],
+                              "Procedure": [
+                                "culture"
+                              ],
+                              "Procedure-Name": [
+                                "culture"
+                              ],
+                              "Modifier": [
+                                "bacterial"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "1. culture drawn first, antibiotics ordered within 24 hours or",
+                      "Eq-Comparison": [
+                        "within 24 hours"
+                      ],
+                      "Eq-Operator": [
+                        "within"
+                      ],
+                      "Eq-Value": [
+                        "24"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "hours"
+                      ],
+                      "Procedure": [
+                        "culture",
+                        "antibiotics"
+                      ],
+                      "Procedure-Name": [
+                        "culture",
+                        "antibiotics"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "2. antibiotics ordered first, culture ordered within 48 hours (adapted from criteria applied in development of the Third International Consensus Definitions for Sepsis and Septic Shock)",
+                      "Eq-Comparison": [
+                        "within 48 hours"
+                      ],
+                      "Eq-Operator": [
+                        "within"
+                      ],
+                      "Eq-Value": [
+                        "48"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "hours"
+                      ],
+                      "Procedure": [
+                        "culture",
+                        "antibiotics"
+                      ],
+                      "Procedure-Name": [
+                        "culture",
+                        "antibiotics"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "4. deemed as high-risk for 30-day readmission (i.e., ≥ 20%)",
+                  "Eq-Comparison": [
+                    "≥ 20%"
+                  ],
+                  "Eq-Operator": [
+                    "≥"
+                  ],
+                  "Eq-Value": [
+                    "20",
+                    "30"
+                  ],
+                  "Eq-Unit": [
+                    "%"
+                  ],
+                  "Encounter": [
+                    "readmission"
+                  ],
+                  "Risk": [
+                    "risk"
+                  ],
+                  "Polarity": [
+                    "high"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "day"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or 30-day mortality (i.e., ≥ 10%) using risk-scoring models",
+                  "Eq-Comparison": [
+                    "≥ 10%"
+                  ],
+                  "Eq-Operator": [
+                    "≥"
+                  ],
+                  "Eq-Value": [
+                    "10",
+                    "30"
+                  ],
+                  "Eq-Unit": [
+                    "%"
+                  ],
+                  "Death": [
+                    "mortality"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "day"
+                  ],
+                  "Risk": [
+                    "risk"
+                  ],
+                  "Polarity": [
+                    "high"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "5."
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not discharged at the time of patient list generation",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Encounter": [
+                    "discharged"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "day"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "6. The patient is currently enrolled in another clinical study."
+
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Subject has an implanted medical device that delivers electrical energy to the brain.",
+                  "Assertion": [
+                    "plan"
+                  ],
+                  "Procedure": [
+                    "implanted medical device",
+                    "electrical energy"
+                  ],
+                  "Modifier": [
+                    "brain"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Procedure-Name": [
+                    "implanted medical device",
+                    "electrical energy"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Subject has an implantable cardiac pacemaker,",
+                      "Assertion": [
+                        "plan"
+                      ],
+                      "Procedure": [
+                        "implantable cardiac pacemaker"
+                      ],
+                      "Eq-Operator": [
+                        "-"
+                      ],
+                      "Procedure-Name": [
+                        "implantable cardiac pacemaker"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "defibrillator,",
+                          "Procedure": [
+                            "defibrillator"
+                          ],
+                          "Procedure-Name": [
+                            "defibrillator"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or neurostimulator.",
+                          "Procedure": [
+                            "neurostimulator"
+                          ],
+                          "Procedure-Name": [
+                            "neurostimulator"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Subject is likely to require repeat MR imaging after implant of the RNS Neurostimulator",
+                  "Assertion": [
+                    "plan",
+                    "likely to"
+                  ],
+                  "Procedure": [
+                    "MR imaging",
+                    "implant of the RNS"
+                  ],
+                  "Eq-Operator": [
+                    "-"
+                  ],
+                  "Procedure-Name": [
+                    "MR imaging",
+                    "implant of the RNS"
+                  ],
+                  "Modifier": [
+                    "repeat",
+                    "Neurostimulator"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and Leads.",
+                  "Modifier": [
+                    "Leads"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Subject is",
+              "Eq-Operator": [
+                "-"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "unable to fit into CT scanner (500lb upper weight limit for CT scanner).",
+                  "Negation": [
+                    "unable"
+                  ],
+                  "Procedure": [
+                    "CT scanner"
+                  ],
+                  "Eq-Comparison": [
+                    "500lb upper weight limit"
+                  ],
+                  "Procedure-Name": [
+                    "CT scanner"
+                  ],
+                  "Eq-Value": [
+                    "500"
+                  ],
+                  "Eq-Unit": [
+                    "lb"
+                  ],
+                  "Eq-Operator": [
+                    "upper weight limit"
+                  ],
+                  "Assertion": [
+                    "unable"
+                  ],
+                  "Modifier": [
+                    "fit into"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Inability to provide informed consent to treatment.",
+      "Eq-Operator": [
+        "-"
+      ]
+    }
+  }
+}
