@@ -10,7 +10,7 @@
 #SBATCH --job-name=70b_tuned
 
 module load cuda
-python tuned_iter.py 
+python llama3_few_shot.py
 
 
 

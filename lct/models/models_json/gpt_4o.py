@@ -1,4 +1,3 @@
-import tiktoken
 from helper_functions import *
 from openai import OpenAI
 
