@@ -1,0 +1,144 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "Age <30 years old",
+          "Age": [
+            "Age"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Eq-Value": [
+            "30"
+          ],
+          "Eq-Comparison": [
+            "< 30 years"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "Screening mammography with only calcifications abnormalities",
+              "Procedure": [
+                "Screening mammography"
+              ],
+              "Procedure-Name": [
+                "Screening mammography"
+              ],
+              "Condition": [
+                "calcifications abnormalities"
+              ],
+              "Condition-Name": [
+                "calcifications abnormalities"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Male patients",
+                  "Life-Stage-And-Gender": [
+                    "Male"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Pregnant or lactating patients",
+                      "Condition": [
+                        "Pregnant",
+                        "lactating"
+                      ],
+                      "Condition-Name": [
+                        "Pregnant",
+                        "lactating"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "Patients with any allergy to iodinated contrast",
+                          "Condition": [
+                            "allergy"
+                          ],
+                          "Condition-Name": [
+                            "allergy"
+                          ],
+                          "Modifier": [
+                            "iodinated contrast"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "Patients with eGFR < 45",
+                              "Observation": [
+                                "eGFR"
+                              ],
+                              "Observation-Name": [
+                                "eGFR"
+                              ],
+                              "Eq-Operator": [
+                                "<"
+                              ],
+                              "Eq-Value": [
+                                "45"
+                              ],
+                              "Eq-Comparison": [
+                                "< 45"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "Patients that may be treated with radioactive iodine",
+                              "Procedure": [
+                                "radioactive iodine"
+                              ],
+                              "Procedure-Name": [
+                                "radioactive iodine"
+                              ],
+                              "Modifier": [
+                                "may be treated"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

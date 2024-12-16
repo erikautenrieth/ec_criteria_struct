@@ -1,0 +1,232 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- Subjects over 60 years of age with a clinical diagnosis of Parkinson's disease",
+                                  "Age": [
+                                    "60 years"
+                                  ],
+                                  "Condition": [
+                                    "Parkinson's disease"
+                                  ],
+                                  "Condition-Name": [
+                                    "Parkinson's disease"
+                                  ],
+                                  "Eq-Operator": [
+                                    "over"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "over 60 years"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "- Stages of the disease 2-3 of Hoehn and Yahr",
+                                  "Condition": [
+                                    "disease"
+                                  ],
+                                  "Observation": [
+                                    "Hoehn and Yahr"
+                                  ],
+                                  "Observation-Name": [
+                                    "Hoehn and Yahr"
+                                  ],
+                                  "Eq-Value": [
+                                    "2",
+                                    "3"
+                                  ]
+                                }
+                              }
+                            },
+                            "right": {
+                              "NOT": {
+                                "left": {
+                                  "raw_text": "- Not exposed to tobacco during any stage of their life",
+                                  "Negation": [
+                                    "Not"
+                                  ],
+                                  "Condition": [
+                                    "tobacco exposure"
+                                  ],
+                                  "Condition-Name": [
+                                    "tobacco exposure"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "- No history of lung diseases",
+                              "Negation": [
+                                "No"
+                              ],
+                              "Condition": [
+                                "lung diseases"
+                              ],
+                              "Condition-Name": [
+                                "lung diseases"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "- No laboratory abnormalities",
+                          "Negation": [
+                            "No"
+                          ],
+                          "Observation": [
+                            "laboratory abnormalities"
+                          ],
+                          "Observation-Name": [
+                            "laboratory abnormalities"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- No history of adverse reactions to nicotine",
+                      "Negation": [
+                        "No"
+                      ],
+                      "Condition": [
+                        "adverse reactions to nicotine"
+                      ],
+                      "Condition-Name": [
+                        "adverse reactions to nicotine"
+                      ],
+                      "Drug": [
+                        "nicotine"
+                      ],
+                      "Drug-Name": [
+                        "nicotine"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Able to use nicotine nasal spray",
+              "Drug": [
+                "nicotine nasal spray"
+              ],
+              "Drug-Name": [
+                "nicotine nasal spray"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Residents of Mexico City able to attend for evaluations",
+              "Location": [
+                "Mexico City"
+              ]
+            },
+            "right": {
+              "raw_text": "- Under current treatment with levodopa at a stable dose",
+              "Drug": [
+                "levodopa"
+              ],
+              "Drug-Name": [
+                "levodopa"
+              ],
+              "Stability": [
+                "stable dose"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- Not currently receiving a monoamine oxidase inhibitor treatment",
+              "Negation": [
+                "Not"
+              ],
+              "Drug": [
+                "monoamine oxidase inhibitor"
+              ],
+              "Drug-Name": [
+                "monoamine oxidase inhibitor"
+              ],
+              "Eq-Comparison": [
+                "currently"
+              ],
+              "Eq-Temporal-Period": [
+                "currently"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Unable to complete follow-up protocol",
+                  "Negation": [
+                    "Unable"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Drug adverse reaction",
+                  "Condition": [
+                    "adverse reaction"
+                  ],
+                  "Condition-Name": [
+                    "adverse reaction"
+                  ],
+                  "Drug": [
+                    "Drug"
+                  ],
+                  "Drug-Name": [
+                    "Drug"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Death",
+                  "Death": [
+                    "Death"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

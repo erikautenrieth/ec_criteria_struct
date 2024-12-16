@@ -1,0 +1,196 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Identified as having Alzheimer's or related dementia",
+          "Condition": [
+            "Alzheimer's",
+            "dementia"
+          ],
+          "Condition-Name": [
+            "Alzheimer's",
+            "dementia"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Mild to moderate cognitive impairment (BIMS = 8-15, (MDS C0500) (nursing home residents only)",
+              "Observation": [
+                "BIMS"
+              ],
+              "Observation-Name": [
+                "BIMS"
+              ],
+              "Eq-Value": [
+                "8",
+                "15"
+              ],
+              "Eq-Comparison": [
+                "8-15"
+              ],
+              "Modifier": [
+                "mild",
+                "moderate"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Makes Self Understood = <1 (MDS B0700)/present in medical record",
+                  "Observation": [
+                    "Makes Self Understood"
+                  ],
+                  "Observation-Name": [
+                    "Makes Self Understood"
+                  ],
+                  "Eq-Value": [
+                    "1"
+                  ],
+                  "Eq-Comparison": [
+                    "<1"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Understood By Others = <1 (MDS B0800)/present in medical record",
+                      "Observation": [
+                        "Understood By Others"
+                      ],
+                      "Observation-Name": [
+                        "Understood By Others"
+                      ],
+                      "Eq-Value": [
+                        "1"
+                      ],
+                      "Eq-Comparison": [
+                        "<1"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Reside at the facility at least 2 weeks identified as a long-term resident",
+                          "Eq-Temporal-Unit": [
+                            "weeks"
+                          ],
+                          "Eq-Value": [
+                            "2"
+                          ],
+                          "Eq-Comparison": [
+                            "at least 2 weeks"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Age >65 years",
+                              "Age": [
+                                "Age"
+                              ],
+                              "Eq-Value": [
+                                "65"
+                              ],
+                              "Eq-Comparison": [
+                                ">65 years"
+                              ]
+                            },
+                            "right": {
+                              "AND": {
+                                "left": {
+                                  "raw_text": "- Speaks English",
+                                  "Language": [
+                                    "English"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "Family",
+                                      "Family": [
+                                        "Family"
+                                      ]
+                                    },
+                                    "right": {
+                                      "OR": {
+                                        "left": {
+                                          "raw_text": "- Speaks English",
+                                          "Language": [
+                                            "English"
+                                          ]
+                                        },
+                                        "right": {
+                                          "AND": {
+                                            "left": {
+                                              "raw_text": "- Willing and able to watch the videos",
+                                              "Modifier": [
+                                                "willing",
+                                                "able"
+                                              ]
+                                            },
+                                            "right": {
+                                              "raw_text": "- Willing to complete short surveys. Being unable to attend care conference to view the video (e.g. due to distance) will not exclude family from participating.",
+                                              "Modifier": [
+                                                "willing"
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "Staff",
+          "Staff": [
+            "Staff"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Speaks English",
+              "Language": [
+                "English"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Willing to watch the videos",
+                  "Modifier": [
+                    "willing"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Willing to complete short surveys",
+                  "Modifier": [
+                    "willing"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

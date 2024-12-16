@@ -1,0 +1,152 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "Medical Conditions"
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. Any active or untreated thymoma.",
+                  "Condition-Name": [
+                    "thymoma"
+                  ],
+                  "Condition-Type": [
+                    "active",
+                    "untreated"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "History of thymic carcinoma or thymic malignancy unless deemed cured by adequate treatment with no evidence of recurrence for ≥ 5 years before screening.",
+                      "Condition-Name": [
+                        "thymic carcinoma",
+                        "thymic malignancy"
+                      ],
+                      "Condition-Type": [
+                        "History",
+                        "cured"
+                      ],
+                      "Eq-Comparison": [
+                        "≥ 5 years"
+                      ],
+                      "Eq-Temporal-Unit": [
+                        "years"
+                      ],
+                      "Eq-Temporal-Recency": [
+                        "before screening"
+                      ]
+                    },
+                    "right": {
+                      "NOT": {
+                        "left": {
+                          "raw_text": "History of thymectomy within the 12 months prior to screening.",
+                          "Condition-Name": [
+                            "thymectomy"
+                          ],
+                          "Condition-Type": [
+                            "History"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "within the 12 months"
+                          ],
+                          "Eq-Temporal-Recency": [
+                            "prior to screening"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "3. History of N meningitidis infection.",
+                  "Condition-Name": [
+                    "N meningitidis infection"
+                  ],
+                  "Condition-Type": [
+                    "History"
+                  ],
+                  "Organism-Name": [
+                    "N meningitidis"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "4. Use of the following within the time period specified below:",
+                      "Condition-Type": [
+                        "Use"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- IV immunoglobulin within 4 weeks of randomization",
+                              "Drug-Name": [
+                                "IV immunoglobulin"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "within 4 weeks"
+                              ],
+                              "Eq-Temporal-Recency": [
+                                "of randomization"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- Use of plasma exchange within 4 weeks of randomization",
+                              "Procedure-Name": [
+                                "plasma exchange"
+                              ],
+                              "Eq-Temporal-Period": [
+                                "within 4 weeks"
+                              ],
+                              "Eq-Temporal-Recency": [
+                                "of randomization"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Use of rituximab within 6 months of screening",
+                          "Drug-Name": [
+                            "rituximab"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "within 6 months"
+                          ],
+                          "Eq-Temporal-Recency": [
+                            "of screening"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "5. Participants who have received previous treatment with complement inhibitors (for example, eculizumab).",
+      "Condition-Type": [
+        "received previous treatment"
+      ],
+      "Drug-Name": [
+        "complement inhibitors",
+        "eculizumab"
+      ]
+    }
+  }
+}

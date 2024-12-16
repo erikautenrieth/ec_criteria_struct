@@ -1,0 +1,119 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Factors that affect immune function or AKI assessment are the basis for",
+          "Condition": [
+            "immune function",
+            "AKI assessment"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Concurrent disease associated with immunosuppression including malignancy, chronic infection (e.g., HIV, Hepatitis C), organ transplant and immunosuppressant medications",
+              "Condition": [
+                "immunosuppression",
+                "malignancy",
+                "chronic infection",
+                "organ transplant"
+              ],
+              "Drug": [
+                "immunosuppressant medications"
+              ],
+              "Condition-Name": [
+                "HIV",
+                "Hepatitis C"
+              ],
+              "Observation": [
+                "infection"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Documented acute infection with the past 1 month (e.g., pneumonia, urinary tract infection)",
+                  "Condition": [
+                    "acute infection"
+                  ],
+                  "Condition-Name": [
+                    "pneumonia",
+                    "urinary tract infection"
+                  ],
+                  "Eq-Temporal-Recency": [
+                    "past 1 month"
+                  ],
+                  "Observation": [
+                    "infection"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Prednisone or other steroid use currently or within the past one month",
+                      "Drug-Name": [
+                        "Prednisone"
+                      ],
+                      "Drug": [
+                        "steroid"
+                      ],
+                      "Eq-Temporal-Recency": [
+                        "currently",
+                        "past one month"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- AKI at the time of surgery",
+                          "Condition": [
+                            "AKI"
+                          ],
+                          "Procedure": [
+                            "surgery"
+                          ]
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- ESRD requiring renal replacement therapy",
+                              "Condition": [
+                                "ESRD"
+                              ],
+                              "Procedure": [
+                                "renal replacement therapy"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- Estimated GFR <45 mL/min (as judged by the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI) equation",
+                              "Observation": [
+                                "Estimated GFR"
+                              ],
+                              "Eq-Comparison": [
+                                "<45 mL/min"
+                              ],
+                              "Condition": [
+                                "Chronic Kidney Disease"
+                              ],
+                              "Provider": [
+                                "Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": ""
+    }
+  }
+}

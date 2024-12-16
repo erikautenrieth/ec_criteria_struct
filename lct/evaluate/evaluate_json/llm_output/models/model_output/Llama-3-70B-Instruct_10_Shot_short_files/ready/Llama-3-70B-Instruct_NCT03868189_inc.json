@@ -1,0 +1,80 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient requiring an electroneuromyogram whose indication allows the application of a standard protocol of examination.",
+          "Procedure": [
+            "electroneuromyogram"
+          ],
+          "Procedure-Name": [
+            "electroneuromyogram"
+          ],
+          "Indication": [
+            "indication"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patient that has given his/her free and informed consent.",
+              "Study": [
+                "consent"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patient that signed the consent form.",
+              "Study": [
+                "consent form"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Patient with an health insurance plan.",
+          "Insurance": [
+            "health insurance plan"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- The patient is at least 18 years old (≥).",
+              "Age": [
+                "Age"
+              ],
+              "Eq-Operator": [
+                "≥"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Eq-Value": [
+                "18"
+              ]
+            },
+            "right": {
+              "raw_text": "he patient is under 80 years old (≤).",
+              "Age": [
+                "Age"
+              ],
+              "Eq-Operator": [
+                "≤"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Eq-Value": [
+                "80"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

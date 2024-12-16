@@ -1,0 +1,87 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Teeth that are previously restored",
+              "Condition": [
+                "restored"
+              ],
+              "Observation-Name": [
+                "Teeth"
+              ]
+            },
+            "right": {
+              "raw_text": "or have caries",
+              "Condition": [
+                "caries"
+              ],
+              "Observation-Name": [
+                "Teeth"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients who have orthodontic treatment",
+              "Condition": [
+                "orthodontic treatment"
+              ],
+              "Observation-Name": [
+                "Patients"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Patients who are not cooperative for the dental procedure",
+                  "Condition": [
+                    "cooperative"
+                  ],
+                  "Negation": [
+                    "not"
+                  ],
+                  "Observation-Name": [
+                    "Patients"
+                  ],
+                  "Procedure": [
+                    "dental procedure"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Teeth that have dental flourosis",
+          "Condition": [
+            "dental flourosis"
+          ],
+          "Observation-Name": [
+            "Teeth"
+          ]
+        },
+        "right": {
+          "raw_text": "or enamel malformation according to the specific syndromes",
+          "Condition": [
+            "enamel malformation"
+          ],
+          "Observation-Name": [
+            "Teeth"
+          ],
+          "Condition-Type": [
+            "specific syndromes"
+          ]
+        }
+      }
+    }
+  }
+}

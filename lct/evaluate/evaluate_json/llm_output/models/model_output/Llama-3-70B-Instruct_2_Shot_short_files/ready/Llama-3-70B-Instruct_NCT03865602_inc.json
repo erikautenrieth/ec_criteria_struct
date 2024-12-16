@@ -1,0 +1,140 @@
+{
+  "AND": {
+    "left": {
+      "raw_text": "1. Admitted from the emergency department to inpatient or observation status at one of: Carolinas Medical Center, Carolinas Medical Center - Mercy, or Atrium Health Northeast;",
+      "Location": [
+        "Carolinas Medical Center",
+        "Carolinas Medical Center - Mercy",
+        "Atrium Health Northeast"
+      ],
+      "Encounter": [
+        "emergency department",
+        "inpatient",
+        "observation"
+      ]
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "2. ≥18 years of age upon admission;",
+          "Age": [
+            "age"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Comparison": [
+            "≥18 years"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "3. oral/parenteral antibiotic or bacterial culture order within 24 hours of emergency department presentation and",
+              "Observation": [
+                "antibiotic",
+                "bacterial culture"
+              ],
+              "Observation-Name": [
+                "antibiotic",
+                "bacterial culture"
+              ],
+              "Eq-Temporal-Unit": [
+                "hours"
+              ],
+              "Eq-Value": [
+                "24"
+              ],
+              "Eq-Comparison": [
+                "within 24 hours"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "1. culture drawn first, antibiotics ordered within 48 hours or",
+                  "Observation": [
+                    "culture",
+                    "antibiotics"
+                  ],
+                  "Observation-Name": [
+                    "culture",
+                    "antibiotics"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "hours"
+                  ],
+                  "Eq-Value": [
+                    "48"
+                  ],
+                  "Eq-Comparison": [
+                    "within 48 hours"
+                  ]
+                },
+                "right": {
+                  "raw_text": "2. antibiotics ordered first, culture ordered within 48 hours",
+                  "Observation": [
+                    "antibiotics",
+                    "culture"
+                  ],
+                  "Observation-Name": [
+                    "antibiotics",
+                    "culture"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "hours"
+                  ],
+                  "Eq-Value": [
+                    "48"
+                  ],
+                  "Eq-Comparison": [
+                    "within 48 hours"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "4. deemed as high-risk for 30-day readmission (i.e., ≥ 20%) or 30-day mortality (i.e., ≥ 10%) using risk-scoring models",
+          "Risk": [
+            "high-risk"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Value": [
+            "20",
+            "10"
+          ],
+          "Eq-Comparison": [
+            "≥ 20%",
+            "≥ 10%"
+          ],
+          "Eq-Temporal-Unit": [
+            "days"
+          ]
+        },
+        "right": {
+          "raw_text": "5. not discharged at the time of patient list generation",
+          "Negation": [
+            "not"
+          ],
+          "Encounter": [
+            "discharged"
+          ]
+        }
+      }
+    }
+  }
+}

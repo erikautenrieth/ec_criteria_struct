@@ -1,0 +1,123 @@
+{
+  "NOT": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Age <30 years old",
+          "Age": [
+            "Age"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "30"
+          ],
+          "Eq-Comparison": [
+            "< 30 years"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "Screening mammography with only calcifications abnormalities",
+              "Procedure": [
+                "Screening mammography"
+              ],
+              "Procedure-Name": [
+                "Screening mammography"
+              ],
+              "Observation": [
+                "calcifications abnormalities"
+              ],
+              "Observation-Name": [
+                "calcifications abnormalities"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "Male patients",
+                  "Condition": [
+                    "Male"
+                  ],
+                  "Condition-Name": [
+                    "Male"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "Pregnant or lactating patients",
+                      "Condition": [
+                        "Pregnant",
+                        "lactating"
+                      ],
+                      "Condition-Name": [
+                        "Pregnant",
+                        "lactating"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "Patients with any allergy to iodinated contrast",
+                          "Allergy": [
+                            "allergy to iodinated contrast"
+                          ],
+                          "Allergy-Name": [
+                            "allergy to iodinated contrast"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "Patients with eGFR < 45",
+                              "Observation": [
+                                "eGFR"
+                              ],
+                              "Observation-Name": [
+                                "eGFR"
+                              ],
+                              "Eq-Operator": [
+                                "<"
+                              ],
+                              "Eq-Value": [
+                                "45"
+                              ],
+                              "Eq-Comparison": [
+                                "< 45"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "Patients that may be treated with radioactive iodine",
+                              "Procedure": [
+                                "treated with radioactive iodine"
+                              ],
+                              "Procedure-Name": [
+                                "treated with radioactive iodine"
+                              ],
+                              "Drug": [
+                                "radioactive iodine"
+                              ],
+                              "Drug-Name": [
+                                "radioactive iodine"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

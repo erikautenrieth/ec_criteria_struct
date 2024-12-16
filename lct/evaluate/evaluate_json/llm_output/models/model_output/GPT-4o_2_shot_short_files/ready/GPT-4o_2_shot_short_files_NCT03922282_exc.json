@@ -1,0 +1,156 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "- Subject who underwent thyroid surgery",
+                              "Procedure": [
+                                "thyroid surgery"
+                              ],
+                              "Condition": [
+                                "thyroid"
+                              ],
+                              "Procedure-Name": [
+                                "surgery"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "- Subject who underwent any radiotherapy on neck",
+                              "Procedure": [
+                                "radiotherapy"
+                              ],
+                              "Location": [
+                                "neck"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "raw_text": "- Subject who need to neck dissection",
+                          "Procedure": [
+                                "neck dissection"
+                              ],
+                              "Location": [
+                                "neck"
+                              ],
+                              "Condition": [
+                                "dissection"
+                              ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Subject under 18 years",
+                          "Age": [
+                            "under 18 years"
+                          ],
+                          "Eq-Operator": [
+                            "under"
+                          ],
+                          "Eq-Value": [
+                            "18"
+                          ],
+                          "Eq-Comparison": [
+                            "under 18"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "years"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or over 70 years",
+                          "Age": [
+                            "over 70 years"
+                          ],
+                          "Eq-Operator": [
+                            "over"
+                          ],
+                          "Eq-Value": [
+                            "70"
+                          ],
+                          "Eq-Comparison": [
+                            "over 70"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "years"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- Bad general condition",
+                  "Condition": [
+                    "general condition"
+                  ],
+                  "Severity": [
+                    "Bad"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- High American Society of Anesthesiologists(ASA) score (over 3)",
+              "Observation": [
+                "American Society of Anesthesiologists(ASA) score"
+              ],
+              "Observation-Name": [
+                "American Society of Anesthesiologists(ASA) score"
+              ],
+              "Severity": [
+                "High"
+              ],
+              "Eq-Operator": [
+                "over"
+              ],
+              "Eq-Value": [
+                "3"
+              ],
+              "Eq-Comparison": [
+                "over 3"
+              ]
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Breast feeder",
+              "Life-Stage-And-Gender": [
+                "Breast feeder"
+              ]
+            },
+            "right": {
+              "raw_text": "or pregnancy",
+              "Life-Stage-And-Gender": [
+                "pregnancy"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Subject who disagree to do this trial",
+      "Assertion": [
+        "disagree"
+      ],
+      "Study": [
+        "this trial"
+      ]
+    }
+  }
+}

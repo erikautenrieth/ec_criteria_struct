@@ -1,0 +1,88 @@
+{
+  "OR": {
+    "left": {
+      "raw_text": "allergy to bupivacaine",
+      "Allergy": [
+        "allergy"
+      ],
+      "Allergy-Name": [
+        "bupivacaine"
+      ],
+      "Drug": [
+        "bupivacaine"
+      ],
+      "Drug-Name": [
+        "bupivacaine"
+      ]
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "pre-operative opioid usage within the last six months",
+          "Observation": [
+            "opioid usage"
+          ],
+          "Observation-Name": [
+            "opioid usage"
+          ],
+          "Eq-Temporal-Recency": [
+            "within the last six months"
+          ],
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Drug": [
+            "opioid"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "patients allergic to Percocet or acetaminophen",
+              "Allergy": [
+                "allergy"
+              ],
+              "Allergy-Name": [
+                "Percocet",
+                "acetaminophen"
+              ],
+              "Drug": [
+                "Percocet",
+                "acetaminophen"
+              ],
+              "Drug-Name": [
+                "Percocet",
+                "acetaminophen"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "patients taking tricyclic antidepressants (interaction with bupivacaine)",
+                  "Drug": [
+                    "tricyclic antidepressants"
+                  ],
+                  "Drug-Name": [
+                    "tricyclic antidepressants"
+                  ],
+                  "Interaction": [
+                    "interaction with bupivacaine"
+                  ]
+                },
+                "right": {
+                  "raw_text": "vulnerable populations (prisoners or pregnant women)",
+                  "Life-Stage-And-Gender": [
+                    "pregnant women"
+                  ],
+                  "Ethnicity": [
+                    "prisoners"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

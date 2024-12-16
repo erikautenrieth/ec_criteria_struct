@@ -1,0 +1,156 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Subjects over 60 years of age with a clinical diagnosis of Parkinson's disease",
+          "Age": [
+            "age"
+          ],
+          "Eq-Operator": [
+            "over"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Eq-Value": [
+            "60"
+          ],
+          "Condition": [
+            "Parkinson's disease"
+          ],
+          "Condition-Name": [
+            "Parkinson's disease"
+          ]
+        },
+        "right": {
+          "raw_text": "- Stages of the disease 2-3 of Hoehn and Yahr",
+          "Condition": [
+            "Parkinson's disease"
+          ],
+          "Condition-Name": [
+            "Parkinson's disease"
+          ],
+          "Eq-Comparison": [
+            "2-3"
+          ],
+          "Eq-Value": [
+            "2",
+            "3"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Not exposed to tobacco during any stage of their life",
+              "Negation": [
+                "Not"
+              ],
+              "Modifier": [
+                "exposed"
+              ],
+              "Substance": [
+                "tobacco"
+              ]
+            },
+            "right": {
+              "raw_text": "- No history of lung diseases",
+              "Negation": [
+                "No"
+              ],
+              "Condition": [
+                "lung diseases"
+              ],
+              "Condition-Name": [
+                "lung diseases"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- No laboratory abnormalities",
+              "Negation": [
+                "No"
+              ],
+              "Observation": [
+                "laboratory"
+              ],
+              "Observation-Name": [
+                "laboratory"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- No history of adverse reactions to nicotine",
+                  "Negation": [
+                    "No"
+                  ],
+                  "Condition": [
+                    "adverse reactions"
+                  ],
+                  "Condition-Name": [
+                    "adverse reactions"
+                  ],
+                  "Substance": [
+                    "nicotine"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Able to use nicotine nasal spray",
+                  "Procedure": [
+                    "nicotine nasal spray"
+                  ],
+                  "Procedure-Name": [
+                    "nicotine nasal spray"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Exclusion Criteria": {
+    "OR": {
+      "left": {
+        "raw_text": "- Unable to complete follow-up protocol",
+        "Negation": [
+          "Unable"
+        ],
+        "Study": [
+          "follow-up protocol"
+        ]
+      },
+      "right": {
+        "OR": {
+          "left": {
+            "raw_text": "- Drug adverse reaction",
+            "Condition": [
+              "adverse reaction"
+            ],
+            "Condition-Name": [
+              "adverse reaction"
+            ]
+          },
+          "right": {
+            "raw_text": "- Death",
+            "Condition": [
+              "Death"
+            ],
+            "Condition-Name": [
+              "Death"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

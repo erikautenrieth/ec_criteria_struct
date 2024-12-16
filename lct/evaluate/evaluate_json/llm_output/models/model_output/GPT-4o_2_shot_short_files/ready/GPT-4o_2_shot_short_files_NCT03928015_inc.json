@@ -1,0 +1,112 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "1. Male",
+              "Life-Stage-And-Gender": [
+                "Male"
+              ]
+            },
+            "right": {
+              "raw_text": "or female, 18 years to 65 years old (inclusive)",
+              "Life-Stage-And-Gender": [
+                "female"
+              ],
+              "Age": [
+                "18 years to 65 years old (inclusive)"
+              ],
+              "Eq-Comparison": [
+                "18 years to 65 years old"
+              ],
+              "Eq-Operator": [
+                "inclusive"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "2. Index admission for traumatic injury",
+              "Encounter": [
+                "Index admission"
+              ],
+              "Condition": [
+                "traumatic injury"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "3. High initial morphine equivalent use ≥ 90 mg in the first 24 hours from admission",
+                  "Drug-Name": [
+                    "morphine"
+                  ],
+                  "Observation": [
+                    "initial morphine equivalent use"
+                  ],
+                  "Eq-Operator": [
+                    "≥"
+                  ],
+                  "Eq-Value": [
+                    "90 mg"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "in the first 24 hours"
+                  ],
+                  "Encounter": [
+                    "admission"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "4. Baseline pain assessed at screening of ≥ 5 on the pain numeric rating score (NRS)",
+                      "Observation": [
+                        "Baseline pain"
+                      ],
+                      "Observation-Name": [
+                        "pain numeric rating score (NRS)"
+                      ],
+                      "Eq-Operator": [
+                        "≥"
+                      ],
+                      "Eq-Value": [
+                        "5"
+                      ],
+                      "Condition": [
+                        "pain"
+                      ],
+                      "Encounter": [
+                        "screening"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "5. Willing to divulge habitual marijuana usage (yes or no. Yes, habitual/chronic usage; no, recreational, former, or never usage)",
+                      "Condition": [
+                        "habitual marijuana usage",
+                        "recreational marijuana usage",
+                        "former marijuana usage",
+                        "never marijuana usage"
+                      ],
+                      "Observation": [
+                        "divulge habitual marijuana usage"
+                      ],
+                      "Assertion": [
+                        "Willing"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {}
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Allergy to tranexamic acid;",
+                  "Allergy": [
+                    "Allergy"
+                  ],
+                  "Allergy-Name": [
+                    "tranexamic acid"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Receiving warfarin or heparin;",
+                  "Drug": [
+                    "warfarin",
+                    "heparin"
+                  ],
+                  "Drug-Name": [
+                    "warfarin",
+                    "heparin"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "had a history of hemophilia",
+                  "Condition": [
+                    "hemophilia"
+                  ],
+                  "Condition-Name": [
+                    "hemophilia"
+                  ]
+                },
+                "right": {
+                  "raw_text": "deep venous thrombosis, pulmonary embolism, or renal impairment;",
+                  "Condition": [
+                    "deep venous thrombosis",
+                    "pulmonary embolism",
+                    "renal impairment"
+                  ],
+                  "Condition-Name": [
+                    "deep venous thrombosis",
+                    "pulmonary embolism",
+                    "renal impairment"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- Patients with any cardiovascular problems (such as myocardiac infarction history, atrial fibrillation, angina);",
+              "Condition": [
+                "myocardiac infarction history",
+                "atrial fibrillation",
+                "angina"
+              ],
+              "Condition-Name": [
+                "myocardiac infarction history",
+                "atrial fibrillation",
+                "angina"
+              ]
+            },
+            "right": {
+              "raw_text": "- Patients with thromboembolic disorders, or those exhibiting a deteriorating general condition;",
+              "Condition": [
+                "thromboembolic disorders"
+              ],
+              "Condition-Name": [
+                "thromboembolic disorders"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "OR": {
+        "left": {
+          "raw_text": "- Preoperative anemia (a hemoglobin value of <11 g/dL in females and <12 g/dL in males);",
+          "Observation": [
+            "hemoglobin"
+          ],
+          "Observation-Name": [
+            "hemoglobin"
+          ],
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Value": [
+            "11",
+            "12"
+          ],
+          "Eq-Unit": [
+            "g/dL"
+          ]
+        },
+        "right": {
+          "raw_text": "refusal of blood products;",
+          "Modifier": [
+            "refusal"
+          ]
+        }
+      }
+    }
+  },
+  "right": {
+    "OR": {
+      "left": {
+        "raw_text": "- Preoperative use of anticoagulant therapy within five days before surgery;",
+        "Procedure": [
+          "anticoagulant therapy"
+        ],
+        "Procedure-Name": [
+          "anticoagulant therapy"
+        ],
+        "Eq-Temporal-Unit": [
+          "five days"
+        ],
+        "Eq-Temporal-Period": [
+          "before surgery"
+        ]
+      },
+      "right": {
+        "raw_text": "fibrinolytic disorders requiring intraoperative antifibrinolytic treatment, coagulopathy (as identified by a preoperative platelet count of <150,000/mm3, an international normalized ratio of >1.4, or a prolonged partial thromboplastin time [>1.4 times normal]).",
+        "Condition": [
+          "fibrinolytic disorders",
+          "coagulopathy"
+        ],
+        "Condition-Name": [
+          "fibrinolytic disorders",
+          "coagulopathy"
+        ],
+        "Observation": [
+          "platelet count",
+          "international normalized ratio",
+          "partial thromboplastin time"
+        ],
+        "Observation-Name": [
+          "platelet count",
+          "international normalized ratio",
+          "partial thromboplastin time"
+        ],
+        "Eq-Operator": [
+          "<",
+          ">",
+          ">"
+        ],
+        "Eq-Value": [
+          "150,000/mm3",
+          "1.4",
+          "1.4 times normal"
+        ],
+        "Eq-Unit": [
+          "mm3"
+        ]
+      }
+    }
+  }
+}

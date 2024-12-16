@@ -1,0 +1,86 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patient with S. aureus or E. coli bacteriostatic bacteremia defined by at least one positive blood culture bottle",
+                  "Condition": [
+                    "bacteriostatic bacteremia"
+                  ],
+                  "Condition-Name": [
+                    "bacteriostatic bacteremia"
+                  ],
+                  "Observation": [
+                    "blood culture bottle"
+                  ],
+                  "Observation-Name": [
+                    "blood culture bottle"
+                  ],
+                  "Organism": [
+                    "S. aureus",
+                    "E. coli"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- Patient requiring a blood test as part of his bacteremia",
+                  "Procedure": [
+                    "blood test"
+                  ],
+                  "Condition": [
+                    "bacteremia"
+                  ],
+                  "Condition-Name": [
+                    "bacteremia"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "-"
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "not subject to a judicial protection measure",
+                      "Negation": [
+                        "not"
+                      ],
+                      "Condition": [
+                        "judicial protection measure"
+                      ],
+                      "Condition-Name": [
+                        "judicial protection measure"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Signature of the non-opposition of consent (for minor patients signed by one of the parents or the representative of the parental authority)",
+          "Study": [
+            "consent"
+          ],
+          "Family-Member": [
+            "parents",
+            "representative of the parental authority"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Affiliation to social security",
+      "Insurance": [
+        "social security"
+      ]
+    }
+  }
+}

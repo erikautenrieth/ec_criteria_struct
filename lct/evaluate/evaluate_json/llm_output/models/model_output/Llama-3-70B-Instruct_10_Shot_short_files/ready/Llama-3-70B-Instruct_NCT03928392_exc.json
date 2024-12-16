@@ -1,0 +1,119 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- Younger than 18 years of age",
+          "Eq-Operator": [
+            "<"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Age": [
+            "age"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Comparison": [
+            "< 18 years"
+          ]
+        },
+        "right": {
+          "raw_text": "or older than 95 years of age",
+          "Eq-Operator": [
+            ">"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ],
+          "Age": [
+            "age"
+          ],
+          "Eq-Value": [
+            "95"
+          ],
+          "Eq-Comparison": [
+            "> 95 years"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "-"
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Not a member of WAVES Project within 3 months of study recruitment",
+                  "Study": [
+                    "study"
+                  ],
+                  "Procedure": [
+                    "WAVES Project"
+                  ],
+                  "Procedure-Name": [
+                    "WAVES Project"
+                  ],
+                  "Negation": [
+                    "Not"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Eq-Comparison": [
+                    "within 3 months"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Has not completed 3 open water dives",
+              "Procedure": [
+                "open water dives"
+              ],
+              "Procedure-Name": [
+                "open water dives"
+              ],
+              "Negation": [
+                "not"
+              ],
+              "Eq-Value": [
+                "3"
+              ]
+            },
+            "right": {
+              "raw_text": "- Not proficient in written and verbal English",
+              "Language": [
+                "English"
+              ],
+              "Negation": [
+                "Not"
+              ],
+              "Observation": [
+                "written",
+                "verbal"
+              ],
+              "Observation-Name": [
+                "written",
+                "verbal"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

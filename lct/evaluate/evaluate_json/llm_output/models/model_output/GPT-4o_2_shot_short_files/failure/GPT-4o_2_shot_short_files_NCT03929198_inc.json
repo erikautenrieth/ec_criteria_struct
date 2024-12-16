@@ -1,0 +1,246 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Dysfunctional lipids, blood pressure and glycemic control determined at a screening visit:",
+                          "Observation-Name": [
+                            "lipids",
+                            "blood pressure",
+                            "glycemic control"
+                          ],
+                          "Encounter": [
+                            "screening visit"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- Triglycerides > 150 mg/dL",
+                              "Observation-Name": [
+                                "Triglycerides"
+                              ],
+                              "Eq-Comparison": [
+                                "> 150 mg/dL"
+                              ],
+                              "Eq-Value": [
+                                "150"
+                              ],
+                              "Eq-Unit": [
+                                "mg/dL"
+                              ],
+                              "Eq-Operator": [
+                                ">"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "HDL <50 in females",
+                                  "Observation-Name": [
+                                    "HDL"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "< 50"
+                                  ],
+                                  "Eq-Value": [
+                                    "50"
+                                  ],
+                                  "Eq-Unit": [
+                                    "mg/dL"
+                                  ],
+                                  "Eq-Operator": [
+                                    "<"
+                                  ],
+                                  "Life-Stage-And-Gender": [
+                                    "females"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "<40 mg/dL in males",
+                                  "Observation-Name": [
+                                    "HDL"
+                                  ],
+                                  "Eq-Comparison": [
+                                    "< 40 mg/dL"
+                                  ],
+                                  "Eq-Value": [
+                                    "40"
+                                  ],
+                                  "Eq-Unit": [
+                                    "mg/dL"
+                                  ],
+                                  "Eq-Operator": [
+                                    "<"
+                                  ],
+                                  "Life-Stage-And-Gender": [
+                                    "males"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "- Systolic blood pressure ≥130 mmHg",
+                          "Observation-Name": [
+                            "Systolic blood pressure"
+                          ],
+                          "Eq-Comparison": [
+                            "≥ 130 mmHg"
+                          ],
+                          "Eq-Value": [
+                            "130"
+                          ],
+                          "Eq-Unit": [
+                            "mmHg"
+                          ],
+                          "Eq-Operator": [
+                            "≥"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "diastolic blood pressure ≥80 mmHg",
+                              "Observation-Name": [
+                                "diastolic blood pressure"
+                              ],
+                              "Eq-Comparison": [
+                                "≥ 80 mmHg"
+                              ],
+                              "Eq-Value": [
+                                "80"
+                              ],
+                              "Eq-Unit": [
+                                "mmHg"
+                              ],
+                              "Eq-Operator": [
+                                "≥"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "(or on hypertension medication)",
+                              "Drug-Name": [
+                                "hypertension medication"
+                              ],
+                              "Condition": [
+                                "hypertension"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "- HbA1c ≥5.7% or higher",
+                  "Observation-Name": [
+                    "HbA1c"
+                  ],
+                  "Eq-Comparison": [
+                    "≥ 5.7%"
+                  ],
+                  "Eq-Value": [
+                    "5.7"
+                  ],
+                  "Eq-Unit": [
+                    "%"
+                  ],
+                  "Eq-Operator": [
+                    "≥"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- No diagnosis or treatment for cancer in the past year",
+                  "Negation": [
+                    "No"
+                  ],
+                  "Condition": [
+                    "cancer"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "past year"
+                  ],
+                  "Encounter": [
+                    "diagnosis",
+                    "treatment"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "- No diagnosis of mild cognitive impairment or dementia in the past year",
+              "Negation": [
+                "No"
+              ],
+              "Condition": [
+                "mild cognitive impairment",
+                "dementia"
+              ],
+              "Eq-Temporal-Period": [
+                "past year"
+              ],
+              "Encounter": [
+                "diagnosis"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "- Ability to perform daily exercise, including aerobic activity and resistance exercise",
+              "Observation-Name": [
+                "daily exercise",
+                "aerobic activity",
+                "resistance exercise"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Non-smoker in the past year",
+                  "Negation": [
+                    "Non"
+                  ],
+                  "Observation-Name": [
+                    "smoker"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "past year"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

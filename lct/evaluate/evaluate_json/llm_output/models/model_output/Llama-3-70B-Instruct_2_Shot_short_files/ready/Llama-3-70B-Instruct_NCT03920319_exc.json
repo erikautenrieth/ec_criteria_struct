@@ -1,0 +1,93 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "History of any Axis I psychiatric diagnosis other than nicotine dependence",
+          "Condition": [
+            "Axis I psychiatric diagnosis"
+          ],
+          "Condition-Name": [
+            "Axis I psychiatric diagnosis"
+          ],
+          "Exception": [
+            "nicotine dependence"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "Medical conditions that might affect brain function",
+              "Condition": [
+                "Medical conditions"
+              ],
+              "Condition-Name": [
+                "Medical conditions"
+              ],
+              "Modifier": [
+                "affect brain function"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "Current use of medications that could alter brain function",
+                  "Drug": [
+                    "medications"
+                  ],
+                  "Drug-Name": [
+                    "medications"
+                  ],
+                  "Modifier": [
+                    "alter brain function"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Pregnancy",
+                      "Condition": [
+                        "Pregnancy"
+                      ],
+                      "Condition-Name": [
+                        "Pregnancy"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Current illicit drug use other than occasional use of marijuana",
+                      "Drug": [
+                        "illicit drug"
+                      ],
+                      "Drug-Name": [
+                        "illicit drug"
+                      ],
+                      "Exception": [
+                        "occasional use of marijuana"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

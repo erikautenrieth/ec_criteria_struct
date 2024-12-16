@@ -1,0 +1,74 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "Patients under tutorship or curatorship or inability to give informed consent",
+                      "Negation": [
+                        "inability"
+                      ],
+                      "Condition": [
+                        "tutorship",
+                        "curatorship"
+                      ],
+                      "Observation": [
+                        "informed consent"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "raw_text": "Patients receiving an anti-osteoporotic treatment",
+                  "Drug": [
+                    "anti-osteoporotic treatment"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "raw_text": "Patients requiring an anti-osteoporotic baseline treatment (T-score ⩽ -3DS on at least 1 site or FRAX score above the therapeutic intervention threshold)",
+              "Drug": [
+                "anti-osteoporotic baseline treatment"
+              ],
+              "Observation-Name": [
+                "T-score",
+                "FRAX score"
+              ],
+              "Eq-Comparison": [
+                "⩽ -3DS",
+                "above the therapeutic intervention threshold"
+              ],
+              "Eq-Value": [
+                "-3DS"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "Patients with one or more major risk factors for osteoporosis",
+          "Condition": [
+            "osteoporosis"
+          ],
+          "Risk": [
+            "one or more major risk factors"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "Patients who have received topical corticosteroids in less than 3 months",
+      "Drug": [
+        "topical corticosteroids"
+      ],
+      "Eq-Temporal-Period": [
+        "less than 3 months"
+      ]
+    }
+  }
+}

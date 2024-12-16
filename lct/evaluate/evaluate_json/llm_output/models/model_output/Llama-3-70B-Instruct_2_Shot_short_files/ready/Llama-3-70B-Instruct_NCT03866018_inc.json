@@ -1,0 +1,124 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Male",
+          "Gender": [
+            "Male"
+          ]
+        },
+        "right": {
+          "raw_text": "Female ≥ 60 years old",
+          "Gender": [
+            "Female"
+          ],
+          "Age": [
+            "age"
+          ],
+          "Eq-Operator": [
+            "≥"
+          ],
+          "Eq-Value": [
+            "60"
+          ],
+          "Eq-Comparison": [
+            "≥ 60 years old"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "MMSE score between 4 and 26 / 30",
+          "Observation": [
+            "MMSE score"
+          ],
+          "Observation-Name": [
+            "MMSE score"
+          ],
+          "Eq-Operator": [
+            "between"
+          ],
+          "Eq-Value": [
+            "4",
+            "26",
+            "30"
+          ],
+          "Eq-Comparison": [
+            "between 4 and 26 / 30"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "Diagnosis of minor to major NeuroCognitive Disorder of the Alzheimer type or multiple etiology;",
+              "Condition": [
+                "NeuroCognitive Disorder of the Alzheimer type",
+                "multiple etiology"
+              ],
+              "Condition-Type": [
+                "minor",
+                "major"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Subject without a major hearing or visual impairment;",
+                  "NOT": {
+                    "left": {
+                      "raw_text": "major hearing or visual impairment",
+                      "Condition": [
+                        "hearing impairment",
+                        "visual impairment"
+                      ],
+                      "Severity": [
+                        "major"
+                      ]
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Subject not presenting any contraindications to the practice of adapted physical activity;",
+                      "NOT": {
+                        "left": {
+                          "raw_text": "contraindications to the practice of adapted physical activity",
+                          "Contraindication": [
+                            "contraindications to the practice of adapted physical activity"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "Subject affiliated to Social Security System;",
+                          "Insurance": [
+                            "Social Security System"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "Signing informed consent",
+                          "Observation": [
+                            "informed consent"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

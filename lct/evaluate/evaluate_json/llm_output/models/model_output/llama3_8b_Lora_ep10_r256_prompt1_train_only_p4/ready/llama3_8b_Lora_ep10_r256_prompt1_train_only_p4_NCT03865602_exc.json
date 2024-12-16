@@ -1,0 +1,228 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "AND": {
+                    "left": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "1. prior randomization to either STAR",
+                          "Procedure": [
+                            "randomization"
+                          ],
+                          "Procedure-Name": [
+                            "randomization"
+                          ],
+                          "Eq-Comparison": [
+                            "prior"
+                          ],
+                          "Eq-Temporal-Period": [
+                            "prior"
+                          ],
+                          "Modifier": [
+                            "STAR"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or usual care study arms;",
+                          "Modifier": [
+                            "usual care"
+                          ],
+                          "Study": [
+                            "study"
+                          ]
+                        }
+                      }
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "2."
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "not a North Carolina resident",
+                                  "Location": [
+                                    "North Carolina"
+                                  ],
+                                  "Negation": [
+                                    "not"
+                                  ]
+                                },
+                                "right": {
+                                  "raw_text": "or residence >2.5-hour drive time from treating hospital;",
+                                  "Eq-Operator": [
+                                    ">"
+                                  ],
+                                  "Eq-Value": [
+                                    "2.5"
+                                  ],
+                                  "Eq-Comparison": [
+                                    ">2.5-hour"
+                                  ],
+                                  "Observation": [
+                                    "drive time"
+                                  ],
+                                  "Observation-Name": [
+                                    "drive time"
+                                  ],
+                                  "Location": [
+                                    "hospital"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "3. the only antibiotic associated with patient is administered in the operating room as this likely represents pre-operative infection prophylaxis",
+                      "Procedure": [
+                        "operative"
+                      ],
+                      "Procedure-Name": [
+                        "operative"
+                      ],
+                      "Drug": [
+                        "antibiotic"
+                      ],
+                      "Drug-Name": [
+                        "antibiotic"
+                      ],
+                      "Assertion": [
+                        "likely"
+                      ],
+                      "Condition": [
+                        "infection"
+                      ],
+                      "Condition-Name": [
+                        "infection"
+                      ],
+                      "Modifier": [
+                        "pre-operative"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "and"
+                        },
+                        "right": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "not a North Carolina resident",
+                              "Location": [
+                                "North Carolina"
+                              ],
+                              "Negation": [
+                                "not"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "4. patients transferred from other acute care hospitals;",
+              "Encounter": [
+                "transferred"
+              ],
+              "Location": [
+                "hospitals"
+              ],
+              "Acuteness": [
+                "acute care"
+              ],
+              "Other": [
+                "other"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "5. patients with a change in code status (i.e., do",
+              "Observation": [
+                "code status"
+              ],
+              "Observation-Name": [
+                "code status"
+              ],
+              "Stability": [
+                "change"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "not resuscitate, do",
+                  "Procedure": [
+                    "resuscitate"
+                  ],
+                  "Procedure-Name": [
+                    "resuscitate"
+                  ],
+                  "Negation": [
+                    "not"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "6. patients with infection ruled out during the index hospitalization.",
+          "Condition": [
+            "infection"
+          ],
+          "Condition-Name": [
+            "infection"
+          ],
+          "Encounter": [
+            "hospitalization"
+          ],
+          "Negation": [
+            "ruled out"
+          ]
+        },
+        "right": {
+          "raw_text": "7. patients transferred from other acute care hospitals;",
+          "Encounter": [
+            "transferred"
+          ],
+          "Location": [
+            "hospitals"
+          ],
+          "Acuteness": [
+            "acute care"
+          ],
+          "Other": [
+            "other"
+          ]
+        }
+      }
+    }
+  }
+}

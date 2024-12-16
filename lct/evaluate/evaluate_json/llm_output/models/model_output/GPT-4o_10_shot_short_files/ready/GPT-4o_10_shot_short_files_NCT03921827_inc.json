@@ -1,0 +1,103 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "1. Patients with recent stroke/TIA",
+                  "Condition": [
+                    "stroke",
+                    "TIA"
+                  ],
+                  "Condition-Name": [
+                    "stroke",
+                    "TIA"
+                  ],
+                  "Stability": [
+                    "recent"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "and severe stenosis of intracranial ICA or MCA",
+                      "Condition": [
+                        "severe stenosis",
+                        "intracranial ICA",
+                        "MCA"
+                      ],
+                      "Condition-Name": [
+                        "severe stenosis",
+                        "intracranial ICA",
+                        "MCA"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "and impaired CVR within previous three months",
+                      "Condition": [
+                        "impaired CVR"
+                      ],
+                      "Modifier": [
+                        "impaired"
+                      ],
+                      "Eq-Temporal-Period": [
+                        "within previous three months"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "but not before 3 weeks after acute stroke.",
+                  "Negation": [
+                    "not"
+                  ],
+                  "Eq-Temporal-Period": [
+                    "before 3 weeks after acute stroke"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "raw_text": "This is to differentiate between patients with a long-standing fixed-stenosis from patients with partially recanalized intracranial artery (masquerading as severe stenosis).",
+          "Condition": [
+            "long-standing fixed-stenosis",
+            "partially recanalized intracranial artery",
+            "severe stenosis"
+          ],
+          "Condition-Name": [
+            "long-standing fixed-stenosis",
+            "partially recanalized intracranial artery",
+            "severe stenosis"
+          ]
+        }
+      }
+    },
+    "right": {
+      "raw_text": "2. Age >21 years",
+      "Age": [
+        "Age"
+      ],
+      "Eq-Operator": [
+        ">"
+      ],
+      "Eq-Value": [
+        "21"
+      ],
+      "Eq-Comparison": [
+        ">21 years"
+      ],
+      "Eq-Temporal-Unit": [
+        "years"
+      ]
+    }
+  }
+}

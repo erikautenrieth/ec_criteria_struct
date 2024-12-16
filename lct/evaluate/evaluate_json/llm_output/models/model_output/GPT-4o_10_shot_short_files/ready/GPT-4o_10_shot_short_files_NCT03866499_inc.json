@@ -1,0 +1,131 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Histologically or cytologically confirmed non-small cell lung cancer.",
+                  "Condition": [
+                    "non-small cell lung cancer"
+                  ],
+                  "Condition-Name": [
+                    "non-small cell lung cancer"
+                  ],
+                  "Observation": [
+                    "Histologically confirmed",
+                    "cytologically confirmed"
+                  ],
+                  "Observation-Name": [
+                    "Histologically confirmed",
+                    "cytologically confirmed"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- The ECOG score of performance status is 0-1.",
+                  "Observation": [
+                    "ECOG score of performance status"
+                  ],
+                  "Observation-Name": [
+                    "ECOG score of performance status"
+                  ],
+                  "Eq-Value": [
+                    "0-1"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Locally advanced or recurrent metastatic NSCLC that has never received systemic treatment.",
+                  "Condition": [
+                    "Locally advanced NSCLC",
+                    "recurrent metastatic NSCLC"
+                  ],
+                  "Condition-Name": [
+                    "Locally advanced NSCLC",
+                    "recurrent metastatic NSCLC"
+                  ],
+                  "Negation": [
+                    "never received"
+                  ],
+                  "Modifier": [
+                    "systemic treatment"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- According to RECIST1.1 criteria, there is at least 1 measurable lesion that has not been previously irradiated.",
+                  "Observation": [
+                    "measurable lesion"
+                  ],
+                  "Observation-Name": [
+                    "measurable lesion"
+                  ],
+                  "Study": [
+                    "RECIST1.1 criteria"
+                  ],
+                  "Negation": [
+                    "not"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Prior to enrollment, a central laboratory testing report has confirmed that the tumor has one of two common EGFR mutations positive that are sensitive to EGFR-TKI therapy, accompanied with or not accompanied with other EGFR mutation,",
+              "Condition": [
+                "EGFR mutations"
+              ],
+              "Condition-Name": [
+                "EGFR mutations"
+              ],
+              "Observation": [
+                "central laboratory testing report"
+              ],
+              "Observation-Name": [
+                "central laboratory testing report"
+              ],
+              "Study": [
+                "enrollment"
+              ],
+              "Drug": [
+                "EGFR-TKI therapy"
+              ],
+              "Drug-Name": [
+                "EGFR-TKI therapy"
+              ],
+              "Polarity": [
+                "positive"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "with the exception of exon 20 insertion.",
+                  "Negation": [
+                    "exception"
+                  ],
+                  "Condition": [
+                    "exon 20 insertion"
+                  ],
+                  "Condition-Name": [
+                    "exon 20 insertion"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "-"
+    }
+  }
+}

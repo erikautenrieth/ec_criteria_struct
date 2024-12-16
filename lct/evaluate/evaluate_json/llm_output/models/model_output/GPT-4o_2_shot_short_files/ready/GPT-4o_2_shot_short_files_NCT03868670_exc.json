@@ -1,0 +1,100 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Subject has an implanted medical device that delivers electrical energy to the brain.",
+                  "Condition": [
+                    "implanted medical device"
+                  ],
+                  "Procedure": [
+                    "delivers electrical energy"
+                  ],
+                  "Organism-Name": [
+                    "brain"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Subject has an implantable cardiac pacemaker",
+                      "Condition": [
+                        "implantable cardiac pacemaker"
+                      ],
+                      "Procedure-Name": [
+                        "implantable cardiac pacemaker"
+                      ],
+                      "Modifier": [
+                        "cardiac"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "defibrillator",
+                          "Condition": [
+                            "defibrillator"
+                          ]
+                        },
+                        "right": {
+                          "raw_text": "or neurostimulator.",
+                          "Condition": [
+                            "neurostimulator"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Subject is likely to require repeat MR imaging after implant of the RNS Neurostimulator and Leads.",
+              "Condition": [
+                "repeat MR imaging"
+              ],
+              "Procedure-Name": [
+                "implant"
+              ],
+              "Drug-Name": [
+                "RNS Neurostimulator"
+              ]
+            }
+          }
+        },
+        "right": {
+          "raw_text": "- Subject is unable to fit into CT scanner (500lb upper weight limit for CT scanner).",
+          "Condition": [
+            "unable to fit into CT scanner"
+          ],
+          "Observation": [
+            "500lb upper weight limit for CT scanner"
+          ],
+          "Observation-Name": [
+            "CT scanner"
+          ],
+          "Eq-Value": [
+            "500lb"
+          ]
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- Inability to provide informed consent to treatment.",
+          "Negation": [
+            "Inability"
+          ],
+          "Condition": [
+            "provide informed consent to treatment"
+          ]
+        }
+      }
+    }
+  }
+}

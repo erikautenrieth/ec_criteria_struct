@@ -1,0 +1,160 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "- Previously received systemic treatment for locally advanced or recurrent metastatic cancer.",
+          "Condition": [
+            "locally advanced cancer",
+            "recurrent metastatic cancer"
+          ],
+          "Procedure": [
+            "systemic treatment"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Primary T790M mutation-positive patient.",
+              "Condition": [
+                "T790M mutation-positive"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "- Previous interstitial lung disease",
+                      "Condition": [
+                        "interstitial lung disease"
+                      ],
+                      "Modifier": [
+                        "Previous"
+                      ]
+                    },
+                    "right": {
+                      "OR": {
+                        "left": {
+                          "raw_text": "drug-induced interstitial lung disease",
+                          "Condition": [
+                            "interstitial lung disease"
+                          ],
+                          "Modifier": [
+                            "drug-induced"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "radiation pneumonia requiring hormonal therapy",
+                              "Condition": [
+                                "radiation pneumonia"
+                              ],
+                              "Procedure": [
+                                "hormonal therapy"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "any clinically proven active interstitial lung disease.",
+                              "Condition": [
+                                "interstitial lung disease"
+                              ],
+                              "Modifier": [
+                                "clinically proven",
+                                "active"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "- Known active infections such as hepatitis B, hepatitis C, and human immunodeficiency virus.",
+                      "Condition": [
+                        "hepatitis B",
+                        "hepatitis C",
+                        "human immunodeficiency virus"
+                      ],
+                      "Modifier": [
+                        "active"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "- Local radiation therapy is carried out within 1 week; more than 30% bone marrow radiation therapy or extensive radiation therapy is performed within 4 weeks.",
+                          "Procedure": [
+                            "Local radiation therapy",
+                            "bone marrow radiation therapy",
+                            "extensive radiation therapy"
+                          ],
+                          "Eq-Temporal-Recency": [
+                            "within 1 week",
+                            "within 4 weeks"
+                          ],
+                          "Eq-Value": [
+                            "1",
+                            "4"
+                          ],
+                          "Eq-Temporal-Unit": [
+                            "week",
+                            "weeks"
+                          ],
+                          "Condition": [
+                            "more than 30% bone marrow radiation therapy"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "- ≤ 4 weeks from major surgery",
+                              "Procedure": [
+                                "major surgery"
+                              ],
+                              "Eq-Comparison": [
+                                "≤ 4 weeks"
+                              ],
+                              "Eq-Value": [
+                                "4"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "weeks"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "or ≤ 2 weeks from minor surgery.",
+                              "Procedure": [
+                                "minor surgery"
+                              ],
+                              "Eq-Comparison": [
+                                "≤ 2 weeks"
+                              ],
+                              "Eq-Value": [
+                                "2"
+                              ],
+                              "Eq-Temporal-Unit": [
+                                "weeks"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "-"
+    }
+  }
+}

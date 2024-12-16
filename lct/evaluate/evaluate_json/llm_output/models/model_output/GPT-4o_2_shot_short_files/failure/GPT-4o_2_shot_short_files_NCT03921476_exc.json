@@ -1,0 +1,140 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "Subjects less than 18 years of age",
+          "Age": [
+            "less than 18 years"
+          ],
+          "Eq-Comparison": [
+            "less than 18 years"
+          ],
+          "Eq-Operator": [
+            "less than"
+          ],
+          "Eq-Value": [
+            "18"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ]
+        },
+        "right": {
+          "raw_text": "or older than 65 years of age",
+          "Age": [
+            "older than 65 years"
+          ],
+          "Eq-Comparison": [
+            "older than 65 years"
+          ],
+          "Eq-Operator": [
+            "older than"
+          ],
+          "Eq-Value": [
+            "65"
+          ],
+          "Eq-Temporal-Unit": [
+            "years"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Subjects that have ever been diagnosed with any mood disorder by a clinician prior to starting spironolactone (history of mood disorder or current mood disorder)",
+              "Condition": [
+                "mood disorder"
+              ],
+              "Condition-Type": [
+                "history of mood disorder",
+                "current mood disorder"
+              ],
+              "Drug-Name": [
+                "spironolactone"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "Subjects taking hormonal contraception (including but not limited to oral contraceptive pills) for a duration of less than 6 months",
+                  "Drug": [
+                    "hormonal contraception",
+                    "oral contraceptive pills"
+                  ],
+                  "Eq-Comparison": [
+                    "less than 6 months"
+                  ],
+                  "Eq-Operator": [
+                    "less than"
+                  ],
+                  "Eq-Value": [
+                    "6"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "Subjects that have ever been diagnosed with any type of sexual dysfunction prior to starting spironolactone",
+                      "Condition": [
+                        "sexual dysfunction"
+                      ],
+                      "Drug-Name": [
+                        "spironolactone"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "NOT": {
+                            "left": {
+                              "raw_text": "Subjects not able to complete an online survey in English",
+                              "Negation": [
+                                "not able"
+                              ],
+                              "Observation": [
+                                "complete an online survey"
+                              ],
+                              "Language": [
+                                "English"
+                              ]
+                            }
+                          }
+                        },
+                        "right": {
+                          "AND": {
+                            "left": {
+                              "raw_text": "Subjects taking oral isotretinoin for a diagnosis of acne",
+                              "Drug-Name": [
+                                "oral isotretinoin"
+                              ],
+                              "Condition": [
+                                "acne"
+                              ]
+                            },
+                            "right": {
+                              "raw_text": "Subjects that are currently pregnant",
+                              "Life-Stage-And-Gender": [
+                                "pregnant"
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

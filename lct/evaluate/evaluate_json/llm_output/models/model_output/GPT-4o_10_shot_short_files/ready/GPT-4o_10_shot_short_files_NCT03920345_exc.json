@@ -1,0 +1,167 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "raw_text": "Patients receiving additional invasive back surgery after the study treatment.",
+              "Procedure": [
+                "invasive back surgery"
+              ],
+              "Procedure-Name": [
+                "invasive back surgery"
+              ],
+              "Study": [
+                "study treatment"
+              ]
+            },
+            "right": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Inability to complete follow-up visits or required questionnaires.",
+                  "Negation": [
+                    "Inability"
+                  ],
+                  "Observation": [
+                    "follow-up visits",
+                    "required questionnaires"
+                  ],
+                  "Observation-Name": [
+                    "follow-up visits",
+                    "required questionnaires"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "NOT": {
+                "left": {
+                  "raw_text": "- Non-compliant patients",
+                  "Negation": [
+                    "Non-compliant"
+                  ]
+                }
+              }
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Difficult",
+                  "Modifier": [
+                    "Difficult"
+                  ]
+                },
+                "right": {
+                  "raw_text": "or impossible communication with the patient",
+                  "Negation": [
+                    "impossible"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "AND": {
+            "left": {
+              "OR": {
+                "left": {
+                  "raw_text": "- Breastfeeding",
+                  "Life-Stage-And-Gender": [
+                    "Breastfeeding"
+                  ]
+                },
+                "right": {
+                  "OR": {
+                    "left": {
+                      "raw_text": "pregnant",
+                      "Life-Stage-And-Gender": [
+                        "pregnant"
+                      ]
+                    },
+                    "right": {
+                      "raw_text": "or patients who plan a pregnancy while participating in the study",
+                      "Life-Stage-And-Gender": [
+                        "pregnancy"
+                      ],
+                      "Study": [
+                        "study"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "raw_text": "- Systemic neurological disorders with mobility limitations (e.g. advanced Parkinson's disease or multiple sclerosis)",
+              "Condition": [
+                "Systemic neurological disorders",
+                "Parkinson's disease",
+                "multiple sclerosis"
+              ],
+              "Condition-Name": [
+                "Parkinson's disease",
+                "multiple sclerosis"
+              ],
+              "Modifier": [
+                "advanced"
+              ],
+              "Observation": [
+                "mobility limitations"
+              ],
+              "Observation-Name": [
+                "mobility limitations"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients with incompatibilities or known limitations that make participation impossible",
+              "Negation": [
+                "impossible"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "- Patients after stabilization with implants on thoracic or lumbar spine.",
+                  "Procedure": [
+                    "stabilization with implants"
+                  ],
+                  "Modifier": [
+                    "thoracic",
+                    "lumbar"
+                  ]
+                },
+                "right": {
+                  "NOT": {
+                    "left": {
+                      "raw_text": "- Inability to provide informed consent without a legally authorized representative.",
+                      "Negation": [
+                        "Inability"
+                      ],
+                      "Study": [
+                        "informed consent"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

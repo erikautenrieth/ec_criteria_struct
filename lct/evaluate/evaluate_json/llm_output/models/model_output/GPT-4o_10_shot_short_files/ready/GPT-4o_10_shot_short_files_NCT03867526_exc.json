@@ -1,0 +1,85 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "NOT": {
+            "left": {
+              "raw_text": "- No Informed consent from the patient or the parents before any study related procedures",
+              "Negation": [
+                "No"
+              ],
+              "Study": [
+                "Informed consent",
+                "study"
+              ],
+              "Coreference": [
+                "patient",
+                "parents"
+              ]
+            }
+          }
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Patients of both genders younger than 6 months",
+              "Life-Stage-And-Gender": [
+                "both genders"
+              ],
+              "Age": [
+                "younger than 6 months"
+              ],
+              "Eq-Comparison": [
+                "younger than 6 months"
+              ],
+              "Eq-Value": [
+                "6"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Operator": [
+                "younger than"
+              ]
+            },
+            "right": {
+              "raw_text": "and older than 80 years",
+              "Age": [
+                "older than 80 years"
+              ],
+              "Eq-Comparison": [
+                "older than 80 years"
+              ],
+              "Eq-Value": [
+                "80"
+              ],
+              "Eq-Temporal-Unit": [
+                "years"
+              ],
+              "Eq-Operator": [
+                "older than"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "NOT": {
+        "left": {
+          "raw_text": "- No diagnosis of Wilson disease",
+          "Negation": [
+            "No"
+          ],
+          "Condition": [
+            "Wilson disease"
+          ],
+          "Condition-Name": [
+            "Wilson disease"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "AND": {
+    "left": {
+      "OR": {
+        "left": {
+          "raw_text": "- Have a current diagnosis of ulcerative colitis",
+          "Condition": [
+            "ulcerative colitis"
+          ],
+          "Condition-Name": [
+            "ulcerative colitis"
+          ],
+          "Eq-Comparison": [
+            "current"
+          ],
+          "Eq-Temporal-Period": [
+            "current"
+          ]
+        },
+        "right": {
+          "OR": {
+            "left": {
+              "raw_text": "- inflammatory bowel disease-unclassified (IBD-U) (formerly known as indeterminate colitis)",
+              "Condition": [
+                "inflammatory bowel disease-unclassified"
+              ],
+              "Condition-Name": [
+                "inflammatory bowel disease-unclassified"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- abdominal or perianal abscess",
+                  "Condition": [
+                    "abdominal abscess",
+                    "perianal abscess"
+                  ],
+                  "Condition-Name": [
+                    "abdominal abscess",
+                    "perianal abscess"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- short bowel syndrome",
+                  "Condition": [
+                    "short bowel syndrome"
+                  ],
+                  "Condition-Name": [
+                    "short bowel syndrome"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "- Have a stoma or ostomy",
+          "Procedure": [
+            "stoma",
+            "ostomy"
+          ],
+          "Procedure-Name": [
+            "stoma",
+            "ostomy"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "- Have had a bowel resection within 6 months",
+              "Procedure": [
+                "bowel resection"
+              ],
+              "Procedure-Name": [
+                "bowel resection"
+              ],
+              "Eq-Temporal-Unit": [
+                "months"
+              ],
+              "Eq-Value": [
+                "6"
+              ],
+              "Eq-Comparison": [
+                "within 6 months"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "- or any kind of intra-abdominal surgery within 3 months of baseline",
+                  "Procedure": [
+                    "intra-abdominal surgery"
+                  ],
+                  "Procedure-Name": [
+                    "intra-abdominal surgery"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Value": [
+                    "3"
+                  ],
+                  "Eq-Comparison": [
+                    "within 3 months"
+                  ]
+                },
+                "right": {
+                  "raw_text": "- or extra abdominal surgery",
+                  "Procedure": [
+                    "extra abdominal surgery"
+                  ],
+                  "Procedure-Name": [
+                    "extra abdominal surgery"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "raw_text": "- Have ever received any monoclonal antibodies binding IL-23",
+      "Drug": [
+        "monoclonal antibodies"
+      ],
+      "Drug-Name": [
+        "monoclonal antibodies"
+      ],
+      "Eq-Comparison": [
+        "ever"
+      ],
+      "Eq-Temporal-Period": [
+        "ever"
+      ]
+    }
+  }
+}

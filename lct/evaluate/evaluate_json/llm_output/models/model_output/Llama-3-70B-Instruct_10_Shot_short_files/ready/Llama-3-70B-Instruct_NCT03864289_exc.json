@@ -1,0 +1,91 @@
+{
+  "AND": {
+    "left": {
+      "NOT": {
+        "left": {
+          "raw_text": "Children with Syndromic ASD caused by known genetic defects or inherited metabolic diseases",
+          "Condition": [
+            "Syndromic ASD"
+          ],
+          "Condition-Name": [
+            "Syndromic ASD"
+          ],
+          "Modifier": [
+            "known genetic defects",
+            "inherited metabolic diseases"
+          ],
+          "Observation": [
+            "Rett Syndrome",
+            "Fragile X Syndrome",
+            "Angelman Syndrome",
+            "Prader-Willi Syndrome",
+            "tuberous sclerosis"
+          ],
+          "Observation-Name": [
+            "Rett Syndrome",
+            "Fragile X Syndrome",
+            "Angelman Syndrome",
+            "Prader-Willi Syndrome",
+            "tuberous sclerosis"
+          ]
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "OR": {
+            "left": {
+              "raw_text": "- Visual",
+              "Modifier": [
+                "Visual"
+              ]
+            },
+            "right": {
+              "OR": {
+                "left": {
+                  "raw_text": "auditory",
+                  "Modifier": [
+                    "auditory"
+                  ]
+                },
+                "right": {
+                  "raw_text": "and physical disabilities",
+                  "Modifier": [
+                    "physical"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "right": {
+          "NOT": {
+            "left": {
+              "raw_text": "Complication with other serious chronic diseases",
+              "Condition": [
+                "chronic diseases"
+              ],
+              "Condition-Name": [
+                "chronic diseases"
+              ],
+              "Modifier": [
+                "serious"
+              ],
+              "Observation": [
+                "liver and kidney failure",
+                "connective tissue diseases",
+                "tumors"
+              ],
+              "Observation-Name": [
+                "liver and kidney failure",
+                "connective tissue diseases",
+                "tumors"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "AND": {
+    "left": {
+      "AND": {
+        "left": {
+          "raw_text": "1. Heart failure NYHA IIIB-IV",
+          "Condition": [
+            "Heart failure"
+          ],
+          "Condition-Name": [
+            "Heart failure"
+          ],
+          "Severity": [
+            "NYHA IIIB-IV"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "2. Planned coronary revascularization",
+              "Procedure": [
+                "coronary revascularization"
+              ],
+              "Procedure-Name": [
+                "coronary revascularization"
+              ],
+              "Study": [
+                "planned"
+              ]
+            },
+            "right": {
+              "AND": {
+                "left": {
+                  "raw_text": "3. Planned major surgery within the next 12 months",
+                  "Procedure": [
+                    "major surgery"
+                  ],
+                  "Procedure-Name": [
+                    "major surgery"
+                  ],
+                  "Study": [
+                    "planned"
+                  ],
+                  "Eq-Temporal-Unit": [
+                    "months"
+                  ],
+                  "Eq-Value": [
+                    "12"
+                  ],
+                  "Eq-Comparison": [
+                    "within the next 12 months"
+                  ]
+                },
+                "right": {
+                  "AND": {
+                    "left": {
+                      "raw_text": "4. Inability to walk for any reason",
+                      "Observation": [
+                        "walk"
+                      ],
+                      "Observation-Name": [
+                        "walk"
+                      ],
+                      "Modifier": [
+                        "inability"
+                      ]
+                    },
+                    "right": {
+                      "AND": {
+                        "left": {
+                          "raw_text": "5. Comorbidities that would preclude adherence to the rehabilitation program",
+                          "Condition": [
+                            "Comorbidities"
+                          ],
+                          "Condition-Name": [
+                            "Comorbidities"
+                          ],
+                          "Modifier": [
+                            "preclude"
+                          ],
+                          "Study": [
+                            "rehabilitation program"
+                          ]
+                        },
+                        "right": {
+                          "OR": {
+                            "left": {
+                              "raw_text": "e.g. arthrosis",
+                              "Condition": [
+                                "arthrosis"
+                              ],
+                              "Condition-Name": [
+                                "arthrosis"
+                              ]
+                            },
+                            "right": {
+                              "OR": {
+                                "left": {
+                                  "raw_text": "active malignancy",
+                                  "Condition": [
+                                    "malignancy"
+                                  ],
+                                  "Condition-Name": [
+                                    "malignancy"
+                                  ],
+                                  "Modifier": [
+                                    "active"
+                                  ]
+                                },
+                                "right": {
+                                  "OR": {
+                                    "left": {
+                                      "raw_text": "major depression or other significant psychiatric disorder",
+                                      "Condition": [
+                                        "major depression",
+                                        "psychiatric disorder"
+                                      ],
+                                      "Condition-Name": [
+                                        "major depression",
+                                        "psychiatric disorder"
+                                      ]
+                                    },
+                                    "right": {
+                                      "raw_text": "cognitive impairment",
+                                      "Condition": [
+                                        "cognitive impairment"
+                                      ],
+                                      "Condition-Name": [
+                                        "cognitive impairment"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "right": {
+      "AND": {
+        "left": {
+          "raw_text": "6. Life expectancy less than 12 months",
+          "Eq-Temporal-Unit": [
+            "months"
+          ],
+          "Eq-Value": [
+            "12"
+          ],
+          "Eq-Comparison": [
+            "less than 12 months"
+          ]
+        },
+        "right": {
+          "AND": {
+            "left": {
+              "raw_text": "7. Pregnancy",
+              "Condition": [
+                "Pregnancy"
+              ],
+              "Condition-Name": [
+                "Pregnancy"
+              ]
+            },
+            "right": {
+              "raw_text": "8. Inability to operate the smart-watch",
+              "Observation": [
+                "operate"
+              ],
+              "Observation-Name": [
+                "operate"
+              ],
+              "Modifier": [
+                "inability"
+              ],
+              "Device": [
+                "smart-watch"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
