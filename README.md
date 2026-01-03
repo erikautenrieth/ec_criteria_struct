@@ -1,5 +1,7 @@
 # Masterthesis
 
+Dieses Repository enthält den zugehörigen Code zur Masterarbeit: [Anwendung von Machine Learning-Methoden zur Strukturierung von Freitextdaten am Beispiel von Eignungskriterien von klinischen Studien](docs/Masterthesis.pdf).
+
 
 Zur Strukturierung von Eignungskriterien wurden zwei Korpora analysiert.
 LCT-Korpus und Chia-Korpus. Zudem wurden zwei methodische Ansätze verfolgt.
