@@ -1,5 +1,6 @@
 from helper_functions import *
 from openai import OpenAI
+import os
 import time  
 
 
@@ -8,7 +9,7 @@ n_shot = 5
 model_name = "GPT-4o"
 
 client = OpenAI(
-  api_key='INSERT_API_KEY',
+    api_key=os.environ.get("OPENAI_API_KEY"),
 )
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"

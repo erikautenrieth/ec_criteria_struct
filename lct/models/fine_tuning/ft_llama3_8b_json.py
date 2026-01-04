@@ -20,7 +20,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     max_seq_length = max_seq_length, # Choose any! We auto support RoPE Scaling internally!
     dtype = None, # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
     load_in_4bit = True, # Use 4bit quantization to reduce memory usage. Can be False.
-    token = "INSERT_HUGGINGFACE_TOKEN"
+    token = os.environ.get("HF_TOKEN")
 )
 model = FastLanguageModel.get_peft_model(
     model,
@@ -119,5 +119,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 # Save Model
 model.save_pretrained(f"70b_p4/llama3_8b_Lora_ep{epoch}_r{r}_prompt1_train_only_p4")
 
-# model.push_to_hub("your_name/lora_model", token = "...") # Online saving
-# tokenizer.push_to_hub("your_name/lora_model", token = "...") # Online saving
+# model.push_to_hub("your_name/lora_model", token = os.environ.get("HF_TOKEN")) # Online saving
+# tokenizer.push_to_hub("your_name/lora_model", token = os.environ.get("HF_TOKEN")) # Online saving

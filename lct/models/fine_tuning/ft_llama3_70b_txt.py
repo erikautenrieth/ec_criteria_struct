@@ -1,8 +1,9 @@
+import torch
+import os
+
 from unsloth import FastLanguageModel
 from trl import SFTTrainer
 from transformers import TrainingArguments
-import torch
-import os
 from datasets import load_from_disk
 
 max_seq_length = 2048 # Choose any! We auto support RoPE Scaling internally!
@@ -20,7 +21,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
-    token = "INSERT_HUGGINGFACE_TOKEN"
+    token = os.environ.get("HF_TOKEN")
 )
 model = FastLanguageModel.get_peft_model(
     model,

@@ -15,7 +15,7 @@ os.makedirs(output_path, exist_ok=True)
 study_files = os.listdir(study_path)
 
 client = anthropic.Anthropic(
-    api_key="INSERT_API_KEY", #os.getenv("ANTHROPIC_API_KEY")
+    api_key=os.environ.get("ANTHROPIC_API_KEY"),
 )
 
 for file in study_files:

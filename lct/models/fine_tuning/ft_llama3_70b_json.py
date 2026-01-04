@@ -24,7 +24,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
-    token = "INSERT_HUGGINGFACE_TOKEN"
+    token = os.environ.get("HF_TOKEN")
 )
 model = FastLanguageModel.get_peft_model(
     model,
@@ -125,5 +125,5 @@ print(f"Peak reserved memory for training % of max memory = {lora_percentage} %.
 model.save_pretrained(f"{model_path}/llama3_70b_ep{epoch}_r{r}_prompt1_json")
 
 ## Model Push to Huggingface Hub
-# model.push_to_hub("your_name/lora_model", token = "...") # Online saving
-# tokenizer.push_to_hub("your_name/lora_model", token = "...") # Online saving
+# model.push_to_hub("your_name/lora_model", token = os.environ.get("HF_TOKEN")) # Online saving
+# tokenizer.push_to_hub("your_name/lora_model", token = os.environ.get("HF_TOKEN")) # Online saving

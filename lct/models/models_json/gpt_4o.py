@@ -1,5 +1,6 @@
 from helper_functions import *
 from openai import OpenAI
+import os
 
 batch_path = "eval/evaluate_json"
 n_shot = 5
@@ -7,7 +8,7 @@ n_shot = 5
 model_name = f"GPT-4o_{n_shot}_shot"
 
 client = OpenAI(
-  api_key='INSERT_API_KEY_HERE',
+    api_key=os.environ.get("OPENAI_API_KEY"),
 )
 
 transform_lct ="/work/eauten2s/ec_criteria_struct/lct"

@@ -26,7 +26,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
-    token = "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"
+    token = os.environ.get("HF_TOKEN")
 )
 
 model = FastLanguageModel.get_peft_model(

@@ -1,4 +1,5 @@
 import torch
+import os
 from unsloth import FastLanguageModel
 from trl import SFTTrainer
 from transformers import TrainingArguments
@@ -8,7 +9,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = "meta-llama/Meta-Llama-3-70B-Instruct",
     max_seq_length = 2048,
     load_in_4bit = True,
-    token = "hf_..."
+    token = os.environ.get("HF_TOKEN")
 )
 
 model = FastLanguageModel.get_peft_model(
