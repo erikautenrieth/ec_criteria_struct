@@ -1,21 +1,20 @@
-# Modell Inferenz
+# Model Inference — Indirect Structuring
 
+Inserts logical operators (`[AND]`, `[OR]`, `[NOT]`) into eligibility criteria text.
 
-## Indirekte Strukturierung von Eignungskriterien
-### Einfügen von logischen Operatoren in Eignungskriterientexte 
+## Open-Source Models (HPC Cluster)
 
+Run Llama 3, Qwen 2, Gemma 2 via their Python scripts using `lct_p4.sh`:
+- Requires `HF_TOKEN` environment variable
+- Adjust input/output paths in the script
 
+## Fine-Tuned Models
 
-- Die Open-Source Modelle llama3, qwen2, gemma2 können über die gleichnamige Python-Datei über das Bash-Skript `lct_p4.sh` aufgerufen werden.
-  - Dabei muss das Huggingface-Token spezifiziert werden.
-  - Die Input-Pfade müssen für eine Nutzung angepasst werden.
-  
+Run via `ft_llama3_8b.py` / `ft_llama3_70b.py`:
+- **Important:** Requires `transformers==4.38.0` for inference
+- Models must be trained first (see [`../fine_tuning/`](../fine_tuning/))
 
-- Modelle mit Fine-Tuning können über die `ft_llama3_8b.py` und `ft_llama3_70b.py` auch über das Bash-Skript ausgeführt werden.
-  - Wichtig: die Modelle stehen nicht bereit da die Dateien zu groß sind. Die Modelle müssen selbst trainiert werden. Die Instruktionen dafür sind im Ordner `fine_tuning`.
-  - Für die Inferenz von Fine-Tuning Modellen muss eine spezielle transformer-version geladen werden: pip install transformers==4.38.0
-  - 
+## Closed-Source Models (API)
 
-- Das GPT-4o Modell kann über das `gpt_4o.py` File aufgerufen werden.
-  - Dabei muss das api_key angegeben werden.
-  - Die Input-Pfade müssen für eine Nutzung angepasst werden.
+- `gpt_4o.py` — Requires `OPENAI_API_KEY`
+- `claude.py` — Requires `ANTHROPIC_API_KEY`

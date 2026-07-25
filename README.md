@@ -75,11 +75,13 @@ cd ec_criteria_struct
 
 # Environment variables
 cp .env.example .env
-# Set OPENAI_API_KEY and HF_TOKEN in .env
+# Set OPENAI_API_KEY, ANTHROPIC_API_KEY, and HF_TOKEN in .env
 
-# Dependencies (GPU cluster assumed for fine-tuning)
-pip install unsloth transformers datasets trl openai anthropic torch psutil
+# Dependencies
+pip install -r requirements.txt
 ```
+
+**Note:** Fine-tuning and open-source model inference require a GPU cluster with CUDA support. Fine-tuned model weights are not included — train them using the scripts in [`lct/models/fine_tuning/`](lct/models/fine_tuning/).
 
 ## Evaluation Metrics
 

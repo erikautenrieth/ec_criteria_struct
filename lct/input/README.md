@@ -1,9 +1,9 @@
-# LCT-Input Datein
+# LCT Input Data
 
-
-- datasets: Datensätze das Fine-Tuning von LLMs
-- functions: Hilfs-Funktionen für die Analyse und die Verarbeitung der Datein
-- lct_p1: LCT-Dateien mit eingefügten Operatoren [AND], [OR], [NOT]
-- lct_p2: LCT-Dateien mit AST-Struktur
-- lct_p4: LCT-Dateien mit AST-Struktur und Entitäten 
-- lct_txt: LCT-Dateien im Text-Format. Eignungskriterien im Roh-Format. 
+- `datasets/` — Train/test splits for fine-tuning (HuggingFace Datasets format)
+- `functions/` — Helper functions for data analysis and processing
+- `prompt/` — Prompt templates (P1–P9, Claude few-shot, entity extraction prompts)
+- `lct_p1/` — LCT files with inserted operators `[AND]`, `[OR]`, `[NOT]`
+- `lct_p2_final/` — LCT files in AST structure (JSON)
+- `lct_p4/` — LCT files in AST structure with extracted entities
+- `lct_txt/` — Raw eligibility criteria text (unprocessed)

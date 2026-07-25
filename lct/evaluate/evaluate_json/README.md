@@ -1,10 +1,5 @@
-# Evaluierung der direkten Strukturierung
+# Evaluation — Direct Structuring
 
-
-
-
-- llm_output: Die Ausgabe der Modelle im JSON-Format. 
-- `eval_json_output.ipynb`: Notebook zur Auswertung der JSON-Dateien. 
-  - Hier werden Operatoren, Entitäten und die JSON-Ausgabe evaluiert.
-- eval_functions: Funktionen zur Auswertung der JSON-Dateien.
-
+- `llm_output/` — LLM outputs in JSON/AST format
+- [`eval_json_output.ipynb`](eval_json_output.ipynb) — Main evaluation notebook (operator, entity, and structure metrics)
+- `eval_functions/` — Evaluation helper functions

@@ -1,7 +1,5 @@
-# Evaluierung der indirekten Strukturierung
+# Evaluation — Indirect Structuring
 
-- llm_output: Die Ausgabe der Modelle im TXT-Format.
-- `eval_txt_output.ipynb`: Notebook zur Auswertung der TXT-Dateien mit eingefügten Operatoren.
-  - Hier werden die eingefügten Operatoren evaluiert.
-- eval_functions: Funktionen zur Auswertung der TXT-Dateien.
-
+- `model_output/` — LLM outputs in text format (with inserted operators)
+- [`evaluate_txt_output.ipynb`](evaluate_txt_output.ipynb) — Main evaluation notebook (operator-level precision/recall/F1)
+- `eval_functions/` — Evaluation helper functions
