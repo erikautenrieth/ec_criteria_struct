@@ -1,4 +1,4 @@
-# Model Inference — Direct Structuring
+# Model Inference: Direct Structuring
 
 Converts eligibility criteria directly into an AST (JSON) structure.
 
@@ -16,4 +16,4 @@ Run via `ft_llama3_8b.py` / `ft_llama3_70b.py`:
 
 ## Closed-Source Models (API)
 
-- `gpt_4o.py` — Requires `OPENAI_API_KEY`
+- `gpt_4o.py` Requires `OPENAI_API_KEY`

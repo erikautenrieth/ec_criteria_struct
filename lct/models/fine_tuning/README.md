@@ -1,8 +1,8 @@
 # Fine-Tuning
 
 Training data is located in [`../input/datasets/`](../../input/datasets/):
-- `dataset_p2/` — Text files with inserted operators (indirect structuring)
-- `dataset_p4_prompt1/`, `dataset_p4_prompt2/` — JSON files in AST structure (direct structuring)
+- `dataset_p2/` Text files with inserted operators (indirect structuring)
+- `dataset_p4_prompt1/`, `dataset_p4_prompt2/` JSON files in AST structure (direct structuring)
 
 ## Usage
 

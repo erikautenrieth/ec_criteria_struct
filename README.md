@@ -6,12 +6,12 @@ Code repository for the master's thesis: [Applying Machine Learning Methods for 
 
 This project investigates two approaches to structuring eligibility criteria (inclusion/exclusion) from clinical trials using Large Language Models:
 
-1. **Indirect Structuring** — LLMs insert logical operators (`[AND]`, `[OR]`, `[NOT]`) into raw eligibility criteria text.
-2. **Direct Structuring** — LLMs convert eligibility criteria directly into an AST (Abstract Syntax Tree) in JSON format.
+1. **Indirect Structuring**: LLMs insert logical operators (`[AND]`, `[OR]`, `[NOT]`) into raw eligibility criteria text.
+2. **Direct Structuring**: LLMs convert eligibility criteria directly into an AST (Abstract Syntax Tree) in JSON format.
 
 Both approaches are evaluated on two corpora:
-- **LCT** (Logical Clinical Trials) — used for both indirect and direct structuring
-- **Chia** — used for indirect structuring only
+- **LCT** (Logical Clinical Trials): used for both indirect and direct structuring
+- **Chia**: used for indirect structuring only
 
 ### Example
 
@@ -66,7 +66,7 @@ See the full example: [input](lct/parser/AST_Parser/example/example_criteria_out
 └── .env.example                # API key template
 ```
 
-Each subfolder has its own README with details — see links below.
+Each subfolder has its own README with details: see links below.
 
 ### Key Entry Points
 
@@ -84,8 +84,8 @@ Each subfolder has its own README with details — see links below.
 
 ### Prompts
 
-- **Indirect structuring:** [`lct/input/prompt/p1.txt`](lct/input/prompt/p1.txt) — rules for inserting `[AND]`/`[OR]`/`[NOT]`
-- **Direct structuring (with entities):** [`lct/input/prompt/all_entitys_prompt1.txt`](lct/input/prompt/all_entitys_prompt1.txt) — AST + entity extraction rules
+- **Indirect structuring:** [`lct/input/prompt/p1.txt`](lct/input/prompt/p1.txt): rules for inserting `[AND]`/`[OR]`/`[NOT]`
+- **Direct structuring (with entities):** [`lct/input/prompt/all_entitys_prompt1.txt`](lct/input/prompt/all_entitys_prompt1.txt): AST + entity extraction rules
 
 ## Setup
 
@@ -102,11 +102,11 @@ cp .env.example .env
 pip install -r requirements.txt
 ```
 
-**Note:** Fine-tuning and open-source model inference require a GPU cluster with CUDA support. Fine-tuned model weights are not included — train them using the scripts in [`lct/models/fine_tuning/`](lct/models/fine_tuning/).
+**Note:** Fine-tuning and open-source model inference require a GPU cluster with CUDA support. Fine-tuned model weights are not included: train them using the scripts in [`lct/models/fine_tuning/`](lct/models/fine_tuning/).
 
 ## Evaluation Metrics
 
-- **Indirect (text):** Operator-level precision, recall, F1 — compares predicted `[AND]`/`[OR]`/`[NOT]` positions against ground truth.
+- **Indirect (text):** Operator-level precision, recall, F1: compares predicted `[AND]`/`[OR]`/`[NOT]` positions against ground truth.
 - **Direct (JSON):** Structural similarity of AST trees + entity extraction accuracy (per-category F1).
 
 Results are generated in the evaluation notebooks:

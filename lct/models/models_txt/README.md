@@ -1,4 +1,4 @@
-# Model Inference — Indirect Structuring
+# Model Inference: Indirect Structuring
 
 Inserts logical operators (`[AND]`, `[OR]`, `[NOT]`) into eligibility criteria text.
 
@@ -16,5 +16,5 @@ Run via `ft_llama3_8b.py` / `ft_llama3_70b.py`:
 
 ## Closed-Source Models (API)
 
-- `gpt_4o.py` — Requires `OPENAI_API_KEY`
-- `claude.py` — Requires `ANTHROPIC_API_KEY`
+- `gpt_4o.py` Requires `OPENAI_API_KEY`
+- `claude.py` Requires `ANTHROPIC_API_KEY`
