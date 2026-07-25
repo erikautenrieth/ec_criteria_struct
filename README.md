@@ -13,6 +13,27 @@ Both approaches are evaluated on two corpora:
 - **LCT** (Logical Clinical Trials) — used for both indirect and direct structuring
 - **Chia** — used for indirect structuring only
 
+### Example
+
+**Input** (raw eligibility criteria):
+```
+Aged 18 above.
+Having the ability to learn the standard toothbrushing method with AI powered toothbrush.
+```
+
+**Indirect output** (operators inserted):
+```
+Aged 18 [AND] above.
+Having the ability to learn the standard toothbrushing method [AND] with AI powered toothbrush.
+```
+
+**Direct output** (AST / JSON):
+```json
+{"AND": {"left": {"raw_text": "Aged 18"}, "right": {"raw_text": "above."}}}
+```
+
+See the full example: [input](lct/parser/AST_Parser/example/example_criteria_output.txt) | [AST output](lct/parser/AST_Parser/example/example_ast_structure.json) | [visualization](lct/parser/AST_Parser/example/example_ast_image.png)
+
 ### Models
 
 | Model | Method |
@@ -28,43 +49,43 @@ Both approaches are evaluated on two corpora:
 ```
 ├── lct/                        # LCT corpus pipeline (indirect + direct)
 │   ├── input/                  # Datasets, prompts, train/test splits
-│   │   ├── datasets/           # Train/test splits per prompt variant
-│   │   ├── prompt/             # Prompt templates (P1–P9, Claude, entity prompts)
-│   │   └── lct_p*/             # Annotated ground-truth data
 │   ├── models/                 # Inference & fine-tuning scripts
-│   │   ├── fine_tuning/        # LoRA fine-tuning (Llama 3 8B/70B)
-│   │   ├── models_txt/         # Indirect structuring (text output)
-│   │   └── models_json/        # Direct structuring (JSON/AST output)
 │   ├── evaluate/               # Evaluation pipelines
-│   │   ├── evaluate_txt/       # Operator-level precision/recall/F1
-│   │   └── evaluate_json/      # AST structure & entity evaluation
-│   ├── parser/                 # Post-processing tools
-│   │   ├── AST_Parser/         # Text → AST conversion (Node.py)
-│   │   ├── AST_Plotter/        # Visualize AST trees
-│   │   ├── JSON_Parser/        # Merge inc/exc criteria into single tree
-│   │   └── Fhir_Parser/        # (Planned) AST → FHIR conversion
-│   └── transform_lct/          # Corpus preprocessing & annotation parsing
+│   ├── parser/                 # Post-processing (AST parser, plotter, FHIR)
+│   └── transform_lct/          # Corpus preprocessing
 │
 ├── chia/                       # Chia corpus pipeline (indirect only)
 │   ├── input/                  # Chia test data & prompts
-│   ├── models/                 # Inference scripts (Llama 3, fine-tuned)
+│   ├── models/                 # Inference scripts
 │   ├── evaluate/               # Evaluation on full Chia corpus
 │   └── transform_chia/         # Chia .ann/.txt preprocessing
 │
-├── data/                       # Reference corpora
-│   └── korpora/                # Public EC corpora (Chia, LCT, FRD, COVID19, LLF)
-│
+├── data/korpora/               # Public EC corpora (Chia, LCT, FRD, COVID19, LLF)
 ├── plots/                      # Figures & evaluation notebooks for thesis
-│   ├── code/                   # Shared utility scripts (Node, JSON parser)
-│   ├── ast/                    # AST visualization examples
-│   ├── ergebnisse/             # Result plots (txt & JSON output)
-│   ├── entity_eval/            # Entity extraction evaluation
-│   ├── auswertungen/           # LaTeX table generation
-│   └── grundlagen/             # Background & methodology figures
-│
 ├── docs/                       # Thesis PDF
-└── .env.example                # API key template (OpenAI, HuggingFace)
+└── .env.example                # API key template
 ```
+
+Each subfolder has its own README with details — see links below.
+
+### Key Entry Points
+
+| Task | Location |
+|------|----------|
+| Run indirect structuring (LCT) | [`lct/models/models_txt/`](lct/models/models_txt/) |
+| Run direct structuring (LCT) | [`lct/models/models_json/`](lct/models/models_json/) |
+| Fine-tune Llama 3 | [`lct/models/fine_tuning/`](lct/models/fine_tuning/) |
+| Evaluate indirect results | [`lct/evaluate/evaluate_txt/evaluate_txt_output.ipynb`](lct/evaluate/evaluate_txt/evaluate_txt_output.ipynb) |
+| Evaluate direct results | [`lct/evaluate/evaluate_json/eval_json_output.ipynb`](lct/evaluate/evaluate_json/eval_json_output.ipynb) |
+| Preprocess LCT corpus | [`lct/transform_lct/`](lct/transform_lct/) |
+| Parse text → AST | [`lct/parser/AST_Parser/ast_parser.ipynb`](lct/parser/AST_Parser/ast_parser.ipynb) |
+| Visualize AST trees | [`lct/parser/AST_Plotter/ast_plot.ipynb`](lct/parser/AST_Plotter/ast_plot.ipynb) |
+| Prompt templates | [`lct/input/prompt/`](lct/input/prompt/) |
+
+### Prompts
+
+- **Indirect structuring:** [`lct/input/prompt/p1.txt`](lct/input/prompt/p1.txt) — rules for inserting `[AND]`/`[OR]`/`[NOT]`
+- **Direct structuring (with entities):** [`lct/input/prompt/all_entitys_prompt1.txt`](lct/input/prompt/all_entitys_prompt1.txt) — AST + entity extraction rules
 
 ## Setup
 
@@ -87,6 +108,10 @@ pip install -r requirements.txt
 
 - **Indirect (text):** Operator-level precision, recall, F1 — compares predicted `[AND]`/`[OR]`/`[NOT]` positions against ground truth.
 - **Direct (JSON):** Structural similarity of AST trees + entity extraction accuracy (per-category F1).
+
+Results are generated in the evaluation notebooks:
+- [`lct/evaluate/evaluate_txt/evaluate_txt_output.ipynb`](lct/evaluate/evaluate_txt/evaluate_txt_output.ipynb)
+- [`lct/evaluate/evaluate_json/eval_json_output.ipynb`](lct/evaluate/evaluate_json/eval_json_output.ipynb)
 
 ## License
 
